@@ -37,8 +37,7 @@ jobs:
         run: melos list
       - name: Create the new version(s)
         run: melos version --all --yes
-
-      # - name: Push created version commit
-      #   run: git push
-      # - name: Push modified tags
-      #   run: git push --tags
+      - name: Push created version commit
+        run: git push
+      - name: Push modified tags
+        run: git push --tags

@@ -7,7 +7,6 @@ fn main() {
         // .field_attribute("document_id", "#[serde(alias = \"_firestore_id\")]")
         .compile(
             &[
-                "../../protos/common.proto",
                 "../../protos/user.proto",
                 "../../protos/space.proto",
                 "../../protos/messaging.proto",

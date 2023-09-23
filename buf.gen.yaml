@@ -1,0 +1,11 @@
+version: v1
+plugins:
+  # - plugin: buf.build/community/stephenh-ts-proto
+  #   out: ./functions/src/proto
+  #   opt:
+  #     - outputServices=grpc-js
+  #     - stringEnums=true
+  - plugin: buf.build/protocolbuffers/dart
+    out: ./generated/dart/lib/src/generated
+    opt:
+      - grpc

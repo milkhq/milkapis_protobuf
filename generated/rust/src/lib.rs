@@ -1,8 +1,4 @@
 pub mod models {
-    pub mod common {
-        tonic::include_proto!("common");
-    }
-    
     pub mod space {
         tonic::include_proto!("space");
     }

@@ -69,26 +69,26 @@ message CustomizationProfileDocuments {
   repeated CustomizationProfileDocument documents = 1;
 }
 
-enum UserType {
+enum USER_TYPE {
   USER = 0;
   MODERATOR = 1;
   ADMIN = 2;
 }
 
-enum UserTier {
+enum USER_TIER {
   FREE = 0;
   PRO = 1;
   ENTERPRISE = 2;
 }
 
-enum UserStatus {
+enum USER_STATUS {
   ACTIVE = 0;
   BANNED = 1;
   SUSPENDED = 2;
   DELETED = 3;
 }
 
-enum UserVisibility {
+enum USER_VISIBILITY {
   PUBLIC = 0;
   PRIVATE = 1;
 }
@@ -101,7 +101,7 @@ enum USER_PRESENCE_STATUS {
   INVISIBLE = 4;
 }
 
-enum Social {
+enum SOCIAL {
   FACEBOOK = 0;
   GOOGLE = 1;
   TWITTER = 2;
@@ -129,19 +129,19 @@ message GetUserRequest { string uid = 1; }
 message UserDocument {
   optional string document_id = 1;
   Metadata metadata = 2; 
-  UserTier tier = 3;
-  UserStatus status = 4;
+  USER_TIER tier = 3;
+  USER_STATUS status = 4;
   optional int64 status_expiration = 5;
-  UserType type = 6;
+  USER_TYPE type = 6;
   repeated string search_terms = 7;
-  UserVisibility visibility = 8;
+  USER_VISIBILITY visibility = 8;
 
   message Metadata {
     string username = 1;
     optional string email = 2;
     optional string display_name = 3;
     optional string bio = 4;
-    optional Social social = 5;
+    optional SOCIAL social = 5;
     optional string social_id = 6;
     optional string avatar_image_url = 7;
     optional string avatar_image_hash = 8;
@@ -165,7 +165,7 @@ message UpdateUserStatusRequest {
 message UpdateUserStatusResponse { string uid = 1; }
 
 message CreateUserRequest {
-  Social social = 1;
+  SOCIAL social = 1;
   string oauth_code = 2;
 }
 

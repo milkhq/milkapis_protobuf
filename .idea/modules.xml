@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/protos/melos_milkapis_protobuf.iml" filepath="$PROJECT_DIR$/protos/melos_milkapis_protobuf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/melos_milkapis_protobuf.iml" filepath="$PROJECT_DIR$/src/melos_milkapis_protobuf.iml" />
       <module fileurl="file://$PROJECT_DIR$/melos_milkapis_protobuf.iml" filepath="$PROJECT_DIR$/melos_milkapis_protobuf.iml" />
     </modules>
   </component>

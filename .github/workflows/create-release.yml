@@ -31,6 +31,11 @@ jobs:
       - name: Test rust generator
         working-directory: ./protos/generated/rust
         run: cargo build
+      - name: Add generated file to commit
+        run: git add .
+      - name: Commit generated file
+        run: |
+          git commit -m "chore: update generated files"
       - name: List changes
         run: git log
       - name: List packages

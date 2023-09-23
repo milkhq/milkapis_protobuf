@@ -434,7 +434,7 @@ class CreateSpaceInviteResponse extends $pb.GeneratedMessage {
 class UpdateSpaceCategoryRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceCategoryRequest({
     $core.String? spaceId,
-    SpaceCategory? category,
+    SPACE_CATEGORY? category,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -451,7 +451,7 @@ class UpdateSpaceCategoryRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceCategoryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
-    ..e<SpaceCategory>(2, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SpaceCategory.GENERAL, valueOf: SpaceCategory.valueOf, enumValues: SpaceCategory.values)
+    ..e<SPACE_CATEGORY>(2, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SPACE_CATEGORY.GENERAL, valueOf: SPACE_CATEGORY.valueOf, enumValues: SPACE_CATEGORY.values)
     ..hasRequiredFields = false
   ;
 
@@ -486,9 +486,9 @@ class UpdateSpaceCategoryRequest extends $pb.GeneratedMessage {
   void clearSpaceId() => clearField(1);
 
   @$pb.TagNumber(2)
-  SpaceCategory get category => $_getN(1);
+  SPACE_CATEGORY get category => $_getN(1);
   @$pb.TagNumber(2)
-  set category(SpaceCategory v) { setField(2, v); }
+  set category(SPACE_CATEGORY v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCategory() => $_has(1);
   @$pb.TagNumber(2)
@@ -597,7 +597,7 @@ class GetSpaceRequest extends $pb.GeneratedMessage {
 
 class QuerySpaceRequest extends $pb.GeneratedMessage {
   factory QuerySpaceRequest({
-    SpaceCategory? category,
+    SPACE_CATEGORY? category,
     $core.String? searchTerm,
   }) {
     final $result = create();
@@ -614,7 +614,7 @@ class QuerySpaceRequest extends $pb.GeneratedMessage {
   factory QuerySpaceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QuerySpaceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..e<SpaceCategory>(1, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SpaceCategory.GENERAL, valueOf: SpaceCategory.valueOf, enumValues: SpaceCategory.values)
+    ..e<SPACE_CATEGORY>(1, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SPACE_CATEGORY.GENERAL, valueOf: SPACE_CATEGORY.valueOf, enumValues: SPACE_CATEGORY.values)
     ..aOS(2, _omitFieldNames ? '' : 'searchTerm')
     ..hasRequiredFields = false
   ;
@@ -641,9 +641,9 @@ class QuerySpaceRequest extends $pb.GeneratedMessage {
   static QuerySpaceRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  SpaceCategory get category => $_getN(0);
+  SPACE_CATEGORY get category => $_getN(0);
   @$pb.TagNumber(1)
-  set category(SpaceCategory v) { setField(1, v); }
+  set category(SPACE_CATEGORY v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCategory() => $_has(0);
   @$pb.TagNumber(1)
@@ -706,7 +706,7 @@ class QuerySpaceResponse extends $pb.GeneratedMessage {
 class UpdateSpaceVisibilityRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceVisibilityRequest({
     $core.String? spaceId,
-    SpaceVisibility? visibility,
+    SPACE_VISIBILITY? visibility,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -723,7 +723,7 @@ class UpdateSpaceVisibilityRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceVisibilityRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
-    ..e<SpaceVisibility>(2, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: SpaceVisibility.PUBLIC, valueOf: SpaceVisibility.valueOf, enumValues: SpaceVisibility.values)
+    ..e<SPACE_VISIBILITY>(2, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: SPACE_VISIBILITY.PUBLIC, valueOf: SPACE_VISIBILITY.valueOf, enumValues: SPACE_VISIBILITY.values)
     ..hasRequiredFields = false
   ;
 
@@ -758,9 +758,9 @@ class UpdateSpaceVisibilityRequest extends $pb.GeneratedMessage {
   void clearSpaceId() => clearField(1);
 
   @$pb.TagNumber(2)
-  SpaceVisibility get visibility => $_getN(1);
+  SPACE_VISIBILITY get visibility => $_getN(1);
   @$pb.TagNumber(2)
-  set visibility(SpaceVisibility v) { setField(2, v); }
+  set visibility(SPACE_VISIBILITY v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVisibility() => $_has(1);
   @$pb.TagNumber(2)
@@ -1207,13 +1207,13 @@ class SpaceDocument_Metadata extends $pb.GeneratedMessage {
 
 class SpaceDocument extends $pb.GeneratedMessage {
   factory SpaceDocument({
-    SpaceStatus? status,
-    SpaceVisibility? visibility,
+    SPACE_STATUS? status,
+    SPACE_VISIBILITY? visibility,
     $core.String? ownerUid,
     SpaceDocument_Metadata? metadata,
     $core.String? documentId,
     $core.int? nonce,
-    SpaceCategory? category,
+    SPACE_CATEGORY? category,
     $core.Iterable<$core.String>? searchTerms,
   }) {
     final $result = create();
@@ -1248,13 +1248,13 @@ class SpaceDocument extends $pb.GeneratedMessage {
   factory SpaceDocument.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..e<SpaceStatus>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: SpaceStatus.ACTIVE, valueOf: SpaceStatus.valueOf, enumValues: SpaceStatus.values)
-    ..e<SpaceVisibility>(2, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: SpaceVisibility.PUBLIC, valueOf: SpaceVisibility.valueOf, enumValues: SpaceVisibility.values)
+    ..e<SPACE_STATUS>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: SPACE_STATUS.ACTIVE, valueOf: SPACE_STATUS.valueOf, enumValues: SPACE_STATUS.values)
+    ..e<SPACE_VISIBILITY>(2, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: SPACE_VISIBILITY.PUBLIC, valueOf: SPACE_VISIBILITY.valueOf, enumValues: SPACE_VISIBILITY.values)
     ..aOS(3, _omitFieldNames ? '' : 'ownerUid')
     ..aOM<SpaceDocument_Metadata>(4, _omitFieldNames ? '' : 'metadata', subBuilder: SpaceDocument_Metadata.create)
     ..aOS(5, _omitFieldNames ? '' : 'documentId')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.O3)
-    ..e<SpaceCategory>(7, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SpaceCategory.GENERAL, valueOf: SpaceCategory.valueOf, enumValues: SpaceCategory.values)
+    ..e<SPACE_CATEGORY>(7, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SPACE_CATEGORY.GENERAL, valueOf: SPACE_CATEGORY.valueOf, enumValues: SPACE_CATEGORY.values)
     ..pPS(8, _omitFieldNames ? '' : 'searchTerms')
     ..hasRequiredFields = false
   ;
@@ -1281,18 +1281,18 @@ class SpaceDocument extends $pb.GeneratedMessage {
   static SpaceDocument? _defaultInstance;
 
   @$pb.TagNumber(1)
-  SpaceStatus get status => $_getN(0);
+  SPACE_STATUS get status => $_getN(0);
   @$pb.TagNumber(1)
-  set status(SpaceStatus v) { setField(1, v); }
+  set status(SPACE_STATUS v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
   void clearStatus() => clearField(1);
 
   @$pb.TagNumber(2)
-  SpaceVisibility get visibility => $_getN(1);
+  SPACE_VISIBILITY get visibility => $_getN(1);
   @$pb.TagNumber(2)
-  set visibility(SpaceVisibility v) { setField(2, v); }
+  set visibility(SPACE_VISIBILITY v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasVisibility() => $_has(1);
   @$pb.TagNumber(2)
@@ -1337,9 +1337,9 @@ class SpaceDocument extends $pb.GeneratedMessage {
   void clearNonce() => clearField(6);
 
   @$pb.TagNumber(7)
-  SpaceCategory get category => $_getN(6);
+  SPACE_CATEGORY get category => $_getN(6);
   @$pb.TagNumber(7)
-  set category(SpaceCategory v) { setField(7, v); }
+  set category(SPACE_CATEGORY v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasCategory() => $_has(6);
   @$pb.TagNumber(7)

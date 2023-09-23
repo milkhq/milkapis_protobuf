@@ -100,7 +100,7 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
   factory ChannelMemberDocument({
     $core.String? documentId,
     $core.String? roleId,
-    ChannelMemberDocument_ChannelMemberStatus? status,
+    ChannelMemberDocument_CHANNEL_MEMBER_STATUS? status,
     $fixnum.Int64? statusExpiresAt,
     $core.int? rank,
   }) {
@@ -129,7 +129,7 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelMemberDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'documentId')
     ..aOS(2, _omitFieldNames ? '' : 'roleId')
-    ..e<ChannelMemberDocument_ChannelMemberStatus>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ChannelMemberDocument_ChannelMemberStatus.PENDING, valueOf: ChannelMemberDocument_ChannelMemberStatus.valueOf, enumValues: ChannelMemberDocument_ChannelMemberStatus.values)
+    ..e<ChannelMemberDocument_CHANNEL_MEMBER_STATUS>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ChannelMemberDocument_CHANNEL_MEMBER_STATUS.PENDING, valueOf: ChannelMemberDocument_CHANNEL_MEMBER_STATUS.valueOf, enumValues: ChannelMemberDocument_CHANNEL_MEMBER_STATUS.values)
     ..aInt64(4, _omitFieldNames ? '' : 'statusExpiresAt')
     ..a<$core.int>(5, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
@@ -175,9 +175,9 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
   void clearRoleId() => clearField(2);
 
   @$pb.TagNumber(3)
-  ChannelMemberDocument_ChannelMemberStatus get status => $_getN(2);
+  ChannelMemberDocument_CHANNEL_MEMBER_STATUS get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(ChannelMemberDocument_ChannelMemberStatus v) { setField(3, v); }
+  set status(ChannelMemberDocument_CHANNEL_MEMBER_STATUS v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
@@ -206,7 +206,7 @@ class UserChannelDocument extends $pb.GeneratedMessage {
   factory UserChannelDocument({
     $core.String? channelId,
     $core.int? rank,
-    UserChannelDocument_UserChannelStatus? status,
+    UserChannelDocument_USER_CHANNEL_STATUS? status,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -227,7 +227,7 @@ class UserChannelDocument extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserChannelDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..a<$core.int>(2, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
-    ..e<UserChannelDocument_UserChannelStatus>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: UserChannelDocument_UserChannelStatus.NEW, valueOf: UserChannelDocument_UserChannelStatus.valueOf, enumValues: UserChannelDocument_UserChannelStatus.values)
+    ..e<UserChannelDocument_USER_CHANNEL_STATUS>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: UserChannelDocument_USER_CHANNEL_STATUS.NEW, valueOf: UserChannelDocument_USER_CHANNEL_STATUS.valueOf, enumValues: UserChannelDocument_USER_CHANNEL_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -271,9 +271,9 @@ class UserChannelDocument extends $pb.GeneratedMessage {
   void clearRank() => clearField(2);
 
   @$pb.TagNumber(3)
-  UserChannelDocument_UserChannelStatus get status => $_getN(2);
+  UserChannelDocument_USER_CHANNEL_STATUS get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(UserChannelDocument_UserChannelStatus v) { setField(3, v); }
+  set status(UserChannelDocument_USER_CHANNEL_STATUS v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
@@ -660,14 +660,14 @@ class ChannelDocument extends $pb.GeneratedMessage {
   factory ChannelDocument({
     $core.String? documentId,
     ChannelDocument_Metadata? metadata,
-    ChannelStatus? status,
-    ChannelVisibility? visibility,
+    CHANNEL_STATUS? status,
+    CHANNEL_VISIBILITY? visibility,
     $core.String? messageId,
     $core.String? spaceId,
     $core.String? channelId,
     $core.String? categoryId,
     $core.int? rank,
-    $core.Iterable<ChannelCapability>? capabilities,
+    $core.Iterable<CHANNEL_CAPABILITY>? capabilities,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -709,14 +709,14 @@ class ChannelDocument extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'documentId')
     ..aOM<ChannelDocument_Metadata>(2, _omitFieldNames ? '' : 'metadata', subBuilder: ChannelDocument_Metadata.create)
-    ..e<ChannelStatus>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ChannelStatus.ACTIVE, valueOf: ChannelStatus.valueOf, enumValues: ChannelStatus.values)
-    ..e<ChannelVisibility>(4, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: ChannelVisibility.PUBLIC, valueOf: ChannelVisibility.valueOf, enumValues: ChannelVisibility.values)
+    ..e<CHANNEL_STATUS>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: CHANNEL_STATUS.ACTIVE, valueOf: CHANNEL_STATUS.valueOf, enumValues: CHANNEL_STATUS.values)
+    ..e<CHANNEL_VISIBILITY>(4, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: CHANNEL_VISIBILITY.PUBLIC, valueOf: CHANNEL_VISIBILITY.valueOf, enumValues: CHANNEL_VISIBILITY.values)
     ..aOS(5, _omitFieldNames ? '' : 'messageId')
     ..aOS(6, _omitFieldNames ? '' : 'spaceId')
     ..aOS(7, _omitFieldNames ? '' : 'channelId')
     ..aOS(8, _omitFieldNames ? '' : 'categoryId')
     ..a<$core.int>(9, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
-    ..pc<ChannelCapability>(10, _omitFieldNames ? '' : 'capabilities', $pb.PbFieldType.KE, valueOf: ChannelCapability.valueOf, enumValues: ChannelCapability.values, defaultEnumValue: ChannelCapability.TEXT)
+    ..pc<CHANNEL_CAPABILITY>(10, _omitFieldNames ? '' : 'capabilities', $pb.PbFieldType.KE, valueOf: CHANNEL_CAPABILITY.valueOf, enumValues: CHANNEL_CAPABILITY.values, defaultEnumValue: CHANNEL_CAPABILITY.TEXT)
     ..hasRequiredFields = false
   ;
 
@@ -762,18 +762,18 @@ class ChannelDocument extends $pb.GeneratedMessage {
   ChannelDocument_Metadata ensureMetadata() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  ChannelStatus get status => $_getN(2);
+  CHANNEL_STATUS get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(ChannelStatus v) { setField(3, v); }
+  set status(CHANNEL_STATUS v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
 
   @$pb.TagNumber(4)
-  ChannelVisibility get visibility => $_getN(3);
+  CHANNEL_VISIBILITY get visibility => $_getN(3);
   @$pb.TagNumber(4)
-  set visibility(ChannelVisibility v) { setField(4, v); }
+  set visibility(CHANNEL_VISIBILITY v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasVisibility() => $_has(3);
   @$pb.TagNumber(4)
@@ -825,7 +825,7 @@ class ChannelDocument extends $pb.GeneratedMessage {
   void clearRank() => clearField(9);
 
   @$pb.TagNumber(10)
-  $core.List<ChannelCapability> get capabilities => $_getList(9);
+  $core.List<CHANNEL_CAPABILITY> get capabilities => $_getList(9);
 }
 
 class MessageDocument_FileMetadata extends $pb.GeneratedMessage {

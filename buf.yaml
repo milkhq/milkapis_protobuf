@@ -3,7 +3,7 @@ deps:
   - buf.build/googleapis/googleapis
 build:
   roots:
-    - ./protos
+    - ./src/protos
 lint:
   use:
     - DEFAULT

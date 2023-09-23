@@ -56,7 +56,7 @@ message CreateSpaceInviteResponse {
 
 message UpdateSpaceCategoryRequest {
   string space_id = 1;
-  SpaceCategory category = 2;
+  SPACE_CATEGORY category = 2;
 }
 
 message UpdateSpaceCategoryResponse {
@@ -66,7 +66,7 @@ message UpdateSpaceCategoryResponse {
 message GetSpaceRequest { string space_id = 1; }
 
 message QuerySpaceRequest {
-  optional SpaceCategory category = 1;
+  optional SPACE_CATEGORY category = 1;
   string search_term = 2; 
 }
 
@@ -76,14 +76,14 @@ message QuerySpaceResponse {
 
 message UpdateSpaceVisibilityRequest {
   string space_id = 1;
-  SpaceVisibility visibility = 2;
+  SPACE_VISIBILITY visibility = 2;
 }
 
 message UpdateSpaceVisibilityResponse {
   string space_id = 1;
 }
 
-enum SpaceCategory {
+enum SPACE_CATEGORY {
   GENERAL = 0;
   GAMES = 1;
   SPORTS = 2;
@@ -100,12 +100,12 @@ enum SpaceCategory {
   OTHER = 13;
 }
 
-enum SpaceStatus {
+enum SPACE_STATUS {
   ACTIVE = 0;
   ARCHIVED = 1;
   DELETED = 2;
 }
-enum SpaceVisibility {
+enum SPACE_VISIBILITY {
   PUBLIC = 0;
   PRIVATE = 1;
 }
@@ -135,13 +135,13 @@ message SpaceDocument {
     optional string banner_image_url = 5;
     optional string banner_image_hash = 6;
   }
-  SpaceStatus status = 1;
-  SpaceVisibility visibility = 2;
+  SPACE_STATUS status = 1;
+  SPACE_VISIBILITY visibility = 2;
   string owner_uid = 3;
   Metadata metadata = 4;
   optional string document_id = 5;
   int32 nonce = 6;
-  SpaceCategory category = 7;
+  SPACE_CATEGORY category = 7;
   repeated string search_terms = 8;
 }
 message CreateSpaceRequest {

@@ -41,24 +41,24 @@ service Messaging {
     rpc DeleteThreadChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
 }
 
-enum ChannelStatus {
+enum CHANNEL_STATUS {
     ACTIVE = 0;
     ARCHIVED = 1;
     DELETED = 2;
 }
 
-enum ChannelVisibility {
+enum CHANNEL_VISIBILITY {
     PUBLIC = 0;
     PRIVATE = 1;
 }
 
-enum ChannelType {
+enum CHANNEL_TYPE {
     DIRECT = 0;
     GROUP = 1;
     SPACE = 2;
 }
 
-enum ChannelCapability {
+enum CHANNEL_CAPABILITY {
     TEXT = 0;
     IMAGE = 1;
     VOICE = 2;
@@ -74,11 +74,11 @@ message ChannelReference {
 message ChannelMemberDocument {
     optional string document_id = 1;
     string role_id = 2;
-    optional ChannelMemberStatus status = 3;
+    optional CHANNEL_MEMBER_STATUS status = 3;
     optional int64 status_expires_at = 4;
     optional int32 rank = 5;
 
-    enum ChannelMemberStatus {
+    enum CHANNEL_MEMBER_STATUS {
         PENDING = 0;
         BANNED = 1;
         TIMEOUT = 2;
@@ -88,9 +88,9 @@ message ChannelMemberDocument {
 message UserChannelDocument {
     string channel_id = 1;
     optional int32 rank = 2;
-    UserChannelStatus status = 3;
+    USER_CHANNEL_STATUS status = 3;
 
-    enum UserChannelStatus {
+    enum USER_CHANNEL_STATUS {
         NEW = 0;
         ACCEPTED = 1;
     }
@@ -119,14 +119,14 @@ message ChannelRoleDocument {
 message ChannelDocument {
     optional string document_id = 1;
     Metadata metadata = 2;
-    ChannelStatus status = 3;
-    ChannelVisibility visibility = 4;
+    CHANNEL_STATUS status = 3;
+    CHANNEL_VISIBILITY visibility = 4;
     optional string message_id = 5;
     optional string space_id = 6;
     optional string channel_id = 7;
     optional string category_id = 8;
     optional int32 rank = 9;
-    repeated ChannelCapability capabilities = 10;
+    repeated CHANNEL_CAPABILITY capabilities = 10;
 
     message Metadata {
         optional string name = 1;

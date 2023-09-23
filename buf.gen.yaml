@@ -6,6 +6,6 @@ plugins:
   #     - outputServices=grpc-js
   #     - stringEnums=true
   - plugin: buf.build/protocolbuffers/dart
-    out: ./protos/generated/dart/lib/generated
+    out: ./src/generated/dart/lib/generated
     opt:
       - grpc

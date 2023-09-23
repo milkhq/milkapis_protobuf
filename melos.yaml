@@ -3,4 +3,4 @@ name: milkapis_protobuf
 repository: https://github.com/milkhq/milkapis_protobuf
 
 packages:
-  - protos
+  - src

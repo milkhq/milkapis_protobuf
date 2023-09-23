@@ -13,9 +13,9 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-@$core.Deprecated('Use channelStatusDescriptor instead')
-const ChannelStatus$json = {
-  '1': 'ChannelStatus',
+@$core.Deprecated('Use cHANNEL_STATUSDescriptor instead')
+const CHANNEL_STATUS$json = {
+  '1': 'CHANNEL_STATUS',
   '2': [
     {'1': 'ACTIVE', '2': 0},
     {'1': 'ARCHIVED', '2': 1},
@@ -23,26 +23,27 @@ const ChannelStatus$json = {
   ],
 };
 
-/// Descriptor for `ChannelStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List channelStatusDescriptor = $convert.base64Decode(
-    'Cg1DaGFubmVsU3RhdHVzEgoKBkFDVElWRRAAEgwKCEFSQ0hJVkVEEAESCwoHREVMRVRFRBAC');
+/// Descriptor for `CHANNEL_STATUS`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List cHANNEL_STATUSDescriptor = $convert.base64Decode(
+    'Cg5DSEFOTkVMX1NUQVRVUxIKCgZBQ1RJVkUQABIMCghBUkNISVZFRBABEgsKB0RFTEVURUQQAg'
+    '==');
 
-@$core.Deprecated('Use channelVisibilityDescriptor instead')
-const ChannelVisibility$json = {
-  '1': 'ChannelVisibility',
+@$core.Deprecated('Use cHANNEL_VISIBILITYDescriptor instead')
+const CHANNEL_VISIBILITY$json = {
+  '1': 'CHANNEL_VISIBILITY',
   '2': [
     {'1': 'PUBLIC', '2': 0},
     {'1': 'PRIVATE', '2': 1},
   ],
 };
 
-/// Descriptor for `ChannelVisibility`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List channelVisibilityDescriptor = $convert.base64Decode(
-    'ChFDaGFubmVsVmlzaWJpbGl0eRIKCgZQVUJMSUMQABILCgdQUklWQVRFEAE=');
+/// Descriptor for `CHANNEL_VISIBILITY`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List cHANNEL_VISIBILITYDescriptor = $convert.base64Decode(
+    'ChJDSEFOTkVMX1ZJU0lCSUxJVFkSCgoGUFVCTElDEAASCwoHUFJJVkFURRAB');
 
-@$core.Deprecated('Use channelTypeDescriptor instead')
-const ChannelType$json = {
-  '1': 'ChannelType',
+@$core.Deprecated('Use cHANNEL_TYPEDescriptor instead')
+const CHANNEL_TYPE$json = {
+  '1': 'CHANNEL_TYPE',
   '2': [
     {'1': 'DIRECT', '2': 0},
     {'1': 'GROUP', '2': 1},
@@ -50,13 +51,13 @@ const ChannelType$json = {
   ],
 };
 
-/// Descriptor for `ChannelType`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List channelTypeDescriptor = $convert.base64Decode(
-    'CgtDaGFubmVsVHlwZRIKCgZESVJFQ1QQABIJCgVHUk9VUBABEgkKBVNQQUNFEAI=');
+/// Descriptor for `CHANNEL_TYPE`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List cHANNEL_TYPEDescriptor = $convert.base64Decode(
+    'CgxDSEFOTkVMX1RZUEUSCgoGRElSRUNUEAASCQoFR1JPVVAQARIJCgVTUEFDRRAC');
 
-@$core.Deprecated('Use channelCapabilityDescriptor instead')
-const ChannelCapability$json = {
-  '1': 'ChannelCapability',
+@$core.Deprecated('Use cHANNEL_CAPABILITYDescriptor instead')
+const CHANNEL_CAPABILITY$json = {
+  '1': 'CHANNEL_CAPABILITY',
   '2': [
     {'1': 'TEXT', '2': 0},
     {'1': 'IMAGE', '2': 1},
@@ -65,10 +66,10 @@ const ChannelCapability$json = {
   ],
 };
 
-/// Descriptor for `ChannelCapability`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List channelCapabilityDescriptor = $convert.base64Decode(
-    'ChFDaGFubmVsQ2FwYWJpbGl0eRIICgRURVhUEAASCQoFSU1BR0UQARIJCgVWT0lDRRACEgkKBV'
-    'ZJREVPEAM=');
+/// Descriptor for `CHANNEL_CAPABILITY`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List cHANNEL_CAPABILITYDescriptor = $convert.base64Decode(
+    'ChJDSEFOTkVMX0NBUEFCSUxJVFkSCAoEVEVYVBAAEgkKBUlNQUdFEAESCQoFVk9JQ0UQAhIJCg'
+    'VWSURFTxAD');
 
 @$core.Deprecated('Use cHANNEL_PERMISSIONDescriptor instead')
 const CHANNEL_PERMISSION$json = {
@@ -169,11 +170,11 @@ const ChannelMemberDocument$json = {
   '2': [
     {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
     {'1': 'role_id', '3': 2, '4': 1, '5': 9, '10': 'roleId'},
-    {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.messaging.ChannelMemberDocument.ChannelMemberStatus', '9': 1, '10': 'status', '17': true},
+    {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.messaging.ChannelMemberDocument.CHANNEL_MEMBER_STATUS', '9': 1, '10': 'status', '17': true},
     {'1': 'status_expires_at', '3': 4, '4': 1, '5': 3, '9': 2, '10': 'statusExpiresAt', '17': true},
     {'1': 'rank', '3': 5, '4': 1, '5': 5, '9': 3, '10': 'rank', '17': true},
   ],
-  '4': [ChannelMemberDocument_ChannelMemberStatus$json],
+  '4': [ChannelMemberDocument_CHANNEL_MEMBER_STATUS$json],
   '8': [
     {'1': '_document_id'},
     {'1': '_status'},
@@ -183,8 +184,8 @@ const ChannelMemberDocument$json = {
 };
 
 @$core.Deprecated('Use channelMemberDocumentDescriptor instead')
-const ChannelMemberDocument_ChannelMemberStatus$json = {
-  '1': 'ChannelMemberStatus',
+const ChannelMemberDocument_CHANNEL_MEMBER_STATUS$json = {
+  '1': 'CHANNEL_MEMBER_STATUS',
   '2': [
     {'1': 'PENDING', '2': 0},
     {'1': 'BANNED', '2': 1},
@@ -195,12 +196,12 @@ const ChannelMemberDocument_ChannelMemberStatus$json = {
 /// Descriptor for `ChannelMemberDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List channelMemberDocumentDescriptor = $convert.base64Decode(
     'ChVDaGFubmVsTWVtYmVyRG9jdW1lbnQSJAoLZG9jdW1lbnRfaWQYASABKAlIAFIKZG9jdW1lbn'
-    'RJZIgBARIXCgdyb2xlX2lkGAIgASgJUgZyb2xlSWQSUQoGc3RhdHVzGAMgASgOMjQubWVzc2Fn'
-    'aW5nLkNoYW5uZWxNZW1iZXJEb2N1bWVudC5DaGFubmVsTWVtYmVyU3RhdHVzSAFSBnN0YXR1c4'
-    'gBARIvChFzdGF0dXNfZXhwaXJlc19hdBgEIAEoA0gCUg9zdGF0dXNFeHBpcmVzQXSIAQESFwoE'
-    'cmFuaxgFIAEoBUgDUgRyYW5riAEBIjsKE0NoYW5uZWxNZW1iZXJTdGF0dXMSCwoHUEVORElORx'
-    'AAEgoKBkJBTk5FRBABEgsKB1RJTUVPVVQQAkIOCgxfZG9jdW1lbnRfaWRCCQoHX3N0YXR1c0IU'
-    'ChJfc3RhdHVzX2V4cGlyZXNfYXRCBwoFX3Jhbms=');
+    'RJZIgBARIXCgdyb2xlX2lkGAIgASgJUgZyb2xlSWQSUwoGc3RhdHVzGAMgASgOMjYubWVzc2Fn'
+    'aW5nLkNoYW5uZWxNZW1iZXJEb2N1bWVudC5DSEFOTkVMX01FTUJFUl9TVEFUVVNIAVIGc3RhdH'
+    'VziAEBEi8KEXN0YXR1c19leHBpcmVzX2F0GAQgASgDSAJSD3N0YXR1c0V4cGlyZXNBdIgBARIX'
+    'CgRyYW5rGAUgASgFSANSBHJhbmuIAQEiPQoVQ0hBTk5FTF9NRU1CRVJfU1RBVFVTEgsKB1BFTk'
+    'RJTkcQABIKCgZCQU5ORUQQARILCgdUSU1FT1VUEAJCDgoMX2RvY3VtZW50X2lkQgkKB19zdGF0'
+    'dXNCFAoSX3N0YXR1c19leHBpcmVzX2F0QgcKBV9yYW5r');
 
 @$core.Deprecated('Use userChannelDocumentDescriptor instead')
 const UserChannelDocument$json = {
@@ -208,17 +209,17 @@ const UserChannelDocument$json = {
   '2': [
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'rank', '3': 2, '4': 1, '5': 5, '9': 0, '10': 'rank', '17': true},
-    {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.messaging.UserChannelDocument.UserChannelStatus', '10': 'status'},
+    {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.messaging.UserChannelDocument.USER_CHANNEL_STATUS', '10': 'status'},
   ],
-  '4': [UserChannelDocument_UserChannelStatus$json],
+  '4': [UserChannelDocument_USER_CHANNEL_STATUS$json],
   '8': [
     {'1': '_rank'},
   ],
 };
 
 @$core.Deprecated('Use userChannelDocumentDescriptor instead')
-const UserChannelDocument_UserChannelStatus$json = {
-  '1': 'UserChannelStatus',
+const UserChannelDocument_USER_CHANNEL_STATUS$json = {
+  '1': 'USER_CHANNEL_STATUS',
   '2': [
     {'1': 'NEW', '2': 0},
     {'1': 'ACCEPTED', '2': 1},
@@ -228,9 +229,9 @@ const UserChannelDocument_UserChannelStatus$json = {
 /// Descriptor for `UserChannelDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userChannelDocumentDescriptor = $convert.base64Decode(
     'ChNVc2VyQ2hhbm5lbERvY3VtZW50Eh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW5uZWxJZBIXCg'
-    'RyYW5rGAIgASgFSABSBHJhbmuIAQESSAoGc3RhdHVzGAMgASgOMjAubWVzc2FnaW5nLlVzZXJD'
-    'aGFubmVsRG9jdW1lbnQuVXNlckNoYW5uZWxTdGF0dXNSBnN0YXR1cyIqChFVc2VyQ2hhbm5lbF'
-    'N0YXR1cxIHCgNORVcQABIMCghBQ0NFUFRFRBABQgcKBV9yYW5r');
+    'RyYW5rGAIgASgFSABSBHJhbmuIAQESSgoGc3RhdHVzGAMgASgOMjIubWVzc2FnaW5nLlVzZXJD'
+    'aGFubmVsRG9jdW1lbnQuVVNFUl9DSEFOTkVMX1NUQVRVU1IGc3RhdHVzIiwKE1VTRVJfQ0hBTk'
+    '5FTF9TVEFUVVMSBwoDTkVXEAASDAoIQUNDRVBURUQQAUIHCgVfcmFuaw==');
 
 @$core.Deprecated('Use channelCategoryDocumentDescriptor instead')
 const ChannelCategoryDocument$json = {
@@ -298,14 +299,14 @@ const ChannelDocument$json = {
   '2': [
     {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
     {'1': 'metadata', '3': 2, '4': 1, '5': 11, '6': '.messaging.ChannelDocument.Metadata', '10': 'metadata'},
-    {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.messaging.ChannelStatus', '10': 'status'},
-    {'1': 'visibility', '3': 4, '4': 1, '5': 14, '6': '.messaging.ChannelVisibility', '10': 'visibility'},
+    {'1': 'status', '3': 3, '4': 1, '5': 14, '6': '.messaging.CHANNEL_STATUS', '10': 'status'},
+    {'1': 'visibility', '3': 4, '4': 1, '5': 14, '6': '.messaging.CHANNEL_VISIBILITY', '10': 'visibility'},
     {'1': 'message_id', '3': 5, '4': 1, '5': 9, '9': 1, '10': 'messageId', '17': true},
     {'1': 'space_id', '3': 6, '4': 1, '5': 9, '9': 2, '10': 'spaceId', '17': true},
     {'1': 'channel_id', '3': 7, '4': 1, '5': 9, '9': 3, '10': 'channelId', '17': true},
     {'1': 'category_id', '3': 8, '4': 1, '5': 9, '9': 4, '10': 'categoryId', '17': true},
     {'1': 'rank', '3': 9, '4': 1, '5': 5, '9': 5, '10': 'rank', '17': true},
-    {'1': 'capabilities', '3': 10, '4': 3, '5': 14, '6': '.messaging.ChannelCapability', '10': 'capabilities'},
+    {'1': 'capabilities', '3': 10, '4': 3, '5': 14, '6': '.messaging.CHANNEL_CAPABILITY', '10': 'capabilities'},
   ],
   '3': [ChannelDocument_Metadata$json],
   '8': [
@@ -343,21 +344,21 @@ const ChannelDocument_Metadata$json = {
 final $typed_data.Uint8List channelDocumentDescriptor = $convert.base64Decode(
     'Cg9DaGFubmVsRG9jdW1lbnQSJAoLZG9jdW1lbnRfaWQYASABKAlIAFIKZG9jdW1lbnRJZIgBAR'
     'I/CghtZXRhZGF0YRgCIAEoCzIjLm1lc3NhZ2luZy5DaGFubmVsRG9jdW1lbnQuTWV0YWRhdGFS'
-    'CG1ldGFkYXRhEjAKBnN0YXR1cxgDIAEoDjIYLm1lc3NhZ2luZy5DaGFubmVsU3RhdHVzUgZzdG'
-    'F0dXMSPAoKdmlzaWJpbGl0eRgEIAEoDjIcLm1lc3NhZ2luZy5DaGFubmVsVmlzaWJpbGl0eVIK'
-    'dmlzaWJpbGl0eRIiCgptZXNzYWdlX2lkGAUgASgJSAFSCW1lc3NhZ2VJZIgBARIeCghzcGFjZV'
-    '9pZBgGIAEoCUgCUgdzcGFjZUlkiAEBEiIKCmNoYW5uZWxfaWQYByABKAlIA1IJY2hhbm5lbElk'
-    'iAEBEiQKC2NhdGVnb3J5X2lkGAggASgJSARSCmNhdGVnb3J5SWSIAQESFwoEcmFuaxgJIAEoBU'
-    'gFUgRyYW5riAEBEkAKDGNhcGFiaWxpdGllcxgKIAMoDjIcLm1lc3NhZ2luZy5DaGFubmVsQ2Fw'
-    'YWJpbGl0eVIMY2FwYWJpbGl0aWVzGvkCCghNZXRhZGF0YRIXCgRuYW1lGAEgASgJSABSBG5hbW'
-    'WIAQESJQoLZGVzY3JpcHRpb24YAiABKAlIAVILZGVzY3JpcHRpb26IAQESLQoQYXZhdGFyX2lt'
-    'YWdlX3VybBgDIAEoCUgCUg5hdmF0YXJJbWFnZVVybIgBARIvChFhdmF0YXJfaW1hZ2VfaGFzaB'
-    'gEIAEoCUgDUg9hdmF0YXJJbWFnZUhhc2iIAQESLQoQYmFubmVyX2ltYWdlX3VybBgFIAEoCUgE'
-    'Ug5iYW5uZXJJbWFnZVVybIgBARIvChFiYW5uZXJfaW1hZ2VfaGFzaBgGIAEoCUgFUg9iYW5uZX'
-    'JJbWFnZUhhc2iIAQFCBwoFX25hbWVCDgoMX2Rlc2NyaXB0aW9uQhMKEV9hdmF0YXJfaW1hZ2Vf'
-    'dXJsQhQKEl9hdmF0YXJfaW1hZ2VfaGFzaEITChFfYmFubmVyX2ltYWdlX3VybEIUChJfYmFubm'
-    'VyX2ltYWdlX2hhc2hCDgoMX2RvY3VtZW50X2lkQg0KC19tZXNzYWdlX2lkQgsKCV9zcGFjZV9p'
-    'ZEINCgtfY2hhbm5lbF9pZEIOCgxfY2F0ZWdvcnlfaWRCBwoFX3Jhbms=');
+    'CG1ldGFkYXRhEjEKBnN0YXR1cxgDIAEoDjIZLm1lc3NhZ2luZy5DSEFOTkVMX1NUQVRVU1IGc3'
+    'RhdHVzEj0KCnZpc2liaWxpdHkYBCABKA4yHS5tZXNzYWdpbmcuQ0hBTk5FTF9WSVNJQklMSVRZ'
+    'Ugp2aXNpYmlsaXR5EiIKCm1lc3NhZ2VfaWQYBSABKAlIAVIJbWVzc2FnZUlkiAEBEh4KCHNwYW'
+    'NlX2lkGAYgASgJSAJSB3NwYWNlSWSIAQESIgoKY2hhbm5lbF9pZBgHIAEoCUgDUgljaGFubmVs'
+    'SWSIAQESJAoLY2F0ZWdvcnlfaWQYCCABKAlIBFIKY2F0ZWdvcnlJZIgBARIXCgRyYW5rGAkgAS'
+    'gFSAVSBHJhbmuIAQESQQoMY2FwYWJpbGl0aWVzGAogAygOMh0ubWVzc2FnaW5nLkNIQU5ORUxf'
+    'Q0FQQUJJTElUWVIMY2FwYWJpbGl0aWVzGvkCCghNZXRhZGF0YRIXCgRuYW1lGAEgASgJSABSBG'
+    '5hbWWIAQESJQoLZGVzY3JpcHRpb24YAiABKAlIAVILZGVzY3JpcHRpb26IAQESLQoQYXZhdGFy'
+    'X2ltYWdlX3VybBgDIAEoCUgCUg5hdmF0YXJJbWFnZVVybIgBARIvChFhdmF0YXJfaW1hZ2VfaG'
+    'FzaBgEIAEoCUgDUg9hdmF0YXJJbWFnZUhhc2iIAQESLQoQYmFubmVyX2ltYWdlX3VybBgFIAEo'
+    'CUgEUg5iYW5uZXJJbWFnZVVybIgBARIvChFiYW5uZXJfaW1hZ2VfaGFzaBgGIAEoCUgFUg9iYW'
+    '5uZXJJbWFnZUhhc2iIAQFCBwoFX25hbWVCDgoMX2Rlc2NyaXB0aW9uQhMKEV9hdmF0YXJfaW1h'
+    'Z2VfdXJsQhQKEl9hdmF0YXJfaW1hZ2VfaGFzaEITChFfYmFubmVyX2ltYWdlX3VybEIUChJfYm'
+    'FubmVyX2ltYWdlX2hhc2hCDgoMX2RvY3VtZW50X2lkQg0KC19tZXNzYWdlX2lkQgsKCV9zcGFj'
+    'ZV9pZEINCgtfY2hhbm5lbF9pZEIOCgxfY2F0ZWdvcnlfaWRCBwoFX3Jhbms=');
 
 @$core.Deprecated('Use messageDocumentDescriptor instead')
 const MessageDocument$json = {

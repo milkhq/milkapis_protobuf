@@ -7,11 +7,11 @@ fn main() {
         // .field_attribute("document_id", "#[serde(alias = \"_firestore_id\")]")
         .compile(
             &[
-                "../../user.proto",
-                "../../space.proto",
-                "../../messaging.proto",
+                "../../protos/user.proto",
+                "../../protos/space.proto",
+                "../../protos/messaging.proto",
             ],
-            &["../.."],
+            &["../../protos"],
         )
         .unwrap();
 }

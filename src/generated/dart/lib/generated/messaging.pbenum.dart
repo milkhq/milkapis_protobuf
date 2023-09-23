@@ -13,72 +13,72 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class ChannelStatus extends $pb.ProtobufEnum {
-  static const ChannelStatus ACTIVE = ChannelStatus._(0, _omitEnumNames ? '' : 'ACTIVE');
-  static const ChannelStatus ARCHIVED = ChannelStatus._(1, _omitEnumNames ? '' : 'ARCHIVED');
-  static const ChannelStatus DELETED = ChannelStatus._(2, _omitEnumNames ? '' : 'DELETED');
+class CHANNEL_STATUS extends $pb.ProtobufEnum {
+  static const CHANNEL_STATUS ACTIVE = CHANNEL_STATUS._(0, _omitEnumNames ? '' : 'ACTIVE');
+  static const CHANNEL_STATUS ARCHIVED = CHANNEL_STATUS._(1, _omitEnumNames ? '' : 'ARCHIVED');
+  static const CHANNEL_STATUS DELETED = CHANNEL_STATUS._(2, _omitEnumNames ? '' : 'DELETED');
 
-  static const $core.List<ChannelStatus> values = <ChannelStatus> [
+  static const $core.List<CHANNEL_STATUS> values = <CHANNEL_STATUS> [
     ACTIVE,
     ARCHIVED,
     DELETED,
   ];
 
-  static final $core.Map<$core.int, ChannelStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ChannelStatus? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CHANNEL_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CHANNEL_STATUS? valueOf($core.int value) => _byValue[value];
 
-  const ChannelStatus._($core.int v, $core.String n) : super(v, n);
+  const CHANNEL_STATUS._($core.int v, $core.String n) : super(v, n);
 }
 
-class ChannelVisibility extends $pb.ProtobufEnum {
-  static const ChannelVisibility PUBLIC = ChannelVisibility._(0, _omitEnumNames ? '' : 'PUBLIC');
-  static const ChannelVisibility PRIVATE = ChannelVisibility._(1, _omitEnumNames ? '' : 'PRIVATE');
+class CHANNEL_VISIBILITY extends $pb.ProtobufEnum {
+  static const CHANNEL_VISIBILITY PUBLIC = CHANNEL_VISIBILITY._(0, _omitEnumNames ? '' : 'PUBLIC');
+  static const CHANNEL_VISIBILITY PRIVATE = CHANNEL_VISIBILITY._(1, _omitEnumNames ? '' : 'PRIVATE');
 
-  static const $core.List<ChannelVisibility> values = <ChannelVisibility> [
+  static const $core.List<CHANNEL_VISIBILITY> values = <CHANNEL_VISIBILITY> [
     PUBLIC,
     PRIVATE,
   ];
 
-  static final $core.Map<$core.int, ChannelVisibility> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ChannelVisibility? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CHANNEL_VISIBILITY> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CHANNEL_VISIBILITY? valueOf($core.int value) => _byValue[value];
 
-  const ChannelVisibility._($core.int v, $core.String n) : super(v, n);
+  const CHANNEL_VISIBILITY._($core.int v, $core.String n) : super(v, n);
 }
 
-class ChannelType extends $pb.ProtobufEnum {
-  static const ChannelType DIRECT = ChannelType._(0, _omitEnumNames ? '' : 'DIRECT');
-  static const ChannelType GROUP = ChannelType._(1, _omitEnumNames ? '' : 'GROUP');
-  static const ChannelType SPACE = ChannelType._(2, _omitEnumNames ? '' : 'SPACE');
+class CHANNEL_TYPE extends $pb.ProtobufEnum {
+  static const CHANNEL_TYPE DIRECT = CHANNEL_TYPE._(0, _omitEnumNames ? '' : 'DIRECT');
+  static const CHANNEL_TYPE GROUP = CHANNEL_TYPE._(1, _omitEnumNames ? '' : 'GROUP');
+  static const CHANNEL_TYPE SPACE = CHANNEL_TYPE._(2, _omitEnumNames ? '' : 'SPACE');
 
-  static const $core.List<ChannelType> values = <ChannelType> [
+  static const $core.List<CHANNEL_TYPE> values = <CHANNEL_TYPE> [
     DIRECT,
     GROUP,
     SPACE,
   ];
 
-  static final $core.Map<$core.int, ChannelType> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ChannelType? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CHANNEL_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CHANNEL_TYPE? valueOf($core.int value) => _byValue[value];
 
-  const ChannelType._($core.int v, $core.String n) : super(v, n);
+  const CHANNEL_TYPE._($core.int v, $core.String n) : super(v, n);
 }
 
-class ChannelCapability extends $pb.ProtobufEnum {
-  static const ChannelCapability TEXT = ChannelCapability._(0, _omitEnumNames ? '' : 'TEXT');
-  static const ChannelCapability IMAGE = ChannelCapability._(1, _omitEnumNames ? '' : 'IMAGE');
-  static const ChannelCapability VOICE = ChannelCapability._(2, _omitEnumNames ? '' : 'VOICE');
-  static const ChannelCapability VIDEO = ChannelCapability._(3, _omitEnumNames ? '' : 'VIDEO');
+class CHANNEL_CAPABILITY extends $pb.ProtobufEnum {
+  static const CHANNEL_CAPABILITY TEXT = CHANNEL_CAPABILITY._(0, _omitEnumNames ? '' : 'TEXT');
+  static const CHANNEL_CAPABILITY IMAGE = CHANNEL_CAPABILITY._(1, _omitEnumNames ? '' : 'IMAGE');
+  static const CHANNEL_CAPABILITY VOICE = CHANNEL_CAPABILITY._(2, _omitEnumNames ? '' : 'VOICE');
+  static const CHANNEL_CAPABILITY VIDEO = CHANNEL_CAPABILITY._(3, _omitEnumNames ? '' : 'VIDEO');
 
-  static const $core.List<ChannelCapability> values = <ChannelCapability> [
+  static const $core.List<CHANNEL_CAPABILITY> values = <CHANNEL_CAPABILITY> [
     TEXT,
     IMAGE,
     VOICE,
     VIDEO,
   ];
 
-  static final $core.Map<$core.int, ChannelCapability> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ChannelCapability? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, CHANNEL_CAPABILITY> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CHANNEL_CAPABILITY? valueOf($core.int value) => _byValue[value];
 
-  const ChannelCapability._($core.int v, $core.String n) : super(v, n);
+  const CHANNEL_CAPABILITY._($core.int v, $core.String n) : super(v, n);
 }
 
 class CHANNEL_PERMISSION extends $pb.ProtobufEnum {
@@ -180,36 +180,36 @@ class CHANNEL_PERMISSION extends $pb.ProtobufEnum {
   const CHANNEL_PERMISSION._($core.int v, $core.String n) : super(v, n);
 }
 
-class ChannelMemberDocument_ChannelMemberStatus extends $pb.ProtobufEnum {
-  static const ChannelMemberDocument_ChannelMemberStatus PENDING = ChannelMemberDocument_ChannelMemberStatus._(0, _omitEnumNames ? '' : 'PENDING');
-  static const ChannelMemberDocument_ChannelMemberStatus BANNED = ChannelMemberDocument_ChannelMemberStatus._(1, _omitEnumNames ? '' : 'BANNED');
-  static const ChannelMemberDocument_ChannelMemberStatus TIMEOUT = ChannelMemberDocument_ChannelMemberStatus._(2, _omitEnumNames ? '' : 'TIMEOUT');
+class ChannelMemberDocument_CHANNEL_MEMBER_STATUS extends $pb.ProtobufEnum {
+  static const ChannelMemberDocument_CHANNEL_MEMBER_STATUS PENDING = ChannelMemberDocument_CHANNEL_MEMBER_STATUS._(0, _omitEnumNames ? '' : 'PENDING');
+  static const ChannelMemberDocument_CHANNEL_MEMBER_STATUS BANNED = ChannelMemberDocument_CHANNEL_MEMBER_STATUS._(1, _omitEnumNames ? '' : 'BANNED');
+  static const ChannelMemberDocument_CHANNEL_MEMBER_STATUS TIMEOUT = ChannelMemberDocument_CHANNEL_MEMBER_STATUS._(2, _omitEnumNames ? '' : 'TIMEOUT');
 
-  static const $core.List<ChannelMemberDocument_ChannelMemberStatus> values = <ChannelMemberDocument_ChannelMemberStatus> [
+  static const $core.List<ChannelMemberDocument_CHANNEL_MEMBER_STATUS> values = <ChannelMemberDocument_CHANNEL_MEMBER_STATUS> [
     PENDING,
     BANNED,
     TIMEOUT,
   ];
 
-  static final $core.Map<$core.int, ChannelMemberDocument_ChannelMemberStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static ChannelMemberDocument_ChannelMemberStatus? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, ChannelMemberDocument_CHANNEL_MEMBER_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ChannelMemberDocument_CHANNEL_MEMBER_STATUS? valueOf($core.int value) => _byValue[value];
 
-  const ChannelMemberDocument_ChannelMemberStatus._($core.int v, $core.String n) : super(v, n);
+  const ChannelMemberDocument_CHANNEL_MEMBER_STATUS._($core.int v, $core.String n) : super(v, n);
 }
 
-class UserChannelDocument_UserChannelStatus extends $pb.ProtobufEnum {
-  static const UserChannelDocument_UserChannelStatus NEW = UserChannelDocument_UserChannelStatus._(0, _omitEnumNames ? '' : 'NEW');
-  static const UserChannelDocument_UserChannelStatus ACCEPTED = UserChannelDocument_UserChannelStatus._(1, _omitEnumNames ? '' : 'ACCEPTED');
+class UserChannelDocument_USER_CHANNEL_STATUS extends $pb.ProtobufEnum {
+  static const UserChannelDocument_USER_CHANNEL_STATUS NEW = UserChannelDocument_USER_CHANNEL_STATUS._(0, _omitEnumNames ? '' : 'NEW');
+  static const UserChannelDocument_USER_CHANNEL_STATUS ACCEPTED = UserChannelDocument_USER_CHANNEL_STATUS._(1, _omitEnumNames ? '' : 'ACCEPTED');
 
-  static const $core.List<UserChannelDocument_UserChannelStatus> values = <UserChannelDocument_UserChannelStatus> [
+  static const $core.List<UserChannelDocument_USER_CHANNEL_STATUS> values = <UserChannelDocument_USER_CHANNEL_STATUS> [
     NEW,
     ACCEPTED,
   ];
 
-  static final $core.Map<$core.int, UserChannelDocument_UserChannelStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static UserChannelDocument_UserChannelStatus? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, UserChannelDocument_USER_CHANNEL_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserChannelDocument_USER_CHANNEL_STATUS? valueOf($core.int value) => _byValue[value];
 
-  const UserChannelDocument_UserChannelStatus._($core.int v, $core.String n) : super(v, n);
+  const UserChannelDocument_USER_CHANNEL_STATUS._($core.int v, $core.String n) : super(v, n);
 }
 
 

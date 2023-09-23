@@ -1,0 +1,184 @@
+syntax = "proto3";
+
+package user;
+
+service User {
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc CreateUserEmailPassword(CreateUserEmailPasswordRequest)
+      returns (CreateUserEmailPasswordResponse);
+  rpc UpdateUserMetadata(UpdateUserMetadataRequest) returns (UpdateUserMetadataResponse);
+  rpc DeleteUser(UpdateUserStatusRequest) returns (UpdateUserStatusResponse);
+  rpc BanUser(UpdateUserStatusRequest) returns (UpdateUserStatusResponse);
+  rpc SuspendUser(UpdateUserStatusRequest) returns (UpdateUserStatusResponse);
+  rpc ActivateUser(UpdateUserStatusRequest) returns (UpdateUserStatusResponse); 
+  rpc ListenUser(GetUserRequest) returns (stream UserDocument);
+  rpc GetUser(GetUserRequest) returns (UserDocument);
+  rpc QueryUser(QueryUserRequest) returns (stream UserDocument);
+  rpc GetUserCustomizationProfile(GetUserCustomizationProfileRequest) returns (CustomizationProfileDocument);
+  rpc DeleteUserCustomizationProfile(GetUserCustomizationProfileRequest) returns (DeleteUserCustomizationProfileResponse);
+  rpc CreateUserCustomizationProfile(CreateUserCustomizationProfileRequest) returns (CustomizationProfileDocument);
+  rpc UpdateUserCustomizationProfile(UpdateUserCustomizationProfileRequest) returns (UpdateUserCustomizationProfileResponse);
+  rpc ListenUserCustomizationProfile(GetUserCustomizationProfileRequest) returns (stream CustomizationProfileDocument);
+  rpc ListUserCustomizationProfiles(ListUserCustomizationProfilesRequest) returns (CustomizationProfileDocuments);
+  rpc ListenUserCustomizationProfiles(ListUserCustomizationProfilesRequest) returns (stream CustomizationProfileDocument);
+}
+
+message GetUserCustomizationProfileRequest {
+  string uid = 1;
+  string customization_profile_id = 2;
+}
+
+message CreateUserCustomizationProfileRequest {
+  string uid = 1;
+  CustomizationProfileDocument document = 2;
+}
+
+message CreateUserCustomizationProfileResponse {
+
+}
+
+message DeleteUserCustomizationProfileResponse {
+
+}
+
+message UpdateUserCustomizationProfileRequest {
+  string uid = 1;
+  string customization_profile_id = 2;
+  CustomizationProfileDocument updated_document = 3;
+}
+
+message UpdateUserCustomizationProfileResponse {
+  
+}
+
+message ListUserCustomizationProfilesRequest {
+  string uid = 1;
+}
+
+message CustomizationProfileDocument {
+  optional string document_id = 1;
+  string uid = 2;
+  string name = 3;
+  optional string iconURL = 4;
+  optional string description = 5;
+  fixed64 updated_at = 6;
+  string json = 7;
+}
+
+message CustomizationProfileDocuments {
+  repeated CustomizationProfileDocument documents = 1;
+}
+
+enum UserType {
+  USER = 0;
+  MODERATOR = 1;
+  ADMIN = 2;
+}
+
+enum UserTier {
+  FREE = 0;
+  PRO = 1;
+  ENTERPRISE = 2;
+}
+
+enum UserStatus {
+  ACTIVE = 0;
+  BANNED = 1;
+  SUSPENDED = 2;
+  DELETED = 3;
+}
+
+enum UserVisibility {
+  PUBLIC = 0;
+  PRIVATE = 1;
+}
+
+enum USER_PRESENCE_STATUS {
+  ONLINE = 0;
+  OFFLINE = 1;
+  AWAY = 2;
+  BUSY = 3;
+  INVISIBLE = 4;
+}
+
+enum Social {
+  FACEBOOK = 0;
+  GOOGLE = 1;
+  TWITTER = 2;
+  GITHUB = 3;
+  LINKEDIN = 4;
+  MICROSOFT = 5;
+  INSTAGRAM = 9;
+  PINTEREST = 10;
+  REDDIT = 11;
+  TUMBLR = 12;
+  YOUTUBE = 14;
+  DISCORD = 15;
+}
+
+message QueryUserRequest {
+  repeated string terms = 1;
+}
+
+message QueryUserResponse {
+  repeated UserDocument users = 1;
+}
+
+message GetUserRequest { string uid = 1; }
+
+message UserDocument {
+  optional string document_id = 1;
+  Metadata metadata = 2; 
+  UserTier tier = 3;
+  UserStatus status = 4;
+  optional int64 status_expiration = 5;
+  UserType type = 6;
+  repeated string search_terms = 7;
+  UserVisibility visibility = 8;
+
+  message Metadata {
+    string username = 1;
+    optional string email = 2;
+    optional string display_name = 3;
+    optional string bio = 4;
+    optional Social social = 5;
+    optional string social_id = 6;
+    optional string avatar_image_url = 7;
+    optional string avatar_image_hash = 8;
+    optional string banner_image_url = 9;
+    optional string banner_image_hash = 10;
+  }
+}
+
+message UpdateUserMetadataRequest {
+  string uid = 1;
+  UserDocument.Metadata metadata = 2;
+}
+
+message UpdateUserMetadataResponse { string uid = 1; }
+
+message UpdateUserStatusRequest {
+  string uid = 1;
+  optional int64 status_expiration = 2;
+}
+
+message UpdateUserStatusResponse { string uid = 1; }
+
+message CreateUserRequest {
+  Social social = 1;
+  string oauth_code = 2;
+}
+
+message CreateUserResponse {
+  string custom_token = 1;
+}
+
+message CreateUserEmailPasswordRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message CreateUserEmailPasswordResponse {
+  string custom_token = 1;
+}
+

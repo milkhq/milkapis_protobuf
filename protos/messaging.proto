@@ -1,0 +1,250 @@
+syntax = "proto3";
+
+package messaging;
+
+service Messaging {
+    // Space Channels
+    rpc CreateSpaceChannel(CreateChannelRequest) returns (CreateChannelResponse);
+    rpc UpdateSpaceChannelMetadata(UpdateChannelMetadataRequest) returns (UpdateChannelMetadataResponse);
+    rpc DeleteSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ArchiveSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ActivateSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    // rpc AddSpaceChannelMember(UpdateChannelMemberRequest) returns (UpdateChannelMemberResponse);
+
+    // Direct Channels
+    rpc CreateDirectChannel(CreateChannelRequest) returns (CreateChannelResponse);
+    rpc UpdateDirectChannelMetadata(UpdateChannelMetadataRequest) returns (UpdateChannelMetadataResponse);
+    rpc DeleteDirectChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ArchiveDirectChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ActivateDirectChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+
+    // Thread Channels
+    rpc CreateThreadChannel(CreateChannelRequest) returns (CreateChannelResponse);
+    rpc UpdateThreadChannelMetadata(UpdateChannelMetadataRequest) returns (UpdateChannelMetadataResponse);
+    rpc DeleteThreadChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ArchiveThreadChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ActivateThreadChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+
+    // Space channel messages
+    rpc SendSpaceChannelMessage(SendMessageRequest) returns (SendMessageResponse);
+    rpc UpdateSpaceChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
+    rpc DeleteSpaceChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
+    
+    // Direct channel messages
+    rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
+    rpc UpdateDirectChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
+    rpc DeleteDirectChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
+
+    // Thread channel messages
+    rpc SendThreadChannelMessage(SendMessageRequest) returns (SendMessageResponse);
+    rpc UpdateThreadChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
+    rpc DeleteThreadChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
+}
+
+enum ChannelStatus {
+    ACTIVE = 0;
+    ARCHIVED = 1;
+    DELETED = 2;
+}
+
+enum ChannelVisibility {
+    PUBLIC = 0;
+    PRIVATE = 1;
+}
+
+enum ChannelType {
+    DIRECT = 0;
+    GROUP = 1;
+    SPACE = 2;
+}
+
+enum ChannelCapability {
+    TEXT = 0;
+    IMAGE = 1;
+    VOICE = 2;
+    VIDEO = 3;
+}
+
+message ChannelReference {
+    optional string message_id = 1;
+    optional string space_id = 2;
+    optional string channel_id = 3;
+}
+
+message ChannelMemberDocument {
+    optional string document_id = 1;
+    string role_id = 2;
+    optional ChannelMemberStatus status = 3;
+    optional int64 status_expires_at = 4;
+    optional int32 rank = 5;
+
+    enum ChannelMemberStatus {
+        PENDING = 0;
+        BANNED = 1;
+        TIMEOUT = 2;
+    }
+}
+
+message UserChannelDocument {
+    string channel_id = 1;
+    optional int32 rank = 2;
+    UserChannelStatus status = 3;
+
+    enum UserChannelStatus {
+        NEW = 0;
+        ACCEPTED = 1;
+    }
+}
+
+message ChannelCategoryDocument {
+    optional string document_id = 1;
+    string name = 2;
+    optional string description = 3;
+    optional string avatar_image_url = 4;
+    optional string avatar_image_hash = 5;
+    int32 rank = 6;
+    repeated string role_ids = 7;
+}
+
+message ChannelRoleDocument {
+    optional string document_id = 1;
+    repeated int32 permission = 2;
+    string name = 3;
+    optional string description = 4;
+    optional string avatar_image_url = 5;
+    optional string avatar_image_hash = 6;
+    int32 rank = 7;
+}
+
+message ChannelDocument {
+    optional string document_id = 1;
+    Metadata metadata = 2;
+    ChannelStatus status = 3;
+    ChannelVisibility visibility = 4;
+    optional string message_id = 5;
+    optional string space_id = 6;
+    optional string channel_id = 7;
+    optional string category_id = 8;
+    optional int32 rank = 9;
+    repeated ChannelCapability capabilities = 10;
+
+    message Metadata {
+        optional string name = 1;
+        optional string description = 2;
+        optional string avatar_image_url = 3;
+        optional string avatar_image_hash = 4;
+        optional string banner_image_url = 5;
+        optional string banner_image_hash = 6;
+    }
+}
+
+message MessageDocument {
+    message FileMetadata {
+        string file_name = 1;
+        uint64 file_size = 2;
+        uint64 width = 3;
+        uint64 height = 4;
+        string image_blur_hash = 5;
+    }
+
+    message LinkMetadata {
+        string title = 1;
+        string description = 2;
+        string image_url = 3;
+        string image_blur_hash = 4;
+        string color = 5;
+        uint64 timestamp = 6;
+    }
+
+    message TextMetadata {
+        optional uint64 length = 1;
+        optional string words = 2;
+        optional string language = 3;
+        optional string sentiment = 4;
+    }
+
+    message Metadata {
+        optional bool is_sensitive = 1;
+        optional bool is_spoiler = 2;
+        optional bool is_explicit = 3;
+        optional bool is_ephemeral = 4;
+        optional TextMetadata text_metadata = 5;
+        optional FileMetadata file_metadata = 6;
+        optional LinkMetadata link_metadata = 7;
+        optional string reply_message_sender_uid = 8;
+        optional string reply_message_id = 9;
+        string client_message_id = 10;
+        string mime_type = 11;
+        string message = 12;
+    }
+
+    Metadata metadata = 1;
+    uint64 created_at = 2;
+    string sender_uid = 3;
+    optional string document_id = 4;
+    optional bool is_deleted = 5;
+}
+
+message CreateChannelRequest {
+    ChannelDocument channel = 1;
+    optional MessageDocument message = 2;
+}
+
+message CreateChannelResponse {
+    string channel_id = 1;
+}
+
+message UpdateChannelMetadataRequest {
+    string channel_id = 1;
+    ChannelReference references = 2;
+    ChannelDocument.Metadata metadata = 3;
+}
+
+message UpdateChannelMetadataResponse {
+    string channel_id = 1;
+    ChannelReference references = 2;
+}
+
+message UpdateChannelStatusRequest {
+    string channel_id = 1;
+    optional ChannelReference references = 2;
+}
+
+message UpdateChannelStatusResponse {
+    string channel_id = 1;
+    optional ChannelReference references = 2;
+}
+
+message SendMessageRequest {
+    string channel_id = 1;
+    MessageDocument message = 2;
+}
+
+message SendMessageResponse {
+    string channel_id = 1;
+    string message_id = 2;
+}
+
+message UpdateMessageRequest {
+    string channel_id = 1;
+    MessageDocument.Metadata metadata = 2;
+    string message_id = 3;
+}
+
+message UpdateMessageResponse {
+    string channel_id = 1;
+    string message_id = 2;
+}
+
+message DeleteMessageRequest {
+    string channel_id = 1;
+    string message_id = 2;
+}
+
+message DeleteMessageResponse {
+    string channel_id = 1;
+    string message_id = 2;
+}
+
+
+

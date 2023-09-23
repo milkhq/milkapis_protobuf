@@ -1,0 +1,157 @@
+syntax = "proto3";
+
+package space;
+
+service Space {
+  rpc CreateSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
+  rpc GetSpace(GetSpaceRequest) returns (SpaceDocument);
+  rpc SubscribeSpace(GetSpaceRequest) returns (stream SpaceDocument);
+  rpc QuerySpace(QuerySpaceRequest) returns (QuerySpaceResponse);
+  rpc UpdateSpaceMetadata(UpdateSpaceMetadataRequest) returns (UpdateSpaceMetadataResponse);
+  rpc DeleteSpace(UpdateSpaceStatusRequest) returns (UpdateSpaceStatusResponse);
+  rpc ArchiveSpace(UpdateSpaceStatusRequest) returns (UpdateSpaceStatusResponse);
+  rpc ActivateSpace(UpdateSpaceStatusRequest) returns (UpdateSpaceStatusResponse);
+  rpc UpdateSpaceVisibility(UpdateSpaceVisibilityRequest) returns (UpdateSpaceVisibilityResponse);
+  rpc UpdateSpaceCategory(UpdateSpaceCategoryRequest) returns (UpdateSpaceCategoryResponse);
+  rpc CreateSpaceInvite(CreateSpaceInviteRequest) returns (CreateSpaceInviteResponse);
+  rpc GetSpaceInvite(GetSpaceInviteRequest) returns (SpaceInviteDocument);
+  rpc SubscribeSpaceInvite(GetSpaceInviteRequest) returns (stream SubscribeSpaceInviteDocumentResponse);
+  rpc DeleteSpaceInvite(DeleteSpaceInviteRequest) returns (DeleteSpaceInviteResponse);
+  rpc QuerySpaceInvite(QuerySpaceInviteRequest) returns (QuerySpaceInviteResponse);
+  rpc SubscribeQuerySpaceInvite(QuerySpaceInviteRequest) returns (stream QuerySpaceInviteResponse);
+}
+
+message QuerySpaceInviteRequest {
+  optional string space_id = 1;
+  optional string uid = 2;
+}
+
+message QuerySpaceInviteResponse {
+  repeated SpaceInviteDocument documents = 1;
+}
+
+message DeleteSpaceInviteRequest {
+  string space_id = 1;
+  string space_invite_document_id = 2;
+}
+
+message DeleteSpaceInviteResponse {
+  string space_id = 1;
+  string space_invite_document_id = 2;
+}
+
+message GetSpaceInviteRequest {
+  string space_invite_document_id = 1;
+  string space_id = 2;
+}
+
+message CreateSpaceInviteRequest {
+  string space_id = 1;
+  string uid = 2;
+}
+
+message CreateSpaceInviteResponse {
+  string space_invite_document_id = 1;
+}
+
+message UpdateSpaceCategoryRequest {
+  string space_id = 1;
+  SpaceCategory category = 2;
+}
+
+message UpdateSpaceCategoryResponse {
+  string space_id = 1;
+}
+
+message GetSpaceRequest { string space_id = 1; }
+
+message QuerySpaceRequest {
+  optional SpaceCategory category = 1;
+  string search_term = 2; 
+}
+
+message QuerySpaceResponse {
+  repeated SpaceDocument documents = 1;
+}
+
+message UpdateSpaceVisibilityRequest {
+  string space_id = 1;
+  SpaceVisibility visibility = 2;
+}
+
+message UpdateSpaceVisibilityResponse {
+  string space_id = 1;
+}
+
+enum SpaceCategory {
+  GENERAL = 0;
+  GAMES = 1;
+  SPORTS = 2;
+  MUSIC = 3;
+  ARTS = 4;
+  TECH = 5;
+  EDUCATION = 6;
+  ENTERTAINMENT = 7;
+  NEWS = 8;
+  POLITICS = 9;
+  RELIGION = 10;
+  SCIENCE = 11;
+  BUSINESS = 12;
+  OTHER = 13;
+}
+
+enum SpaceStatus {
+  ACTIVE = 0;
+  ARCHIVED = 1;
+  DELETED = 2;
+}
+enum SpaceVisibility {
+  PUBLIC = 0;
+  PRIVATE = 1;
+}
+message UserSpaceDocument {
+  optional string document_id = 1;
+  string space_id = 2;
+  SpaceDocument.Metadata metadata = 3;
+}
+message SpaceMemberPermissionDocument {
+  optional string document_id = 1;
+  repeated int32 permissions = 2;
+}
+message SpaceInviteDocument {
+  optional string document_id = 1;
+  string inviter_uid = 2;
+  bool deleted = 3;
+}
+message SubscribeSpaceInviteDocumentResponse {
+  optional SpaceInviteDocument document = 1;
+}
+message SpaceDocument {
+  message Metadata {
+    string name = 1;
+    optional string description = 2;
+    optional string avatar_image_url = 3;
+    optional string avatar_image_hash = 4;
+    optional string banner_image_url = 5;
+    optional string banner_image_hash = 6;
+  }
+  SpaceStatus status = 1;
+  SpaceVisibility visibility = 2;
+  string owner_uid = 3;
+  Metadata metadata = 4;
+  optional string document_id = 5;
+  int32 nonce = 6;
+  SpaceCategory category = 7;
+  repeated string search_terms = 8;
+}
+message CreateSpaceRequest {
+  SpaceDocument document = 1;
+}
+message CreateSpaceResponse { string space_id = 1; }
+message UpdateSpaceMetadataRequest {
+  string space_id = 1;
+  SpaceDocument.Metadata metadata = 2;
+}
+message UpdateSpaceMetadataResponse { string space_id = 1; }
+message UpdateSpaceStatusRequest { string space_id = 1; }
+message UpdateSpaceStatusResponse { string space_id = 1; }

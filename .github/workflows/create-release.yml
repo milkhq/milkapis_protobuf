@@ -14,12 +14,22 @@ jobs:
         with:
           token: ${{ secrets.BOT_ACCESS_TOKEN }}
           fetch-depth: 0
+      - uses: bufbuild/buf-setup-action@v1
       - name: Setup git
         run: |
           git config user.name "Powntheep Laokhunthot"
           git config user.email "powntheep@milk.build"
       - uses: dart-lang/setup-dart@v1
       - uses: bluefireteam/melos-action@v2
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: stable
+          components: rustfmt, clippy
+      - name: Test dart generator
+        run: buf generate
+      - name: Test rust generator
+        working-directory: ./generated/rust
+        run: cargo build
       - name: List changes
         run: git log
       - name: List packages
@@ -27,7 +37,7 @@ jobs:
       - name: Create the new version(s)
         run: melos version --all --yes
 
-      - name: Push created version commit
-        run: git push
-      - name: Push modified tags
-        run: git push --tags
+      # - name: Push created version commit
+      #   run: git push
+      # - name: Push modified tags
+      #   run: git push --tags

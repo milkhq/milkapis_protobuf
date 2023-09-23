@@ -1,3 +1,7 @@
+## 0.0.3
+
+ - **FEAT**: change all enums message to uppercase.
+
 ## 0.0.2
 
  - **FEAT**: updated clients and servers.

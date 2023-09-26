@@ -20,6 +20,15 @@ service Space {
   rpc DeleteSpaceInvite(DeleteSpaceInviteRequest) returns (DeleteSpaceInviteResponse);
   rpc QuerySpaceInvite(QuerySpaceInviteRequest) returns (QuerySpaceInviteResponse);
   rpc SubscribeQuerySpaceInvite(QuerySpaceInviteRequest) returns (stream QuerySpaceInviteResponse);
+  rpc GetUserSpaces(GetUserSpacesRequest) returns (UserSpaceDocuments);
+}
+
+message UserSpaceDocuments {
+  repeated UserSpaceDocument documents = 1;
+}
+
+message GetUserSpacesRequest {
+  string uid = 1;
 }
 
 message QuerySpaceInviteRequest {

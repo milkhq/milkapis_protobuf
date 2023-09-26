@@ -64,6 +64,7 @@ message GetSpaceInviteRequest {
 message CreateSpaceInviteRequest {
   string space_id = 1;
   string uid = 2;
+  uint64 nonce = 3;
 }
 
 message CreateSpaceInviteResponse {

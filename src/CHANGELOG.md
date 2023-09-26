@@ -1,3 +1,7 @@
+## 0.0.8
+
+ - **FEAT**: added document status and nonce.
+
 ## 0.0.7
 
  - **FEAT**: added get space channels.

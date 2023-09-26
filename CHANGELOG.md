@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`milkapis_protobuf` - `v0.0.8`](#milkapis_protobuf---v008)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.8`
+
+ - **FEAT**: added document status and nonce.
+
+
+## 2023-09-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`milkapis_protobuf` - `v0.0.7`](#milkapis_protobuf---v007)
 
 ---

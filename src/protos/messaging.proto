@@ -9,6 +9,8 @@ service Messaging {
     rpc DeleteSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
     rpc ArchiveSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
     rpc ActivateSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc GetSpaceChannel(GetSpaceChannelRequest) returns (ChannelDocument);
+    rpc GetSpaceChannels(GetSpaceChannelsRequest) returns (ChannelDocuments);
     // rpc AddSpaceChannelMember(UpdateChannelMemberRequest) returns (UpdateChannelMemberResponse);
 
     // Direct Channels
@@ -83,6 +85,20 @@ message ChannelMemberDocument {
         BANNED = 1;
         TIMEOUT = 2;
     }
+}
+
+message GetSpaceChannelRequest {
+    string channel_id = 1;
+}
+
+message GetSpaceChannelsRequest {
+    string space_id = 1;
+    optional int32 limit = 2;
+    optional int32 offset = 3;
+}
+
+message ChannelDocuments {
+    repeated ChannelDocument documents = 1;
 }
 
 message UserChannelDocument {

@@ -203,6 +203,52 @@ final $typed_data.Uint8List channelMemberDocumentDescriptor = $convert.base64Dec
     'RJTkcQABIKCgZCQU5ORUQQARILCgdUSU1FT1VUEAJCDgoMX2RvY3VtZW50X2lkQgkKB19zdGF0'
     'dXNCFAoSX3N0YXR1c19leHBpcmVzX2F0QgcKBV9yYW5r');
 
+@$core.Deprecated('Use getSpaceChannelRequestDescriptor instead')
+const GetSpaceChannelRequest$json = {
+  '1': 'GetSpaceChannelRequest',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelRequestDescriptor = $convert.base64Decode(
+    'ChZHZXRTcGFjZUNoYW5uZWxSZXF1ZXN0Eh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW5uZWxJZA'
+    '==');
+
+@$core.Deprecated('Use getSpaceChannelsRequestDescriptor instead')
+const GetSpaceChannelsRequest$json = {
+  '1': 'GetSpaceChannelsRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'limit', '3': 2, '4': 1, '5': 5, '9': 0, '10': 'limit', '17': true},
+    {'1': 'offset', '3': 3, '4': 1, '5': 5, '9': 1, '10': 'offset', '17': true},
+  ],
+  '8': [
+    {'1': '_limit'},
+    {'1': '_offset'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelsRequestDescriptor = $convert.base64Decode(
+    'ChdHZXRTcGFjZUNoYW5uZWxzUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZBIZCg'
+    'VsaW1pdBgCIAEoBUgAUgVsaW1pdIgBARIbCgZvZmZzZXQYAyABKAVIAVIGb2Zmc2V0iAEBQggK'
+    'Bl9saW1pdEIJCgdfb2Zmc2V0');
+
+@$core.Deprecated('Use channelDocumentsDescriptor instead')
+const ChannelDocuments$json = {
+  '1': 'ChannelDocuments',
+  '2': [
+    {'1': 'documents', '3': 1, '4': 3, '5': 11, '6': '.messaging.ChannelDocument', '10': 'documents'},
+  ],
+};
+
+/// Descriptor for `ChannelDocuments`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List channelDocumentsDescriptor = $convert.base64Decode(
+    'ChBDaGFubmVsRG9jdW1lbnRzEjgKCWRvY3VtZW50cxgBIAMoCzIaLm1lc3NhZ2luZy5DaGFubm'
+    'VsRG9jdW1lbnRSCWRvY3VtZW50cw==');
+
 @$core.Deprecated('Use userChannelDocumentDescriptor instead')
 const UserChannelDocument$json = {
   '1': 'UserChannelDocument',

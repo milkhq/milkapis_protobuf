@@ -202,6 +202,178 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
   void clearRank() => clearField(5);
 }
 
+class GetSpaceChannelRequest extends $pb.GeneratedMessage {
+  factory GetSpaceChannelRequest({
+    $core.String? channelId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    return $result;
+  }
+  GetSpaceChannelRequest._() : super();
+  factory GetSpaceChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelRequest clone() => GetSpaceChannelRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelRequest copyWith(void Function(GetSpaceChannelRequest) updates) => super.copyWith((message) => updates(message as GetSpaceChannelRequest)) as GetSpaceChannelRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelRequest create() => GetSpaceChannelRequest._();
+  GetSpaceChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelRequest> createRepeated() => $pb.PbList<GetSpaceChannelRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelRequest>(create);
+  static GetSpaceChannelRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+}
+
+class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
+  factory GetSpaceChannelsRequest({
+    $core.String? spaceId,
+    $core.int? limit,
+    $core.int? offset,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (limit != null) {
+      $result.limit = limit;
+    }
+    if (offset != null) {
+      $result.offset = offset;
+    }
+    return $result;
+  }
+  GetSpaceChannelsRequest._() : super();
+  factory GetSpaceChannelsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'limit', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelsRequest clone() => GetSpaceChannelsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelsRequest copyWith(void Function(GetSpaceChannelsRequest) updates) => super.copyWith((message) => updates(message as GetSpaceChannelsRequest)) as GetSpaceChannelsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelsRequest create() => GetSpaceChannelsRequest._();
+  GetSpaceChannelsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelsRequest> createRepeated() => $pb.PbList<GetSpaceChannelsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelsRequest>(create);
+  static GetSpaceChannelsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get limit => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set limit($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLimit() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLimit() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get offset => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set offset($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasOffset() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearOffset() => clearField(3);
+}
+
+class ChannelDocuments extends $pb.GeneratedMessage {
+  factory ChannelDocuments({
+    $core.Iterable<ChannelDocument>? documents,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    return $result;
+  }
+  ChannelDocuments._() : super();
+  factory ChannelDocuments.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ChannelDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pc<ChannelDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: ChannelDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ChannelDocuments clone() => ChannelDocuments()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ChannelDocuments copyWith(void Function(ChannelDocuments) updates) => super.copyWith((message) => updates(message as ChannelDocuments)) as ChannelDocuments;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChannelDocuments create() => ChannelDocuments._();
+  ChannelDocuments createEmptyInstance() => create();
+  static $pb.PbList<ChannelDocuments> createRepeated() => $pb.PbList<ChannelDocuments>();
+  @$core.pragma('dart2js:noInline')
+  static ChannelDocuments getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChannelDocuments>(create);
+  static ChannelDocuments? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ChannelDocument> get documents => $_getList(0);
+}
+
 class UserChannelDocument extends $pb.GeneratedMessage {
   factory UserChannelDocument({
     $core.String? channelId,

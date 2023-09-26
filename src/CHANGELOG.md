@@ -1,3 +1,7 @@
+## 0.0.7
+
+ - **FEAT**: added get space channels.
+
 ## 0.0.6
 
  - **FEAT**: added more user presence statuses.

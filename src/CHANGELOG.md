@@ -1,3 +1,7 @@
+## 0.0.6
+
+ - **FEAT**: added more user presence statuses.
+
 ## 0.0.5
 
  - **FEAT**: added GetUserSpaces.

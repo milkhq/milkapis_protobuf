@@ -43,6 +43,12 @@ service Messaging {
     rpc DeleteThreadChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
 }
 
+enum DOCUMENT_STATUS {
+    PENDING = 0;
+    APPROVED = 1;
+    REJECTED = 2;
+}
+
 enum CHANNEL_STATUS {
     ACTIVE = 0;
     ARCHIVED = 1;
@@ -79,6 +85,8 @@ message ChannelMemberDocument {
     optional CHANNEL_MEMBER_STATUS status = 3;
     optional int64 status_expires_at = 4;
     optional int32 rank = 5;
+    uint64 nonce = 6;
+    optional DOCUMENT_STATUS document_status = 7;
 
     enum CHANNEL_MEMBER_STATUS {
         PENDING = 0;
@@ -105,6 +113,8 @@ message UserChannelDocument {
     string channel_id = 1;
     optional int32 rank = 2;
     USER_CHANNEL_STATUS status = 3;
+    uint64 nonce = 4;
+    optional DOCUMENT_STATUS document_status = 5;
 
     enum USER_CHANNEL_STATUS {
         NEW = 0;
@@ -120,6 +130,8 @@ message ChannelCategoryDocument {
     optional string avatar_image_hash = 5;
     int32 rank = 6;
     repeated string role_ids = 7;
+    uint64 nonce = 8;
+    optional DOCUMENT_STATUS document_status = 9;
 }
 
 message ChannelRoleDocument {
@@ -130,6 +142,8 @@ message ChannelRoleDocument {
     optional string avatar_image_url = 5;
     optional string avatar_image_hash = 6;
     int32 rank = 7;
+    uint64 nonce = 8;
+    optional DOCUMENT_STATUS document_status = 9;
 }
 
 message ChannelDocument {
@@ -143,6 +157,8 @@ message ChannelDocument {
     optional string category_id = 8;
     optional int32 rank = 9;
     repeated CHANNEL_CAPABILITY capabilities = 10;
+    uint64 nonce = 11;
+    optional DOCUMENT_STATUS document_status = 12;
 
     message Metadata {
         optional string name = 1;
@@ -199,6 +215,8 @@ message MessageDocument {
     string sender_uid = 3;
     optional string document_id = 4;
     optional bool is_deleted = 5;
+    uint64 nonce = 6;
+    optional DOCUMENT_STATUS document_status = 7;
 }
 
 message CreateChannelRequest {

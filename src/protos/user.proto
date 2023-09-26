@@ -23,6 +23,12 @@ service User {
   rpc ListenUserCustomizationProfiles(ListUserCustomizationProfilesRequest) returns (stream CustomizationProfileDocument);
 }
 
+enum DOCUMENT_STATUS {
+  PENDING = 0;
+  APPROVED = 1;
+  REJECTED = 2;
+}
+
 message GetUserCustomizationProfileRequest {
   string uid = 1;
   string customization_profile_id = 2;
@@ -62,7 +68,9 @@ message CustomizationProfileDocument {
   optional string iconURL = 4;
   optional string description = 5;
   fixed64 updated_at = 6;
-  string json = 7;
+  bytes json = 7;
+  uint64 nonce = 8;
+  optional DOCUMENT_STATUS document_status = 9;
 }
 
 message CustomizationProfileDocuments {
@@ -86,6 +94,7 @@ enum USER_STATUS {
   BANNED = 1;
   SUSPENDED = 2;
   DELETED = 3;
+  CREATING = 4;
 }
 
 enum USER_VISIBILITY {
@@ -139,6 +148,8 @@ message UserDocument {
   USER_TYPE type = 6;
   repeated string search_terms = 7;
   USER_VISIBILITY visibility = 8;
+  uint64 nonce = 9;
+  optional DOCUMENT_STATUS document_status = 10;
 
   message Metadata {
     string username = 1;

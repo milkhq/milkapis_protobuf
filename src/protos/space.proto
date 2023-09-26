@@ -23,6 +23,12 @@ service Space {
   rpc GetUserSpaces(GetUserSpacesRequest) returns (UserSpaceDocuments);
 }
 
+enum DOCUMENT_STATUS {
+  PENDING = 0;
+  APPROVED = 1;
+  REJECTED = 2;
+}
+
 message UserSpaceDocuments {
   repeated UserSpaceDocument documents = 1;
 }
@@ -115,6 +121,7 @@ enum SPACE_STATUS {
   ARCHIVED = 1;
   DELETED = 2;
 }
+
 enum SPACE_VISIBILITY {
   PUBLIC = 0;
   PRIVATE = 1;
@@ -123,6 +130,8 @@ message UserSpaceDocument {
   optional string document_id = 1;
   string space_id = 2;
   SpaceDocument.Metadata metadata = 3;
+  uint64 nonce = 4;
+  optional DOCUMENT_STATUS document_status = 5;
 }
 message SpaceMemberPermissionDocument {
   optional string document_id = 1;
@@ -132,6 +141,8 @@ message SpaceInviteDocument {
   optional string document_id = 1;
   string inviter_uid = 2;
   bool deleted = 3;
+  uint64 nonce = 4;
+  optional DOCUMENT_STATUS document_status = 5;
 }
 message SpaceInviteDocuments {
   repeated SpaceInviteDocument documents = 1;
@@ -153,9 +164,10 @@ message SpaceDocument {
   string owner_uid = 3;
   Metadata metadata = 4;
   optional string document_id = 5;
-  int32 nonce = 6;
+  uint64 nonce = 6;
   SPACE_CATEGORY category = 7;
   repeated string search_terms = 8;
+  optional DOCUMENT_STATUS document_status = 9;
 }
 message CreateSpaceRequest {
   SpaceDocument document = 1;

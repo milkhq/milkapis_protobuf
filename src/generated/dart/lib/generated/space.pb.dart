@@ -1033,6 +1033,50 @@ class SpaceInviteDocument extends $pb.GeneratedMessage {
   void clearDeleted() => clearField(3);
 }
 
+class SpaceInviteDocuments extends $pb.GeneratedMessage {
+  factory SpaceInviteDocuments({
+    $core.Iterable<SpaceInviteDocument>? documents,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    return $result;
+  }
+  SpaceInviteDocuments._() : super();
+  factory SpaceInviteDocuments.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceInviteDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceInviteDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..pc<SpaceInviteDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: SpaceInviteDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceInviteDocuments clone() => SpaceInviteDocuments()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceInviteDocuments copyWith(void Function(SpaceInviteDocuments) updates) => super.copyWith((message) => updates(message as SpaceInviteDocuments)) as SpaceInviteDocuments;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceInviteDocuments create() => SpaceInviteDocuments._();
+  SpaceInviteDocuments createEmptyInstance() => create();
+  static $pb.PbList<SpaceInviteDocuments> createRepeated() => $pb.PbList<SpaceInviteDocuments>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceInviteDocuments getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceInviteDocuments>(create);
+  static SpaceInviteDocuments? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<SpaceInviteDocument> get documents => $_getList(0);
+}
+
 class SubscribeSpaceInviteDocumentResponse extends $pb.GeneratedMessage {
   factory SubscribeSpaceInviteDocumentResponse({
     SpaceInviteDocument? document,

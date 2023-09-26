@@ -322,6 +322,19 @@ final $typed_data.Uint8List spaceInviteDocumentDescriptor = $convert.base64Decod
     'SIAQESHwoLaW52aXRlcl91aWQYAiABKAlSCmludml0ZXJVaWQSGAoHZGVsZXRlZBgDIAEoCFIH'
     'ZGVsZXRlZEIOCgxfZG9jdW1lbnRfaWQ=');
 
+@$core.Deprecated('Use spaceInviteDocumentsDescriptor instead')
+const SpaceInviteDocuments$json = {
+  '1': 'SpaceInviteDocuments',
+  '2': [
+    {'1': 'documents', '3': 1, '4': 3, '5': 11, '6': '.space.SpaceInviteDocument', '10': 'documents'},
+  ],
+};
+
+/// Descriptor for `SpaceInviteDocuments`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceInviteDocumentsDescriptor = $convert.base64Decode(
+    'ChRTcGFjZUludml0ZURvY3VtZW50cxI4Cglkb2N1bWVudHMYASADKAsyGi5zcGFjZS5TcGFjZU'
+    'ludml0ZURvY3VtZW50Uglkb2N1bWVudHM=');
+
 @$core.Deprecated('Use subscribeSpaceInviteDocumentResponseDescriptor instead')
 const SubscribeSpaceInviteDocumentResponse$json = {
   '1': 'SubscribeSpaceInviteDocumentResponse',

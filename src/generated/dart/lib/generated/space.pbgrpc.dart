@@ -69,6 +69,10 @@ class SpaceClient extends $grpc.Client {
       '/space.Space/GetSpaceInvite',
       ($1.GetSpaceInviteRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.SpaceInviteDocument.fromBuffer(value));
+  static final _$getSpaceInvites = $grpc.ClientMethod<$1.GetSpaceInviteRequest, $1.SpaceInviteDocuments>(
+      '/space.Space/GetSpaceInvites',
+      ($1.GetSpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SpaceInviteDocuments.fromBuffer(value));
   static final _$subscribeSpaceInvite = $grpc.ClientMethod<$1.GetSpaceInviteRequest, $1.SubscribeSpaceInviteDocumentResponse>(
       '/space.Space/SubscribeSpaceInvite',
       ($1.GetSpaceInviteRequest value) => value.writeToBuffer(),
@@ -138,6 +142,10 @@ class SpaceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.SpaceInviteDocument> getSpaceInvite($1.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSpaceInvite, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SpaceInviteDocuments> getSpaceInvites($1.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceInvites, request, options: options);
   }
 
   $grpc.ResponseStream<$1.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite($1.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
@@ -246,6 +254,13 @@ abstract class SpaceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.GetSpaceInviteRequest.fromBuffer(value),
         ($1.SpaceInviteDocument value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetSpaceInviteRequest, $1.SpaceInviteDocuments>(
+        'GetSpaceInvites',
+        getSpaceInvites_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetSpaceInviteRequest.fromBuffer(value),
+        ($1.SpaceInviteDocuments value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.GetSpaceInviteRequest, $1.SubscribeSpaceInviteDocumentResponse>(
         'SubscribeSpaceInvite',
         subscribeSpaceInvite_Pre,
@@ -324,6 +339,10 @@ abstract class SpaceServiceBase extends $grpc.Service {
     return getSpaceInvite(call, await request);
   }
 
+  $async.Future<$1.SpaceInviteDocuments> getSpaceInvites_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceInviteRequest> request) async {
+    return getSpaceInvites(call, await request);
+  }
+
   $async.Stream<$1.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceInviteRequest> request) async* {
     yield* subscribeSpaceInvite(call, await request);
   }
@@ -352,6 +371,7 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $async.Future<$1.UpdateSpaceCategoryResponse> updateSpaceCategory($grpc.ServiceCall call, $1.UpdateSpaceCategoryRequest request);
   $async.Future<$1.CreateSpaceInviteResponse> createSpaceInvite($grpc.ServiceCall call, $1.CreateSpaceInviteRequest request);
   $async.Future<$1.SpaceInviteDocument> getSpaceInvite($grpc.ServiceCall call, $1.GetSpaceInviteRequest request);
+  $async.Future<$1.SpaceInviteDocuments> getSpaceInvites($grpc.ServiceCall call, $1.GetSpaceInviteRequest request);
   $async.Stream<$1.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite($grpc.ServiceCall call, $1.GetSpaceInviteRequest request);
   $async.Future<$1.DeleteSpaceInviteResponse> deleteSpaceInvite($grpc.ServiceCall call, $1.DeleteSpaceInviteRequest request);
   $async.Future<$1.QuerySpaceInviteResponse> querySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);

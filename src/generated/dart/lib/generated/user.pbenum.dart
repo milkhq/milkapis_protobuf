@@ -87,6 +87,10 @@ class USER_PRESENCE_STATUS extends $pb.ProtobufEnum {
   static const USER_PRESENCE_STATUS AWAY = USER_PRESENCE_STATUS._(2, _omitEnumNames ? '' : 'AWAY');
   static const USER_PRESENCE_STATUS BUSY = USER_PRESENCE_STATUS._(3, _omitEnumNames ? '' : 'BUSY');
   static const USER_PRESENCE_STATUS INVISIBLE = USER_PRESENCE_STATUS._(4, _omitEnumNames ? '' : 'INVISIBLE');
+  static const USER_PRESENCE_STATUS TYPING = USER_PRESENCE_STATUS._(5, _omitEnumNames ? '' : 'TYPING');
+  static const USER_PRESENCE_STATUS UNKNOWN = USER_PRESENCE_STATUS._(6, _omitEnumNames ? '' : 'UNKNOWN');
+  static const USER_PRESENCE_STATUS LOADING = USER_PRESENCE_STATUS._(7, _omitEnumNames ? '' : 'LOADING');
+  static const USER_PRESENCE_STATUS LIVESTREAMING = USER_PRESENCE_STATUS._(8, _omitEnumNames ? '' : 'LIVESTREAMING');
 
   static const $core.List<USER_PRESENCE_STATUS> values = <USER_PRESENCE_STATUS> [
     ONLINE,
@@ -94,6 +98,10 @@ class USER_PRESENCE_STATUS extends $pb.ProtobufEnum {
     AWAY,
     BUSY,
     INVISIBLE,
+    TYPING,
+    UNKNOWN,
+    LOADING,
+    LIVESTREAMING,
   ];
 
   static final $core.Map<$core.int, USER_PRESENCE_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);

@@ -79,13 +79,18 @@ const USER_PRESENCE_STATUS$json = {
     {'1': 'AWAY', '2': 2},
     {'1': 'BUSY', '2': 3},
     {'1': 'INVISIBLE', '2': 4},
+    {'1': 'TYPING', '2': 5},
+    {'1': 'UNKNOWN', '2': 6},
+    {'1': 'LOADING', '2': 7},
+    {'1': 'LIVESTREAMING', '2': 8},
   ],
 };
 
 /// Descriptor for `USER_PRESENCE_STATUS`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List uSER_PRESENCE_STATUSDescriptor = $convert.base64Decode(
     'ChRVU0VSX1BSRVNFTkNFX1NUQVRVUxIKCgZPTkxJTkUQABILCgdPRkZMSU5FEAESCAoEQVdBWR'
-    'ACEggKBEJVU1kQAxINCglJTlZJU0lCTEUQBA==');
+    'ACEggKBEJVU1kQAxINCglJTlZJU0lCTEUQBBIKCgZUWVBJTkcQBRILCgdVTktOT1dOEAYSCwoH'
+    'TE9BRElORxAHEhEKDUxJVkVTVFJFQU1JTkcQCA==');
 
 @$core.Deprecated('Use sOCIALDescriptor instead')
 const SOCIAL$json = {

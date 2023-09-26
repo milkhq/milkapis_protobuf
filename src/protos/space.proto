@@ -15,6 +15,7 @@ service Space {
   rpc UpdateSpaceCategory(UpdateSpaceCategoryRequest) returns (UpdateSpaceCategoryResponse);
   rpc CreateSpaceInvite(CreateSpaceInviteRequest) returns (CreateSpaceInviteResponse);
   rpc GetSpaceInvite(GetSpaceInviteRequest) returns (SpaceInviteDocument);
+  rpc GetSpaceInvites(GetSpaceInviteRequest) returns (SpaceInviteDocuments);
   rpc SubscribeSpaceInvite(GetSpaceInviteRequest) returns (stream SubscribeSpaceInviteDocumentResponse);
   rpc DeleteSpaceInvite(DeleteSpaceInviteRequest) returns (DeleteSpaceInviteResponse);
   rpc QuerySpaceInvite(QuerySpaceInviteRequest) returns (QuerySpaceInviteResponse);
@@ -122,6 +123,9 @@ message SpaceInviteDocument {
   optional string document_id = 1;
   string inviter_uid = 2;
   bool deleted = 3;
+}
+message SpaceInviteDocuments {
+  repeated SpaceInviteDocument documents = 1;
 }
 message SubscribeSpaceInviteDocumentResponse {
   optional SpaceInviteDocument document = 1;

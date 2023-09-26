@@ -99,6 +99,10 @@ enum USER_PRESENCE_STATUS {
   AWAY = 2;
   BUSY = 3;
   INVISIBLE = 4;
+  TYPING = 5;
+  UNKNOWN = 6;
+  LOADING = 7;
+  LIVESTREAMING = 8;
 }
 
 enum SOCIAL {

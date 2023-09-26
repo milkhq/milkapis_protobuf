@@ -13,6 +13,21 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use dOCUMENT_STATUSDescriptor instead')
+const DOCUMENT_STATUS$json = {
+  '1': 'DOCUMENT_STATUS',
+  '2': [
+    {'1': 'PENDING', '2': 0},
+    {'1': 'APPROVED', '2': 1},
+    {'1': 'REJECTED', '2': 2},
+  ],
+};
+
+/// Descriptor for `DOCUMENT_STATUS`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List dOCUMENT_STATUSDescriptor = $convert.base64Decode(
+    'Cg9ET0NVTUVOVF9TVEFUVVMSCwoHUEVORElORxAAEgwKCEFQUFJPVkVEEAESDAoIUkVKRUNURU'
+    'QQAg==');
+
 @$core.Deprecated('Use sPACE_CATEGORYDescriptor instead')
 const SPACE_CATEGORY$json = {
   '1': 'SPACE_CATEGORY',
@@ -298,9 +313,12 @@ const UserSpaceDocument$json = {
     {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
     {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'metadata', '3': 3, '4': 1, '5': 11, '6': '.space.SpaceDocument.Metadata', '10': 'metadata'},
+    {'1': 'nonce', '3': 4, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'document_status', '3': 5, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '9': 1, '10': 'documentStatus', '17': true},
   ],
   '8': [
     {'1': '_document_id'},
+    {'1': '_document_status'},
   ],
 };
 
@@ -308,7 +326,9 @@ const UserSpaceDocument$json = {
 final $typed_data.Uint8List userSpaceDocumentDescriptor = $convert.base64Decode(
     'ChFVc2VyU3BhY2VEb2N1bWVudBIkCgtkb2N1bWVudF9pZBgBIAEoCUgAUgpkb2N1bWVudElkiA'
     'EBEhkKCHNwYWNlX2lkGAIgASgJUgdzcGFjZUlkEjkKCG1ldGFkYXRhGAMgASgLMh0uc3BhY2Uu'
-    'U3BhY2VEb2N1bWVudC5NZXRhZGF0YVIIbWV0YWRhdGFCDgoMX2RvY3VtZW50X2lk');
+    'U3BhY2VEb2N1bWVudC5NZXRhZGF0YVIIbWV0YWRhdGESFAoFbm9uY2UYBCABKARSBW5vbmNlEk'
+    'QKD2RvY3VtZW50X3N0YXR1cxgFIAEoDjIWLnNwYWNlLkRPQ1VNRU5UX1NUQVRVU0gBUg5kb2N1'
+    'bWVudFN0YXR1c4gBAUIOCgxfZG9jdW1lbnRfaWRCEgoQX2RvY3VtZW50X3N0YXR1cw==');
 
 @$core.Deprecated('Use spaceMemberPermissionDocumentDescriptor instead')
 const SpaceMemberPermissionDocument$json = {
@@ -335,9 +355,12 @@ const SpaceInviteDocument$json = {
     {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
     {'1': 'inviter_uid', '3': 2, '4': 1, '5': 9, '10': 'inviterUid'},
     {'1': 'deleted', '3': 3, '4': 1, '5': 8, '10': 'deleted'},
+    {'1': 'nonce', '3': 4, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'document_status', '3': 5, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '9': 1, '10': 'documentStatus', '17': true},
   ],
   '8': [
     {'1': '_document_id'},
+    {'1': '_document_status'},
   ],
 };
 
@@ -345,7 +368,9 @@ const SpaceInviteDocument$json = {
 final $typed_data.Uint8List spaceInviteDocumentDescriptor = $convert.base64Decode(
     'ChNTcGFjZUludml0ZURvY3VtZW50EiQKC2RvY3VtZW50X2lkGAEgASgJSABSCmRvY3VtZW50SW'
     'SIAQESHwoLaW52aXRlcl91aWQYAiABKAlSCmludml0ZXJVaWQSGAoHZGVsZXRlZBgDIAEoCFIH'
-    'ZGVsZXRlZEIOCgxfZG9jdW1lbnRfaWQ=');
+    'ZGVsZXRlZBIUCgVub25jZRgEIAEoBFIFbm9uY2USRAoPZG9jdW1lbnRfc3RhdHVzGAUgASgOMh'
+    'Yuc3BhY2UuRE9DVU1FTlRfU1RBVFVTSAFSDmRvY3VtZW50U3RhdHVziAEBQg4KDF9kb2N1bWVu'
+    'dF9pZEISChBfZG9jdW1lbnRfc3RhdHVz');
 
 @$core.Deprecated('Use spaceInviteDocumentsDescriptor instead')
 const SpaceInviteDocuments$json = {
@@ -386,13 +411,15 @@ const SpaceDocument$json = {
     {'1': 'owner_uid', '3': 3, '4': 1, '5': 9, '10': 'ownerUid'},
     {'1': 'metadata', '3': 4, '4': 1, '5': 11, '6': '.space.SpaceDocument.Metadata', '10': 'metadata'},
     {'1': 'document_id', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
-    {'1': 'nonce', '3': 6, '4': 1, '5': 5, '10': 'nonce'},
+    {'1': 'nonce', '3': 6, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'category', '3': 7, '4': 1, '5': 14, '6': '.space.SPACE_CATEGORY', '10': 'category'},
     {'1': 'search_terms', '3': 8, '4': 3, '5': 9, '10': 'searchTerms'},
+    {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '9': 1, '10': 'documentStatus', '17': true},
   ],
   '3': [SpaceDocument_Metadata$json],
   '8': [
     {'1': '_document_id'},
+    {'1': '_document_status'},
   ],
 };
 
@@ -422,16 +449,17 @@ final $typed_data.Uint8List spaceDocumentDescriptor = $convert.base64Decode(
     'RhdHVzEjcKCnZpc2liaWxpdHkYAiABKA4yFy5zcGFjZS5TUEFDRV9WSVNJQklMSVRZUgp2aXNp'
     'YmlsaXR5EhsKCW93bmVyX3VpZBgDIAEoCVIIb3duZXJVaWQSOQoIbWV0YWRhdGEYBCABKAsyHS'
     '5zcGFjZS5TcGFjZURvY3VtZW50Lk1ldGFkYXRhUghtZXRhZGF0YRIkCgtkb2N1bWVudF9pZBgF'
-    'IAEoCUgAUgpkb2N1bWVudElkiAEBEhQKBW5vbmNlGAYgASgFUgVub25jZRIxCghjYXRlZ29yeR'
+    'IAEoCUgAUgpkb2N1bWVudElkiAEBEhQKBW5vbmNlGAYgASgEUgVub25jZRIxCghjYXRlZ29yeR'
     'gHIAEoDjIVLnNwYWNlLlNQQUNFX0NBVEVHT1JZUghjYXRlZ29yeRIhCgxzZWFyY2hfdGVybXMY'
-    'CCADKAlSC3NlYXJjaFRlcm1zGusCCghNZXRhZGF0YRISCgRuYW1lGAEgASgJUgRuYW1lEiUKC2'
-    'Rlc2NyaXB0aW9uGAIgASgJSABSC2Rlc2NyaXB0aW9uiAEBEi0KEGF2YXRhcl9pbWFnZV91cmwY'
-    'AyABKAlIAVIOYXZhdGFySW1hZ2VVcmyIAQESLwoRYXZhdGFyX2ltYWdlX2hhc2gYBCABKAlIAl'
-    'IPYXZhdGFySW1hZ2VIYXNoiAEBEi0KEGJhbm5lcl9pbWFnZV91cmwYBSABKAlIA1IOYmFubmVy'
-    'SW1hZ2VVcmyIAQESLwoRYmFubmVyX2ltYWdlX2hhc2gYBiABKAlIBFIPYmFubmVySW1hZ2VIYX'
-    'NoiAEBQg4KDF9kZXNjcmlwdGlvbkITChFfYXZhdGFyX2ltYWdlX3VybEIUChJfYXZhdGFyX2lt'
-    'YWdlX2hhc2hCEwoRX2Jhbm5lcl9pbWFnZV91cmxCFAoSX2Jhbm5lcl9pbWFnZV9oYXNoQg4KDF'
-    '9kb2N1bWVudF9pZA==');
+    'CCADKAlSC3NlYXJjaFRlcm1zEkQKD2RvY3VtZW50X3N0YXR1cxgJIAEoDjIWLnNwYWNlLkRPQ1'
+    'VNRU5UX1NUQVRVU0gBUg5kb2N1bWVudFN0YXR1c4gBARrrAgoITWV0YWRhdGESEgoEbmFtZRgB'
+    'IAEoCVIEbmFtZRIlCgtkZXNjcmlwdGlvbhgCIAEoCUgAUgtkZXNjcmlwdGlvbogBARItChBhdm'
+    'F0YXJfaW1hZ2VfdXJsGAMgASgJSAFSDmF2YXRhckltYWdlVXJsiAEBEi8KEWF2YXRhcl9pbWFn'
+    'ZV9oYXNoGAQgASgJSAJSD2F2YXRhckltYWdlSGFzaIgBARItChBiYW5uZXJfaW1hZ2VfdXJsGA'
+    'UgASgJSANSDmJhbm5lckltYWdlVXJsiAEBEi8KEWJhbm5lcl9pbWFnZV9oYXNoGAYgASgJSARS'
+    'D2Jhbm5lckltYWdlSGFzaIgBAUIOCgxfZGVzY3JpcHRpb25CEwoRX2F2YXRhcl9pbWFnZV91cm'
+    'xCFAoSX2F2YXRhcl9pbWFnZV9oYXNoQhMKEV9iYW5uZXJfaW1hZ2VfdXJsQhQKEl9iYW5uZXJf'
+    'aW1hZ2VfaGFzaEIOCgxfZG9jdW1lbnRfaWRCEgoQX2RvY3VtZW50X3N0YXR1cw==');
 
 @$core.Deprecated('Use createSpaceRequestDescriptor instead')
 const CreateSpaceRequest$json = {

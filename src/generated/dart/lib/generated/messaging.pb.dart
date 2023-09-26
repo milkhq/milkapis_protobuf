@@ -103,6 +103,8 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
     ChannelMemberDocument_CHANNEL_MEMBER_STATUS? status,
     $fixnum.Int64? statusExpiresAt,
     $core.int? rank,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -120,6 +122,12 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
     if (rank != null) {
       $result.rank = rank;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   ChannelMemberDocument._() : super();
@@ -132,6 +140,8 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
     ..e<ChannelMemberDocument_CHANNEL_MEMBER_STATUS>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ChannelMemberDocument_CHANNEL_MEMBER_STATUS.PENDING, valueOf: ChannelMemberDocument_CHANNEL_MEMBER_STATUS.valueOf, enumValues: ChannelMemberDocument_CHANNEL_MEMBER_STATUS.values)
     ..aInt64(4, _omitFieldNames ? '' : 'statusExpiresAt')
     ..a<$core.int>(5, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(7, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -200,6 +210,24 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
   $core.bool hasRank() => $_has(4);
   @$pb.TagNumber(5)
   void clearRank() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $fixnum.Int64 get nonce => $_getI64(5);
+  @$pb.TagNumber(6)
+  set nonce($fixnum.Int64 v) { $_setInt64(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasNonce() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearNonce() => clearField(6);
+
+  @$pb.TagNumber(7)
+  DOCUMENT_STATUS get documentStatus => $_getN(6);
+  @$pb.TagNumber(7)
+  set documentStatus(DOCUMENT_STATUS v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDocumentStatus() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDocumentStatus() => clearField(7);
 }
 
 class GetSpaceChannelRequest extends $pb.GeneratedMessage {
@@ -379,6 +407,8 @@ class UserChannelDocument extends $pb.GeneratedMessage {
     $core.String? channelId,
     $core.int? rank,
     UserChannelDocument_USER_CHANNEL_STATUS? status,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -390,6 +420,12 @@ class UserChannelDocument extends $pb.GeneratedMessage {
     if (status != null) {
       $result.status = status;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   UserChannelDocument._() : super();
@@ -400,6 +436,8 @@ class UserChannelDocument extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..a<$core.int>(2, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
     ..e<UserChannelDocument_USER_CHANNEL_STATUS>(3, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: UserChannelDocument_USER_CHANNEL_STATUS.NEW, valueOf: UserChannelDocument_USER_CHANNEL_STATUS.valueOf, enumValues: UserChannelDocument_USER_CHANNEL_STATUS.values)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(5, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -450,6 +488,24 @@ class UserChannelDocument extends $pb.GeneratedMessage {
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get nonce => $_getI64(3);
+  @$pb.TagNumber(4)
+  set nonce($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNonce() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNonce() => clearField(4);
+
+  @$pb.TagNumber(5)
+  DOCUMENT_STATUS get documentStatus => $_getN(4);
+  @$pb.TagNumber(5)
+  set documentStatus(DOCUMENT_STATUS v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasDocumentStatus() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDocumentStatus() => clearField(5);
 }
 
 class ChannelCategoryDocument extends $pb.GeneratedMessage {
@@ -461,6 +517,8 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
     $core.String? avatarImageHash,
     $core.int? rank,
     $core.Iterable<$core.String>? roleIds,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -484,6 +542,12 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
     if (roleIds != null) {
       $result.roleIds.addAll(roleIds);
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   ChannelCategoryDocument._() : super();
@@ -498,6 +562,8 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'avatarImageHash')
     ..a<$core.int>(6, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
     ..pPS(7, _omitFieldNames ? '' : 'roleIds')
+    ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -578,6 +644,24 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(7)
   $core.List<$core.String> get roleIds => $_getList(6);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get nonce => $_getI64(7);
+  @$pb.TagNumber(8)
+  set nonce($fixnum.Int64 v) { $_setInt64(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasNonce() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearNonce() => clearField(8);
+
+  @$pb.TagNumber(9)
+  DOCUMENT_STATUS get documentStatus => $_getN(8);
+  @$pb.TagNumber(9)
+  set documentStatus(DOCUMENT_STATUS v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasDocumentStatus() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDocumentStatus() => clearField(9);
 }
 
 class ChannelRoleDocument extends $pb.GeneratedMessage {
@@ -589,6 +673,8 @@ class ChannelRoleDocument extends $pb.GeneratedMessage {
     $core.String? avatarImageUrl,
     $core.String? avatarImageHash,
     $core.int? rank,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -612,6 +698,12 @@ class ChannelRoleDocument extends $pb.GeneratedMessage {
     if (rank != null) {
       $result.rank = rank;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   ChannelRoleDocument._() : super();
@@ -626,6 +718,8 @@ class ChannelRoleDocument extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'avatarImageUrl')
     ..aOS(6, _omitFieldNames ? '' : 'avatarImageHash')
     ..a<$core.int>(7, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
+    ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -706,6 +800,24 @@ class ChannelRoleDocument extends $pb.GeneratedMessage {
   $core.bool hasRank() => $_has(6);
   @$pb.TagNumber(7)
   void clearRank() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get nonce => $_getI64(7);
+  @$pb.TagNumber(8)
+  set nonce($fixnum.Int64 v) { $_setInt64(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasNonce() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearNonce() => clearField(8);
+
+  @$pb.TagNumber(9)
+  DOCUMENT_STATUS get documentStatus => $_getN(8);
+  @$pb.TagNumber(9)
+  set documentStatus(DOCUMENT_STATUS v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasDocumentStatus() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDocumentStatus() => clearField(9);
 }
 
 class ChannelDocument_Metadata extends $pb.GeneratedMessage {
@@ -840,6 +952,8 @@ class ChannelDocument extends $pb.GeneratedMessage {
     $core.String? categoryId,
     $core.int? rank,
     $core.Iterable<CHANNEL_CAPABILITY>? capabilities,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -872,6 +986,12 @@ class ChannelDocument extends $pb.GeneratedMessage {
     if (capabilities != null) {
       $result.capabilities.addAll(capabilities);
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   ChannelDocument._() : super();
@@ -889,6 +1009,8 @@ class ChannelDocument extends $pb.GeneratedMessage {
     ..aOS(8, _omitFieldNames ? '' : 'categoryId')
     ..a<$core.int>(9, _omitFieldNames ? '' : 'rank', $pb.PbFieldType.O3)
     ..pc<CHANNEL_CAPABILITY>(10, _omitFieldNames ? '' : 'capabilities', $pb.PbFieldType.KE, valueOf: CHANNEL_CAPABILITY.valueOf, enumValues: CHANNEL_CAPABILITY.values, defaultEnumValue: CHANNEL_CAPABILITY.TEXT)
+    ..a<$fixnum.Int64>(11, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(12, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -998,6 +1120,24 @@ class ChannelDocument extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(10)
   $core.List<CHANNEL_CAPABILITY> get capabilities => $_getList(9);
+
+  @$pb.TagNumber(11)
+  $fixnum.Int64 get nonce => $_getI64(10);
+  @$pb.TagNumber(11)
+  set nonce($fixnum.Int64 v) { $_setInt64(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasNonce() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearNonce() => clearField(11);
+
+  @$pb.TagNumber(12)
+  DOCUMENT_STATUS get documentStatus => $_getN(11);
+  @$pb.TagNumber(12)
+  set documentStatus(DOCUMENT_STATUS v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasDocumentStatus() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearDocumentStatus() => clearField(12);
 }
 
 class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
@@ -1535,6 +1675,8 @@ class MessageDocument extends $pb.GeneratedMessage {
     $core.String? senderUid,
     $core.String? documentId,
     $core.bool? isDeleted,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (metadata != null) {
@@ -1552,6 +1694,12 @@ class MessageDocument extends $pb.GeneratedMessage {
     if (isDeleted != null) {
       $result.isDeleted = isDeleted;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   MessageDocument._() : super();
@@ -1564,6 +1712,8 @@ class MessageDocument extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'senderUid')
     ..aOS(4, _omitFieldNames ? '' : 'documentId')
     ..aOB(5, _omitFieldNames ? '' : 'isDeleted')
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(7, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -1634,6 +1784,24 @@ class MessageDocument extends $pb.GeneratedMessage {
   $core.bool hasIsDeleted() => $_has(4);
   @$pb.TagNumber(5)
   void clearIsDeleted() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $fixnum.Int64 get nonce => $_getI64(5);
+  @$pb.TagNumber(6)
+  set nonce($fixnum.Int64 v) { $_setInt64(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasNonce() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearNonce() => clearField(6);
+
+  @$pb.TagNumber(7)
+  DOCUMENT_STATUS get documentStatus => $_getN(6);
+  @$pb.TagNumber(7)
+  set documentStatus(DOCUMENT_STATUS v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDocumentStatus() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDocumentStatus() => clearField(7);
 }
 
 class CreateChannelRequest extends $pb.GeneratedMessage {

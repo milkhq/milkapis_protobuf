@@ -382,7 +382,9 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
     $core.String? iconURL,
     $core.String? description,
     $fixnum.Int64? updatedAt,
-    $core.String? json,
+    $core.List<$core.int>? json,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -406,6 +408,12 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
     if (json != null) {
       $result.json = json;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   CustomizationProfileDocument._() : super();
@@ -419,7 +427,9 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'iconURL', protoName: 'iconURL')
     ..aOS(5, _omitFieldNames ? '' : 'description')
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OF6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(7, _omitFieldNames ? '' : 'json')
+    ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'json', $pb.PbFieldType.OY)
+    ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -499,13 +509,31 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
   void clearUpdatedAt() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.String get json => $_getSZ(6);
+  $core.List<$core.int> get json => $_getN(6);
   @$pb.TagNumber(7)
-  set json($core.String v) { $_setString(6, v); }
+  set json($core.List<$core.int> v) { $_setBytes(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasJson() => $_has(6);
   @$pb.TagNumber(7)
   void clearJson() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $fixnum.Int64 get nonce => $_getI64(7);
+  @$pb.TagNumber(8)
+  set nonce($fixnum.Int64 v) { $_setInt64(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasNonce() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearNonce() => clearField(8);
+
+  @$pb.TagNumber(9)
+  DOCUMENT_STATUS get documentStatus => $_getN(8);
+  @$pb.TagNumber(9)
+  set documentStatus(DOCUMENT_STATUS v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasDocumentStatus() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDocumentStatus() => clearField(9);
 }
 
 class CustomizationProfileDocuments extends $pb.GeneratedMessage {
@@ -876,6 +904,8 @@ class UserDocument extends $pb.GeneratedMessage {
     USER_TYPE? type,
     $core.Iterable<$core.String>? searchTerms,
     USER_VISIBILITY? visibility,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -902,6 +932,12 @@ class UserDocument extends $pb.GeneratedMessage {
     if (visibility != null) {
       $result.visibility = visibility;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   UserDocument._() : super();
@@ -917,6 +953,8 @@ class UserDocument extends $pb.GeneratedMessage {
     ..e<USER_TYPE>(6, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: USER_TYPE.USER, valueOf: USER_TYPE.valueOf, enumValues: USER_TYPE.values)
     ..pPS(7, _omitFieldNames ? '' : 'searchTerms')
     ..e<USER_VISIBILITY>(8, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: USER_VISIBILITY.PUBLIC, valueOf: USER_VISIBILITY.valueOf, enumValues: USER_VISIBILITY.values)
+    ..a<$fixnum.Int64>(9, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(10, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -1008,6 +1046,24 @@ class UserDocument extends $pb.GeneratedMessage {
   $core.bool hasVisibility() => $_has(7);
   @$pb.TagNumber(8)
   void clearVisibility() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $fixnum.Int64 get nonce => $_getI64(8);
+  @$pb.TagNumber(9)
+  set nonce($fixnum.Int64 v) { $_setInt64(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasNonce() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearNonce() => clearField(9);
+
+  @$pb.TagNumber(10)
+  DOCUMENT_STATUS get documentStatus => $_getN(9);
+  @$pb.TagNumber(10)
+  set documentStatus(DOCUMENT_STATUS v) { setField(10, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasDocumentStatus() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearDocumentStatus() => clearField(10);
 }
 
 class UpdateUserMetadataRequest extends $pb.GeneratedMessage {

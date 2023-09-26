@@ -13,6 +13,23 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class DOCUMENT_STATUS extends $pb.ProtobufEnum {
+  static const DOCUMENT_STATUS PENDING = DOCUMENT_STATUS._(0, _omitEnumNames ? '' : 'PENDING');
+  static const DOCUMENT_STATUS APPROVED = DOCUMENT_STATUS._(1, _omitEnumNames ? '' : 'APPROVED');
+  static const DOCUMENT_STATUS REJECTED = DOCUMENT_STATUS._(2, _omitEnumNames ? '' : 'REJECTED');
+
+  static const $core.List<DOCUMENT_STATUS> values = <DOCUMENT_STATUS> [
+    PENDING,
+    APPROVED,
+    REJECTED,
+  ];
+
+  static final $core.Map<$core.int, DOCUMENT_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DOCUMENT_STATUS? valueOf($core.int value) => _byValue[value];
+
+  const DOCUMENT_STATUS._($core.int v, $core.String n) : super(v, n);
+}
+
 class CHANNEL_STATUS extends $pb.ProtobufEnum {
   static const CHANNEL_STATUS ACTIVE = CHANNEL_STATUS._(0, _omitEnumNames ? '' : 'ACTIVE');
   static const CHANNEL_STATUS ARCHIVED = CHANNEL_STATUS._(1, _omitEnumNames ? '' : 'ARCHIVED');

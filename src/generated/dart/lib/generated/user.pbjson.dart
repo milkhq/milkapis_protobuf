@@ -13,6 +13,21 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use dOCUMENT_STATUSDescriptor instead')
+const DOCUMENT_STATUS$json = {
+  '1': 'DOCUMENT_STATUS',
+  '2': [
+    {'1': 'PENDING', '2': 0},
+    {'1': 'APPROVED', '2': 1},
+    {'1': 'REJECTED', '2': 2},
+  ],
+};
+
+/// Descriptor for `DOCUMENT_STATUS`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List dOCUMENT_STATUSDescriptor = $convert.base64Decode(
+    'Cg9ET0NVTUVOVF9TVEFUVVMSCwoHUEVORElORxAAEgwKCEFQUFJPVkVEEAESDAoIUkVKRUNURU'
+    'QQAg==');
+
 @$core.Deprecated('Use uSER_TYPEDescriptor instead')
 const USER_TYPE$json = {
   '1': 'USER_TYPE',
@@ -49,13 +64,14 @@ const USER_STATUS$json = {
     {'1': 'BANNED', '2': 1},
     {'1': 'SUSPENDED', '2': 2},
     {'1': 'DELETED', '2': 3},
+    {'1': 'CREATING', '2': 4},
   ],
 };
 
 /// Descriptor for `USER_STATUS`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List uSER_STATUSDescriptor = $convert.base64Decode(
     'CgtVU0VSX1NUQVRVUxIKCgZBQ1RJVkUQABIKCgZCQU5ORUQQARINCglTVVNQRU5ERUQQAhILCg'
-    'dERUxFVEVEEAM=');
+    'dERUxFVEVEEAMSDAoIQ1JFQVRJTkcQBA==');
 
 @$core.Deprecated('Use uSER_VISIBILITYDescriptor instead')
 const USER_VISIBILITY$json = {
@@ -215,12 +231,15 @@ const CustomizationProfileDocument$json = {
     {'1': 'iconURL', '3': 4, '4': 1, '5': 9, '9': 1, '10': 'iconURL', '17': true},
     {'1': 'description', '3': 5, '4': 1, '5': 9, '9': 2, '10': 'description', '17': true},
     {'1': 'updated_at', '3': 6, '4': 1, '5': 6, '10': 'updatedAt'},
-    {'1': 'json', '3': 7, '4': 1, '5': 9, '10': 'json'},
+    {'1': 'json', '3': 7, '4': 1, '5': 12, '10': 'json'},
+    {'1': 'nonce', '3': 8, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '9': 3, '10': 'documentStatus', '17': true},
   ],
   '8': [
     {'1': '_document_id'},
     {'1': '_iconURL'},
     {'1': '_description'},
+    {'1': '_document_status'},
   ],
 };
 
@@ -229,8 +248,10 @@ final $typed_data.Uint8List customizationProfileDocumentDescriptor = $convert.ba
     'ChxDdXN0b21pemF0aW9uUHJvZmlsZURvY3VtZW50EiQKC2RvY3VtZW50X2lkGAEgASgJSABSCm'
     'RvY3VtZW50SWSIAQESEAoDdWlkGAIgASgJUgN1aWQSEgoEbmFtZRgDIAEoCVIEbmFtZRIdCgdp'
     'Y29uVVJMGAQgASgJSAFSB2ljb25VUkyIAQESJQoLZGVzY3JpcHRpb24YBSABKAlIAlILZGVzY3'
-    'JpcHRpb26IAQESHQoKdXBkYXRlZF9hdBgGIAEoBlIJdXBkYXRlZEF0EhIKBGpzb24YByABKAlS'
-    'BGpzb25CDgoMX2RvY3VtZW50X2lkQgoKCF9pY29uVVJMQg4KDF9kZXNjcmlwdGlvbg==');
+    'JpcHRpb26IAQESHQoKdXBkYXRlZF9hdBgGIAEoBlIJdXBkYXRlZEF0EhIKBGpzb24YByABKAxS'
+    'BGpzb24SFAoFbm9uY2UYCCABKARSBW5vbmNlEkMKD2RvY3VtZW50X3N0YXR1cxgJIAEoDjIVLn'
+    'VzZXIuRE9DVU1FTlRfU1RBVFVTSANSDmRvY3VtZW50U3RhdHVziAEBQg4KDF9kb2N1bWVudF9p'
+    'ZEIKCghfaWNvblVSTEIOCgxfZGVzY3JpcHRpb25CEgoQX2RvY3VtZW50X3N0YXR1cw==');
 
 @$core.Deprecated('Use customizationProfileDocumentsDescriptor instead')
 const CustomizationProfileDocuments$json = {
@@ -294,11 +315,14 @@ const UserDocument$json = {
     {'1': 'type', '3': 6, '4': 1, '5': 14, '6': '.user.USER_TYPE', '10': 'type'},
     {'1': 'search_terms', '3': 7, '4': 3, '5': 9, '10': 'searchTerms'},
     {'1': 'visibility', '3': 8, '4': 1, '5': 14, '6': '.user.USER_VISIBILITY', '10': 'visibility'},
+    {'1': 'nonce', '3': 9, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '9': 2, '10': 'documentStatus', '17': true},
   ],
   '3': [UserDocument_Metadata$json],
   '8': [
     {'1': '_document_id'},
     {'1': '_status_expiration'},
+    {'1': '_document_status'},
   ],
 };
 
@@ -338,18 +362,20 @@ final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
     'Nlci5VU0VSX1NUQVRVU1IGc3RhdHVzEjAKEXN0YXR1c19leHBpcmF0aW9uGAUgASgDSAFSEHN0'
     'YXR1c0V4cGlyYXRpb26IAQESIwoEdHlwZRgGIAEoDjIPLnVzZXIuVVNFUl9UWVBFUgR0eXBlEi'
     'EKDHNlYXJjaF90ZXJtcxgHIAMoCVILc2VhcmNoVGVybXMSNQoKdmlzaWJpbGl0eRgIIAEoDjIV'
-    'LnVzZXIuVVNFUl9WSVNJQklMSVRZUgp2aXNpYmlsaXR5Gp8ECghNZXRhZGF0YRIaCgh1c2Vybm'
-    'FtZRgBIAEoCVIIdXNlcm5hbWUSGQoFZW1haWwYAiABKAlIAFIFZW1haWyIAQESJgoMZGlzcGxh'
-    'eV9uYW1lGAMgASgJSAFSC2Rpc3BsYXlOYW1liAEBEhUKA2JpbxgEIAEoCUgCUgNiaW+IAQESKQ'
-    'oGc29jaWFsGAUgASgOMgwudXNlci5TT0NJQUxIA1IGc29jaWFsiAEBEiAKCXNvY2lhbF9pZBgG'
-    'IAEoCUgEUghzb2NpYWxJZIgBARItChBhdmF0YXJfaW1hZ2VfdXJsGAcgASgJSAVSDmF2YXRhck'
-    'ltYWdlVXJsiAEBEi8KEWF2YXRhcl9pbWFnZV9oYXNoGAggASgJSAZSD2F2YXRhckltYWdlSGFz'
-    'aIgBARItChBiYW5uZXJfaW1hZ2VfdXJsGAkgASgJSAdSDmJhbm5lckltYWdlVXJsiAEBEi8KEW'
-    'Jhbm5lcl9pbWFnZV9oYXNoGAogASgJSAhSD2Jhbm5lckltYWdlSGFzaIgBAUIICgZfZW1haWxC'
-    'DwoNX2Rpc3BsYXlfbmFtZUIGCgRfYmlvQgkKB19zb2NpYWxCDAoKX3NvY2lhbF9pZEITChFfYX'
-    'ZhdGFyX2ltYWdlX3VybEIUChJfYXZhdGFyX2ltYWdlX2hhc2hCEwoRX2Jhbm5lcl9pbWFnZV91'
-    'cmxCFAoSX2Jhbm5lcl9pbWFnZV9oYXNoQg4KDF9kb2N1bWVudF9pZEIUChJfc3RhdHVzX2V4cG'
-    'lyYXRpb24=');
+    'LnVzZXIuVVNFUl9WSVNJQklMSVRZUgp2aXNpYmlsaXR5EhQKBW5vbmNlGAkgASgEUgVub25jZR'
+    'JDCg9kb2N1bWVudF9zdGF0dXMYCiABKA4yFS51c2VyLkRPQ1VNRU5UX1NUQVRVU0gCUg5kb2N1'
+    'bWVudFN0YXR1c4gBARqfBAoITWV0YWRhdGESGgoIdXNlcm5hbWUYASABKAlSCHVzZXJuYW1lEh'
+    'kKBWVtYWlsGAIgASgJSABSBWVtYWlsiAEBEiYKDGRpc3BsYXlfbmFtZRgDIAEoCUgBUgtkaXNw'
+    'bGF5TmFtZYgBARIVCgNiaW8YBCABKAlIAlIDYmlviAEBEikKBnNvY2lhbBgFIAEoDjIMLnVzZX'
+    'IuU09DSUFMSANSBnNvY2lhbIgBARIgCglzb2NpYWxfaWQYBiABKAlIBFIIc29jaWFsSWSIAQES'
+    'LQoQYXZhdGFyX2ltYWdlX3VybBgHIAEoCUgFUg5hdmF0YXJJbWFnZVVybIgBARIvChFhdmF0YX'
+    'JfaW1hZ2VfaGFzaBgIIAEoCUgGUg9hdmF0YXJJbWFnZUhhc2iIAQESLQoQYmFubmVyX2ltYWdl'
+    'X3VybBgJIAEoCUgHUg5iYW5uZXJJbWFnZVVybIgBARIvChFiYW5uZXJfaW1hZ2VfaGFzaBgKIA'
+    'EoCUgIUg9iYW5uZXJJbWFnZUhhc2iIAQFCCAoGX2VtYWlsQg8KDV9kaXNwbGF5X25hbWVCBgoE'
+    'X2Jpb0IJCgdfc29jaWFsQgwKCl9zb2NpYWxfaWRCEwoRX2F2YXRhcl9pbWFnZV91cmxCFAoSX2'
+    'F2YXRhcl9pbWFnZV9oYXNoQhMKEV9iYW5uZXJfaW1hZ2VfdXJsQhQKEl9iYW5uZXJfaW1hZ2Vf'
+    'aGFzaEIOCgxfZG9jdW1lbnRfaWRCFAoSX3N0YXR1c19leHBpcmF0aW9uQhIKEF9kb2N1bWVudF'
+    '9zdGF0dXM=');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {

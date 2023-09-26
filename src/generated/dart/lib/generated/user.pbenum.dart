@@ -13,6 +13,23 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class DOCUMENT_STATUS extends $pb.ProtobufEnum {
+  static const DOCUMENT_STATUS PENDING = DOCUMENT_STATUS._(0, _omitEnumNames ? '' : 'PENDING');
+  static const DOCUMENT_STATUS APPROVED = DOCUMENT_STATUS._(1, _omitEnumNames ? '' : 'APPROVED');
+  static const DOCUMENT_STATUS REJECTED = DOCUMENT_STATUS._(2, _omitEnumNames ? '' : 'REJECTED');
+
+  static const $core.List<DOCUMENT_STATUS> values = <DOCUMENT_STATUS> [
+    PENDING,
+    APPROVED,
+    REJECTED,
+  ];
+
+  static final $core.Map<$core.int, DOCUMENT_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DOCUMENT_STATUS? valueOf($core.int value) => _byValue[value];
+
+  const DOCUMENT_STATUS._($core.int v, $core.String n) : super(v, n);
+}
+
 class USER_TYPE extends $pb.ProtobufEnum {
   static const USER_TYPE USER = USER_TYPE._(0, _omitEnumNames ? '' : 'USER');
   static const USER_TYPE MODERATOR = USER_TYPE._(1, _omitEnumNames ? '' : 'MODERATOR');
@@ -52,12 +69,14 @@ class USER_STATUS extends $pb.ProtobufEnum {
   static const USER_STATUS BANNED = USER_STATUS._(1, _omitEnumNames ? '' : 'BANNED');
   static const USER_STATUS SUSPENDED = USER_STATUS._(2, _omitEnumNames ? '' : 'SUSPENDED');
   static const USER_STATUS DELETED = USER_STATUS._(3, _omitEnumNames ? '' : 'DELETED');
+  static const USER_STATUS CREATING = USER_STATUS._(4, _omitEnumNames ? '' : 'CREATING');
 
   static const $core.List<USER_STATUS> values = <USER_STATUS> [
     ACTIVE,
     BANNED,
     SUSPENDED,
     DELETED,
+    CREATING,
   ];
 
   static final $core.Map<$core.int, USER_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);

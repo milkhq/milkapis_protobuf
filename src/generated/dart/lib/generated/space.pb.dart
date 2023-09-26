@@ -11,6 +11,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'space.pbenum.dart';
@@ -916,6 +917,8 @@ class UserSpaceDocument extends $pb.GeneratedMessage {
     $core.String? documentId,
     $core.String? spaceId,
     SpaceDocument_Metadata? metadata,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -927,6 +930,12 @@ class UserSpaceDocument extends $pb.GeneratedMessage {
     if (metadata != null) {
       $result.metadata = metadata;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   UserSpaceDocument._() : super();
@@ -937,6 +946,8 @@ class UserSpaceDocument extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'documentId')
     ..aOS(2, _omitFieldNames ? '' : 'spaceId')
     ..aOM<SpaceDocument_Metadata>(3, _omitFieldNames ? '' : 'metadata', subBuilder: SpaceDocument_Metadata.create)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(5, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -989,6 +1000,24 @@ class UserSpaceDocument extends $pb.GeneratedMessage {
   void clearMetadata() => clearField(3);
   @$pb.TagNumber(3)
   SpaceDocument_Metadata ensureMetadata() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get nonce => $_getI64(3);
+  @$pb.TagNumber(4)
+  set nonce($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNonce() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNonce() => clearField(4);
+
+  @$pb.TagNumber(5)
+  DOCUMENT_STATUS get documentStatus => $_getN(4);
+  @$pb.TagNumber(5)
+  set documentStatus(DOCUMENT_STATUS v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasDocumentStatus() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDocumentStatus() => clearField(5);
 }
 
 class SpaceMemberPermissionDocument extends $pb.GeneratedMessage {
@@ -1054,6 +1083,8 @@ class SpaceInviteDocument extends $pb.GeneratedMessage {
     $core.String? documentId,
     $core.String? inviterUid,
     $core.bool? deleted,
+    $fixnum.Int64? nonce,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -1065,6 +1096,12 @@ class SpaceInviteDocument extends $pb.GeneratedMessage {
     if (deleted != null) {
       $result.deleted = deleted;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   SpaceInviteDocument._() : super();
@@ -1075,6 +1112,8 @@ class SpaceInviteDocument extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'documentId')
     ..aOS(2, _omitFieldNames ? '' : 'inviterUid')
     ..aOB(3, _omitFieldNames ? '' : 'deleted')
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<DOCUMENT_STATUS>(5, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -1125,6 +1164,24 @@ class SpaceInviteDocument extends $pb.GeneratedMessage {
   $core.bool hasDeleted() => $_has(2);
   @$pb.TagNumber(3)
   void clearDeleted() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get nonce => $_getI64(3);
+  @$pb.TagNumber(4)
+  set nonce($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNonce() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNonce() => clearField(4);
+
+  @$pb.TagNumber(5)
+  DOCUMENT_STATUS get documentStatus => $_getN(4);
+  @$pb.TagNumber(5)
+  set documentStatus(DOCUMENT_STATUS v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasDocumentStatus() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDocumentStatus() => clearField(5);
 }
 
 class SpaceInviteDocuments extends $pb.GeneratedMessage {
@@ -1350,9 +1407,10 @@ class SpaceDocument extends $pb.GeneratedMessage {
     $core.String? ownerUid,
     SpaceDocument_Metadata? metadata,
     $core.String? documentId,
-    $core.int? nonce,
+    $fixnum.Int64? nonce,
     SPACE_CATEGORY? category,
     $core.Iterable<$core.String>? searchTerms,
+    DOCUMENT_STATUS? documentStatus,
   }) {
     final $result = create();
     if (status != null) {
@@ -1379,6 +1437,9 @@ class SpaceDocument extends $pb.GeneratedMessage {
     if (searchTerms != null) {
       $result.searchTerms.addAll(searchTerms);
     }
+    if (documentStatus != null) {
+      $result.documentStatus = documentStatus;
+    }
     return $result;
   }
   SpaceDocument._() : super();
@@ -1391,9 +1452,10 @@ class SpaceDocument extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'ownerUid')
     ..aOM<SpaceDocument_Metadata>(4, _omitFieldNames ? '' : 'metadata', subBuilder: SpaceDocument_Metadata.create)
     ..aOS(5, _omitFieldNames ? '' : 'documentId')
-    ..a<$core.int>(6, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.O3)
+    ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<SPACE_CATEGORY>(7, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SPACE_CATEGORY.GENERAL, valueOf: SPACE_CATEGORY.valueOf, enumValues: SPACE_CATEGORY.values)
     ..pPS(8, _omitFieldNames ? '' : 'searchTerms')
+    ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -1466,9 +1528,9 @@ class SpaceDocument extends $pb.GeneratedMessage {
   void clearDocumentId() => clearField(5);
 
   @$pb.TagNumber(6)
-  $core.int get nonce => $_getIZ(5);
+  $fixnum.Int64 get nonce => $_getI64(5);
   @$pb.TagNumber(6)
-  set nonce($core.int v) { $_setSignedInt32(5, v); }
+  set nonce($fixnum.Int64 v) { $_setInt64(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasNonce() => $_has(5);
   @$pb.TagNumber(6)
@@ -1485,6 +1547,15 @@ class SpaceDocument extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(8)
   $core.List<$core.String> get searchTerms => $_getList(7);
+
+  @$pb.TagNumber(9)
+  DOCUMENT_STATUS get documentStatus => $_getN(8);
+  @$pb.TagNumber(9)
+  set documentStatus(DOCUMENT_STATUS v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasDocumentStatus() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearDocumentStatus() => clearField(9);
 }
 
 class CreateSpaceRequest extends $pb.GeneratedMessage {

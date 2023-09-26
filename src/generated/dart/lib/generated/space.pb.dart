@@ -17,6 +17,100 @@ import 'space.pbenum.dart';
 
 export 'space.pbenum.dart';
 
+class UserSpaceDocuments extends $pb.GeneratedMessage {
+  factory UserSpaceDocuments({
+    $core.Iterable<UserSpaceDocument>? documents,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    return $result;
+  }
+  UserSpaceDocuments._() : super();
+  factory UserSpaceDocuments.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserSpaceDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSpaceDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..pc<UserSpaceDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: UserSpaceDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserSpaceDocuments clone() => UserSpaceDocuments()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserSpaceDocuments copyWith(void Function(UserSpaceDocuments) updates) => super.copyWith((message) => updates(message as UserSpaceDocuments)) as UserSpaceDocuments;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserSpaceDocuments create() => UserSpaceDocuments._();
+  UserSpaceDocuments createEmptyInstance() => create();
+  static $pb.PbList<UserSpaceDocuments> createRepeated() => $pb.PbList<UserSpaceDocuments>();
+  @$core.pragma('dart2js:noInline')
+  static UserSpaceDocuments getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserSpaceDocuments>(create);
+  static UserSpaceDocuments? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<UserSpaceDocument> get documents => $_getList(0);
+}
+
+class GetUserSpacesRequest extends $pb.GeneratedMessage {
+  factory GetUserSpacesRequest({
+    $core.String? uid,
+  }) {
+    final $result = create();
+    if (uid != null) {
+      $result.uid = uid;
+    }
+    return $result;
+  }
+  GetUserSpacesRequest._() : super();
+  factory GetUserSpacesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserSpacesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserSpacesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uid')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserSpacesRequest clone() => GetUserSpacesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserSpacesRequest copyWith(void Function(GetUserSpacesRequest) updates) => super.copyWith((message) => updates(message as GetUserSpacesRequest)) as GetUserSpacesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserSpacesRequest create() => GetUserSpacesRequest._();
+  GetUserSpacesRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserSpacesRequest> createRepeated() => $pb.PbList<GetUserSpacesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserSpacesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserSpacesRequest>(create);
+  static GetUserSpacesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUid() => clearField(1);
+}
+
 class QuerySpaceInviteRequest extends $pb.GeneratedMessage {
   factory QuerySpaceInviteRequest({
     $core.String? spaceId,

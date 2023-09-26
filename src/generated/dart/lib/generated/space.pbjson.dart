@@ -68,6 +68,31 @@ const SPACE_VISIBILITY$json = {
 final $typed_data.Uint8List sPACE_VISIBILITYDescriptor = $convert.base64Decode(
     'ChBTUEFDRV9WSVNJQklMSVRZEgoKBlBVQkxJQxAAEgsKB1BSSVZBVEUQAQ==');
 
+@$core.Deprecated('Use userSpaceDocumentsDescriptor instead')
+const UserSpaceDocuments$json = {
+  '1': 'UserSpaceDocuments',
+  '2': [
+    {'1': 'documents', '3': 1, '4': 3, '5': 11, '6': '.space.UserSpaceDocument', '10': 'documents'},
+  ],
+};
+
+/// Descriptor for `UserSpaceDocuments`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userSpaceDocumentsDescriptor = $convert.base64Decode(
+    'ChJVc2VyU3BhY2VEb2N1bWVudHMSNgoJZG9jdW1lbnRzGAEgAygLMhguc3BhY2UuVXNlclNwYW'
+    'NlRG9jdW1lbnRSCWRvY3VtZW50cw==');
+
+@$core.Deprecated('Use getUserSpacesRequestDescriptor instead')
+const GetUserSpacesRequest$json = {
+  '1': 'GetUserSpacesRequest',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+  ],
+};
+
+/// Descriptor for `GetUserSpacesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserSpacesRequestDescriptor = $convert.base64Decode(
+    'ChRHZXRVc2VyU3BhY2VzUmVxdWVzdBIQCgN1aWQYASABKAlSA3VpZA==');
+
 @$core.Deprecated('Use querySpaceInviteRequestDescriptor instead')
 const QuerySpaceInviteRequest$json = {
   '1': 'QuerySpaceInviteRequest',

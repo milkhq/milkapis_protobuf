@@ -89,6 +89,10 @@ class SpaceClient extends $grpc.Client {
       '/space.Space/SubscribeQuerySpaceInvite',
       ($1.QuerySpaceInviteRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.QuerySpaceInviteResponse.fromBuffer(value));
+  static final _$getUserSpaces = $grpc.ClientMethod<$1.GetUserSpacesRequest, $1.UserSpaceDocuments>(
+      '/space.Space/GetUserSpaces',
+      ($1.GetUserSpacesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UserSpaceDocuments.fromBuffer(value));
 
   SpaceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -162,6 +166,10 @@ class SpaceClient extends $grpc.Client {
 
   $grpc.ResponseStream<$1.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($1.QuerySpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$subscribeQuerySpaceInvite, $async.Stream.fromIterable([request]), options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UserSpaceDocuments> getUserSpaces($1.GetUserSpacesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getUserSpaces, request, options: options);
   }
 }
 
@@ -289,6 +297,13 @@ abstract class SpaceServiceBase extends $grpc.Service {
         true,
         ($core.List<$core.int> value) => $1.QuerySpaceInviteRequest.fromBuffer(value),
         ($1.QuerySpaceInviteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetUserSpacesRequest, $1.UserSpaceDocuments>(
+        'GetUserSpaces',
+        getUserSpaces_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetUserSpacesRequest.fromBuffer(value),
+        ($1.UserSpaceDocuments value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.CreateSpaceResponse> createSpace_Pre($grpc.ServiceCall call, $async.Future<$1.CreateSpaceRequest> request) async {
@@ -359,6 +374,10 @@ abstract class SpaceServiceBase extends $grpc.Service {
     yield* subscribeQuerySpaceInvite(call, await request);
   }
 
+  $async.Future<$1.UserSpaceDocuments> getUserSpaces_Pre($grpc.ServiceCall call, $async.Future<$1.GetUserSpacesRequest> request) async {
+    return getUserSpaces(call, await request);
+  }
+
   $async.Future<$1.CreateSpaceResponse> createSpace($grpc.ServiceCall call, $1.CreateSpaceRequest request);
   $async.Future<$1.SpaceDocument> getSpace($grpc.ServiceCall call, $1.GetSpaceRequest request);
   $async.Stream<$1.SpaceDocument> subscribeSpace($grpc.ServiceCall call, $1.GetSpaceRequest request);
@@ -376,4 +395,5 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $async.Future<$1.DeleteSpaceInviteResponse> deleteSpaceInvite($grpc.ServiceCall call, $1.DeleteSpaceInviteRequest request);
   $async.Future<$1.QuerySpaceInviteResponse> querySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);
   $async.Stream<$1.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);
+  $async.Future<$1.UserSpaceDocuments> getUserSpaces($grpc.ServiceCall call, $1.GetUserSpacesRequest request);
 }

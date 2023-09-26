@@ -226,6 +226,7 @@ message CreateChannelRequest {
 
 message CreateChannelResponse {
     string channel_id = 1;
+    uint64 nonce = 2;
 }
 
 message UpdateChannelMetadataRequest {
@@ -257,6 +258,7 @@ message SendMessageRequest {
 message SendMessageResponse {
     string channel_id = 1;
     string message_id = 2;
+    uint64 nonce = 3;
 }
 
 message UpdateMessageRequest {

@@ -1,3 +1,7 @@
+## 0.0.4
+
+ - **FEAT**: added GetSpaceInvites.
+
 ## 0.0.3
 
  - **FEAT**: change all enums message to uppercase.

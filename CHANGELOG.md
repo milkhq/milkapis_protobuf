@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`milkapis_protobuf` - `v0.0.5`](#milkapis_protobuf---v005)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.5`
+
+ - **FEAT**: added GetUserSpaces.
+
+
+## 2023-09-26
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`milkapis_protobuf` - `v0.0.4`](#milkapis_protobuf---v004)
 
 ---

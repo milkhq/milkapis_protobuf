@@ -1,3 +1,7 @@
+## 0.0.5
+
+ - **FEAT**: added GetUserSpaces.
+
 ## 0.0.4
 
  - **FEAT**: added GetSpaceInvites.

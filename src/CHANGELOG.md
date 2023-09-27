@@ -1,3 +1,7 @@
+## 0.0.10
+
+ - **FEAT**: added update space channel category.
+
 ## 0.0.9
 
  - **FIX**: add nonce on CreateSpaceInviteRequest.

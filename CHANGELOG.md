@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`milkapis_protobuf` - `v0.0.10`](#milkapis_protobuf---v0010)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.10`
+
+ - **FEAT**: added update space channel category.
+
+
+## 2023-09-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`milkapis_protobuf` - `v0.0.9`](#milkapis_protobuf---v009)
 
 ---

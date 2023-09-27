@@ -18,6 +18,122 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
+  factory CreateSpaceChannelCategoryRequest({
+    ChannelCategoryDocument? category,
+  }) {
+    final $result = create();
+    if (category != null) {
+      $result.category = category;
+    }
+    return $result;
+  }
+  CreateSpaceChannelCategoryRequest._() : super();
+  factory CreateSpaceChannelCategoryRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSpaceChannelCategoryRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceChannelCategoryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOM<ChannelCategoryDocument>(1, _omitFieldNames ? '' : 'category', subBuilder: ChannelCategoryDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSpaceChannelCategoryRequest clone() => CreateSpaceChannelCategoryRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSpaceChannelCategoryRequest copyWith(void Function(CreateSpaceChannelCategoryRequest) updates) => super.copyWith((message) => updates(message as CreateSpaceChannelCategoryRequest)) as CreateSpaceChannelCategoryRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceChannelCategoryRequest create() => CreateSpaceChannelCategoryRequest._();
+  CreateSpaceChannelCategoryRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSpaceChannelCategoryRequest> createRepeated() => $pb.PbList<CreateSpaceChannelCategoryRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceChannelCategoryRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSpaceChannelCategoryRequest>(create);
+  static CreateSpaceChannelCategoryRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ChannelCategoryDocument get category => $_getN(0);
+  @$pb.TagNumber(1)
+  set category(ChannelCategoryDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCategory() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCategory() => clearField(1);
+  @$pb.TagNumber(1)
+  ChannelCategoryDocument ensureCategory() => $_ensure(0);
+}
+
+class CreateSpaceChannelCategoryResponse extends $pb.GeneratedMessage {
+  factory CreateSpaceChannelCategoryResponse({
+    $core.String? categoryId,
+    $fixnum.Int64? nonce,
+  }) {
+    final $result = create();
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    return $result;
+  }
+  CreateSpaceChannelCategoryResponse._() : super();
+  factory CreateSpaceChannelCategoryResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSpaceChannelCategoryResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceChannelCategoryResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'categoryId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSpaceChannelCategoryResponse clone() => CreateSpaceChannelCategoryResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSpaceChannelCategoryResponse copyWith(void Function(CreateSpaceChannelCategoryResponse) updates) => super.copyWith((message) => updates(message as CreateSpaceChannelCategoryResponse)) as CreateSpaceChannelCategoryResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceChannelCategoryResponse create() => CreateSpaceChannelCategoryResponse._();
+  CreateSpaceChannelCategoryResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSpaceChannelCategoryResponse> createRepeated() => $pb.PbList<CreateSpaceChannelCategoryResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceChannelCategoryResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSpaceChannelCategoryResponse>(create);
+  static CreateSpaceChannelCategoryResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get categoryId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set categoryId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCategoryId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCategoryId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get nonce => $_getI64(1);
+  @$pb.TagNumber(2)
+  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNonce() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNonce() => clearField(2);
+}
+
 class ChannelCategoryDocuments extends $pb.GeneratedMessage {
   factory ChannelCategoryDocuments({
     $core.Iterable<ChannelCategoryDocument>? documents,

@@ -385,6 +385,7 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
     $core.List<$core.int>? json,
     $fixnum.Int64? nonce,
     DOCUMENT_STATUS? documentStatus,
+    $core.bool? isSpace,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -414,6 +415,9 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
     if (documentStatus != null) {
       $result.documentStatus = documentStatus;
     }
+    if (isSpace != null) {
+      $result.isSpace = isSpace;
+    }
     return $result;
   }
   CustomizationProfileDocument._() : super();
@@ -430,6 +434,7 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'json', $pb.PbFieldType.OY)
     ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
+    ..aOB(10, _omitFieldNames ? '' : 'isSpace')
     ..hasRequiredFields = false
   ;
 
@@ -534,11 +539,20 @@ class CustomizationProfileDocument extends $pb.GeneratedMessage {
   $core.bool hasDocumentStatus() => $_has(8);
   @$pb.TagNumber(9)
   void clearDocumentStatus() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.bool get isSpace => $_getBF(9);
+  @$pb.TagNumber(10)
+  set isSpace($core.bool v) { $_setBool(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasIsSpace() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearIsSpace() => clearField(10);
 }
 
 class CustomizationProfileDocuments extends $pb.GeneratedMessage {
   factory CustomizationProfileDocuments({
-    $core.Iterable<CustomizationProfileDocument>? documents,
+    $core.Iterable<$core.String>? documents,
   }) {
     final $result = create();
     if (documents != null) {
@@ -551,7 +565,7 @@ class CustomizationProfileDocuments extends $pb.GeneratedMessage {
   factory CustomizationProfileDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CustomizationProfileDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..pc<CustomizationProfileDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: CustomizationProfileDocument.create)
+    ..pPS(1, _omitFieldNames ? '' : 'documents')
     ..hasRequiredFields = false
   ;
 
@@ -577,7 +591,7 @@ class CustomizationProfileDocuments extends $pb.GeneratedMessage {
   static CustomizationProfileDocuments? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<CustomizationProfileDocument> get documents => $_getList(0);
+  $core.List<$core.String> get documents => $_getList(0);
 }
 
 class QueryUserRequest extends $pb.GeneratedMessage {

@@ -18,6 +18,212 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class ChannelCategoryDocuments extends $pb.GeneratedMessage {
+  factory ChannelCategoryDocuments({
+    $core.Iterable<ChannelCategoryDocument>? documents,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    return $result;
+  }
+  ChannelCategoryDocuments._() : super();
+  factory ChannelCategoryDocuments.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ChannelCategoryDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelCategoryDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pc<ChannelCategoryDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: ChannelCategoryDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ChannelCategoryDocuments clone() => ChannelCategoryDocuments()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ChannelCategoryDocuments copyWith(void Function(ChannelCategoryDocuments) updates) => super.copyWith((message) => updates(message as ChannelCategoryDocuments)) as ChannelCategoryDocuments;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChannelCategoryDocuments create() => ChannelCategoryDocuments._();
+  ChannelCategoryDocuments createEmptyInstance() => create();
+  static $pb.PbList<ChannelCategoryDocuments> createRepeated() => $pb.PbList<ChannelCategoryDocuments>();
+  @$core.pragma('dart2js:noInline')
+  static ChannelCategoryDocuments getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChannelCategoryDocuments>(create);
+  static ChannelCategoryDocuments? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ChannelCategoryDocument> get documents => $_getList(0);
+}
+
+class GetSpaceChannelCategoriesRequest extends $pb.GeneratedMessage {
+  factory GetSpaceChannelCategoriesRequest({
+    $core.String? spaceId,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    return $result;
+  }
+  GetSpaceChannelCategoriesRequest._() : super();
+  factory GetSpaceChannelCategoriesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelCategoriesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelCategoriesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelCategoriesRequest clone() => GetSpaceChannelCategoriesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelCategoriesRequest copyWith(void Function(GetSpaceChannelCategoriesRequest) updates) => super.copyWith((message) => updates(message as GetSpaceChannelCategoriesRequest)) as GetSpaceChannelCategoriesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelCategoriesRequest create() => GetSpaceChannelCategoriesRequest._();
+  GetSpaceChannelCategoriesRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelCategoriesRequest> createRepeated() => $pb.PbList<GetSpaceChannelCategoriesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelCategoriesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelCategoriesRequest>(create);
+  static GetSpaceChannelCategoriesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+}
+
+class UpdateSpaceChannelOrderRequest extends $pb.GeneratedMessage {
+  factory UpdateSpaceChannelOrderRequest({
+    $core.String? spaceId,
+    $core.String? categoryId,
+    $core.Iterable<$core.String>? ids,
+    $core.Iterable<$core.int>? scores,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
+    }
+    if (ids != null) {
+      $result.ids.addAll(ids);
+    }
+    if (scores != null) {
+      $result.scores.addAll(scores);
+    }
+    return $result;
+  }
+  UpdateSpaceChannelOrderRequest._() : super();
+  factory UpdateSpaceChannelOrderRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceChannelOrderRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceChannelOrderRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'categoryId')
+    ..pPS(3, _omitFieldNames ? '' : 'ids')
+    ..p<$core.int>(4, _omitFieldNames ? '' : 'scores', $pb.PbFieldType.KU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelOrderRequest clone() => UpdateSpaceChannelOrderRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelOrderRequest copyWith(void Function(UpdateSpaceChannelOrderRequest) updates) => super.copyWith((message) => updates(message as UpdateSpaceChannelOrderRequest)) as UpdateSpaceChannelOrderRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelOrderRequest create() => UpdateSpaceChannelOrderRequest._();
+  UpdateSpaceChannelOrderRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceChannelOrderRequest> createRepeated() => $pb.PbList<UpdateSpaceChannelOrderRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelOrderRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceChannelOrderRequest>(create);
+  static UpdateSpaceChannelOrderRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get categoryId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set categoryId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCategoryId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCategoryId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get ids => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.int> get scores => $_getList(3);
+}
+
+class UpdateSpaceChannelOrderResponse extends $pb.GeneratedMessage {
+  factory UpdateSpaceChannelOrderResponse() => create();
+  UpdateSpaceChannelOrderResponse._() : super();
+  factory UpdateSpaceChannelOrderResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceChannelOrderResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceChannelOrderResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelOrderResponse clone() => UpdateSpaceChannelOrderResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelOrderResponse copyWith(void Function(UpdateSpaceChannelOrderResponse) updates) => super.copyWith((message) => updates(message as UpdateSpaceChannelOrderResponse)) as UpdateSpaceChannelOrderResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelOrderResponse create() => UpdateSpaceChannelOrderResponse._();
+  UpdateSpaceChannelOrderResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceChannelOrderResponse> createRepeated() => $pb.PbList<UpdateSpaceChannelOrderResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelOrderResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceChannelOrderResponse>(create);
+  static UpdateSpaceChannelOrderResponse? _defaultInstance;
+}
+
 class ChannelReference extends $pb.GeneratedMessage {
   factory ChannelReference({
     $core.String? messageId,
@@ -233,10 +439,14 @@ class ChannelMemberDocument extends $pb.GeneratedMessage {
 class GetSpaceChannelRequest extends $pb.GeneratedMessage {
   factory GetSpaceChannelRequest({
     $core.String? channelId,
+    $core.String? spaceId,
   }) {
     final $result = create();
     if (channelId != null) {
       $result.channelId = channelId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
     }
     return $result;
   }
@@ -246,6 +456,7 @@ class GetSpaceChannelRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -278,23 +489,28 @@ class GetSpaceChannelRequest extends $pb.GeneratedMessage {
   $core.bool hasChannelId() => $_has(0);
   @$pb.TagNumber(1)
   void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
 }
 
 class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
   factory GetSpaceChannelsRequest({
     $core.String? spaceId,
-    $core.int? limit,
-    $core.int? offset,
+    $core.String? categoryId,
   }) {
     final $result = create();
     if (spaceId != null) {
       $result.spaceId = spaceId;
     }
-    if (limit != null) {
-      $result.limit = limit;
-    }
-    if (offset != null) {
-      $result.offset = offset;
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
     }
     return $result;
   }
@@ -304,8 +520,7 @@ class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'limit', $pb.PbFieldType.O3)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.O3)
+    ..aOS(2, _omitFieldNames ? '' : 'categoryId')
     ..hasRequiredFields = false
   ;
 
@@ -340,22 +555,13 @@ class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
   void clearSpaceId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.int get limit => $_getIZ(1);
+  $core.String get categoryId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set limit($core.int v) { $_setSignedInt32(1, v); }
+  set categoryId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasLimit() => $_has(1);
+  $core.bool hasCategoryId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLimit() => clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.int get offset => $_getIZ(2);
-  @$pb.TagNumber(3)
-  set offset($core.int v) { $_setSignedInt32(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasOffset() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearOffset() => clearField(3);
+  void clearCategoryId() => clearField(2);
 }
 
 class ChannelDocuments extends $pb.GeneratedMessage {
@@ -1875,10 +2081,14 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
 class CreateChannelResponse extends $pb.GeneratedMessage {
   factory CreateChannelResponse({
     $core.String? channelId,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (channelId != null) {
       $result.channelId = channelId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
     }
     return $result;
   }
@@ -1888,6 +2098,7 @@ class CreateChannelResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateChannelResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -1920,6 +2131,15 @@ class CreateChannelResponse extends $pb.GeneratedMessage {
   $core.bool hasChannelId() => $_has(0);
   @$pb.TagNumber(1)
   void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get nonce => $_getI64(1);
+  @$pb.TagNumber(2)
+  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNonce() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNonce() => clearField(2);
 }
 
 class UpdateChannelMetadataRequest extends $pb.GeneratedMessage {
@@ -2272,6 +2492,7 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   factory SendMessageResponse({
     $core.String? channelId,
     $core.String? messageId,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -2279,6 +2500,9 @@ class SendMessageResponse extends $pb.GeneratedMessage {
     }
     if (messageId != null) {
       $result.messageId = messageId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
     }
     return $result;
   }
@@ -2289,6 +2513,7 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendMessageResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOS(2, _omitFieldNames ? '' : 'messageId')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -2330,6 +2555,15 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(1);
   @$pb.TagNumber(2)
   void clearMessageId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get nonce => $_getI64(2);
+  @$pb.TagNumber(3)
+  set nonce($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNonce() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNonce() => clearField(3);
 }
 
 class UpdateMessageRequest extends $pb.GeneratedMessage {

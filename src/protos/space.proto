@@ -21,6 +21,8 @@ service Space {
   rpc QuerySpaceInvite(QuerySpaceInviteRequest) returns (QuerySpaceInviteResponse);
   rpc SubscribeQuerySpaceInvite(QuerySpaceInviteRequest) returns (stream QuerySpaceInviteResponse);
   rpc GetUserSpaces(GetUserSpacesRequest) returns (UserSpaceDocuments);
+  rpc UpdateUserSpaceOrder(UpdateUserSpaceOrderRequest) returns (UpdateUserSpaceOrderResponse);
+  rpc UpdateSpaceCustomization(UpdateSpaceCustomizationRequest) returns (UpdateSpaceCustomizationResponse);
 }
 
 enum DOCUMENT_STATUS {
@@ -29,8 +31,27 @@ enum DOCUMENT_STATUS {
   REJECTED = 2;
 }
 
+message UpdateUserSpaceOrderRequest {
+  string uid = 1;
+  string space_id = 2;
+  int32 score = 3;
+}
+
+message UpdateUserSpaceOrderResponse {
+
+}
+
+message UpdateSpaceCustomizationRequest {
+  string space_id = 1;
+  optional bytes customization = 2;
+}
+
+message UpdateSpaceCustomizationResponse {
+  string space_id = 1;
+}
+
 message UserSpaceDocuments {
-  repeated UserSpaceDocument documents = 1;
+  repeated string documents = 1;
 }
 
 message GetUserSpacesRequest {
@@ -128,13 +149,7 @@ enum SPACE_VISIBILITY {
   PUBLIC = 0;
   PRIVATE = 1;
 }
-message UserSpaceDocument {
-  optional string document_id = 1;
-  string space_id = 2;
-  SpaceDocument.Metadata metadata = 3;
-  uint64 nonce = 4;
-  optional DOCUMENT_STATUS document_status = 5;
-}
+
 message SpaceMemberPermissionDocument {
   optional string document_id = 1;
   repeated int32 permissions = 2;

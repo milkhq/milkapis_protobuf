@@ -93,6 +93,14 @@ class SpaceClient extends $grpc.Client {
       '/space.Space/GetUserSpaces',
       ($1.GetUserSpacesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.UserSpaceDocuments.fromBuffer(value));
+  static final _$updateUserSpaceOrder = $grpc.ClientMethod<$1.UpdateUserSpaceOrderRequest, $1.UpdateUserSpaceOrderResponse>(
+      '/space.Space/UpdateUserSpaceOrder',
+      ($1.UpdateUserSpaceOrderRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UpdateUserSpaceOrderResponse.fromBuffer(value));
+  static final _$updateSpaceCustomization = $grpc.ClientMethod<$1.UpdateSpaceCustomizationRequest, $1.UpdateSpaceCustomizationResponse>(
+      '/space.Space/UpdateSpaceCustomization',
+      ($1.UpdateSpaceCustomizationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UpdateSpaceCustomizationResponse.fromBuffer(value));
 
   SpaceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -170,6 +178,14 @@ class SpaceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.UserSpaceDocuments> getUserSpaces($1.GetUserSpacesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getUserSpaces, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UpdateUserSpaceOrderResponse> updateUserSpaceOrder($1.UpdateUserSpaceOrderRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateUserSpaceOrder, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UpdateSpaceCustomizationResponse> updateSpaceCustomization($1.UpdateSpaceCustomizationRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSpaceCustomization, request, options: options);
   }
 }
 
@@ -304,6 +320,20 @@ abstract class SpaceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.GetUserSpacesRequest.fromBuffer(value),
         ($1.UserSpaceDocuments value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UpdateUserSpaceOrderRequest, $1.UpdateUserSpaceOrderResponse>(
+        'UpdateUserSpaceOrder',
+        updateUserSpaceOrder_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UpdateUserSpaceOrderRequest.fromBuffer(value),
+        ($1.UpdateUserSpaceOrderResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceCustomizationRequest, $1.UpdateSpaceCustomizationResponse>(
+        'UpdateSpaceCustomization',
+        updateSpaceCustomization_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UpdateSpaceCustomizationRequest.fromBuffer(value),
+        ($1.UpdateSpaceCustomizationResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.CreateSpaceResponse> createSpace_Pre($grpc.ServiceCall call, $async.Future<$1.CreateSpaceRequest> request) async {
@@ -378,6 +408,14 @@ abstract class SpaceServiceBase extends $grpc.Service {
     return getUserSpaces(call, await request);
   }
 
+  $async.Future<$1.UpdateUserSpaceOrderResponse> updateUserSpaceOrder_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateUserSpaceOrderRequest> request) async {
+    return updateUserSpaceOrder(call, await request);
+  }
+
+  $async.Future<$1.UpdateSpaceCustomizationResponse> updateSpaceCustomization_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceCustomizationRequest> request) async {
+    return updateSpaceCustomization(call, await request);
+  }
+
   $async.Future<$1.CreateSpaceResponse> createSpace($grpc.ServiceCall call, $1.CreateSpaceRequest request);
   $async.Future<$1.SpaceDocument> getSpace($grpc.ServiceCall call, $1.GetSpaceRequest request);
   $async.Stream<$1.SpaceDocument> subscribeSpace($grpc.ServiceCall call, $1.GetSpaceRequest request);
@@ -396,4 +434,6 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $async.Future<$1.QuerySpaceInviteResponse> querySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);
   $async.Stream<$1.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);
   $async.Future<$1.UserSpaceDocuments> getUserSpaces($grpc.ServiceCall call, $1.GetUserSpacesRequest request);
+  $async.Future<$1.UpdateUserSpaceOrderResponse> updateUserSpaceOrder($grpc.ServiceCall call, $1.UpdateUserSpaceOrderRequest request);
+  $async.Future<$1.UpdateSpaceCustomizationResponse> updateSpaceCustomization($grpc.ServiceCall call, $1.UpdateSpaceCustomizationRequest request);
 }

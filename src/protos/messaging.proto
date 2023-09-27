@@ -11,7 +11,8 @@ service Messaging {
     rpc ActivateSpaceChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
     rpc GetSpaceChannel(GetSpaceChannelRequest) returns (ChannelDocument);
     rpc GetSpaceChannels(GetSpaceChannelsRequest) returns (ChannelDocuments);
-    // rpc AddSpaceChannelMember(UpdateChannelMemberRequest) returns (UpdateChannelMemberResponse);
+    rpc GetSpaceChannelCategories(GetSpaceChannelCategoriesRequest) returns (ChannelCategoryDocuments);
+    rpc UpdateSpaceChannelOrder(UpdateSpaceChannelOrderRequest) returns (UpdateSpaceChannelOrderResponse);
 
     // Direct Channels
     rpc CreateDirectChannel(CreateChannelRequest) returns (CreateChannelResponse);
@@ -73,6 +74,25 @@ enum CHANNEL_CAPABILITY {
     VIDEO = 3;
 }
 
+message ChannelCategoryDocuments {
+    repeated ChannelCategoryDocument documents = 1;
+}
+
+message GetSpaceChannelCategoriesRequest {
+    string space_id = 1;
+}
+
+message UpdateSpaceChannelOrderRequest {
+    string space_id = 1;
+    string category_id = 2;
+    repeated string ids = 3;
+    repeated uint32 scores = 4;
+}
+
+message UpdateSpaceChannelOrderResponse {
+
+}
+
 message ChannelReference {
     optional string message_id = 1;
     optional string space_id = 2;
@@ -97,12 +117,12 @@ message ChannelMemberDocument {
 
 message GetSpaceChannelRequest {
     string channel_id = 1;
+    string space_id = 2;
 }
 
 message GetSpaceChannelsRequest {
     string space_id = 1;
-    optional int32 limit = 2;
-    optional int32 offset = 3;
+    string category_id = 2;
 }
 
 message ChannelDocuments {

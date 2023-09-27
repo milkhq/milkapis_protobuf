@@ -234,12 +234,14 @@ const CustomizationProfileDocument$json = {
     {'1': 'json', '3': 7, '4': 1, '5': 12, '10': 'json'},
     {'1': 'nonce', '3': 8, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '9': 3, '10': 'documentStatus', '17': true},
+    {'1': 'is_space', '3': 10, '4': 1, '5': 8, '9': 4, '10': 'isSpace', '17': true},
   ],
   '8': [
     {'1': '_document_id'},
     {'1': '_iconURL'},
     {'1': '_description'},
     {'1': '_document_status'},
+    {'1': '_is_space'},
   ],
 };
 
@@ -250,21 +252,22 @@ final $typed_data.Uint8List customizationProfileDocumentDescriptor = $convert.ba
     'Y29uVVJMGAQgASgJSAFSB2ljb25VUkyIAQESJQoLZGVzY3JpcHRpb24YBSABKAlIAlILZGVzY3'
     'JpcHRpb26IAQESHQoKdXBkYXRlZF9hdBgGIAEoBlIJdXBkYXRlZEF0EhIKBGpzb24YByABKAxS'
     'BGpzb24SFAoFbm9uY2UYCCABKARSBW5vbmNlEkMKD2RvY3VtZW50X3N0YXR1cxgJIAEoDjIVLn'
-    'VzZXIuRE9DVU1FTlRfU1RBVFVTSANSDmRvY3VtZW50U3RhdHVziAEBQg4KDF9kb2N1bWVudF9p'
-    'ZEIKCghfaWNvblVSTEIOCgxfZGVzY3JpcHRpb25CEgoQX2RvY3VtZW50X3N0YXR1cw==');
+    'VzZXIuRE9DVU1FTlRfU1RBVFVTSANSDmRvY3VtZW50U3RhdHVziAEBEh4KCGlzX3NwYWNlGAog'
+    'ASgISARSB2lzU3BhY2WIAQFCDgoMX2RvY3VtZW50X2lkQgoKCF9pY29uVVJMQg4KDF9kZXNjcm'
+    'lwdGlvbkISChBfZG9jdW1lbnRfc3RhdHVzQgsKCV9pc19zcGFjZQ==');
 
 @$core.Deprecated('Use customizationProfileDocumentsDescriptor instead')
 const CustomizationProfileDocuments$json = {
   '1': 'CustomizationProfileDocuments',
   '2': [
-    {'1': 'documents', '3': 1, '4': 3, '5': 11, '6': '.user.CustomizationProfileDocument', '10': 'documents'},
+    {'1': 'documents', '3': 1, '4': 3, '5': 9, '10': 'documents'},
   ],
 };
 
 /// Descriptor for `CustomizationProfileDocuments`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List customizationProfileDocumentsDescriptor = $convert.base64Decode(
-    'Ch1DdXN0b21pemF0aW9uUHJvZmlsZURvY3VtZW50cxJACglkb2N1bWVudHMYASADKAsyIi51c2'
-    'VyLkN1c3RvbWl6YXRpb25Qcm9maWxlRG9jdW1lbnRSCWRvY3VtZW50cw==');
+    'Ch1DdXN0b21pemF0aW9uUHJvZmlsZURvY3VtZW50cxIcCglkb2N1bWVudHMYASADKAlSCWRvY3'
+    'VtZW50cw==');
 
 @$core.Deprecated('Use queryUserRequestDescriptor instead')
 const QueryUserRequest$json = {

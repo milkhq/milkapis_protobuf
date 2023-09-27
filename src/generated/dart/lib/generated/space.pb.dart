@@ -18,9 +18,233 @@ import 'space.pbenum.dart';
 
 export 'space.pbenum.dart';
 
+class UpdateUserSpaceOrderRequest extends $pb.GeneratedMessage {
+  factory UpdateUserSpaceOrderRequest({
+    $core.String? uid,
+    $core.String? spaceId,
+    $core.int? score,
+  }) {
+    final $result = create();
+    if (uid != null) {
+      $result.uid = uid;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (score != null) {
+      $result.score = score;
+    }
+    return $result;
+  }
+  UpdateUserSpaceOrderRequest._() : super();
+  factory UpdateUserSpaceOrderRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateUserSpaceOrderRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserSpaceOrderRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uid')
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'score', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateUserSpaceOrderRequest clone() => UpdateUserSpaceOrderRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateUserSpaceOrderRequest copyWith(void Function(UpdateUserSpaceOrderRequest) updates) => super.copyWith((message) => updates(message as UpdateUserSpaceOrderRequest)) as UpdateUserSpaceOrderRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserSpaceOrderRequest create() => UpdateUserSpaceOrderRequest._();
+  UpdateUserSpaceOrderRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateUserSpaceOrderRequest> createRepeated() => $pb.PbList<UpdateUserSpaceOrderRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserSpaceOrderRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateUserSpaceOrderRequest>(create);
+  static UpdateUserSpaceOrderRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get score => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set score($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasScore() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearScore() => clearField(3);
+}
+
+class UpdateUserSpaceOrderResponse extends $pb.GeneratedMessage {
+  factory UpdateUserSpaceOrderResponse() => create();
+  UpdateUserSpaceOrderResponse._() : super();
+  factory UpdateUserSpaceOrderResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateUserSpaceOrderResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserSpaceOrderResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateUserSpaceOrderResponse clone() => UpdateUserSpaceOrderResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateUserSpaceOrderResponse copyWith(void Function(UpdateUserSpaceOrderResponse) updates) => super.copyWith((message) => updates(message as UpdateUserSpaceOrderResponse)) as UpdateUserSpaceOrderResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserSpaceOrderResponse create() => UpdateUserSpaceOrderResponse._();
+  UpdateUserSpaceOrderResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateUserSpaceOrderResponse> createRepeated() => $pb.PbList<UpdateUserSpaceOrderResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserSpaceOrderResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateUserSpaceOrderResponse>(create);
+  static UpdateUserSpaceOrderResponse? _defaultInstance;
+}
+
+class UpdateSpaceCustomizationRequest extends $pb.GeneratedMessage {
+  factory UpdateSpaceCustomizationRequest({
+    $core.String? spaceId,
+    $core.List<$core.int>? customization,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (customization != null) {
+      $result.customization = customization;
+    }
+    return $result;
+  }
+  UpdateSpaceCustomizationRequest._() : super();
+  factory UpdateSpaceCustomizationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceCustomizationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceCustomizationRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'customization', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceCustomizationRequest clone() => UpdateSpaceCustomizationRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceCustomizationRequest copyWith(void Function(UpdateSpaceCustomizationRequest) updates) => super.copyWith((message) => updates(message as UpdateSpaceCustomizationRequest)) as UpdateSpaceCustomizationRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceCustomizationRequest create() => UpdateSpaceCustomizationRequest._();
+  UpdateSpaceCustomizationRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceCustomizationRequest> createRepeated() => $pb.PbList<UpdateSpaceCustomizationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceCustomizationRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceCustomizationRequest>(create);
+  static UpdateSpaceCustomizationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get customization => $_getN(1);
+  @$pb.TagNumber(2)
+  set customization($core.List<$core.int> v) { $_setBytes(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCustomization() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCustomization() => clearField(2);
+}
+
+class UpdateSpaceCustomizationResponse extends $pb.GeneratedMessage {
+  factory UpdateSpaceCustomizationResponse({
+    $core.String? spaceId,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    return $result;
+  }
+  UpdateSpaceCustomizationResponse._() : super();
+  factory UpdateSpaceCustomizationResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceCustomizationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceCustomizationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceCustomizationResponse clone() => UpdateSpaceCustomizationResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceCustomizationResponse copyWith(void Function(UpdateSpaceCustomizationResponse) updates) => super.copyWith((message) => updates(message as UpdateSpaceCustomizationResponse)) as UpdateSpaceCustomizationResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceCustomizationResponse create() => UpdateSpaceCustomizationResponse._();
+  UpdateSpaceCustomizationResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceCustomizationResponse> createRepeated() => $pb.PbList<UpdateSpaceCustomizationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceCustomizationResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceCustomizationResponse>(create);
+  static UpdateSpaceCustomizationResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+}
+
 class UserSpaceDocuments extends $pb.GeneratedMessage {
   factory UserSpaceDocuments({
-    $core.Iterable<UserSpaceDocument>? documents,
+    $core.Iterable<$core.String>? documents,
   }) {
     final $result = create();
     if (documents != null) {
@@ -33,7 +257,7 @@ class UserSpaceDocuments extends $pb.GeneratedMessage {
   factory UserSpaceDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSpaceDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..pc<UserSpaceDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: UserSpaceDocument.create)
+    ..pPS(1, _omitFieldNames ? '' : 'documents')
     ..hasRequiredFields = false
   ;
 
@@ -59,7 +283,7 @@ class UserSpaceDocuments extends $pb.GeneratedMessage {
   static UserSpaceDocuments? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<UserSpaceDocument> get documents => $_getList(0);
+  $core.List<$core.String> get documents => $_getList(0);
 }
 
 class GetUserSpacesRequest extends $pb.GeneratedMessage {
@@ -416,6 +640,7 @@ class CreateSpaceInviteRequest extends $pb.GeneratedMessage {
   factory CreateSpaceInviteRequest({
     $core.String? spaceId,
     $core.String? uid,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -423,6 +648,9 @@ class CreateSpaceInviteRequest extends $pb.GeneratedMessage {
     }
     if (uid != null) {
       $result.uid = uid;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
     }
     return $result;
   }
@@ -433,6 +661,7 @@ class CreateSpaceInviteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceInviteRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'uid')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -474,15 +703,28 @@ class CreateSpaceInviteRequest extends $pb.GeneratedMessage {
   $core.bool hasUid() => $_has(1);
   @$pb.TagNumber(2)
   void clearUid() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get nonce => $_getI64(2);
+  @$pb.TagNumber(3)
+  set nonce($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNonce() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNonce() => clearField(3);
 }
 
 class CreateSpaceInviteResponse extends $pb.GeneratedMessage {
   factory CreateSpaceInviteResponse({
     $core.String? spaceInviteDocumentId,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (spaceInviteDocumentId != null) {
       $result.spaceInviteDocumentId = spaceInviteDocumentId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
     }
     return $result;
   }
@@ -492,6 +734,7 @@ class CreateSpaceInviteResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceInviteResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceInviteDocumentId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -524,6 +767,15 @@ class CreateSpaceInviteResponse extends $pb.GeneratedMessage {
   $core.bool hasSpaceInviteDocumentId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSpaceInviteDocumentId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get nonce => $_getI64(1);
+  @$pb.TagNumber(2)
+  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNonce() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNonce() => clearField(2);
 }
 
 class UpdateSpaceCategoryRequest extends $pb.GeneratedMessage {
@@ -910,114 +1162,6 @@ class UpdateSpaceVisibilityResponse extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSpaceId() => clearField(1);
-}
-
-class UserSpaceDocument extends $pb.GeneratedMessage {
-  factory UserSpaceDocument({
-    $core.String? documentId,
-    $core.String? spaceId,
-    SpaceDocument_Metadata? metadata,
-    $fixnum.Int64? nonce,
-    DOCUMENT_STATUS? documentStatus,
-  }) {
-    final $result = create();
-    if (documentId != null) {
-      $result.documentId = documentId;
-    }
-    if (spaceId != null) {
-      $result.spaceId = spaceId;
-    }
-    if (metadata != null) {
-      $result.metadata = metadata;
-    }
-    if (nonce != null) {
-      $result.nonce = nonce;
-    }
-    if (documentStatus != null) {
-      $result.documentStatus = documentStatus;
-    }
-    return $result;
-  }
-  UserSpaceDocument._() : super();
-  factory UserSpaceDocument.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UserSpaceDocument.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSpaceDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'documentId')
-    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
-    ..aOM<SpaceDocument_Metadata>(3, _omitFieldNames ? '' : 'metadata', subBuilder: SpaceDocument_Metadata.create)
-    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<DOCUMENT_STATUS>(5, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  UserSpaceDocument clone() => UserSpaceDocument()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  UserSpaceDocument copyWith(void Function(UserSpaceDocument) updates) => super.copyWith((message) => updates(message as UserSpaceDocument)) as UserSpaceDocument;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static UserSpaceDocument create() => UserSpaceDocument._();
-  UserSpaceDocument createEmptyInstance() => create();
-  static $pb.PbList<UserSpaceDocument> createRepeated() => $pb.PbList<UserSpaceDocument>();
-  @$core.pragma('dart2js:noInline')
-  static UserSpaceDocument getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserSpaceDocument>(create);
-  static UserSpaceDocument? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get documentId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set documentId($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasDocumentId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearDocumentId() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get spaceId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set spaceId($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasSpaceId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearSpaceId() => clearField(2);
-
-  @$pb.TagNumber(3)
-  SpaceDocument_Metadata get metadata => $_getN(2);
-  @$pb.TagNumber(3)
-  set metadata(SpaceDocument_Metadata v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasMetadata() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearMetadata() => clearField(3);
-  @$pb.TagNumber(3)
-  SpaceDocument_Metadata ensureMetadata() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $fixnum.Int64 get nonce => $_getI64(3);
-  @$pb.TagNumber(4)
-  set nonce($fixnum.Int64 v) { $_setInt64(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasNonce() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearNonce() => clearField(4);
-
-  @$pb.TagNumber(5)
-  DOCUMENT_STATUS get documentStatus => $_getN(4);
-  @$pb.TagNumber(5)
-  set documentStatus(DOCUMENT_STATUS v) { setField(5, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasDocumentStatus() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearDocumentStatus() => clearField(5);
 }
 
 class SpaceMemberPermissionDocument extends $pb.GeneratedMessage {
@@ -1411,6 +1555,7 @@ class SpaceDocument extends $pb.GeneratedMessage {
     SPACE_CATEGORY? category,
     $core.Iterable<$core.String>? searchTerms,
     DOCUMENT_STATUS? documentStatus,
+    $core.List<$core.int>? customization,
   }) {
     final $result = create();
     if (status != null) {
@@ -1440,6 +1585,9 @@ class SpaceDocument extends $pb.GeneratedMessage {
     if (documentStatus != null) {
       $result.documentStatus = documentStatus;
     }
+    if (customization != null) {
+      $result.customization = customization;
+    }
     return $result;
   }
   SpaceDocument._() : super();
@@ -1456,6 +1604,7 @@ class SpaceDocument extends $pb.GeneratedMessage {
     ..e<SPACE_CATEGORY>(7, _omitFieldNames ? '' : 'category', $pb.PbFieldType.OE, defaultOrMaker: SPACE_CATEGORY.GENERAL, valueOf: SPACE_CATEGORY.valueOf, enumValues: SPACE_CATEGORY.values)
     ..pPS(8, _omitFieldNames ? '' : 'searchTerms')
     ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
+    ..a<$core.List<$core.int>>(10, _omitFieldNames ? '' : 'customization', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -1556,6 +1705,15 @@ class SpaceDocument extends $pb.GeneratedMessage {
   $core.bool hasDocumentStatus() => $_has(8);
   @$pb.TagNumber(9)
   void clearDocumentStatus() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.List<$core.int> get customization => $_getN(9);
+  @$pb.TagNumber(10)
+  set customization($core.List<$core.int> v) { $_setBytes(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasCustomization() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearCustomization() => clearField(10);
 }
 
 class CreateSpaceRequest extends $pb.GeneratedMessage {
@@ -1613,10 +1771,14 @@ class CreateSpaceRequest extends $pb.GeneratedMessage {
 class CreateSpaceResponse extends $pb.GeneratedMessage {
   factory CreateSpaceResponse({
     $core.String? spaceId,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (spaceId != null) {
       $result.spaceId = spaceId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
     }
     return $result;
   }
@@ -1626,6 +1788,7 @@ class CreateSpaceResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -1658,6 +1821,15 @@ class CreateSpaceResponse extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get nonce => $_getI64(1);
+  @$pb.TagNumber(2)
+  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNonce() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNonce() => clearField(2);
 }
 
 class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {

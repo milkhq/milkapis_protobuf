@@ -13,6 +13,7 @@ service Messaging {
     rpc GetSpaceChannels(GetSpaceChannelsRequest) returns (ChannelDocuments);
     rpc GetSpaceChannelCategories(GetSpaceChannelCategoriesRequest) returns (ChannelCategoryDocuments);
     rpc UpdateSpaceChannelOrder(UpdateSpaceChannelOrderRequest) returns (UpdateSpaceChannelOrderResponse);
+    rpc CreateSpaceChannelCategory(CreateSpaceChannelCategoryRequest) returns (CreateSpaceChannelCategoryResponse);
 
     // Direct Channels
     rpc CreateDirectChannel(CreateChannelRequest) returns (CreateChannelResponse);
@@ -72,6 +73,15 @@ enum CHANNEL_CAPABILITY {
     IMAGE = 1;
     VOICE = 2;
     VIDEO = 3;
+}
+
+message CreateSpaceChannelCategoryRequest {
+    ChannelCategoryDocument category = 1;
+}
+
+message CreateSpaceChannelCategoryResponse {
+    string category_id = 1;
+    uint64 nonce = 2;
 }
 
 message ChannelCategoryDocuments {

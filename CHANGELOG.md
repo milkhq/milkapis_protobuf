@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-09-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`milkapis_protobuf` - `v0.0.9`](#milkapis_protobuf---v009)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.9`
+
+ - **FIX**: add nonce on CreateSpaceInviteRequest.
+ - **FEAT**: added create space channel category.
+ - **FEAT**: added space channels.
+ - **FEAT**: added nonce to response and space customization.
+
+
 ## 2023-09-26
 
 ### Changes

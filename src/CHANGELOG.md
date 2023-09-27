@@ -1,3 +1,10 @@
+## 0.0.9
+
+ - **FIX**: add nonce on CreateSpaceInviteRequest.
+ - **FEAT**: added create space channel category.
+ - **FEAT**: added space channels.
+ - **FEAT**: added nonce to response and space customization.
+
 ## 0.0.8
 
  - **FEAT**: added document status and nonce.

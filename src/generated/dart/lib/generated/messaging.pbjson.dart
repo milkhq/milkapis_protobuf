@@ -158,6 +158,36 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use updateSpaceChannelCategoryRequestDescriptor instead')
+const UpdateSpaceChannelCategoryRequest$json = {
+  '1': 'UpdateSpaceChannelCategoryRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'category_id', '3': 2, '4': 1, '5': 9, '10': 'categoryId'},
+    {'1': 'category', '3': 3, '4': 1, '5': 11, '6': '.messaging.ChannelCategoryDocument', '10': 'category'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceChannelCategoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceChannelCategoryRequestDescriptor = $convert.base64Decode(
+    'CiFVcGRhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVJlcXVlc3QSGQoIc3BhY2VfaWQYASABKAlSB3'
+    'NwYWNlSWQSHwoLY2F0ZWdvcnlfaWQYAiABKAlSCmNhdGVnb3J5SWQSPgoIY2F0ZWdvcnkYAyAB'
+    'KAsyIi5tZXNzYWdpbmcuQ2hhbm5lbENhdGVnb3J5RG9jdW1lbnRSCGNhdGVnb3J5');
+
+@$core.Deprecated('Use updateSpaceChannelCategoryResponseDescriptor instead')
+const UpdateSpaceChannelCategoryResponse$json = {
+  '1': 'UpdateSpaceChannelCategoryResponse',
+  '2': [
+    {'1': 'category_id', '3': 1, '4': 1, '5': 9, '10': 'categoryId'},
+    {'1': 'nonce', '3': 2, '4': 1, '5': 4, '10': 'nonce'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceChannelCategoryResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceChannelCategoryResponseDescriptor = $convert.base64Decode(
+    'CiJVcGRhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVJlc3BvbnNlEh8KC2NhdGVnb3J5X2lkGAEgAS'
+    'gJUgpjYXRlZ29yeUlkEhQKBW5vbmNlGAIgASgEUgVub25jZQ==');
+
 @$core.Deprecated('Use createSpaceChannelCategoryRequestDescriptor instead')
 const CreateSpaceChannelCategoryRequest$json = {
   '1': 'CreateSpaceChannelCategoryRequest',

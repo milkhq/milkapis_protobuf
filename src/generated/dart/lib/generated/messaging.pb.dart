@@ -18,6 +18,150 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class UpdateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
+  factory UpdateSpaceChannelCategoryRequest({
+    $core.String? spaceId,
+    $core.String? categoryId,
+    ChannelCategoryDocument? category,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
+    }
+    if (category != null) {
+      $result.category = category;
+    }
+    return $result;
+  }
+  UpdateSpaceChannelCategoryRequest._() : super();
+  factory UpdateSpaceChannelCategoryRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceChannelCategoryRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceChannelCategoryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'categoryId')
+    ..aOM<ChannelCategoryDocument>(3, _omitFieldNames ? '' : 'category', subBuilder: ChannelCategoryDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryRequest clone() => UpdateSpaceChannelCategoryRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryRequest copyWith(void Function(UpdateSpaceChannelCategoryRequest) updates) => super.copyWith((message) => updates(message as UpdateSpaceChannelCategoryRequest)) as UpdateSpaceChannelCategoryRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryRequest create() => UpdateSpaceChannelCategoryRequest._();
+  UpdateSpaceChannelCategoryRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceChannelCategoryRequest> createRepeated() => $pb.PbList<UpdateSpaceChannelCategoryRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceChannelCategoryRequest>(create);
+  static UpdateSpaceChannelCategoryRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get categoryId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set categoryId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCategoryId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCategoryId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  ChannelCategoryDocument get category => $_getN(2);
+  @$pb.TagNumber(3)
+  set category(ChannelCategoryDocument v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCategory() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCategory() => clearField(3);
+  @$pb.TagNumber(3)
+  ChannelCategoryDocument ensureCategory() => $_ensure(2);
+}
+
+class UpdateSpaceChannelCategoryResponse extends $pb.GeneratedMessage {
+  factory UpdateSpaceChannelCategoryResponse({
+    $core.String? categoryId,
+    $fixnum.Int64? nonce,
+  }) {
+    final $result = create();
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    return $result;
+  }
+  UpdateSpaceChannelCategoryResponse._() : super();
+  factory UpdateSpaceChannelCategoryResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceChannelCategoryResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceChannelCategoryResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'categoryId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryResponse clone() => UpdateSpaceChannelCategoryResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryResponse copyWith(void Function(UpdateSpaceChannelCategoryResponse) updates) => super.copyWith((message) => updates(message as UpdateSpaceChannelCategoryResponse)) as UpdateSpaceChannelCategoryResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryResponse create() => UpdateSpaceChannelCategoryResponse._();
+  UpdateSpaceChannelCategoryResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceChannelCategoryResponse> createRepeated() => $pb.PbList<UpdateSpaceChannelCategoryResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceChannelCategoryResponse>(create);
+  static UpdateSpaceChannelCategoryResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get categoryId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set categoryId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCategoryId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCategoryId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get nonce => $_getI64(1);
+  @$pb.TagNumber(2)
+  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNonce() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNonce() => clearField(2);
+}
+
 class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   factory CreateSpaceChannelCategoryRequest({
     ChannelCategoryDocument? category,

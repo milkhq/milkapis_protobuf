@@ -1,3 +1,7 @@
+## 0.0.11
+
+ - **FEAT**: added create channel, channel category support.
+
 ## 0.0.10
 
  - **FEAT**: added update space channel category.

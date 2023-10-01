@@ -158,6 +158,43 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use setSpaceChannelCategoryOrderRequestDescriptor instead')
+const SetSpaceChannelCategoryOrderRequest$json = {
+  '1': 'SetSpaceChannelCategoryOrderRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'ids', '3': 2, '4': 3, '5': 9, '10': 'ids'},
+    {'1': 'scores', '3': 3, '4': 3, '5': 13, '10': 'scores'},
+  ],
+};
+
+/// Descriptor for `SetSpaceChannelCategoryOrderRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setSpaceChannelCategoryOrderRequestDescriptor = $convert.base64Decode(
+    'CiNTZXRTcGFjZUNoYW5uZWxDYXRlZ29yeU9yZGVyUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCV'
+    'IHc3BhY2VJZBIQCgNpZHMYAiADKAlSA2lkcxIWCgZzY29yZXMYAyADKA1SBnNjb3Jlcw==');
+
+@$core.Deprecated('Use setSpaceChannelCategoryOrderResponseDescriptor instead')
+const SetSpaceChannelCategoryOrderResponse$json = {
+  '1': 'SetSpaceChannelCategoryOrderResponse',
+};
+
+/// Descriptor for `SetSpaceChannelCategoryOrderResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setSpaceChannelCategoryOrderResponseDescriptor = $convert.base64Decode(
+    'CiRTZXRTcGFjZUNoYW5uZWxDYXRlZ29yeU9yZGVyUmVzcG9uc2U=');
+
+@$core.Deprecated('Use getSpaceChannelsResponseDescriptor instead')
+const GetSpaceChannelsResponse$json = {
+  '1': 'GetSpaceChannelsResponse',
+  '2': [
+    {'1': 'documents', '3': 1, '4': 3, '5': 9, '10': 'documents'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelsResponseDescriptor = $convert.base64Decode(
+    'ChhHZXRTcGFjZUNoYW5uZWxzUmVzcG9uc2USHAoJZG9jdW1lbnRzGAEgAygJUglkb2N1bWVudH'
+    'M=');
+
 @$core.Deprecated('Use updateSpaceChannelCategoryRequestDescriptor instead')
 const UpdateSpaceChannelCategoryRequest$json = {
   '1': 'UpdateSpaceChannelCategoryRequest',

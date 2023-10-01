@@ -14,6 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import 'messaging.pb.dart' as $0;
 import 'space.pbenum.dart';
 
 export 'space.pbenum.dart';
@@ -21,18 +22,18 @@ export 'space.pbenum.dart';
 class UpdateUserSpaceOrderRequest extends $pb.GeneratedMessage {
   factory UpdateUserSpaceOrderRequest({
     $core.String? uid,
-    $core.String? spaceId,
-    $core.int? score,
+    $core.Iterable<$core.String>? ids,
+    $core.Iterable<$core.int>? scores,
   }) {
     final $result = create();
     if (uid != null) {
       $result.uid = uid;
     }
-    if (spaceId != null) {
-      $result.spaceId = spaceId;
+    if (ids != null) {
+      $result.ids.addAll(ids);
     }
-    if (score != null) {
-      $result.score = score;
+    if (scores != null) {
+      $result.scores.addAll(scores);
     }
     return $result;
   }
@@ -42,8 +43,8 @@ class UpdateUserSpaceOrderRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserSpaceOrderRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uid')
-    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'score', $pb.PbFieldType.O3)
+    ..pPS(2, _omitFieldNames ? '' : 'ids')
+    ..p<$core.int>(3, _omitFieldNames ? '' : 'scores', $pb.PbFieldType.KU3)
     ..hasRequiredFields = false
   ;
 
@@ -78,22 +79,10 @@ class UpdateUserSpaceOrderRequest extends $pb.GeneratedMessage {
   void clearUid() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get spaceId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set spaceId($core.String v) { $_setString(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasSpaceId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearSpaceId() => clearField(2);
+  $core.List<$core.String> get ids => $_getList(1);
 
   @$pb.TagNumber(3)
-  $core.int get score => $_getIZ(2);
-  @$pb.TagNumber(3)
-  set score($core.int v) { $_setSignedInt32(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasScore() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearScore() => clearField(3);
+  $core.List<$core.int> get scores => $_getList(2);
 }
 
 class UpdateUserSpaceOrderResponse extends $pb.GeneratedMessage {
@@ -1770,15 +1759,19 @@ class CreateSpaceRequest extends $pb.GeneratedMessage {
 
 class CreateSpaceResponse extends $pb.GeneratedMessage {
   factory CreateSpaceResponse({
-    $core.String? spaceId,
-    $fixnum.Int64? nonce,
+    SpaceDocument? document,
+    $0.ChannelDocument? channel,
+    $0.ChannelCategoryDocument? category,
   }) {
     final $result = create();
-    if (spaceId != null) {
-      $result.spaceId = spaceId;
+    if (document != null) {
+      $result.document = document;
     }
-    if (nonce != null) {
-      $result.nonce = nonce;
+    if (channel != null) {
+      $result.channel = channel;
+    }
+    if (category != null) {
+      $result.category = category;
     }
     return $result;
   }
@@ -1787,8 +1780,9 @@ class CreateSpaceResponse extends $pb.GeneratedMessage {
   factory CreateSpaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
-    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOM<SpaceDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: SpaceDocument.create)
+    ..aOM<$0.ChannelDocument>(2, _omitFieldNames ? '' : 'channel', subBuilder: $0.ChannelDocument.create)
+    ..aOM<$0.ChannelCategoryDocument>(3, _omitFieldNames ? '' : 'category', subBuilder: $0.ChannelCategoryDocument.create)
     ..hasRequiredFields = false
   ;
 
@@ -1814,22 +1808,37 @@ class CreateSpaceResponse extends $pb.GeneratedMessage {
   static CreateSpaceResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get spaceId => $_getSZ(0);
+  SpaceDocument get document => $_getN(0);
   @$pb.TagNumber(1)
-  set spaceId($core.String v) { $_setString(0, v); }
+  set document(SpaceDocument v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasSpaceId() => $_has(0);
+  $core.bool hasDocument() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSpaceId() => clearField(1);
+  void clearDocument() => clearField(1);
+  @$pb.TagNumber(1)
+  SpaceDocument ensureDocument() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $fixnum.Int64 get nonce => $_getI64(1);
+  $0.ChannelDocument get channel => $_getN(1);
   @$pb.TagNumber(2)
-  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  set channel($0.ChannelDocument v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasNonce() => $_has(1);
+  $core.bool hasChannel() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNonce() => clearField(2);
+  void clearChannel() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.ChannelDocument ensureChannel() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $0.ChannelCategoryDocument get category => $_getN(2);
+  @$pb.TagNumber(3)
+  set category($0.ChannelCategoryDocument v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCategory() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCategory() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.ChannelCategoryDocument ensureCategory() => $_ensure(2);
 }
 
 class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {

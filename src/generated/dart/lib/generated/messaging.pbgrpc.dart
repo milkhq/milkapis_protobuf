@@ -45,10 +45,10 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/GetSpaceChannel',
       ($0.GetSpaceChannelRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.ChannelDocument.fromBuffer(value));
-  static final _$getSpaceChannels = $grpc.ClientMethod<$0.GetSpaceChannelsRequest, $0.ChannelDocuments>(
+  static final _$getSpaceChannels = $grpc.ClientMethod<$0.GetSpaceChannelsRequest, $0.GetSpaceChannelsResponse>(
       '/messaging.Messaging/GetSpaceChannels',
       ($0.GetSpaceChannelsRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.ChannelDocuments.fromBuffer(value));
+      ($core.List<$core.int> value) => $0.GetSpaceChannelsResponse.fromBuffer(value));
   static final _$getSpaceChannelCategories = $grpc.ClientMethod<$0.GetSpaceChannelCategoriesRequest, $0.ChannelCategoryDocuments>(
       '/messaging.Messaging/GetSpaceChannelCategories',
       ($0.GetSpaceChannelCategoriesRequest value) => value.writeToBuffer(),
@@ -172,7 +172,7 @@ class MessagingClient extends $grpc.Client {
     return $createUnaryCall(_$getSpaceChannel, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.ChannelDocuments> getSpaceChannels($0.GetSpaceChannelsRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.GetSpaceChannelsResponse> getSpaceChannels($0.GetSpaceChannelsRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSpaceChannels, request, options: options);
   }
 
@@ -316,13 +316,13 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetSpaceChannelRequest.fromBuffer(value),
         ($0.ChannelDocument value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelsRequest, $0.ChannelDocuments>(
+    $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelsRequest, $0.GetSpaceChannelsResponse>(
         'GetSpaceChannels',
         getSpaceChannels_Pre,
         false,
         false,
         ($core.List<$core.int> value) => $0.GetSpaceChannelsRequest.fromBuffer(value),
-        ($0.ChannelDocuments value) => value.writeToBuffer()));
+        ($0.GetSpaceChannelsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelCategoriesRequest, $0.ChannelCategoryDocuments>(
         'GetSpaceChannelCategories',
         getSpaceChannelCategories_Pre,
@@ -510,7 +510,7 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return getSpaceChannel(call, await request);
   }
 
-  $async.Future<$0.ChannelDocuments> getSpaceChannels_Pre($grpc.ServiceCall call, $async.Future<$0.GetSpaceChannelsRequest> request) async {
+  $async.Future<$0.GetSpaceChannelsResponse> getSpaceChannels_Pre($grpc.ServiceCall call, $async.Future<$0.GetSpaceChannelsRequest> request) async {
     return getSpaceChannels(call, await request);
   }
 
@@ -612,7 +612,7 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$0.UpdateChannelStatusResponse> archiveSpaceChannel($grpc.ServiceCall call, $0.UpdateChannelStatusRequest request);
   $async.Future<$0.UpdateChannelStatusResponse> activateSpaceChannel($grpc.ServiceCall call, $0.UpdateChannelStatusRequest request);
   $async.Future<$0.ChannelDocument> getSpaceChannel($grpc.ServiceCall call, $0.GetSpaceChannelRequest request);
-  $async.Future<$0.ChannelDocuments> getSpaceChannels($grpc.ServiceCall call, $0.GetSpaceChannelsRequest request);
+  $async.Future<$0.GetSpaceChannelsResponse> getSpaceChannels($grpc.ServiceCall call, $0.GetSpaceChannelsRequest request);
   $async.Future<$0.ChannelCategoryDocuments> getSpaceChannelCategories($grpc.ServiceCall call, $0.GetSpaceChannelCategoriesRequest request);
   $async.Future<$0.UpdateSpaceChannelOrderResponse> updateSpaceChannelOrder($grpc.ServiceCall call, $0.UpdateSpaceChannelOrderRequest request);
   $async.Future<$0.CreateSpaceChannelCategoryResponse> createSpaceChannelCategory($grpc.ServiceCall call, $0.CreateSpaceChannelCategoryRequest request);

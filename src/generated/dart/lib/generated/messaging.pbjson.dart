@@ -193,13 +193,15 @@ const CreateSpaceChannelCategoryRequest$json = {
   '1': 'CreateSpaceChannelCategoryRequest',
   '2': [
     {'1': 'category', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelCategoryDocument', '10': 'category'},
+    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
   ],
 };
 
 /// Descriptor for `CreateSpaceChannelCategoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSpaceChannelCategoryRequestDescriptor = $convert.base64Decode(
     'CiFDcmVhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVJlcXVlc3QSPgoIY2F0ZWdvcnkYASABKAsyIi'
-    '5tZXNzYWdpbmcuQ2hhbm5lbENhdGVnb3J5RG9jdW1lbnRSCGNhdGVnb3J5');
+    '5tZXNzYWdpbmcuQ2hhbm5lbENhdGVnb3J5RG9jdW1lbnRSCGNhdGVnb3J5EhkKCHNwYWNlX2lk'
+    'GAIgASgJUgdzcGFjZUlk');
 
 @$core.Deprecated('Use createSpaceChannelCategoryResponseDescriptor instead')
 const CreateSpaceChannelCategoryResponse$json = {

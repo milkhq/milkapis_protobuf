@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package common;
+
+enum CollectionsV1 {
+    USERS = 0;
+    SPACES = 1;
+    PERMISSIONS = 2;
+    SOCIALS = 3;
+    CUSTOMIZATION_PROFILES = 4;
+    CHANNELS = 5;
+    CATEGORIES = 6;
+    MESSAGES = 7;
+    MEMBERS = 8;
+    ROLES = 9;
+}
+
+enum CollectionCountersV1 {
+    USER_COUNTER = 0;
+    SPACE_COUNTER = 1;
+    PERMISSION_COUNTER = 2;
+    SOCIAL_COUNTER = 3;
+    CUSTOMIZATION_PROFILE_COUNTER = 4;
+    CHANNEL_COUNTER = 5;
+    CATEGORY_COUNTER = 6;
+    MESSAGE_COUNTER = 7;
+    MEMBER_COUNTER = 8;
+    ROLE_COUNTER = 9;
+}

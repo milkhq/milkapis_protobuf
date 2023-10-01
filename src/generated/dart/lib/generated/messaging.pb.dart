@@ -165,10 +165,14 @@ class UpdateSpaceChannelCategoryResponse extends $pb.GeneratedMessage {
 class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   factory CreateSpaceChannelCategoryRequest({
     ChannelCategoryDocument? category,
+    $core.String? spaceId,
   }) {
     final $result = create();
     if (category != null) {
       $result.category = category;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
     }
     return $result;
   }
@@ -178,6 +182,7 @@ class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceChannelCategoryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOM<ChannelCategoryDocument>(1, _omitFieldNames ? '' : 'category', subBuilder: ChannelCategoryDocument.create)
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -212,6 +217,15 @@ class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   void clearCategory() => clearField(1);
   @$pb.TagNumber(1)
   ChannelCategoryDocument ensureCategory() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
 }
 
 class CreateSpaceChannelCategoryResponse extends $pb.GeneratedMessage {

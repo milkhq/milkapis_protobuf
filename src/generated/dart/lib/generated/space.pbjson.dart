@@ -88,15 +88,15 @@ const UpdateUserSpaceOrderRequest$json = {
   '1': 'UpdateUserSpaceOrderRequest',
   '2': [
     {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
-    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
-    {'1': 'score', '3': 3, '4': 1, '5': 5, '10': 'score'},
+    {'1': 'ids', '3': 2, '4': 3, '5': 9, '10': 'ids'},
+    {'1': 'scores', '3': 3, '4': 3, '5': 13, '10': 'scores'},
   ],
 };
 
 /// Descriptor for `UpdateUserSpaceOrderRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateUserSpaceOrderRequestDescriptor = $convert.base64Decode(
-    'ChtVcGRhdGVVc2VyU3BhY2VPcmRlclJlcXVlc3QSEAoDdWlkGAEgASgJUgN1aWQSGQoIc3BhY2'
-    'VfaWQYAiABKAlSB3NwYWNlSWQSFAoFc2NvcmUYAyABKAVSBXNjb3Jl');
+    'ChtVcGRhdGVVc2VyU3BhY2VPcmRlclJlcXVlc3QSEAoDdWlkGAEgASgJUgN1aWQSEAoDaWRzGA'
+    'IgAygJUgNpZHMSFgoGc2NvcmVzGAMgAygNUgZzY29yZXM=');
 
 @$core.Deprecated('Use updateUserSpaceOrderResponseDescriptor instead')
 const UpdateUserSpaceOrderResponse$json = {
@@ -513,15 +513,18 @@ final $typed_data.Uint8List createSpaceRequestDescriptor = $convert.base64Decode
 const CreateSpaceResponse$json = {
   '1': 'CreateSpaceResponse',
   '2': [
-    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
-    {'1': 'nonce', '3': 2, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.space.SpaceDocument', '10': 'document'},
+    {'1': 'channel', '3': 2, '4': 1, '5': 11, '6': '.messaging.ChannelDocument', '10': 'channel'},
+    {'1': 'category', '3': 3, '4': 1, '5': 11, '6': '.messaging.ChannelCategoryDocument', '10': 'category'},
   ],
 };
 
 /// Descriptor for `CreateSpaceResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createSpaceResponseDescriptor = $convert.base64Decode(
-    'ChNDcmVhdGVTcGFjZVJlc3BvbnNlEhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlkEhQKBW5vbm'
-    'NlGAIgASgEUgVub25jZQ==');
+    'ChNDcmVhdGVTcGFjZVJlc3BvbnNlEjAKCGRvY3VtZW50GAEgASgLMhQuc3BhY2UuU3BhY2VEb2'
+    'N1bWVudFIIZG9jdW1lbnQSNAoHY2hhbm5lbBgCIAEoCzIaLm1lc3NhZ2luZy5DaGFubmVsRG9j'
+    'dW1lbnRSB2NoYW5uZWwSPgoIY2F0ZWdvcnkYAyABKAsyIi5tZXNzYWdpbmcuQ2hhbm5lbENhdG'
+    'Vnb3J5RG9jdW1lbnRSCGNhdGVnb3J5');
 
 @$core.Deprecated('Use updateSpaceMetadataRequestDescriptor instead')
 const UpdateSpaceMetadataRequest$json = {

@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package space;
 
+import "messaging.proto";
+
 service Space {
   rpc CreateSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
   rpc GetSpace(GetSpaceRequest) returns (SpaceDocument);
@@ -33,8 +35,8 @@ enum DOCUMENT_STATUS {
 
 message UpdateUserSpaceOrderRequest {
   string uid = 1;
-  string space_id = 2;
-  int32 score = 3;
+  repeated string ids = 2;
+  repeated uint32 scores = 3;
 }
 
 message UpdateUserSpaceOrderResponse {
@@ -190,7 +192,12 @@ message SpaceDocument {
 message CreateSpaceRequest {
   SpaceDocument document = 1;
 }
-message CreateSpaceResponse { string space_id = 1; uint64 nonce = 2; }
+message CreateSpaceResponse { 
+  SpaceDocument document = 1; 
+  messaging.ChannelDocument channel = 2;
+  messaging.ChannelCategoryDocument category = 3;
+}
+
 message UpdateSpaceMetadataRequest {
   string space_id = 1;
   SpaceDocument.Metadata metadata = 2;

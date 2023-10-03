@@ -1,3 +1,7 @@
+## 0.0.12
+
+ - **FEAT**: added space id to send message request and response.
+
 ## 0.0.11
 
  - **FEAT**: added create channel, channel category support.

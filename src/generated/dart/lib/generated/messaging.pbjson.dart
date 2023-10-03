@@ -821,13 +821,18 @@ const SendMessageRequest$json = {
   '2': [
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message', '3': 2, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
+    {'1': 'space_id', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'spaceId', '17': true},
+  ],
+  '8': [
+    {'1': '_space_id'},
   ],
 };
 
 /// Descriptor for `SendMessageRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendMessageRequestDescriptor = $convert.base64Decode(
     'ChJTZW5kTWVzc2FnZVJlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIAEoCVIJY2hhbm5lbElkEjQKB2'
-    '1lc3NhZ2UYAiABKAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50UgdtZXNzYWdl');
+    '1lc3NhZ2UYAiABKAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50UgdtZXNzYWdlEh4KCHNw'
+    'YWNlX2lkGAMgASgJSABSB3NwYWNlSWSIAQFCCwoJX3NwYWNlX2lk');
 
 @$core.Deprecated('Use sendMessageResponseDescriptor instead')
 const SendMessageResponse$json = {
@@ -836,13 +841,15 @@ const SendMessageResponse$json = {
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message_id', '3': 2, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'nonce', '3': 3, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'space_id', '3': 4, '4': 1, '5': 9, '10': 'spaceId'},
   ],
 };
 
 /// Descriptor for `SendMessageResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendMessageResponseDescriptor = $convert.base64Decode(
     'ChNTZW5kTWVzc2FnZVJlc3BvbnNlEh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW5uZWxJZBIdCg'
-    'ptZXNzYWdlX2lkGAIgASgJUgltZXNzYWdlSWQSFAoFbm9uY2UYAyABKARSBW5vbmNl');
+    'ptZXNzYWdlX2lkGAIgASgJUgltZXNzYWdlSWQSFAoFbm9uY2UYAyABKARSBW5vbmNlEhkKCHNw'
+    'YWNlX2lkGAQgASgJUgdzcGFjZUlk');
 
 @$core.Deprecated('Use updateMessageRequestDescriptor instead')
 const UpdateMessageRequest$json = {

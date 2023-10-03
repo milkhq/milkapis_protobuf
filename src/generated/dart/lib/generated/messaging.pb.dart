@@ -2842,6 +2842,7 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   factory SendMessageRequest({
     $core.String? channelId,
     MessageDocument? message,
+    $core.String? spaceId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -2849,6 +2850,9 @@ class SendMessageRequest extends $pb.GeneratedMessage {
     }
     if (message != null) {
       $result.message = message;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
     }
     return $result;
   }
@@ -2859,6 +2863,7 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendMessageRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOM<MessageDocument>(2, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
+    ..aOS(3, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -2902,6 +2907,15 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
   @$pb.TagNumber(2)
   MessageDocument ensureMessage() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get spaceId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set spaceId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSpaceId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSpaceId() => clearField(3);
 }
 
 class SendMessageResponse extends $pb.GeneratedMessage {
@@ -2909,6 +2923,7 @@ class SendMessageResponse extends $pb.GeneratedMessage {
     $core.String? channelId,
     $core.String? messageId,
     $fixnum.Int64? nonce,
+    $core.String? spaceId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -2920,6 +2935,9 @@ class SendMessageResponse extends $pb.GeneratedMessage {
     if (nonce != null) {
       $result.nonce = nonce;
     }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
     return $result;
   }
   SendMessageResponse._() : super();
@@ -2930,6 +2948,7 @@ class SendMessageResponse extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOS(2, _omitFieldNames ? '' : 'messageId')
     ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -2980,6 +2999,15 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   $core.bool hasNonce() => $_has(2);
   @$pb.TagNumber(3)
   void clearNonce() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get spaceId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set spaceId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSpaceId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSpaceId() => clearField(4);
 }
 
 class UpdateMessageRequest extends $pb.GeneratedMessage {

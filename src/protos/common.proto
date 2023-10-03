@@ -27,3 +27,17 @@ enum CollectionCountersV1 {
     MEMBER_COUNTER = 8;
     ROLE_COUNTER = 9;
 }
+
+enum DOCUMENT_TYPE {
+    UNKNOWN = 0;
+    USER_DOCUMENT = 1;
+    SPACE_DOCUMENT = 2;
+    PERMISSION_DOCUMENT = 3;
+    MESSAGE_DOCUMENT = 4;
+}
+
+message ProxyMessage {
+    string key = 1;
+    DOCUMENT_TYPE doc_type = 2;
+    bytes data = 3;
+}

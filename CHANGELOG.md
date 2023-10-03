@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`milkapis_protobuf` - `v0.0.13`](#milkapis_protobuf---v0013)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.13`
+
+ - **FEAT**: added ProxyMessage.
+
+
+## 2023-10-03
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`milkapis_protobuf` - `v0.0.12`](#milkapis_protobuf---v0012)
 
 ---

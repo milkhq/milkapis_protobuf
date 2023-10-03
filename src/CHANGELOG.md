@@ -1,3 +1,7 @@
+## 0.0.13
+
+ - **FEAT**: added ProxyMessage.
+
 ## 0.0.12
 
  - **FEAT**: added space id to send message request and response.

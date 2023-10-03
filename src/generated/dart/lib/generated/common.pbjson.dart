@@ -61,3 +61,36 @@ final $typed_data.Uint8List collectionCountersV1Descriptor = $convert.base64Deco
     'VHT1JZX0NPVU5URVIQBhITCg9NRVNTQUdFX0NPVU5URVIQBxISCg5NRU1CRVJfQ09VTlRFUhAI'
     'EhAKDFJPTEVfQ09VTlRFUhAJ');
 
+@$core.Deprecated('Use dOCUMENT_TYPEDescriptor instead')
+const DOCUMENT_TYPE$json = {
+  '1': 'DOCUMENT_TYPE',
+  '2': [
+    {'1': 'UNKNOWN', '2': 0},
+    {'1': 'USER_DOCUMENT', '2': 1},
+    {'1': 'SPACE_DOCUMENT', '2': 2},
+    {'1': 'PERMISSION_DOCUMENT', '2': 3},
+    {'1': 'MESSAGE_DOCUMENT', '2': 4},
+  ],
+};
+
+/// Descriptor for `DOCUMENT_TYPE`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List dOCUMENT_TYPEDescriptor = $convert.base64Decode(
+    'Cg1ET0NVTUVOVF9UWVBFEgsKB1VOS05PV04QABIRCg1VU0VSX0RPQ1VNRU5UEAESEgoOU1BBQ0'
+    'VfRE9DVU1FTlQQAhIXChNQRVJNSVNTSU9OX0RPQ1VNRU5UEAMSFAoQTUVTU0FHRV9ET0NVTUVO'
+    'VBAE');
+
+@$core.Deprecated('Use proxyMessageDescriptor instead')
+const ProxyMessage$json = {
+  '1': 'ProxyMessage',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'doc_type', '3': 2, '4': 1, '5': 14, '6': '.common.DOCUMENT_TYPE', '10': 'docType'},
+    {'1': 'data', '3': 3, '4': 1, '5': 12, '10': 'data'},
+  ],
+};
+
+/// Descriptor for `ProxyMessage`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List proxyMessageDescriptor = $convert.base64Decode(
+    'CgxQcm94eU1lc3NhZ2USEAoDa2V5GAEgASgJUgNrZXkSMAoIZG9jX3R5cGUYAiABKA4yFS5jb2'
+    '1tb24uRE9DVU1FTlRfVFlQRVIHZG9jVHlwZRISCgRkYXRhGAMgASgMUgRkYXRh');
+

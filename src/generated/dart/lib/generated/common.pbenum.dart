@@ -75,5 +75,26 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
   const CollectionCountersV1._($core.int v, $core.String n) : super(v, n);
 }
 
+class DOCUMENT_TYPE extends $pb.ProtobufEnum {
+  static const DOCUMENT_TYPE UNKNOWN = DOCUMENT_TYPE._(0, _omitEnumNames ? '' : 'UNKNOWN');
+  static const DOCUMENT_TYPE USER_DOCUMENT = DOCUMENT_TYPE._(1, _omitEnumNames ? '' : 'USER_DOCUMENT');
+  static const DOCUMENT_TYPE SPACE_DOCUMENT = DOCUMENT_TYPE._(2, _omitEnumNames ? '' : 'SPACE_DOCUMENT');
+  static const DOCUMENT_TYPE PERMISSION_DOCUMENT = DOCUMENT_TYPE._(3, _omitEnumNames ? '' : 'PERMISSION_DOCUMENT');
+  static const DOCUMENT_TYPE MESSAGE_DOCUMENT = DOCUMENT_TYPE._(4, _omitEnumNames ? '' : 'MESSAGE_DOCUMENT');
+
+  static const $core.List<DOCUMENT_TYPE> values = <DOCUMENT_TYPE> [
+    UNKNOWN,
+    USER_DOCUMENT,
+    SPACE_DOCUMENT,
+    PERMISSION_DOCUMENT,
+    MESSAGE_DOCUMENT,
+  ];
+
+  static final $core.Map<$core.int, DOCUMENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DOCUMENT_TYPE? valueOf($core.int value) => _byValue[value];
+
+  const DOCUMENT_TYPE._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

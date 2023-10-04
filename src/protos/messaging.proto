@@ -35,6 +35,7 @@ service Messaging {
     rpc SendSpaceChannelMessage(SendMessageRequest) returns (SendMessageResponse);
     rpc UpdateSpaceChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
     rpc DeleteSpaceChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
+    rpc GetSpaceChannelMessages(GetSpaceChannelMessagesRequest) returns (GetSpaceChannelMessagesResponse);
     
     // Direct channel messages
     rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -75,6 +76,18 @@ enum CHANNEL_CAPABILITY {
     IMAGE = 1;
     VOICE = 2;
     VIDEO = 3;
+}
+
+message GetSpaceChannelMessagesRequest {
+    string channel_id = 1;
+    string space_id = 2;
+    uint64 start = 4;
+    uint64 end = 5;
+}
+
+message GetSpaceChannelMessagesResponse {
+    repeated MessageDocument documents = 1;
+    uint64 total_count = 2;
 }
 
 message SetSpaceChannelCategoryOrderRequest {

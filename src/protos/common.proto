@@ -34,6 +34,10 @@ enum DOCUMENT_TYPE {
     SPACE_DOCUMENT = 2;
     PERMISSION_DOCUMENT = 3;
     MESSAGE_DOCUMENT = 4;
+    SPACE_CHANNEL_DOCUMENT = 5;
+    CHANNEL_DOCUMENT = 6;
+    CHANNEL_MESSAGES = 7;
+    SPACE_CHANNEL_MESSAGES = 8;
 }
 
 message ProxyMessage {
@@ -44,4 +48,5 @@ message ProxyMessage {
 
 message ListenRequest {
     string key = 1;
+    DOCUMENT_TYPE doc_type = 2;
 }

@@ -41,3 +41,7 @@ message ProxyMessage {
     DOCUMENT_TYPE doc_type = 2;
     bytes data = 3;
 }
+
+message ListenRequest {
+    string key = 1;
+}

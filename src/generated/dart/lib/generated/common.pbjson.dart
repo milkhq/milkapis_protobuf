@@ -94,3 +94,15 @@ final $typed_data.Uint8List proxyMessageDescriptor = $convert.base64Decode(
     'CgxQcm94eU1lc3NhZ2USEAoDa2V5GAEgASgJUgNrZXkSMAoIZG9jX3R5cGUYAiABKA4yFS5jb2'
     '1tb24uRE9DVU1FTlRfVFlQRVIHZG9jVHlwZRISCgRkYXRhGAMgASgMUgRkYXRh');
 
+@$core.Deprecated('Use listenRequestDescriptor instead')
+const ListenRequest$json = {
+  '1': 'ListenRequest',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+  ],
+};
+
+/// Descriptor for `ListenRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listenRequestDescriptor = $convert.base64Decode(
+    'Cg1MaXN0ZW5SZXF1ZXN0EhAKA2tleRgBIAEoCVIDa2V5');
+

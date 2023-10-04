@@ -95,6 +95,56 @@ class ProxyMessage extends $pb.GeneratedMessage {
   void clearData() => clearField(3);
 }
 
+class ListenRequest extends $pb.GeneratedMessage {
+  factory ListenRequest({
+    $core.String? key,
+  }) {
+    final $result = create();
+    if (key != null) {
+      $result.key = key;
+    }
+    return $result;
+  }
+  ListenRequest._() : super();
+  factory ListenRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListenRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListenRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListenRequest clone() => ListenRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListenRequest copyWith(void Function(ListenRequest) updates) => super.copyWith((message) => updates(message as ListenRequest)) as ListenRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListenRequest create() => ListenRequest._();
+  ListenRequest createEmptyInstance() => create();
+  static $pb.PbList<ListenRequest> createRepeated() => $pb.PbList<ListenRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListenRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListenRequest>(create);
+  static ListenRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get key => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set key($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearKey() => clearField(1);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

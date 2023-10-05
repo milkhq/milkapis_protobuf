@@ -98,10 +98,14 @@ class ProxyMessage extends $pb.GeneratedMessage {
 class ListenRequest extends $pb.GeneratedMessage {
   factory ListenRequest({
     $core.String? key,
+    DOCUMENT_TYPE? docType,
   }) {
     final $result = create();
     if (key != null) {
       $result.key = key;
+    }
+    if (docType != null) {
+      $result.docType = docType;
     }
     return $result;
   }
@@ -111,6 +115,7 @@ class ListenRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListenRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'key')
+    ..e<DOCUMENT_TYPE>(2, _omitFieldNames ? '' : 'docType', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_TYPE.UNKNOWN, valueOf: DOCUMENT_TYPE.valueOf, enumValues: DOCUMENT_TYPE.values)
     ..hasRequiredFields = false
   ;
 
@@ -143,6 +148,15 @@ class ListenRequest extends $pb.GeneratedMessage {
   $core.bool hasKey() => $_has(0);
   @$pb.TagNumber(1)
   void clearKey() => clearField(1);
+
+  @$pb.TagNumber(2)
+  DOCUMENT_TYPE get docType => $_getN(1);
+  @$pb.TagNumber(2)
+  set docType(DOCUMENT_TYPE v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDocType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDocType() => clearField(2);
 }
 
 

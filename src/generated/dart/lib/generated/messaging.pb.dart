@@ -18,6 +18,156 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
+  factory GetSpaceChannelMessagesRequest({
+    $core.String? channelId,
+    $core.String? spaceId,
+    $fixnum.Int64? start,
+    $fixnum.Int64? end,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (start != null) {
+      $result.start = start;
+    }
+    if (end != null) {
+      $result.end = end;
+    }
+    return $result;
+  }
+  GetSpaceChannelMessagesRequest._() : super();
+  factory GetSpaceChannelMessagesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelMessagesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelMessagesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'start', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'end', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessagesRequest clone() => GetSpaceChannelMessagesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessagesRequest copyWith(void Function(GetSpaceChannelMessagesRequest) updates) => super.copyWith((message) => updates(message as GetSpaceChannelMessagesRequest)) as GetSpaceChannelMessagesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessagesRequest create() => GetSpaceChannelMessagesRequest._();
+  GetSpaceChannelMessagesRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelMessagesRequest> createRepeated() => $pb.PbList<GetSpaceChannelMessagesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessagesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelMessagesRequest>(create);
+  static GetSpaceChannelMessagesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get start => $_getI64(2);
+  @$pb.TagNumber(4)
+  set start($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasStart() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearStart() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get end => $_getI64(3);
+  @$pb.TagNumber(5)
+  set end($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasEnd() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearEnd() => clearField(5);
+}
+
+class GetSpaceChannelMessagesResponse extends $pb.GeneratedMessage {
+  factory GetSpaceChannelMessagesResponse({
+    $core.Iterable<MessageDocument>? documents,
+    $fixnum.Int64? totalCount,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    if (totalCount != null) {
+      $result.totalCount = totalCount;
+    }
+    return $result;
+  }
+  GetSpaceChannelMessagesResponse._() : super();
+  factory GetSpaceChannelMessagesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelMessagesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelMessagesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pc<MessageDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: MessageDocument.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'totalCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessagesResponse clone() => GetSpaceChannelMessagesResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessagesResponse copyWith(void Function(GetSpaceChannelMessagesResponse) updates) => super.copyWith((message) => updates(message as GetSpaceChannelMessagesResponse)) as GetSpaceChannelMessagesResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessagesResponse create() => GetSpaceChannelMessagesResponse._();
+  GetSpaceChannelMessagesResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelMessagesResponse> createRepeated() => $pb.PbList<GetSpaceChannelMessagesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessagesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelMessagesResponse>(create);
+  static GetSpaceChannelMessagesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<MessageDocument> get documents => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get totalCount => $_getI64(1);
+  @$pb.TagNumber(2)
+  set totalCount($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTotalCount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalCount() => clearField(2);
+}
+
 class SetSpaceChannelCategoryOrderRequest extends $pb.GeneratedMessage {
   factory SetSpaceChannelCategoryOrderRequest({
     $core.String? spaceId,

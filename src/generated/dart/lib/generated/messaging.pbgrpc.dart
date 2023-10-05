@@ -121,6 +121,10 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/DeleteSpaceChannelMessage',
       ($0.DeleteMessageRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.DeleteMessageResponse.fromBuffer(value));
+  static final _$getSpaceChannelMessages = $grpc.ClientMethod<$0.GetSpaceChannelMessagesRequest, $0.GetSpaceChannelMessagesResponse>(
+      '/messaging.Messaging/GetSpaceChannelMessages',
+      ($0.GetSpaceChannelMessagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.GetSpaceChannelMessagesResponse.fromBuffer(value));
   static final _$sendDirectChannelMessage = $grpc.ClientMethod<$0.SendMessageRequest, $0.SendMessageResponse>(
       '/messaging.Messaging/SendDirectChannelMessage',
       ($0.SendMessageRequest value) => value.writeToBuffer(),
@@ -250,6 +254,10 @@ class MessagingClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$0.DeleteMessageResponse> deleteSpaceChannelMessage($0.DeleteMessageRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteSpaceChannelMessage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetSpaceChannelMessagesResponse> getSpaceChannelMessages($0.GetSpaceChannelMessagesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceChannelMessages, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.SendMessageResponse> sendDirectChannelMessage($0.SendMessageRequest request, {$grpc.CallOptions? options}) {
@@ -457,6 +465,13 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.DeleteMessageRequest.fromBuffer(value),
         ($0.DeleteMessageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelMessagesRequest, $0.GetSpaceChannelMessagesResponse>(
+        'GetSpaceChannelMessages',
+        getSpaceChannelMessages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetSpaceChannelMessagesRequest.fromBuffer(value),
+        ($0.GetSpaceChannelMessagesResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.SendMessageRequest, $0.SendMessageResponse>(
         'SendDirectChannelMessage',
         sendDirectChannelMessage_Pre,
@@ -601,6 +616,10 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return deleteSpaceChannelMessage(call, await request);
   }
 
+  $async.Future<$0.GetSpaceChannelMessagesResponse> getSpaceChannelMessages_Pre($grpc.ServiceCall call, $async.Future<$0.GetSpaceChannelMessagesRequest> request) async {
+    return getSpaceChannelMessages(call, await request);
+  }
+
   $async.Future<$0.SendMessageResponse> sendDirectChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$0.SendMessageRequest> request) async {
     return sendDirectChannelMessage(call, await request);
   }
@@ -650,6 +669,7 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$0.SendMessageResponse> sendSpaceChannelMessage($grpc.ServiceCall call, $0.SendMessageRequest request);
   $async.Future<$0.UpdateMessageResponse> updateSpaceChannelMessage($grpc.ServiceCall call, $0.UpdateMessageRequest request);
   $async.Future<$0.DeleteMessageResponse> deleteSpaceChannelMessage($grpc.ServiceCall call, $0.DeleteMessageRequest request);
+  $async.Future<$0.GetSpaceChannelMessagesResponse> getSpaceChannelMessages($grpc.ServiceCall call, $0.GetSpaceChannelMessagesRequest request);
   $async.Future<$0.SendMessageResponse> sendDirectChannelMessage($grpc.ServiceCall call, $0.SendMessageRequest request);
   $async.Future<$0.UpdateMessageResponse> updateDirectChannelMessage($grpc.ServiceCall call, $0.UpdateMessageRequest request);
   $async.Future<$0.DeleteMessageResponse> deleteDirectChannelMessage($grpc.ServiceCall call, $0.DeleteMessageRequest request);

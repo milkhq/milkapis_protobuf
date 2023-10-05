@@ -81,6 +81,10 @@ class DOCUMENT_TYPE extends $pb.ProtobufEnum {
   static const DOCUMENT_TYPE SPACE_DOCUMENT = DOCUMENT_TYPE._(2, _omitEnumNames ? '' : 'SPACE_DOCUMENT');
   static const DOCUMENT_TYPE PERMISSION_DOCUMENT = DOCUMENT_TYPE._(3, _omitEnumNames ? '' : 'PERMISSION_DOCUMENT');
   static const DOCUMENT_TYPE MESSAGE_DOCUMENT = DOCUMENT_TYPE._(4, _omitEnumNames ? '' : 'MESSAGE_DOCUMENT');
+  static const DOCUMENT_TYPE SPACE_CHANNEL_DOCUMENT = DOCUMENT_TYPE._(5, _omitEnumNames ? '' : 'SPACE_CHANNEL_DOCUMENT');
+  static const DOCUMENT_TYPE CHANNEL_DOCUMENT = DOCUMENT_TYPE._(6, _omitEnumNames ? '' : 'CHANNEL_DOCUMENT');
+  static const DOCUMENT_TYPE CHANNEL_MESSAGES = DOCUMENT_TYPE._(7, _omitEnumNames ? '' : 'CHANNEL_MESSAGES');
+  static const DOCUMENT_TYPE SPACE_CHANNEL_MESSAGES = DOCUMENT_TYPE._(8, _omitEnumNames ? '' : 'SPACE_CHANNEL_MESSAGES');
 
   static const $core.List<DOCUMENT_TYPE> values = <DOCUMENT_TYPE> [
     UNKNOWN,
@@ -88,6 +92,10 @@ class DOCUMENT_TYPE extends $pb.ProtobufEnum {
     SPACE_DOCUMENT,
     PERMISSION_DOCUMENT,
     MESSAGE_DOCUMENT,
+    SPACE_CHANNEL_DOCUMENT,
+    CHANNEL_DOCUMENT,
+    CHANNEL_MESSAGES,
+    SPACE_CHANNEL_MESSAGES,
   ];
 
   static final $core.Map<$core.int, DOCUMENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);

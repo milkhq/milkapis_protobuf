@@ -158,6 +158,38 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use getSpaceChannelMessagesRequestDescriptor instead')
+const GetSpaceChannelMessagesRequest$json = {
+  '1': 'GetSpaceChannelMessagesRequest',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'start', '3': 4, '4': 1, '5': 4, '10': 'start'},
+    {'1': 'end', '3': 5, '4': 1, '5': 4, '10': 'end'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelMessagesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelMessagesRequestDescriptor = $convert.base64Decode(
+    'Ch5HZXRTcGFjZUNoYW5uZWxNZXNzYWdlc1JlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIAEoCVIJY2'
+    'hhbm5lbElkEhkKCHNwYWNlX2lkGAIgASgJUgdzcGFjZUlkEhQKBXN0YXJ0GAQgASgEUgVzdGFy'
+    'dBIQCgNlbmQYBSABKARSA2VuZA==');
+
+@$core.Deprecated('Use getSpaceChannelMessagesResponseDescriptor instead')
+const GetSpaceChannelMessagesResponse$json = {
+  '1': 'GetSpaceChannelMessagesResponse',
+  '2': [
+    {'1': 'documents', '3': 1, '4': 3, '5': 11, '6': '.messaging.MessageDocument', '10': 'documents'},
+    {'1': 'total_count', '3': 2, '4': 1, '5': 4, '10': 'totalCount'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelMessagesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelMessagesResponseDescriptor = $convert.base64Decode(
+    'Ch9HZXRTcGFjZUNoYW5uZWxNZXNzYWdlc1Jlc3BvbnNlEjgKCWRvY3VtZW50cxgBIAMoCzIaLm'
+    '1lc3NhZ2luZy5NZXNzYWdlRG9jdW1lbnRSCWRvY3VtZW50cxIfCgt0b3RhbF9jb3VudBgCIAEo'
+    'BFIKdG90YWxDb3VudA==');
+
 @$core.Deprecated('Use setSpaceChannelCategoryOrderRequestDescriptor instead')
 const SetSpaceChannelCategoryOrderRequest$json = {
   '1': 'SetSpaceChannelCategoryOrderRequest',

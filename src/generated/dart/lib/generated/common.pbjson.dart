@@ -70,6 +70,10 @@ const DOCUMENT_TYPE$json = {
     {'1': 'SPACE_DOCUMENT', '2': 2},
     {'1': 'PERMISSION_DOCUMENT', '2': 3},
     {'1': 'MESSAGE_DOCUMENT', '2': 4},
+    {'1': 'SPACE_CHANNEL_DOCUMENT', '2': 5},
+    {'1': 'CHANNEL_DOCUMENT', '2': 6},
+    {'1': 'CHANNEL_MESSAGES', '2': 7},
+    {'1': 'SPACE_CHANNEL_MESSAGES', '2': 8},
   ],
 };
 
@@ -77,7 +81,8 @@ const DOCUMENT_TYPE$json = {
 final $typed_data.Uint8List dOCUMENT_TYPEDescriptor = $convert.base64Decode(
     'Cg1ET0NVTUVOVF9UWVBFEgsKB1VOS05PV04QABIRCg1VU0VSX0RPQ1VNRU5UEAESEgoOU1BBQ0'
     'VfRE9DVU1FTlQQAhIXChNQRVJNSVNTSU9OX0RPQ1VNRU5UEAMSFAoQTUVTU0FHRV9ET0NVTUVO'
-    'VBAE');
+    'VBAEEhoKFlNQQUNFX0NIQU5ORUxfRE9DVU1FTlQQBRIUChBDSEFOTkVMX0RPQ1VNRU5UEAYSFA'
+    'oQQ0hBTk5FTF9NRVNTQUdFUxAHEhoKFlNQQUNFX0NIQU5ORUxfTUVTU0FHRVMQCA==');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -99,10 +104,12 @@ const ListenRequest$json = {
   '1': 'ListenRequest',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'doc_type', '3': 2, '4': 1, '5': 14, '6': '.common.DOCUMENT_TYPE', '10': 'docType'},
   ],
 };
 
 /// Descriptor for `ListenRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listenRequestDescriptor = $convert.base64Decode(
-    'Cg1MaXN0ZW5SZXF1ZXN0EhAKA2tleRgBIAEoCVIDa2V5');
+    'Cg1MaXN0ZW5SZXF1ZXN0EhAKA2tleRgBIAEoCVIDa2V5EjAKCGRvY190eXBlGAIgASgOMhUuY2'
+    '9tbW9uLkRPQ1VNRU5UX1RZUEVSB2RvY1R5cGU=');
 

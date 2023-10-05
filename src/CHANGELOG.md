@@ -1,3 +1,8 @@
+## 0.0.15
+
+ - **FIX**: added back optional flag.
+ - **FEAT**: added listen request, get space channel messages and proxy message.
+
 ## 0.0.14
 
  - **FEAT**: added listen request.

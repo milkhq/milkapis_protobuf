@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-10-05
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`milkapis_protobuf` - `v0.0.15`](#milkapis_protobuf---v0015)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.15`
+
+ - **FIX**: added back optional flag.
+ - **FEAT**: added listen request, get space channel messages and proxy message.
+
+
 ## 2023-10-04
 
 ### Changes

@@ -1,3 +1,7 @@
+## 0.0.16
+
+ - **FEAT**: added ascending order for messages fetch.
+
 ## 0.0.15
 
  - **FIX**: added back optional flag.

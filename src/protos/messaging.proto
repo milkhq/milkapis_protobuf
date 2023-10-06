@@ -83,6 +83,7 @@ message GetSpaceChannelMessagesRequest {
     string space_id = 2;
     uint64 start = 4;
     uint64 end = 5;
+    bool ascending = 6;
 }
 
 message GetSpaceChannelMessagesResponse {

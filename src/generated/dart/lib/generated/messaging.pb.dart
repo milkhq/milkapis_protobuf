@@ -24,6 +24,7 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $fixnum.Int64? start,
     $fixnum.Int64? end,
+    $core.bool? ascending,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -38,6 +39,9 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
     if (end != null) {
       $result.end = end;
     }
+    if (ascending != null) {
+      $result.ascending = ascending;
+    }
     return $result;
   }
   GetSpaceChannelMessagesRequest._() : super();
@@ -49,6 +53,7 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'spaceId')
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'start', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'end', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOB(6, _omitFieldNames ? '' : 'ascending')
     ..hasRequiredFields = false
   ;
 
@@ -108,6 +113,15 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
   $core.bool hasEnd() => $_has(3);
   @$pb.TagNumber(5)
   void clearEnd() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get ascending => $_getBF(4);
+  @$pb.TagNumber(6)
+  set ascending($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasAscending() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearAscending() => clearField(6);
 }
 
 class GetSpaceChannelMessagesResponse extends $pb.GeneratedMessage {

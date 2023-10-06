@@ -166,6 +166,7 @@ const GetSpaceChannelMessagesRequest$json = {
     {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'start', '3': 4, '4': 1, '5': 4, '10': 'start'},
     {'1': 'end', '3': 5, '4': 1, '5': 4, '10': 'end'},
+    {'1': 'ascending', '3': 6, '4': 1, '5': 8, '10': 'ascending'},
   ],
 };
 
@@ -173,7 +174,7 @@ const GetSpaceChannelMessagesRequest$json = {
 final $typed_data.Uint8List getSpaceChannelMessagesRequestDescriptor = $convert.base64Decode(
     'Ch5HZXRTcGFjZUNoYW5uZWxNZXNzYWdlc1JlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIAEoCVIJY2'
     'hhbm5lbElkEhkKCHNwYWNlX2lkGAIgASgJUgdzcGFjZUlkEhQKBXN0YXJ0GAQgASgEUgVzdGFy'
-    'dBIQCgNlbmQYBSABKARSA2VuZA==');
+    'dBIQCgNlbmQYBSABKARSA2VuZBIcCglhc2NlbmRpbmcYBiABKAhSCWFzY2VuZGluZw==');
 
 @$core.Deprecated('Use getSpaceChannelMessagesResponseDescriptor instead')
 const GetSpaceChannelMessagesResponse$json = {

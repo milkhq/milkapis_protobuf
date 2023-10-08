@@ -36,6 +36,7 @@ service Messaging {
     rpc UpdateSpaceChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
     rpc DeleteSpaceChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
     rpc GetSpaceChannelMessages(GetSpaceChannelMessagesRequest) returns (GetSpaceChannelMessagesResponse);
+    rpc CreateSpaceChannelMessageReaction(CreateSpaceChannelMessageReactionRequest) returns (CreateSpaceChannelMessageReactionResponse);
     
     // Direct channel messages
     rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -76,6 +77,17 @@ enum CHANNEL_CAPABILITY {
     IMAGE = 1;
     VOICE = 2;
     VIDEO = 3;
+}
+
+message CreateSpaceChannelMessageReactionRequest {
+    string space_id = 1;
+    string channel_id = 2;
+    string message_id = 3;
+    string emoji = 4;
+}
+
+message CreateSpaceChannelMessageReactionResponse {
+
 }
 
 message GetSpaceChannelMessagesRequest {

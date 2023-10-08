@@ -1,3 +1,7 @@
+## 0.0.17
+
+ - **FEAT**: added create space channel message reaction.
+
 ## 0.0.16
 
  - **FEAT**: added ascending order for messages fetch.

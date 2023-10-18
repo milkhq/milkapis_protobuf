@@ -69,6 +69,14 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/SetSpaceChannelCategoryOrder',
       ($0.SetSpaceChannelCategoryOrderRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.SetSpaceChannelCategoryOrderResponse.fromBuffer(value));
+  static final _$sendSpaceChannelThreadMessage = $grpc.ClientMethod<$0.SendSpaceChannelThreadMessageRequest, $0.SendSpaceChannelThreadMessageResponse>(
+      '/messaging.Messaging/SendSpaceChannelThreadMessage',
+      ($0.SendSpaceChannelThreadMessageRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.SendSpaceChannelThreadMessageResponse.fromBuffer(value));
+  static final _$createSpaceChannelFileUploadUrl = $grpc.ClientMethod<$0.CreateSpaceChannelFileUploadUrlRequest, $0.CreateSpaceChannelFileUploadUrlResponse>(
+      '/messaging.Messaging/CreateSpaceChannelFileUploadUrl',
+      ($0.CreateSpaceChannelFileUploadUrlRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CreateSpaceChannelFileUploadUrlResponse.fromBuffer(value));
   static final _$createDirectChannel = $grpc.ClientMethod<$0.CreateChannelRequest, $0.CreateChannelResponse>(
       '/messaging.Messaging/CreateDirectChannel',
       ($0.CreateChannelRequest value) => value.writeToBuffer(),
@@ -113,22 +121,46 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/SendSpaceChannelMessage',
       ($0.SendMessageRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.SendMessageResponse.fromBuffer(value));
-  static final _$updateSpaceChannelMessage = $grpc.ClientMethod<$0.UpdateMessageRequest, $0.UpdateMessageResponse>(
+  static final _$updateSpaceChannelMessage = $grpc.ClientMethod<$0.UpdateSpaceChannelMessageRequest, $0.UpdateSpaceChannelMessageResponse>(
       '/messaging.Messaging/UpdateSpaceChannelMessage',
-      ($0.UpdateMessageRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.UpdateMessageResponse.fromBuffer(value));
-  static final _$deleteSpaceChannelMessage = $grpc.ClientMethod<$0.DeleteMessageRequest, $0.DeleteMessageResponse>(
+      ($0.UpdateSpaceChannelMessageRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.UpdateSpaceChannelMessageResponse.fromBuffer(value));
+  static final _$deleteSpaceChannelMessage = $grpc.ClientMethod<$0.DeleteSpaceChannelMessageRequest, $0.DeleteSpaceChannelMessageResponse>(
       '/messaging.Messaging/DeleteSpaceChannelMessage',
-      ($0.DeleteMessageRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.DeleteMessageResponse.fromBuffer(value));
+      ($0.DeleteSpaceChannelMessageRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.DeleteSpaceChannelMessageResponse.fromBuffer(value));
   static final _$getSpaceChannelMessages = $grpc.ClientMethod<$0.GetSpaceChannelMessagesRequest, $0.GetSpaceChannelMessagesResponse>(
       '/messaging.Messaging/GetSpaceChannelMessages',
       ($0.GetSpaceChannelMessagesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.GetSpaceChannelMessagesResponse.fromBuffer(value));
-  static final _$createSpaceChannelMessageReaction = $grpc.ClientMethod<$0.CreateSpaceChannelMessageReactionRequest, $0.CreateSpaceChannelMessageReactionResponse>(
-      '/messaging.Messaging/CreateSpaceChannelMessageReaction',
-      ($0.CreateSpaceChannelMessageReactionRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $0.CreateSpaceChannelMessageReactionResponse.fromBuffer(value));
+  static final _$sendSpaceChannelMessageReaction = $grpc.ClientMethod<$0.SendSpaceChannelMessageReactionRequest, $0.SendSpaceChannelMessageReactionResponse>(
+      '/messaging.Messaging/SendSpaceChannelMessageReaction',
+      ($0.SendSpaceChannelMessageReactionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.SendSpaceChannelMessageReactionResponse.fromBuffer(value));
+  static final _$getSpaceChannelMessageReactions = $grpc.ClientMethod<$0.GetSpaceChannelMessageReactionsRequest, $0.GetSpaceChannelMessageReactionsResponse>(
+      '/messaging.Messaging/GetSpaceChannelMessageReactions',
+      ($0.GetSpaceChannelMessageReactionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.GetSpaceChannelMessageReactionsResponse.fromBuffer(value));
+  static final _$getSpaceChannelThreadMessages = $grpc.ClientMethod<$0.GetSpaceChannelThreadMessagesRequest, $0.GetSpaceChannelThreadMessagesResponse>(
+      '/messaging.Messaging/GetSpaceChannelThreadMessages',
+      ($0.GetSpaceChannelThreadMessagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.GetSpaceChannelThreadMessagesResponse.fromBuffer(value));
+  static final _$updateSpaceChannelThreadMessage = $grpc.ClientMethod<$0.UpdateSpaceChannelThreadMessageRequest, $0.UpdateSpaceChannelThreadMessageResponse>(
+      '/messaging.Messaging/UpdateSpaceChannelThreadMessage',
+      ($0.UpdateSpaceChannelThreadMessageRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.UpdateSpaceChannelThreadMessageResponse.fromBuffer(value));
+  static final _$deleteSpaceChannelThreadMessage = $grpc.ClientMethod<$0.DeleteSpaceChannelThreadMessageRequest, $0.DeleteSpaceChannelThreadMessageResponse>(
+      '/messaging.Messaging/DeleteSpaceChannelThreadMessage',
+      ($0.DeleteSpaceChannelThreadMessageRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.DeleteSpaceChannelThreadMessageResponse.fromBuffer(value));
+  static final _$getSpaceChannelThreadMessageReactions = $grpc.ClientMethod<$0.GetSpaceChannelThreadMessageReactionsRequest, $0.GetSpaceChannelThreadMessageReactionsResponse>(
+      '/messaging.Messaging/GetSpaceChannelThreadMessageReactions',
+      ($0.GetSpaceChannelThreadMessageReactionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.GetSpaceChannelThreadMessageReactionsResponse.fromBuffer(value));
+  static final _$sendSpaceChannelThreadMessageReaction = $grpc.ClientMethod<$0.SendSpaceChannelThreadMessageReactionRequest, $0.SendSpaceChannelThreadMessageReactionResponse>(
+      '/messaging.Messaging/SendSpaceChannelThreadMessageReaction',
+      ($0.SendSpaceChannelThreadMessageReactionRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.SendSpaceChannelThreadMessageReactionResponse.fromBuffer(value));
   static final _$sendDirectChannelMessage = $grpc.ClientMethod<$0.SendMessageRequest, $0.SendMessageResponse>(
       '/messaging.Messaging/SendDirectChannelMessage',
       ($0.SendMessageRequest value) => value.writeToBuffer(),
@@ -208,6 +240,14 @@ class MessagingClient extends $grpc.Client {
     return $createUnaryCall(_$setSpaceChannelCategoryOrder, request, options: options);
   }
 
+  $grpc.ResponseFuture<$0.SendSpaceChannelThreadMessageResponse> sendSpaceChannelThreadMessage($0.SendSpaceChannelThreadMessageRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$sendSpaceChannelThreadMessage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateSpaceChannelFileUploadUrlResponse> createSpaceChannelFileUploadUrl($0.CreateSpaceChannelFileUploadUrlRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSpaceChannelFileUploadUrl, request, options: options);
+  }
+
   $grpc.ResponseFuture<$0.CreateChannelResponse> createDirectChannel($0.CreateChannelRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createDirectChannel, request, options: options);
   }
@@ -252,11 +292,11 @@ class MessagingClient extends $grpc.Client {
     return $createUnaryCall(_$sendSpaceChannelMessage, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.UpdateMessageResponse> updateSpaceChannelMessage($0.UpdateMessageRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.UpdateSpaceChannelMessageResponse> updateSpaceChannelMessage($0.UpdateSpaceChannelMessageRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateSpaceChannelMessage, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.DeleteMessageResponse> deleteSpaceChannelMessage($0.DeleteMessageRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$0.DeleteSpaceChannelMessageResponse> deleteSpaceChannelMessage($0.DeleteSpaceChannelMessageRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteSpaceChannelMessage, request, options: options);
   }
 
@@ -264,8 +304,32 @@ class MessagingClient extends $grpc.Client {
     return $createUnaryCall(_$getSpaceChannelMessages, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.CreateSpaceChannelMessageReactionResponse> createSpaceChannelMessageReaction($0.CreateSpaceChannelMessageReactionRequest request, {$grpc.CallOptions? options}) {
-    return $createUnaryCall(_$createSpaceChannelMessageReaction, request, options: options);
+  $grpc.ResponseFuture<$0.SendSpaceChannelMessageReactionResponse> sendSpaceChannelMessageReaction($0.SendSpaceChannelMessageReactionRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$sendSpaceChannelMessageReaction, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetSpaceChannelMessageReactionsResponse> getSpaceChannelMessageReactions($0.GetSpaceChannelMessageReactionsRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceChannelMessageReactions, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetSpaceChannelThreadMessagesResponse> getSpaceChannelThreadMessages($0.GetSpaceChannelThreadMessagesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceChannelThreadMessages, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.UpdateSpaceChannelThreadMessageResponse> updateSpaceChannelThreadMessage($0.UpdateSpaceChannelThreadMessageRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSpaceChannelThreadMessage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.DeleteSpaceChannelThreadMessageResponse> deleteSpaceChannelThreadMessage($0.DeleteSpaceChannelThreadMessageRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteSpaceChannelThreadMessage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetSpaceChannelThreadMessageReactionsResponse> getSpaceChannelThreadMessageReactions($0.GetSpaceChannelThreadMessageReactionsRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceChannelThreadMessageReactions, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.SendSpaceChannelThreadMessageReactionResponse> sendSpaceChannelThreadMessageReaction($0.SendSpaceChannelThreadMessageReactionRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$sendSpaceChannelThreadMessageReaction, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.SendMessageResponse> sendDirectChannelMessage($0.SendMessageRequest request, {$grpc.CallOptions? options}) {
@@ -382,6 +446,20 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.SetSpaceChannelCategoryOrderRequest.fromBuffer(value),
         ($0.SetSpaceChannelCategoryOrderResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SendSpaceChannelThreadMessageRequest, $0.SendSpaceChannelThreadMessageResponse>(
+        'SendSpaceChannelThreadMessage',
+        sendSpaceChannelThreadMessage_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.SendSpaceChannelThreadMessageRequest.fromBuffer(value),
+        ($0.SendSpaceChannelThreadMessageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateSpaceChannelFileUploadUrlRequest, $0.CreateSpaceChannelFileUploadUrlResponse>(
+        'CreateSpaceChannelFileUploadUrl',
+        createSpaceChannelFileUploadUrl_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.CreateSpaceChannelFileUploadUrlRequest.fromBuffer(value),
+        ($0.CreateSpaceChannelFileUploadUrlResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.CreateChannelRequest, $0.CreateChannelResponse>(
         'CreateDirectChannel',
         createDirectChannel_Pre,
@@ -459,20 +537,20 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.SendMessageRequest.fromBuffer(value),
         ($0.SendMessageResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.UpdateMessageRequest, $0.UpdateMessageResponse>(
+    $addMethod($grpc.ServiceMethod<$0.UpdateSpaceChannelMessageRequest, $0.UpdateSpaceChannelMessageResponse>(
         'UpdateSpaceChannelMessage',
         updateSpaceChannelMessage_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.UpdateMessageRequest.fromBuffer(value),
-        ($0.UpdateMessageResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.DeleteMessageRequest, $0.DeleteMessageResponse>(
+        ($core.List<$core.int> value) => $0.UpdateSpaceChannelMessageRequest.fromBuffer(value),
+        ($0.UpdateSpaceChannelMessageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteSpaceChannelMessageRequest, $0.DeleteSpaceChannelMessageResponse>(
         'DeleteSpaceChannelMessage',
         deleteSpaceChannelMessage_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.DeleteMessageRequest.fromBuffer(value),
-        ($0.DeleteMessageResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.DeleteSpaceChannelMessageRequest.fromBuffer(value),
+        ($0.DeleteSpaceChannelMessageResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelMessagesRequest, $0.GetSpaceChannelMessagesResponse>(
         'GetSpaceChannelMessages',
         getSpaceChannelMessages_Pre,
@@ -480,13 +558,55 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GetSpaceChannelMessagesRequest.fromBuffer(value),
         ($0.GetSpaceChannelMessagesResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.CreateSpaceChannelMessageReactionRequest, $0.CreateSpaceChannelMessageReactionResponse>(
-        'CreateSpaceChannelMessageReaction',
-        createSpaceChannelMessageReaction_Pre,
+    $addMethod($grpc.ServiceMethod<$0.SendSpaceChannelMessageReactionRequest, $0.SendSpaceChannelMessageReactionResponse>(
+        'SendSpaceChannelMessageReaction',
+        sendSpaceChannelMessageReaction_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $0.CreateSpaceChannelMessageReactionRequest.fromBuffer(value),
-        ($0.CreateSpaceChannelMessageReactionResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $0.SendSpaceChannelMessageReactionRequest.fromBuffer(value),
+        ($0.SendSpaceChannelMessageReactionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelMessageReactionsRequest, $0.GetSpaceChannelMessageReactionsResponse>(
+        'GetSpaceChannelMessageReactions',
+        getSpaceChannelMessageReactions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetSpaceChannelMessageReactionsRequest.fromBuffer(value),
+        ($0.GetSpaceChannelMessageReactionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelThreadMessagesRequest, $0.GetSpaceChannelThreadMessagesResponse>(
+        'GetSpaceChannelThreadMessages',
+        getSpaceChannelThreadMessages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetSpaceChannelThreadMessagesRequest.fromBuffer(value),
+        ($0.GetSpaceChannelThreadMessagesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateSpaceChannelThreadMessageRequest, $0.UpdateSpaceChannelThreadMessageResponse>(
+        'UpdateSpaceChannelThreadMessage',
+        updateSpaceChannelThreadMessage_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.UpdateSpaceChannelThreadMessageRequest.fromBuffer(value),
+        ($0.UpdateSpaceChannelThreadMessageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.DeleteSpaceChannelThreadMessageRequest, $0.DeleteSpaceChannelThreadMessageResponse>(
+        'DeleteSpaceChannelThreadMessage',
+        deleteSpaceChannelThreadMessage_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.DeleteSpaceChannelThreadMessageRequest.fromBuffer(value),
+        ($0.DeleteSpaceChannelThreadMessageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetSpaceChannelThreadMessageReactionsRequest, $0.GetSpaceChannelThreadMessageReactionsResponse>(
+        'GetSpaceChannelThreadMessageReactions',
+        getSpaceChannelThreadMessageReactions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetSpaceChannelThreadMessageReactionsRequest.fromBuffer(value),
+        ($0.GetSpaceChannelThreadMessageReactionsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SendSpaceChannelThreadMessageReactionRequest, $0.SendSpaceChannelThreadMessageReactionResponse>(
+        'SendSpaceChannelThreadMessageReaction',
+        sendSpaceChannelThreadMessageReaction_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.SendSpaceChannelThreadMessageReactionRequest.fromBuffer(value),
+        ($0.SendSpaceChannelThreadMessageReactionResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.SendMessageRequest, $0.SendMessageResponse>(
         'SendDirectChannelMessage',
         sendDirectChannelMessage_Pre,
@@ -579,6 +699,14 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return setSpaceChannelCategoryOrder(call, await request);
   }
 
+  $async.Future<$0.SendSpaceChannelThreadMessageResponse> sendSpaceChannelThreadMessage_Pre($grpc.ServiceCall call, $async.Future<$0.SendSpaceChannelThreadMessageRequest> request) async {
+    return sendSpaceChannelThreadMessage(call, await request);
+  }
+
+  $async.Future<$0.CreateSpaceChannelFileUploadUrlResponse> createSpaceChannelFileUploadUrl_Pre($grpc.ServiceCall call, $async.Future<$0.CreateSpaceChannelFileUploadUrlRequest> request) async {
+    return createSpaceChannelFileUploadUrl(call, await request);
+  }
+
   $async.Future<$0.CreateChannelResponse> createDirectChannel_Pre($grpc.ServiceCall call, $async.Future<$0.CreateChannelRequest> request) async {
     return createDirectChannel(call, await request);
   }
@@ -623,11 +751,11 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return sendSpaceChannelMessage(call, await request);
   }
 
-  $async.Future<$0.UpdateMessageResponse> updateSpaceChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$0.UpdateMessageRequest> request) async {
+  $async.Future<$0.UpdateSpaceChannelMessageResponse> updateSpaceChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$0.UpdateSpaceChannelMessageRequest> request) async {
     return updateSpaceChannelMessage(call, await request);
   }
 
-  $async.Future<$0.DeleteMessageResponse> deleteSpaceChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteMessageRequest> request) async {
+  $async.Future<$0.DeleteSpaceChannelMessageResponse> deleteSpaceChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteSpaceChannelMessageRequest> request) async {
     return deleteSpaceChannelMessage(call, await request);
   }
 
@@ -635,8 +763,32 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return getSpaceChannelMessages(call, await request);
   }
 
-  $async.Future<$0.CreateSpaceChannelMessageReactionResponse> createSpaceChannelMessageReaction_Pre($grpc.ServiceCall call, $async.Future<$0.CreateSpaceChannelMessageReactionRequest> request) async {
-    return createSpaceChannelMessageReaction(call, await request);
+  $async.Future<$0.SendSpaceChannelMessageReactionResponse> sendSpaceChannelMessageReaction_Pre($grpc.ServiceCall call, $async.Future<$0.SendSpaceChannelMessageReactionRequest> request) async {
+    return sendSpaceChannelMessageReaction(call, await request);
+  }
+
+  $async.Future<$0.GetSpaceChannelMessageReactionsResponse> getSpaceChannelMessageReactions_Pre($grpc.ServiceCall call, $async.Future<$0.GetSpaceChannelMessageReactionsRequest> request) async {
+    return getSpaceChannelMessageReactions(call, await request);
+  }
+
+  $async.Future<$0.GetSpaceChannelThreadMessagesResponse> getSpaceChannelThreadMessages_Pre($grpc.ServiceCall call, $async.Future<$0.GetSpaceChannelThreadMessagesRequest> request) async {
+    return getSpaceChannelThreadMessages(call, await request);
+  }
+
+  $async.Future<$0.UpdateSpaceChannelThreadMessageResponse> updateSpaceChannelThreadMessage_Pre($grpc.ServiceCall call, $async.Future<$0.UpdateSpaceChannelThreadMessageRequest> request) async {
+    return updateSpaceChannelThreadMessage(call, await request);
+  }
+
+  $async.Future<$0.DeleteSpaceChannelThreadMessageResponse> deleteSpaceChannelThreadMessage_Pre($grpc.ServiceCall call, $async.Future<$0.DeleteSpaceChannelThreadMessageRequest> request) async {
+    return deleteSpaceChannelThreadMessage(call, await request);
+  }
+
+  $async.Future<$0.GetSpaceChannelThreadMessageReactionsResponse> getSpaceChannelThreadMessageReactions_Pre($grpc.ServiceCall call, $async.Future<$0.GetSpaceChannelThreadMessageReactionsRequest> request) async {
+    return getSpaceChannelThreadMessageReactions(call, await request);
+  }
+
+  $async.Future<$0.SendSpaceChannelThreadMessageReactionResponse> sendSpaceChannelThreadMessageReaction_Pre($grpc.ServiceCall call, $async.Future<$0.SendSpaceChannelThreadMessageReactionRequest> request) async {
+    return sendSpaceChannelThreadMessageReaction(call, await request);
   }
 
   $async.Future<$0.SendMessageResponse> sendDirectChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$0.SendMessageRequest> request) async {
@@ -675,6 +827,8 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$0.CreateSpaceChannelCategoryResponse> createSpaceChannelCategory($grpc.ServiceCall call, $0.CreateSpaceChannelCategoryRequest request);
   $async.Future<$0.UpdateSpaceChannelCategoryResponse> updateSpaceChannelCategory($grpc.ServiceCall call, $0.UpdateSpaceChannelCategoryRequest request);
   $async.Future<$0.SetSpaceChannelCategoryOrderResponse> setSpaceChannelCategoryOrder($grpc.ServiceCall call, $0.SetSpaceChannelCategoryOrderRequest request);
+  $async.Future<$0.SendSpaceChannelThreadMessageResponse> sendSpaceChannelThreadMessage($grpc.ServiceCall call, $0.SendSpaceChannelThreadMessageRequest request);
+  $async.Future<$0.CreateSpaceChannelFileUploadUrlResponse> createSpaceChannelFileUploadUrl($grpc.ServiceCall call, $0.CreateSpaceChannelFileUploadUrlRequest request);
   $async.Future<$0.CreateChannelResponse> createDirectChannel($grpc.ServiceCall call, $0.CreateChannelRequest request);
   $async.Future<$0.UpdateChannelMetadataResponse> updateDirectChannelMetadata($grpc.ServiceCall call, $0.UpdateChannelMetadataRequest request);
   $async.Future<$0.UpdateChannelStatusResponse> deleteDirectChannel($grpc.ServiceCall call, $0.UpdateChannelStatusRequest request);
@@ -686,10 +840,16 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$0.UpdateChannelStatusResponse> archiveThreadChannel($grpc.ServiceCall call, $0.UpdateChannelStatusRequest request);
   $async.Future<$0.UpdateChannelStatusResponse> activateThreadChannel($grpc.ServiceCall call, $0.UpdateChannelStatusRequest request);
   $async.Future<$0.SendMessageResponse> sendSpaceChannelMessage($grpc.ServiceCall call, $0.SendMessageRequest request);
-  $async.Future<$0.UpdateMessageResponse> updateSpaceChannelMessage($grpc.ServiceCall call, $0.UpdateMessageRequest request);
-  $async.Future<$0.DeleteMessageResponse> deleteSpaceChannelMessage($grpc.ServiceCall call, $0.DeleteMessageRequest request);
+  $async.Future<$0.UpdateSpaceChannelMessageResponse> updateSpaceChannelMessage($grpc.ServiceCall call, $0.UpdateSpaceChannelMessageRequest request);
+  $async.Future<$0.DeleteSpaceChannelMessageResponse> deleteSpaceChannelMessage($grpc.ServiceCall call, $0.DeleteSpaceChannelMessageRequest request);
   $async.Future<$0.GetSpaceChannelMessagesResponse> getSpaceChannelMessages($grpc.ServiceCall call, $0.GetSpaceChannelMessagesRequest request);
-  $async.Future<$0.CreateSpaceChannelMessageReactionResponse> createSpaceChannelMessageReaction($grpc.ServiceCall call, $0.CreateSpaceChannelMessageReactionRequest request);
+  $async.Future<$0.SendSpaceChannelMessageReactionResponse> sendSpaceChannelMessageReaction($grpc.ServiceCall call, $0.SendSpaceChannelMessageReactionRequest request);
+  $async.Future<$0.GetSpaceChannelMessageReactionsResponse> getSpaceChannelMessageReactions($grpc.ServiceCall call, $0.GetSpaceChannelMessageReactionsRequest request);
+  $async.Future<$0.GetSpaceChannelThreadMessagesResponse> getSpaceChannelThreadMessages($grpc.ServiceCall call, $0.GetSpaceChannelThreadMessagesRequest request);
+  $async.Future<$0.UpdateSpaceChannelThreadMessageResponse> updateSpaceChannelThreadMessage($grpc.ServiceCall call, $0.UpdateSpaceChannelThreadMessageRequest request);
+  $async.Future<$0.DeleteSpaceChannelThreadMessageResponse> deleteSpaceChannelThreadMessage($grpc.ServiceCall call, $0.DeleteSpaceChannelThreadMessageRequest request);
+  $async.Future<$0.GetSpaceChannelThreadMessageReactionsResponse> getSpaceChannelThreadMessageReactions($grpc.ServiceCall call, $0.GetSpaceChannelThreadMessageReactionsRequest request);
+  $async.Future<$0.SendSpaceChannelThreadMessageReactionResponse> sendSpaceChannelThreadMessageReaction($grpc.ServiceCall call, $0.SendSpaceChannelThreadMessageReactionRequest request);
   $async.Future<$0.SendMessageResponse> sendDirectChannelMessage($grpc.ServiceCall call, $0.SendMessageRequest request);
   $async.Future<$0.UpdateMessageResponse> updateDirectChannelMessage($grpc.ServiceCall call, $0.UpdateMessageRequest request);
   $async.Future<$0.DeleteMessageResponse> deleteDirectChannelMessage($grpc.ServiceCall call, $0.DeleteMessageRequest request);

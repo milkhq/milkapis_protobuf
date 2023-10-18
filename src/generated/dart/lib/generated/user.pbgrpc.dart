@@ -57,10 +57,10 @@ class UserClient extends $grpc.Client {
       '/user.User/GetUser',
       ($2.GetUserRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.UserDocument.fromBuffer(value));
-  static final _$queryUser = $grpc.ClientMethod<$2.QueryUserRequest, $2.UserDocument>(
+  static final _$queryUser = $grpc.ClientMethod<$2.QueryUserRequest, $2.QueryUserResponse>(
       '/user.User/QueryUser',
       ($2.QueryUserRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $2.UserDocument.fromBuffer(value));
+      ($core.List<$core.int> value) => $2.QueryUserResponse.fromBuffer(value));
   static final _$getUserCustomizationProfile = $grpc.ClientMethod<$2.GetUserCustomizationProfileRequest, $2.CustomizationProfileDocument>(
       '/user.User/GetUserCustomizationProfile',
       ($2.GetUserCustomizationProfileRequest value) => value.writeToBuffer(),
@@ -132,8 +132,8 @@ class UserClient extends $grpc.Client {
     return $createUnaryCall(_$getUser, request, options: options);
   }
 
-  $grpc.ResponseStream<$2.UserDocument> queryUser($2.QueryUserRequest request, {$grpc.CallOptions? options}) {
-    return $createStreamingCall(_$queryUser, $async.Stream.fromIterable([request]), options: options);
+  $grpc.ResponseFuture<$2.QueryUserResponse> queryUser($2.QueryUserRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$queryUser, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.CustomizationProfileDocument> getUserCustomizationProfile($2.GetUserCustomizationProfileRequest request, {$grpc.CallOptions? options}) {
@@ -233,13 +233,13 @@ abstract class UserServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.GetUserRequest.fromBuffer(value),
         ($2.UserDocument value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$2.QueryUserRequest, $2.UserDocument>(
+    $addMethod($grpc.ServiceMethod<$2.QueryUserRequest, $2.QueryUserResponse>(
         'QueryUser',
         queryUser_Pre,
         false,
-        true,
+        false,
         ($core.List<$core.int> value) => $2.QueryUserRequest.fromBuffer(value),
-        ($2.UserDocument value) => value.writeToBuffer()));
+        ($2.QueryUserResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.GetUserCustomizationProfileRequest, $2.CustomizationProfileDocument>(
         'GetUserCustomizationProfile',
         getUserCustomizationProfile_Pre,
@@ -327,8 +327,8 @@ abstract class UserServiceBase extends $grpc.Service {
     return getUser(call, await request);
   }
 
-  $async.Stream<$2.UserDocument> queryUser_Pre($grpc.ServiceCall call, $async.Future<$2.QueryUserRequest> request) async* {
-    yield* queryUser(call, await request);
+  $async.Future<$2.QueryUserResponse> queryUser_Pre($grpc.ServiceCall call, $async.Future<$2.QueryUserRequest> request) async {
+    return queryUser(call, await request);
   }
 
   $async.Future<$2.CustomizationProfileDocument> getUserCustomizationProfile_Pre($grpc.ServiceCall call, $async.Future<$2.GetUserCustomizationProfileRequest> request) async {
@@ -368,7 +368,7 @@ abstract class UserServiceBase extends $grpc.Service {
   $async.Future<$2.UpdateUserStatusResponse> activateUser($grpc.ServiceCall call, $2.UpdateUserStatusRequest request);
   $async.Stream<$2.UserDocument> listenUser($grpc.ServiceCall call, $2.GetUserRequest request);
   $async.Future<$2.UserDocument> getUser($grpc.ServiceCall call, $2.GetUserRequest request);
-  $async.Stream<$2.UserDocument> queryUser($grpc.ServiceCall call, $2.QueryUserRequest request);
+  $async.Future<$2.QueryUserResponse> queryUser($grpc.ServiceCall call, $2.QueryUserRequest request);
   $async.Future<$2.CustomizationProfileDocument> getUserCustomizationProfile($grpc.ServiceCall call, $2.GetUserCustomizationProfileRequest request);
   $async.Future<$2.DeleteUserCustomizationProfileResponse> deleteUserCustomizationProfile($grpc.ServiceCall call, $2.GetUserCustomizationProfileRequest request);
   $async.Future<$2.CustomizationProfileDocument> createUserCustomizationProfile($grpc.ServiceCall call, $2.CreateUserCustomizationProfileRequest request);

@@ -112,18 +112,14 @@ const UpdateSpaceCustomizationRequest$json = {
   '1': 'UpdateSpaceCustomizationRequest',
   '2': [
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
-    {'1': 'customization', '3': 2, '4': 1, '5': 12, '9': 0, '10': 'customization', '17': true},
-  ],
-  '8': [
-    {'1': '_customization'},
+    {'1': 'customization', '3': 2, '4': 1, '5': 12, '10': 'customization'},
   ],
 };
 
 /// Descriptor for `UpdateSpaceCustomizationRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateSpaceCustomizationRequestDescriptor = $convert.base64Decode(
     'Ch9VcGRhdGVTcGFjZUN1c3RvbWl6YXRpb25SZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcG'
-    'FjZUlkEikKDWN1c3RvbWl6YXRpb24YAiABKAxIAFINY3VzdG9taXphdGlvbogBAUIQCg5fY3Vz'
-    'dG9taXphdGlvbg==');
+    'FjZUlkEiQKDWN1c3RvbWl6YXRpb24YAiABKAxSDWN1c3RvbWl6YXRpb24=');
 
 @$core.Deprecated('Use updateSpaceCustomizationResponseDescriptor instead')
 const UpdateSpaceCustomizationResponse$json = {
@@ -166,19 +162,15 @@ final $typed_data.Uint8List getUserSpacesRequestDescriptor = $convert.base64Deco
 const QuerySpaceInviteRequest$json = {
   '1': 'QuerySpaceInviteRequest',
   '2': [
-    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'spaceId', '17': true},
-    {'1': 'uid', '3': 2, '4': 1, '5': 9, '9': 1, '10': 'uid', '17': true},
-  ],
-  '8': [
-    {'1': '_space_id'},
-    {'1': '_uid'},
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
   ],
 };
 
 /// Descriptor for `QuerySpaceInviteRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List querySpaceInviteRequestDescriptor = $convert.base64Decode(
-    'ChdRdWVyeVNwYWNlSW52aXRlUmVxdWVzdBIeCghzcGFjZV9pZBgBIAEoCUgAUgdzcGFjZUlkiA'
-    'EBEhUKA3VpZBgCIAEoCUgBUgN1aWSIAQFCCwoJX3NwYWNlX2lkQgYKBF91aWQ=');
+    'ChdRdWVyeVNwYWNlSW52aXRlUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZBIQCg'
+    'N1aWQYAiABKAlSA3VpZA==');
 
 @$core.Deprecated('Use querySpaceInviteResponseDescriptor instead')
 const QuerySpaceInviteResponse$json = {
@@ -307,19 +299,15 @@ final $typed_data.Uint8List getSpaceRequestDescriptor = $convert.base64Decode(
 const QuerySpaceRequest$json = {
   '1': 'QuerySpaceRequest',
   '2': [
-    {'1': 'category', '3': 1, '4': 1, '5': 14, '6': '.space.SPACE_CATEGORY', '9': 0, '10': 'category', '17': true},
+    {'1': 'category', '3': 1, '4': 1, '5': 14, '6': '.space.SPACE_CATEGORY', '10': 'category'},
     {'1': 'search_term', '3': 2, '4': 1, '5': 9, '10': 'searchTerm'},
-  ],
-  '8': [
-    {'1': '_category'},
   ],
 };
 
 /// Descriptor for `QuerySpaceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List querySpaceRequestDescriptor = $convert.base64Decode(
-    'ChFRdWVyeVNwYWNlUmVxdWVzdBI2CghjYXRlZ29yeRgBIAEoDjIVLnNwYWNlLlNQQUNFX0NBVE'
-    'VHT1JZSABSCGNhdGVnb3J5iAEBEh8KC3NlYXJjaF90ZXJtGAIgASgJUgpzZWFyY2hUZXJtQgsK'
-    'CV9jYXRlZ29yeQ==');
+    'ChFRdWVyeVNwYWNlUmVxdWVzdBIxCghjYXRlZ29yeRgBIAEoDjIVLnNwYWNlLlNQQUNFX0NBVE'
+    'VHT1JZUghjYXRlZ29yeRIfCgtzZWFyY2hfdGVybRgCIAEoCVIKc2VhcmNoVGVybQ==');
 
 @$core.Deprecated('Use querySpaceResponseDescriptor instead')
 const QuerySpaceResponse$json = {
@@ -366,43 +354,34 @@ final $typed_data.Uint8List updateSpaceVisibilityResponseDescriptor = $convert.b
 const SpaceMemberPermissionDocument$json = {
   '1': 'SpaceMemberPermissionDocument',
   '2': [
-    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
+    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '10': 'documentId'},
     {'1': 'permissions', '3': 2, '4': 3, '5': 5, '10': 'permissions'},
-  ],
-  '8': [
-    {'1': '_document_id'},
   ],
 };
 
 /// Descriptor for `SpaceMemberPermissionDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List spaceMemberPermissionDocumentDescriptor = $convert.base64Decode(
-    'Ch1TcGFjZU1lbWJlclBlcm1pc3Npb25Eb2N1bWVudBIkCgtkb2N1bWVudF9pZBgBIAEoCUgAUg'
-    'pkb2N1bWVudElkiAEBEiAKC3Blcm1pc3Npb25zGAIgAygFUgtwZXJtaXNzaW9uc0IOCgxfZG9j'
-    'dW1lbnRfaWQ=');
+    'Ch1TcGFjZU1lbWJlclBlcm1pc3Npb25Eb2N1bWVudBIfCgtkb2N1bWVudF9pZBgBIAEoCVIKZG'
+    '9jdW1lbnRJZBIgCgtwZXJtaXNzaW9ucxgCIAMoBVILcGVybWlzc2lvbnM=');
 
 @$core.Deprecated('Use spaceInviteDocumentDescriptor instead')
 const SpaceInviteDocument$json = {
   '1': 'SpaceInviteDocument',
   '2': [
-    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
+    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '10': 'documentId'},
     {'1': 'inviter_uid', '3': 2, '4': 1, '5': 9, '10': 'inviterUid'},
     {'1': 'deleted', '3': 3, '4': 1, '5': 8, '10': 'deleted'},
     {'1': 'nonce', '3': 4, '4': 1, '5': 4, '10': 'nonce'},
-    {'1': 'document_status', '3': 5, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '9': 1, '10': 'documentStatus', '17': true},
-  ],
-  '8': [
-    {'1': '_document_id'},
-    {'1': '_document_status'},
+    {'1': 'document_status', '3': 5, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '10': 'documentStatus'},
   ],
 };
 
 /// Descriptor for `SpaceInviteDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List spaceInviteDocumentDescriptor = $convert.base64Decode(
-    'ChNTcGFjZUludml0ZURvY3VtZW50EiQKC2RvY3VtZW50X2lkGAEgASgJSABSCmRvY3VtZW50SW'
-    'SIAQESHwoLaW52aXRlcl91aWQYAiABKAlSCmludml0ZXJVaWQSGAoHZGVsZXRlZBgDIAEoCFIH'
-    'ZGVsZXRlZBIUCgVub25jZRgEIAEoBFIFbm9uY2USRAoPZG9jdW1lbnRfc3RhdHVzGAUgASgOMh'
-    'Yuc3BhY2UuRE9DVU1FTlRfU1RBVFVTSAFSDmRvY3VtZW50U3RhdHVziAEBQg4KDF9kb2N1bWVu'
-    'dF9pZEISChBfZG9jdW1lbnRfc3RhdHVz');
+    'ChNTcGFjZUludml0ZURvY3VtZW50Eh8KC2RvY3VtZW50X2lkGAEgASgJUgpkb2N1bWVudElkEh'
+    '8KC2ludml0ZXJfdWlkGAIgASgJUgppbnZpdGVyVWlkEhgKB2RlbGV0ZWQYAyABKAhSB2RlbGV0'
+    'ZWQSFAoFbm9uY2UYBCABKARSBW5vbmNlEj8KD2RvY3VtZW50X3N0YXR1cxgFIAEoDjIWLnNwYW'
+    'NlLkRPQ1VNRU5UX1NUQVRVU1IOZG9jdW1lbnRTdGF0dXM=');
 
 @$core.Deprecated('Use spaceInviteDocumentsDescriptor instead')
 const SpaceInviteDocuments$json = {
@@ -421,18 +400,14 @@ final $typed_data.Uint8List spaceInviteDocumentsDescriptor = $convert.base64Deco
 const SubscribeSpaceInviteDocumentResponse$json = {
   '1': 'SubscribeSpaceInviteDocumentResponse',
   '2': [
-    {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.space.SpaceInviteDocument', '9': 0, '10': 'document', '17': true},
-  ],
-  '8': [
-    {'1': '_document'},
+    {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.space.SpaceInviteDocument', '10': 'document'},
   ],
 };
 
 /// Descriptor for `SubscribeSpaceInviteDocumentResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List subscribeSpaceInviteDocumentResponseDescriptor = $convert.base64Decode(
-    'CiRTdWJzY3JpYmVTcGFjZUludml0ZURvY3VtZW50UmVzcG9uc2USOwoIZG9jdW1lbnQYASABKA'
-    'syGi5zcGFjZS5TcGFjZUludml0ZURvY3VtZW50SABSCGRvY3VtZW50iAEBQgsKCV9kb2N1bWVu'
-    'dA==');
+    'CiRTdWJzY3JpYmVTcGFjZUludml0ZURvY3VtZW50UmVzcG9uc2USNgoIZG9jdW1lbnQYASABKA'
+    'syGi5zcGFjZS5TcGFjZUludml0ZURvY3VtZW50Ughkb2N1bWVudA==');
 
 @$core.Deprecated('Use spaceDocumentDescriptor instead')
 const SpaceDocument$json = {
@@ -442,19 +417,14 @@ const SpaceDocument$json = {
     {'1': 'visibility', '3': 2, '4': 1, '5': 14, '6': '.space.SPACE_VISIBILITY', '10': 'visibility'},
     {'1': 'owner_uid', '3': 3, '4': 1, '5': 9, '10': 'ownerUid'},
     {'1': 'metadata', '3': 4, '4': 1, '5': 11, '6': '.space.SpaceDocument.Metadata', '10': 'metadata'},
-    {'1': 'document_id', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
+    {'1': 'document_id', '3': 5, '4': 1, '5': 9, '10': 'documentId'},
     {'1': 'nonce', '3': 6, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'category', '3': 7, '4': 1, '5': 14, '6': '.space.SPACE_CATEGORY', '10': 'category'},
     {'1': 'search_terms', '3': 8, '4': 3, '5': 9, '10': 'searchTerms'},
-    {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '9': 1, '10': 'documentStatus', '17': true},
-    {'1': 'customization', '3': 10, '4': 1, '5': 12, '9': 2, '10': 'customization', '17': true},
+    {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '10': 'documentStatus'},
+    {'1': 'customization', '3': 10, '4': 1, '5': 12, '10': 'customization'},
   ],
   '3': [SpaceDocument_Metadata$json],
-  '8': [
-    {'1': '_document_id'},
-    {'1': '_document_status'},
-    {'1': '_customization'},
-  ],
 };
 
 @$core.Deprecated('Use spaceDocumentDescriptor instead')
@@ -462,18 +432,11 @@ const SpaceDocument_Metadata$json = {
   '1': 'Metadata',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'description', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'description', '17': true},
-    {'1': 'avatar_image_url', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'avatarImageUrl', '17': true},
-    {'1': 'avatar_image_hash', '3': 4, '4': 1, '5': 9, '9': 2, '10': 'avatarImageHash', '17': true},
-    {'1': 'banner_image_url', '3': 5, '4': 1, '5': 9, '9': 3, '10': 'bannerImageUrl', '17': true},
-    {'1': 'banner_image_hash', '3': 6, '4': 1, '5': 9, '9': 4, '10': 'bannerImageHash', '17': true},
-  ],
-  '8': [
-    {'1': '_description'},
-    {'1': '_avatar_image_url'},
-    {'1': '_avatar_image_hash'},
-    {'1': '_banner_image_url'},
-    {'1': '_banner_image_hash'},
+    {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'avatar_image_url', '3': 3, '4': 1, '5': 9, '10': 'avatarImageUrl'},
+    {'1': 'avatar_image_hash', '3': 4, '4': 1, '5': 9, '10': 'avatarImageHash'},
+    {'1': 'banner_image_url', '3': 5, '4': 1, '5': 9, '10': 'bannerImageUrl'},
+    {'1': 'banner_image_hash', '3': 6, '4': 1, '5': 9, '10': 'bannerImageHash'},
   ],
 };
 
@@ -482,19 +445,16 @@ final $typed_data.Uint8List spaceDocumentDescriptor = $convert.base64Decode(
     'Cg1TcGFjZURvY3VtZW50EisKBnN0YXR1cxgBIAEoDjITLnNwYWNlLlNQQUNFX1NUQVRVU1IGc3'
     'RhdHVzEjcKCnZpc2liaWxpdHkYAiABKA4yFy5zcGFjZS5TUEFDRV9WSVNJQklMSVRZUgp2aXNp'
     'YmlsaXR5EhsKCW93bmVyX3VpZBgDIAEoCVIIb3duZXJVaWQSOQoIbWV0YWRhdGEYBCABKAsyHS'
-    '5zcGFjZS5TcGFjZURvY3VtZW50Lk1ldGFkYXRhUghtZXRhZGF0YRIkCgtkb2N1bWVudF9pZBgF'
-    'IAEoCUgAUgpkb2N1bWVudElkiAEBEhQKBW5vbmNlGAYgASgEUgVub25jZRIxCghjYXRlZ29yeR'
-    'gHIAEoDjIVLnNwYWNlLlNQQUNFX0NBVEVHT1JZUghjYXRlZ29yeRIhCgxzZWFyY2hfdGVybXMY'
-    'CCADKAlSC3NlYXJjaFRlcm1zEkQKD2RvY3VtZW50X3N0YXR1cxgJIAEoDjIWLnNwYWNlLkRPQ1'
-    'VNRU5UX1NUQVRVU0gBUg5kb2N1bWVudFN0YXR1c4gBARIpCg1jdXN0b21pemF0aW9uGAogASgM'
-    'SAJSDWN1c3RvbWl6YXRpb26IAQEa6wIKCE1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSJQ'
-    'oLZGVzY3JpcHRpb24YAiABKAlIAFILZGVzY3JpcHRpb26IAQESLQoQYXZhdGFyX2ltYWdlX3Vy'
-    'bBgDIAEoCUgBUg5hdmF0YXJJbWFnZVVybIgBARIvChFhdmF0YXJfaW1hZ2VfaGFzaBgEIAEoCU'
-    'gCUg9hdmF0YXJJbWFnZUhhc2iIAQESLQoQYmFubmVyX2ltYWdlX3VybBgFIAEoCUgDUg5iYW5u'
-    'ZXJJbWFnZVVybIgBARIvChFiYW5uZXJfaW1hZ2VfaGFzaBgGIAEoCUgEUg9iYW5uZXJJbWFnZU'
-    'hhc2iIAQFCDgoMX2Rlc2NyaXB0aW9uQhMKEV9hdmF0YXJfaW1hZ2VfdXJsQhQKEl9hdmF0YXJf'
-    'aW1hZ2VfaGFzaEITChFfYmFubmVyX2ltYWdlX3VybEIUChJfYmFubmVyX2ltYWdlX2hhc2hCDg'
-    'oMX2RvY3VtZW50X2lkQhIKEF9kb2N1bWVudF9zdGF0dXNCEAoOX2N1c3RvbWl6YXRpb24=');
+    '5zcGFjZS5TcGFjZURvY3VtZW50Lk1ldGFkYXRhUghtZXRhZGF0YRIfCgtkb2N1bWVudF9pZBgF'
+    'IAEoCVIKZG9jdW1lbnRJZBIUCgVub25jZRgGIAEoBFIFbm9uY2USMQoIY2F0ZWdvcnkYByABKA'
+    '4yFS5zcGFjZS5TUEFDRV9DQVRFR09SWVIIY2F0ZWdvcnkSIQoMc2VhcmNoX3Rlcm1zGAggAygJ'
+    'UgtzZWFyY2hUZXJtcxI/Cg9kb2N1bWVudF9zdGF0dXMYCSABKA4yFi5zcGFjZS5ET0NVTUVOVF'
+    '9TVEFUVVNSDmRvY3VtZW50U3RhdHVzEiQKDWN1c3RvbWl6YXRpb24YCiABKAxSDWN1c3RvbWl6'
+    'YXRpb24a7AEKCE1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAi'
+    'ABKAlSC2Rlc2NyaXB0aW9uEigKEGF2YXRhcl9pbWFnZV91cmwYAyABKAlSDmF2YXRhckltYWdl'
+    'VXJsEioKEWF2YXRhcl9pbWFnZV9oYXNoGAQgASgJUg9hdmF0YXJJbWFnZUhhc2gSKAoQYmFubm'
+    'VyX2ltYWdlX3VybBgFIAEoCVIOYmFubmVySW1hZ2VVcmwSKgoRYmFubmVyX2ltYWdlX2hhc2gY'
+    'BiABKAlSD2Jhbm5lckltYWdlSGFzaA==');
 
 @$core.Deprecated('Use createSpaceRequestDescriptor instead')
 const CreateSpaceRequest$json = {

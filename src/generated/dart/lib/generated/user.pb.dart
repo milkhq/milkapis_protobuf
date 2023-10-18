@@ -596,11 +596,11 @@ class CustomizationProfileDocuments extends $pb.GeneratedMessage {
 
 class QueryUserRequest extends $pb.GeneratedMessage {
   factory QueryUserRequest({
-    $core.Iterable<$core.String>? terms,
+    $core.String? username,
   }) {
     final $result = create();
-    if (terms != null) {
-      $result.terms.addAll(terms);
+    if (username != null) {
+      $result.username = username;
     }
     return $result;
   }
@@ -609,7 +609,7 @@ class QueryUserRequest extends $pb.GeneratedMessage {
   factory QueryUserRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'QueryUserRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
-    ..pPS(1, _omitFieldNames ? '' : 'terms')
+    ..aOS(1, _omitFieldNames ? '' : 'username')
     ..hasRequiredFields = false
   ;
 
@@ -635,7 +635,13 @@ class QueryUserRequest extends $pb.GeneratedMessage {
   static QueryUserRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.List<$core.String> get terms => $_getList(0);
+  $core.String get username => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set username($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUsername() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUsername() => clearField(1);
 }
 
 class QueryUserResponse extends $pb.GeneratedMessage {

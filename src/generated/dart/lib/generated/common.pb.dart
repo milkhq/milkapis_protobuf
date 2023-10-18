@@ -20,15 +20,15 @@ export 'common.pbenum.dart';
 class ProxyMessage extends $pb.GeneratedMessage {
   factory ProxyMessage({
     $core.String? key,
-    DOCUMENT_TYPE? docType,
+    EVENT_TYPE? eventType,
     $core.List<$core.int>? data,
   }) {
     final $result = create();
     if (key != null) {
       $result.key = key;
     }
-    if (docType != null) {
-      $result.docType = docType;
+    if (eventType != null) {
+      $result.eventType = eventType;
     }
     if (data != null) {
       $result.data = data;
@@ -41,7 +41,7 @@ class ProxyMessage extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ProxyMessage', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'key')
-    ..e<DOCUMENT_TYPE>(2, _omitFieldNames ? '' : 'docType', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_TYPE.UNKNOWN, valueOf: DOCUMENT_TYPE.valueOf, enumValues: DOCUMENT_TYPE.values)
+    ..e<EVENT_TYPE>(2, _omitFieldNames ? '' : 'eventType', $pb.PbFieldType.OE, defaultOrMaker: EVENT_TYPE.SPACE_CHANNEL_NEW_MESSAGE, valueOf: EVENT_TYPE.valueOf, enumValues: EVENT_TYPE.values)
     ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
@@ -77,13 +77,13 @@ class ProxyMessage extends $pb.GeneratedMessage {
   void clearKey() => clearField(1);
 
   @$pb.TagNumber(2)
-  DOCUMENT_TYPE get docType => $_getN(1);
+  EVENT_TYPE get eventType => $_getN(1);
   @$pb.TagNumber(2)
-  set docType(DOCUMENT_TYPE v) { setField(2, v); }
+  set eventType(EVENT_TYPE v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasDocType() => $_has(1);
+  $core.bool hasEventType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDocType() => clearField(2);
+  void clearEventType() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.List<$core.int> get data => $_getN(2);
@@ -97,15 +97,11 @@ class ProxyMessage extends $pb.GeneratedMessage {
 
 class ListenRequest extends $pb.GeneratedMessage {
   factory ListenRequest({
-    $core.String? key,
-    DOCUMENT_TYPE? docType,
+    $core.Iterable<$core.String>? keys,
   }) {
     final $result = create();
-    if (key != null) {
-      $result.key = key;
-    }
-    if (docType != null) {
-      $result.docType = docType;
+    if (keys != null) {
+      $result.keys.addAll(keys);
     }
     return $result;
   }
@@ -114,8 +110,7 @@ class ListenRequest extends $pb.GeneratedMessage {
   factory ListenRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListenRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'key')
-    ..e<DOCUMENT_TYPE>(2, _omitFieldNames ? '' : 'docType', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_TYPE.UNKNOWN, valueOf: DOCUMENT_TYPE.valueOf, enumValues: DOCUMENT_TYPE.values)
+    ..pPS(1, _omitFieldNames ? '' : 'keys')
     ..hasRequiredFields = false
   ;
 
@@ -141,22 +136,7 @@ class ListenRequest extends $pb.GeneratedMessage {
   static ListenRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get key => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set key($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasKey() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearKey() => clearField(1);
-
-  @$pb.TagNumber(2)
-  DOCUMENT_TYPE get docType => $_getN(1);
-  @$pb.TagNumber(2)
-  set docType(DOCUMENT_TYPE v) { setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasDocType() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearDocType() => clearField(2);
+  $core.List<$core.String> get keys => $_getList(0);
 }
 
 

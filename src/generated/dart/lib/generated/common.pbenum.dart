@@ -24,6 +24,9 @@ class CollectionsV1 extends $pb.ProtobufEnum {
   static const CollectionsV1 MESSAGES = CollectionsV1._(7, _omitEnumNames ? '' : 'MESSAGES');
   static const CollectionsV1 MEMBERS = CollectionsV1._(8, _omitEnumNames ? '' : 'MEMBERS');
   static const CollectionsV1 ROLES = CollectionsV1._(9, _omitEnumNames ? '' : 'ROLES');
+  static const CollectionsV1 REACTIONS = CollectionsV1._(10, _omitEnumNames ? '' : 'REACTIONS');
+  static const CollectionsV1 THREADS = CollectionsV1._(11, _omitEnumNames ? '' : 'THREADS');
+  static const CollectionsV1 USERNAMES = CollectionsV1._(12, _omitEnumNames ? '' : 'USERNAMES');
 
   static const $core.List<CollectionsV1> values = <CollectionsV1> [
     USERS,
@@ -36,6 +39,9 @@ class CollectionsV1 extends $pb.ProtobufEnum {
     MESSAGES,
     MEMBERS,
     ROLES,
+    REACTIONS,
+    THREADS,
+    USERNAMES,
   ];
 
   static final $core.Map<$core.int, CollectionsV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -55,6 +61,7 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
   static const CollectionCountersV1 MESSAGE_COUNTER = CollectionCountersV1._(7, _omitEnumNames ? '' : 'MESSAGE_COUNTER');
   static const CollectionCountersV1 MEMBER_COUNTER = CollectionCountersV1._(8, _omitEnumNames ? '' : 'MEMBER_COUNTER');
   static const CollectionCountersV1 ROLE_COUNTER = CollectionCountersV1._(9, _omitEnumNames ? '' : 'ROLE_COUNTER');
+  static const CollectionCountersV1 THREAD_COUNTER = CollectionCountersV1._(10, _omitEnumNames ? '' : 'THREAD_COUNTER');
 
   static const $core.List<CollectionCountersV1> values = <CollectionCountersV1> [
     USER_COUNTER,
@@ -67,6 +74,7 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
     MESSAGE_COUNTER,
     MEMBER_COUNTER,
     ROLE_COUNTER,
+    THREAD_COUNTER,
   ];
 
   static final $core.Map<$core.int, CollectionCountersV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -102,6 +110,40 @@ class DOCUMENT_TYPE extends $pb.ProtobufEnum {
   static DOCUMENT_TYPE? valueOf($core.int value) => _byValue[value];
 
   const DOCUMENT_TYPE._($core.int v, $core.String n) : super(v, n);
+}
+
+/// !DO NOT CHANGE THE ORDER OF THE ENUMS
+class EVENT_TYPE extends $pb.ProtobufEnum {
+  static const EVENT_TYPE SPACE_CHANNEL_NEW_MESSAGE = EVENT_TYPE._(0, _omitEnumNames ? '' : 'SPACE_CHANNEL_NEW_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_NEW_MESSAGE_REACTIONS = EVENT_TYPE._(1, _omitEnumNames ? '' : 'SPACE_CHANNEL_NEW_MESSAGE_REACTIONS');
+  static const EVENT_TYPE SPACE_CHANNEL_REPLY_MESSAGE = EVENT_TYPE._(2, _omitEnumNames ? '' : 'SPACE_CHANNEL_REPLY_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_DELETED_MESSAGE = EVENT_TYPE._(3, _omitEnumNames ? '' : 'SPACE_CHANNEL_DELETED_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_UPDATED_MESSAGE = EVENT_TYPE._(4, _omitEnumNames ? '' : 'SPACE_CHANNEL_UPDATED_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_NEW_THREAD = EVENT_TYPE._(5, _omitEnumNames ? '' : 'SPACE_CHANNEL_NEW_THREAD');
+  static const EVENT_TYPE SPACE_CHANNEL_THREAD_MESSAGE_REACTIONS = EVENT_TYPE._(6, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_MESSAGE_REACTIONS');
+  static const EVENT_TYPE SPACE_CHANNEL_THREAD_REPLY_MESSAGE = EVENT_TYPE._(7, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_REPLY_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_THREAD_DELETED_MESSAGE = EVENT_TYPE._(8, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_DELETED_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_THREAD_UPDATED_MESSAGE = EVENT_TYPE._(9, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_UPDATED_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_THREAD_NEW_MESSAGE = EVENT_TYPE._(10, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_NEW_MESSAGE');
+
+  static const $core.List<EVENT_TYPE> values = <EVENT_TYPE> [
+    SPACE_CHANNEL_NEW_MESSAGE,
+    SPACE_CHANNEL_NEW_MESSAGE_REACTIONS,
+    SPACE_CHANNEL_REPLY_MESSAGE,
+    SPACE_CHANNEL_DELETED_MESSAGE,
+    SPACE_CHANNEL_UPDATED_MESSAGE,
+    SPACE_CHANNEL_NEW_THREAD,
+    SPACE_CHANNEL_THREAD_MESSAGE_REACTIONS,
+    SPACE_CHANNEL_THREAD_REPLY_MESSAGE,
+    SPACE_CHANNEL_THREAD_DELETED_MESSAGE,
+    SPACE_CHANNEL_THREAD_UPDATED_MESSAGE,
+    SPACE_CHANNEL_THREAD_NEW_MESSAGE,
+  ];
+
+  static final $core.Map<$core.int, EVENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static EVENT_TYPE? valueOf($core.int value) => _byValue[value];
+
+  const EVENT_TYPE._($core.int v, $core.String n) : super(v, n);
 }
 
 

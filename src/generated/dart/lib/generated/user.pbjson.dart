@@ -225,36 +225,27 @@ final $typed_data.Uint8List listUserCustomizationProfilesRequestDescriptor = $co
 const CustomizationProfileDocument$json = {
   '1': 'CustomizationProfileDocument',
   '2': [
-    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
+    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '10': 'documentId'},
     {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
     {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'iconURL', '3': 4, '4': 1, '5': 9, '9': 1, '10': 'iconURL', '17': true},
-    {'1': 'description', '3': 5, '4': 1, '5': 9, '9': 2, '10': 'description', '17': true},
+    {'1': 'iconURL', '3': 4, '4': 1, '5': 9, '10': 'iconURL'},
+    {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
     {'1': 'updated_at', '3': 6, '4': 1, '5': 6, '10': 'updatedAt'},
     {'1': 'json', '3': 7, '4': 1, '5': 12, '10': 'json'},
     {'1': 'nonce', '3': 8, '4': 1, '5': 4, '10': 'nonce'},
-    {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '9': 3, '10': 'documentStatus', '17': true},
-    {'1': 'is_space', '3': 10, '4': 1, '5': 8, '9': 4, '10': 'isSpace', '17': true},
-  ],
-  '8': [
-    {'1': '_document_id'},
-    {'1': '_iconURL'},
-    {'1': '_description'},
-    {'1': '_document_status'},
-    {'1': '_is_space'},
+    {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '10': 'documentStatus'},
+    {'1': 'is_space', '3': 10, '4': 1, '5': 8, '10': 'isSpace'},
   ],
 };
 
 /// Descriptor for `CustomizationProfileDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List customizationProfileDocumentDescriptor = $convert.base64Decode(
-    'ChxDdXN0b21pemF0aW9uUHJvZmlsZURvY3VtZW50EiQKC2RvY3VtZW50X2lkGAEgASgJSABSCm'
-    'RvY3VtZW50SWSIAQESEAoDdWlkGAIgASgJUgN1aWQSEgoEbmFtZRgDIAEoCVIEbmFtZRIdCgdp'
-    'Y29uVVJMGAQgASgJSAFSB2ljb25VUkyIAQESJQoLZGVzY3JpcHRpb24YBSABKAlIAlILZGVzY3'
-    'JpcHRpb26IAQESHQoKdXBkYXRlZF9hdBgGIAEoBlIJdXBkYXRlZEF0EhIKBGpzb24YByABKAxS'
-    'BGpzb24SFAoFbm9uY2UYCCABKARSBW5vbmNlEkMKD2RvY3VtZW50X3N0YXR1cxgJIAEoDjIVLn'
-    'VzZXIuRE9DVU1FTlRfU1RBVFVTSANSDmRvY3VtZW50U3RhdHVziAEBEh4KCGlzX3NwYWNlGAog'
-    'ASgISARSB2lzU3BhY2WIAQFCDgoMX2RvY3VtZW50X2lkQgoKCF9pY29uVVJMQg4KDF9kZXNjcm'
-    'lwdGlvbkISChBfZG9jdW1lbnRfc3RhdHVzQgsKCV9pc19zcGFjZQ==');
+    'ChxDdXN0b21pemF0aW9uUHJvZmlsZURvY3VtZW50Eh8KC2RvY3VtZW50X2lkGAEgASgJUgpkb2'
+    'N1bWVudElkEhAKA3VpZBgCIAEoCVIDdWlkEhIKBG5hbWUYAyABKAlSBG5hbWUSGAoHaWNvblVS'
+    'TBgEIAEoCVIHaWNvblVSTBIgCgtkZXNjcmlwdGlvbhgFIAEoCVILZGVzY3JpcHRpb24SHQoKdX'
+    'BkYXRlZF9hdBgGIAEoBlIJdXBkYXRlZEF0EhIKBGpzb24YByABKAxSBGpzb24SFAoFbm9uY2UY'
+    'CCABKARSBW5vbmNlEj4KD2RvY3VtZW50X3N0YXR1cxgJIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1'
+    'RBVFVTUg5kb2N1bWVudFN0YXR1cxIZCghpc19zcGFjZRgKIAEoCFIHaXNTcGFjZQ==');
 
 @$core.Deprecated('Use customizationProfileDocumentsDescriptor instead')
 const CustomizationProfileDocuments$json = {
@@ -273,13 +264,13 @@ final $typed_data.Uint8List customizationProfileDocumentsDescriptor = $convert.b
 const QueryUserRequest$json = {
   '1': 'QueryUserRequest',
   '2': [
-    {'1': 'terms', '3': 1, '4': 3, '5': 9, '10': 'terms'},
+    {'1': 'username', '3': 1, '4': 1, '5': 9, '10': 'username'},
   ],
 };
 
 /// Descriptor for `QueryUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryUserRequestDescriptor = $convert.base64Decode(
-    'ChBRdWVyeVVzZXJSZXF1ZXN0EhQKBXRlcm1zGAEgAygJUgV0ZXJtcw==');
+    'ChBRdWVyeVVzZXJSZXF1ZXN0EhoKCHVzZXJuYW1lGAEgASgJUgh1c2VybmFtZQ==');
 
 @$core.Deprecated('Use queryUserResponseDescriptor instead')
 const QueryUserResponse$json = {
@@ -310,23 +301,18 @@ final $typed_data.Uint8List getUserRequestDescriptor = $convert.base64Decode(
 const UserDocument$json = {
   '1': 'UserDocument',
   '2': [
-    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'documentId', '17': true},
+    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '10': 'documentId'},
     {'1': 'metadata', '3': 2, '4': 1, '5': 11, '6': '.user.UserDocument.Metadata', '10': 'metadata'},
     {'1': 'tier', '3': 3, '4': 1, '5': 14, '6': '.user.USER_TIER', '10': 'tier'},
     {'1': 'status', '3': 4, '4': 1, '5': 14, '6': '.user.USER_STATUS', '10': 'status'},
-    {'1': 'status_expiration', '3': 5, '4': 1, '5': 3, '9': 1, '10': 'statusExpiration', '17': true},
+    {'1': 'status_expiration', '3': 5, '4': 1, '5': 3, '10': 'statusExpiration'},
     {'1': 'type', '3': 6, '4': 1, '5': 14, '6': '.user.USER_TYPE', '10': 'type'},
     {'1': 'search_terms', '3': 7, '4': 3, '5': 9, '10': 'searchTerms'},
     {'1': 'visibility', '3': 8, '4': 1, '5': 14, '6': '.user.USER_VISIBILITY', '10': 'visibility'},
     {'1': 'nonce', '3': 9, '4': 1, '5': 4, '10': 'nonce'},
-    {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '9': 2, '10': 'documentStatus', '17': true},
+    {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '10': 'documentStatus'},
   ],
   '3': [UserDocument_Metadata$json],
-  '8': [
-    {'1': '_document_id'},
-    {'1': '_status_expiration'},
-    {'1': '_document_status'},
-  ],
 };
 
 @$core.Deprecated('Use userDocumentDescriptor instead')
@@ -334,51 +320,35 @@ const UserDocument_Metadata$json = {
   '1': 'Metadata',
   '2': [
     {'1': 'username', '3': 1, '4': 1, '5': 9, '10': 'username'},
-    {'1': 'email', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'email', '17': true},
-    {'1': 'display_name', '3': 3, '4': 1, '5': 9, '9': 1, '10': 'displayName', '17': true},
-    {'1': 'bio', '3': 4, '4': 1, '5': 9, '9': 2, '10': 'bio', '17': true},
-    {'1': 'social', '3': 5, '4': 1, '5': 14, '6': '.user.SOCIAL', '9': 3, '10': 'social', '17': true},
-    {'1': 'social_id', '3': 6, '4': 1, '5': 9, '9': 4, '10': 'socialId', '17': true},
-    {'1': 'avatar_image_url', '3': 7, '4': 1, '5': 9, '9': 5, '10': 'avatarImageUrl', '17': true},
-    {'1': 'avatar_image_hash', '3': 8, '4': 1, '5': 9, '9': 6, '10': 'avatarImageHash', '17': true},
-    {'1': 'banner_image_url', '3': 9, '4': 1, '5': 9, '9': 7, '10': 'bannerImageUrl', '17': true},
-    {'1': 'banner_image_hash', '3': 10, '4': 1, '5': 9, '9': 8, '10': 'bannerImageHash', '17': true},
-  ],
-  '8': [
-    {'1': '_email'},
-    {'1': '_display_name'},
-    {'1': '_bio'},
-    {'1': '_social'},
-    {'1': '_social_id'},
-    {'1': '_avatar_image_url'},
-    {'1': '_avatar_image_hash'},
-    {'1': '_banner_image_url'},
-    {'1': '_banner_image_hash'},
+    {'1': 'email', '3': 2, '4': 1, '5': 9, '10': 'email'},
+    {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'bio', '3': 4, '4': 1, '5': 9, '10': 'bio'},
+    {'1': 'social', '3': 5, '4': 1, '5': 14, '6': '.user.SOCIAL', '10': 'social'},
+    {'1': 'social_id', '3': 6, '4': 1, '5': 9, '10': 'socialId'},
+    {'1': 'avatar_image_url', '3': 7, '4': 1, '5': 9, '10': 'avatarImageUrl'},
+    {'1': 'avatar_image_hash', '3': 8, '4': 1, '5': 9, '10': 'avatarImageHash'},
+    {'1': 'banner_image_url', '3': 9, '4': 1, '5': 9, '10': 'bannerImageUrl'},
+    {'1': 'banner_image_hash', '3': 10, '4': 1, '5': 9, '10': 'bannerImageHash'},
   ],
 };
 
 /// Descriptor for `UserDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
-    'CgxVc2VyRG9jdW1lbnQSJAoLZG9jdW1lbnRfaWQYASABKAlIAFIKZG9jdW1lbnRJZIgBARI3Cg'
-    'htZXRhZGF0YRgCIAEoCzIbLnVzZXIuVXNlckRvY3VtZW50Lk1ldGFkYXRhUghtZXRhZGF0YRIj'
-    'CgR0aWVyGAMgASgOMg8udXNlci5VU0VSX1RJRVJSBHRpZXISKQoGc3RhdHVzGAQgASgOMhEudX'
-    'Nlci5VU0VSX1NUQVRVU1IGc3RhdHVzEjAKEXN0YXR1c19leHBpcmF0aW9uGAUgASgDSAFSEHN0'
-    'YXR1c0V4cGlyYXRpb26IAQESIwoEdHlwZRgGIAEoDjIPLnVzZXIuVVNFUl9UWVBFUgR0eXBlEi'
-    'EKDHNlYXJjaF90ZXJtcxgHIAMoCVILc2VhcmNoVGVybXMSNQoKdmlzaWJpbGl0eRgIIAEoDjIV'
-    'LnVzZXIuVVNFUl9WSVNJQklMSVRZUgp2aXNpYmlsaXR5EhQKBW5vbmNlGAkgASgEUgVub25jZR'
-    'JDCg9kb2N1bWVudF9zdGF0dXMYCiABKA4yFS51c2VyLkRPQ1VNRU5UX1NUQVRVU0gCUg5kb2N1'
-    'bWVudFN0YXR1c4gBARqfBAoITWV0YWRhdGESGgoIdXNlcm5hbWUYASABKAlSCHVzZXJuYW1lEh'
-    'kKBWVtYWlsGAIgASgJSABSBWVtYWlsiAEBEiYKDGRpc3BsYXlfbmFtZRgDIAEoCUgBUgtkaXNw'
-    'bGF5TmFtZYgBARIVCgNiaW8YBCABKAlIAlIDYmlviAEBEikKBnNvY2lhbBgFIAEoDjIMLnVzZX'
-    'IuU09DSUFMSANSBnNvY2lhbIgBARIgCglzb2NpYWxfaWQYBiABKAlIBFIIc29jaWFsSWSIAQES'
-    'LQoQYXZhdGFyX2ltYWdlX3VybBgHIAEoCUgFUg5hdmF0YXJJbWFnZVVybIgBARIvChFhdmF0YX'
-    'JfaW1hZ2VfaGFzaBgIIAEoCUgGUg9hdmF0YXJJbWFnZUhhc2iIAQESLQoQYmFubmVyX2ltYWdl'
-    'X3VybBgJIAEoCUgHUg5iYW5uZXJJbWFnZVVybIgBARIvChFiYW5uZXJfaW1hZ2VfaGFzaBgKIA'
-    'EoCUgIUg9iYW5uZXJJbWFnZUhhc2iIAQFCCAoGX2VtYWlsQg8KDV9kaXNwbGF5X25hbWVCBgoE'
-    'X2Jpb0IJCgdfc29jaWFsQgwKCl9zb2NpYWxfaWRCEwoRX2F2YXRhcl9pbWFnZV91cmxCFAoSX2'
-    'F2YXRhcl9pbWFnZV9oYXNoQhMKEV9iYW5uZXJfaW1hZ2VfdXJsQhQKEl9iYW5uZXJfaW1hZ2Vf'
-    'aGFzaEIOCgxfZG9jdW1lbnRfaWRCFAoSX3N0YXR1c19leHBpcmF0aW9uQhIKEF9kb2N1bWVudF'
-    '9zdGF0dXM=');
+    'CgxVc2VyRG9jdW1lbnQSHwoLZG9jdW1lbnRfaWQYASABKAlSCmRvY3VtZW50SWQSNwoIbWV0YW'
+    'RhdGEYAiABKAsyGy51c2VyLlVzZXJEb2N1bWVudC5NZXRhZGF0YVIIbWV0YWRhdGESIwoEdGll'
+    'chgDIAEoDjIPLnVzZXIuVVNFUl9USUVSUgR0aWVyEikKBnN0YXR1cxgEIAEoDjIRLnVzZXIuVV'
+    'NFUl9TVEFUVVNSBnN0YXR1cxIrChFzdGF0dXNfZXhwaXJhdGlvbhgFIAEoA1IQc3RhdHVzRXhw'
+    'aXJhdGlvbhIjCgR0eXBlGAYgASgOMg8udXNlci5VU0VSX1RZUEVSBHR5cGUSIQoMc2VhcmNoX3'
+    'Rlcm1zGAcgAygJUgtzZWFyY2hUZXJtcxI1Cgp2aXNpYmlsaXR5GAggASgOMhUudXNlci5VU0VS'
+    'X1ZJU0lCSUxJVFlSCnZpc2liaWxpdHkSFAoFbm9uY2UYCSABKARSBW5vbmNlEj4KD2RvY3VtZW'
+    '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxrg'
+    'AgoITWV0YWRhdGESGgoIdXNlcm5hbWUYASABKAlSCHVzZXJuYW1lEhQKBWVtYWlsGAIgASgJUg'
+    'VlbWFpbBIhCgxkaXNwbGF5X25hbWUYAyABKAlSC2Rpc3BsYXlOYW1lEhAKA2JpbxgEIAEoCVID'
+    'YmlvEiQKBnNvY2lhbBgFIAEoDjIMLnVzZXIuU09DSUFMUgZzb2NpYWwSGwoJc29jaWFsX2lkGA'
+    'YgASgJUghzb2NpYWxJZBIoChBhdmF0YXJfaW1hZ2VfdXJsGAcgASgJUg5hdmF0YXJJbWFnZVVy'
+    'bBIqChFhdmF0YXJfaW1hZ2VfaGFzaBgIIAEoCVIPYXZhdGFySW1hZ2VIYXNoEigKEGJhbm5lcl'
+    '9pbWFnZV91cmwYCSABKAlSDmJhbm5lckltYWdlVXJsEioKEWJhbm5lcl9pbWFnZV9oYXNoGAog'
+    'ASgJUg9iYW5uZXJJbWFnZUhhc2g=');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {
@@ -411,18 +381,14 @@ const UpdateUserStatusRequest$json = {
   '1': 'UpdateUserStatusRequest',
   '2': [
     {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
-    {'1': 'status_expiration', '3': 2, '4': 1, '5': 3, '9': 0, '10': 'statusExpiration', '17': true},
-  ],
-  '8': [
-    {'1': '_status_expiration'},
+    {'1': 'status_expiration', '3': 2, '4': 1, '5': 3, '10': 'statusExpiration'},
   ],
 };
 
 /// Descriptor for `UpdateUserStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateUserStatusRequestDescriptor = $convert.base64Decode(
-    'ChdVcGRhdGVVc2VyU3RhdHVzUmVxdWVzdBIQCgN1aWQYASABKAlSA3VpZBIwChFzdGF0dXNfZX'
-    'hwaXJhdGlvbhgCIAEoA0gAUhBzdGF0dXNFeHBpcmF0aW9uiAEBQhQKEl9zdGF0dXNfZXhwaXJh'
-    'dGlvbg==');
+    'ChdVcGRhdGVVc2VyU3RhdHVzUmVxdWVzdBIQCgN1aWQYASABKAlSA3VpZBIrChFzdGF0dXNfZX'
+    'hwaXJhdGlvbhgCIAEoA1IQc3RhdHVzRXhwaXJhdGlvbg==');
 
 @$core.Deprecated('Use updateUserStatusResponseDescriptor instead')
 const UpdateUserStatusResponse$json = {

@@ -1,3 +1,7 @@
+## 0.0.18
+
+ - **FEAT**: implemented messaging.
+
 ## 0.0.17
 
  - **FEAT**: added create space channel message reaction.

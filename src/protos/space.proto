@@ -45,7 +45,7 @@ message UpdateUserSpaceOrderResponse {
 
 message UpdateSpaceCustomizationRequest {
   string space_id = 1;
-  optional bytes customization = 2;
+  bytes customization = 2;
 }
 
 message UpdateSpaceCustomizationResponse {
@@ -61,8 +61,8 @@ message GetUserSpacesRequest {
 }
 
 message QuerySpaceInviteRequest {
-  optional string space_id = 1;
-  optional string uid = 2;
+  string space_id = 1;
+  string uid = 2;
 }
 
 message QuerySpaceInviteResponse {
@@ -107,7 +107,7 @@ message UpdateSpaceCategoryResponse {
 message GetSpaceRequest { string space_id = 1; }
 
 message QuerySpaceRequest {
-  optional SPACE_CATEGORY category = 1;
+  SPACE_CATEGORY category = 1;
   string search_term = 2; 
 }
 
@@ -153,41 +153,41 @@ enum SPACE_VISIBILITY {
 }
 
 message SpaceMemberPermissionDocument {
-  optional string document_id = 1;
+  string document_id = 1;
   repeated int32 permissions = 2;
 }
 message SpaceInviteDocument {
-  optional string document_id = 1;
+  string document_id = 1;
   string inviter_uid = 2;
   bool deleted = 3;
   uint64 nonce = 4;
-  optional DOCUMENT_STATUS document_status = 5;
+  DOCUMENT_STATUS document_status = 5;
 }
 message SpaceInviteDocuments {
   repeated SpaceInviteDocument documents = 1;
 }
 message SubscribeSpaceInviteDocumentResponse {
-  optional SpaceInviteDocument document = 1;
+  SpaceInviteDocument document = 1;
 }
 message SpaceDocument {
   message Metadata {
     string name = 1;
-    optional string description = 2;
-    optional string avatar_image_url = 3;
-    optional string avatar_image_hash = 4;
-    optional string banner_image_url = 5;
-    optional string banner_image_hash = 6;
+    string description = 2;
+    string avatar_image_url = 3;
+    string avatar_image_hash = 4;
+    string banner_image_url = 5;
+    string banner_image_hash = 6;
   }
   SPACE_STATUS status = 1;
   SPACE_VISIBILITY visibility = 2;
   string owner_uid = 3;
   Metadata metadata = 4;
-  optional string document_id = 5;
+  string document_id = 5;
   uint64 nonce = 6;
   SPACE_CATEGORY category = 7;
   repeated string search_terms = 8;
-  optional DOCUMENT_STATUS document_status = 9;
-  optional bytes customization = 10;
+  DOCUMENT_STATUS document_status = 9;
+  bytes customization = 10;
 }
 message CreateSpaceRequest {
   SpaceDocument document = 1;

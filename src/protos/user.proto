@@ -13,7 +13,7 @@ service User {
   rpc ActivateUser(UpdateUserStatusRequest) returns (UpdateUserStatusResponse); 
   rpc ListenUser(GetUserRequest) returns (stream UserDocument);
   rpc GetUser(GetUserRequest) returns (UserDocument);
-  rpc QueryUser(QueryUserRequest) returns (stream UserDocument);
+  rpc QueryUser(QueryUserRequest) returns (QueryUserResponse);
   rpc GetUserCustomizationProfile(GetUserCustomizationProfileRequest) returns (CustomizationProfileDocument);
   rpc DeleteUserCustomizationProfile(GetUserCustomizationProfileRequest) returns (DeleteUserCustomizationProfileResponse);
   rpc CreateUserCustomizationProfile(CreateUserCustomizationProfileRequest) returns (CustomizationProfileDocument);
@@ -62,16 +62,16 @@ message ListUserCustomizationProfilesRequest {
 }
 
 message CustomizationProfileDocument {
-  optional string document_id = 1;
+  string document_id = 1;
   string uid = 2;
   string name = 3;
-  optional string iconURL = 4;
-  optional string description = 5;
+  string iconURL = 4;
+  string description = 5;
   fixed64 updated_at = 6;
   bytes json = 7;
   uint64 nonce = 8;
-  optional DOCUMENT_STATUS document_status = 9;
-  optional bool is_space = 10;
+  DOCUMENT_STATUS document_status = 9;
+  bool is_space = 10;
 }
 
 message CustomizationProfileDocuments {
@@ -131,7 +131,7 @@ enum SOCIAL {
 }
 
 message QueryUserRequest {
-  repeated string terms = 1;
+  string username = 1;
 }
 
 message QueryUserResponse {
@@ -141,28 +141,28 @@ message QueryUserResponse {
 message GetUserRequest { string uid = 1; }
 
 message UserDocument {
-  optional string document_id = 1;
+  string document_id = 1;
   Metadata metadata = 2; 
   USER_TIER tier = 3;
   USER_STATUS status = 4;
-  optional int64 status_expiration = 5;
+  int64 status_expiration = 5;
   USER_TYPE type = 6;
   repeated string search_terms = 7;
   USER_VISIBILITY visibility = 8;
   uint64 nonce = 9;
-  optional DOCUMENT_STATUS document_status = 10;
+  DOCUMENT_STATUS document_status = 10;
 
   message Metadata {
     string username = 1;
-    optional string email = 2;
-    optional string display_name = 3;
-    optional string bio = 4;
-    optional SOCIAL social = 5;
-    optional string social_id = 6;
-    optional string avatar_image_url = 7;
-    optional string avatar_image_hash = 8;
-    optional string banner_image_url = 9;
-    optional string banner_image_hash = 10;
+    string email = 2;
+    string display_name = 3;
+    string bio = 4;
+    SOCIAL social = 5;
+    string social_id = 6;
+    string avatar_image_url = 7;
+    string avatar_image_hash = 8;
+    string banner_image_url = 9;
+    string banner_image_hash = 10;
   }
 }
 
@@ -175,7 +175,7 @@ message UpdateUserMetadataResponse { string uid = 1; }
 
 message UpdateUserStatusRequest {
   string uid = 1;
-  optional int64 status_expiration = 2;
+  int64 status_expiration = 2;
 }
 
 message UpdateUserStatusResponse { string uid = 1; }

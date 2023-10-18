@@ -13,6 +13,9 @@ enum CollectionsV1 {
     MESSAGES = 7;
     MEMBERS = 8;
     ROLES = 9;
+    REACTIONS = 10;
+    THREADS = 11;
+    USERNAMES = 12;
 }
 
 enum CollectionCountersV1 {
@@ -26,6 +29,7 @@ enum CollectionCountersV1 {
     MESSAGE_COUNTER = 7;
     MEMBER_COUNTER = 8;
     ROLE_COUNTER = 9;
+    THREAD_COUNTER = 10;
 }
 
 enum DOCUMENT_TYPE {
@@ -40,13 +44,27 @@ enum DOCUMENT_TYPE {
     SPACE_CHANNEL_MESSAGES = 8;
 }
 
+// !DO NOT CHANGE THE ORDER OF THE ENUMS
+enum EVENT_TYPE {
+    SPACE_CHANNEL_NEW_MESSAGE = 0;
+    SPACE_CHANNEL_NEW_MESSAGE_REACTIONS = 1;
+    SPACE_CHANNEL_REPLY_MESSAGE = 2;
+    SPACE_CHANNEL_DELETED_MESSAGE = 3;
+    SPACE_CHANNEL_UPDATED_MESSAGE = 4;
+    SPACE_CHANNEL_NEW_THREAD = 5;
+    SPACE_CHANNEL_THREAD_MESSAGE_REACTIONS = 6;
+    SPACE_CHANNEL_THREAD_REPLY_MESSAGE = 7;
+    SPACE_CHANNEL_THREAD_DELETED_MESSAGE = 8;
+    SPACE_CHANNEL_THREAD_UPDATED_MESSAGE = 9;
+    SPACE_CHANNEL_THREAD_NEW_MESSAGE = 10;
+}
+
 message ProxyMessage {
     string key = 1;
-    DOCUMENT_TYPE doc_type = 2;
+    EVENT_TYPE event_type = 2;
     bytes data = 3;
 }
 
 message ListenRequest {
-    string key = 1;
-    DOCUMENT_TYPE doc_type = 2;
+    repeated string keys = 1;
 }

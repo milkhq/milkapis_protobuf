@@ -113,6 +113,7 @@ enum USER_PRESENCE_STATUS {
   UNKNOWN = 6;
   LOADING = 7;
   LIVESTREAMING = 8;
+  IN_A_CALL = 9;
 }
 
 enum SOCIAL {

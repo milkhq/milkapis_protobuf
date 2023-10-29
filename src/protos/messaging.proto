@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package messaging;
 
+import "user.proto";
+
 service Messaging {
     // Space Channels
     rpc CreateSpaceChannel(CreateChannelRequest) returns (CreateChannelResponse);
@@ -20,11 +22,14 @@ service Messaging {
     rpc CreateSpaceChannelFileUploadUrl(CreateSpaceChannelFileUploadUrlRequest) returns (CreateSpaceChannelFileUploadUrlResponse);
 
     // Direct Channels
-    rpc CreateDirectChannel(CreateChannelRequest) returns (CreateChannelResponse);
+    rpc CreateDirectChannel(CreateDirectConversationRequest) returns (CreateDirectConversationResponse);
     rpc UpdateDirectChannelMetadata(UpdateChannelMetadataRequest) returns (UpdateChannelMetadataResponse);
     rpc DeleteDirectChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
     rpc ArchiveDirectChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
     rpc ActivateDirectChannel(UpdateChannelStatusRequest) returns (UpdateChannelStatusResponse);
+    rpc ListDirectChannels(ListDirectChannelsRequest) returns (ConversationDocuments);
+    rpc GetDirectChannelMessages(GetDirectChannelMessagesRequest) returns (GetDirectChannelMessagesResponse);
+    rpc CreateDirectChannelFileUploadUrl(CreateDirectChannelFileUploadUrlRequest) returns (CreateDirectChannelFileUploadUrlResponse);
 
     // Thread Channels
     rpc CreateThreadChannel(CreateChannelRequest) returns (CreateChannelResponse);
@@ -50,6 +55,10 @@ service Messaging {
     rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
     rpc UpdateDirectChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
     rpc DeleteDirectChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
+    rpc GetDirectChannelMessageReactions(GetDirectChannelMessageReactionsRequest) returns (GetDirectChannelMessageReactionsResponse);
+    rpc SendDirectChannelMessageReaction(SendDirectChannelMessageReactionRequest) returns (SendDirectChannelMessageReactionResponse);
+    rpc CreateDirectChannelCall(CreateDirectChannelCallRequest) returns (CreateDirectChannelCallResponse);
+    rpc CreateDirectChannelCallJoinToken(CreateDirectChannelCallJoinTokenRequest) returns (CreateDirectChannelCallJoinTokenResponse);
 
     // Thread channel messages
     rpc SendThreadChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -362,6 +371,7 @@ message ChannelDocument {
     repeated CHANNEL_CAPABILITY capabilities = 10;
     uint64 nonce = 11;
     DOCUMENT_STATUS document_status = 12;
+    string created_by = 13;
 
     message Metadata {
         string name = 1;
@@ -374,6 +384,13 @@ message ChannelDocument {
 }
 
 message MessageDocument {
+    enum MESSAGE_TYPE {
+        TEXT = 0;
+        FILE = 1;
+        LINK = 2;
+        CALL = 3;
+    }
+
     message FileMetadata {
         string file_name = 1;
         uint64 file_size = 2;
@@ -412,6 +429,7 @@ message MessageDocument {
         string client_message_id = 10;
         string mime_type = 11;
         string message = 12;
+        MESSAGE_TYPE message_type = 13;
     }
 
     Metadata metadata = 1;
@@ -435,9 +453,22 @@ message ReplyReference {
 message CreateChannelRequest {
     ChannelDocument channel = 1;
     MessageDocument message = 2;
+    repeated string members = 3;
 }
 
 message CreateChannelResponse {
+    string channel_id = 1;
+    uint64 nonce = 2;
+}
+
+message CreateDirectConversationRequest {
+    repeated string members = 1;
+    ChannelDocument channel = 2;
+    MessageDocument message = 3;
+    uint64 nonce = 4;
+}
+
+message CreateDirectConversationResponse {
     string channel_id = 1;
     uint64 nonce = 2;
 }
@@ -480,11 +511,13 @@ message UpdateMessageRequest {
     string channel_id = 1;
     MessageDocument.Metadata metadata = 2;
     string message_id = 3;
+    uint64 nonce = 4;
 }
 
 message UpdateMessageResponse {
     string channel_id = 1;
     string message_id = 2;
+    uint64 nonce = 3;
 }
 
 message DeleteMessageRequest {
@@ -505,7 +538,6 @@ message DeleteMessageResponse {
     string channel_id = 1;
     string message_id = 2;
 }
-
 
 enum CHANNEL_PERMISSION {
     // General
@@ -561,6 +593,103 @@ enum CHANNEL_PERMISSION {
      none  = 43;
   
     // Advanced
-  }
+}
 
+message UserConversations {
+    repeated string channelIds = 1;
+}
+
+message UserConversationRequests {
+    repeated string channelIds = 1;
+}
+
+message DirectChannelNewRequest {
+    ChannelDocument channel = 1;
+    repeated string members = 2;
+    MessageDocument message = 3;
+}
+
+message ConversationDocument {
+    ChannelDocument channel = 1;
+    string members = 2;
+}
+
+message ConversationDocuments {
+    repeated ConversationDocument documents = 1;
+}
+
+message ListDirectChannelsRequest {
+
+}
+
+message GetDirectChannelMessagesRequest {
+    string channel_id = 1;
+    uint64 start = 2;
+    uint64 end = 3;
+    bool ascending = 4;
+}
+
+message GetDirectChannelMessagesResponse {
+    repeated MessageDocument documents = 1;
+    uint64 total_count = 2;
+}
+
+
+message CreateDirectChannelFileUploadUrlRequest {
+    string channel_id = 1;
+    string file_name = 2;
+    string mime_type = 3;
+    uint64 file_size = 4;
+    uint64 preview_file_size = 5; 
+}
+
+message CreateDirectChannelFileUploadUrlResponse {
+    string upload_url = 1;
+    string download_url = 2;
+    string preview_upload_url = 3;
+    string preview_download_url = 4;
+}
+
+message GetDirectChannelMessageReactionsRequest {
+    string channel_id = 1;
+    string message_id = 2;
+}
+
+message GetDirectChannelMessageReactionsResponse {
+    map<string, uint64> reactions = 1;
+}
+
+message SendDirectChannelMessageReactionRequest {
+    string channel_id = 1;
+    string message_id = 2;
+    string reaction = 3;
+    bool is_add = 4;
+}
+
+message SendDirectChannelMessageReactionResponse {
+
+}
+
+message CreateDirectChannelCallRequest {
+    string channel_id = 1;
+    string space_id = 2;
+    string message_id = 3;
+    string thread_channel_id = 4;
+}
+
+message CreateDirectChannelCallResponse {
+    string call_id = 1;
+    string token = 2;
+}
+
+message CreateDirectChannelCallJoinTokenRequest {
+    string channel_id = 1;
+    string space_id = 2;
+    string message_id = 3;
+    string thread_channel_id = 4;
+}
+
+message CreateDirectChannelCallJoinTokenResponse {
+    string token = 1;
+}
 

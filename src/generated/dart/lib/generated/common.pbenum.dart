@@ -27,6 +27,8 @@ class CollectionsV1 extends $pb.ProtobufEnum {
   static const CollectionsV1 REACTIONS = CollectionsV1._(10, _omitEnumNames ? '' : 'REACTIONS');
   static const CollectionsV1 THREADS = CollectionsV1._(11, _omitEnumNames ? '' : 'THREADS');
   static const CollectionsV1 USERNAMES = CollectionsV1._(12, _omitEnumNames ? '' : 'USERNAMES');
+  static const CollectionsV1 NOTIFICATIONS = CollectionsV1._(13, _omitEnumNames ? '' : 'NOTIFICATIONS');
+  static const CollectionsV1 CHANNEL_MEMBERS_TO_CHANNEL_ID = CollectionsV1._(14, _omitEnumNames ? '' : 'CHANNEL_MEMBERS_TO_CHANNEL_ID');
 
   static const $core.List<CollectionsV1> values = <CollectionsV1> [
     USERS,
@@ -42,6 +44,8 @@ class CollectionsV1 extends $pb.ProtobufEnum {
     REACTIONS,
     THREADS,
     USERNAMES,
+    NOTIFICATIONS,
+    CHANNEL_MEMBERS_TO_CHANNEL_ID,
   ];
 
   static final $core.Map<$core.int, CollectionsV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -62,6 +66,8 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
   static const CollectionCountersV1 MEMBER_COUNTER = CollectionCountersV1._(8, _omitEnumNames ? '' : 'MEMBER_COUNTER');
   static const CollectionCountersV1 ROLE_COUNTER = CollectionCountersV1._(9, _omitEnumNames ? '' : 'ROLE_COUNTER');
   static const CollectionCountersV1 THREAD_COUNTER = CollectionCountersV1._(10, _omitEnumNames ? '' : 'THREAD_COUNTER');
+  static const CollectionCountersV1 USERNAME_COUNTER = CollectionCountersV1._(11, _omitEnumNames ? '' : 'USERNAME_COUNTER');
+  static const CollectionCountersV1 NOTIFICATION_COUNTER = CollectionCountersV1._(12, _omitEnumNames ? '' : 'NOTIFICATION_COUNTER');
 
   static const $core.List<CollectionCountersV1> values = <CollectionCountersV1> [
     USER_COUNTER,
@@ -75,6 +81,8 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
     MEMBER_COUNTER,
     ROLE_COUNTER,
     THREAD_COUNTER,
+    USERNAME_COUNTER,
+    NOTIFICATION_COUNTER,
   ];
 
   static final $core.Map<$core.int, CollectionCountersV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -125,6 +133,26 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
   static const EVENT_TYPE SPACE_CHANNEL_THREAD_DELETED_MESSAGE = EVENT_TYPE._(8, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_DELETED_MESSAGE');
   static const EVENT_TYPE SPACE_CHANNEL_THREAD_UPDATED_MESSAGE = EVENT_TYPE._(9, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_UPDATED_MESSAGE');
   static const EVENT_TYPE SPACE_CHANNEL_THREAD_NEW_MESSAGE = EVENT_TYPE._(10, _omitEnumNames ? '' : 'SPACE_CHANNEL_THREAD_NEW_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_NEW_MESSAGE_REQUEST = EVENT_TYPE._(11, _omitEnumNames ? '' : 'DIRECT_CHANNEL_NEW_MESSAGE_REQUEST');
+  static const EVENT_TYPE DIRECT_CHANNEL_NEW_MESSAGE = EVENT_TYPE._(12, _omitEnumNames ? '' : 'DIRECT_CHANNEL_NEW_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_NEW_MESSAGE_REACTIONS = EVENT_TYPE._(13, _omitEnumNames ? '' : 'DIRECT_CHANNEL_NEW_MESSAGE_REACTIONS');
+  static const EVENT_TYPE DIRECT_CHANNEL_REPLY_MESSAGE = EVENT_TYPE._(14, _omitEnumNames ? '' : 'DIRECT_CHANNEL_REPLY_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_DELETED_MESSAGE = EVENT_TYPE._(15, _omitEnumNames ? '' : 'DIRECT_CHANNEL_DELETED_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_UPDATED_MESSAGE = EVENT_TYPE._(16, _omitEnumNames ? '' : 'DIRECT_CHANNEL_UPDATED_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_NEW_THREAD = EVENT_TYPE._(17, _omitEnumNames ? '' : 'DIRECT_CHANNEL_NEW_THREAD');
+  static const EVENT_TYPE DIRECT_CHANNEL_THREAD_MESSAGE_REACTIONS = EVENT_TYPE._(18, _omitEnumNames ? '' : 'DIRECT_CHANNEL_THREAD_MESSAGE_REACTIONS');
+  static const EVENT_TYPE DIRECT_CHANNEL_THREAD_REPLY_MESSAGE = EVENT_TYPE._(19, _omitEnumNames ? '' : 'DIRECT_CHANNEL_THREAD_REPLY_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_THREAD_DELETED_MESSAGE = EVENT_TYPE._(20, _omitEnumNames ? '' : 'DIRECT_CHANNEL_THREAD_DELETED_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_THREAD_UPDATED_MESSAGE = EVENT_TYPE._(21, _omitEnumNames ? '' : 'DIRECT_CHANNEL_THREAD_UPDATED_MESSAGE');
+  static const EVENT_TYPE DIRECT_CHANNEL_THREAD_NEW_MESSAGE = EVENT_TYPE._(22, _omitEnumNames ? '' : 'DIRECT_CHANNEL_THREAD_NEW_MESSAGE');
+  static const EVENT_TYPE SPACE_CHANNEL_NEW_MEMBER = EVENT_TYPE._(23, _omitEnumNames ? '' : 'SPACE_CHANNEL_NEW_MEMBER');
+  static const EVENT_TYPE SPACE_CHANNEL_MEMBER_UPDATED = EVENT_TYPE._(24, _omitEnumNames ? '' : 'SPACE_CHANNEL_MEMBER_UPDATED');
+  static const EVENT_TYPE SPACE_CHANNEL_MEMBER_REMOVED = EVENT_TYPE._(25, _omitEnumNames ? '' : 'SPACE_CHANNEL_MEMBER_REMOVED');
+  static const EVENT_TYPE DIRECT_CHANNEL_NEW_MEMBER = EVENT_TYPE._(26, _omitEnumNames ? '' : 'DIRECT_CHANNEL_NEW_MEMBER');
+  static const EVENT_TYPE DIRECT_CHANNEL_MEMBER_UPDATED = EVENT_TYPE._(27, _omitEnumNames ? '' : 'DIRECT_CHANNEL_MEMBER_UPDATED');
+  static const EVENT_TYPE DIRECT_CHANNEL_MEMBER_REMOVED = EVENT_TYPE._(28, _omitEnumNames ? '' : 'DIRECT_CHANNEL_MEMBER_REMOVED');
+  static const EVENT_TYPE SPACE_CHANNEL_NEW_ROLE = EVENT_TYPE._(29, _omitEnumNames ? '' : 'SPACE_CHANNEL_NEW_ROLE');
+  static const EVENT_TYPE DIRECT_CHANNEL_CALL = EVENT_TYPE._(30, _omitEnumNames ? '' : 'DIRECT_CHANNEL_CALL');
 
   static const $core.List<EVENT_TYPE> values = <EVENT_TYPE> [
     SPACE_CHANNEL_NEW_MESSAGE,
@@ -138,6 +166,26 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
     SPACE_CHANNEL_THREAD_DELETED_MESSAGE,
     SPACE_CHANNEL_THREAD_UPDATED_MESSAGE,
     SPACE_CHANNEL_THREAD_NEW_MESSAGE,
+    DIRECT_CHANNEL_NEW_MESSAGE_REQUEST,
+    DIRECT_CHANNEL_NEW_MESSAGE,
+    DIRECT_CHANNEL_NEW_MESSAGE_REACTIONS,
+    DIRECT_CHANNEL_REPLY_MESSAGE,
+    DIRECT_CHANNEL_DELETED_MESSAGE,
+    DIRECT_CHANNEL_UPDATED_MESSAGE,
+    DIRECT_CHANNEL_NEW_THREAD,
+    DIRECT_CHANNEL_THREAD_MESSAGE_REACTIONS,
+    DIRECT_CHANNEL_THREAD_REPLY_MESSAGE,
+    DIRECT_CHANNEL_THREAD_DELETED_MESSAGE,
+    DIRECT_CHANNEL_THREAD_UPDATED_MESSAGE,
+    DIRECT_CHANNEL_THREAD_NEW_MESSAGE,
+    SPACE_CHANNEL_NEW_MEMBER,
+    SPACE_CHANNEL_MEMBER_UPDATED,
+    SPACE_CHANNEL_MEMBER_REMOVED,
+    DIRECT_CHANNEL_NEW_MEMBER,
+    DIRECT_CHANNEL_MEMBER_UPDATED,
+    DIRECT_CHANNEL_MEMBER_REMOVED,
+    SPACE_CHANNEL_NEW_ROLE,
+    DIRECT_CHANNEL_CALL,
   ];
 
   static final $core.Map<$core.int, EVENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);

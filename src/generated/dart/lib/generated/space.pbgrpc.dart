@@ -15,92 +15,92 @@ import 'dart:core' as $core;
 import 'package:grpc/service_api.dart' as $grpc;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'space.pb.dart' as $1;
+import 'space.pb.dart' as $2;
 
 export 'space.pb.dart';
 
 @$pb.GrpcServiceName('space.Space')
 class SpaceClient extends $grpc.Client {
-  static final _$createSpace = $grpc.ClientMethod<$1.CreateSpaceRequest, $1.CreateSpaceResponse>(
+  static final _$createSpace = $grpc.ClientMethod<$2.CreateSpaceRequest, $2.CreateSpaceResponse>(
       '/space.Space/CreateSpace',
-      ($1.CreateSpaceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.CreateSpaceResponse.fromBuffer(value));
-  static final _$getSpace = $grpc.ClientMethod<$1.GetSpaceRequest, $1.SpaceDocument>(
+      ($2.CreateSpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.CreateSpaceResponse.fromBuffer(value));
+  static final _$getSpace = $grpc.ClientMethod<$2.GetSpaceRequest, $2.SpaceDocument>(
       '/space.Space/GetSpace',
-      ($1.GetSpaceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SpaceDocument.fromBuffer(value));
-  static final _$subscribeSpace = $grpc.ClientMethod<$1.GetSpaceRequest, $1.SpaceDocument>(
+      ($2.GetSpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.SpaceDocument.fromBuffer(value));
+  static final _$subscribeSpace = $grpc.ClientMethod<$2.GetSpaceRequest, $2.SpaceDocument>(
       '/space.Space/SubscribeSpace',
-      ($1.GetSpaceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SpaceDocument.fromBuffer(value));
-  static final _$querySpace = $grpc.ClientMethod<$1.QuerySpaceRequest, $1.QuerySpaceResponse>(
+      ($2.GetSpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.SpaceDocument.fromBuffer(value));
+  static final _$querySpace = $grpc.ClientMethod<$2.QuerySpaceRequest, $2.QuerySpaceResponse>(
       '/space.Space/QuerySpace',
-      ($1.QuerySpaceRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.QuerySpaceResponse.fromBuffer(value));
-  static final _$updateSpaceMetadata = $grpc.ClientMethod<$1.UpdateSpaceMetadataRequest, $1.UpdateSpaceMetadataResponse>(
+      ($2.QuerySpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.QuerySpaceResponse.fromBuffer(value));
+  static final _$updateSpaceMetadata = $grpc.ClientMethod<$2.UpdateSpaceMetadataRequest, $2.UpdateSpaceMetadataResponse>(
       '/space.Space/UpdateSpaceMetadata',
-      ($1.UpdateSpaceMetadataRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceMetadataResponse.fromBuffer(value));
-  static final _$deleteSpace = $grpc.ClientMethod<$1.UpdateSpaceStatusRequest, $1.UpdateSpaceStatusResponse>(
+      ($2.UpdateSpaceMetadataRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceMetadataResponse.fromBuffer(value));
+  static final _$deleteSpace = $grpc.ClientMethod<$2.UpdateSpaceStatusRequest, $2.UpdateSpaceStatusResponse>(
       '/space.Space/DeleteSpace',
-      ($1.UpdateSpaceStatusRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceStatusResponse.fromBuffer(value));
-  static final _$archiveSpace = $grpc.ClientMethod<$1.UpdateSpaceStatusRequest, $1.UpdateSpaceStatusResponse>(
+      ($2.UpdateSpaceStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceStatusResponse.fromBuffer(value));
+  static final _$archiveSpace = $grpc.ClientMethod<$2.UpdateSpaceStatusRequest, $2.UpdateSpaceStatusResponse>(
       '/space.Space/ArchiveSpace',
-      ($1.UpdateSpaceStatusRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceStatusResponse.fromBuffer(value));
-  static final _$activateSpace = $grpc.ClientMethod<$1.UpdateSpaceStatusRequest, $1.UpdateSpaceStatusResponse>(
+      ($2.UpdateSpaceStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceStatusResponse.fromBuffer(value));
+  static final _$activateSpace = $grpc.ClientMethod<$2.UpdateSpaceStatusRequest, $2.UpdateSpaceStatusResponse>(
       '/space.Space/ActivateSpace',
-      ($1.UpdateSpaceStatusRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceStatusResponse.fromBuffer(value));
-  static final _$updateSpaceVisibility = $grpc.ClientMethod<$1.UpdateSpaceVisibilityRequest, $1.UpdateSpaceVisibilityResponse>(
+      ($2.UpdateSpaceStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceStatusResponse.fromBuffer(value));
+  static final _$updateSpaceVisibility = $grpc.ClientMethod<$2.UpdateSpaceVisibilityRequest, $2.UpdateSpaceVisibilityResponse>(
       '/space.Space/UpdateSpaceVisibility',
-      ($1.UpdateSpaceVisibilityRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceVisibilityResponse.fromBuffer(value));
-  static final _$updateSpaceCategory = $grpc.ClientMethod<$1.UpdateSpaceCategoryRequest, $1.UpdateSpaceCategoryResponse>(
+      ($2.UpdateSpaceVisibilityRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceVisibilityResponse.fromBuffer(value));
+  static final _$updateSpaceCategory = $grpc.ClientMethod<$2.UpdateSpaceCategoryRequest, $2.UpdateSpaceCategoryResponse>(
       '/space.Space/UpdateSpaceCategory',
-      ($1.UpdateSpaceCategoryRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceCategoryResponse.fromBuffer(value));
-  static final _$createSpaceInvite = $grpc.ClientMethod<$1.CreateSpaceInviteRequest, $1.CreateSpaceInviteResponse>(
+      ($2.UpdateSpaceCategoryRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceCategoryResponse.fromBuffer(value));
+  static final _$createSpaceInvite = $grpc.ClientMethod<$2.CreateSpaceInviteRequest, $2.CreateSpaceInviteResponse>(
       '/space.Space/CreateSpaceInvite',
-      ($1.CreateSpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.CreateSpaceInviteResponse.fromBuffer(value));
-  static final _$getSpaceInvite = $grpc.ClientMethod<$1.GetSpaceInviteRequest, $1.SpaceInviteDocument>(
+      ($2.CreateSpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.CreateSpaceInviteResponse.fromBuffer(value));
+  static final _$getSpaceInvite = $grpc.ClientMethod<$2.GetSpaceInviteRequest, $2.SpaceInviteDocument>(
       '/space.Space/GetSpaceInvite',
-      ($1.GetSpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SpaceInviteDocument.fromBuffer(value));
-  static final _$getSpaceInvites = $grpc.ClientMethod<$1.GetSpaceInviteRequest, $1.SpaceInviteDocuments>(
+      ($2.GetSpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.SpaceInviteDocument.fromBuffer(value));
+  static final _$getSpaceInvites = $grpc.ClientMethod<$2.GetSpaceInviteRequest, $2.SpaceInviteDocuments>(
       '/space.Space/GetSpaceInvites',
-      ($1.GetSpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SpaceInviteDocuments.fromBuffer(value));
-  static final _$subscribeSpaceInvite = $grpc.ClientMethod<$1.GetSpaceInviteRequest, $1.SubscribeSpaceInviteDocumentResponse>(
+      ($2.GetSpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.SpaceInviteDocuments.fromBuffer(value));
+  static final _$subscribeSpaceInvite = $grpc.ClientMethod<$2.GetSpaceInviteRequest, $2.SubscribeSpaceInviteDocumentResponse>(
       '/space.Space/SubscribeSpaceInvite',
-      ($1.GetSpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.SubscribeSpaceInviteDocumentResponse.fromBuffer(value));
-  static final _$deleteSpaceInvite = $grpc.ClientMethod<$1.DeleteSpaceInviteRequest, $1.DeleteSpaceInviteResponse>(
+      ($2.GetSpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.SubscribeSpaceInviteDocumentResponse.fromBuffer(value));
+  static final _$deleteSpaceInvite = $grpc.ClientMethod<$2.DeleteSpaceInviteRequest, $2.DeleteSpaceInviteResponse>(
       '/space.Space/DeleteSpaceInvite',
-      ($1.DeleteSpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.DeleteSpaceInviteResponse.fromBuffer(value));
-  static final _$querySpaceInvite = $grpc.ClientMethod<$1.QuerySpaceInviteRequest, $1.QuerySpaceInviteResponse>(
+      ($2.DeleteSpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.DeleteSpaceInviteResponse.fromBuffer(value));
+  static final _$querySpaceInvite = $grpc.ClientMethod<$2.QuerySpaceInviteRequest, $2.QuerySpaceInviteResponse>(
       '/space.Space/QuerySpaceInvite',
-      ($1.QuerySpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.QuerySpaceInviteResponse.fromBuffer(value));
-  static final _$subscribeQuerySpaceInvite = $grpc.ClientMethod<$1.QuerySpaceInviteRequest, $1.QuerySpaceInviteResponse>(
+      ($2.QuerySpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.QuerySpaceInviteResponse.fromBuffer(value));
+  static final _$subscribeQuerySpaceInvite = $grpc.ClientMethod<$2.QuerySpaceInviteRequest, $2.QuerySpaceInviteResponse>(
       '/space.Space/SubscribeQuerySpaceInvite',
-      ($1.QuerySpaceInviteRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.QuerySpaceInviteResponse.fromBuffer(value));
-  static final _$getUserSpaces = $grpc.ClientMethod<$1.GetUserSpacesRequest, $1.UserSpaceDocuments>(
+      ($2.QuerySpaceInviteRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.QuerySpaceInviteResponse.fromBuffer(value));
+  static final _$getUserSpaces = $grpc.ClientMethod<$2.GetUserSpacesRequest, $2.UserSpaceDocuments>(
       '/space.Space/GetUserSpaces',
-      ($1.GetUserSpacesRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UserSpaceDocuments.fromBuffer(value));
-  static final _$updateUserSpaceOrder = $grpc.ClientMethod<$1.UpdateUserSpaceOrderRequest, $1.UpdateUserSpaceOrderResponse>(
+      ($2.GetUserSpacesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UserSpaceDocuments.fromBuffer(value));
+  static final _$updateUserSpaceOrder = $grpc.ClientMethod<$2.UpdateUserSpaceOrderRequest, $2.UpdateUserSpaceOrderResponse>(
       '/space.Space/UpdateUserSpaceOrder',
-      ($1.UpdateUserSpaceOrderRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateUserSpaceOrderResponse.fromBuffer(value));
-  static final _$updateSpaceCustomization = $grpc.ClientMethod<$1.UpdateSpaceCustomizationRequest, $1.UpdateSpaceCustomizationResponse>(
+      ($2.UpdateUserSpaceOrderRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateUserSpaceOrderResponse.fromBuffer(value));
+  static final _$updateSpaceCustomization = $grpc.ClientMethod<$2.UpdateSpaceCustomizationRequest, $2.UpdateSpaceCustomizationResponse>(
       '/space.Space/UpdateSpaceCustomization',
-      ($1.UpdateSpaceCustomizationRequest value) => value.writeToBuffer(),
-      ($core.List<$core.int> value) => $1.UpdateSpaceCustomizationResponse.fromBuffer(value));
+      ($2.UpdateSpaceCustomizationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceCustomizationResponse.fromBuffer(value));
 
   SpaceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -108,83 +108,83 @@ class SpaceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.CreateSpaceResponse> createSpace($1.CreateSpaceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.CreateSpaceResponse> createSpace($2.CreateSpaceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createSpace, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.SpaceDocument> getSpace($1.GetSpaceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.SpaceDocument> getSpace($2.GetSpaceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSpace, request, options: options);
   }
 
-  $grpc.ResponseStream<$1.SpaceDocument> subscribeSpace($1.GetSpaceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseStream<$2.SpaceDocument> subscribeSpace($2.GetSpaceRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$subscribeSpace, $async.Stream.fromIterable([request]), options: options);
   }
 
-  $grpc.ResponseFuture<$1.QuerySpaceResponse> querySpace($1.QuerySpaceRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.QuerySpaceResponse> querySpace($2.QuerySpaceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$querySpace, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceMetadataResponse> updateSpaceMetadata($1.UpdateSpaceMetadataRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceMetadataResponse> updateSpaceMetadata($2.UpdateSpaceMetadataRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateSpaceMetadata, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceStatusResponse> deleteSpace($1.UpdateSpaceStatusRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceStatusResponse> deleteSpace($2.UpdateSpaceStatusRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteSpace, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceStatusResponse> archiveSpace($1.UpdateSpaceStatusRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceStatusResponse> archiveSpace($2.UpdateSpaceStatusRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$archiveSpace, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceStatusResponse> activateSpace($1.UpdateSpaceStatusRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceStatusResponse> activateSpace($2.UpdateSpaceStatusRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$activateSpace, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceVisibilityResponse> updateSpaceVisibility($1.UpdateSpaceVisibilityRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceVisibilityResponse> updateSpaceVisibility($2.UpdateSpaceVisibilityRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateSpaceVisibility, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceCategoryResponse> updateSpaceCategory($1.UpdateSpaceCategoryRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceCategoryResponse> updateSpaceCategory($2.UpdateSpaceCategoryRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateSpaceCategory, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.CreateSpaceInviteResponse> createSpaceInvite($1.CreateSpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.CreateSpaceInviteResponse> createSpaceInvite($2.CreateSpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createSpaceInvite, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.SpaceInviteDocument> getSpaceInvite($1.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.SpaceInviteDocument> getSpaceInvite($2.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSpaceInvite, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.SpaceInviteDocuments> getSpaceInvites($1.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.SpaceInviteDocuments> getSpaceInvites($2.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getSpaceInvites, request, options: options);
   }
 
-  $grpc.ResponseStream<$1.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite($1.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseStream<$2.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite($2.GetSpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$subscribeSpaceInvite, $async.Stream.fromIterable([request]), options: options);
   }
 
-  $grpc.ResponseFuture<$1.DeleteSpaceInviteResponse> deleteSpaceInvite($1.DeleteSpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.DeleteSpaceInviteResponse> deleteSpaceInvite($2.DeleteSpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteSpaceInvite, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.QuerySpaceInviteResponse> querySpaceInvite($1.QuerySpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.QuerySpaceInviteResponse> querySpaceInvite($2.QuerySpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$querySpaceInvite, request, options: options);
   }
 
-  $grpc.ResponseStream<$1.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($1.QuerySpaceInviteRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseStream<$2.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($2.QuerySpaceInviteRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$subscribeQuerySpaceInvite, $async.Stream.fromIterable([request]), options: options);
   }
 
-  $grpc.ResponseFuture<$1.UserSpaceDocuments> getUserSpaces($1.GetUserSpacesRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UserSpaceDocuments> getUserSpaces($2.GetUserSpacesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getUserSpaces, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateUserSpaceOrderResponse> updateUserSpaceOrder($1.UpdateUserSpaceOrderRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateUserSpaceOrderResponse> updateUserSpaceOrder($2.UpdateUserSpaceOrderRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateUserSpaceOrder, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.UpdateSpaceCustomizationResponse> updateSpaceCustomization($1.UpdateSpaceCustomizationRequest request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseFuture<$2.UpdateSpaceCustomizationResponse> updateSpaceCustomization($2.UpdateSpaceCustomizationRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$updateSpaceCustomization, request, options: options);
   }
 }
@@ -194,246 +194,246 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $core.String get $name => 'space.Space';
 
   SpaceServiceBase() {
-    $addMethod($grpc.ServiceMethod<$1.CreateSpaceRequest, $1.CreateSpaceResponse>(
+    $addMethod($grpc.ServiceMethod<$2.CreateSpaceRequest, $2.CreateSpaceResponse>(
         'CreateSpace',
         createSpace_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.CreateSpaceRequest.fromBuffer(value),
-        ($1.CreateSpaceResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetSpaceRequest, $1.SpaceDocument>(
+        ($core.List<$core.int> value) => $2.CreateSpaceRequest.fromBuffer(value),
+        ($2.CreateSpaceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceRequest, $2.SpaceDocument>(
         'GetSpace',
         getSpace_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetSpaceRequest.fromBuffer(value),
-        ($1.SpaceDocument value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetSpaceRequest, $1.SpaceDocument>(
+        ($core.List<$core.int> value) => $2.GetSpaceRequest.fromBuffer(value),
+        ($2.SpaceDocument value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceRequest, $2.SpaceDocument>(
         'SubscribeSpace',
         subscribeSpace_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => $1.GetSpaceRequest.fromBuffer(value),
-        ($1.SpaceDocument value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.QuerySpaceRequest, $1.QuerySpaceResponse>(
+        ($core.List<$core.int> value) => $2.GetSpaceRequest.fromBuffer(value),
+        ($2.SpaceDocument value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.QuerySpaceRequest, $2.QuerySpaceResponse>(
         'QuerySpace',
         querySpace_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.QuerySpaceRequest.fromBuffer(value),
-        ($1.QuerySpaceResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceMetadataRequest, $1.UpdateSpaceMetadataResponse>(
+        ($core.List<$core.int> value) => $2.QuerySpaceRequest.fromBuffer(value),
+        ($2.QuerySpaceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceMetadataRequest, $2.UpdateSpaceMetadataResponse>(
         'UpdateSpaceMetadata',
         updateSpaceMetadata_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceMetadataRequest.fromBuffer(value),
-        ($1.UpdateSpaceMetadataResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceStatusRequest, $1.UpdateSpaceStatusResponse>(
+        ($core.List<$core.int> value) => $2.UpdateSpaceMetadataRequest.fromBuffer(value),
+        ($2.UpdateSpaceMetadataResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceStatusRequest, $2.UpdateSpaceStatusResponse>(
         'DeleteSpace',
         deleteSpace_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceStatusRequest.fromBuffer(value),
-        ($1.UpdateSpaceStatusResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceStatusRequest, $1.UpdateSpaceStatusResponse>(
+        ($core.List<$core.int> value) => $2.UpdateSpaceStatusRequest.fromBuffer(value),
+        ($2.UpdateSpaceStatusResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceStatusRequest, $2.UpdateSpaceStatusResponse>(
         'ArchiveSpace',
         archiveSpace_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceStatusRequest.fromBuffer(value),
-        ($1.UpdateSpaceStatusResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceStatusRequest, $1.UpdateSpaceStatusResponse>(
+        ($core.List<$core.int> value) => $2.UpdateSpaceStatusRequest.fromBuffer(value),
+        ($2.UpdateSpaceStatusResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceStatusRequest, $2.UpdateSpaceStatusResponse>(
         'ActivateSpace',
         activateSpace_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceStatusRequest.fromBuffer(value),
-        ($1.UpdateSpaceStatusResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceVisibilityRequest, $1.UpdateSpaceVisibilityResponse>(
+        ($core.List<$core.int> value) => $2.UpdateSpaceStatusRequest.fromBuffer(value),
+        ($2.UpdateSpaceStatusResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceVisibilityRequest, $2.UpdateSpaceVisibilityResponse>(
         'UpdateSpaceVisibility',
         updateSpaceVisibility_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceVisibilityRequest.fromBuffer(value),
-        ($1.UpdateSpaceVisibilityResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceCategoryRequest, $1.UpdateSpaceCategoryResponse>(
+        ($core.List<$core.int> value) => $2.UpdateSpaceVisibilityRequest.fromBuffer(value),
+        ($2.UpdateSpaceVisibilityResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceCategoryRequest, $2.UpdateSpaceCategoryResponse>(
         'UpdateSpaceCategory',
         updateSpaceCategory_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceCategoryRequest.fromBuffer(value),
-        ($1.UpdateSpaceCategoryResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.CreateSpaceInviteRequest, $1.CreateSpaceInviteResponse>(
+        ($core.List<$core.int> value) => $2.UpdateSpaceCategoryRequest.fromBuffer(value),
+        ($2.UpdateSpaceCategoryResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateSpaceInviteRequest, $2.CreateSpaceInviteResponse>(
         'CreateSpaceInvite',
         createSpaceInvite_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.CreateSpaceInviteRequest.fromBuffer(value),
-        ($1.CreateSpaceInviteResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetSpaceInviteRequest, $1.SpaceInviteDocument>(
+        ($core.List<$core.int> value) => $2.CreateSpaceInviteRequest.fromBuffer(value),
+        ($2.CreateSpaceInviteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceInviteRequest, $2.SpaceInviteDocument>(
         'GetSpaceInvite',
         getSpaceInvite_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetSpaceInviteRequest.fromBuffer(value),
-        ($1.SpaceInviteDocument value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetSpaceInviteRequest, $1.SpaceInviteDocuments>(
+        ($core.List<$core.int> value) => $2.GetSpaceInviteRequest.fromBuffer(value),
+        ($2.SpaceInviteDocument value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceInviteRequest, $2.SpaceInviteDocuments>(
         'GetSpaceInvites',
         getSpaceInvites_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetSpaceInviteRequest.fromBuffer(value),
-        ($1.SpaceInviteDocuments value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetSpaceInviteRequest, $1.SubscribeSpaceInviteDocumentResponse>(
+        ($core.List<$core.int> value) => $2.GetSpaceInviteRequest.fromBuffer(value),
+        ($2.SpaceInviteDocuments value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceInviteRequest, $2.SubscribeSpaceInviteDocumentResponse>(
         'SubscribeSpaceInvite',
         subscribeSpaceInvite_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => $1.GetSpaceInviteRequest.fromBuffer(value),
-        ($1.SubscribeSpaceInviteDocumentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.DeleteSpaceInviteRequest, $1.DeleteSpaceInviteResponse>(
+        ($core.List<$core.int> value) => $2.GetSpaceInviteRequest.fromBuffer(value),
+        ($2.SubscribeSpaceInviteDocumentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.DeleteSpaceInviteRequest, $2.DeleteSpaceInviteResponse>(
         'DeleteSpaceInvite',
         deleteSpaceInvite_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.DeleteSpaceInviteRequest.fromBuffer(value),
-        ($1.DeleteSpaceInviteResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.QuerySpaceInviteRequest, $1.QuerySpaceInviteResponse>(
+        ($core.List<$core.int> value) => $2.DeleteSpaceInviteRequest.fromBuffer(value),
+        ($2.DeleteSpaceInviteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.QuerySpaceInviteRequest, $2.QuerySpaceInviteResponse>(
         'QuerySpaceInvite',
         querySpaceInvite_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.QuerySpaceInviteRequest.fromBuffer(value),
-        ($1.QuerySpaceInviteResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.QuerySpaceInviteRequest, $1.QuerySpaceInviteResponse>(
+        ($core.List<$core.int> value) => $2.QuerySpaceInviteRequest.fromBuffer(value),
+        ($2.QuerySpaceInviteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.QuerySpaceInviteRequest, $2.QuerySpaceInviteResponse>(
         'SubscribeQuerySpaceInvite',
         subscribeQuerySpaceInvite_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => $1.QuerySpaceInviteRequest.fromBuffer(value),
-        ($1.QuerySpaceInviteResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.GetUserSpacesRequest, $1.UserSpaceDocuments>(
+        ($core.List<$core.int> value) => $2.QuerySpaceInviteRequest.fromBuffer(value),
+        ($2.QuerySpaceInviteResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserSpacesRequest, $2.UserSpaceDocuments>(
         'GetUserSpaces',
         getUserSpaces_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.GetUserSpacesRequest.fromBuffer(value),
-        ($1.UserSpaceDocuments value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateUserSpaceOrderRequest, $1.UpdateUserSpaceOrderResponse>(
+        ($core.List<$core.int> value) => $2.GetUserSpacesRequest.fromBuffer(value),
+        ($2.UserSpaceDocuments value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateUserSpaceOrderRequest, $2.UpdateUserSpaceOrderResponse>(
         'UpdateUserSpaceOrder',
         updateUserSpaceOrder_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateUserSpaceOrderRequest.fromBuffer(value),
-        ($1.UpdateUserSpaceOrderResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceCustomizationRequest, $1.UpdateSpaceCustomizationResponse>(
+        ($core.List<$core.int> value) => $2.UpdateUserSpaceOrderRequest.fromBuffer(value),
+        ($2.UpdateUserSpaceOrderResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceCustomizationRequest, $2.UpdateSpaceCustomizationResponse>(
         'UpdateSpaceCustomization',
         updateSpaceCustomization_Pre,
         false,
         false,
-        ($core.List<$core.int> value) => $1.UpdateSpaceCustomizationRequest.fromBuffer(value),
-        ($1.UpdateSpaceCustomizationResponse value) => value.writeToBuffer()));
+        ($core.List<$core.int> value) => $2.UpdateSpaceCustomizationRequest.fromBuffer(value),
+        ($2.UpdateSpaceCustomizationResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.CreateSpaceResponse> createSpace_Pre($grpc.ServiceCall call, $async.Future<$1.CreateSpaceRequest> request) async {
+  $async.Future<$2.CreateSpaceResponse> createSpace_Pre($grpc.ServiceCall call, $async.Future<$2.CreateSpaceRequest> request) async {
     return createSpace(call, await request);
   }
 
-  $async.Future<$1.SpaceDocument> getSpace_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceRequest> request) async {
+  $async.Future<$2.SpaceDocument> getSpace_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceRequest> request) async {
     return getSpace(call, await request);
   }
 
-  $async.Stream<$1.SpaceDocument> subscribeSpace_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceRequest> request) async* {
+  $async.Stream<$2.SpaceDocument> subscribeSpace_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceRequest> request) async* {
     yield* subscribeSpace(call, await request);
   }
 
-  $async.Future<$1.QuerySpaceResponse> querySpace_Pre($grpc.ServiceCall call, $async.Future<$1.QuerySpaceRequest> request) async {
+  $async.Future<$2.QuerySpaceResponse> querySpace_Pre($grpc.ServiceCall call, $async.Future<$2.QuerySpaceRequest> request) async {
     return querySpace(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceMetadataResponse> updateSpaceMetadata_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceMetadataRequest> request) async {
+  $async.Future<$2.UpdateSpaceMetadataResponse> updateSpaceMetadata_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceMetadataRequest> request) async {
     return updateSpaceMetadata(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceStatusResponse> deleteSpace_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceStatusRequest> request) async {
+  $async.Future<$2.UpdateSpaceStatusResponse> deleteSpace_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceStatusRequest> request) async {
     return deleteSpace(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceStatusResponse> archiveSpace_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceStatusRequest> request) async {
+  $async.Future<$2.UpdateSpaceStatusResponse> archiveSpace_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceStatusRequest> request) async {
     return archiveSpace(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceStatusResponse> activateSpace_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceStatusRequest> request) async {
+  $async.Future<$2.UpdateSpaceStatusResponse> activateSpace_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceStatusRequest> request) async {
     return activateSpace(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceVisibilityResponse> updateSpaceVisibility_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceVisibilityRequest> request) async {
+  $async.Future<$2.UpdateSpaceVisibilityResponse> updateSpaceVisibility_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceVisibilityRequest> request) async {
     return updateSpaceVisibility(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceCategoryResponse> updateSpaceCategory_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceCategoryRequest> request) async {
+  $async.Future<$2.UpdateSpaceCategoryResponse> updateSpaceCategory_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceCategoryRequest> request) async {
     return updateSpaceCategory(call, await request);
   }
 
-  $async.Future<$1.CreateSpaceInviteResponse> createSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.CreateSpaceInviteRequest> request) async {
+  $async.Future<$2.CreateSpaceInviteResponse> createSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$2.CreateSpaceInviteRequest> request) async {
     return createSpaceInvite(call, await request);
   }
 
-  $async.Future<$1.SpaceInviteDocument> getSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceInviteRequest> request) async {
+  $async.Future<$2.SpaceInviteDocument> getSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceInviteRequest> request) async {
     return getSpaceInvite(call, await request);
   }
 
-  $async.Future<$1.SpaceInviteDocuments> getSpaceInvites_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceInviteRequest> request) async {
+  $async.Future<$2.SpaceInviteDocuments> getSpaceInvites_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceInviteRequest> request) async {
     return getSpaceInvites(call, await request);
   }
 
-  $async.Stream<$1.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceInviteRequest> request) async* {
+  $async.Stream<$2.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceInviteRequest> request) async* {
     yield* subscribeSpaceInvite(call, await request);
   }
 
-  $async.Future<$1.DeleteSpaceInviteResponse> deleteSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.DeleteSpaceInviteRequest> request) async {
+  $async.Future<$2.DeleteSpaceInviteResponse> deleteSpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$2.DeleteSpaceInviteRequest> request) async {
     return deleteSpaceInvite(call, await request);
   }
 
-  $async.Future<$1.QuerySpaceInviteResponse> querySpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.QuerySpaceInviteRequest> request) async {
+  $async.Future<$2.QuerySpaceInviteResponse> querySpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$2.QuerySpaceInviteRequest> request) async {
     return querySpaceInvite(call, await request);
   }
 
-  $async.Stream<$1.QuerySpaceInviteResponse> subscribeQuerySpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$1.QuerySpaceInviteRequest> request) async* {
+  $async.Stream<$2.QuerySpaceInviteResponse> subscribeQuerySpaceInvite_Pre($grpc.ServiceCall call, $async.Future<$2.QuerySpaceInviteRequest> request) async* {
     yield* subscribeQuerySpaceInvite(call, await request);
   }
 
-  $async.Future<$1.UserSpaceDocuments> getUserSpaces_Pre($grpc.ServiceCall call, $async.Future<$1.GetUserSpacesRequest> request) async {
+  $async.Future<$2.UserSpaceDocuments> getUserSpaces_Pre($grpc.ServiceCall call, $async.Future<$2.GetUserSpacesRequest> request) async {
     return getUserSpaces(call, await request);
   }
 
-  $async.Future<$1.UpdateUserSpaceOrderResponse> updateUserSpaceOrder_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateUserSpaceOrderRequest> request) async {
+  $async.Future<$2.UpdateUserSpaceOrderResponse> updateUserSpaceOrder_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateUserSpaceOrderRequest> request) async {
     return updateUserSpaceOrder(call, await request);
   }
 
-  $async.Future<$1.UpdateSpaceCustomizationResponse> updateSpaceCustomization_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceCustomizationRequest> request) async {
+  $async.Future<$2.UpdateSpaceCustomizationResponse> updateSpaceCustomization_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceCustomizationRequest> request) async {
     return updateSpaceCustomization(call, await request);
   }
 
-  $async.Future<$1.CreateSpaceResponse> createSpace($grpc.ServiceCall call, $1.CreateSpaceRequest request);
-  $async.Future<$1.SpaceDocument> getSpace($grpc.ServiceCall call, $1.GetSpaceRequest request);
-  $async.Stream<$1.SpaceDocument> subscribeSpace($grpc.ServiceCall call, $1.GetSpaceRequest request);
-  $async.Future<$1.QuerySpaceResponse> querySpace($grpc.ServiceCall call, $1.QuerySpaceRequest request);
-  $async.Future<$1.UpdateSpaceMetadataResponse> updateSpaceMetadata($grpc.ServiceCall call, $1.UpdateSpaceMetadataRequest request);
-  $async.Future<$1.UpdateSpaceStatusResponse> deleteSpace($grpc.ServiceCall call, $1.UpdateSpaceStatusRequest request);
-  $async.Future<$1.UpdateSpaceStatusResponse> archiveSpace($grpc.ServiceCall call, $1.UpdateSpaceStatusRequest request);
-  $async.Future<$1.UpdateSpaceStatusResponse> activateSpace($grpc.ServiceCall call, $1.UpdateSpaceStatusRequest request);
-  $async.Future<$1.UpdateSpaceVisibilityResponse> updateSpaceVisibility($grpc.ServiceCall call, $1.UpdateSpaceVisibilityRequest request);
-  $async.Future<$1.UpdateSpaceCategoryResponse> updateSpaceCategory($grpc.ServiceCall call, $1.UpdateSpaceCategoryRequest request);
-  $async.Future<$1.CreateSpaceInviteResponse> createSpaceInvite($grpc.ServiceCall call, $1.CreateSpaceInviteRequest request);
-  $async.Future<$1.SpaceInviteDocument> getSpaceInvite($grpc.ServiceCall call, $1.GetSpaceInviteRequest request);
-  $async.Future<$1.SpaceInviteDocuments> getSpaceInvites($grpc.ServiceCall call, $1.GetSpaceInviteRequest request);
-  $async.Stream<$1.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite($grpc.ServiceCall call, $1.GetSpaceInviteRequest request);
-  $async.Future<$1.DeleteSpaceInviteResponse> deleteSpaceInvite($grpc.ServiceCall call, $1.DeleteSpaceInviteRequest request);
-  $async.Future<$1.QuerySpaceInviteResponse> querySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);
-  $async.Stream<$1.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($grpc.ServiceCall call, $1.QuerySpaceInviteRequest request);
-  $async.Future<$1.UserSpaceDocuments> getUserSpaces($grpc.ServiceCall call, $1.GetUserSpacesRequest request);
-  $async.Future<$1.UpdateUserSpaceOrderResponse> updateUserSpaceOrder($grpc.ServiceCall call, $1.UpdateUserSpaceOrderRequest request);
-  $async.Future<$1.UpdateSpaceCustomizationResponse> updateSpaceCustomization($grpc.ServiceCall call, $1.UpdateSpaceCustomizationRequest request);
+  $async.Future<$2.CreateSpaceResponse> createSpace($grpc.ServiceCall call, $2.CreateSpaceRequest request);
+  $async.Future<$2.SpaceDocument> getSpace($grpc.ServiceCall call, $2.GetSpaceRequest request);
+  $async.Stream<$2.SpaceDocument> subscribeSpace($grpc.ServiceCall call, $2.GetSpaceRequest request);
+  $async.Future<$2.QuerySpaceResponse> querySpace($grpc.ServiceCall call, $2.QuerySpaceRequest request);
+  $async.Future<$2.UpdateSpaceMetadataResponse> updateSpaceMetadata($grpc.ServiceCall call, $2.UpdateSpaceMetadataRequest request);
+  $async.Future<$2.UpdateSpaceStatusResponse> deleteSpace($grpc.ServiceCall call, $2.UpdateSpaceStatusRequest request);
+  $async.Future<$2.UpdateSpaceStatusResponse> archiveSpace($grpc.ServiceCall call, $2.UpdateSpaceStatusRequest request);
+  $async.Future<$2.UpdateSpaceStatusResponse> activateSpace($grpc.ServiceCall call, $2.UpdateSpaceStatusRequest request);
+  $async.Future<$2.UpdateSpaceVisibilityResponse> updateSpaceVisibility($grpc.ServiceCall call, $2.UpdateSpaceVisibilityRequest request);
+  $async.Future<$2.UpdateSpaceCategoryResponse> updateSpaceCategory($grpc.ServiceCall call, $2.UpdateSpaceCategoryRequest request);
+  $async.Future<$2.CreateSpaceInviteResponse> createSpaceInvite($grpc.ServiceCall call, $2.CreateSpaceInviteRequest request);
+  $async.Future<$2.SpaceInviteDocument> getSpaceInvite($grpc.ServiceCall call, $2.GetSpaceInviteRequest request);
+  $async.Future<$2.SpaceInviteDocuments> getSpaceInvites($grpc.ServiceCall call, $2.GetSpaceInviteRequest request);
+  $async.Stream<$2.SubscribeSpaceInviteDocumentResponse> subscribeSpaceInvite($grpc.ServiceCall call, $2.GetSpaceInviteRequest request);
+  $async.Future<$2.DeleteSpaceInviteResponse> deleteSpaceInvite($grpc.ServiceCall call, $2.DeleteSpaceInviteRequest request);
+  $async.Future<$2.QuerySpaceInviteResponse> querySpaceInvite($grpc.ServiceCall call, $2.QuerySpaceInviteRequest request);
+  $async.Stream<$2.QuerySpaceInviteResponse> subscribeQuerySpaceInvite($grpc.ServiceCall call, $2.QuerySpaceInviteRequest request);
+  $async.Future<$2.UserSpaceDocuments> getUserSpaces($grpc.ServiceCall call, $2.GetUserSpacesRequest request);
+  $async.Future<$2.UpdateUserSpaceOrderResponse> updateUserSpaceOrder($grpc.ServiceCall call, $2.UpdateUserSpaceOrderRequest request);
+  $async.Future<$2.UpdateSpaceCustomizationResponse> updateSpaceCustomization($grpc.ServiceCall call, $2.UpdateSpaceCustomizationRequest request);
 }

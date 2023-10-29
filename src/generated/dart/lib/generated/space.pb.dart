@@ -14,7 +14,7 @@ import 'dart:core' as $core;
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'messaging.pb.dart' as $0;
+import 'messaging.pb.dart' as $1;
 import 'space.pbenum.dart';
 
 export 'space.pbenum.dart';
@@ -1760,8 +1760,8 @@ class CreateSpaceRequest extends $pb.GeneratedMessage {
 class CreateSpaceResponse extends $pb.GeneratedMessage {
   factory CreateSpaceResponse({
     SpaceDocument? document,
-    $0.ChannelDocument? channel,
-    $0.ChannelCategoryDocument? category,
+    $1.ChannelDocument? channel,
+    $1.ChannelCategoryDocument? category,
   }) {
     final $result = create();
     if (document != null) {
@@ -1781,8 +1781,8 @@ class CreateSpaceResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOM<SpaceDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: SpaceDocument.create)
-    ..aOM<$0.ChannelDocument>(2, _omitFieldNames ? '' : 'channel', subBuilder: $0.ChannelDocument.create)
-    ..aOM<$0.ChannelCategoryDocument>(3, _omitFieldNames ? '' : 'category', subBuilder: $0.ChannelCategoryDocument.create)
+    ..aOM<$1.ChannelDocument>(2, _omitFieldNames ? '' : 'channel', subBuilder: $1.ChannelDocument.create)
+    ..aOM<$1.ChannelCategoryDocument>(3, _omitFieldNames ? '' : 'category', subBuilder: $1.ChannelCategoryDocument.create)
     ..hasRequiredFields = false
   ;
 
@@ -1819,26 +1819,26 @@ class CreateSpaceResponse extends $pb.GeneratedMessage {
   SpaceDocument ensureDocument() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $0.ChannelDocument get channel => $_getN(1);
+  $1.ChannelDocument get channel => $_getN(1);
   @$pb.TagNumber(2)
-  set channel($0.ChannelDocument v) { setField(2, v); }
+  set channel($1.ChannelDocument v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasChannel() => $_has(1);
   @$pb.TagNumber(2)
   void clearChannel() => clearField(2);
   @$pb.TagNumber(2)
-  $0.ChannelDocument ensureChannel() => $_ensure(1);
+  $1.ChannelDocument ensureChannel() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $0.ChannelCategoryDocument get category => $_getN(2);
+  $1.ChannelCategoryDocument get category => $_getN(2);
   @$pb.TagNumber(3)
-  set category($0.ChannelCategoryDocument v) { setField(3, v); }
+  set category($1.ChannelCategoryDocument v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasCategory() => $_has(2);
   @$pb.TagNumber(3)
   void clearCategory() => clearField(3);
   @$pb.TagNumber(3)
-  $0.ChannelCategoryDocument ensureCategory() => $_ensure(2);
+  $1.ChannelCategoryDocument ensureCategory() => $_ensure(2);
 }
 
 class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {

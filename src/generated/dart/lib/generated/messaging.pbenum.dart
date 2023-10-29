@@ -229,5 +229,24 @@ class UserChannelDocument_USER_CHANNEL_STATUS extends $pb.ProtobufEnum {
   const UserChannelDocument_USER_CHANNEL_STATUS._($core.int v, $core.String n) : super(v, n);
 }
 
+class MessageDocument_MESSAGE_TYPE extends $pb.ProtobufEnum {
+  static const MessageDocument_MESSAGE_TYPE TEXT = MessageDocument_MESSAGE_TYPE._(0, _omitEnumNames ? '' : 'TEXT');
+  static const MessageDocument_MESSAGE_TYPE FILE = MessageDocument_MESSAGE_TYPE._(1, _omitEnumNames ? '' : 'FILE');
+  static const MessageDocument_MESSAGE_TYPE LINK = MessageDocument_MESSAGE_TYPE._(2, _omitEnumNames ? '' : 'LINK');
+  static const MessageDocument_MESSAGE_TYPE CALL = MessageDocument_MESSAGE_TYPE._(3, _omitEnumNames ? '' : 'CALL');
+
+  static const $core.List<MessageDocument_MESSAGE_TYPE> values = <MessageDocument_MESSAGE_TYPE> [
+    TEXT,
+    FILE,
+    LINK,
+    CALL,
+  ];
+
+  static final $core.Map<$core.int, MessageDocument_MESSAGE_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static MessageDocument_MESSAGE_TYPE? valueOf($core.int value) => _byValue[value];
+
+  const MessageDocument_MESSAGE_TYPE._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

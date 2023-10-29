@@ -99,6 +99,7 @@ const USER_PRESENCE_STATUS$json = {
     {'1': 'UNKNOWN', '2': 6},
     {'1': 'LOADING', '2': 7},
     {'1': 'LIVESTREAMING', '2': 8},
+    {'1': 'IN_A_CALL', '2': 9},
   ],
 };
 
@@ -106,7 +107,7 @@ const USER_PRESENCE_STATUS$json = {
 final $typed_data.Uint8List uSER_PRESENCE_STATUSDescriptor = $convert.base64Decode(
     'ChRVU0VSX1BSRVNFTkNFX1NUQVRVUxIKCgZPTkxJTkUQABILCgdPRkZMSU5FEAESCAoEQVdBWR'
     'ACEggKBEJVU1kQAxINCglJTlZJU0lCTEUQBBIKCgZUWVBJTkcQBRILCgdVTktOT1dOEAYSCwoH'
-    'TE9BRElORxAHEhEKDUxJVkVTVFJFQU1JTkcQCA==');
+    'TE9BRElORxAHEhEKDUxJVkVTVFJFQU1JTkcQCBINCglJTl9BX0NBTEwQCQ==');
 
 @$core.Deprecated('Use sOCIALDescriptor instead')
 const SOCIAL$json = {

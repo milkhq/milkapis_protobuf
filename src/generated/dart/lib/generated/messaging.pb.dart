@@ -3264,6 +3264,7 @@ class ChannelDocument extends $pb.GeneratedMessage {
     $core.Iterable<CHANNEL_CAPABILITY>? capabilities,
     $fixnum.Int64? nonce,
     DOCUMENT_STATUS? documentStatus,
+    $core.String? createdBy,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -3302,6 +3303,9 @@ class ChannelDocument extends $pb.GeneratedMessage {
     if (documentStatus != null) {
       $result.documentStatus = documentStatus;
     }
+    if (createdBy != null) {
+      $result.createdBy = createdBy;
+    }
     return $result;
   }
   ChannelDocument._() : super();
@@ -3321,6 +3325,7 @@ class ChannelDocument extends $pb.GeneratedMessage {
     ..pc<CHANNEL_CAPABILITY>(10, _omitFieldNames ? '' : 'capabilities', $pb.PbFieldType.KE, valueOf: CHANNEL_CAPABILITY.valueOf, enumValues: CHANNEL_CAPABILITY.values, defaultEnumValue: CHANNEL_CAPABILITY.TEXT)
     ..a<$fixnum.Int64>(11, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<DOCUMENT_STATUS>(12, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
+    ..aOS(13, _omitFieldNames ? '' : 'createdBy')
     ..hasRequiredFields = false
   ;
 
@@ -3448,6 +3453,15 @@ class ChannelDocument extends $pb.GeneratedMessage {
   $core.bool hasDocumentStatus() => $_has(11);
   @$pb.TagNumber(12)
   void clearDocumentStatus() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get createdBy => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set createdBy($core.String v) { $_setString(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasCreatedBy() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearCreatedBy() => clearField(13);
 }
 
 class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
@@ -3796,6 +3810,7 @@ class MessageDocument_Metadata extends $pb.GeneratedMessage {
     $core.String? clientMessageId,
     $core.String? mimeType,
     $core.String? message,
+    MessageDocument_MESSAGE_TYPE? messageType,
   }) {
     final $result = create();
     if (isSensitive != null) {
@@ -3834,6 +3849,9 @@ class MessageDocument_Metadata extends $pb.GeneratedMessage {
     if (message != null) {
       $result.message = message;
     }
+    if (messageType != null) {
+      $result.messageType = messageType;
+    }
     return $result;
   }
   MessageDocument_Metadata._() : super();
@@ -3853,6 +3871,7 @@ class MessageDocument_Metadata extends $pb.GeneratedMessage {
     ..aOS(10, _omitFieldNames ? '' : 'clientMessageId')
     ..aOS(11, _omitFieldNames ? '' : 'mimeType')
     ..aOS(12, _omitFieldNames ? '' : 'message')
+    ..e<MessageDocument_MESSAGE_TYPE>(13, _omitFieldNames ? '' : 'messageType', $pb.PbFieldType.OE, defaultOrMaker: MessageDocument_MESSAGE_TYPE.TEXT, valueOf: MessageDocument_MESSAGE_TYPE.valueOf, enumValues: MessageDocument_MESSAGE_TYPE.values)
     ..hasRequiredFields = false
   ;
 
@@ -3982,6 +4001,15 @@ class MessageDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasMessage() => $_has(11);
   @$pb.TagNumber(12)
   void clearMessage() => clearField(12);
+
+  @$pb.TagNumber(13)
+  MessageDocument_MESSAGE_TYPE get messageType => $_getN(12);
+  @$pb.TagNumber(13)
+  set messageType(MessageDocument_MESSAGE_TYPE v) { setField(13, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasMessageType() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearMessageType() => clearField(13);
 }
 
 class MessageDocument extends $pb.GeneratedMessage {
@@ -4246,6 +4274,7 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
   factory CreateChannelRequest({
     ChannelDocument? channel,
     MessageDocument? message,
+    $core.Iterable<$core.String>? members,
   }) {
     final $result = create();
     if (channel != null) {
@@ -4253,6 +4282,9 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
     }
     if (message != null) {
       $result.message = message;
+    }
+    if (members != null) {
+      $result.members.addAll(members);
     }
     return $result;
   }
@@ -4263,6 +4295,7 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateChannelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOM<ChannelDocument>(1, _omitFieldNames ? '' : 'channel', subBuilder: ChannelDocument.create)
     ..aOM<MessageDocument>(2, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
+    ..pPS(3, _omitFieldNames ? '' : 'members')
     ..hasRequiredFields = false
   ;
 
@@ -4308,6 +4341,9 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
   void clearMessage() => clearField(2);
   @$pb.TagNumber(2)
   MessageDocument ensureMessage() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get members => $_getList(2);
 }
 
 class CreateChannelResponse extends $pb.GeneratedMessage {
@@ -4354,6 +4390,160 @@ class CreateChannelResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CreateChannelResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateChannelResponse>(create);
   static CreateChannelResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get nonce => $_getI64(1);
+  @$pb.TagNumber(2)
+  set nonce($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNonce() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNonce() => clearField(2);
+}
+
+class CreateDirectConversationRequest extends $pb.GeneratedMessage {
+  factory CreateDirectConversationRequest({
+    $core.Iterable<$core.String>? members,
+    ChannelDocument? channel,
+    MessageDocument? message,
+    $fixnum.Int64? nonce,
+  }) {
+    final $result = create();
+    if (members != null) {
+      $result.members.addAll(members);
+    }
+    if (channel != null) {
+      $result.channel = channel;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    return $result;
+  }
+  CreateDirectConversationRequest._() : super();
+  factory CreateDirectConversationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectConversationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectConversationRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'members')
+    ..aOM<ChannelDocument>(2, _omitFieldNames ? '' : 'channel', subBuilder: ChannelDocument.create)
+    ..aOM<MessageDocument>(3, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectConversationRequest clone() => CreateDirectConversationRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectConversationRequest copyWith(void Function(CreateDirectConversationRequest) updates) => super.copyWith((message) => updates(message as CreateDirectConversationRequest)) as CreateDirectConversationRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectConversationRequest create() => CreateDirectConversationRequest._();
+  CreateDirectConversationRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectConversationRequest> createRepeated() => $pb.PbList<CreateDirectConversationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectConversationRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectConversationRequest>(create);
+  static CreateDirectConversationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get members => $_getList(0);
+
+  @$pb.TagNumber(2)
+  ChannelDocument get channel => $_getN(1);
+  @$pb.TagNumber(2)
+  set channel(ChannelDocument v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChannel() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChannel() => clearField(2);
+  @$pb.TagNumber(2)
+  ChannelDocument ensureChannel() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  MessageDocument get message => $_getN(2);
+  @$pb.TagNumber(3)
+  set message(MessageDocument v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessage() => clearField(3);
+  @$pb.TagNumber(3)
+  MessageDocument ensureMessage() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get nonce => $_getI64(3);
+  @$pb.TagNumber(4)
+  set nonce($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNonce() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNonce() => clearField(4);
+}
+
+class CreateDirectConversationResponse extends $pb.GeneratedMessage {
+  factory CreateDirectConversationResponse({
+    $core.String? channelId,
+    $fixnum.Int64? nonce,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    return $result;
+  }
+  CreateDirectConversationResponse._() : super();
+  factory CreateDirectConversationResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectConversationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectConversationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectConversationResponse clone() => CreateDirectConversationResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectConversationResponse copyWith(void Function(CreateDirectConversationResponse) updates) => super.copyWith((message) => updates(message as CreateDirectConversationResponse)) as CreateDirectConversationResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectConversationResponse create() => CreateDirectConversationResponse._();
+  CreateDirectConversationResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectConversationResponse> createRepeated() => $pb.PbList<CreateDirectConversationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectConversationResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectConversationResponse>(create);
+  static CreateDirectConversationResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get channelId => $_getSZ(0);
@@ -4831,6 +5021,7 @@ class UpdateMessageRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     MessageDocument_Metadata? metadata,
     $core.String? messageId,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -4842,6 +5033,9 @@ class UpdateMessageRequest extends $pb.GeneratedMessage {
     if (messageId != null) {
       $result.messageId = messageId;
     }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
     return $result;
   }
   UpdateMessageRequest._() : super();
@@ -4852,6 +5046,7 @@ class UpdateMessageRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOM<MessageDocument_Metadata>(2, _omitFieldNames ? '' : 'metadata', subBuilder: MessageDocument_Metadata.create)
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -4904,12 +5099,22 @@ class UpdateMessageRequest extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(2);
   @$pb.TagNumber(3)
   void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get nonce => $_getI64(3);
+  @$pb.TagNumber(4)
+  set nonce($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasNonce() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearNonce() => clearField(4);
 }
 
 class UpdateMessageResponse extends $pb.GeneratedMessage {
   factory UpdateMessageResponse({
     $core.String? channelId,
     $core.String? messageId,
+    $fixnum.Int64? nonce,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -4917,6 +5122,9 @@ class UpdateMessageResponse extends $pb.GeneratedMessage {
     }
     if (messageId != null) {
       $result.messageId = messageId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
     }
     return $result;
   }
@@ -4927,6 +5135,7 @@ class UpdateMessageResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateMessageResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOS(2, _omitFieldNames ? '' : 'messageId')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -4968,6 +5177,15 @@ class UpdateMessageResponse extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(1);
   @$pb.TagNumber(2)
   void clearMessageId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get nonce => $_getI64(2);
+  @$pb.TagNumber(3)
+  set nonce($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNonce() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNonce() => clearField(3);
 }
 
 class DeleteMessageRequest extends $pb.GeneratedMessage {
@@ -5206,6 +5424,1190 @@ class DeleteMessageResponse extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(1);
   @$pb.TagNumber(2)
   void clearMessageId() => clearField(2);
+}
+
+class UserConversations extends $pb.GeneratedMessage {
+  factory UserConversations({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  UserConversations._() : super();
+  factory UserConversations.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserConversations.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserConversations', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds', protoName: 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserConversations clone() => UserConversations()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserConversations copyWith(void Function(UserConversations) updates) => super.copyWith((message) => updates(message as UserConversations)) as UserConversations;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserConversations create() => UserConversations._();
+  UserConversations createEmptyInstance() => create();
+  static $pb.PbList<UserConversations> createRepeated() => $pb.PbList<UserConversations>();
+  @$core.pragma('dart2js:noInline')
+  static UserConversations getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserConversations>(create);
+  static UserConversations? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class UserConversationRequests extends $pb.GeneratedMessage {
+  factory UserConversationRequests({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  UserConversationRequests._() : super();
+  factory UserConversationRequests.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserConversationRequests.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserConversationRequests', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds', protoName: 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserConversationRequests clone() => UserConversationRequests()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserConversationRequests copyWith(void Function(UserConversationRequests) updates) => super.copyWith((message) => updates(message as UserConversationRequests)) as UserConversationRequests;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserConversationRequests create() => UserConversationRequests._();
+  UserConversationRequests createEmptyInstance() => create();
+  static $pb.PbList<UserConversationRequests> createRepeated() => $pb.PbList<UserConversationRequests>();
+  @$core.pragma('dart2js:noInline')
+  static UserConversationRequests getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserConversationRequests>(create);
+  static UserConversationRequests? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class DirectChannelNewRequest extends $pb.GeneratedMessage {
+  factory DirectChannelNewRequest({
+    ChannelDocument? channel,
+    $core.Iterable<$core.String>? members,
+    MessageDocument? message,
+  }) {
+    final $result = create();
+    if (channel != null) {
+      $result.channel = channel;
+    }
+    if (members != null) {
+      $result.members.addAll(members);
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  DirectChannelNewRequest._() : super();
+  factory DirectChannelNewRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DirectChannelNewRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DirectChannelNewRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOM<ChannelDocument>(1, _omitFieldNames ? '' : 'channel', subBuilder: ChannelDocument.create)
+    ..pPS(2, _omitFieldNames ? '' : 'members')
+    ..aOM<MessageDocument>(3, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  DirectChannelNewRequest clone() => DirectChannelNewRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DirectChannelNewRequest copyWith(void Function(DirectChannelNewRequest) updates) => super.copyWith((message) => updates(message as DirectChannelNewRequest)) as DirectChannelNewRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DirectChannelNewRequest create() => DirectChannelNewRequest._();
+  DirectChannelNewRequest createEmptyInstance() => create();
+  static $pb.PbList<DirectChannelNewRequest> createRepeated() => $pb.PbList<DirectChannelNewRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DirectChannelNewRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DirectChannelNewRequest>(create);
+  static DirectChannelNewRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ChannelDocument get channel => $_getN(0);
+  @$pb.TagNumber(1)
+  set channel(ChannelDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannel() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannel() => clearField(1);
+  @$pb.TagNumber(1)
+  ChannelDocument ensureChannel() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get members => $_getList(1);
+
+  @$pb.TagNumber(3)
+  MessageDocument get message => $_getN(2);
+  @$pb.TagNumber(3)
+  set message(MessageDocument v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessage() => clearField(3);
+  @$pb.TagNumber(3)
+  MessageDocument ensureMessage() => $_ensure(2);
+}
+
+class ConversationDocument extends $pb.GeneratedMessage {
+  factory ConversationDocument({
+    ChannelDocument? channel,
+    $core.String? members,
+  }) {
+    final $result = create();
+    if (channel != null) {
+      $result.channel = channel;
+    }
+    if (members != null) {
+      $result.members = members;
+    }
+    return $result;
+  }
+  ConversationDocument._() : super();
+  factory ConversationDocument.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversationDocument.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversationDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOM<ChannelDocument>(1, _omitFieldNames ? '' : 'channel', subBuilder: ChannelDocument.create)
+    ..aOS(2, _omitFieldNames ? '' : 'members')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversationDocument clone() => ConversationDocument()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversationDocument copyWith(void Function(ConversationDocument) updates) => super.copyWith((message) => updates(message as ConversationDocument)) as ConversationDocument;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversationDocument create() => ConversationDocument._();
+  ConversationDocument createEmptyInstance() => create();
+  static $pb.PbList<ConversationDocument> createRepeated() => $pb.PbList<ConversationDocument>();
+  @$core.pragma('dart2js:noInline')
+  static ConversationDocument getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversationDocument>(create);
+  static ConversationDocument? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ChannelDocument get channel => $_getN(0);
+  @$pb.TagNumber(1)
+  set channel(ChannelDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannel() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannel() => clearField(1);
+  @$pb.TagNumber(1)
+  ChannelDocument ensureChannel() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get members => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set members($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMembers() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMembers() => clearField(2);
+}
+
+class ConversationDocuments extends $pb.GeneratedMessage {
+  factory ConversationDocuments({
+    $core.Iterable<ConversationDocument>? documents,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    return $result;
+  }
+  ConversationDocuments._() : super();
+  factory ConversationDocuments.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversationDocuments.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversationDocuments', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pc<ConversationDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: ConversationDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversationDocuments clone() => ConversationDocuments()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversationDocuments copyWith(void Function(ConversationDocuments) updates) => super.copyWith((message) => updates(message as ConversationDocuments)) as ConversationDocuments;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversationDocuments create() => ConversationDocuments._();
+  ConversationDocuments createEmptyInstance() => create();
+  static $pb.PbList<ConversationDocuments> createRepeated() => $pb.PbList<ConversationDocuments>();
+  @$core.pragma('dart2js:noInline')
+  static ConversationDocuments getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversationDocuments>(create);
+  static ConversationDocuments? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<ConversationDocument> get documents => $_getList(0);
+}
+
+class ListDirectChannelsRequest extends $pb.GeneratedMessage {
+  factory ListDirectChannelsRequest() => create();
+  ListDirectChannelsRequest._() : super();
+  factory ListDirectChannelsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ListDirectChannelsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ListDirectChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ListDirectChannelsRequest clone() => ListDirectChannelsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ListDirectChannelsRequest copyWith(void Function(ListDirectChannelsRequest) updates) => super.copyWith((message) => updates(message as ListDirectChannelsRequest)) as ListDirectChannelsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ListDirectChannelsRequest create() => ListDirectChannelsRequest._();
+  ListDirectChannelsRequest createEmptyInstance() => create();
+  static $pb.PbList<ListDirectChannelsRequest> createRepeated() => $pb.PbList<ListDirectChannelsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static ListDirectChannelsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListDirectChannelsRequest>(create);
+  static ListDirectChannelsRequest? _defaultInstance;
+}
+
+class GetDirectChannelMessagesRequest extends $pb.GeneratedMessage {
+  factory GetDirectChannelMessagesRequest({
+    $core.String? channelId,
+    $fixnum.Int64? start,
+    $fixnum.Int64? end,
+    $core.bool? ascending,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (start != null) {
+      $result.start = start;
+    }
+    if (end != null) {
+      $result.end = end;
+    }
+    if (ascending != null) {
+      $result.ascending = ascending;
+    }
+    return $result;
+  }
+  GetDirectChannelMessagesRequest._() : super();
+  factory GetDirectChannelMessagesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelMessagesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessagesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'start', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'end', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOB(4, _omitFieldNames ? '' : 'ascending')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessagesRequest clone() => GetDirectChannelMessagesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessagesRequest copyWith(void Function(GetDirectChannelMessagesRequest) updates) => super.copyWith((message) => updates(message as GetDirectChannelMessagesRequest)) as GetDirectChannelMessagesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessagesRequest create() => GetDirectChannelMessagesRequest._();
+  GetDirectChannelMessagesRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelMessagesRequest> createRepeated() => $pb.PbList<GetDirectChannelMessagesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessagesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelMessagesRequest>(create);
+  static GetDirectChannelMessagesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get start => $_getI64(1);
+  @$pb.TagNumber(2)
+  set start($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStart() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStart() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get end => $_getI64(2);
+  @$pb.TagNumber(3)
+  set end($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasEnd() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearEnd() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get ascending => $_getBF(3);
+  @$pb.TagNumber(4)
+  set ascending($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasAscending() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearAscending() => clearField(4);
+}
+
+class GetDirectChannelMessagesResponse extends $pb.GeneratedMessage {
+  factory GetDirectChannelMessagesResponse({
+    $core.Iterable<MessageDocument>? documents,
+    $fixnum.Int64? totalCount,
+  }) {
+    final $result = create();
+    if (documents != null) {
+      $result.documents.addAll(documents);
+    }
+    if (totalCount != null) {
+      $result.totalCount = totalCount;
+    }
+    return $result;
+  }
+  GetDirectChannelMessagesResponse._() : super();
+  factory GetDirectChannelMessagesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelMessagesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessagesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pc<MessageDocument>(1, _omitFieldNames ? '' : 'documents', $pb.PbFieldType.PM, subBuilder: MessageDocument.create)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'totalCount', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessagesResponse clone() => GetDirectChannelMessagesResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessagesResponse copyWith(void Function(GetDirectChannelMessagesResponse) updates) => super.copyWith((message) => updates(message as GetDirectChannelMessagesResponse)) as GetDirectChannelMessagesResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessagesResponse create() => GetDirectChannelMessagesResponse._();
+  GetDirectChannelMessagesResponse createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelMessagesResponse> createRepeated() => $pb.PbList<GetDirectChannelMessagesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessagesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelMessagesResponse>(create);
+  static GetDirectChannelMessagesResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<MessageDocument> get documents => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get totalCount => $_getI64(1);
+  @$pb.TagNumber(2)
+  set totalCount($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTotalCount() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTotalCount() => clearField(2);
+}
+
+class CreateDirectChannelFileUploadUrlRequest extends $pb.GeneratedMessage {
+  factory CreateDirectChannelFileUploadUrlRequest({
+    $core.String? channelId,
+    $core.String? fileName,
+    $core.String? mimeType,
+    $fixnum.Int64? fileSize,
+    $fixnum.Int64? previewFileSize,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (fileName != null) {
+      $result.fileName = fileName;
+    }
+    if (mimeType != null) {
+      $result.mimeType = mimeType;
+    }
+    if (fileSize != null) {
+      $result.fileSize = fileSize;
+    }
+    if (previewFileSize != null) {
+      $result.previewFileSize = previewFileSize;
+    }
+    return $result;
+  }
+  CreateDirectChannelFileUploadUrlRequest._() : super();
+  factory CreateDirectChannelFileUploadUrlRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectChannelFileUploadUrlRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectChannelFileUploadUrlRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'fileName')
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'fileSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'previewFileSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelFileUploadUrlRequest clone() => CreateDirectChannelFileUploadUrlRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelFileUploadUrlRequest copyWith(void Function(CreateDirectChannelFileUploadUrlRequest) updates) => super.copyWith((message) => updates(message as CreateDirectChannelFileUploadUrlRequest)) as CreateDirectChannelFileUploadUrlRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelFileUploadUrlRequest create() => CreateDirectChannelFileUploadUrlRequest._();
+  CreateDirectChannelFileUploadUrlRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectChannelFileUploadUrlRequest> createRepeated() => $pb.PbList<CreateDirectChannelFileUploadUrlRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelFileUploadUrlRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectChannelFileUploadUrlRequest>(create);
+  static CreateDirectChannelFileUploadUrlRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get fileName => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set fileName($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasFileName() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearFileName() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get mimeType => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set mimeType($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMimeType() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMimeType() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get fileSize => $_getI64(3);
+  @$pb.TagNumber(4)
+  set fileSize($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasFileSize() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearFileSize() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get previewFileSize => $_getI64(4);
+  @$pb.TagNumber(5)
+  set previewFileSize($fixnum.Int64 v) { $_setInt64(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPreviewFileSize() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPreviewFileSize() => clearField(5);
+}
+
+class CreateDirectChannelFileUploadUrlResponse extends $pb.GeneratedMessage {
+  factory CreateDirectChannelFileUploadUrlResponse({
+    $core.String? uploadUrl,
+    $core.String? downloadUrl,
+    $core.String? previewUploadUrl,
+    $core.String? previewDownloadUrl,
+  }) {
+    final $result = create();
+    if (uploadUrl != null) {
+      $result.uploadUrl = uploadUrl;
+    }
+    if (downloadUrl != null) {
+      $result.downloadUrl = downloadUrl;
+    }
+    if (previewUploadUrl != null) {
+      $result.previewUploadUrl = previewUploadUrl;
+    }
+    if (previewDownloadUrl != null) {
+      $result.previewDownloadUrl = previewDownloadUrl;
+    }
+    return $result;
+  }
+  CreateDirectChannelFileUploadUrlResponse._() : super();
+  factory CreateDirectChannelFileUploadUrlResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectChannelFileUploadUrlResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectChannelFileUploadUrlResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uploadUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'downloadUrl')
+    ..aOS(3, _omitFieldNames ? '' : 'previewUploadUrl')
+    ..aOS(4, _omitFieldNames ? '' : 'previewDownloadUrl')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelFileUploadUrlResponse clone() => CreateDirectChannelFileUploadUrlResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelFileUploadUrlResponse copyWith(void Function(CreateDirectChannelFileUploadUrlResponse) updates) => super.copyWith((message) => updates(message as CreateDirectChannelFileUploadUrlResponse)) as CreateDirectChannelFileUploadUrlResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelFileUploadUrlResponse create() => CreateDirectChannelFileUploadUrlResponse._();
+  CreateDirectChannelFileUploadUrlResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectChannelFileUploadUrlResponse> createRepeated() => $pb.PbList<CreateDirectChannelFileUploadUrlResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelFileUploadUrlResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectChannelFileUploadUrlResponse>(create);
+  static CreateDirectChannelFileUploadUrlResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uploadUrl => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uploadUrl($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUploadUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUploadUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get downloadUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set downloadUrl($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDownloadUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDownloadUrl() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get previewUploadUrl => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set previewUploadUrl($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPreviewUploadUrl() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPreviewUploadUrl() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get previewDownloadUrl => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set previewDownloadUrl($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPreviewDownloadUrl() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPreviewDownloadUrl() => clearField(4);
+}
+
+class GetDirectChannelMessageReactionsRequest extends $pb.GeneratedMessage {
+  factory GetDirectChannelMessageReactionsRequest({
+    $core.String? channelId,
+    $core.String? messageId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    return $result;
+  }
+  GetDirectChannelMessageReactionsRequest._() : super();
+  factory GetDirectChannelMessageReactionsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelMessageReactionsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessageReactionsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'messageId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsRequest clone() => GetDirectChannelMessageReactionsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsRequest copyWith(void Function(GetDirectChannelMessageReactionsRequest) updates) => super.copyWith((message) => updates(message as GetDirectChannelMessageReactionsRequest)) as GetDirectChannelMessageReactionsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsRequest create() => GetDirectChannelMessageReactionsRequest._();
+  GetDirectChannelMessageReactionsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelMessageReactionsRequest> createRepeated() => $pb.PbList<GetDirectChannelMessageReactionsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelMessageReactionsRequest>(create);
+  static GetDirectChannelMessageReactionsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get messageId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set messageId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMessageId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessageId() => clearField(2);
+}
+
+class GetDirectChannelMessageReactionsResponse extends $pb.GeneratedMessage {
+  factory GetDirectChannelMessageReactionsResponse({
+    $core.Map<$core.String, $fixnum.Int64>? reactions,
+  }) {
+    final $result = create();
+    if (reactions != null) {
+      $result.reactions.addAll(reactions);
+    }
+    return $result;
+  }
+  GetDirectChannelMessageReactionsResponse._() : super();
+  factory GetDirectChannelMessageReactionsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelMessageReactionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessageReactionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetDirectChannelMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU6, packageName: const $pb.PackageName('messaging'))
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsResponse clone() => GetDirectChannelMessageReactionsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsResponse copyWith(void Function(GetDirectChannelMessageReactionsResponse) updates) => super.copyWith((message) => updates(message as GetDirectChannelMessageReactionsResponse)) as GetDirectChannelMessageReactionsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsResponse create() => GetDirectChannelMessageReactionsResponse._();
+  GetDirectChannelMessageReactionsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelMessageReactionsResponse> createRepeated() => $pb.PbList<GetDirectChannelMessageReactionsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelMessageReactionsResponse>(create);
+  static GetDirectChannelMessageReactionsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+}
+
+class SendDirectChannelMessageReactionRequest extends $pb.GeneratedMessage {
+  factory SendDirectChannelMessageReactionRequest({
+    $core.String? channelId,
+    $core.String? messageId,
+    $core.String? reaction,
+    $core.bool? isAdd,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (reaction != null) {
+      $result.reaction = reaction;
+    }
+    if (isAdd != null) {
+      $result.isAdd = isAdd;
+    }
+    return $result;
+  }
+  SendDirectChannelMessageReactionRequest._() : super();
+  factory SendDirectChannelMessageReactionRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SendDirectChannelMessageReactionRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendDirectChannelMessageReactionRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'messageId')
+    ..aOS(3, _omitFieldNames ? '' : 'reaction')
+    ..aOB(4, _omitFieldNames ? '' : 'isAdd')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SendDirectChannelMessageReactionRequest clone() => SendDirectChannelMessageReactionRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SendDirectChannelMessageReactionRequest copyWith(void Function(SendDirectChannelMessageReactionRequest) updates) => super.copyWith((message) => updates(message as SendDirectChannelMessageReactionRequest)) as SendDirectChannelMessageReactionRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SendDirectChannelMessageReactionRequest create() => SendDirectChannelMessageReactionRequest._();
+  SendDirectChannelMessageReactionRequest createEmptyInstance() => create();
+  static $pb.PbList<SendDirectChannelMessageReactionRequest> createRepeated() => $pb.PbList<SendDirectChannelMessageReactionRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SendDirectChannelMessageReactionRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendDirectChannelMessageReactionRequest>(create);
+  static SendDirectChannelMessageReactionRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get messageId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set messageId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMessageId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessageId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get reaction => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set reaction($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasReaction() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearReaction() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get isAdd => $_getBF(3);
+  @$pb.TagNumber(4)
+  set isAdd($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasIsAdd() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearIsAdd() => clearField(4);
+}
+
+class SendDirectChannelMessageReactionResponse extends $pb.GeneratedMessage {
+  factory SendDirectChannelMessageReactionResponse() => create();
+  SendDirectChannelMessageReactionResponse._() : super();
+  factory SendDirectChannelMessageReactionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SendDirectChannelMessageReactionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendDirectChannelMessageReactionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SendDirectChannelMessageReactionResponse clone() => SendDirectChannelMessageReactionResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SendDirectChannelMessageReactionResponse copyWith(void Function(SendDirectChannelMessageReactionResponse) updates) => super.copyWith((message) => updates(message as SendDirectChannelMessageReactionResponse)) as SendDirectChannelMessageReactionResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SendDirectChannelMessageReactionResponse create() => SendDirectChannelMessageReactionResponse._();
+  SendDirectChannelMessageReactionResponse createEmptyInstance() => create();
+  static $pb.PbList<SendDirectChannelMessageReactionResponse> createRepeated() => $pb.PbList<SendDirectChannelMessageReactionResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SendDirectChannelMessageReactionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendDirectChannelMessageReactionResponse>(create);
+  static SendDirectChannelMessageReactionResponse? _defaultInstance;
+}
+
+class CreateDirectChannelCallRequest extends $pb.GeneratedMessage {
+  factory CreateDirectChannelCallRequest({
+    $core.String? channelId,
+    $core.String? spaceId,
+    $core.String? messageId,
+    $core.String? threadChannelId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (threadChannelId != null) {
+      $result.threadChannelId = threadChannelId;
+    }
+    return $result;
+  }
+  CreateDirectChannelCallRequest._() : super();
+  factory CreateDirectChannelCallRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectChannelCallRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectChannelCallRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallRequest clone() => CreateDirectChannelCallRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallRequest copyWith(void Function(CreateDirectChannelCallRequest) updates) => super.copyWith((message) => updates(message as CreateDirectChannelCallRequest)) as CreateDirectChannelCallRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallRequest create() => CreateDirectChannelCallRequest._();
+  CreateDirectChannelCallRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectChannelCallRequest> createRepeated() => $pb.PbList<CreateDirectChannelCallRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectChannelCallRequest>(create);
+  static CreateDirectChannelCallRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get messageId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set messageId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessageId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get threadChannelId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set threadChannelId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasThreadChannelId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearThreadChannelId() => clearField(4);
+}
+
+class CreateDirectChannelCallResponse extends $pb.GeneratedMessage {
+  factory CreateDirectChannelCallResponse({
+    $core.String? callId,
+    $core.String? token,
+  }) {
+    final $result = create();
+    if (callId != null) {
+      $result.callId = callId;
+    }
+    if (token != null) {
+      $result.token = token;
+    }
+    return $result;
+  }
+  CreateDirectChannelCallResponse._() : super();
+  factory CreateDirectChannelCallResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectChannelCallResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectChannelCallResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'callId')
+    ..aOS(2, _omitFieldNames ? '' : 'token')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallResponse clone() => CreateDirectChannelCallResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallResponse copyWith(void Function(CreateDirectChannelCallResponse) updates) => super.copyWith((message) => updates(message as CreateDirectChannelCallResponse)) as CreateDirectChannelCallResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallResponse create() => CreateDirectChannelCallResponse._();
+  CreateDirectChannelCallResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectChannelCallResponse> createRepeated() => $pb.PbList<CreateDirectChannelCallResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectChannelCallResponse>(create);
+  static CreateDirectChannelCallResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get callId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set callId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCallId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCallId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get token => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set token($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearToken() => clearField(2);
+}
+
+class CreateDirectChannelCallJoinTokenRequest extends $pb.GeneratedMessage {
+  factory CreateDirectChannelCallJoinTokenRequest({
+    $core.String? channelId,
+    $core.String? spaceId,
+    $core.String? messageId,
+    $core.String? threadChannelId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (threadChannelId != null) {
+      $result.threadChannelId = threadChannelId;
+    }
+    return $result;
+  }
+  CreateDirectChannelCallJoinTokenRequest._() : super();
+  factory CreateDirectChannelCallJoinTokenRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectChannelCallJoinTokenRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectChannelCallJoinTokenRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallJoinTokenRequest clone() => CreateDirectChannelCallJoinTokenRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallJoinTokenRequest copyWith(void Function(CreateDirectChannelCallJoinTokenRequest) updates) => super.copyWith((message) => updates(message as CreateDirectChannelCallJoinTokenRequest)) as CreateDirectChannelCallJoinTokenRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallJoinTokenRequest create() => CreateDirectChannelCallJoinTokenRequest._();
+  CreateDirectChannelCallJoinTokenRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectChannelCallJoinTokenRequest> createRepeated() => $pb.PbList<CreateDirectChannelCallJoinTokenRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallJoinTokenRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectChannelCallJoinTokenRequest>(create);
+  static CreateDirectChannelCallJoinTokenRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get messageId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set messageId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessageId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get threadChannelId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set threadChannelId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasThreadChannelId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearThreadChannelId() => clearField(4);
+}
+
+class CreateDirectChannelCallJoinTokenResponse extends $pb.GeneratedMessage {
+  factory CreateDirectChannelCallJoinTokenResponse({
+    $core.String? token,
+  }) {
+    final $result = create();
+    if (token != null) {
+      $result.token = token;
+    }
+    return $result;
+  }
+  CreateDirectChannelCallJoinTokenResponse._() : super();
+  factory CreateDirectChannelCallJoinTokenResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateDirectChannelCallJoinTokenResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateDirectChannelCallJoinTokenResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'token')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallJoinTokenResponse clone() => CreateDirectChannelCallJoinTokenResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateDirectChannelCallJoinTokenResponse copyWith(void Function(CreateDirectChannelCallJoinTokenResponse) updates) => super.copyWith((message) => updates(message as CreateDirectChannelCallJoinTokenResponse)) as CreateDirectChannelCallJoinTokenResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallJoinTokenResponse create() => CreateDirectChannelCallJoinTokenResponse._();
+  CreateDirectChannelCallJoinTokenResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateDirectChannelCallJoinTokenResponse> createRepeated() => $pb.PbList<CreateDirectChannelCallJoinTokenResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateDirectChannelCallJoinTokenResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateDirectChannelCallJoinTokenResponse>(create);
+  static CreateDirectChannelCallJoinTokenResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get token => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set token($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearToken() => clearField(1);
 }
 
 

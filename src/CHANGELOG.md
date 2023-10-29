@@ -1,3 +1,7 @@
+## 0.0.19
+
+ - **FEAT**: added chat.
+
 ## 0.0.18
 
  - **FEAT**: implemented messaging.

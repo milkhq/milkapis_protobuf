@@ -188,6 +188,8 @@ message SpaceDocument {
   repeated string search_terms = 8;
   DOCUMENT_STATUS document_status = 9;
   bytes customization = 10;
+  repeated string custom_videos = 11;
+  repeated string custom_images = 12;
 }
 message CreateSpaceRequest {
   SpaceDocument document = 1;

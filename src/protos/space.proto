@@ -188,9 +188,18 @@ message SpaceDocument {
   repeated string search_terms = 8;
   DOCUMENT_STATUS document_status = 9;
   bytes customization = 10;
-  repeated string custom_videos = 11;
-  repeated string custom_images = 12;
+  repeated CustomBackground custom_videos = 11;
+  repeated CustomBackground custom_images = 12;
 }
+
+message CustomBackground {
+  string url = 1;
+  string image_hash = 2;
+  string preview_image_url = 3;
+  string preview_image_hash = 4;
+  string mime_type = 5;
+}
+
 message CreateSpaceRequest {
   SpaceDocument document = 1;
 }

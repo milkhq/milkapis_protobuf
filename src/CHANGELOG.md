@@ -1,3 +1,8 @@
+## 0.0.20
+
+ - **FEAT**: added custom background.
+ - **FEAT**: added custom videos and images.
+
 ## 0.0.19
 
  - **FEAT**: added chat.

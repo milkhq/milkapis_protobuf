@@ -1728,6 +1728,8 @@ class CustomBackground extends $pb.GeneratedMessage {
     $core.String? previewImageUrl,
     $core.String? previewImageHash,
     $core.String? mimeType,
+    $core.String? label,
+    $core.String? description,
   }) {
     final $result = create();
     if (url != null) {
@@ -1745,6 +1747,12 @@ class CustomBackground extends $pb.GeneratedMessage {
     if (mimeType != null) {
       $result.mimeType = mimeType;
     }
+    if (label != null) {
+      $result.label = label;
+    }
+    if (description != null) {
+      $result.description = description;
+    }
     return $result;
   }
   CustomBackground._() : super();
@@ -1757,6 +1765,8 @@ class CustomBackground extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'previewImageUrl')
     ..aOS(4, _omitFieldNames ? '' : 'previewImageHash')
     ..aOS(5, _omitFieldNames ? '' : 'mimeType')
+    ..aOS(6, _omitFieldNames ? '' : 'label')
+    ..aOS(7, _omitFieldNames ? '' : 'description')
     ..hasRequiredFields = false
   ;
 
@@ -1825,6 +1835,24 @@ class CustomBackground extends $pb.GeneratedMessage {
   $core.bool hasMimeType() => $_has(4);
   @$pb.TagNumber(5)
   void clearMimeType() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get label => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set label($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasLabel() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLabel() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get description => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set description($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDescription() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDescription() => clearField(7);
 }
 
 class CreateSpaceRequest extends $pb.GeneratedMessage {

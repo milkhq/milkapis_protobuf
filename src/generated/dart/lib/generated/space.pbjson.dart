@@ -469,6 +469,8 @@ const CustomBackground$json = {
     {'1': 'preview_image_url', '3': 3, '4': 1, '5': 9, '10': 'previewImageUrl'},
     {'1': 'preview_image_hash', '3': 4, '4': 1, '5': 9, '10': 'previewImageHash'},
     {'1': 'mime_type', '3': 5, '4': 1, '5': 9, '10': 'mimeType'},
+    {'1': 'label', '3': 6, '4': 1, '5': 9, '10': 'label'},
+    {'1': 'description', '3': 7, '4': 1, '5': 9, '10': 'description'},
   ],
 };
 
@@ -477,7 +479,8 @@ final $typed_data.Uint8List customBackgroundDescriptor = $convert.base64Decode(
     'ChBDdXN0b21CYWNrZ3JvdW5kEhAKA3VybBgBIAEoCVIDdXJsEh0KCmltYWdlX2hhc2gYAiABKA'
     'lSCWltYWdlSGFzaBIqChFwcmV2aWV3X2ltYWdlX3VybBgDIAEoCVIPcHJldmlld0ltYWdlVXJs'
     'EiwKEnByZXZpZXdfaW1hZ2VfaGFzaBgEIAEoCVIQcHJldmlld0ltYWdlSGFzaBIbCgltaW1lX3'
-    'R5cGUYBSABKAlSCG1pbWVUeXBl');
+    'R5cGUYBSABKAlSCG1pbWVUeXBlEhQKBWxhYmVsGAYgASgJUgVsYWJlbBIgCgtkZXNjcmlwdGlv'
+    'bhgHIAEoCVILZGVzY3JpcHRpb24=');
 
 @$core.Deprecated('Use createSpaceRequestDescriptor instead')
 const CreateSpaceRequest$json = {

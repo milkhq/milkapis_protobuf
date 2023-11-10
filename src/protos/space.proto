@@ -198,6 +198,8 @@ message CustomBackground {
   string preview_image_url = 3;
   string preview_image_hash = 4;
   string mime_type = 5;
+  string label = 6;
+  string description = 7;
 }
 
 message CreateSpaceRequest {

@@ -15,6 +15,27 @@ Packages with breaking changes:
 
 Packages with other changes:
 
+ - [`milkapis_protobuf` - `v0.0.21`](#milkapis_protobuf---v0021)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.21`
+
+ - **FEAT**: added label and desc field.
+
+
+## 2023-11-10
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
  - [`milkapis_protobuf` - `v0.0.20`](#milkapis_protobuf---v0020)
 
 ---

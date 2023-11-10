@@ -423,6 +423,8 @@ const SpaceDocument$json = {
     {'1': 'search_terms', '3': 8, '4': 3, '5': 9, '10': 'searchTerms'},
     {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.space.DOCUMENT_STATUS', '10': 'documentStatus'},
     {'1': 'customization', '3': 10, '4': 1, '5': 12, '10': 'customization'},
+    {'1': 'custom_videos', '3': 11, '4': 3, '5': 11, '6': '.space.CustomBackground', '10': 'customVideos'},
+    {'1': 'custom_images', '3': 12, '4': 3, '5': 11, '6': '.space.CustomBackground', '10': 'customImages'},
   ],
   '3': [SpaceDocument_Metadata$json],
 };
@@ -450,11 +452,32 @@ final $typed_data.Uint8List spaceDocumentDescriptor = $convert.base64Decode(
     '4yFS5zcGFjZS5TUEFDRV9DQVRFR09SWVIIY2F0ZWdvcnkSIQoMc2VhcmNoX3Rlcm1zGAggAygJ'
     'UgtzZWFyY2hUZXJtcxI/Cg9kb2N1bWVudF9zdGF0dXMYCSABKA4yFi5zcGFjZS5ET0NVTUVOVF'
     '9TVEFUVVNSDmRvY3VtZW50U3RhdHVzEiQKDWN1c3RvbWl6YXRpb24YCiABKAxSDWN1c3RvbWl6'
-    'YXRpb24a7AEKCE1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAi'
-    'ABKAlSC2Rlc2NyaXB0aW9uEigKEGF2YXRhcl9pbWFnZV91cmwYAyABKAlSDmF2YXRhckltYWdl'
-    'VXJsEioKEWF2YXRhcl9pbWFnZV9oYXNoGAQgASgJUg9hdmF0YXJJbWFnZUhhc2gSKAoQYmFubm'
-    'VyX2ltYWdlX3VybBgFIAEoCVIOYmFubmVySW1hZ2VVcmwSKgoRYmFubmVyX2ltYWdlX2hhc2gY'
-    'BiABKAlSD2Jhbm5lckltYWdlSGFzaA==');
+    'YXRpb24SPAoNY3VzdG9tX3ZpZGVvcxgLIAMoCzIXLnNwYWNlLkN1c3RvbUJhY2tncm91bmRSDG'
+    'N1c3RvbVZpZGVvcxI8Cg1jdXN0b21faW1hZ2VzGAwgAygLMhcuc3BhY2UuQ3VzdG9tQmFja2dy'
+    'b3VuZFIMY3VzdG9tSW1hZ2VzGuwBCghNZXRhZGF0YRISCgRuYW1lGAEgASgJUgRuYW1lEiAKC2'
+    'Rlc2NyaXB0aW9uGAIgASgJUgtkZXNjcmlwdGlvbhIoChBhdmF0YXJfaW1hZ2VfdXJsGAMgASgJ'
+    'Ug5hdmF0YXJJbWFnZVVybBIqChFhdmF0YXJfaW1hZ2VfaGFzaBgEIAEoCVIPYXZhdGFySW1hZ2'
+    'VIYXNoEigKEGJhbm5lcl9pbWFnZV91cmwYBSABKAlSDmJhbm5lckltYWdlVXJsEioKEWJhbm5l'
+    'cl9pbWFnZV9oYXNoGAYgASgJUg9iYW5uZXJJbWFnZUhhc2g=');
+
+@$core.Deprecated('Use customBackgroundDescriptor instead')
+const CustomBackground$json = {
+  '1': 'CustomBackground',
+  '2': [
+    {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    {'1': 'image_hash', '3': 2, '4': 1, '5': 9, '10': 'imageHash'},
+    {'1': 'preview_image_url', '3': 3, '4': 1, '5': 9, '10': 'previewImageUrl'},
+    {'1': 'preview_image_hash', '3': 4, '4': 1, '5': 9, '10': 'previewImageHash'},
+    {'1': 'mime_type', '3': 5, '4': 1, '5': 9, '10': 'mimeType'},
+  ],
+};
+
+/// Descriptor for `CustomBackground`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List customBackgroundDescriptor = $convert.base64Decode(
+    'ChBDdXN0b21CYWNrZ3JvdW5kEhAKA3VybBgBIAEoCVIDdXJsEh0KCmltYWdlX2hhc2gYAiABKA'
+    'lSCWltYWdlSGFzaBIqChFwcmV2aWV3X2ltYWdlX3VybBgDIAEoCVIPcHJldmlld0ltYWdlVXJs'
+    'EiwKEnByZXZpZXdfaW1hZ2VfaGFzaBgEIAEoCVIQcHJldmlld0ltYWdlSGFzaBIbCgltaW1lX3'
+    'R5cGUYBSABKAlSCG1pbWVUeXBl');
 
 @$core.Deprecated('Use createSpaceRequestDescriptor instead')
 const CreateSpaceRequest$json = {

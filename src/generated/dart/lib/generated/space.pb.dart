@@ -1545,6 +1545,8 @@ class SpaceDocument extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? searchTerms,
     DOCUMENT_STATUS? documentStatus,
     $core.List<$core.int>? customization,
+    $core.Iterable<CustomBackground>? customVideos,
+    $core.Iterable<CustomBackground>? customImages,
   }) {
     final $result = create();
     if (status != null) {
@@ -1577,6 +1579,12 @@ class SpaceDocument extends $pb.GeneratedMessage {
     if (customization != null) {
       $result.customization = customization;
     }
+    if (customVideos != null) {
+      $result.customVideos.addAll(customVideos);
+    }
+    if (customImages != null) {
+      $result.customImages.addAll(customImages);
+    }
     return $result;
   }
   SpaceDocument._() : super();
@@ -1594,6 +1602,8 @@ class SpaceDocument extends $pb.GeneratedMessage {
     ..pPS(8, _omitFieldNames ? '' : 'searchTerms')
     ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..a<$core.List<$core.int>>(10, _omitFieldNames ? '' : 'customization', $pb.PbFieldType.OY)
+    ..pc<CustomBackground>(11, _omitFieldNames ? '' : 'customVideos', $pb.PbFieldType.PM, subBuilder: CustomBackground.create)
+    ..pc<CustomBackground>(12, _omitFieldNames ? '' : 'customImages', $pb.PbFieldType.PM, subBuilder: CustomBackground.create)
     ..hasRequiredFields = false
   ;
 
@@ -1703,6 +1713,118 @@ class SpaceDocument extends $pb.GeneratedMessage {
   $core.bool hasCustomization() => $_has(9);
   @$pb.TagNumber(10)
   void clearCustomization() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.List<CustomBackground> get customVideos => $_getList(10);
+
+  @$pb.TagNumber(12)
+  $core.List<CustomBackground> get customImages => $_getList(11);
+}
+
+class CustomBackground extends $pb.GeneratedMessage {
+  factory CustomBackground({
+    $core.String? url,
+    $core.String? imageHash,
+    $core.String? previewImageUrl,
+    $core.String? previewImageHash,
+    $core.String? mimeType,
+  }) {
+    final $result = create();
+    if (url != null) {
+      $result.url = url;
+    }
+    if (imageHash != null) {
+      $result.imageHash = imageHash;
+    }
+    if (previewImageUrl != null) {
+      $result.previewImageUrl = previewImageUrl;
+    }
+    if (previewImageHash != null) {
+      $result.previewImageHash = previewImageHash;
+    }
+    if (mimeType != null) {
+      $result.mimeType = mimeType;
+    }
+    return $result;
+  }
+  CustomBackground._() : super();
+  factory CustomBackground.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CustomBackground.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CustomBackground', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'url')
+    ..aOS(2, _omitFieldNames ? '' : 'imageHash')
+    ..aOS(3, _omitFieldNames ? '' : 'previewImageUrl')
+    ..aOS(4, _omitFieldNames ? '' : 'previewImageHash')
+    ..aOS(5, _omitFieldNames ? '' : 'mimeType')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CustomBackground clone() => CustomBackground()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CustomBackground copyWith(void Function(CustomBackground) updates) => super.copyWith((message) => updates(message as CustomBackground)) as CustomBackground;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CustomBackground create() => CustomBackground._();
+  CustomBackground createEmptyInstance() => create();
+  static $pb.PbList<CustomBackground> createRepeated() => $pb.PbList<CustomBackground>();
+  @$core.pragma('dart2js:noInline')
+  static CustomBackground getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CustomBackground>(create);
+  static CustomBackground? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set url($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get imageHash => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set imageHash($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasImageHash() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearImageHash() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get previewImageUrl => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set previewImageUrl($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPreviewImageUrl() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPreviewImageUrl() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get previewImageHash => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set previewImageHash($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPreviewImageHash() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPreviewImageHash() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get mimeType => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set mimeType($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasMimeType() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMimeType() => clearField(5);
 }
 
 class CreateSpaceRequest extends $pb.GeneratedMessage {

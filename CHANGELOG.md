@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-11-12
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`milkapis_protobuf` - `v0.0.22`](#milkapis_protobuf---v0022)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.22`
+
+ - **FEAT**: added icon and background uploads.
+
+
 ## 2023-11-10
 
 ### Changes

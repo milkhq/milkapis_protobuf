@@ -1,3 +1,7 @@
+## 0.0.22
+
+ - **FEAT**: added icon and background uploads.
+
 ## 0.0.21
 
  - **FEAT**: added label and desc field.

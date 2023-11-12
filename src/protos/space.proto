@@ -25,6 +25,33 @@ service Space {
   rpc GetUserSpaces(GetUserSpacesRequest) returns (UserSpaceDocuments);
   rpc UpdateUserSpaceOrder(UpdateUserSpaceOrderRequest) returns (UpdateUserSpaceOrderResponse);
   rpc UpdateSpaceCustomization(UpdateSpaceCustomizationRequest) returns (UpdateSpaceCustomizationResponse);
+  rpc CreateSpaceIconUploadUrl(CreateSpaceIconUploadUrlRequest) returns (CreateSpaceIconUploadUrlResponse);
+  rpc CreateSpaceCustomBackgroundUploadUrl(CreateSpaceCustomBackgroundUploadUrlRequest) returns (CreateSpaceCustomBackgroundUploadUrlResponse);
+}
+
+message CreateSpaceCustomBackgroundUploadUrlRequest {
+  string space_id = 1;
+  uint64 size = 2;
+  uint64 preview_size = 3;
+  string mime_type = 4;
+  string preview_mime_type = 5;
+}
+
+message CreateSpaceCustomBackgroundUploadUrlResponse {
+  string upload_url = 1;
+  string download_url = 2;
+  string preview_upload_url = 3;
+  string preview_download_url = 4;
+}
+
+message CreateSpaceIconUploadUrlRequest {
+  string space_id = 1;
+  uint64 size = 2;
+}
+
+message CreateSpaceIconUploadUrlResponse {
+  string upload_url = 1;
+  string download_url = 2;
 }
 
 enum DOCUMENT_STATUS {
@@ -177,6 +204,7 @@ message SpaceDocument {
     string avatar_image_hash = 4;
     string banner_image_url = 5;
     string banner_image_hash = 6;
+    repeated CustomBackground custom_backgrounds = 11;
   }
   SPACE_STATUS status = 1;
   SPACE_VISIBILITY visibility = 2;
@@ -188,8 +216,6 @@ message SpaceDocument {
   repeated string search_terms = 8;
   DOCUMENT_STATUS document_status = 9;
   bytes customization = 10;
-  repeated CustomBackground custom_videos = 11;
-  repeated CustomBackground custom_images = 12;
 }
 
 message CustomBackground {

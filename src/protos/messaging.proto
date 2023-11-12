@@ -50,6 +50,7 @@ service Messaging {
     rpc DeleteSpaceChannelThreadMessage(DeleteSpaceChannelThreadMessageRequest) returns (DeleteSpaceChannelThreadMessageResponse);
     rpc GetSpaceChannelThreadMessageReactions(GetSpaceChannelThreadMessageReactionsRequest) returns (GetSpaceChannelThreadMessageReactionsResponse);
     rpc SendSpaceChannelThreadMessageReaction(SendSpaceChannelThreadMessageReactionRequest) returns (SendSpaceChannelThreadMessageReactionResponse);
+    rpc GetSpaceThreadChannel(GetSpaceThreadChannelRequest) returns (ChannelDocument);
 
     // Direct channel messages
     rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -94,6 +95,17 @@ enum CHANNEL_CAPABILITY {
     IMAGE = 1;
     VOICE = 2;
     VIDEO = 3;
+}
+
+message GetSpaceThreadChannelRequest {
+    string space_id = 1;
+    string channel_id = 2;
+    string thread_channel_id = 3;
+    string message_id = 4;
+}
+
+message GetSpaceThreadChannelResponse {
+    ChannelDocument document = 1;
 }
 
 message UpdateSpaceChannelThreadMessageRequest {
@@ -184,7 +196,12 @@ message SendSpaceChannelThreadMessageRequest {
     string message_id = 4;
 }
 
-message SendSpaceChannelThreadMessageResponse {}
+message SendSpaceChannelThreadMessageResponse {
+    string channel_id = 1;
+    string message_id = 2;
+    uint64 nonce = 3;
+    string space_id = 4;
+}
 
 message UpdateSpaceChannelMessageRequest {
     string channel_id = 1;

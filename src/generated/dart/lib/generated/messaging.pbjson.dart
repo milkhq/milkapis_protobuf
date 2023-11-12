@@ -158,6 +158,36 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use getSpaceThreadChannelRequestDescriptor instead')
+const GetSpaceThreadChannelRequest$json = {
+  '1': 'GetSpaceThreadChannelRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'thread_channel_id', '3': 3, '4': 1, '5': 9, '10': 'threadChannelId'},
+    {'1': 'message_id', '3': 4, '4': 1, '5': 9, '10': 'messageId'},
+  ],
+};
+
+/// Descriptor for `GetSpaceThreadChannelRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceThreadChannelRequestDescriptor = $convert.base64Decode(
+    'ChxHZXRTcGFjZVRocmVhZENoYW5uZWxSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZU'
+    'lkEh0KCmNoYW5uZWxfaWQYAiABKAlSCWNoYW5uZWxJZBIqChF0aHJlYWRfY2hhbm5lbF9pZBgD'
+    'IAEoCVIPdGhyZWFkQ2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQYBCABKAlSCW1lc3NhZ2VJZA==');
+
+@$core.Deprecated('Use getSpaceThreadChannelResponseDescriptor instead')
+const GetSpaceThreadChannelResponse$json = {
+  '1': 'GetSpaceThreadChannelResponse',
+  '2': [
+    {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelDocument', '10': 'document'},
+  ],
+};
+
+/// Descriptor for `GetSpaceThreadChannelResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceThreadChannelResponseDescriptor = $convert.base64Decode(
+    'Ch1HZXRTcGFjZVRocmVhZENoYW5uZWxSZXNwb25zZRI2Cghkb2N1bWVudBgBIAEoCzIaLm1lc3'
+    'NhZ2luZy5DaGFubmVsRG9jdW1lbnRSCGRvY3VtZW50');
+
 @$core.Deprecated('Use updateSpaceChannelThreadMessageRequestDescriptor instead')
 const UpdateSpaceChannelThreadMessageRequest$json = {
   '1': 'UpdateSpaceChannelThreadMessageRequest',
@@ -390,11 +420,19 @@ final $typed_data.Uint8List sendSpaceChannelThreadMessageRequestDescriptor = $co
 @$core.Deprecated('Use sendSpaceChannelThreadMessageResponseDescriptor instead')
 const SendSpaceChannelThreadMessageResponse$json = {
   '1': 'SendSpaceChannelThreadMessageResponse',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'message_id', '3': 2, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'nonce', '3': 3, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'space_id', '3': 4, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
 };
 
 /// Descriptor for `SendSpaceChannelThreadMessageResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendSpaceChannelThreadMessageResponseDescriptor = $convert.base64Decode(
-    'CiVTZW5kU3BhY2VDaGFubmVsVGhyZWFkTWVzc2FnZVJlc3BvbnNl');
+    'CiVTZW5kU3BhY2VDaGFubmVsVGhyZWFkTWVzc2FnZVJlc3BvbnNlEh0KCmNoYW5uZWxfaWQYAS'
+    'ABKAlSCWNoYW5uZWxJZBIdCgptZXNzYWdlX2lkGAIgASgJUgltZXNzYWdlSWQSFAoFbm9uY2UY'
+    'AyABKARSBW5vbmNlEhkKCHNwYWNlX2lkGAQgASgJUgdzcGFjZUlk');
 
 @$core.Deprecated('Use updateSpaceChannelMessageRequestDescriptor instead')
 const UpdateSpaceChannelMessageRequest$json = {

@@ -173,6 +173,10 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/SendSpaceChannelThreadMessageReaction',
       ($1.SendSpaceChannelThreadMessageReactionRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.SendSpaceChannelThreadMessageReactionResponse.fromBuffer(value));
+  static final _$getSpaceThreadChannel = $grpc.ClientMethod<$1.GetSpaceThreadChannelRequest, $1.ChannelDocument>(
+      '/messaging.Messaging/GetSpaceThreadChannel',
+      ($1.GetSpaceThreadChannelRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.ChannelDocument.fromBuffer(value));
   static final _$sendDirectChannelMessage = $grpc.ClientMethod<$1.SendMessageRequest, $1.SendMessageResponse>(
       '/messaging.Messaging/SendDirectChannelMessage',
       ($1.SendMessageRequest value) => value.writeToBuffer(),
@@ -370,6 +374,10 @@ class MessagingClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.SendSpaceChannelThreadMessageReactionResponse> sendSpaceChannelThreadMessageReaction($1.SendSpaceChannelThreadMessageReactionRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$sendSpaceChannelThreadMessageReaction, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.ChannelDocument> getSpaceThreadChannel($1.GetSpaceThreadChannelRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceThreadChannel, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.SendMessageResponse> sendDirectChannelMessage($1.SendMessageRequest request, {$grpc.CallOptions? options}) {
@@ -684,6 +692,13 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.SendSpaceChannelThreadMessageReactionRequest.fromBuffer(value),
         ($1.SendSpaceChannelThreadMessageReactionResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetSpaceThreadChannelRequest, $1.ChannelDocument>(
+        'GetSpaceThreadChannel',
+        getSpaceThreadChannel_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetSpaceThreadChannelRequest.fromBuffer(value),
+        ($1.ChannelDocument value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.SendMessageRequest, $1.SendMessageResponse>(
         'SendDirectChannelMessage',
         sendDirectChannelMessage_Pre,
@@ -908,6 +923,10 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return sendSpaceChannelThreadMessageReaction(call, await request);
   }
 
+  $async.Future<$1.ChannelDocument> getSpaceThreadChannel_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceThreadChannelRequest> request) async {
+    return getSpaceThreadChannel(call, await request);
+  }
+
   $async.Future<$1.SendMessageResponse> sendDirectChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$1.SendMessageRequest> request) async {
     return sendDirectChannelMessage(call, await request);
   }
@@ -986,6 +1005,7 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$1.DeleteSpaceChannelThreadMessageResponse> deleteSpaceChannelThreadMessage($grpc.ServiceCall call, $1.DeleteSpaceChannelThreadMessageRequest request);
   $async.Future<$1.GetSpaceChannelThreadMessageReactionsResponse> getSpaceChannelThreadMessageReactions($grpc.ServiceCall call, $1.GetSpaceChannelThreadMessageReactionsRequest request);
   $async.Future<$1.SendSpaceChannelThreadMessageReactionResponse> sendSpaceChannelThreadMessageReaction($grpc.ServiceCall call, $1.SendSpaceChannelThreadMessageReactionRequest request);
+  $async.Future<$1.ChannelDocument> getSpaceThreadChannel($grpc.ServiceCall call, $1.GetSpaceThreadChannelRequest request);
   $async.Future<$1.SendMessageResponse> sendDirectChannelMessage($grpc.ServiceCall call, $1.SendMessageRequest request);
   $async.Future<$1.UpdateMessageResponse> updateDirectChannelMessage($grpc.ServiceCall call, $1.UpdateMessageRequest request);
   $async.Future<$1.DeleteMessageResponse> deleteDirectChannelMessage($grpc.ServiceCall call, $1.DeleteMessageRequest request);

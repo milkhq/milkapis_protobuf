@@ -18,6 +18,150 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class GetSpaceThreadChannelRequest extends $pb.GeneratedMessage {
+  factory GetSpaceThreadChannelRequest({
+    $core.String? spaceId,
+    $core.String? channelId,
+    $core.String? threadChannelId,
+    $core.String? messageId,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (threadChannelId != null) {
+      $result.threadChannelId = threadChannelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    return $result;
+  }
+  GetSpaceThreadChannelRequest._() : super();
+  factory GetSpaceThreadChannelRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceThreadChannelRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceThreadChannelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'channelId')
+    ..aOS(3, _omitFieldNames ? '' : 'threadChannelId')
+    ..aOS(4, _omitFieldNames ? '' : 'messageId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelRequest clone() => GetSpaceThreadChannelRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelRequest copyWith(void Function(GetSpaceThreadChannelRequest) updates) => super.copyWith((message) => updates(message as GetSpaceThreadChannelRequest)) as GetSpaceThreadChannelRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelRequest create() => GetSpaceThreadChannelRequest._();
+  GetSpaceThreadChannelRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceThreadChannelRequest> createRepeated() => $pb.PbList<GetSpaceThreadChannelRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceThreadChannelRequest>(create);
+  static GetSpaceThreadChannelRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get channelId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set channelId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChannelId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChannelId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get threadChannelId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set threadChannelId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasThreadChannelId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearThreadChannelId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get messageId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set messageId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasMessageId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMessageId() => clearField(4);
+}
+
+class GetSpaceThreadChannelResponse extends $pb.GeneratedMessage {
+  factory GetSpaceThreadChannelResponse({
+    ChannelDocument? document,
+  }) {
+    final $result = create();
+    if (document != null) {
+      $result.document = document;
+    }
+    return $result;
+  }
+  GetSpaceThreadChannelResponse._() : super();
+  factory GetSpaceThreadChannelResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceThreadChannelResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceThreadChannelResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOM<ChannelDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: ChannelDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelResponse clone() => GetSpaceThreadChannelResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelResponse copyWith(void Function(GetSpaceThreadChannelResponse) updates) => super.copyWith((message) => updates(message as GetSpaceThreadChannelResponse)) as GetSpaceThreadChannelResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelResponse create() => GetSpaceThreadChannelResponse._();
+  GetSpaceThreadChannelResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceThreadChannelResponse> createRepeated() => $pb.PbList<GetSpaceThreadChannelResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceThreadChannelResponse>(create);
+  static GetSpaceThreadChannelResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ChannelDocument get document => $_getN(0);
+  @$pb.TagNumber(1)
+  set document(ChannelDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDocument() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDocument() => clearField(1);
+  @$pb.TagNumber(1)
+  ChannelDocument ensureDocument() => $_ensure(0);
+}
+
 class UpdateSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceChannelThreadMessageRequest({
     $core.String? spaceId,
@@ -1125,12 +1269,36 @@ class SendSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
 }
 
 class SendSpaceChannelThreadMessageResponse extends $pb.GeneratedMessage {
-  factory SendSpaceChannelThreadMessageResponse() => create();
+  factory SendSpaceChannelThreadMessageResponse({
+    $core.String? channelId,
+    $core.String? messageId,
+    $fixnum.Int64? nonce,
+    $core.String? spaceId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (nonce != null) {
+      $result.nonce = nonce;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    return $result;
+  }
   SendSpaceChannelThreadMessageResponse._() : super();
   factory SendSpaceChannelThreadMessageResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendSpaceChannelThreadMessageResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendSpaceChannelThreadMessageResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'messageId')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -1154,6 +1322,42 @@ class SendSpaceChannelThreadMessageResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SendSpaceChannelThreadMessageResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendSpaceChannelThreadMessageResponse>(create);
   static SendSpaceChannelThreadMessageResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get messageId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set messageId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMessageId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessageId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get nonce => $_getI64(2);
+  @$pb.TagNumber(3)
+  set nonce($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasNonce() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearNonce() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get spaceId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set spaceId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSpaceId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSpaceId() => clearField(4);
 }
 
 class UpdateSpaceChannelMessageRequest extends $pb.GeneratedMessage {

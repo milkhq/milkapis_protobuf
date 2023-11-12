@@ -19,6 +19,332 @@ import 'space.pbenum.dart';
 
 export 'space.pbenum.dart';
 
+class CreateSpaceCustomBackgroundUploadUrlRequest extends $pb.GeneratedMessage {
+  factory CreateSpaceCustomBackgroundUploadUrlRequest({
+    $core.String? spaceId,
+    $fixnum.Int64? size,
+    $fixnum.Int64? previewSize,
+    $core.String? mimeType,
+    $core.String? previewMimeType,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (size != null) {
+      $result.size = size;
+    }
+    if (previewSize != null) {
+      $result.previewSize = previewSize;
+    }
+    if (mimeType != null) {
+      $result.mimeType = mimeType;
+    }
+    if (previewMimeType != null) {
+      $result.previewMimeType = previewMimeType;
+    }
+    return $result;
+  }
+  CreateSpaceCustomBackgroundUploadUrlRequest._() : super();
+  factory CreateSpaceCustomBackgroundUploadUrlRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSpaceCustomBackgroundUploadUrlRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceCustomBackgroundUploadUrlRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'size', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'previewSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, _omitFieldNames ? '' : 'mimeType')
+    ..aOS(5, _omitFieldNames ? '' : 'previewMimeType')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSpaceCustomBackgroundUploadUrlRequest clone() => CreateSpaceCustomBackgroundUploadUrlRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSpaceCustomBackgroundUploadUrlRequest copyWith(void Function(CreateSpaceCustomBackgroundUploadUrlRequest) updates) => super.copyWith((message) => updates(message as CreateSpaceCustomBackgroundUploadUrlRequest)) as CreateSpaceCustomBackgroundUploadUrlRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceCustomBackgroundUploadUrlRequest create() => CreateSpaceCustomBackgroundUploadUrlRequest._();
+  CreateSpaceCustomBackgroundUploadUrlRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSpaceCustomBackgroundUploadUrlRequest> createRepeated() => $pb.PbList<CreateSpaceCustomBackgroundUploadUrlRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceCustomBackgroundUploadUrlRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSpaceCustomBackgroundUploadUrlRequest>(create);
+  static CreateSpaceCustomBackgroundUploadUrlRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get size => $_getI64(1);
+  @$pb.TagNumber(2)
+  set size($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSize() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get previewSize => $_getI64(2);
+  @$pb.TagNumber(3)
+  set previewSize($fixnum.Int64 v) { $_setInt64(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPreviewSize() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPreviewSize() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get mimeType => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set mimeType($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasMimeType() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMimeType() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get previewMimeType => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set previewMimeType($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasPreviewMimeType() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearPreviewMimeType() => clearField(5);
+}
+
+class CreateSpaceCustomBackgroundUploadUrlResponse extends $pb.GeneratedMessage {
+  factory CreateSpaceCustomBackgroundUploadUrlResponse({
+    $core.String? uploadUrl,
+    $core.String? downloadUrl,
+    $core.String? previewUploadUrl,
+    $core.String? previewDownloadUrl,
+  }) {
+    final $result = create();
+    if (uploadUrl != null) {
+      $result.uploadUrl = uploadUrl;
+    }
+    if (downloadUrl != null) {
+      $result.downloadUrl = downloadUrl;
+    }
+    if (previewUploadUrl != null) {
+      $result.previewUploadUrl = previewUploadUrl;
+    }
+    if (previewDownloadUrl != null) {
+      $result.previewDownloadUrl = previewDownloadUrl;
+    }
+    return $result;
+  }
+  CreateSpaceCustomBackgroundUploadUrlResponse._() : super();
+  factory CreateSpaceCustomBackgroundUploadUrlResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSpaceCustomBackgroundUploadUrlResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceCustomBackgroundUploadUrlResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uploadUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'downloadUrl')
+    ..aOS(3, _omitFieldNames ? '' : 'previewUploadUrl')
+    ..aOS(4, _omitFieldNames ? '' : 'previewDownloadUrl')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSpaceCustomBackgroundUploadUrlResponse clone() => CreateSpaceCustomBackgroundUploadUrlResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSpaceCustomBackgroundUploadUrlResponse copyWith(void Function(CreateSpaceCustomBackgroundUploadUrlResponse) updates) => super.copyWith((message) => updates(message as CreateSpaceCustomBackgroundUploadUrlResponse)) as CreateSpaceCustomBackgroundUploadUrlResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceCustomBackgroundUploadUrlResponse create() => CreateSpaceCustomBackgroundUploadUrlResponse._();
+  CreateSpaceCustomBackgroundUploadUrlResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSpaceCustomBackgroundUploadUrlResponse> createRepeated() => $pb.PbList<CreateSpaceCustomBackgroundUploadUrlResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceCustomBackgroundUploadUrlResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSpaceCustomBackgroundUploadUrlResponse>(create);
+  static CreateSpaceCustomBackgroundUploadUrlResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uploadUrl => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uploadUrl($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUploadUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUploadUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get downloadUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set downloadUrl($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDownloadUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDownloadUrl() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get previewUploadUrl => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set previewUploadUrl($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPreviewUploadUrl() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPreviewUploadUrl() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get previewDownloadUrl => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set previewDownloadUrl($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasPreviewDownloadUrl() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearPreviewDownloadUrl() => clearField(4);
+}
+
+class CreateSpaceIconUploadUrlRequest extends $pb.GeneratedMessage {
+  factory CreateSpaceIconUploadUrlRequest({
+    $core.String? spaceId,
+    $fixnum.Int64? size,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (size != null) {
+      $result.size = size;
+    }
+    return $result;
+  }
+  CreateSpaceIconUploadUrlRequest._() : super();
+  factory CreateSpaceIconUploadUrlRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSpaceIconUploadUrlRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceIconUploadUrlRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'size', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSpaceIconUploadUrlRequest clone() => CreateSpaceIconUploadUrlRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSpaceIconUploadUrlRequest copyWith(void Function(CreateSpaceIconUploadUrlRequest) updates) => super.copyWith((message) => updates(message as CreateSpaceIconUploadUrlRequest)) as CreateSpaceIconUploadUrlRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceIconUploadUrlRequest create() => CreateSpaceIconUploadUrlRequest._();
+  CreateSpaceIconUploadUrlRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSpaceIconUploadUrlRequest> createRepeated() => $pb.PbList<CreateSpaceIconUploadUrlRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceIconUploadUrlRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSpaceIconUploadUrlRequest>(create);
+  static CreateSpaceIconUploadUrlRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get size => $_getI64(1);
+  @$pb.TagNumber(2)
+  set size($fixnum.Int64 v) { $_setInt64(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSize() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSize() => clearField(2);
+}
+
+class CreateSpaceIconUploadUrlResponse extends $pb.GeneratedMessage {
+  factory CreateSpaceIconUploadUrlResponse({
+    $core.String? uploadUrl,
+    $core.String? downloadUrl,
+  }) {
+    final $result = create();
+    if (uploadUrl != null) {
+      $result.uploadUrl = uploadUrl;
+    }
+    if (downloadUrl != null) {
+      $result.downloadUrl = downloadUrl;
+    }
+    return $result;
+  }
+  CreateSpaceIconUploadUrlResponse._() : super();
+  factory CreateSpaceIconUploadUrlResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSpaceIconUploadUrlResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceIconUploadUrlResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uploadUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'downloadUrl')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSpaceIconUploadUrlResponse clone() => CreateSpaceIconUploadUrlResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSpaceIconUploadUrlResponse copyWith(void Function(CreateSpaceIconUploadUrlResponse) updates) => super.copyWith((message) => updates(message as CreateSpaceIconUploadUrlResponse)) as CreateSpaceIconUploadUrlResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceIconUploadUrlResponse create() => CreateSpaceIconUploadUrlResponse._();
+  CreateSpaceIconUploadUrlResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSpaceIconUploadUrlResponse> createRepeated() => $pb.PbList<CreateSpaceIconUploadUrlResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSpaceIconUploadUrlResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSpaceIconUploadUrlResponse>(create);
+  static CreateSpaceIconUploadUrlResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uploadUrl => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uploadUrl($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUploadUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUploadUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get downloadUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set downloadUrl($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDownloadUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDownloadUrl() => clearField(2);
+}
+
 class UpdateUserSpaceOrderRequest extends $pb.GeneratedMessage {
   factory UpdateUserSpaceOrderRequest({
     $core.String? uid,
@@ -1421,6 +1747,7 @@ class SpaceDocument_Metadata extends $pb.GeneratedMessage {
     $core.String? avatarImageHash,
     $core.String? bannerImageUrl,
     $core.String? bannerImageHash,
+    $core.Iterable<CustomBackground>? customBackgrounds,
   }) {
     final $result = create();
     if (name != null) {
@@ -1441,6 +1768,9 @@ class SpaceDocument_Metadata extends $pb.GeneratedMessage {
     if (bannerImageHash != null) {
       $result.bannerImageHash = bannerImageHash;
     }
+    if (customBackgrounds != null) {
+      $result.customBackgrounds.addAll(customBackgrounds);
+    }
     return $result;
   }
   SpaceDocument_Metadata._() : super();
@@ -1454,6 +1784,7 @@ class SpaceDocument_Metadata extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'avatarImageHash')
     ..aOS(5, _omitFieldNames ? '' : 'bannerImageUrl')
     ..aOS(6, _omitFieldNames ? '' : 'bannerImageHash')
+    ..pc<CustomBackground>(11, _omitFieldNames ? '' : 'customBackgrounds', $pb.PbFieldType.PM, subBuilder: CustomBackground.create)
     ..hasRequiredFields = false
   ;
 
@@ -1531,6 +1862,9 @@ class SpaceDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasBannerImageHash() => $_has(5);
   @$pb.TagNumber(6)
   void clearBannerImageHash() => clearField(6);
+
+  @$pb.TagNumber(11)
+  $core.List<CustomBackground> get customBackgrounds => $_getList(6);
 }
 
 class SpaceDocument extends $pb.GeneratedMessage {
@@ -1545,8 +1879,6 @@ class SpaceDocument extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? searchTerms,
     DOCUMENT_STATUS? documentStatus,
     $core.List<$core.int>? customization,
-    $core.Iterable<CustomBackground>? customVideos,
-    $core.Iterable<CustomBackground>? customImages,
   }) {
     final $result = create();
     if (status != null) {
@@ -1579,12 +1911,6 @@ class SpaceDocument extends $pb.GeneratedMessage {
     if (customization != null) {
       $result.customization = customization;
     }
-    if (customVideos != null) {
-      $result.customVideos.addAll(customVideos);
-    }
-    if (customImages != null) {
-      $result.customImages.addAll(customImages);
-    }
     return $result;
   }
   SpaceDocument._() : super();
@@ -1602,8 +1928,6 @@ class SpaceDocument extends $pb.GeneratedMessage {
     ..pPS(8, _omitFieldNames ? '' : 'searchTerms')
     ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..a<$core.List<$core.int>>(10, _omitFieldNames ? '' : 'customization', $pb.PbFieldType.OY)
-    ..pc<CustomBackground>(11, _omitFieldNames ? '' : 'customVideos', $pb.PbFieldType.PM, subBuilder: CustomBackground.create)
-    ..pc<CustomBackground>(12, _omitFieldNames ? '' : 'customImages', $pb.PbFieldType.PM, subBuilder: CustomBackground.create)
     ..hasRequiredFields = false
   ;
 
@@ -1713,12 +2037,6 @@ class SpaceDocument extends $pb.GeneratedMessage {
   $core.bool hasCustomization() => $_has(9);
   @$pb.TagNumber(10)
   void clearCustomization() => clearField(10);
-
-  @$pb.TagNumber(11)
-  $core.List<CustomBackground> get customVideos => $_getList(10);
-
-  @$pb.TagNumber(12)
-  $core.List<CustomBackground> get customImages => $_getList(11);
 }
 
 class CustomBackground extends $pb.GeneratedMessage {

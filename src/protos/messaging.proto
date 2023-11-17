@@ -704,6 +704,7 @@ message CreateDirectChannelCallJoinTokenRequest {
     string space_id = 2;
     string message_id = 3;
     string thread_channel_id = 4;
+    string session = 5;
 }
 
 message CreateDirectChannelCallJoinTokenResponse {

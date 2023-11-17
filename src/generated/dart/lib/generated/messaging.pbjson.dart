@@ -1568,6 +1568,7 @@ const CreateDirectChannelCallJoinTokenRequest$json = {
     {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
+    {'1': 'session', '3': 5, '4': 1, '5': 9, '10': 'session'},
   ],
 };
 
@@ -1576,7 +1577,7 @@ final $typed_data.Uint8List createDirectChannelCallJoinTokenRequestDescriptor = 
     'CidDcmVhdGVEaXJlY3RDaGFubmVsQ2FsbEpvaW5Ub2tlblJlcXVlc3QSHQoKY2hhbm5lbF9pZB'
     'gBIAEoCVIJY2hhbm5lbElkEhkKCHNwYWNlX2lkGAIgASgJUgdzcGFjZUlkEh0KCm1lc3NhZ2Vf'
     'aWQYAyABKAlSCW1lc3NhZ2VJZBIqChF0aHJlYWRfY2hhbm5lbF9pZBgEIAEoCVIPdGhyZWFkQ2'
-    'hhbm5lbElk');
+    'hhbm5lbElkEhgKB3Nlc3Npb24YBSABKAlSB3Nlc3Npb24=');
 
 @$core.Deprecated('Use createDirectChannelCallJoinTokenResponseDescriptor instead')
 const CreateDirectChannelCallJoinTokenResponse$json = {

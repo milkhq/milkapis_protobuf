@@ -6678,6 +6678,7 @@ class CreateDirectChannelCallJoinTokenRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $core.String? messageId,
     $core.String? threadChannelId,
+    $core.String? session,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -6692,6 +6693,9 @@ class CreateDirectChannelCallJoinTokenRequest extends $pb.GeneratedMessage {
     if (threadChannelId != null) {
       $result.threadChannelId = threadChannelId;
     }
+    if (session != null) {
+      $result.session = session;
+    }
     return $result;
   }
   CreateDirectChannelCallJoinTokenRequest._() : super();
@@ -6703,6 +6707,7 @@ class CreateDirectChannelCallJoinTokenRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'spaceId')
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
+    ..aOS(5, _omitFieldNames ? '' : 'session')
     ..hasRequiredFields = false
   ;
 
@@ -6762,6 +6767,15 @@ class CreateDirectChannelCallJoinTokenRequest extends $pb.GeneratedMessage {
   $core.bool hasThreadChannelId() => $_has(3);
   @$pb.TagNumber(4)
   void clearThreadChannelId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get session => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set session($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasSession() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearSession() => clearField(5);
 }
 
 class CreateDirectChannelCallJoinTokenResponse extends $pb.GeneratedMessage {

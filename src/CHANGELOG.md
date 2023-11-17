@@ -1,3 +1,7 @@
+## 0.0.23
+
+ - **FEAT**: allow multiple call token for a single user.
+
 ## 0.0.22
 
  - **FEAT**: added icon and background uploads.

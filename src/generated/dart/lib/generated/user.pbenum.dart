@@ -144,6 +144,7 @@ class SOCIAL extends $pb.ProtobufEnum {
   static const SOCIAL TUMBLR = SOCIAL._(12, _omitEnumNames ? '' : 'TUMBLR');
   static const SOCIAL YOUTUBE = SOCIAL._(14, _omitEnumNames ? '' : 'YOUTUBE');
   static const SOCIAL DISCORD = SOCIAL._(15, _omitEnumNames ? '' : 'DISCORD');
+  static const SOCIAL ANONYMOUS = SOCIAL._(16, _omitEnumNames ? '' : 'ANONYMOUS');
 
   static const $core.List<SOCIAL> values = <SOCIAL> [
     FACEBOOK,
@@ -158,6 +159,7 @@ class SOCIAL extends $pb.ProtobufEnum {
     TUMBLR,
     YOUTUBE,
     DISCORD,
+    ANONYMOUS,
   ];
 
   static final $core.Map<$core.int, SOCIAL> _byValue = $pb.ProtobufEnum.initByValue(values);

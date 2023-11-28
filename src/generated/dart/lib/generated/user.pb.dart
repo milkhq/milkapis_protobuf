@@ -18,6 +18,106 @@ import 'user.pbenum.dart';
 
 export 'user.pbenum.dart';
 
+class CreateAnonymousUserRequest extends $pb.GeneratedMessage {
+  factory CreateAnonymousUserRequest({
+    $core.String? displayName,
+  }) {
+    final $result = create();
+    if (displayName != null) {
+      $result.displayName = displayName;
+    }
+    return $result;
+  }
+  CreateAnonymousUserRequest._() : super();
+  factory CreateAnonymousUserRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateAnonymousUserRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateAnonymousUserRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'displayName')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateAnonymousUserRequest clone() => CreateAnonymousUserRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateAnonymousUserRequest copyWith(void Function(CreateAnonymousUserRequest) updates) => super.copyWith((message) => updates(message as CreateAnonymousUserRequest)) as CreateAnonymousUserRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateAnonymousUserRequest create() => CreateAnonymousUserRequest._();
+  CreateAnonymousUserRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateAnonymousUserRequest> createRepeated() => $pb.PbList<CreateAnonymousUserRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateAnonymousUserRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateAnonymousUserRequest>(create);
+  static CreateAnonymousUserRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get displayName => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set displayName($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDisplayName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDisplayName() => clearField(1);
+}
+
+class CreateAnonymousUserResponse extends $pb.GeneratedMessage {
+  factory CreateAnonymousUserResponse({
+    $core.String? customToken,
+  }) {
+    final $result = create();
+    if (customToken != null) {
+      $result.customToken = customToken;
+    }
+    return $result;
+  }
+  CreateAnonymousUserResponse._() : super();
+  factory CreateAnonymousUserResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateAnonymousUserResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateAnonymousUserResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'customToken')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateAnonymousUserResponse clone() => CreateAnonymousUserResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateAnonymousUserResponse copyWith(void Function(CreateAnonymousUserResponse) updates) => super.copyWith((message) => updates(message as CreateAnonymousUserResponse)) as CreateAnonymousUserResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateAnonymousUserResponse create() => CreateAnonymousUserResponse._();
+  CreateAnonymousUserResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateAnonymousUserResponse> createRepeated() => $pb.PbList<CreateAnonymousUserResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateAnonymousUserResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateAnonymousUserResponse>(create);
+  static CreateAnonymousUserResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get customToken => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set customToken($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCustomToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCustomToken() => clearField(1);
+}
+
 class GetUserCustomizationProfileRequest extends $pb.GeneratedMessage {
   factory GetUserCustomizationProfileRequest({
     $core.String? uid,

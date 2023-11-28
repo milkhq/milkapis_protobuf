@@ -125,6 +125,7 @@ const SOCIAL$json = {
     {'1': 'TUMBLR', '2': 12},
     {'1': 'YOUTUBE', '2': 14},
     {'1': 'DISCORD', '2': 15},
+    {'1': 'ANONYMOUS', '2': 16},
   ],
 };
 
@@ -133,7 +134,33 @@ final $typed_data.Uint8List sOCIALDescriptor = $convert.base64Decode(
     'CgZTT0NJQUwSDAoIRkFDRUJPT0sQABIKCgZHT09HTEUQARILCgdUV0lUVEVSEAISCgoGR0lUSF'
     'VCEAMSDAoITElOS0VESU4QBBINCglNSUNST1NPRlQQBRINCglJTlNUQUdSQU0QCRINCglQSU5U'
     'RVJFU1QQChIKCgZSRURESVQQCxIKCgZUVU1CTFIQDBILCgdZT1VUVUJFEA4SCwoHRElTQ09SRB'
-    'AP');
+    'APEg0KCUFOT05ZTU9VUxAQ');
+
+@$core.Deprecated('Use createAnonymousUserRequestDescriptor instead')
+const CreateAnonymousUserRequest$json = {
+  '1': 'CreateAnonymousUserRequest',
+  '2': [
+    {'1': 'display_name', '3': 1, '4': 1, '5': 9, '10': 'displayName'},
+  ],
+};
+
+/// Descriptor for `CreateAnonymousUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAnonymousUserRequestDescriptor = $convert.base64Decode(
+    'ChpDcmVhdGVBbm9ueW1vdXNVc2VyUmVxdWVzdBIhCgxkaXNwbGF5X25hbWUYASABKAlSC2Rpc3'
+    'BsYXlOYW1l');
+
+@$core.Deprecated('Use createAnonymousUserResponseDescriptor instead')
+const CreateAnonymousUserResponse$json = {
+  '1': 'CreateAnonymousUserResponse',
+  '2': [
+    {'1': 'custom_token', '3': 1, '4': 1, '5': 9, '10': 'customToken'},
+  ],
+};
+
+/// Descriptor for `CreateAnonymousUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createAnonymousUserResponseDescriptor = $convert.base64Decode(
+    'ChtDcmVhdGVBbm9ueW1vdXNVc2VyUmVzcG9uc2USIQoMY3VzdG9tX3Rva2VuGAEgASgJUgtjdX'
+    'N0b21Ub2tlbg==');
 
 @$core.Deprecated('Use getUserCustomizationProfileRequestDescriptor instead')
 const GetUserCustomizationProfileRequest$json = {

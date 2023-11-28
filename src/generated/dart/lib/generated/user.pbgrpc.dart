@@ -25,6 +25,10 @@ class UserClient extends $grpc.Client {
       '/user.User/CreateUser',
       ($0.CreateUserRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.CreateUserResponse.fromBuffer(value));
+  static final _$createAnonymousUser = $grpc.ClientMethod<$0.CreateAnonymousUserRequest, $0.CreateAnonymousUserResponse>(
+      '/user.User/CreateAnonymousUser',
+      ($0.CreateAnonymousUserRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CreateAnonymousUserResponse.fromBuffer(value));
   static final _$createUserEmailPassword = $grpc.ClientMethod<$0.CreateUserEmailPasswordRequest, $0.CreateUserEmailPasswordResponse>(
       '/user.User/CreateUserEmailPassword',
       ($0.CreateUserEmailPasswordRequest value) => value.writeToBuffer(),
@@ -98,6 +102,10 @@ class UserClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$0.CreateUserResponse> createUser($0.CreateUserRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createUser, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateAnonymousUserResponse> createAnonymousUser($0.CreateAnonymousUserRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createAnonymousUser, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.CreateUserEmailPasswordResponse> createUserEmailPassword($0.CreateUserEmailPasswordRequest request, {$grpc.CallOptions? options}) {
@@ -177,6 +185,13 @@ abstract class UserServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.CreateUserRequest.fromBuffer(value),
         ($0.CreateUserResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateAnonymousUserRequest, $0.CreateAnonymousUserResponse>(
+        'CreateAnonymousUser',
+        createAnonymousUser_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.CreateAnonymousUserRequest.fromBuffer(value),
+        ($0.CreateAnonymousUserResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.CreateUserEmailPasswordRequest, $0.CreateUserEmailPasswordResponse>(
         'CreateUserEmailPassword',
         createUserEmailPassword_Pre,
@@ -295,6 +310,10 @@ abstract class UserServiceBase extends $grpc.Service {
     return createUser(call, await request);
   }
 
+  $async.Future<$0.CreateAnonymousUserResponse> createAnonymousUser_Pre($grpc.ServiceCall call, $async.Future<$0.CreateAnonymousUserRequest> request) async {
+    return createAnonymousUser(call, await request);
+  }
+
   $async.Future<$0.CreateUserEmailPasswordResponse> createUserEmailPassword_Pre($grpc.ServiceCall call, $async.Future<$0.CreateUserEmailPasswordRequest> request) async {
     return createUserEmailPassword(call, await request);
   }
@@ -360,6 +379,7 @@ abstract class UserServiceBase extends $grpc.Service {
   }
 
   $async.Future<$0.CreateUserResponse> createUser($grpc.ServiceCall call, $0.CreateUserRequest request);
+  $async.Future<$0.CreateAnonymousUserResponse> createAnonymousUser($grpc.ServiceCall call, $0.CreateAnonymousUserRequest request);
   $async.Future<$0.CreateUserEmailPasswordResponse> createUserEmailPassword($grpc.ServiceCall call, $0.CreateUserEmailPasswordRequest request);
   $async.Future<$0.UpdateUserMetadataResponse> updateUserMetadata($grpc.ServiceCall call, $0.UpdateUserMetadataRequest request);
   $async.Future<$0.UpdateUserStatusResponse> deleteUser($grpc.ServiceCall call, $0.UpdateUserStatusRequest request);

@@ -1,3 +1,7 @@
+## 0.0.24
+
+ - **FEAT**: added anonymous login.
+
 ## 0.0.23
 
  - **FEAT**: allow multiple call token for a single user.

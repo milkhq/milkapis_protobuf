@@ -4,6 +4,7 @@ package user;
 
 service User {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+  rpc CreateAnonymousUser(CreateAnonymousUserRequest) returns (CreateAnonymousUserResponse);
   rpc CreateUserEmailPassword(CreateUserEmailPasswordRequest)
       returns (CreateUserEmailPasswordResponse);
   rpc UpdateUserMetadata(UpdateUserMetadataRequest) returns (UpdateUserMetadataResponse);
@@ -27,6 +28,14 @@ enum DOCUMENT_STATUS {
   PENDING = 0;
   APPROVED = 1;
   REJECTED = 2;
+}
+
+message CreateAnonymousUserRequest {
+  string display_name = 1;
+}
+
+message CreateAnonymousUserResponse {
+  string custom_token = 1;
 }
 
 message GetUserCustomizationProfileRequest {
@@ -129,6 +138,7 @@ enum SOCIAL {
   TUMBLR = 12;
   YOUTUBE = 14;
   DISCORD = 15;
+  ANONYMOUS = 16;
 }
 
 message QueryUserRequest {

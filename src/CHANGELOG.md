@@ -1,3 +1,7 @@
+## 0.0.25
+
+ - **FEAT**: added user profile banner and effect apis.
+
 ## 0.0.24
 
  - **FEAT**: added anonymous login.

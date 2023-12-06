@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-12-06
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`milkapis_protobuf` - `v0.0.25`](#milkapis_protobuf---v0025)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.25`
+
+ - **FEAT**: added user profile banner and effect apis.
+
+
 ## 2023-11-28
 
 ### Changes

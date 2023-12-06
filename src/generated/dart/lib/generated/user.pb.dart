@@ -18,6 +18,356 @@ import 'user.pbenum.dart';
 
 export 'user.pbenum.dart';
 
+class GenerateUserProfileBannerRequest extends $pb.GeneratedMessage {
+  factory GenerateUserProfileBannerRequest({
+    $core.String? prompt,
+    $core.String? negativePrompt,
+    $core.String? stylePreset,
+  }) {
+    final $result = create();
+    if (prompt != null) {
+      $result.prompt = prompt;
+    }
+    if (negativePrompt != null) {
+      $result.negativePrompt = negativePrompt;
+    }
+    if (stylePreset != null) {
+      $result.stylePreset = stylePreset;
+    }
+    return $result;
+  }
+  GenerateUserProfileBannerRequest._() : super();
+  factory GenerateUserProfileBannerRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GenerateUserProfileBannerRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenerateUserProfileBannerRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'prompt')
+    ..aOS(2, _omitFieldNames ? '' : 'negativePrompt')
+    ..aOS(3, _omitFieldNames ? '' : 'stylePreset')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GenerateUserProfileBannerRequest clone() => GenerateUserProfileBannerRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GenerateUserProfileBannerRequest copyWith(void Function(GenerateUserProfileBannerRequest) updates) => super.copyWith((message) => updates(message as GenerateUserProfileBannerRequest)) as GenerateUserProfileBannerRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GenerateUserProfileBannerRequest create() => GenerateUserProfileBannerRequest._();
+  GenerateUserProfileBannerRequest createEmptyInstance() => create();
+  static $pb.PbList<GenerateUserProfileBannerRequest> createRepeated() => $pb.PbList<GenerateUserProfileBannerRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GenerateUserProfileBannerRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GenerateUserProfileBannerRequest>(create);
+  static GenerateUserProfileBannerRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get prompt => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set prompt($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasPrompt() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearPrompt() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get negativePrompt => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set negativePrompt($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasNegativePrompt() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearNegativePrompt() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get stylePreset => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set stylePreset($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasStylePreset() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStylePreset() => clearField(3);
+}
+
+class GenerateUserProfileBannerResponse extends $pb.GeneratedMessage {
+  factory GenerateUserProfileBannerResponse({
+    $core.Iterable<$core.String>? bannerImages,
+  }) {
+    final $result = create();
+    if (bannerImages != null) {
+      $result.bannerImages.addAll(bannerImages);
+    }
+    return $result;
+  }
+  GenerateUserProfileBannerResponse._() : super();
+  factory GenerateUserProfileBannerResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GenerateUserProfileBannerResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GenerateUserProfileBannerResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'bannerImages')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GenerateUserProfileBannerResponse clone() => GenerateUserProfileBannerResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GenerateUserProfileBannerResponse copyWith(void Function(GenerateUserProfileBannerResponse) updates) => super.copyWith((message) => updates(message as GenerateUserProfileBannerResponse)) as GenerateUserProfileBannerResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GenerateUserProfileBannerResponse create() => GenerateUserProfileBannerResponse._();
+  GenerateUserProfileBannerResponse createEmptyInstance() => create();
+  static $pb.PbList<GenerateUserProfileBannerResponse> createRepeated() => $pb.PbList<GenerateUserProfileBannerResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GenerateUserProfileBannerResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GenerateUserProfileBannerResponse>(create);
+  static GenerateUserProfileBannerResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get bannerImages => $_getList(0);
+}
+
+class CreateUserProfilePictureUploadURLRequest extends $pb.GeneratedMessage {
+  factory CreateUserProfilePictureUploadURLRequest({
+    $fixnum.Int64? contentLength,
+  }) {
+    final $result = create();
+    if (contentLength != null) {
+      $result.contentLength = contentLength;
+    }
+    return $result;
+  }
+  CreateUserProfilePictureUploadURLRequest._() : super();
+  factory CreateUserProfilePictureUploadURLRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateUserProfilePictureUploadURLRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserProfilePictureUploadURLRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'contentLength', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateUserProfilePictureUploadURLRequest clone() => CreateUserProfilePictureUploadURLRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateUserProfilePictureUploadURLRequest copyWith(void Function(CreateUserProfilePictureUploadURLRequest) updates) => super.copyWith((message) => updates(message as CreateUserProfilePictureUploadURLRequest)) as CreateUserProfilePictureUploadURLRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfilePictureUploadURLRequest create() => CreateUserProfilePictureUploadURLRequest._();
+  CreateUserProfilePictureUploadURLRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateUserProfilePictureUploadURLRequest> createRepeated() => $pb.PbList<CreateUserProfilePictureUploadURLRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfilePictureUploadURLRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateUserProfilePictureUploadURLRequest>(create);
+  static CreateUserProfilePictureUploadURLRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get contentLength => $_getI64(0);
+  @$pb.TagNumber(1)
+  set contentLength($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasContentLength() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearContentLength() => clearField(1);
+}
+
+class CreateUserProfilePictureUploadURLResponse extends $pb.GeneratedMessage {
+  factory CreateUserProfilePictureUploadURLResponse({
+    $core.String? uploadUrl,
+    $core.String? downloadUrl,
+  }) {
+    final $result = create();
+    if (uploadUrl != null) {
+      $result.uploadUrl = uploadUrl;
+    }
+    if (downloadUrl != null) {
+      $result.downloadUrl = downloadUrl;
+    }
+    return $result;
+  }
+  CreateUserProfilePictureUploadURLResponse._() : super();
+  factory CreateUserProfilePictureUploadURLResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateUserProfilePictureUploadURLResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserProfilePictureUploadURLResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uploadUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'downloadUrl')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateUserProfilePictureUploadURLResponse clone() => CreateUserProfilePictureUploadURLResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateUserProfilePictureUploadURLResponse copyWith(void Function(CreateUserProfilePictureUploadURLResponse) updates) => super.copyWith((message) => updates(message as CreateUserProfilePictureUploadURLResponse)) as CreateUserProfilePictureUploadURLResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfilePictureUploadURLResponse create() => CreateUserProfilePictureUploadURLResponse._();
+  CreateUserProfilePictureUploadURLResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateUserProfilePictureUploadURLResponse> createRepeated() => $pb.PbList<CreateUserProfilePictureUploadURLResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfilePictureUploadURLResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateUserProfilePictureUploadURLResponse>(create);
+  static CreateUserProfilePictureUploadURLResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uploadUrl => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uploadUrl($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUploadUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUploadUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get downloadUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set downloadUrl($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDownloadUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDownloadUrl() => clearField(2);
+}
+
+class CreateUserProfileBannerUploadURLRequest extends $pb.GeneratedMessage {
+  factory CreateUserProfileBannerUploadURLRequest({
+    $fixnum.Int64? contentLength,
+  }) {
+    final $result = create();
+    if (contentLength != null) {
+      $result.contentLength = contentLength;
+    }
+    return $result;
+  }
+  CreateUserProfileBannerUploadURLRequest._() : super();
+  factory CreateUserProfileBannerUploadURLRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateUserProfileBannerUploadURLRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserProfileBannerUploadURLRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 'contentLength', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateUserProfileBannerUploadURLRequest clone() => CreateUserProfileBannerUploadURLRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateUserProfileBannerUploadURLRequest copyWith(void Function(CreateUserProfileBannerUploadURLRequest) updates) => super.copyWith((message) => updates(message as CreateUserProfileBannerUploadURLRequest)) as CreateUserProfileBannerUploadURLRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfileBannerUploadURLRequest create() => CreateUserProfileBannerUploadURLRequest._();
+  CreateUserProfileBannerUploadURLRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateUserProfileBannerUploadURLRequest> createRepeated() => $pb.PbList<CreateUserProfileBannerUploadURLRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfileBannerUploadURLRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateUserProfileBannerUploadURLRequest>(create);
+  static CreateUserProfileBannerUploadURLRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get contentLength => $_getI64(0);
+  @$pb.TagNumber(1)
+  set contentLength($fixnum.Int64 v) { $_setInt64(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasContentLength() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearContentLength() => clearField(1);
+}
+
+class CreateUserProfileBannerUploadURLResponse extends $pb.GeneratedMessage {
+  factory CreateUserProfileBannerUploadURLResponse({
+    $core.String? uploadUrl,
+    $core.String? downloadUrl,
+  }) {
+    final $result = create();
+    if (uploadUrl != null) {
+      $result.uploadUrl = uploadUrl;
+    }
+    if (downloadUrl != null) {
+      $result.downloadUrl = downloadUrl;
+    }
+    return $result;
+  }
+  CreateUserProfileBannerUploadURLResponse._() : super();
+  factory CreateUserProfileBannerUploadURLResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateUserProfileBannerUploadURLResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserProfileBannerUploadURLResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uploadUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'downloadUrl')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateUserProfileBannerUploadURLResponse clone() => CreateUserProfileBannerUploadURLResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateUserProfileBannerUploadURLResponse copyWith(void Function(CreateUserProfileBannerUploadURLResponse) updates) => super.copyWith((message) => updates(message as CreateUserProfileBannerUploadURLResponse)) as CreateUserProfileBannerUploadURLResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfileBannerUploadURLResponse create() => CreateUserProfileBannerUploadURLResponse._();
+  CreateUserProfileBannerUploadURLResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateUserProfileBannerUploadURLResponse> createRepeated() => $pb.PbList<CreateUserProfileBannerUploadURLResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateUserProfileBannerUploadURLResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateUserProfileBannerUploadURLResponse>(create);
+  static CreateUserProfileBannerUploadURLResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uploadUrl => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uploadUrl($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUploadUrl() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUploadUrl() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get downloadUrl => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set downloadUrl($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDownloadUrl() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDownloadUrl() => clearField(2);
+}
+
 class CreateAnonymousUserRequest extends $pb.GeneratedMessage {
   factory CreateAnonymousUserRequest({
     $core.String? displayName,
@@ -850,6 +1200,9 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     $core.String? avatarImageHash,
     $core.String? bannerImageUrl,
     $core.String? bannerImageHash,
+    $fixnum.Int64? updatedAt,
+    UserDocument_UserProfileEffectsV1? effect,
+    $core.String? effectParameters,
   }) {
     final $result = create();
     if (username != null) {
@@ -882,6 +1235,15 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     if (bannerImageHash != null) {
       $result.bannerImageHash = bannerImageHash;
     }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
+    if (effect != null) {
+      $result.effect = effect;
+    }
+    if (effectParameters != null) {
+      $result.effectParameters = effectParameters;
+    }
     return $result;
   }
   UserDocument_Metadata._() : super();
@@ -899,6 +1261,9 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     ..aOS(8, _omitFieldNames ? '' : 'avatarImageHash')
     ..aOS(9, _omitFieldNames ? '' : 'bannerImageUrl')
     ..aOS(10, _omitFieldNames ? '' : 'bannerImageHash')
+    ..a<$fixnum.Int64>(11, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<UserDocument_UserProfileEffectsV1>(12, _omitFieldNames ? '' : 'effect', $pb.PbFieldType.OE, defaultOrMaker: UserDocument_UserProfileEffectsV1.NONE, valueOf: UserDocument_UserProfileEffectsV1.valueOf, enumValues: UserDocument_UserProfileEffectsV1.values)
+    ..aOS(13, _omitFieldNames ? '' : 'effectParameters')
     ..hasRequiredFields = false
   ;
 
@@ -1012,6 +1377,33 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasBannerImageHash() => $_has(9);
   @$pb.TagNumber(10)
   void clearBannerImageHash() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $fixnum.Int64 get updatedAt => $_getI64(10);
+  @$pb.TagNumber(11)
+  set updatedAt($fixnum.Int64 v) { $_setInt64(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasUpdatedAt() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearUpdatedAt() => clearField(11);
+
+  @$pb.TagNumber(12)
+  UserDocument_UserProfileEffectsV1 get effect => $_getN(11);
+  @$pb.TagNumber(12)
+  set effect(UserDocument_UserProfileEffectsV1 v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasEffect() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearEffect() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.String get effectParameters => $_getSZ(12);
+  @$pb.TagNumber(13)
+  set effectParameters($core.String v) { $_setString(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasEffectParameters() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearEffectParameters() => clearField(13);
 }
 
 class UserDocument extends $pb.GeneratedMessage {

@@ -168,5 +168,20 @@ class SOCIAL extends $pb.ProtobufEnum {
   const SOCIAL._($core.int v, $core.String n) : super(v, n);
 }
 
+class UserDocument_UserProfileEffectsV1 extends $pb.ProtobufEnum {
+  static const UserDocument_UserProfileEffectsV1 NONE = UserDocument_UserProfileEffectsV1._(0, _omitEnumNames ? '' : 'NONE');
+  static const UserDocument_UserProfileEffectsV1 FORCE_LIGHTNING = UserDocument_UserProfileEffectsV1._(1, _omitEnumNames ? '' : 'FORCE_LIGHTNING');
+
+  static const $core.List<UserDocument_UserProfileEffectsV1> values = <UserDocument_UserProfileEffectsV1> [
+    NONE,
+    FORCE_LIGHTNING,
+  ];
+
+  static final $core.Map<$core.int, UserDocument_UserProfileEffectsV1> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserDocument_UserProfileEffectsV1? valueOf($core.int value) => _byValue[value];
+
+  const UserDocument_UserProfileEffectsV1._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

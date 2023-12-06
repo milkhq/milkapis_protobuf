@@ -93,6 +93,18 @@ class UserClient extends $grpc.Client {
       '/user.User/ListenUserCustomizationProfiles',
       ($0.ListUserCustomizationProfilesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.CustomizationProfileDocument.fromBuffer(value));
+  static final _$createUserProfilePictureUploadURL = $grpc.ClientMethod<$0.CreateUserProfilePictureUploadURLRequest, $0.CreateUserProfilePictureUploadURLResponse>(
+      '/user.User/CreateUserProfilePictureUploadURL',
+      ($0.CreateUserProfilePictureUploadURLRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CreateUserProfilePictureUploadURLResponse.fromBuffer(value));
+  static final _$createUserProfileBannerUploadURL = $grpc.ClientMethod<$0.CreateUserProfileBannerUploadURLRequest, $0.CreateUserProfileBannerUploadURLResponse>(
+      '/user.User/CreateUserProfileBannerUploadURL',
+      ($0.CreateUserProfileBannerUploadURLRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CreateUserProfileBannerUploadURLResponse.fromBuffer(value));
+  static final _$generateUserProfileBanner = $grpc.ClientMethod<$0.GenerateUserProfileBannerRequest, $0.GenerateUserProfileBannerResponse>(
+      '/user.User/GenerateUserProfileBanner',
+      ($0.GenerateUserProfileBannerRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.GenerateUserProfileBannerResponse.fromBuffer(value));
 
   UserClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -170,6 +182,18 @@ class UserClient extends $grpc.Client {
 
   $grpc.ResponseStream<$0.CustomizationProfileDocument> listenUserCustomizationProfiles($0.ListUserCustomizationProfilesRequest request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$listenUserCustomizationProfiles, $async.Stream.fromIterable([request]), options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateUserProfilePictureUploadURLResponse> createUserProfilePictureUploadURL($0.CreateUserProfilePictureUploadURLRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createUserProfilePictureUploadURL, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateUserProfileBannerUploadURLResponse> createUserProfileBannerUploadURL($0.CreateUserProfileBannerUploadURLRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createUserProfileBannerUploadURL, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GenerateUserProfileBannerResponse> generateUserProfileBanner($0.GenerateUserProfileBannerRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$generateUserProfileBanner, request, options: options);
   }
 }
 
@@ -304,6 +328,27 @@ abstract class UserServiceBase extends $grpc.Service {
         true,
         ($core.List<$core.int> value) => $0.ListUserCustomizationProfilesRequest.fromBuffer(value),
         ($0.CustomizationProfileDocument value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateUserProfilePictureUploadURLRequest, $0.CreateUserProfilePictureUploadURLResponse>(
+        'CreateUserProfilePictureUploadURL',
+        createUserProfilePictureUploadURL_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.CreateUserProfilePictureUploadURLRequest.fromBuffer(value),
+        ($0.CreateUserProfilePictureUploadURLResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateUserProfileBannerUploadURLRequest, $0.CreateUserProfileBannerUploadURLResponse>(
+        'CreateUserProfileBannerUploadURL',
+        createUserProfileBannerUploadURL_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.CreateUserProfileBannerUploadURLRequest.fromBuffer(value),
+        ($0.CreateUserProfileBannerUploadURLResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GenerateUserProfileBannerRequest, $0.GenerateUserProfileBannerResponse>(
+        'GenerateUserProfileBanner',
+        generateUserProfileBanner_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GenerateUserProfileBannerRequest.fromBuffer(value),
+        ($0.GenerateUserProfileBannerResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateUserResponse> createUser_Pre($grpc.ServiceCall call, $async.Future<$0.CreateUserRequest> request) async {
@@ -378,6 +423,18 @@ abstract class UserServiceBase extends $grpc.Service {
     yield* listenUserCustomizationProfiles(call, await request);
   }
 
+  $async.Future<$0.CreateUserProfilePictureUploadURLResponse> createUserProfilePictureUploadURL_Pre($grpc.ServiceCall call, $async.Future<$0.CreateUserProfilePictureUploadURLRequest> request) async {
+    return createUserProfilePictureUploadURL(call, await request);
+  }
+
+  $async.Future<$0.CreateUserProfileBannerUploadURLResponse> createUserProfileBannerUploadURL_Pre($grpc.ServiceCall call, $async.Future<$0.CreateUserProfileBannerUploadURLRequest> request) async {
+    return createUserProfileBannerUploadURL(call, await request);
+  }
+
+  $async.Future<$0.GenerateUserProfileBannerResponse> generateUserProfileBanner_Pre($grpc.ServiceCall call, $async.Future<$0.GenerateUserProfileBannerRequest> request) async {
+    return generateUserProfileBanner(call, await request);
+  }
+
   $async.Future<$0.CreateUserResponse> createUser($grpc.ServiceCall call, $0.CreateUserRequest request);
   $async.Future<$0.CreateAnonymousUserResponse> createAnonymousUser($grpc.ServiceCall call, $0.CreateAnonymousUserRequest request);
   $async.Future<$0.CreateUserEmailPasswordResponse> createUserEmailPassword($grpc.ServiceCall call, $0.CreateUserEmailPasswordRequest request);
@@ -396,4 +453,7 @@ abstract class UserServiceBase extends $grpc.Service {
   $async.Stream<$0.CustomizationProfileDocument> listenUserCustomizationProfile($grpc.ServiceCall call, $0.GetUserCustomizationProfileRequest request);
   $async.Future<$0.CustomizationProfileDocuments> listUserCustomizationProfiles($grpc.ServiceCall call, $0.ListUserCustomizationProfilesRequest request);
   $async.Stream<$0.CustomizationProfileDocument> listenUserCustomizationProfiles($grpc.ServiceCall call, $0.ListUserCustomizationProfilesRequest request);
+  $async.Future<$0.CreateUserProfilePictureUploadURLResponse> createUserProfilePictureUploadURL($grpc.ServiceCall call, $0.CreateUserProfilePictureUploadURLRequest request);
+  $async.Future<$0.CreateUserProfileBannerUploadURLResponse> createUserProfileBannerUploadURL($grpc.ServiceCall call, $0.CreateUserProfileBannerUploadURLRequest request);
+  $async.Future<$0.GenerateUserProfileBannerResponse> generateUserProfileBanner($grpc.ServiceCall call, $0.GenerateUserProfileBannerRequest request);
 }

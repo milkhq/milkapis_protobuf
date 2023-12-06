@@ -136,6 +136,89 @@ final $typed_data.Uint8List sOCIALDescriptor = $convert.base64Decode(
     'RVJFU1QQChIKCgZSRURESVQQCxIKCgZUVU1CTFIQDBILCgdZT1VUVUJFEA4SCwoHRElTQ09SRB'
     'APEg0KCUFOT05ZTU9VUxAQ');
 
+@$core.Deprecated('Use generateUserProfileBannerRequestDescriptor instead')
+const GenerateUserProfileBannerRequest$json = {
+  '1': 'GenerateUserProfileBannerRequest',
+  '2': [
+    {'1': 'prompt', '3': 1, '4': 1, '5': 9, '10': 'prompt'},
+    {'1': 'negative_prompt', '3': 2, '4': 1, '5': 9, '10': 'negativePrompt'},
+    {'1': 'style_preset', '3': 3, '4': 1, '5': 9, '10': 'stylePreset'},
+  ],
+};
+
+/// Descriptor for `GenerateUserProfileBannerRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List generateUserProfileBannerRequestDescriptor = $convert.base64Decode(
+    'CiBHZW5lcmF0ZVVzZXJQcm9maWxlQmFubmVyUmVxdWVzdBIWCgZwcm9tcHQYASABKAlSBnByb2'
+    '1wdBInCg9uZWdhdGl2ZV9wcm9tcHQYAiABKAlSDm5lZ2F0aXZlUHJvbXB0EiEKDHN0eWxlX3By'
+    'ZXNldBgDIAEoCVILc3R5bGVQcmVzZXQ=');
+
+@$core.Deprecated('Use generateUserProfileBannerResponseDescriptor instead')
+const GenerateUserProfileBannerResponse$json = {
+  '1': 'GenerateUserProfileBannerResponse',
+  '2': [
+    {'1': 'banner_images', '3': 1, '4': 3, '5': 9, '10': 'bannerImages'},
+  ],
+};
+
+/// Descriptor for `GenerateUserProfileBannerResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List generateUserProfileBannerResponseDescriptor = $convert.base64Decode(
+    'CiFHZW5lcmF0ZVVzZXJQcm9maWxlQmFubmVyUmVzcG9uc2USIwoNYmFubmVyX2ltYWdlcxgBIA'
+    'MoCVIMYmFubmVySW1hZ2Vz');
+
+@$core.Deprecated('Use createUserProfilePictureUploadURLRequestDescriptor instead')
+const CreateUserProfilePictureUploadURLRequest$json = {
+  '1': 'CreateUserProfilePictureUploadURLRequest',
+  '2': [
+    {'1': 'content_length', '3': 1, '4': 1, '5': 4, '10': 'contentLength'},
+  ],
+};
+
+/// Descriptor for `CreateUserProfilePictureUploadURLRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createUserProfilePictureUploadURLRequestDescriptor = $convert.base64Decode(
+    'CihDcmVhdGVVc2VyUHJvZmlsZVBpY3R1cmVVcGxvYWRVUkxSZXF1ZXN0EiUKDmNvbnRlbnRfbG'
+    'VuZ3RoGAEgASgEUg1jb250ZW50TGVuZ3Ro');
+
+@$core.Deprecated('Use createUserProfilePictureUploadURLResponseDescriptor instead')
+const CreateUserProfilePictureUploadURLResponse$json = {
+  '1': 'CreateUserProfilePictureUploadURLResponse',
+  '2': [
+    {'1': 'upload_url', '3': 1, '4': 1, '5': 9, '10': 'uploadUrl'},
+    {'1': 'download_url', '3': 2, '4': 1, '5': 9, '10': 'downloadUrl'},
+  ],
+};
+
+/// Descriptor for `CreateUserProfilePictureUploadURLResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createUserProfilePictureUploadURLResponseDescriptor = $convert.base64Decode(
+    'CilDcmVhdGVVc2VyUHJvZmlsZVBpY3R1cmVVcGxvYWRVUkxSZXNwb25zZRIdCgp1cGxvYWRfdX'
+    'JsGAEgASgJUgl1cGxvYWRVcmwSIQoMZG93bmxvYWRfdXJsGAIgASgJUgtkb3dubG9hZFVybA==');
+
+@$core.Deprecated('Use createUserProfileBannerUploadURLRequestDescriptor instead')
+const CreateUserProfileBannerUploadURLRequest$json = {
+  '1': 'CreateUserProfileBannerUploadURLRequest',
+  '2': [
+    {'1': 'content_length', '3': 1, '4': 1, '5': 4, '10': 'contentLength'},
+  ],
+};
+
+/// Descriptor for `CreateUserProfileBannerUploadURLRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createUserProfileBannerUploadURLRequestDescriptor = $convert.base64Decode(
+    'CidDcmVhdGVVc2VyUHJvZmlsZUJhbm5lclVwbG9hZFVSTFJlcXVlc3QSJQoOY29udGVudF9sZW'
+    '5ndGgYASABKARSDWNvbnRlbnRMZW5ndGg=');
+
+@$core.Deprecated('Use createUserProfileBannerUploadURLResponseDescriptor instead')
+const CreateUserProfileBannerUploadURLResponse$json = {
+  '1': 'CreateUserProfileBannerUploadURLResponse',
+  '2': [
+    {'1': 'upload_url', '3': 1, '4': 1, '5': 9, '10': 'uploadUrl'},
+    {'1': 'download_url', '3': 2, '4': 1, '5': 9, '10': 'downloadUrl'},
+  ],
+};
+
+/// Descriptor for `CreateUserProfileBannerUploadURLResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createUserProfileBannerUploadURLResponseDescriptor = $convert.base64Decode(
+    'CihDcmVhdGVVc2VyUHJvZmlsZUJhbm5lclVwbG9hZFVSTFJlc3BvbnNlEh0KCnVwbG9hZF91cm'
+    'wYASABKAlSCXVwbG9hZFVybBIhCgxkb3dubG9hZF91cmwYAiABKAlSC2Rvd25sb2FkVXJs');
+
 @$core.Deprecated('Use createAnonymousUserRequestDescriptor instead')
 const CreateAnonymousUserRequest$json = {
   '1': 'CreateAnonymousUserRequest',
@@ -341,6 +424,7 @@ const UserDocument$json = {
     {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '10': 'documentStatus'},
   ],
   '3': [UserDocument_Metadata$json],
+  '4': [UserDocument_UserProfileEffectsV1$json],
 };
 
 @$core.Deprecated('Use userDocumentDescriptor instead')
@@ -357,6 +441,18 @@ const UserDocument_Metadata$json = {
     {'1': 'avatar_image_hash', '3': 8, '4': 1, '5': 9, '10': 'avatarImageHash'},
     {'1': 'banner_image_url', '3': 9, '4': 1, '5': 9, '10': 'bannerImageUrl'},
     {'1': 'banner_image_hash', '3': 10, '4': 1, '5': 9, '10': 'bannerImageHash'},
+    {'1': 'updated_at', '3': 11, '4': 1, '5': 4, '10': 'updatedAt'},
+    {'1': 'effect', '3': 12, '4': 1, '5': 14, '6': '.user.UserDocument.UserProfileEffectsV1', '10': 'effect'},
+    {'1': 'effect_parameters', '3': 13, '4': 1, '5': 9, '10': 'effectParameters'},
+  ],
+};
+
+@$core.Deprecated('Use userDocumentDescriptor instead')
+const UserDocument_UserProfileEffectsV1$json = {
+  '1': 'UserProfileEffectsV1',
+  '2': [
+    {'1': 'NONE', '2': 0},
+    {'1': 'FORCE_LIGHTNING', '2': 1},
   ],
 };
 
@@ -369,14 +465,17 @@ final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
     'aXJhdGlvbhIjCgR0eXBlGAYgASgOMg8udXNlci5VU0VSX1RZUEVSBHR5cGUSIQoMc2VhcmNoX3'
     'Rlcm1zGAcgAygJUgtzZWFyY2hUZXJtcxI1Cgp2aXNpYmlsaXR5GAggASgOMhUudXNlci5VU0VS'
     'X1ZJU0lCSUxJVFlSCnZpc2liaWxpdHkSFAoFbm9uY2UYCSABKARSBW5vbmNlEj4KD2RvY3VtZW'
-    '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxrg'
-    'AgoITWV0YWRhdGESGgoIdXNlcm5hbWUYASABKAlSCHVzZXJuYW1lEhQKBWVtYWlsGAIgASgJUg'
+    '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxrt'
+    'AwoITWV0YWRhdGESGgoIdXNlcm5hbWUYASABKAlSCHVzZXJuYW1lEhQKBWVtYWlsGAIgASgJUg'
     'VlbWFpbBIhCgxkaXNwbGF5X25hbWUYAyABKAlSC2Rpc3BsYXlOYW1lEhAKA2JpbxgEIAEoCVID'
     'YmlvEiQKBnNvY2lhbBgFIAEoDjIMLnVzZXIuU09DSUFMUgZzb2NpYWwSGwoJc29jaWFsX2lkGA'
     'YgASgJUghzb2NpYWxJZBIoChBhdmF0YXJfaW1hZ2VfdXJsGAcgASgJUg5hdmF0YXJJbWFnZVVy'
     'bBIqChFhdmF0YXJfaW1hZ2VfaGFzaBgIIAEoCVIPYXZhdGFySW1hZ2VIYXNoEigKEGJhbm5lcl'
     '9pbWFnZV91cmwYCSABKAlSDmJhbm5lckltYWdlVXJsEioKEWJhbm5lcl9pbWFnZV9oYXNoGAog'
-    'ASgJUg9iYW5uZXJJbWFnZUhhc2g=');
+    'ASgJUg9iYW5uZXJJbWFnZUhhc2gSHQoKdXBkYXRlZF9hdBgLIAEoBFIJdXBkYXRlZEF0Ej8KBm'
+    'VmZmVjdBgMIAEoDjInLnVzZXIuVXNlckRvY3VtZW50LlVzZXJQcm9maWxlRWZmZWN0c1YxUgZl'
+    'ZmZlY3QSKwoRZWZmZWN0X3BhcmFtZXRlcnMYDSABKAlSEGVmZmVjdFBhcmFtZXRlcnMiNQoUVX'
+    'NlclByb2ZpbGVFZmZlY3RzVjESCAoETk9ORRAAEhMKD0ZPUkNFX0xJR0hUTklORxAB');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {

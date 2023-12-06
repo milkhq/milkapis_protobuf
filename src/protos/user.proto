@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package user;
 
+
+
 service User {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
   rpc CreateAnonymousUser(CreateAnonymousUserRequest) returns (CreateAnonymousUserResponse);
@@ -22,12 +24,43 @@ service User {
   rpc ListenUserCustomizationProfile(GetUserCustomizationProfileRequest) returns (stream CustomizationProfileDocument);
   rpc ListUserCustomizationProfiles(ListUserCustomizationProfilesRequest) returns (CustomizationProfileDocuments);
   rpc ListenUserCustomizationProfiles(ListUserCustomizationProfilesRequest) returns (stream CustomizationProfileDocument);
+  rpc CreateUserProfilePictureUploadURL(CreateUserProfilePictureUploadURLRequest) returns (CreateUserProfilePictureUploadURLResponse);
+  rpc CreateUserProfileBannerUploadURL(CreateUserProfileBannerUploadURLRequest) returns (CreateUserProfileBannerUploadURLResponse);
+  rpc GenerateUserProfileBanner(GenerateUserProfileBannerRequest) returns (GenerateUserProfileBannerResponse);
 }
 
 enum DOCUMENT_STATUS {
   PENDING = 0;
   APPROVED = 1;
   REJECTED = 2;
+}
+
+message GenerateUserProfileBannerRequest {
+  string prompt = 1;
+  string negative_prompt = 2;
+  string style_preset = 3;
+}
+
+message GenerateUserProfileBannerResponse {
+  repeated string banner_images = 1;
+}
+
+message CreateUserProfilePictureUploadURLRequest {
+  uint64 content_length = 1;
+}
+
+message CreateUserProfilePictureUploadURLResponse {
+  string upload_url = 1;
+  string download_url = 2;
+}
+
+message CreateUserProfileBannerUploadURLRequest {
+  uint64 content_length = 1;
+}
+
+message CreateUserProfileBannerUploadURLResponse {
+  string upload_url = 1;
+  string download_url = 2;
 }
 
 message CreateAnonymousUserRequest {
@@ -163,6 +196,11 @@ message UserDocument {
   uint64 nonce = 9;
   DOCUMENT_STATUS document_status = 10;
 
+  enum UserProfileEffectsV1 {
+    NONE = 0;
+    FORCE_LIGHTNING = 1;
+  }
+
   message Metadata {
     string username = 1;
     string email = 2;
@@ -174,6 +212,9 @@ message UserDocument {
     string avatar_image_hash = 8;
     string banner_image_url = 9;
     string banner_image_hash = 10;
+    uint64 updated_at = 11;
+    UserProfileEffectsV1 effect = 12;
+    string effect_parameters = 13;
   }
 }
 

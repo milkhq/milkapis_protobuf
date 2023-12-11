@@ -19,6 +19,234 @@ import 'space.pbenum.dart';
 
 export 'space.pbenum.dart';
 
+class LeaveSpaceRequest extends $pb.GeneratedMessage {
+  factory LeaveSpaceRequest({
+    $core.String? spaceId,
+    $core.String? uid,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (uid != null) {
+      $result.uid = uid;
+    }
+    return $result;
+  }
+  LeaveSpaceRequest._() : super();
+  factory LeaveSpaceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory LeaveSpaceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LeaveSpaceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'uid')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  LeaveSpaceRequest clone() => LeaveSpaceRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  LeaveSpaceRequest copyWith(void Function(LeaveSpaceRequest) updates) => super.copyWith((message) => updates(message as LeaveSpaceRequest)) as LeaveSpaceRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveSpaceRequest create() => LeaveSpaceRequest._();
+  LeaveSpaceRequest createEmptyInstance() => create();
+  static $pb.PbList<LeaveSpaceRequest> createRepeated() => $pb.PbList<LeaveSpaceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveSpaceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LeaveSpaceRequest>(create);
+  static LeaveSpaceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get uid => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set uid($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUid() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUid() => clearField(2);
+}
+
+class LeaveSpaceResponse extends $pb.GeneratedMessage {
+  factory LeaveSpaceResponse({
+    $core.String? spaceId,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    return $result;
+  }
+  LeaveSpaceResponse._() : super();
+  factory LeaveSpaceResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory LeaveSpaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LeaveSpaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  LeaveSpaceResponse clone() => LeaveSpaceResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  LeaveSpaceResponse copyWith(void Function(LeaveSpaceResponse) updates) => super.copyWith((message) => updates(message as LeaveSpaceResponse)) as LeaveSpaceResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static LeaveSpaceResponse create() => LeaveSpaceResponse._();
+  LeaveSpaceResponse createEmptyInstance() => create();
+  static $pb.PbList<LeaveSpaceResponse> createRepeated() => $pb.PbList<LeaveSpaceResponse>();
+  @$core.pragma('dart2js:noInline')
+  static LeaveSpaceResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LeaveSpaceResponse>(create);
+  static LeaveSpaceResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+}
+
+class JoinSpaceRequest extends $pb.GeneratedMessage {
+  factory JoinSpaceRequest({
+    $core.String? spaceId,
+    $core.String? referrerUid,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (referrerUid != null) {
+      $result.referrerUid = referrerUid;
+    }
+    return $result;
+  }
+  JoinSpaceRequest._() : super();
+  factory JoinSpaceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory JoinSpaceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'JoinSpaceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'referrerUid')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  JoinSpaceRequest clone() => JoinSpaceRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  JoinSpaceRequest copyWith(void Function(JoinSpaceRequest) updates) => super.copyWith((message) => updates(message as JoinSpaceRequest)) as JoinSpaceRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static JoinSpaceRequest create() => JoinSpaceRequest._();
+  JoinSpaceRequest createEmptyInstance() => create();
+  static $pb.PbList<JoinSpaceRequest> createRepeated() => $pb.PbList<JoinSpaceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static JoinSpaceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<JoinSpaceRequest>(create);
+  static JoinSpaceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get referrerUid => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set referrerUid($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasReferrerUid() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearReferrerUid() => clearField(2);
+}
+
+class JoinSpaceResponse extends $pb.GeneratedMessage {
+  factory JoinSpaceResponse({
+    $core.String? spaceId,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    return $result;
+  }
+  JoinSpaceResponse._() : super();
+  factory JoinSpaceResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory JoinSpaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'JoinSpaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  JoinSpaceResponse clone() => JoinSpaceResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  JoinSpaceResponse copyWith(void Function(JoinSpaceResponse) updates) => super.copyWith((message) => updates(message as JoinSpaceResponse)) as JoinSpaceResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static JoinSpaceResponse create() => JoinSpaceResponse._();
+  JoinSpaceResponse createEmptyInstance() => create();
+  static $pb.PbList<JoinSpaceResponse> createRepeated() => $pb.PbList<JoinSpaceResponse>();
+  @$core.pragma('dart2js:noInline')
+  static JoinSpaceResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<JoinSpaceResponse>(create);
+  static JoinSpaceResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+}
+
 class CreateSpaceCustomBackgroundUploadUrlRequest extends $pb.GeneratedMessage {
   factory CreateSpaceCustomBackgroundUploadUrlRequest({
     $core.String? spaceId,

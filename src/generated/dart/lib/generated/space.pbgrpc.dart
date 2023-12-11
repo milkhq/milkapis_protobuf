@@ -109,6 +109,18 @@ class SpaceClient extends $grpc.Client {
       '/space.Space/CreateSpaceCustomBackgroundUploadUrl',
       ($2.CreateSpaceCustomBackgroundUploadUrlRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.CreateSpaceCustomBackgroundUploadUrlResponse.fromBuffer(value));
+  static final _$joinSpace = $grpc.ClientMethod<$2.JoinSpaceRequest, $2.JoinSpaceResponse>(
+      '/space.Space/JoinSpace',
+      ($2.JoinSpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.JoinSpaceResponse.fromBuffer(value));
+  static final _$leaveSpace = $grpc.ClientMethod<$2.LeaveSpaceRequest, $2.LeaveSpaceResponse>(
+      '/space.Space/LeaveSpace',
+      ($2.LeaveSpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.LeaveSpaceResponse.fromBuffer(value));
+  static final _$createDefaultSpace = $grpc.ClientMethod<$2.CreateSpaceRequest, $2.CreateSpaceResponse>(
+      '/space.Space/CreateDefaultSpace',
+      ($2.CreateSpaceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.CreateSpaceResponse.fromBuffer(value));
 
   SpaceClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -202,6 +214,18 @@ class SpaceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$2.CreateSpaceCustomBackgroundUploadUrlResponse> createSpaceCustomBackgroundUploadUrl($2.CreateSpaceCustomBackgroundUploadUrlRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createSpaceCustomBackgroundUploadUrl, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.JoinSpaceResponse> joinSpace($2.JoinSpaceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$joinSpace, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.LeaveSpaceResponse> leaveSpace($2.LeaveSpaceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$leaveSpace, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.CreateSpaceResponse> createDefaultSpace($2.CreateSpaceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createDefaultSpace, request, options: options);
   }
 }
 
@@ -364,6 +388,27 @@ abstract class SpaceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.CreateSpaceCustomBackgroundUploadUrlRequest.fromBuffer(value),
         ($2.CreateSpaceCustomBackgroundUploadUrlResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.JoinSpaceRequest, $2.JoinSpaceResponse>(
+        'JoinSpace',
+        joinSpace_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.JoinSpaceRequest.fromBuffer(value),
+        ($2.JoinSpaceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.LeaveSpaceRequest, $2.LeaveSpaceResponse>(
+        'LeaveSpace',
+        leaveSpace_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.LeaveSpaceRequest.fromBuffer(value),
+        ($2.LeaveSpaceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateSpaceRequest, $2.CreateSpaceResponse>(
+        'CreateDefaultSpace',
+        createDefaultSpace_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.CreateSpaceRequest.fromBuffer(value),
+        ($2.CreateSpaceResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$2.CreateSpaceResponse> createSpace_Pre($grpc.ServiceCall call, $async.Future<$2.CreateSpaceRequest> request) async {
@@ -454,6 +499,18 @@ abstract class SpaceServiceBase extends $grpc.Service {
     return createSpaceCustomBackgroundUploadUrl(call, await request);
   }
 
+  $async.Future<$2.JoinSpaceResponse> joinSpace_Pre($grpc.ServiceCall call, $async.Future<$2.JoinSpaceRequest> request) async {
+    return joinSpace(call, await request);
+  }
+
+  $async.Future<$2.LeaveSpaceResponse> leaveSpace_Pre($grpc.ServiceCall call, $async.Future<$2.LeaveSpaceRequest> request) async {
+    return leaveSpace(call, await request);
+  }
+
+  $async.Future<$2.CreateSpaceResponse> createDefaultSpace_Pre($grpc.ServiceCall call, $async.Future<$2.CreateSpaceRequest> request) async {
+    return createDefaultSpace(call, await request);
+  }
+
   $async.Future<$2.CreateSpaceResponse> createSpace($grpc.ServiceCall call, $2.CreateSpaceRequest request);
   $async.Future<$2.SpaceDocument> getSpace($grpc.ServiceCall call, $2.GetSpaceRequest request);
   $async.Stream<$2.SpaceDocument> subscribeSpace($grpc.ServiceCall call, $2.GetSpaceRequest request);
@@ -476,4 +533,7 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $async.Future<$2.UpdateSpaceCustomizationResponse> updateSpaceCustomization($grpc.ServiceCall call, $2.UpdateSpaceCustomizationRequest request);
   $async.Future<$2.CreateSpaceIconUploadUrlResponse> createSpaceIconUploadUrl($grpc.ServiceCall call, $2.CreateSpaceIconUploadUrlRequest request);
   $async.Future<$2.CreateSpaceCustomBackgroundUploadUrlResponse> createSpaceCustomBackgroundUploadUrl($grpc.ServiceCall call, $2.CreateSpaceCustomBackgroundUploadUrlRequest request);
+  $async.Future<$2.JoinSpaceResponse> joinSpace($grpc.ServiceCall call, $2.JoinSpaceRequest request);
+  $async.Future<$2.LeaveSpaceResponse> leaveSpace($grpc.ServiceCall call, $2.LeaveSpaceRequest request);
+  $async.Future<$2.CreateSpaceResponse> createDefaultSpace($grpc.ServiceCall call, $2.CreateSpaceRequest request);
 }

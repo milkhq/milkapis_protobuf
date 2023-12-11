@@ -83,6 +83,58 @@ const SPACE_VISIBILITY$json = {
 final $typed_data.Uint8List sPACE_VISIBILITYDescriptor = $convert.base64Decode(
     'ChBTUEFDRV9WSVNJQklMSVRZEgoKBlBVQkxJQxAAEgsKB1BSSVZBVEUQAQ==');
 
+@$core.Deprecated('Use leaveSpaceRequestDescriptor instead')
+const LeaveSpaceRequest$json = {
+  '1': 'LeaveSpaceRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
+  ],
+};
+
+/// Descriptor for `LeaveSpaceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List leaveSpaceRequestDescriptor = $convert.base64Decode(
+    'ChFMZWF2ZVNwYWNlUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZBIQCgN1aWQYAi'
+    'ABKAlSA3VpZA==');
+
+@$core.Deprecated('Use leaveSpaceResponseDescriptor instead')
+const LeaveSpaceResponse$json = {
+  '1': 'LeaveSpaceResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `LeaveSpaceResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List leaveSpaceResponseDescriptor = $convert.base64Decode(
+    'ChJMZWF2ZVNwYWNlUmVzcG9uc2USGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQ=');
+
+@$core.Deprecated('Use joinSpaceRequestDescriptor instead')
+const JoinSpaceRequest$json = {
+  '1': 'JoinSpaceRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'referrer_uid', '3': 2, '4': 1, '5': 9, '10': 'referrerUid'},
+  ],
+};
+
+/// Descriptor for `JoinSpaceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List joinSpaceRequestDescriptor = $convert.base64Decode(
+    'ChBKb2luU3BhY2VSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlkEiEKDHJlZmVycm'
+    'VyX3VpZBgCIAEoCVILcmVmZXJyZXJVaWQ=');
+
+@$core.Deprecated('Use joinSpaceResponseDescriptor instead')
+const JoinSpaceResponse$json = {
+  '1': 'JoinSpaceResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `JoinSpaceResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List joinSpaceResponseDescriptor = $convert.base64Decode(
+    'ChFKb2luU3BhY2VSZXNwb25zZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZA==');
+
 @$core.Deprecated('Use createSpaceCustomBackgroundUploadUrlRequestDescriptor instead')
 const CreateSpaceCustomBackgroundUploadUrlRequest$json = {
   '1': 'CreateSpaceCustomBackgroundUploadUrlRequest',

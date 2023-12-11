@@ -1,3 +1,7 @@
+## 0.0.26
+
+ - **FEAT**: added join/leave spaces.
+
 ## 0.0.25
 
  - **FEAT**: added user profile banner and effect apis.

@@ -27,6 +27,29 @@ service Space {
   rpc UpdateSpaceCustomization(UpdateSpaceCustomizationRequest) returns (UpdateSpaceCustomizationResponse);
   rpc CreateSpaceIconUploadUrl(CreateSpaceIconUploadUrlRequest) returns (CreateSpaceIconUploadUrlResponse);
   rpc CreateSpaceCustomBackgroundUploadUrl(CreateSpaceCustomBackgroundUploadUrlRequest) returns (CreateSpaceCustomBackgroundUploadUrlResponse);
+  rpc JoinSpace(JoinSpaceRequest) returns (JoinSpaceResponse);
+  rpc LeaveSpace(LeaveSpaceRequest) returns (LeaveSpaceResponse);
+
+  // Admin
+  rpc CreateDefaultSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
+}
+
+message LeaveSpaceRequest {
+  string space_id = 1;
+  string uid = 2;
+}
+
+message LeaveSpaceResponse {
+  string space_id = 1;
+}
+
+message JoinSpaceRequest {
+  string space_id = 1;
+  string referrer_uid = 2;
+}
+
+message JoinSpaceResponse {
+  string space_id = 1;
 }
 
 message CreateSpaceCustomBackgroundUploadUrlRequest {

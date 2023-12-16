@@ -13,6 +13,25 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class SPACE_USER_STATUS extends $pb.ProtobufEnum {
+  static const SPACE_USER_STATUS TIMEOUT = SPACE_USER_STATUS._(0, _omitEnumNames ? '' : 'TIMEOUT');
+  static const SPACE_USER_STATUS KICKED = SPACE_USER_STATUS._(1, _omitEnumNames ? '' : 'KICKED');
+  static const SPACE_USER_STATUS BANNED = SPACE_USER_STATUS._(2, _omitEnumNames ? '' : 'BANNED');
+  static const SPACE_USER_STATUS NONE = SPACE_USER_STATUS._(3, _omitEnumNames ? '' : 'NONE');
+
+  static const $core.List<SPACE_USER_STATUS> values = <SPACE_USER_STATUS> [
+    TIMEOUT,
+    KICKED,
+    BANNED,
+    NONE,
+  ];
+
+  static final $core.Map<$core.int, SPACE_USER_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SPACE_USER_STATUS? valueOf($core.int value) => _byValue[value];
+
+  const SPACE_USER_STATUS._($core.int v, $core.String n) : super(v, n);
+}
+
 class DOCUMENT_STATUS extends $pb.ProtobufEnum {
   static const DOCUMENT_STATUS PENDING = DOCUMENT_STATUS._(0, _omitEnumNames ? '' : 'PENDING');
   static const DOCUMENT_STATUS APPROVED = DOCUMENT_STATUS._(1, _omitEnumNames ? '' : 'APPROVED');

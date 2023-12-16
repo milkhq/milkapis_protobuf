@@ -117,6 +117,38 @@ class SpaceClient extends $grpc.Client {
       '/space.Space/LeaveSpace',
       ($2.LeaveSpaceRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $2.LeaveSpaceResponse.fromBuffer(value));
+  static final _$listSpaceChannelMembers = $grpc.ClientMethod<$2.ListSpaceChannelMembersRequest, $2.ListSpaceChannelMembersResponse>(
+      '/space.Space/ListSpaceChannelMembers',
+      ($2.ListSpaceChannelMembersRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.ListSpaceChannelMembersResponse.fromBuffer(value));
+  static final _$createSpaceRole = $grpc.ClientMethod<$2.CreateSpaceRoleRequest, $2.CreateSpaceRoleResponse>(
+      '/space.Space/CreateSpaceRole',
+      ($2.CreateSpaceRoleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.CreateSpaceRoleResponse.fromBuffer(value));
+  static final _$getSpaceRoles = $grpc.ClientMethod<$2.GetSpaceRolesRequest, $2.GetSpaceRolesResponse>(
+      '/space.Space/GetSpaceRoles',
+      ($2.GetSpaceRolesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.GetSpaceRolesResponse.fromBuffer(value));
+  static final _$updateSpaceRole = $grpc.ClientMethod<$2.UpdateSpaceRoleRequest, $2.UpdateSpaceRoleResponse>(
+      '/space.Space/UpdateSpaceRole',
+      ($2.UpdateSpaceRoleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceRoleResponse.fromBuffer(value));
+  static final _$updateUserRoles = $grpc.ClientMethod<$2.UpdateUserRolesRequest, $2.UpdateUserRolesResponse>(
+      '/space.Space/UpdateUserRoles',
+      ($2.UpdateUserRolesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateUserRolesResponse.fromBuffer(value));
+  static final _$getUserRoles = $grpc.ClientMethod<$2.GetUserRolesRequest, $2.GetUserRolesResponse>(
+      '/space.Space/GetUserRoles',
+      ($2.GetUserRolesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.GetUserRolesResponse.fromBuffer(value));
+  static final _$getSpaceUserStatusesList = $grpc.ClientMethod<$2.GetSpaceUserStatusesListRequest, $2.GetSpaceUserStatusesListResponse>(
+      '/space.Space/GetSpaceUserStatusesList',
+      ($2.GetSpaceUserStatusesListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.GetSpaceUserStatusesListResponse.fromBuffer(value));
+  static final _$updateSpaceUserStatus = $grpc.ClientMethod<$2.UpdateSpaceUserStatusRequest, $2.UpdateSpaceUserStatusResponse>(
+      '/space.Space/UpdateSpaceUserStatus',
+      ($2.UpdateSpaceUserStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $2.UpdateSpaceUserStatusResponse.fromBuffer(value));
   static final _$createDefaultSpace = $grpc.ClientMethod<$2.CreateSpaceRequest, $2.CreateSpaceResponse>(
       '/space.Space/CreateDefaultSpace',
       ($2.CreateSpaceRequest value) => value.writeToBuffer(),
@@ -222,6 +254,38 @@ class SpaceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$2.LeaveSpaceResponse> leaveSpace($2.LeaveSpaceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$leaveSpace, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.ListSpaceChannelMembersResponse> listSpaceChannelMembers($2.ListSpaceChannelMembersRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listSpaceChannelMembers, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.CreateSpaceRoleResponse> createSpaceRole($2.CreateSpaceRoleRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSpaceRole, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetSpaceRolesResponse> getSpaceRoles($2.GetSpaceRolesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceRoles, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.UpdateSpaceRoleResponse> updateSpaceRole($2.UpdateSpaceRoleRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSpaceRole, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.UpdateUserRolesResponse> updateUserRoles($2.UpdateUserRolesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateUserRoles, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetUserRolesResponse> getUserRoles($2.GetUserRolesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getUserRoles, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.GetSpaceUserStatusesListResponse> getSpaceUserStatusesList($2.GetSpaceUserStatusesListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceUserStatusesList, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$2.UpdateSpaceUserStatusResponse> updateSpaceUserStatus($2.UpdateSpaceUserStatusRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSpaceUserStatus, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.CreateSpaceResponse> createDefaultSpace($2.CreateSpaceRequest request, {$grpc.CallOptions? options}) {
@@ -402,6 +466,62 @@ abstract class SpaceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.LeaveSpaceRequest.fromBuffer(value),
         ($2.LeaveSpaceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.ListSpaceChannelMembersRequest, $2.ListSpaceChannelMembersResponse>(
+        'ListSpaceChannelMembers',
+        listSpaceChannelMembers_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.ListSpaceChannelMembersRequest.fromBuffer(value),
+        ($2.ListSpaceChannelMembersResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.CreateSpaceRoleRequest, $2.CreateSpaceRoleResponse>(
+        'CreateSpaceRole',
+        createSpaceRole_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.CreateSpaceRoleRequest.fromBuffer(value),
+        ($2.CreateSpaceRoleResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceRolesRequest, $2.GetSpaceRolesResponse>(
+        'GetSpaceRoles',
+        getSpaceRoles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.GetSpaceRolesRequest.fromBuffer(value),
+        ($2.GetSpaceRolesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceRoleRequest, $2.UpdateSpaceRoleResponse>(
+        'UpdateSpaceRole',
+        updateSpaceRole_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.UpdateSpaceRoleRequest.fromBuffer(value),
+        ($2.UpdateSpaceRoleResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateUserRolesRequest, $2.UpdateUserRolesResponse>(
+        'UpdateUserRoles',
+        updateUserRoles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.UpdateUserRolesRequest.fromBuffer(value),
+        ($2.UpdateUserRolesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetUserRolesRequest, $2.GetUserRolesResponse>(
+        'GetUserRoles',
+        getUserRoles_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.GetUserRolesRequest.fromBuffer(value),
+        ($2.GetUserRolesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.GetSpaceUserStatusesListRequest, $2.GetSpaceUserStatusesListResponse>(
+        'GetSpaceUserStatusesList',
+        getSpaceUserStatusesList_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.GetSpaceUserStatusesListRequest.fromBuffer(value),
+        ($2.GetSpaceUserStatusesListResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.UpdateSpaceUserStatusRequest, $2.UpdateSpaceUserStatusResponse>(
+        'UpdateSpaceUserStatus',
+        updateSpaceUserStatus_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $2.UpdateSpaceUserStatusRequest.fromBuffer(value),
+        ($2.UpdateSpaceUserStatusResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$2.CreateSpaceRequest, $2.CreateSpaceResponse>(
         'CreateDefaultSpace',
         createDefaultSpace_Pre,
@@ -507,6 +627,38 @@ abstract class SpaceServiceBase extends $grpc.Service {
     return leaveSpace(call, await request);
   }
 
+  $async.Future<$2.ListSpaceChannelMembersResponse> listSpaceChannelMembers_Pre($grpc.ServiceCall call, $async.Future<$2.ListSpaceChannelMembersRequest> request) async {
+    return listSpaceChannelMembers(call, await request);
+  }
+
+  $async.Future<$2.CreateSpaceRoleResponse> createSpaceRole_Pre($grpc.ServiceCall call, $async.Future<$2.CreateSpaceRoleRequest> request) async {
+    return createSpaceRole(call, await request);
+  }
+
+  $async.Future<$2.GetSpaceRolesResponse> getSpaceRoles_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceRolesRequest> request) async {
+    return getSpaceRoles(call, await request);
+  }
+
+  $async.Future<$2.UpdateSpaceRoleResponse> updateSpaceRole_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceRoleRequest> request) async {
+    return updateSpaceRole(call, await request);
+  }
+
+  $async.Future<$2.UpdateUserRolesResponse> updateUserRoles_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateUserRolesRequest> request) async {
+    return updateUserRoles(call, await request);
+  }
+
+  $async.Future<$2.GetUserRolesResponse> getUserRoles_Pre($grpc.ServiceCall call, $async.Future<$2.GetUserRolesRequest> request) async {
+    return getUserRoles(call, await request);
+  }
+
+  $async.Future<$2.GetSpaceUserStatusesListResponse> getSpaceUserStatusesList_Pre($grpc.ServiceCall call, $async.Future<$2.GetSpaceUserStatusesListRequest> request) async {
+    return getSpaceUserStatusesList(call, await request);
+  }
+
+  $async.Future<$2.UpdateSpaceUserStatusResponse> updateSpaceUserStatus_Pre($grpc.ServiceCall call, $async.Future<$2.UpdateSpaceUserStatusRequest> request) async {
+    return updateSpaceUserStatus(call, await request);
+  }
+
   $async.Future<$2.CreateSpaceResponse> createDefaultSpace_Pre($grpc.ServiceCall call, $async.Future<$2.CreateSpaceRequest> request) async {
     return createDefaultSpace(call, await request);
   }
@@ -535,5 +687,13 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $async.Future<$2.CreateSpaceCustomBackgroundUploadUrlResponse> createSpaceCustomBackgroundUploadUrl($grpc.ServiceCall call, $2.CreateSpaceCustomBackgroundUploadUrlRequest request);
   $async.Future<$2.JoinSpaceResponse> joinSpace($grpc.ServiceCall call, $2.JoinSpaceRequest request);
   $async.Future<$2.LeaveSpaceResponse> leaveSpace($grpc.ServiceCall call, $2.LeaveSpaceRequest request);
+  $async.Future<$2.ListSpaceChannelMembersResponse> listSpaceChannelMembers($grpc.ServiceCall call, $2.ListSpaceChannelMembersRequest request);
+  $async.Future<$2.CreateSpaceRoleResponse> createSpaceRole($grpc.ServiceCall call, $2.CreateSpaceRoleRequest request);
+  $async.Future<$2.GetSpaceRolesResponse> getSpaceRoles($grpc.ServiceCall call, $2.GetSpaceRolesRequest request);
+  $async.Future<$2.UpdateSpaceRoleResponse> updateSpaceRole($grpc.ServiceCall call, $2.UpdateSpaceRoleRequest request);
+  $async.Future<$2.UpdateUserRolesResponse> updateUserRoles($grpc.ServiceCall call, $2.UpdateUserRolesRequest request);
+  $async.Future<$2.GetUserRolesResponse> getUserRoles($grpc.ServiceCall call, $2.GetUserRolesRequest request);
+  $async.Future<$2.GetSpaceUserStatusesListResponse> getSpaceUserStatusesList($grpc.ServiceCall call, $2.GetSpaceUserStatusesListRequest request);
+  $async.Future<$2.UpdateSpaceUserStatusResponse> updateSpaceUserStatus($grpc.ServiceCall call, $2.UpdateSpaceUserStatusRequest request);
   $async.Future<$2.CreateSpaceResponse> createDefaultSpace($grpc.ServiceCall call, $2.CreateSpaceRequest request);
 }

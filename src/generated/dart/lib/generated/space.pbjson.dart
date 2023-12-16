@@ -13,6 +13,22 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use sPACE_USER_STATUSDescriptor instead')
+const SPACE_USER_STATUS$json = {
+  '1': 'SPACE_USER_STATUS',
+  '2': [
+    {'1': 'TIMEOUT', '2': 0},
+    {'1': 'KICKED', '2': 1},
+    {'1': 'BANNED', '2': 2},
+    {'1': 'NONE', '2': 3},
+  ],
+};
+
+/// Descriptor for `SPACE_USER_STATUS`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List sPACE_USER_STATUSDescriptor = $convert.base64Decode(
+    'ChFTUEFDRV9VU0VSX1NUQVRVUxILCgdUSU1FT1VUEAASCgoGS0lDS0VEEAESCgoGQkFOTkVEEA'
+    'ISCAoETk9ORRAD');
+
 @$core.Deprecated('Use dOCUMENT_STATUSDescriptor instead')
 const DOCUMENT_STATUS$json = {
   '1': 'DOCUMENT_STATUS',
@@ -82,6 +98,263 @@ const SPACE_VISIBILITY$json = {
 /// Descriptor for `SPACE_VISIBILITY`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List sPACE_VISIBILITYDescriptor = $convert.base64Decode(
     'ChBTUEFDRV9WSVNJQklMSVRZEgoKBlBVQkxJQxAAEgsKB1BSSVZBVEUQAQ==');
+
+@$core.Deprecated('Use updateSpaceUserStatusRequestDescriptor instead')
+const UpdateSpaceUserStatusRequest$json = {
+  '1': 'UpdateSpaceUserStatusRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
+    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.space.UserSpaceStatusDocument', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceUserStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceUserStatusRequestDescriptor = $convert.base64Decode(
+    'ChxVcGRhdGVTcGFjZVVzZXJTdGF0dXNSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZU'
+    'lkEhAKA3VpZBgCIAEoCVIDdWlkEjYKBnN0YXR1cxgDIAEoCzIeLnNwYWNlLlVzZXJTcGFjZVN0'
+    'YXR1c0RvY3VtZW50UgZzdGF0dXM=');
+
+@$core.Deprecated('Use updateSpaceUserStatusResponseDescriptor instead')
+const UpdateSpaceUserStatusResponse$json = {
+  '1': 'UpdateSpaceUserStatusResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceUserStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceUserStatusResponseDescriptor = $convert.base64Decode(
+    'Ch1VcGRhdGVTcGFjZVVzZXJTdGF0dXNSZXNwb25zZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2'
+    'VJZBIQCgN1aWQYAiABKAlSA3VpZA==');
+
+@$core.Deprecated('Use userSpaceStatusDocumentDescriptor instead')
+const UserSpaceStatusDocument$json = {
+  '1': 'UserSpaceStatusDocument',
+  '2': [
+    {'1': 'SPACE_USER_STATUS', '3': 1, '4': 1, '5': 9, '10': 'SPACEUSERSTATUS'},
+    {'1': 'timestamp', '3': 2, '4': 1, '5': 4, '10': 'timestamp'},
+    {'1': 'uid', '3': 3, '4': 1, '5': 9, '10': 'uid'},
+  ],
+};
+
+/// Descriptor for `UserSpaceStatusDocument`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userSpaceStatusDocumentDescriptor = $convert.base64Decode(
+    'ChdVc2VyU3BhY2VTdGF0dXNEb2N1bWVudBIqChFTUEFDRV9VU0VSX1NUQVRVUxgBIAEoCVIPU1'
+    'BBQ0VVU0VSU1RBVFVTEhwKCXRpbWVzdGFtcBgCIAEoBFIJdGltZXN0YW1wEhAKA3VpZBgDIAEo'
+    'CVIDdWlk');
+
+@$core.Deprecated('Use getSpaceUserStatusesListRequestDescriptor instead')
+const GetSpaceUserStatusesListRequest$json = {
+  '1': 'GetSpaceUserStatusesListRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `GetSpaceUserStatusesListRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceUserStatusesListRequestDescriptor = $convert.base64Decode(
+    'Ch9HZXRTcGFjZVVzZXJTdGF0dXNlc0xpc3RSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcG'
+    'FjZUlk');
+
+@$core.Deprecated('Use getSpaceUserStatusesListResponseDescriptor instead')
+const GetSpaceUserStatusesListResponse$json = {
+  '1': 'GetSpaceUserStatusesListResponse',
+  '2': [
+    {'1': 'documents', '3': 1, '4': 3, '5': 11, '6': '.space.UserSpaceStatusDocument', '10': 'documents'},
+  ],
+};
+
+/// Descriptor for `GetSpaceUserStatusesListResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceUserStatusesListResponseDescriptor = $convert.base64Decode(
+    'CiBHZXRTcGFjZVVzZXJTdGF0dXNlc0xpc3RSZXNwb25zZRI8Cglkb2N1bWVudHMYASADKAsyHi'
+    '5zcGFjZS5Vc2VyU3BhY2VTdGF0dXNEb2N1bWVudFIJZG9jdW1lbnRz');
+
+@$core.Deprecated('Use getUserRolesRequestDescriptor instead')
+const GetUserRolesRequest$json = {
+  '1': 'GetUserRolesRequest',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `GetUserRolesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserRolesRequestDescriptor = $convert.base64Decode(
+    'ChNHZXRVc2VyUm9sZXNSZXF1ZXN0EhAKA3VpZBgBIAEoCVIDdWlkEhkKCHNwYWNlX2lkGAIgAS'
+    'gJUgdzcGFjZUlk');
+
+@$core.Deprecated('Use getUserRolesResponseDescriptor instead')
+const GetUserRolesResponse$json = {
+  '1': 'GetUserRolesResponse',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+    {'1': 'role_ids', '3': 2, '4': 3, '5': 9, '10': 'roleIds'},
+  ],
+};
+
+/// Descriptor for `GetUserRolesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserRolesResponseDescriptor = $convert.base64Decode(
+    'ChRHZXRVc2VyUm9sZXNSZXNwb25zZRIQCgN1aWQYASABKAlSA3VpZBIZCghyb2xlX2lkcxgCIA'
+    'MoCVIHcm9sZUlkcw==');
+
+@$core.Deprecated('Use updateUserRolesRequestDescriptor instead')
+const UpdateUserRolesRequest$json = {
+  '1': 'UpdateUserRolesRequest',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+    {'1': 'role_ids', '3': 2, '4': 3, '5': 9, '10': 'roleIds'},
+  ],
+};
+
+/// Descriptor for `UpdateUserRolesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateUserRolesRequestDescriptor = $convert.base64Decode(
+    'ChZVcGRhdGVVc2VyUm9sZXNSZXF1ZXN0EhAKA3VpZBgBIAEoCVIDdWlkEhkKCHJvbGVfaWRzGA'
+    'IgAygJUgdyb2xlSWRz');
+
+@$core.Deprecated('Use updateUserRolesResponseDescriptor instead')
+const UpdateUserRolesResponse$json = {
+  '1': 'UpdateUserRolesResponse',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+  ],
+};
+
+/// Descriptor for `UpdateUserRolesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateUserRolesResponseDescriptor = $convert.base64Decode(
+    'ChdVcGRhdGVVc2VyUm9sZXNSZXNwb25zZRIQCgN1aWQYASABKAlSA3VpZA==');
+
+@$core.Deprecated('Use updateSpaceRoleRequestDescriptor instead')
+const UpdateSpaceRoleRequest$json = {
+  '1': 'UpdateSpaceRoleRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role', '3': 2, '4': 1, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'role'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceRoleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceRoleRequestDescriptor = $convert.base64Decode(
+    'ChZVcGRhdGVTcGFjZVJvbGVSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlkEiwKBH'
+    'JvbGUYAiABKAsyGC5zcGFjZS5TcGFjZVJvbGVEb2N1bWVudFIEcm9sZQ==');
+
+@$core.Deprecated('Use updateSpaceRoleResponseDescriptor instead')
+const UpdateSpaceRoleResponse$json = {
+  '1': 'UpdateSpaceRoleResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceRoleResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceRoleResponseDescriptor = $convert.base64Decode(
+    'ChdVcGRhdGVTcGFjZVJvbGVSZXNwb25zZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZA==');
+
+@$core.Deprecated('Use getSpaceRolesRequestDescriptor instead')
+const GetSpaceRolesRequest$json = {
+  '1': 'GetSpaceRolesRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `GetSpaceRolesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceRolesRequestDescriptor = $convert.base64Decode(
+    'ChRHZXRTcGFjZVJvbGVzUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZA==');
+
+@$core.Deprecated('Use spaceRoleDocumentDescriptor instead')
+const SpaceRoleDocument$json = {
+  '1': 'SpaceRoleDocument',
+  '2': [
+    {'1': 'document_id', '3': 1, '4': 1, '5': 9, '10': 'documentId'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'permissions', '3': 3, '4': 3, '5': 14, '6': '.messaging.CHANNEL_PERMISSION', '10': 'permissions'},
+  ],
+};
+
+/// Descriptor for `SpaceRoleDocument`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceRoleDocumentDescriptor = $convert.base64Decode(
+    'ChFTcGFjZVJvbGVEb2N1bWVudBIfCgtkb2N1bWVudF9pZBgBIAEoCVIKZG9jdW1lbnRJZBISCg'
+    'RuYW1lGAIgASgJUgRuYW1lEj8KC3Blcm1pc3Npb25zGAMgAygOMh0ubWVzc2FnaW5nLkNIQU5O'
+    'RUxfUEVSTUlTU0lPTlILcGVybWlzc2lvbnM=');
+
+@$core.Deprecated('Use getSpaceRolesResponseDescriptor instead')
+const GetSpaceRolesResponse$json = {
+  '1': 'GetSpaceRolesResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'roles', '3': 2, '4': 3, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'roles'},
+  ],
+};
+
+/// Descriptor for `GetSpaceRolesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceRolesResponseDescriptor = $convert.base64Decode(
+    'ChVHZXRTcGFjZVJvbGVzUmVzcG9uc2USGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSLgoFcm'
+    '9sZXMYAiADKAsyGC5zcGFjZS5TcGFjZVJvbGVEb2N1bWVudFIFcm9sZXM=');
+
+@$core.Deprecated('Use createSpaceRoleRequestDescriptor instead')
+const CreateSpaceRoleRequest$json = {
+  '1': 'CreateSpaceRoleRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role', '3': 2, '4': 1, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'role'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
+  ],
+};
+
+/// Descriptor for `CreateSpaceRoleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSpaceRoleRequestDescriptor = $convert.base64Decode(
+    'ChZDcmVhdGVTcGFjZVJvbGVSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlkEiwKBH'
+    'JvbGUYAiABKAsyGC5zcGFjZS5TcGFjZVJvbGVEb2N1bWVudFIEcm9sZRIgCgx1c2VyX3JvbGVf'
+    'aWQYAyABKAlSCnVzZXJSb2xlSWQ=');
+
+@$core.Deprecated('Use createSpaceRoleResponseDescriptor instead')
+const CreateSpaceRoleResponse$json = {
+  '1': 'CreateSpaceRoleResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role_id', '3': 2, '4': 1, '5': 9, '10': 'roleId'},
+  ],
+};
+
+/// Descriptor for `CreateSpaceRoleResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSpaceRoleResponseDescriptor = $convert.base64Decode(
+    'ChdDcmVhdGVTcGFjZVJvbGVSZXNwb25zZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZBIXCg'
+    'dyb2xlX2lkGAIgASgJUgZyb2xlSWQ=');
+
+@$core.Deprecated('Use listSpaceChannelMembersRequestDescriptor instead')
+const ListSpaceChannelMembersRequest$json = {
+  '1': 'ListSpaceChannelMembersRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'limit', '3': 3, '4': 1, '5': 13, '10': 'limit'},
+    {'1': 'offset', '3': 4, '4': 1, '5': 13, '10': 'offset'},
+    {'1': 'descending', '3': 5, '4': 1, '5': 8, '10': 'descending'},
+  ],
+};
+
+/// Descriptor for `ListSpaceChannelMembersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSpaceChannelMembersRequestDescriptor = $convert.base64Decode(
+    'Ch5MaXN0U3BhY2VDaGFubmVsTWVtYmVyc1JlcXVlc3QSGQoIc3BhY2VfaWQYASABKAlSB3NwYW'
+    'NlSWQSHQoKY2hhbm5lbF9pZBgCIAEoCVIJY2hhbm5lbElkEhQKBWxpbWl0GAMgASgNUgVsaW1p'
+    'dBIWCgZvZmZzZXQYBCABKA1SBm9mZnNldBIeCgpkZXNjZW5kaW5nGAUgASgIUgpkZXNjZW5kaW'
+    '5n');
+
+@$core.Deprecated('Use listSpaceChannelMembersResponseDescriptor instead')
+const ListSpaceChannelMembersResponse$json = {
+  '1': 'ListSpaceChannelMembersResponse',
+  '2': [
+    {'1': 'uids', '3': 1, '4': 3, '5': 9, '10': 'uids'},
+    {'1': 'total', '3': 2, '4': 1, '5': 13, '10': 'total'},
+  ],
+};
+
+/// Descriptor for `ListSpaceChannelMembersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listSpaceChannelMembersResponseDescriptor = $convert.base64Decode(
+    'Ch9MaXN0U3BhY2VDaGFubmVsTWVtYmVyc1Jlc3BvbnNlEhIKBHVpZHMYASADKAlSBHVpZHMSFA'
+    'oFdG90YWwYAiABKA1SBXRvdGFs');
 
 @$core.Deprecated('Use leaveSpaceRequestDescriptor instead')
 const LeaveSpaceRequest$json = {

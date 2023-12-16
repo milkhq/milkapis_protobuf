@@ -1,3 +1,7 @@
+## 0.0.27
+
+ - **FEAT**: user rights management.
+
 ## 0.0.26
 
  - **FEAT**: added join/leave spaces.

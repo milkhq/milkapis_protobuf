@@ -29,9 +29,130 @@ service Space {
   rpc CreateSpaceCustomBackgroundUploadUrl(CreateSpaceCustomBackgroundUploadUrlRequest) returns (CreateSpaceCustomBackgroundUploadUrlResponse);
   rpc JoinSpace(JoinSpaceRequest) returns (JoinSpaceResponse);
   rpc LeaveSpace(LeaveSpaceRequest) returns (LeaveSpaceResponse);
+  rpc ListSpaceChannelMembers(ListSpaceChannelMembersRequest) returns (ListSpaceChannelMembersResponse);
+  // Roles
+  rpc CreateSpaceRole(CreateSpaceRoleRequest) returns (CreateSpaceRoleResponse);
+  rpc GetSpaceRoles(GetSpaceRolesRequest) returns (GetSpaceRolesResponse);
+  rpc UpdateSpaceRole(UpdateSpaceRoleRequest) returns (UpdateSpaceRoleResponse);
+  rpc UpdateUserRoles(UpdateUserRolesRequest) returns (UpdateUserRolesResponse);
+  rpc GetUserRoles(GetUserRolesRequest) returns (GetUserRolesResponse);
+
+  // User status list
+  rpc GetSpaceUserStatusesList(GetSpaceUserStatusesListRequest) returns (GetSpaceUserStatusesListResponse);
+  rpc UpdateSpaceUserStatus(UpdateSpaceUserStatusRequest) returns (UpdateSpaceUserStatusResponse);
 
   // Admin
   rpc CreateDefaultSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
+}
+
+// User status for a space in stored in a Hash Map
+// { "uid": UserSpaceStatusDocument }
+message UpdateSpaceUserStatusRequest {
+  string space_id = 1;
+  string uid = 2;
+  UserSpaceStatusDocument status = 3;
+}
+
+message UpdateSpaceUserStatusResponse {
+  string space_id = 1;
+  string uid = 2;
+}
+
+enum SPACE_USER_STATUS {
+  TIMEOUT = 0;
+  KICKED = 1;
+  BANNED = 2;
+  NONE = 3;
+}
+
+message UserSpaceStatusDocument {
+  string SPACE_USER_STATUS = 1;
+  uint64 timestamp = 2;
+  string uid = 3;
+}
+
+message GetSpaceUserStatusesListRequest {
+  string space_id = 1;
+}
+
+message GetSpaceUserStatusesListResponse {
+  repeated UserSpaceStatusDocument documents = 1;
+}
+
+message GetUserRolesRequest {
+  string uid = 1;
+  string space_id = 2;
+}
+
+message GetUserRolesResponse {
+  string uid = 1;
+  repeated string role_ids = 2;
+}
+
+message UpdateUserRolesRequest {
+  string uid = 1;
+  repeated string role_ids = 2;
+}
+
+message UpdateUserRolesResponse {
+  string uid = 1;
+}
+
+message UpdateSpaceRoleRequest {
+  string space_id = 1;
+  SpaceRoleDocument role = 2;
+}
+
+message UpdateSpaceRoleResponse {
+  string space_id = 1;
+}
+
+message GetSpaceRolesRequest {
+  string space_id = 1;
+}
+
+message SpaceRoleDocument {
+  string document_id = 1;
+  string name = 2;
+  repeated messaging.CHANNEL_PERMISSION permissions = 3;
+}
+
+message GetSpaceRolesResponse {
+  string space_id = 1;
+  repeated SpaceRoleDocument roles = 2;
+}
+
+// Space Roles are stored in a Hash Map
+// Space roles
+// For example:
+// { "role_id": [CHANNEL_PERMISSION] }
+// User roles mapping
+// For example:
+// {
+//   "uid": ["role_id"],
+// }
+message CreateSpaceRoleRequest {
+  string space_id = 1;
+  SpaceRoleDocument role = 2;
+  string user_role_id = 3;
+}
+
+message CreateSpaceRoleResponse {
+  string space_id = 1;
+  string role_id = 2;
+}
+
+message ListSpaceChannelMembersRequest {
+  string space_id = 1;
+  string channel_id = 2;
+  uint32 limit = 3;
+  uint32 offset = 4;
+  bool descending = 5;
+}
+
+message ListSpaceChannelMembersResponse {
+  repeated string uids = 1;
+  uint32 total = 2;
 }
 
 message LeaveSpaceRequest {

@@ -34,8 +34,8 @@ service Space {
   rpc CreateSpaceRole(CreateSpaceRoleRequest) returns (CreateSpaceRoleResponse);
   rpc GetSpaceRoles(GetSpaceRolesRequest) returns (GetSpaceRolesResponse);
   rpc UpdateSpaceRole(UpdateSpaceRoleRequest) returns (UpdateSpaceRoleResponse);
-  rpc UpdateUserRoles(UpdateUserRolesRequest) returns (UpdateUserRolesResponse);
-  rpc GetUserRoles(GetUserRolesRequest) returns (GetUserRolesResponse);
+  rpc UpdateSpaceUserRoles(UpdateSpaceUserRolesRequest) returns (UpdateSpaceUserRolesResponse);
+  rpc GetSpaceUserRoles(GetSpaceUserRolesRequest) returns (GetSpaceUserRolesResponse);
 
   // User status list
   rpc GetSpaceUserStatusesList(GetSpaceUserStatusesListRequest) returns (GetSpaceUserStatusesListResponse);
@@ -51,6 +51,7 @@ message UpdateSpaceUserStatusRequest {
   string space_id = 1;
   string uid = 2;
   UserSpaceStatusDocument status = 3;
+  string user_role_id = 4;
 }
 
 message UpdateSpaceUserStatusResponse {
@@ -66,9 +67,10 @@ enum SPACE_USER_STATUS {
 }
 
 message UserSpaceStatusDocument {
-  string SPACE_USER_STATUS = 1;
-  uint64 timestamp = 2;
+  SPACE_USER_STATUS status = 1;
+  uint64 expired_at = 2;
   string uid = 3;
+  uint64 updated_at = 4;
 }
 
 message GetSpaceUserStatusesListRequest {
@@ -79,28 +81,31 @@ message GetSpaceUserStatusesListResponse {
   repeated UserSpaceStatusDocument documents = 1;
 }
 
-message GetUserRolesRequest {
+message GetSpaceUserRolesRequest {
   string uid = 1;
   string space_id = 2;
 }
 
-message GetUserRolesResponse {
+message GetSpaceUserRolesResponse {
   string uid = 1;
   repeated string role_ids = 2;
 }
 
-message UpdateUserRolesRequest {
+message UpdateSpaceUserRolesRequest {
   string uid = 1;
   repeated string role_ids = 2;
+  string user_role_id = 3;
+  string space_id = 4;
 }
 
-message UpdateUserRolesResponse {
+message UpdateSpaceUserRolesResponse {
   string uid = 1;
 }
 
 message UpdateSpaceRoleRequest {
   string space_id = 1;
   SpaceRoleDocument role = 2;
+  string user_role_id = 3;
 }
 
 message UpdateSpaceRoleResponse {
@@ -115,6 +120,8 @@ message SpaceRoleDocument {
   string document_id = 1;
   string name = 2;
   repeated messaging.CHANNEL_PERMISSION permissions = 3;
+  string description = 4;
+  uint64 updated_at = 5;
 }
 
 message GetSpaceRolesResponse {

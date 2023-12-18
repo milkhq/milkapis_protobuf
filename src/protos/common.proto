@@ -18,6 +18,8 @@ enum CollectionsV1 {
     USERNAMES = 12;
     NOTIFICATIONS = 13;
     CHANNEL_MEMBERS_TO_CHANNEL_ID = 14;
+    USER_ROLES = 15;
+    USER_STATUSES = 16;
 }
 
 enum CollectionCountersV1 {
@@ -34,6 +36,8 @@ enum CollectionCountersV1 {
     THREAD_COUNTER = 10;
     USERNAME_COUNTER = 11;
     NOTIFICATION_COUNTER = 12;
+    USER_ROLE_COUNTER = 13;
+    USER_STATUS_COUNTER = 14;
 }
 
 enum DOCUMENT_TYPE {

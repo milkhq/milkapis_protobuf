@@ -27,6 +27,7 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $core.String? uid,
     UserSpaceStatusDocument? status,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -38,6 +39,9 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
     if (status != null) {
       $result.status = status;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   UpdateSpaceUserStatusRequest._() : super();
@@ -48,6 +52,7 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'uid')
     ..aOM<UserSpaceStatusDocument>(3, _omitFieldNames ? '' : 'status', subBuilder: UserSpaceStatusDocument.create)
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -100,6 +105,15 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
   void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   UserSpaceStatusDocument ensureStatus() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class UpdateSpaceUserStatusResponse extends $pb.GeneratedMessage {
@@ -168,19 +182,23 @@ class UpdateSpaceUserStatusResponse extends $pb.GeneratedMessage {
 
 class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   factory UserSpaceStatusDocument({
-    $core.String? sPACEUSERSTATUS,
-    $fixnum.Int64? timestamp,
+    SPACE_USER_STATUS? status,
+    $fixnum.Int64? expiredAt,
     $core.String? uid,
+    $fixnum.Int64? updatedAt,
   }) {
     final $result = create();
-    if (sPACEUSERSTATUS != null) {
-      $result.sPACEUSERSTATUS = sPACEUSERSTATUS;
+    if (status != null) {
+      $result.status = status;
     }
-    if (timestamp != null) {
-      $result.timestamp = timestamp;
+    if (expiredAt != null) {
+      $result.expiredAt = expiredAt;
     }
     if (uid != null) {
       $result.uid = uid;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
     }
     return $result;
   }
@@ -189,9 +207,10 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   factory UserSpaceStatusDocument.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSpaceStatusDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'SPACEUSERSTATUS', protoName: 'SPACE_USER_STATUS')
-    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'timestamp', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..e<SPACE_USER_STATUS>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: SPACE_USER_STATUS.TIMEOUT, valueOf: SPACE_USER_STATUS.valueOf, enumValues: SPACE_USER_STATUS.values)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'expiredAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(3, _omitFieldNames ? '' : 'uid')
+    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -217,22 +236,22 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   static UserSpaceStatusDocument? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.String get sPACEUSERSTATUS => $_getSZ(0);
+  SPACE_USER_STATUS get status => $_getN(0);
   @$pb.TagNumber(1)
-  set sPACEUSERSTATUS($core.String v) { $_setString(0, v); }
+  set status(SPACE_USER_STATUS v) { setField(1, v); }
   @$pb.TagNumber(1)
-  $core.bool hasSPACEUSERSTATUS() => $_has(0);
+  $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSPACEUSERSTATUS() => clearField(1);
+  void clearStatus() => clearField(1);
 
   @$pb.TagNumber(2)
-  $fixnum.Int64 get timestamp => $_getI64(1);
+  $fixnum.Int64 get expiredAt => $_getI64(1);
   @$pb.TagNumber(2)
-  set timestamp($fixnum.Int64 v) { $_setInt64(1, v); }
+  set expiredAt($fixnum.Int64 v) { $_setInt64(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasTimestamp() => $_has(1);
+  $core.bool hasExpiredAt() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTimestamp() => clearField(2);
+  void clearExpiredAt() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get uid => $_getSZ(2);
@@ -242,6 +261,15 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   $core.bool hasUid() => $_has(2);
   @$pb.TagNumber(3)
   void clearUid() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $fixnum.Int64 get updatedAt => $_getI64(3);
+  @$pb.TagNumber(4)
+  set updatedAt($fixnum.Int64 v) { $_setInt64(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUpdatedAt() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUpdatedAt() => clearField(4);
 }
 
 class GetSpaceUserStatusesListRequest extends $pb.GeneratedMessage {
@@ -338,8 +366,8 @@ class GetSpaceUserStatusesListResponse extends $pb.GeneratedMessage {
   $core.List<UserSpaceStatusDocument> get documents => $_getList(0);
 }
 
-class GetUserRolesRequest extends $pb.GeneratedMessage {
-  factory GetUserRolesRequest({
+class GetSpaceUserRolesRequest extends $pb.GeneratedMessage {
+  factory GetSpaceUserRolesRequest({
     $core.String? uid,
     $core.String? spaceId,
   }) {
@@ -352,11 +380,11 @@ class GetUserRolesRequest extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  GetUserRolesRequest._() : super();
-  factory GetUserRolesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetUserRolesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  GetSpaceUserRolesRequest._() : super();
+  factory GetSpaceUserRolesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceUserRolesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserRolesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceUserRolesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uid')
     ..aOS(2, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
@@ -366,22 +394,22 @@ class GetUserRolesRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  GetUserRolesRequest clone() => GetUserRolesRequest()..mergeFromMessage(this);
+  GetSpaceUserRolesRequest clone() => GetSpaceUserRolesRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetUserRolesRequest copyWith(void Function(GetUserRolesRequest) updates) => super.copyWith((message) => updates(message as GetUserRolesRequest)) as GetUserRolesRequest;
+  GetSpaceUserRolesRequest copyWith(void Function(GetSpaceUserRolesRequest) updates) => super.copyWith((message) => updates(message as GetSpaceUserRolesRequest)) as GetSpaceUserRolesRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetUserRolesRequest create() => GetUserRolesRequest._();
-  GetUserRolesRequest createEmptyInstance() => create();
-  static $pb.PbList<GetUserRolesRequest> createRepeated() => $pb.PbList<GetUserRolesRequest>();
+  static GetSpaceUserRolesRequest create() => GetSpaceUserRolesRequest._();
+  GetSpaceUserRolesRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceUserRolesRequest> createRepeated() => $pb.PbList<GetSpaceUserRolesRequest>();
   @$core.pragma('dart2js:noInline')
-  static GetUserRolesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserRolesRequest>(create);
-  static GetUserRolesRequest? _defaultInstance;
+  static GetSpaceUserRolesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceUserRolesRequest>(create);
+  static GetSpaceUserRolesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get uid => $_getSZ(0);
@@ -402,8 +430,8 @@ class GetUserRolesRequest extends $pb.GeneratedMessage {
   void clearSpaceId() => clearField(2);
 }
 
-class GetUserRolesResponse extends $pb.GeneratedMessage {
-  factory GetUserRolesResponse({
+class GetSpaceUserRolesResponse extends $pb.GeneratedMessage {
+  factory GetSpaceUserRolesResponse({
     $core.String? uid,
     $core.Iterable<$core.String>? roleIds,
   }) {
@@ -416,11 +444,11 @@ class GetUserRolesResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  GetUserRolesResponse._() : super();
-  factory GetUserRolesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory GetUserRolesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  GetSpaceUserRolesResponse._() : super();
+  factory GetSpaceUserRolesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceUserRolesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserRolesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceUserRolesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uid')
     ..pPS(2, _omitFieldNames ? '' : 'roleIds')
     ..hasRequiredFields = false
@@ -430,22 +458,22 @@ class GetUserRolesResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  GetUserRolesResponse clone() => GetUserRolesResponse()..mergeFromMessage(this);
+  GetSpaceUserRolesResponse clone() => GetSpaceUserRolesResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  GetUserRolesResponse copyWith(void Function(GetUserRolesResponse) updates) => super.copyWith((message) => updates(message as GetUserRolesResponse)) as GetUserRolesResponse;
+  GetSpaceUserRolesResponse copyWith(void Function(GetSpaceUserRolesResponse) updates) => super.copyWith((message) => updates(message as GetSpaceUserRolesResponse)) as GetSpaceUserRolesResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static GetUserRolesResponse create() => GetUserRolesResponse._();
-  GetUserRolesResponse createEmptyInstance() => create();
-  static $pb.PbList<GetUserRolesResponse> createRepeated() => $pb.PbList<GetUserRolesResponse>();
+  static GetSpaceUserRolesResponse create() => GetSpaceUserRolesResponse._();
+  GetSpaceUserRolesResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceUserRolesResponse> createRepeated() => $pb.PbList<GetSpaceUserRolesResponse>();
   @$core.pragma('dart2js:noInline')
-  static GetUserRolesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserRolesResponse>(create);
-  static GetUserRolesResponse? _defaultInstance;
+  static GetSpaceUserRolesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceUserRolesResponse>(create);
+  static GetSpaceUserRolesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get uid => $_getSZ(0);
@@ -460,10 +488,12 @@ class GetUserRolesResponse extends $pb.GeneratedMessage {
   $core.List<$core.String> get roleIds => $_getList(1);
 }
 
-class UpdateUserRolesRequest extends $pb.GeneratedMessage {
-  factory UpdateUserRolesRequest({
+class UpdateSpaceUserRolesRequest extends $pb.GeneratedMessage {
+  factory UpdateSpaceUserRolesRequest({
     $core.String? uid,
     $core.Iterable<$core.String>? roleIds,
+    $core.String? userRoleId,
+    $core.String? spaceId,
   }) {
     final $result = create();
     if (uid != null) {
@@ -472,15 +502,23 @@ class UpdateUserRolesRequest extends $pb.GeneratedMessage {
     if (roleIds != null) {
       $result.roleIds.addAll(roleIds);
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
     return $result;
   }
-  UpdateUserRolesRequest._() : super();
-  factory UpdateUserRolesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UpdateUserRolesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  UpdateSpaceUserRolesRequest._() : super();
+  factory UpdateSpaceUserRolesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceUserRolesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserRolesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceUserRolesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uid')
     ..pPS(2, _omitFieldNames ? '' : 'roleIds')
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
+    ..aOS(4, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -488,22 +526,22 @@ class UpdateUserRolesRequest extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  UpdateUserRolesRequest clone() => UpdateUserRolesRequest()..mergeFromMessage(this);
+  UpdateSpaceUserRolesRequest clone() => UpdateSpaceUserRolesRequest()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  UpdateUserRolesRequest copyWith(void Function(UpdateUserRolesRequest) updates) => super.copyWith((message) => updates(message as UpdateUserRolesRequest)) as UpdateUserRolesRequest;
+  UpdateSpaceUserRolesRequest copyWith(void Function(UpdateSpaceUserRolesRequest) updates) => super.copyWith((message) => updates(message as UpdateSpaceUserRolesRequest)) as UpdateSpaceUserRolesRequest;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateUserRolesRequest create() => UpdateUserRolesRequest._();
-  UpdateUserRolesRequest createEmptyInstance() => create();
-  static $pb.PbList<UpdateUserRolesRequest> createRepeated() => $pb.PbList<UpdateUserRolesRequest>();
+  static UpdateSpaceUserRolesRequest create() => UpdateSpaceUserRolesRequest._();
+  UpdateSpaceUserRolesRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceUserRolesRequest> createRepeated() => $pb.PbList<UpdateSpaceUserRolesRequest>();
   @$core.pragma('dart2js:noInline')
-  static UpdateUserRolesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateUserRolesRequest>(create);
-  static UpdateUserRolesRequest? _defaultInstance;
+  static UpdateSpaceUserRolesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceUserRolesRequest>(create);
+  static UpdateSpaceUserRolesRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get uid => $_getSZ(0);
@@ -516,10 +554,28 @@ class UpdateUserRolesRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(2)
   $core.List<$core.String> get roleIds => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get spaceId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set spaceId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSpaceId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSpaceId() => clearField(4);
 }
 
-class UpdateUserRolesResponse extends $pb.GeneratedMessage {
-  factory UpdateUserRolesResponse({
+class UpdateSpaceUserRolesResponse extends $pb.GeneratedMessage {
+  factory UpdateSpaceUserRolesResponse({
     $core.String? uid,
   }) {
     final $result = create();
@@ -528,11 +584,11 @@ class UpdateUserRolesResponse extends $pb.GeneratedMessage {
     }
     return $result;
   }
-  UpdateUserRolesResponse._() : super();
-  factory UpdateUserRolesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory UpdateUserRolesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  UpdateSpaceUserRolesResponse._() : super();
+  factory UpdateSpaceUserRolesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceUserRolesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserRolesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceUserRolesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'uid')
     ..hasRequiredFields = false
   ;
@@ -541,22 +597,22 @@ class UpdateUserRolesResponse extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  UpdateUserRolesResponse clone() => UpdateUserRolesResponse()..mergeFromMessage(this);
+  UpdateSpaceUserRolesResponse clone() => UpdateSpaceUserRolesResponse()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  UpdateUserRolesResponse copyWith(void Function(UpdateUserRolesResponse) updates) => super.copyWith((message) => updates(message as UpdateUserRolesResponse)) as UpdateUserRolesResponse;
+  UpdateSpaceUserRolesResponse copyWith(void Function(UpdateSpaceUserRolesResponse) updates) => super.copyWith((message) => updates(message as UpdateSpaceUserRolesResponse)) as UpdateSpaceUserRolesResponse;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static UpdateUserRolesResponse create() => UpdateUserRolesResponse._();
-  UpdateUserRolesResponse createEmptyInstance() => create();
-  static $pb.PbList<UpdateUserRolesResponse> createRepeated() => $pb.PbList<UpdateUserRolesResponse>();
+  static UpdateSpaceUserRolesResponse create() => UpdateSpaceUserRolesResponse._();
+  UpdateSpaceUserRolesResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceUserRolesResponse> createRepeated() => $pb.PbList<UpdateSpaceUserRolesResponse>();
   @$core.pragma('dart2js:noInline')
-  static UpdateUserRolesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateUserRolesResponse>(create);
-  static UpdateUserRolesResponse? _defaultInstance;
+  static UpdateSpaceUserRolesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceUserRolesResponse>(create);
+  static UpdateSpaceUserRolesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get uid => $_getSZ(0);
@@ -572,6 +628,7 @@ class UpdateSpaceRoleRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceRoleRequest({
     $core.String? spaceId,
     SpaceRoleDocument? role,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -579,6 +636,9 @@ class UpdateSpaceRoleRequest extends $pb.GeneratedMessage {
     }
     if (role != null) {
       $result.role = role;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -589,6 +649,7 @@ class UpdateSpaceRoleRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceRoleRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOM<SpaceRoleDocument>(2, _omitFieldNames ? '' : 'role', subBuilder: SpaceRoleDocument.create)
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -632,6 +693,15 @@ class UpdateSpaceRoleRequest extends $pb.GeneratedMessage {
   void clearRole() => clearField(2);
   @$pb.TagNumber(2)
   SpaceRoleDocument ensureRole() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
 }
 
 class UpdateSpaceRoleResponse extends $pb.GeneratedMessage {
@@ -739,6 +809,8 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
     $core.String? documentId,
     $core.String? name,
     $core.Iterable<$1.CHANNEL_PERMISSION>? permissions,
+    $core.String? description,
+    $fixnum.Int64? updatedAt,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -750,6 +822,12 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
     if (permissions != null) {
       $result.permissions.addAll(permissions);
     }
+    if (description != null) {
+      $result.description = description;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
     return $result;
   }
   SpaceRoleDocument._() : super();
@@ -760,6 +838,8 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'documentId')
     ..aOS(2, _omitFieldNames ? '' : 'name')
     ..pc<$1.CHANNEL_PERMISSION>(3, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.KE, valueOf: $1.CHANNEL_PERMISSION.valueOf, enumValues: $1.CHANNEL_PERMISSION.values, defaultEnumValue: $1.CHANNEL_PERMISSION.administrator)
+    ..aOS(4, _omitFieldNames ? '' : 'description')
+    ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -804,6 +884,24 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$1.CHANNEL_PERMISSION> get permissions => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.String get description => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set description($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasDescription() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearDescription() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get updatedAt => $_getI64(4);
+  @$pb.TagNumber(5)
+  set updatedAt($fixnum.Int64 v) { $_setInt64(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUpdatedAt() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUpdatedAt() => clearField(5);
 }
 
 class GetSpaceRolesResponse extends $pb.GeneratedMessage {

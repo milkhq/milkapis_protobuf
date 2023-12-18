@@ -29,6 +29,8 @@ class CollectionsV1 extends $pb.ProtobufEnum {
   static const CollectionsV1 USERNAMES = CollectionsV1._(12, _omitEnumNames ? '' : 'USERNAMES');
   static const CollectionsV1 NOTIFICATIONS = CollectionsV1._(13, _omitEnumNames ? '' : 'NOTIFICATIONS');
   static const CollectionsV1 CHANNEL_MEMBERS_TO_CHANNEL_ID = CollectionsV1._(14, _omitEnumNames ? '' : 'CHANNEL_MEMBERS_TO_CHANNEL_ID');
+  static const CollectionsV1 USER_ROLES = CollectionsV1._(15, _omitEnumNames ? '' : 'USER_ROLES');
+  static const CollectionsV1 USER_STATUSES = CollectionsV1._(16, _omitEnumNames ? '' : 'USER_STATUSES');
 
   static const $core.List<CollectionsV1> values = <CollectionsV1> [
     USERS,
@@ -46,6 +48,8 @@ class CollectionsV1 extends $pb.ProtobufEnum {
     USERNAMES,
     NOTIFICATIONS,
     CHANNEL_MEMBERS_TO_CHANNEL_ID,
+    USER_ROLES,
+    USER_STATUSES,
   ];
 
   static final $core.Map<$core.int, CollectionsV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -68,6 +72,8 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
   static const CollectionCountersV1 THREAD_COUNTER = CollectionCountersV1._(10, _omitEnumNames ? '' : 'THREAD_COUNTER');
   static const CollectionCountersV1 USERNAME_COUNTER = CollectionCountersV1._(11, _omitEnumNames ? '' : 'USERNAME_COUNTER');
   static const CollectionCountersV1 NOTIFICATION_COUNTER = CollectionCountersV1._(12, _omitEnumNames ? '' : 'NOTIFICATION_COUNTER');
+  static const CollectionCountersV1 USER_ROLE_COUNTER = CollectionCountersV1._(13, _omitEnumNames ? '' : 'USER_ROLE_COUNTER');
+  static const CollectionCountersV1 USER_STATUS_COUNTER = CollectionCountersV1._(14, _omitEnumNames ? '' : 'USER_STATUS_COUNTER');
 
   static const $core.List<CollectionCountersV1> values = <CollectionCountersV1> [
     USER_COUNTER,
@@ -83,6 +89,8 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
     THREAD_COUNTER,
     USERNAME_COUNTER,
     NOTIFICATION_COUNTER,
+    USER_ROLE_COUNTER,
+    USER_STATUS_COUNTER,
   ];
 
   static final $core.Map<$core.int, CollectionCountersV1> _byValue = $pb.ProtobufEnum.initByValue(values);

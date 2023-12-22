@@ -36,6 +36,9 @@ service Space {
   rpc UpdateSpaceRole(UpdateSpaceRoleRequest) returns (UpdateSpaceRoleResponse);
   rpc UpdateSpaceUserRoles(UpdateSpaceUserRolesRequest) returns (UpdateSpaceUserRolesResponse);
   rpc GetSpaceUserRoles(GetSpaceUserRolesRequest) returns (GetSpaceUserRolesResponse);
+  rpc GetSpaceRoleMembers(GetSpaceRoleMembersRequest) returns (GetSpaceRoleMembersResponse);
+  rpc CreateSpaceRoleIconUploadUrl(CreateSpaceRoleIconUploadUrlRequest) returns (CreateSpaceRoleIconUploadUrlResponse);
+  rpc ResetSpaceRoles(ResetSpaceRolesRequest) returns (ResetSpaceRolesResponse);
 
   // User status list
   rpc GetSpaceUserStatusesList(GetSpaceUserStatusesListRequest) returns (GetSpaceUserStatusesListResponse);
@@ -43,6 +46,36 @@ service Space {
 
   // Admin
   rpc CreateDefaultSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
+}
+
+message ResetSpaceRolesRequest {
+  string space_id = 1;
+}
+
+message ResetSpaceRolesResponse {
+  string space_id = 1;
+}
+
+message CreateSpaceRoleIconUploadUrlRequest {
+  string space_id = 1;
+  string user_role_id = 2;
+  uint64 file_size = 3;
+}
+
+message CreateSpaceRoleIconUploadUrlResponse {
+  string upload_url = 1;
+  string download_url = 2;
+}
+
+message GetSpaceRoleMembersRequest {
+  string space_id = 1;
+  string role_id = 2;
+}
+
+message GetSpaceRoleMembersResponse {
+  string space_id = 1;
+  string role_id = 2;
+  repeated string members = 3;
 }
 
 // User status for a space in stored in a Hash Map
@@ -96,6 +129,8 @@ message UpdateSpaceUserRolesRequest {
   repeated string role_ids = 2;
   string user_role_id = 3;
   string space_id = 4;
+  repeated string remove_role_ids = 5;
+  repeated string add_role_ids = 6;
 }
 
 message UpdateSpaceUserRolesResponse {
@@ -122,6 +157,11 @@ message SpaceRoleDocument {
   repeated messaging.CHANNEL_PERMISSION permissions = 3;
   string description = 4;
   uint64 updated_at = 5;
+  uint32 priority = 6;
+  string icon_url = 7;
+  bool allow_mentions = 8;
+  bool display_as_group = 9;
+  uint32 color = 10;
 }
 
 message GetSpaceRolesResponse {
@@ -142,6 +182,7 @@ message CreateSpaceRoleRequest {
   string space_id = 1;
   SpaceRoleDocument role = 2;
   string user_role_id = 3;
+  repeated string members = 4;
 }
 
 message CreateSpaceRoleResponse {

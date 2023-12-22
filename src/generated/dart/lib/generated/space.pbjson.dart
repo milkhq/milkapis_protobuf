@@ -99,6 +99,89 @@ const SPACE_VISIBILITY$json = {
 final $typed_data.Uint8List sPACE_VISIBILITYDescriptor = $convert.base64Decode(
     'ChBTUEFDRV9WSVNJQklMSVRZEgoKBlBVQkxJQxAAEgsKB1BSSVZBVEUQAQ==');
 
+@$core.Deprecated('Use resetSpaceRolesRequestDescriptor instead')
+const ResetSpaceRolesRequest$json = {
+  '1': 'ResetSpaceRolesRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `ResetSpaceRolesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List resetSpaceRolesRequestDescriptor = $convert.base64Decode(
+    'ChZSZXNldFNwYWNlUm9sZXNSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlk');
+
+@$core.Deprecated('Use resetSpaceRolesResponseDescriptor instead')
+const ResetSpaceRolesResponse$json = {
+  '1': 'ResetSpaceRolesResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `ResetSpaceRolesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List resetSpaceRolesResponseDescriptor = $convert.base64Decode(
+    'ChdSZXNldFNwYWNlUm9sZXNSZXNwb25zZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZA==');
+
+@$core.Deprecated('Use createSpaceRoleIconUploadUrlRequestDescriptor instead')
+const CreateSpaceRoleIconUploadUrlRequest$json = {
+  '1': 'CreateSpaceRoleIconUploadUrlRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 2, '4': 1, '5': 9, '10': 'userRoleId'},
+    {'1': 'file_size', '3': 3, '4': 1, '5': 4, '10': 'fileSize'},
+  ],
+};
+
+/// Descriptor for `CreateSpaceRoleIconUploadUrlRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSpaceRoleIconUploadUrlRequestDescriptor = $convert.base64Decode(
+    'CiNDcmVhdGVTcGFjZVJvbGVJY29uVXBsb2FkVXJsUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCV'
+    'IHc3BhY2VJZBIgCgx1c2VyX3JvbGVfaWQYAiABKAlSCnVzZXJSb2xlSWQSGwoJZmlsZV9zaXpl'
+    'GAMgASgEUghmaWxlU2l6ZQ==');
+
+@$core.Deprecated('Use createSpaceRoleIconUploadUrlResponseDescriptor instead')
+const CreateSpaceRoleIconUploadUrlResponse$json = {
+  '1': 'CreateSpaceRoleIconUploadUrlResponse',
+  '2': [
+    {'1': 'upload_url', '3': 1, '4': 1, '5': 9, '10': 'uploadUrl'},
+    {'1': 'download_url', '3': 2, '4': 1, '5': 9, '10': 'downloadUrl'},
+  ],
+};
+
+/// Descriptor for `CreateSpaceRoleIconUploadUrlResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSpaceRoleIconUploadUrlResponseDescriptor = $convert.base64Decode(
+    'CiRDcmVhdGVTcGFjZVJvbGVJY29uVXBsb2FkVXJsUmVzcG9uc2USHQoKdXBsb2FkX3VybBgBIA'
+    'EoCVIJdXBsb2FkVXJsEiEKDGRvd25sb2FkX3VybBgCIAEoCVILZG93bmxvYWRVcmw=');
+
+@$core.Deprecated('Use getSpaceRoleMembersRequestDescriptor instead')
+const GetSpaceRoleMembersRequest$json = {
+  '1': 'GetSpaceRoleMembersRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role_id', '3': 2, '4': 1, '5': 9, '10': 'roleId'},
+  ],
+};
+
+/// Descriptor for `GetSpaceRoleMembersRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceRoleMembersRequestDescriptor = $convert.base64Decode(
+    'ChpHZXRTcGFjZVJvbGVNZW1iZXJzUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZB'
+    'IXCgdyb2xlX2lkGAIgASgJUgZyb2xlSWQ=');
+
+@$core.Deprecated('Use getSpaceRoleMembersResponseDescriptor instead')
+const GetSpaceRoleMembersResponse$json = {
+  '1': 'GetSpaceRoleMembersResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role_id', '3': 2, '4': 1, '5': 9, '10': 'roleId'},
+    {'1': 'members', '3': 3, '4': 3, '5': 9, '10': 'members'},
+  ],
+};
+
+/// Descriptor for `GetSpaceRoleMembersResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceRoleMembersResponseDescriptor = $convert.base64Decode(
+    'ChtHZXRTcGFjZVJvbGVNZW1iZXJzUmVzcG9uc2USGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSW'
+    'QSFwoHcm9sZV9pZBgCIAEoCVIGcm9sZUlkEhgKB21lbWJlcnMYAyADKAlSB21lbWJlcnM=');
+
 @$core.Deprecated('Use updateSpaceUserStatusRequestDescriptor instead')
 const UpdateSpaceUserStatusRequest$json = {
   '1': 'UpdateSpaceUserStatusRequest',
@@ -209,6 +292,8 @@ const UpdateSpaceUserRolesRequest$json = {
     {'1': 'role_ids', '3': 2, '4': 3, '5': 9, '10': 'roleIds'},
     {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
     {'1': 'space_id', '3': 4, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'remove_role_ids', '3': 5, '4': 3, '5': 9, '10': 'removeRoleIds'},
+    {'1': 'add_role_ids', '3': 6, '4': 3, '5': 9, '10': 'addRoleIds'},
   ],
 };
 
@@ -216,7 +301,8 @@ const UpdateSpaceUserRolesRequest$json = {
 final $typed_data.Uint8List updateSpaceUserRolesRequestDescriptor = $convert.base64Decode(
     'ChtVcGRhdGVTcGFjZVVzZXJSb2xlc1JlcXVlc3QSEAoDdWlkGAEgASgJUgN1aWQSGQoIcm9sZV'
     '9pZHMYAiADKAlSB3JvbGVJZHMSIAoMdXNlcl9yb2xlX2lkGAMgASgJUgp1c2VyUm9sZUlkEhkK'
-    'CHNwYWNlX2lkGAQgASgJUgdzcGFjZUlk');
+    'CHNwYWNlX2lkGAQgASgJUgdzcGFjZUlkEiYKD3JlbW92ZV9yb2xlX2lkcxgFIAMoCVINcmVtb3'
+    'ZlUm9sZUlkcxIgCgxhZGRfcm9sZV9pZHMYBiADKAlSCmFkZFJvbGVJZHM=');
 
 @$core.Deprecated('Use updateSpaceUserRolesResponseDescriptor instead')
 const UpdateSpaceUserRolesResponse$json = {
@@ -279,6 +365,11 @@ const SpaceRoleDocument$json = {
     {'1': 'permissions', '3': 3, '4': 3, '5': 14, '6': '.messaging.CHANNEL_PERMISSION', '10': 'permissions'},
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
     {'1': 'updated_at', '3': 5, '4': 1, '5': 4, '10': 'updatedAt'},
+    {'1': 'priority', '3': 6, '4': 1, '5': 13, '10': 'priority'},
+    {'1': 'icon_url', '3': 7, '4': 1, '5': 9, '10': 'iconUrl'},
+    {'1': 'allow_mentions', '3': 8, '4': 1, '5': 8, '10': 'allowMentions'},
+    {'1': 'display_as_group', '3': 9, '4': 1, '5': 8, '10': 'displayAsGroup'},
+    {'1': 'color', '3': 10, '4': 1, '5': 13, '10': 'color'},
   ],
 };
 
@@ -287,7 +378,10 @@ final $typed_data.Uint8List spaceRoleDocumentDescriptor = $convert.base64Decode(
     'ChFTcGFjZVJvbGVEb2N1bWVudBIfCgtkb2N1bWVudF9pZBgBIAEoCVIKZG9jdW1lbnRJZBISCg'
     'RuYW1lGAIgASgJUgRuYW1lEj8KC3Blcm1pc3Npb25zGAMgAygOMh0ubWVzc2FnaW5nLkNIQU5O'
     'RUxfUEVSTUlTU0lPTlILcGVybWlzc2lvbnMSIAoLZGVzY3JpcHRpb24YBCABKAlSC2Rlc2NyaX'
-    'B0aW9uEh0KCnVwZGF0ZWRfYXQYBSABKARSCXVwZGF0ZWRBdA==');
+    'B0aW9uEh0KCnVwZGF0ZWRfYXQYBSABKARSCXVwZGF0ZWRBdBIaCghwcmlvcml0eRgGIAEoDVII'
+    'cHJpb3JpdHkSGQoIaWNvbl91cmwYByABKAlSB2ljb25VcmwSJQoOYWxsb3dfbWVudGlvbnMYCC'
+    'ABKAhSDWFsbG93TWVudGlvbnMSKAoQZGlzcGxheV9hc19ncm91cBgJIAEoCFIOZGlzcGxheUFz'
+    'R3JvdXASFAoFY29sb3IYCiABKA1SBWNvbG9y');
 
 @$core.Deprecated('Use getSpaceRolesResponseDescriptor instead')
 const GetSpaceRolesResponse$json = {
@@ -310,6 +404,7 @@ const CreateSpaceRoleRequest$json = {
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'role', '3': 2, '4': 1, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'role'},
     {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
+    {'1': 'members', '3': 4, '4': 3, '5': 9, '10': 'members'},
   ],
 };
 
@@ -317,7 +412,7 @@ const CreateSpaceRoleRequest$json = {
 final $typed_data.Uint8List createSpaceRoleRequestDescriptor = $convert.base64Decode(
     'ChZDcmVhdGVTcGFjZVJvbGVSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlkEiwKBH'
     'JvbGUYAiABKAsyGC5zcGFjZS5TcGFjZVJvbGVEb2N1bWVudFIEcm9sZRIgCgx1c2VyX3JvbGVf'
-    'aWQYAyABKAlSCnVzZXJSb2xlSWQ=');
+    'aWQYAyABKAlSCnVzZXJSb2xlSWQSGAoHbWVtYmVycxgEIAMoCVIHbWVtYmVycw==');
 
 @$core.Deprecated('Use createSpaceRoleResponseDescriptor instead')
 const CreateSpaceRoleResponse$json = {

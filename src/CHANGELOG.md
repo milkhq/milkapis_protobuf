@@ -1,3 +1,7 @@
+## 0.0.28
+
+ - **FEAT**: user rights management.
+
 ## 0.0.27+1
 
  - **FIX**: user rights.

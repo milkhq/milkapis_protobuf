@@ -3676,6 +3676,11 @@ class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
     $fixnum.Int64? height,
     $core.String? imageBlurHash,
     $core.String? previewImageUrl,
+    $core.int? previewFileSize,
+    $core.String? mimeType,
+    $core.String? fileUrl,
+    $core.String? filePath,
+    $core.List<$core.int>? fileBytes,
   }) {
     final $result = create();
     if (fileName != null) {
@@ -3696,6 +3701,21 @@ class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
     if (previewImageUrl != null) {
       $result.previewImageUrl = previewImageUrl;
     }
+    if (previewFileSize != null) {
+      $result.previewFileSize = previewFileSize;
+    }
+    if (mimeType != null) {
+      $result.mimeType = mimeType;
+    }
+    if (fileUrl != null) {
+      $result.fileUrl = fileUrl;
+    }
+    if (filePath != null) {
+      $result.filePath = filePath;
+    }
+    if (fileBytes != null) {
+      $result.fileBytes = fileBytes;
+    }
     return $result;
   }
   MessageDocument_FileMetadata._() : super();
@@ -3709,6 +3729,11 @@ class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'height', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(5, _omitFieldNames ? '' : 'imageBlurHash')
     ..aOS(6, _omitFieldNames ? '' : 'previewImageUrl')
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'previewFileSize', $pb.PbFieldType.OU3)
+    ..aOS(8, _omitFieldNames ? '' : 'mimeType')
+    ..aOS(9, _omitFieldNames ? '' : 'fileUrl')
+    ..aOS(10, _omitFieldNames ? '' : 'filePath')
+    ..a<$core.List<$core.int>>(11, _omitFieldNames ? '' : 'fileBytes', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -3786,6 +3811,52 @@ class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
   $core.bool hasPreviewImageUrl() => $_has(5);
   @$pb.TagNumber(6)
   void clearPreviewImageUrl() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get previewFileSize => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set previewFileSize($core.int v) { $_setUnsignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasPreviewFileSize() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearPreviewFileSize() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get mimeType => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set mimeType($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasMimeType() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearMimeType() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get fileUrl => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set fileUrl($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasFileUrl() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearFileUrl() => clearField(9);
+
+  /// These are only used for uploading and displaying it in the ui
+  @$pb.TagNumber(10)
+  $core.String get filePath => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set filePath($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasFilePath() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearFilePath() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.List<$core.int> get fileBytes => $_getN(10);
+  @$pb.TagNumber(11)
+  set fileBytes($core.List<$core.int> v) { $_setBytes(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasFileBytes() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearFileBytes() => clearField(11);
 }
 
 class MessageDocument_LinkMetadata extends $pb.GeneratedMessage {
@@ -4216,6 +4287,84 @@ class MessageDocument_Metadata extends $pb.GeneratedMessage {
   void clearMessageType() => clearField(13);
 }
 
+class MessageDocument_RenderFlags extends $pb.GeneratedMessage {
+  factory MessageDocument_RenderFlags({
+    $core.bool? isSameSenderAsPrevious,
+    $core.bool? isWithinFiveMinuteAsPrevious,
+    $core.String? previousMessageId,
+  }) {
+    final $result = create();
+    if (isSameSenderAsPrevious != null) {
+      $result.isSameSenderAsPrevious = isSameSenderAsPrevious;
+    }
+    if (isWithinFiveMinuteAsPrevious != null) {
+      $result.isWithinFiveMinuteAsPrevious = isWithinFiveMinuteAsPrevious;
+    }
+    if (previousMessageId != null) {
+      $result.previousMessageId = previousMessageId;
+    }
+    return $result;
+  }
+  MessageDocument_RenderFlags._() : super();
+  factory MessageDocument_RenderFlags.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MessageDocument_RenderFlags.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MessageDocument.RenderFlags', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'isSameSenderAsPrevious')
+    ..aOB(2, _omitFieldNames ? '' : 'isWithinFiveMinuteAsPrevious')
+    ..aOS(3, _omitFieldNames ? '' : 'previousMessageId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MessageDocument_RenderFlags clone() => MessageDocument_RenderFlags()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MessageDocument_RenderFlags copyWith(void Function(MessageDocument_RenderFlags) updates) => super.copyWith((message) => updates(message as MessageDocument_RenderFlags)) as MessageDocument_RenderFlags;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MessageDocument_RenderFlags create() => MessageDocument_RenderFlags._();
+  MessageDocument_RenderFlags createEmptyInstance() => create();
+  static $pb.PbList<MessageDocument_RenderFlags> createRepeated() => $pb.PbList<MessageDocument_RenderFlags>();
+  @$core.pragma('dart2js:noInline')
+  static MessageDocument_RenderFlags getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MessageDocument_RenderFlags>(create);
+  static MessageDocument_RenderFlags? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get isSameSenderAsPrevious => $_getBF(0);
+  @$pb.TagNumber(1)
+  set isSameSenderAsPrevious($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIsSameSenderAsPrevious() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIsSameSenderAsPrevious() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get isWithinFiveMinuteAsPrevious => $_getBF(1);
+  @$pb.TagNumber(2)
+  set isWithinFiveMinuteAsPrevious($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasIsWithinFiveMinuteAsPrevious() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearIsWithinFiveMinuteAsPrevious() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get previousMessageId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set previousMessageId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasPreviousMessageId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearPreviousMessageId() => clearField(3);
+}
+
 class MessageDocument extends $pb.GeneratedMessage {
   factory MessageDocument({
     MessageDocument_Metadata? metadata,
@@ -4227,6 +4376,9 @@ class MessageDocument extends $pb.GeneratedMessage {
     DOCUMENT_STATUS? documentStatus,
     ReplyReference? replyRef,
     $core.String? threadChannelId,
+    MessageDocument_RenderFlags? renderFlags,
+    $core.Iterable<MessageDocument_FileMetadata>? attachments,
+    $core.bool? hasReactions,
   }) {
     final $result = create();
     if (metadata != null) {
@@ -4256,6 +4408,15 @@ class MessageDocument extends $pb.GeneratedMessage {
     if (threadChannelId != null) {
       $result.threadChannelId = threadChannelId;
     }
+    if (renderFlags != null) {
+      $result.renderFlags = renderFlags;
+    }
+    if (attachments != null) {
+      $result.attachments.addAll(attachments);
+    }
+    if (hasReactions != null) {
+      $result.hasReactions = hasReactions;
+    }
     return $result;
   }
   MessageDocument._() : super();
@@ -4272,6 +4433,9 @@ class MessageDocument extends $pb.GeneratedMessage {
     ..e<DOCUMENT_STATUS>(7, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..aOM<ReplyReference>(8, _omitFieldNames ? '' : 'replyRef', subBuilder: ReplyReference.create)
     ..aOS(9, _omitFieldNames ? '' : 'threadChannelId')
+    ..aOM<MessageDocument_RenderFlags>(10, _omitFieldNames ? '' : 'renderFlags', subBuilder: MessageDocument_RenderFlags.create)
+    ..pc<MessageDocument_FileMetadata>(11, _omitFieldNames ? '' : 'attachments', $pb.PbFieldType.PM, subBuilder: MessageDocument_FileMetadata.create)
+    ..aOB(12, _omitFieldNames ? '' : 'hasReactions')
     ..hasRequiredFields = false
   ;
 
@@ -4380,6 +4544,29 @@ class MessageDocument extends $pb.GeneratedMessage {
   $core.bool hasThreadChannelId() => $_has(8);
   @$pb.TagNumber(9)
   void clearThreadChannelId() => clearField(9);
+
+  @$pb.TagNumber(10)
+  MessageDocument_RenderFlags get renderFlags => $_getN(9);
+  @$pb.TagNumber(10)
+  set renderFlags(MessageDocument_RenderFlags v) { setField(10, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasRenderFlags() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearRenderFlags() => clearField(10);
+  @$pb.TagNumber(10)
+  MessageDocument_RenderFlags ensureRenderFlags() => $_ensure(9);
+
+  @$pb.TagNumber(11)
+  $core.List<MessageDocument_FileMetadata> get attachments => $_getList(10);
+
+  @$pb.TagNumber(12)
+  $core.bool get hasReactions => $_getBF(11);
+  @$pb.TagNumber(12)
+  set hasReactions($core.bool v) { $_setBool(11, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasHasReactions() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearHasReactions() => clearField(12);
 }
 
 class ReplyReference extends $pb.GeneratedMessage {

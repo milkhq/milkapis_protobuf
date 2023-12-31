@@ -105,6 +105,18 @@ class UserClient extends $grpc.Client {
       '/user.User/GenerateUserProfileBanner',
       ($0.GenerateUserProfileBannerRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.GenerateUserProfileBannerResponse.fromBuffer(value));
+  static final _$createSignUpToken = $grpc.ClientMethod<$0.CreateSignUpTokenRequest, $0.CreateSignUpTokenResponse>(
+      '/user.User/CreateSignUpToken',
+      ($0.CreateSignUpTokenRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CreateSignUpTokenResponse.fromBuffer(value));
+  static final _$updateUserRole = $grpc.ClientMethod<$0.UpdateUserRoleRequest, $0.UpdateUserRoleResponse>(
+      '/user.User/UpdateUserRole',
+      ($0.UpdateUserRoleRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.UpdateUserRoleResponse.fromBuffer(value));
+  static final _$checkSignupToken = $grpc.ClientMethod<$0.CheckSignUpTokenRequest, $0.CheckSignUpTokenResponse>(
+      '/user.User/CheckSignupToken',
+      ($0.CheckSignUpTokenRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.CheckSignUpTokenResponse.fromBuffer(value));
 
   UserClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -194,6 +206,18 @@ class UserClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$0.GenerateUserProfileBannerResponse> generateUserProfileBanner($0.GenerateUserProfileBannerRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$generateUserProfileBanner, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CreateSignUpTokenResponse> createSignUpToken($0.CreateSignUpTokenRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createSignUpToken, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.UpdateUserRoleResponse> updateUserRole($0.UpdateUserRoleRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateUserRole, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.CheckSignUpTokenResponse> checkSignupToken($0.CheckSignUpTokenRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$checkSignupToken, request, options: options);
   }
 }
 
@@ -349,6 +373,27 @@ abstract class UserServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.GenerateUserProfileBannerRequest.fromBuffer(value),
         ($0.GenerateUserProfileBannerResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CreateSignUpTokenRequest, $0.CreateSignUpTokenResponse>(
+        'CreateSignUpToken',
+        createSignUpToken_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.CreateSignUpTokenRequest.fromBuffer(value),
+        ($0.CreateSignUpTokenResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.UpdateUserRoleRequest, $0.UpdateUserRoleResponse>(
+        'UpdateUserRole',
+        updateUserRole_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.UpdateUserRoleRequest.fromBuffer(value),
+        ($0.UpdateUserRoleResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.CheckSignUpTokenRequest, $0.CheckSignUpTokenResponse>(
+        'CheckSignupToken',
+        checkSignupToken_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.CheckSignUpTokenRequest.fromBuffer(value),
+        ($0.CheckSignUpTokenResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateUserResponse> createUser_Pre($grpc.ServiceCall call, $async.Future<$0.CreateUserRequest> request) async {
@@ -435,6 +480,18 @@ abstract class UserServiceBase extends $grpc.Service {
     return generateUserProfileBanner(call, await request);
   }
 
+  $async.Future<$0.CreateSignUpTokenResponse> createSignUpToken_Pre($grpc.ServiceCall call, $async.Future<$0.CreateSignUpTokenRequest> request) async {
+    return createSignUpToken(call, await request);
+  }
+
+  $async.Future<$0.UpdateUserRoleResponse> updateUserRole_Pre($grpc.ServiceCall call, $async.Future<$0.UpdateUserRoleRequest> request) async {
+    return updateUserRole(call, await request);
+  }
+
+  $async.Future<$0.CheckSignUpTokenResponse> checkSignupToken_Pre($grpc.ServiceCall call, $async.Future<$0.CheckSignUpTokenRequest> request) async {
+    return checkSignupToken(call, await request);
+  }
+
   $async.Future<$0.CreateUserResponse> createUser($grpc.ServiceCall call, $0.CreateUserRequest request);
   $async.Future<$0.CreateAnonymousUserResponse> createAnonymousUser($grpc.ServiceCall call, $0.CreateAnonymousUserRequest request);
   $async.Future<$0.CreateUserEmailPasswordResponse> createUserEmailPassword($grpc.ServiceCall call, $0.CreateUserEmailPasswordRequest request);
@@ -456,4 +513,7 @@ abstract class UserServiceBase extends $grpc.Service {
   $async.Future<$0.CreateUserProfilePictureUploadURLResponse> createUserProfilePictureUploadURL($grpc.ServiceCall call, $0.CreateUserProfilePictureUploadURLRequest request);
   $async.Future<$0.CreateUserProfileBannerUploadURLResponse> createUserProfileBannerUploadURL($grpc.ServiceCall call, $0.CreateUserProfileBannerUploadURLRequest request);
   $async.Future<$0.GenerateUserProfileBannerResponse> generateUserProfileBanner($grpc.ServiceCall call, $0.GenerateUserProfileBannerRequest request);
+  $async.Future<$0.CreateSignUpTokenResponse> createSignUpToken($grpc.ServiceCall call, $0.CreateSignUpTokenRequest request);
+  $async.Future<$0.UpdateUserRoleResponse> updateUserRole($grpc.ServiceCall call, $0.UpdateUserRoleRequest request);
+  $async.Future<$0.CheckSignUpTokenResponse> checkSignupToken($grpc.ServiceCall call, $0.CheckSignUpTokenRequest request);
 }

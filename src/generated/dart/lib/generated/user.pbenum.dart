@@ -168,6 +168,23 @@ class SOCIAL extends $pb.ProtobufEnum {
   const SOCIAL._($core.int v, $core.String n) : super(v, n);
 }
 
+class UserFeatureFlags extends $pb.ProtobufEnum {
+  static const UserFeatureFlags NONE = UserFeatureFlags._(0, _omitEnumNames ? '' : 'NONE');
+  static const UserFeatureFlags AUDIO_CALLS = UserFeatureFlags._(1, _omitEnumNames ? '' : 'AUDIO_CALLS');
+  static const UserFeatureFlags VIDEO_CALLS = UserFeatureFlags._(2, _omitEnumNames ? '' : 'VIDEO_CALLS');
+
+  static const $core.List<UserFeatureFlags> values = <UserFeatureFlags> [
+    NONE,
+    AUDIO_CALLS,
+    VIDEO_CALLS,
+  ];
+
+  static final $core.Map<$core.int, UserFeatureFlags> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UserFeatureFlags? valueOf($core.int value) => _byValue[value];
+
+  const UserFeatureFlags._($core.int v, $core.String n) : super(v, n);
+}
+
 class UserDocument_UserProfileEffectsV1 extends $pb.ProtobufEnum {
   static const UserDocument_UserProfileEffectsV1 NONE = UserDocument_UserProfileEffectsV1._(0, _omitEnumNames ? '' : 'NONE');
   static const UserDocument_UserProfileEffectsV1 FORCE_LIGHTNING = UserDocument_UserProfileEffectsV1._(1, _omitEnumNames ? '' : 'FORCE_LIGHTNING');

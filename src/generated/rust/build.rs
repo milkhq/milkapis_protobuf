@@ -11,6 +11,8 @@ fn main() {
                 "../../protos/space.proto",
                 "../../protos/messaging.proto",
                 "../../protos/common.proto",
+                "../../protos/theme.proto",
+                "../../protos/ui.proto",
             ],
             &["../../protos"],
         )

@@ -1,0 +1,158 @@
+syntax = "proto3";
+
+package theme;
+
+service Theme {
+    rpc Dummy (DummyRequest) returns (DummyResponse) {}
+}
+
+message DummyRequest {
+    string dummy = 1;
+}
+
+message DummyResponse {
+    string dummy = 1;
+}
+
+enum PrefinedTheme {
+    BASE = 0;
+}
+
+message ThemeOption {
+    bool enabled = 1;
+    GlobalOption global = 2;
+    WindowContainerOption window = 3;
+    bytes space_button = 4;
+    bytes space_channel = 5;
+    bytes message_text_field = 6;
+    bytes message = 7;
+    PrefinedTheme prefined_theme = 8;
+    uint32 updated_at = 9;
+}
+
+enum BackgroundShader {
+    NONE = 0;
+}
+
+message GlobalOption {
+    string font = 1;
+    float font_size = 2;
+    float text_scale_factor = 3;
+}
+
+message WindowContainerOption {
+    uint32 background_color = 1;
+    string image = 2;
+    string video = 3;
+    uint32 overlay_color = 4;
+    LinearGradient gradient = 5;
+    float blur = 6;
+    BackgroundShader shader = 7;
+    string blurhash = 8;
+}
+
+message LinearGradient {
+    repeated uint32 colors = 1;
+    repeated float stops = 2;
+    uint32 tile_mode = 3;
+    repeated float begin = 4;
+    repeated float end = 5;
+}
+
+message SpaceButtonBaseOption {
+    uint32 background_color = 1;
+    uint32 background_color_active = 2;
+    uint32 highlight_color = 3;
+    uint32 highlight_color_active = 4;
+    uint32 border_radius = 5;
+    uint32 border_radius_active = 6;
+    uint32 badge_background_color = 7;
+    uint32 badge_background_color_active = 8;
+    uint32 badge_text_color = 9;
+    uint32 badge_text_color_active = 10;
+}
+
+message SpaceChannelBaseOption {
+    uint32 background_color = 1;
+    uint32 background_color_active = 2;
+    uint32 border_radius = 3;
+    uint32 border_radius_active = 4;
+    uint32 notification_background_color = 5;
+    uint32 notification_background_color_active = 6;
+    uint32 text_color = 7;
+    uint32 text_color_active = 8;
+    uint32 notification_text_color = 9;
+    uint32 border_color = 10;
+    uint32 border_color_active = 11;
+    uint32 border_width = 12;
+    uint32 border_width_active = 13;
+    uint32 text_size = 14;
+    string text_font = 15;
+    uint32 notification_text_color_active = 16;
+}
+
+message MessageTextFieldBaseOption {
+    uint32 background_color = 1;
+    uint32 background_color_active = 2;
+    uint32 border_radius = 3;
+    uint32 border_radius_active = 4;
+    uint32 border_color = 5;
+    uint32 border_color_active = 6;
+    uint32 border_width = 7;
+    uint32 border_width_active = 8;
+    uint32 text_color = 9;
+    uint32 text_color_active = 10;
+    uint32 text_size = 11;
+    string text_font = 12;
+    uint32 placeholder_color = 13;
+    uint32 placeholder_color_active = 14;
+    uint32 placeholder_text_size = 15;
+    string placeholder_text_font = 16;
+    repeated uint32 padding = 17;
+    repeated uint32 padding_active = 18;
+    uint32 cursor_color = 19;
+    uint32 cursor_color_active = 20;
+    uint32 cursor_width = 21;
+    uint32 cursor_width_active = 22;
+    uint32 cursor_height = 23;
+    uint32 cursor_height_active = 24;
+    uint32 selection_color = 25;
+    uint32 selection_color_active = 26;
+}
+
+message MessageBaseOption {
+    uint32 background_color = 1;
+    uint32 background_color_active = 2;
+    uint32 border_radius = 3;
+    uint32 border_radius_active = 4;
+    uint32 border_color = 5;
+    uint32 border_color_active = 6;
+    uint32 border_width = 7;
+    uint32 border_width_active = 8;
+    uint32 text_color = 9;
+    uint32 text_color_active = 10;
+    uint32 text_size = 11;
+    string text_font = 12;
+    repeated uint32 padding = 13;
+    repeated uint32 padding_active = 14;
+    uint32 timestamp_color = 15;
+    uint32 timestamp_color_active = 16;
+    uint32 timestamp_size = 17;
+    string timestamp_font = 18;
+    uint32 username_color = 19;
+    uint32 username_color_active = 20;
+    uint32 username_size = 21;
+    string username_font = 22;
+    uint32 avatar_border_color = 23;
+    uint32 avatar_border_color_active = 24;
+    uint32 avatar_border_width = 25;
+    uint32 avatar_border_width_active = 26;
+    uint32 highlight_color = 27;
+    uint32 highlight_color_active = 28;
+    uint32 avatar_border_radius = 29;
+    uint32 avatar_border_radius_active = 30;
+    uint32 avatar_border_padding = 31;
+    uint32 loader_color = 32;
+    uint32 text_bubble_background_color = 33;
+    uint32 text_bubble_background_color_active = 34;
+}

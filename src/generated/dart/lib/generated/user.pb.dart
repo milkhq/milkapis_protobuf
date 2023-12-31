@@ -18,6 +18,220 @@ import 'user.pbenum.dart';
 
 export 'user.pbenum.dart';
 
+class CheckSignUpTokenRequest extends $pb.GeneratedMessage {
+  factory CheckSignUpTokenRequest({
+    $core.String? token,
+  }) {
+    final $result = create();
+    if (token != null) {
+      $result.token = token;
+    }
+    return $result;
+  }
+  CheckSignUpTokenRequest._() : super();
+  factory CheckSignUpTokenRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CheckSignUpTokenRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckSignUpTokenRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'token')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CheckSignUpTokenRequest clone() => CheckSignUpTokenRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CheckSignUpTokenRequest copyWith(void Function(CheckSignUpTokenRequest) updates) => super.copyWith((message) => updates(message as CheckSignUpTokenRequest)) as CheckSignUpTokenRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CheckSignUpTokenRequest create() => CheckSignUpTokenRequest._();
+  CheckSignUpTokenRequest createEmptyInstance() => create();
+  static $pb.PbList<CheckSignUpTokenRequest> createRepeated() => $pb.PbList<CheckSignUpTokenRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CheckSignUpTokenRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckSignUpTokenRequest>(create);
+  static CheckSignUpTokenRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get token => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set token($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearToken() => clearField(1);
+}
+
+class CheckSignUpTokenResponse extends $pb.GeneratedMessage {
+  factory CheckSignUpTokenResponse({
+    $core.bool? valid,
+  }) {
+    final $result = create();
+    if (valid != null) {
+      $result.valid = valid;
+    }
+    return $result;
+  }
+  CheckSignUpTokenResponse._() : super();
+  factory CheckSignUpTokenResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CheckSignUpTokenResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CheckSignUpTokenResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'valid')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CheckSignUpTokenResponse clone() => CheckSignUpTokenResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CheckSignUpTokenResponse copyWith(void Function(CheckSignUpTokenResponse) updates) => super.copyWith((message) => updates(message as CheckSignUpTokenResponse)) as CheckSignUpTokenResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CheckSignUpTokenResponse create() => CheckSignUpTokenResponse._();
+  CheckSignUpTokenResponse createEmptyInstance() => create();
+  static $pb.PbList<CheckSignUpTokenResponse> createRepeated() => $pb.PbList<CheckSignUpTokenResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CheckSignUpTokenResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CheckSignUpTokenResponse>(create);
+  static CheckSignUpTokenResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get valid => $_getBF(0);
+  @$pb.TagNumber(1)
+  set valid($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasValid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValid() => clearField(1);
+}
+
+class UpdateUserRoleRequest extends $pb.GeneratedMessage {
+  factory UpdateUserRoleRequest({
+    $core.String? uid,
+    USER_TYPE? type,
+  }) {
+    final $result = create();
+    if (uid != null) {
+      $result.uid = uid;
+    }
+    if (type != null) {
+      $result.type = type;
+    }
+    return $result;
+  }
+  UpdateUserRoleRequest._() : super();
+  factory UpdateUserRoleRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateUserRoleRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserRoleRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uid')
+    ..e<USER_TYPE>(2, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: USER_TYPE.USER, valueOf: USER_TYPE.valueOf, enumValues: USER_TYPE.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateUserRoleRequest clone() => UpdateUserRoleRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateUserRoleRequest copyWith(void Function(UpdateUserRoleRequest) updates) => super.copyWith((message) => updates(message as UpdateUserRoleRequest)) as UpdateUserRoleRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserRoleRequest create() => UpdateUserRoleRequest._();
+  UpdateUserRoleRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateUserRoleRequest> createRepeated() => $pb.PbList<UpdateUserRoleRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserRoleRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateUserRoleRequest>(create);
+  static UpdateUserRoleRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUid() => clearField(1);
+
+  @$pb.TagNumber(2)
+  USER_TYPE get type => $_getN(1);
+  @$pb.TagNumber(2)
+  set type(USER_TYPE v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearType() => clearField(2);
+}
+
+class UpdateUserRoleResponse extends $pb.GeneratedMessage {
+  factory UpdateUserRoleResponse({
+    $core.String? uid,
+  }) {
+    final $result = create();
+    if (uid != null) {
+      $result.uid = uid;
+    }
+    return $result;
+  }
+  UpdateUserRoleResponse._() : super();
+  factory UpdateUserRoleResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateUserRoleResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateUserRoleResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'uid')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateUserRoleResponse clone() => UpdateUserRoleResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateUserRoleResponse copyWith(void Function(UpdateUserRoleResponse) updates) => super.copyWith((message) => updates(message as UpdateUserRoleResponse)) as UpdateUserRoleResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserRoleResponse create() => UpdateUserRoleResponse._();
+  UpdateUserRoleResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateUserRoleResponse> createRepeated() => $pb.PbList<UpdateUserRoleResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateUserRoleResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateUserRoleResponse>(create);
+  static UpdateUserRoleResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get uid => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set uid($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUid() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUid() => clearField(1);
+}
+
 class GenerateUserProfileBannerRequest extends $pb.GeneratedMessage {
   factory GenerateUserProfileBannerRequest({
     $core.String? prompt,
@@ -1418,6 +1632,7 @@ class UserDocument extends $pb.GeneratedMessage {
     USER_VISIBILITY? visibility,
     $fixnum.Int64? nonce,
     DOCUMENT_STATUS? documentStatus,
+    $core.Iterable<UserFeatureFlags>? featureFlags,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -1450,6 +1665,9 @@ class UserDocument extends $pb.GeneratedMessage {
     if (documentStatus != null) {
       $result.documentStatus = documentStatus;
     }
+    if (featureFlags != null) {
+      $result.featureFlags.addAll(featureFlags);
+    }
     return $result;
   }
   UserDocument._() : super();
@@ -1467,6 +1685,7 @@ class UserDocument extends $pb.GeneratedMessage {
     ..e<USER_VISIBILITY>(8, _omitFieldNames ? '' : 'visibility', $pb.PbFieldType.OE, defaultOrMaker: USER_VISIBILITY.PUBLIC, valueOf: USER_VISIBILITY.valueOf, enumValues: USER_VISIBILITY.values)
     ..a<$fixnum.Int64>(9, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<DOCUMENT_STATUS>(10, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
+    ..pc<UserFeatureFlags>(11, _omitFieldNames ? '' : 'featureFlags', $pb.PbFieldType.KE, valueOf: UserFeatureFlags.valueOf, enumValues: UserFeatureFlags.values, defaultEnumValue: UserFeatureFlags.NONE)
     ..hasRequiredFields = false
   ;
 
@@ -1576,6 +1795,9 @@ class UserDocument extends $pb.GeneratedMessage {
   $core.bool hasDocumentStatus() => $_has(9);
   @$pb.TagNumber(10)
   void clearDocumentStatus() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.List<UserFeatureFlags> get featureFlags => $_getList(10);
 }
 
 class UpdateUserMetadataRequest extends $pb.GeneratedMessage {
@@ -1812,6 +2034,7 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   factory CreateUserRequest({
     SOCIAL? social,
     $core.String? oauthCode,
+    $core.String? signUpToken,
   }) {
     final $result = create();
     if (social != null) {
@@ -1819,6 +2042,9 @@ class CreateUserRequest extends $pb.GeneratedMessage {
     }
     if (oauthCode != null) {
       $result.oauthCode = oauthCode;
+    }
+    if (signUpToken != null) {
+      $result.signUpToken = signUpToken;
     }
     return $result;
   }
@@ -1829,6 +2055,7 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
     ..e<SOCIAL>(1, _omitFieldNames ? '' : 'social', $pb.PbFieldType.OE, defaultOrMaker: SOCIAL.FACEBOOK, valueOf: SOCIAL.valueOf, enumValues: SOCIAL.values)
     ..aOS(2, _omitFieldNames ? '' : 'oauthCode')
+    ..aOS(3, _omitFieldNames ? '' : 'signUpToken')
     ..hasRequiredFields = false
   ;
 
@@ -1870,6 +2097,15 @@ class CreateUserRequest extends $pb.GeneratedMessage {
   $core.bool hasOauthCode() => $_has(1);
   @$pb.TagNumber(2)
   void clearOauthCode() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get signUpToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set signUpToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSignUpToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSignUpToken() => clearField(3);
 }
 
 class CreateUserResponse extends $pb.GeneratedMessage {
@@ -2034,6 +2270,88 @@ class CreateUserEmailPasswordResponse extends $pb.GeneratedMessage {
   $core.bool hasCustomToken() => $_has(0);
   @$pb.TagNumber(1)
   void clearCustomToken() => clearField(1);
+}
+
+class CreateSignUpTokenRequest extends $pb.GeneratedMessage {
+  factory CreateSignUpTokenRequest() => create();
+  CreateSignUpTokenRequest._() : super();
+  factory CreateSignUpTokenRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSignUpTokenRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSignUpTokenRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSignUpTokenRequest clone() => CreateSignUpTokenRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSignUpTokenRequest copyWith(void Function(CreateSignUpTokenRequest) updates) => super.copyWith((message) => updates(message as CreateSignUpTokenRequest)) as CreateSignUpTokenRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSignUpTokenRequest create() => CreateSignUpTokenRequest._();
+  CreateSignUpTokenRequest createEmptyInstance() => create();
+  static $pb.PbList<CreateSignUpTokenRequest> createRepeated() => $pb.PbList<CreateSignUpTokenRequest>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSignUpTokenRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSignUpTokenRequest>(create);
+  static CreateSignUpTokenRequest? _defaultInstance;
+}
+
+class CreateSignUpTokenResponse extends $pb.GeneratedMessage {
+  factory CreateSignUpTokenResponse({
+    $core.String? token,
+  }) {
+    final $result = create();
+    if (token != null) {
+      $result.token = token;
+    }
+    return $result;
+  }
+  CreateSignUpTokenResponse._() : super();
+  factory CreateSignUpTokenResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CreateSignUpTokenResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSignUpTokenResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'token')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CreateSignUpTokenResponse clone() => CreateSignUpTokenResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CreateSignUpTokenResponse copyWith(void Function(CreateSignUpTokenResponse) updates) => super.copyWith((message) => updates(message as CreateSignUpTokenResponse)) as CreateSignUpTokenResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CreateSignUpTokenResponse create() => CreateSignUpTokenResponse._();
+  CreateSignUpTokenResponse createEmptyInstance() => create();
+  static $pb.PbList<CreateSignUpTokenResponse> createRepeated() => $pb.PbList<CreateSignUpTokenResponse>();
+  @$core.pragma('dart2js:noInline')
+  static CreateSignUpTokenResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CreateSignUpTokenResponse>(create);
+  static CreateSignUpTokenResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get token => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set token($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasToken() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearToken() => clearField(1);
 }
 
 

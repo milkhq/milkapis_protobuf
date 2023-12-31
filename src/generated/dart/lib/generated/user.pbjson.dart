@@ -136,6 +136,71 @@ final $typed_data.Uint8List sOCIALDescriptor = $convert.base64Decode(
     'RVJFU1QQChIKCgZSRURESVQQCxIKCgZUVU1CTFIQDBILCgdZT1VUVUJFEA4SCwoHRElTQ09SRB'
     'APEg0KCUFOT05ZTU9VUxAQ');
 
+@$core.Deprecated('Use userFeatureFlagsDescriptor instead')
+const UserFeatureFlags$json = {
+  '1': 'UserFeatureFlags',
+  '2': [
+    {'1': 'NONE', '2': 0},
+    {'1': 'AUDIO_CALLS', '2': 1},
+    {'1': 'VIDEO_CALLS', '2': 2},
+  ],
+};
+
+/// Descriptor for `UserFeatureFlags`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List userFeatureFlagsDescriptor = $convert.base64Decode(
+    'ChBVc2VyRmVhdHVyZUZsYWdzEggKBE5PTkUQABIPCgtBVURJT19DQUxMUxABEg8KC1ZJREVPX0'
+    'NBTExTEAI=');
+
+@$core.Deprecated('Use checkSignUpTokenRequestDescriptor instead')
+const CheckSignUpTokenRequest$json = {
+  '1': 'CheckSignUpTokenRequest',
+  '2': [
+    {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
+  ],
+};
+
+/// Descriptor for `CheckSignUpTokenRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List checkSignUpTokenRequestDescriptor = $convert.base64Decode(
+    'ChdDaGVja1NpZ25VcFRva2VuUmVxdWVzdBIUCgV0b2tlbhgBIAEoCVIFdG9rZW4=');
+
+@$core.Deprecated('Use checkSignUpTokenResponseDescriptor instead')
+const CheckSignUpTokenResponse$json = {
+  '1': 'CheckSignUpTokenResponse',
+  '2': [
+    {'1': 'valid', '3': 1, '4': 1, '5': 8, '10': 'valid'},
+  ],
+};
+
+/// Descriptor for `CheckSignUpTokenResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List checkSignUpTokenResponseDescriptor = $convert.base64Decode(
+    'ChhDaGVja1NpZ25VcFRva2VuUmVzcG9uc2USFAoFdmFsaWQYASABKAhSBXZhbGlk');
+
+@$core.Deprecated('Use updateUserRoleRequestDescriptor instead')
+const UpdateUserRoleRequest$json = {
+  '1': 'UpdateUserRoleRequest',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.user.USER_TYPE', '10': 'type'},
+  ],
+};
+
+/// Descriptor for `UpdateUserRoleRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateUserRoleRequestDescriptor = $convert.base64Decode(
+    'ChVVcGRhdGVVc2VyUm9sZVJlcXVlc3QSEAoDdWlkGAEgASgJUgN1aWQSIwoEdHlwZRgCIAEoDj'
+    'IPLnVzZXIuVVNFUl9UWVBFUgR0eXBl');
+
+@$core.Deprecated('Use updateUserRoleResponseDescriptor instead')
+const UpdateUserRoleResponse$json = {
+  '1': 'UpdateUserRoleResponse',
+  '2': [
+    {'1': 'uid', '3': 1, '4': 1, '5': 9, '10': 'uid'},
+  ],
+};
+
+/// Descriptor for `UpdateUserRoleResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateUserRoleResponseDescriptor = $convert.base64Decode(
+    'ChZVcGRhdGVVc2VyUm9sZVJlc3BvbnNlEhAKA3VpZBgBIAEoCVIDdWlk');
+
 @$core.Deprecated('Use generateUserProfileBannerRequestDescriptor instead')
 const GenerateUserProfileBannerRequest$json = {
   '1': 'GenerateUserProfileBannerRequest',
@@ -422,6 +487,7 @@ const UserDocument$json = {
     {'1': 'visibility', '3': 8, '4': 1, '5': 14, '6': '.user.USER_VISIBILITY', '10': 'visibility'},
     {'1': 'nonce', '3': 9, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '10': 'documentStatus'},
+    {'1': 'feature_flags', '3': 11, '4': 3, '5': 14, '6': '.user.UserFeatureFlags', '10': 'featureFlags'},
   ],
   '3': [UserDocument_Metadata$json],
   '4': [UserDocument_UserProfileEffectsV1$json],
@@ -465,17 +531,19 @@ final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
     'aXJhdGlvbhIjCgR0eXBlGAYgASgOMg8udXNlci5VU0VSX1RZUEVSBHR5cGUSIQoMc2VhcmNoX3'
     'Rlcm1zGAcgAygJUgtzZWFyY2hUZXJtcxI1Cgp2aXNpYmlsaXR5GAggASgOMhUudXNlci5VU0VS'
     'X1ZJU0lCSUxJVFlSCnZpc2liaWxpdHkSFAoFbm9uY2UYCSABKARSBW5vbmNlEj4KD2RvY3VtZW'
-    '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxrt'
-    'AwoITWV0YWRhdGESGgoIdXNlcm5hbWUYASABKAlSCHVzZXJuYW1lEhQKBWVtYWlsGAIgASgJUg'
-    'VlbWFpbBIhCgxkaXNwbGF5X25hbWUYAyABKAlSC2Rpc3BsYXlOYW1lEhAKA2JpbxgEIAEoCVID'
-    'YmlvEiQKBnNvY2lhbBgFIAEoDjIMLnVzZXIuU09DSUFMUgZzb2NpYWwSGwoJc29jaWFsX2lkGA'
-    'YgASgJUghzb2NpYWxJZBIoChBhdmF0YXJfaW1hZ2VfdXJsGAcgASgJUg5hdmF0YXJJbWFnZVVy'
-    'bBIqChFhdmF0YXJfaW1hZ2VfaGFzaBgIIAEoCVIPYXZhdGFySW1hZ2VIYXNoEigKEGJhbm5lcl'
-    '9pbWFnZV91cmwYCSABKAlSDmJhbm5lckltYWdlVXJsEioKEWJhbm5lcl9pbWFnZV9oYXNoGAog'
-    'ASgJUg9iYW5uZXJJbWFnZUhhc2gSHQoKdXBkYXRlZF9hdBgLIAEoBFIJdXBkYXRlZEF0Ej8KBm'
-    'VmZmVjdBgMIAEoDjInLnVzZXIuVXNlckRvY3VtZW50LlVzZXJQcm9maWxlRWZmZWN0c1YxUgZl'
-    'ZmZlY3QSKwoRZWZmZWN0X3BhcmFtZXRlcnMYDSABKAlSEGVmZmVjdFBhcmFtZXRlcnMiNQoUVX'
-    'NlclByb2ZpbGVFZmZlY3RzVjESCAoETk9ORRAAEhMKD0ZPUkNFX0xJR0hUTklORxAB');
+    '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxI7'
+    'Cg1mZWF0dXJlX2ZsYWdzGAsgAygOMhYudXNlci5Vc2VyRmVhdHVyZUZsYWdzUgxmZWF0dXJlRm'
+    'xhZ3Ma7QMKCE1ldGFkYXRhEhoKCHVzZXJuYW1lGAEgASgJUgh1c2VybmFtZRIUCgVlbWFpbBgC'
+    'IAEoCVIFZW1haWwSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRIQCgNiaW8YBC'
+    'ABKAlSA2JpbxIkCgZzb2NpYWwYBSABKA4yDC51c2VyLlNPQ0lBTFIGc29jaWFsEhsKCXNvY2lh'
+    'bF9pZBgGIAEoCVIIc29jaWFsSWQSKAoQYXZhdGFyX2ltYWdlX3VybBgHIAEoCVIOYXZhdGFySW'
+    '1hZ2VVcmwSKgoRYXZhdGFyX2ltYWdlX2hhc2gYCCABKAlSD2F2YXRhckltYWdlSGFzaBIoChBi'
+    'YW5uZXJfaW1hZ2VfdXJsGAkgASgJUg5iYW5uZXJJbWFnZVVybBIqChFiYW5uZXJfaW1hZ2VfaG'
+    'FzaBgKIAEoCVIPYmFubmVySW1hZ2VIYXNoEh0KCnVwZGF0ZWRfYXQYCyABKARSCXVwZGF0ZWRB'
+    'dBI/CgZlZmZlY3QYDCABKA4yJy51c2VyLlVzZXJEb2N1bWVudC5Vc2VyUHJvZmlsZUVmZmVjdH'
+    'NWMVIGZWZmZWN0EisKEWVmZmVjdF9wYXJhbWV0ZXJzGA0gASgJUhBlZmZlY3RQYXJhbWV0ZXJz'
+    'IjUKFFVzZXJQcm9maWxlRWZmZWN0c1YxEggKBE5PTkUQABITCg9GT1JDRV9MSUdIVE5JTkcQAQ'
+    '==');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {
@@ -535,13 +603,15 @@ const CreateUserRequest$json = {
   '2': [
     {'1': 'social', '3': 1, '4': 1, '5': 14, '6': '.user.SOCIAL', '10': 'social'},
     {'1': 'oauth_code', '3': 2, '4': 1, '5': 9, '10': 'oauthCode'},
+    {'1': 'sign_up_token', '3': 3, '4': 1, '5': 9, '10': 'signUpToken'},
   ],
 };
 
 /// Descriptor for `CreateUserRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createUserRequestDescriptor = $convert.base64Decode(
     'ChFDcmVhdGVVc2VyUmVxdWVzdBIkCgZzb2NpYWwYASABKA4yDC51c2VyLlNPQ0lBTFIGc29jaW'
-    'FsEh0KCm9hdXRoX2NvZGUYAiABKAlSCW9hdXRoQ29kZQ==');
+    'FsEh0KCm9hdXRoX2NvZGUYAiABKAlSCW9hdXRoQ29kZRIiCg1zaWduX3VwX3Rva2VuGAMgASgJ'
+    'UgtzaWduVXBUb2tlbg==');
 
 @$core.Deprecated('Use createUserResponseDescriptor instead')
 const CreateUserResponse$json = {
@@ -582,4 +652,25 @@ const CreateUserEmailPasswordResponse$json = {
 final $typed_data.Uint8List createUserEmailPasswordResponseDescriptor = $convert.base64Decode(
     'Ch9DcmVhdGVVc2VyRW1haWxQYXNzd29yZFJlc3BvbnNlEiEKDGN1c3RvbV90b2tlbhgBIAEoCV'
     'ILY3VzdG9tVG9rZW4=');
+
+@$core.Deprecated('Use createSignUpTokenRequestDescriptor instead')
+const CreateSignUpTokenRequest$json = {
+  '1': 'CreateSignUpTokenRequest',
+};
+
+/// Descriptor for `CreateSignUpTokenRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSignUpTokenRequestDescriptor = $convert.base64Decode(
+    'ChhDcmVhdGVTaWduVXBUb2tlblJlcXVlc3Q=');
+
+@$core.Deprecated('Use createSignUpTokenResponseDescriptor instead')
+const CreateSignUpTokenResponse$json = {
+  '1': 'CreateSignUpTokenResponse',
+  '2': [
+    {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
+  ],
+};
+
+/// Descriptor for `CreateSignUpTokenResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createSignUpTokenResponseDescriptor = $convert.base64Decode(
+    'ChlDcmVhdGVTaWduVXBUb2tlblJlc3BvbnNlEhQKBXRva2VuGAEgASgJUgV0b2tlbg==');
 

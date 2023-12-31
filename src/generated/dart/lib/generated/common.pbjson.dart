@@ -34,6 +34,7 @@ const CollectionsV1$json = {
     {'1': 'CHANNEL_MEMBERS_TO_CHANNEL_ID', '2': 14},
     {'1': 'USER_ROLES', '2': 15},
     {'1': 'USER_STATUSES', '2': 16},
+    {'1': 'SIGN_UP_TOKENS', '2': 17},
   ],
 };
 
@@ -44,7 +45,7 @@ final $typed_data.Uint8List collectionsV1Descriptor = $convert.base64Decode(
     'DgoKQ0FURUdPUklFUxAGEgwKCE1FU1NBR0VTEAcSCwoHTUVNQkVSUxAIEgkKBVJPTEVTEAkSDQ'
     'oJUkVBQ1RJT05TEAoSCwoHVEhSRUFEUxALEg0KCVVTRVJOQU1FUxAMEhEKDU5PVElGSUNBVElP'
     'TlMQDRIhCh1DSEFOTkVMX01FTUJFUlNfVE9fQ0hBTk5FTF9JRBAOEg4KClVTRVJfUk9MRVMQDx'
-    'IRCg1VU0VSX1NUQVRVU0VTEBA=');
+    'IRCg1VU0VSX1NUQVRVU0VTEBASEgoOU0lHTl9VUF9UT0tFTlMQEQ==');
 
 @$core.Deprecated('Use collectionCountersV1Descriptor instead')
 const CollectionCountersV1$json = {
@@ -65,6 +66,7 @@ const CollectionCountersV1$json = {
     {'1': 'NOTIFICATION_COUNTER', '2': 12},
     {'1': 'USER_ROLE_COUNTER', '2': 13},
     {'1': 'USER_STATUS_COUNTER', '2': 14},
+    {'1': 'SIGN_UP_TOKEN_COUNTER', '2': 15},
   ],
 };
 
@@ -76,7 +78,7 @@ final $typed_data.Uint8List collectionCountersV1Descriptor = $convert.base64Deco
     'VHT1JZX0NPVU5URVIQBhITCg9NRVNTQUdFX0NPVU5URVIQBxISCg5NRU1CRVJfQ09VTlRFUhAI'
     'EhAKDFJPTEVfQ09VTlRFUhAJEhIKDlRIUkVBRF9DT1VOVEVSEAoSFAoQVVNFUk5BTUVfQ09VTl'
     'RFUhALEhgKFE5PVElGSUNBVElPTl9DT1VOVEVSEAwSFQoRVVNFUl9ST0xFX0NPVU5URVIQDRIX'
-    'ChNVU0VSX1NUQVRVU19DT1VOVEVSEA4=');
+    'ChNVU0VSX1NUQVRVU19DT1VOVEVSEA4SGQoVU0lHTl9VUF9UT0tFTl9DT1VOVEVSEA8=');
 
 @$core.Deprecated('Use dOCUMENT_TYPEDescriptor instead')
 const DOCUMENT_TYPE$json = {

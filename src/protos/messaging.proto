@@ -415,6 +415,12 @@ message MessageDocument {
         uint64 height = 4;
         string image_blur_hash = 5;
         string preview_image_url = 6;
+        uint32 preview_file_size = 7;
+        string mime_type = 8;
+        string file_url = 9;
+        // These are only used for uploading and displaying it in the ui
+        string file_path = 10;
+        bytes file_bytes = 11;
     }
 
     message LinkMetadata {
@@ -449,6 +455,12 @@ message MessageDocument {
         MESSAGE_TYPE message_type = 13;
     }
 
+    message RenderFlags {
+        bool is_same_sender_as_previous = 1;
+        bool is_within_five_minute_as_previous = 2;
+        string previous_message_id = 3;
+    }
+
     Metadata metadata = 1;
     uint64 created_at = 2;
     string sender_uid = 3;
@@ -458,6 +470,9 @@ message MessageDocument {
     DOCUMENT_STATUS document_status = 7;
     ReplyReference reply_ref = 8;
     string thread_channel_id = 9;
+    RenderFlags render_flags = 10;
+    repeated FileMetadata attachments = 11;
+    bool has_reactions = 12;
 }
 
 message ReplyReference {

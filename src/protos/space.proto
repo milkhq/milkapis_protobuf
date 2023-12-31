@@ -3,6 +3,7 @@ syntax = "proto3";
 package space;
 
 import "messaging.proto";
+import "theme.proto";
 
 service Space {
   rpc CreateSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
@@ -397,6 +398,7 @@ message SpaceDocument {
     string banner_image_url = 5;
     string banner_image_hash = 6;
     repeated CustomBackground custom_backgrounds = 11;
+    theme.ThemeOption theme_option = 12;
   }
   SPACE_STATUS status = 1;
   SPACE_VISIBILITY visibility = 2;
@@ -436,3 +438,8 @@ message UpdateSpaceMetadataRequest {
 message UpdateSpaceMetadataResponse { string space_id = 1; }
 message UpdateSpaceStatusRequest { string space_id = 1; }
 message UpdateSpaceStatusResponse { string space_id = 1; }
+
+message JoinSpacePayload {
+  string space_id = 1;
+  string uid = 2;
+}

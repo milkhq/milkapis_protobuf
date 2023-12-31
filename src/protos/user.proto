@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package user;
 
-
-
 service User {
   rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
   rpc CreateAnonymousUser(CreateAnonymousUserRequest) returns (CreateAnonymousUserResponse);
@@ -27,12 +25,32 @@ service User {
   rpc CreateUserProfilePictureUploadURL(CreateUserProfilePictureUploadURLRequest) returns (CreateUserProfilePictureUploadURLResponse);
   rpc CreateUserProfileBannerUploadURL(CreateUserProfileBannerUploadURLRequest) returns (CreateUserProfileBannerUploadURLResponse);
   rpc GenerateUserProfileBanner(GenerateUserProfileBannerRequest) returns (GenerateUserProfileBannerResponse);
+  rpc CreateSignUpToken(CreateSignUpTokenRequest) returns (CreateSignUpTokenResponse);
+  rpc UpdateUserRole(UpdateUserRoleRequest) returns (UpdateUserRoleResponse);
+  rpc CheckSignupToken(CheckSignUpTokenRequest) returns (CheckSignUpTokenResponse);
 }
 
 enum DOCUMENT_STATUS {
   PENDING = 0;
   APPROVED = 1;
   REJECTED = 2;
+}
+
+message CheckSignUpTokenRequest {
+  string token = 1;
+}
+
+message CheckSignUpTokenResponse {
+  bool valid = 1;
+}
+
+message UpdateUserRoleRequest {
+  string uid = 1;
+  USER_TYPE type = 2;
+}
+
+message UpdateUserRoleResponse {
+  string uid = 1;
 }
 
 message GenerateUserProfileBannerRequest {
@@ -195,6 +213,7 @@ message UserDocument {
   USER_VISIBILITY visibility = 8;
   uint64 nonce = 9;
   DOCUMENT_STATUS document_status = 10;
+  repeated UserFeatureFlags feature_flags = 11;
 
   enum UserProfileEffectsV1 {
     NONE = 0;
@@ -235,6 +254,7 @@ message UpdateUserStatusResponse { string uid = 1; }
 message CreateUserRequest {
   SOCIAL social = 1;
   string oauth_code = 2;
+  string sign_up_token = 3;
 }
 
 message CreateUserResponse {
@@ -250,3 +270,15 @@ message CreateUserEmailPasswordResponse {
   string custom_token = 1;
 }
 
+message CreateSignUpTokenRequest {
+}
+
+message CreateSignUpTokenResponse {
+  string token = 1;
+}
+
+enum UserFeatureFlags {
+  NONE = 0;
+  AUDIO_CALLS = 1;
+  VIDEO_CALLS = 2;
+}

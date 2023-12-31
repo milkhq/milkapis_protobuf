@@ -14,6 +14,14 @@ pub mod models {
     pub mod common {
         tonic::include_proto!("common");
     }
+
+    pub mod theme {
+        tonic::include_proto!("theme");
+    }
+
+    pub mod ui {
+        tonic::include_proto!("ui");
+    }
 }
 
 pub use prost;

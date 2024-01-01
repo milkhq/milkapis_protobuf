@@ -124,3 +124,9 @@ message SessionState {
     }
 }
 
+enum TextFieldInputMode {
+    DEFAULT = 0;
+    REPLY = 1;
+    EDIT = 2;
+} 
+

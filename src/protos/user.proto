@@ -259,6 +259,7 @@ message CreateUserRequest {
 
 message CreateUserResponse {
   string custom_token = 1;
+  string uid = 2;
 }
 
 message CreateUserEmailPasswordRequest {

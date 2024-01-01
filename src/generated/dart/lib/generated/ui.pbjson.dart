@@ -55,6 +55,20 @@ const ContentScreenState$json = {
 final $typed_data.Uint8List contentScreenStateDescriptor = $convert.base64Decode(
     'ChJDb250ZW50U2NyZWVuU3RhdGUSDAoITUVTU0FHRVMQAA==');
 
+@$core.Deprecated('Use textFieldInputModeDescriptor instead')
+const TextFieldInputMode$json = {
+  '1': 'TextFieldInputMode',
+  '2': [
+    {'1': 'DEFAULT', '2': 0},
+    {'1': 'REPLY', '2': 1},
+    {'1': 'EDIT', '2': 2},
+  ],
+};
+
+/// Descriptor for `TextFieldInputMode`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List textFieldInputModeDescriptor = $convert.base64Decode(
+    'ChJUZXh0RmllbGRJbnB1dE1vZGUSCwoHREVGQVVMVBAAEgkKBVJFUExZEAESCAoERURJVBAC');
+
 @$core.Deprecated('Use newWindowDescriptor instead')
 const NewWindow$json = {
   '1': 'NewWindow',

@@ -60,6 +60,23 @@ class ContentScreenState extends $pb.ProtobufEnum {
   const ContentScreenState._($core.int v, $core.String n) : super(v, n);
 }
 
+class TextFieldInputMode extends $pb.ProtobufEnum {
+  static const TextFieldInputMode DEFAULT = TextFieldInputMode._(0, _omitEnumNames ? '' : 'DEFAULT');
+  static const TextFieldInputMode REPLY = TextFieldInputMode._(1, _omitEnumNames ? '' : 'REPLY');
+  static const TextFieldInputMode EDIT = TextFieldInputMode._(2, _omitEnumNames ? '' : 'EDIT');
+
+  static const $core.List<TextFieldInputMode> values = <TextFieldInputMode> [
+    DEFAULT,
+    REPLY,
+    EDIT,
+  ];
+
+  static final $core.Map<$core.int, TextFieldInputMode> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static TextFieldInputMode? valueOf($core.int value) => _byValue[value];
+
+  const TextFieldInputMode._($core.int v, $core.String n) : super(v, n);
+}
+
 class NewWindow_Type extends $pb.ProtobufEnum {
   static const NewWindow_Type APP = NewWindow_Type._(0, _omitEnumNames ? '' : 'APP');
   static const NewWindow_Type SERVER_SETTINGS = NewWindow_Type._(1, _omitEnumNames ? '' : 'SERVER_SETTINGS');

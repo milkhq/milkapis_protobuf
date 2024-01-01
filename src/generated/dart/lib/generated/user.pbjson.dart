@@ -618,13 +618,14 @@ const CreateUserResponse$json = {
   '1': 'CreateUserResponse',
   '2': [
     {'1': 'custom_token', '3': 1, '4': 1, '5': 9, '10': 'customToken'},
+    {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
   ],
 };
 
 /// Descriptor for `CreateUserResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createUserResponseDescriptor = $convert.base64Decode(
-    'ChJDcmVhdGVVc2VyUmVzcG9uc2USIQoMY3VzdG9tX3Rva2VuGAEgASgJUgtjdXN0b21Ub2tlbg'
-    '==');
+    'ChJDcmVhdGVVc2VyUmVzcG9uc2USIQoMY3VzdG9tX3Rva2VuGAEgASgJUgtjdXN0b21Ub2tlbh'
+    'IQCgN1aWQYAiABKAlSA3VpZA==');
 
 @$core.Deprecated('Use createUserEmailPasswordRequestDescriptor instead')
 const CreateUserEmailPasswordRequest$json = {

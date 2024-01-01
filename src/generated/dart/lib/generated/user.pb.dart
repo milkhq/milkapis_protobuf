@@ -2111,10 +2111,14 @@ class CreateUserRequest extends $pb.GeneratedMessage {
 class CreateUserResponse extends $pb.GeneratedMessage {
   factory CreateUserResponse({
     $core.String? customToken,
+    $core.String? uid,
   }) {
     final $result = create();
     if (customToken != null) {
       $result.customToken = customToken;
+    }
+    if (uid != null) {
+      $result.uid = uid;
     }
     return $result;
   }
@@ -2124,6 +2128,7 @@ class CreateUserResponse extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'customToken')
+    ..aOS(2, _omitFieldNames ? '' : 'uid')
     ..hasRequiredFields = false
   ;
 
@@ -2156,6 +2161,15 @@ class CreateUserResponse extends $pb.GeneratedMessage {
   $core.bool hasCustomToken() => $_has(0);
   @$pb.TagNumber(1)
   void clearCustomToken() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get uid => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set uid($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUid() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUid() => clearField(2);
 }
 
 class CreateUserEmailPasswordRequest extends $pb.GeneratedMessage {

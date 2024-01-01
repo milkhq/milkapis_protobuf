@@ -117,6 +117,7 @@ const Task_StartOAuth2FlowRequest$json = {
   '1': 'StartOAuth2FlowRequest',
   '2': [
     {'1': 'provider', '3': 1, '4': 1, '5': 14, '6': '.user.SOCIAL', '10': 'provider'},
+    {'1': 'sign_up_token', '3': 2, '4': 1, '5': 9, '10': 'signUpToken'},
   ],
 };
 
@@ -155,12 +156,12 @@ final $typed_data.Uint8List taskDescriptor = $convert.base64Decode(
     'Eh0KCmNoYW5uZWxfaWQYBSABKAlSCWNoYW5uZWxJZBpEChRPcGVuTmV3V2luZG93UmVxdWVzdB'
     'IsCgVzcGFjZRgBIAEoCzIWLnVpLlNlc3Npb25TdGF0ZS5TcGFjZVIFc3BhY2UaVgoVT3Blbk5l'
     'd1dpbmRvd1Jlc3BvbnNlEicKBnN0YXR1cxgBIAEoDjIPLnVpLlRhc2suU3RhdHVzUgZzdGF0dX'
-    'MSFAoFZXJyb3IYAiABKAlSBWVycm9yGkIKFlN0YXJ0T0F1dGgyRmxvd1JlcXVlc3QSKAoIcHJv'
-    'dmlkZXIYASABKA4yDC51c2VyLlNPQ0lBTFIIcHJvdmlkZXIaagoXU3RhcnRPQXV0aDJGbG93Um'
-    'VzcG9uc2USJwoGc3RhdHVzGAEgASgOMg8udWkuVGFzay5TdGF0dXNSBnN0YXR1cxIUCgVlcnJv'
-    'chgCIAEoCVIFZXJyb3ISEAoDdXJsGAMgASgJUgN1cmwiMgoEVHlwZRIVChFTVEFSVF9PQVVUSD'
-    'JfRkxPVxAAEhMKD09QRU5fTkVXX1dJTkRPVxABIiIKBlN0YXR1cxILCgdTVUNDRVNTEAASCwoH'
-    'RkFJTFVSRRAB');
+    'MSFAoFZXJyb3IYAiABKAlSBWVycm9yGmYKFlN0YXJ0T0F1dGgyRmxvd1JlcXVlc3QSKAoIcHJv'
+    'dmlkZXIYASABKA4yDC51c2VyLlNPQ0lBTFIIcHJvdmlkZXISIgoNc2lnbl91cF90b2tlbhgCIA'
+    'EoCVILc2lnblVwVG9rZW4aagoXU3RhcnRPQXV0aDJGbG93UmVzcG9uc2USJwoGc3RhdHVzGAEg'
+    'ASgOMg8udWkuVGFzay5TdGF0dXNSBnN0YXR1cxIUCgVlcnJvchgCIAEoCVIFZXJyb3ISEAoDdX'
+    'JsGAMgASgJUgN1cmwiMgoEVHlwZRIVChFTVEFSVF9PQVVUSDJfRkxPVxAAEhMKD09QRU5fTkVX'
+    'X1dJTkRPVxABIiIKBlN0YXR1cxILCgdTVUNDRVNTEAASCwoHRkFJTFVSRRAB');
 
 @$core.Deprecated('Use sessionStateDescriptor instead')
 const SessionState$json = {

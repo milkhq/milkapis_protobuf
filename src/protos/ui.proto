@@ -45,6 +45,7 @@ message Task {
 
     message StartOAuth2FlowRequest {
         user.SOCIAL provider = 1;
+        string sign_up_token = 2;
     }
 
     message StartOAuth2FlowResponse {

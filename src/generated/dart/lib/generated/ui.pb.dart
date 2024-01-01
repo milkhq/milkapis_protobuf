@@ -218,10 +218,14 @@ class Task_OpenNewWindowResponse extends $pb.GeneratedMessage {
 class Task_StartOAuth2FlowRequest extends $pb.GeneratedMessage {
   factory Task_StartOAuth2FlowRequest({
     $0.SOCIAL? provider,
+    $core.String? signUpToken,
   }) {
     final $result = create();
     if (provider != null) {
       $result.provider = provider;
+    }
+    if (signUpToken != null) {
+      $result.signUpToken = signUpToken;
     }
     return $result;
   }
@@ -231,6 +235,7 @@ class Task_StartOAuth2FlowRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Task.StartOAuth2FlowRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'ui'), createEmptyInstance: create)
     ..e<$0.SOCIAL>(1, _omitFieldNames ? '' : 'provider', $pb.PbFieldType.OE, defaultOrMaker: $0.SOCIAL.FACEBOOK, valueOf: $0.SOCIAL.valueOf, enumValues: $0.SOCIAL.values)
+    ..aOS(2, _omitFieldNames ? '' : 'signUpToken')
     ..hasRequiredFields = false
   ;
 
@@ -263,6 +268,15 @@ class Task_StartOAuth2FlowRequest extends $pb.GeneratedMessage {
   $core.bool hasProvider() => $_has(0);
   @$pb.TagNumber(1)
   void clearProvider() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get signUpToken => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set signUpToken($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSignUpToken() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSignUpToken() => clearField(2);
 }
 
 class Task_StartOAuth2FlowResponse extends $pb.GeneratedMessage {

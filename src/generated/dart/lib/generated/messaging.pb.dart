@@ -18,6 +18,250 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class GetSpaceChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage {
+  factory GetSpaceChannelUserMessageReactionsMapRequest({
+    $core.String? spaceId,
+    $core.String? channelId,
+    $core.int? updatedAt,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
+    return $result;
+  }
+  GetSpaceChannelUserMessageReactionsMapRequest._() : super();
+  factory GetSpaceChannelUserMessageReactionsMapRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelUserMessageReactionsMapRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelUserMessageReactionsMapRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'channelId')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelUserMessageReactionsMapRequest clone() => GetSpaceChannelUserMessageReactionsMapRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelUserMessageReactionsMapRequest copyWith(void Function(GetSpaceChannelUserMessageReactionsMapRequest) updates) => super.copyWith((message) => updates(message as GetSpaceChannelUserMessageReactionsMapRequest)) as GetSpaceChannelUserMessageReactionsMapRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelUserMessageReactionsMapRequest create() => GetSpaceChannelUserMessageReactionsMapRequest._();
+  GetSpaceChannelUserMessageReactionsMapRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelUserMessageReactionsMapRequest> createRepeated() => $pb.PbList<GetSpaceChannelUserMessageReactionsMapRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelUserMessageReactionsMapRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelUserMessageReactionsMapRequest>(create);
+  static GetSpaceChannelUserMessageReactionsMapRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get channelId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set channelId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChannelId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChannelId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get updatedAt => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set updatedAt($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUpdatedAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUpdatedAt() => clearField(3);
+}
+
+class GetSpaceChannelUserMessageReactionsMapResponse extends $pb.GeneratedMessage {
+  factory GetSpaceChannelUserMessageReactionsMapResponse({
+    $core.Map<$core.String, $fixnum.Int64>? reactions,
+  }) {
+    final $result = create();
+    if (reactions != null) {
+      $result.reactions.addAll(reactions);
+    }
+    return $result;
+  }
+  GetSpaceChannelUserMessageReactionsMapResponse._() : super();
+  factory GetSpaceChannelUserMessageReactionsMapResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelUserMessageReactionsMapResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelUserMessageReactionsMapResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetSpaceChannelUserMessageReactionsMapResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.O6, packageName: const $pb.PackageName('messaging'))
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelUserMessageReactionsMapResponse clone() => GetSpaceChannelUserMessageReactionsMapResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelUserMessageReactionsMapResponse copyWith(void Function(GetSpaceChannelUserMessageReactionsMapResponse) updates) => super.copyWith((message) => updates(message as GetSpaceChannelUserMessageReactionsMapResponse)) as GetSpaceChannelUserMessageReactionsMapResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelUserMessageReactionsMapResponse create() => GetSpaceChannelUserMessageReactionsMapResponse._();
+  GetSpaceChannelUserMessageReactionsMapResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelUserMessageReactionsMapResponse> createRepeated() => $pb.PbList<GetSpaceChannelUserMessageReactionsMapResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelUserMessageReactionsMapResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelUserMessageReactionsMapResponse>(create);
+  static GetSpaceChannelUserMessageReactionsMapResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+}
+
+class GetSpaceChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
+  factory GetSpaceChannelMessageReactionsSetRequest({
+    $core.String? spaceId,
+    $core.String? channelId,
+    $core.int? updatedAt,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
+    return $result;
+  }
+  GetSpaceChannelMessageReactionsSetRequest._() : super();
+  factory GetSpaceChannelMessageReactionsSetRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelMessageReactionsSetRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelMessageReactionsSetRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'channelId')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessageReactionsSetRequest clone() => GetSpaceChannelMessageReactionsSetRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessageReactionsSetRequest copyWith(void Function(GetSpaceChannelMessageReactionsSetRequest) updates) => super.copyWith((message) => updates(message as GetSpaceChannelMessageReactionsSetRequest)) as GetSpaceChannelMessageReactionsSetRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessageReactionsSetRequest create() => GetSpaceChannelMessageReactionsSetRequest._();
+  GetSpaceChannelMessageReactionsSetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelMessageReactionsSetRequest> createRepeated() => $pb.PbList<GetSpaceChannelMessageReactionsSetRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessageReactionsSetRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelMessageReactionsSetRequest>(create);
+  static GetSpaceChannelMessageReactionsSetRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get channelId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set channelId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChannelId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChannelId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get updatedAt => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set updatedAt($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUpdatedAt() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUpdatedAt() => clearField(3);
+}
+
+class GetSpaceChannelMessageReactionsSetResponse extends $pb.GeneratedMessage {
+  factory GetSpaceChannelMessageReactionsSetResponse({
+    $core.Iterable<$core.String>? messageIds,
+  }) {
+    final $result = create();
+    if (messageIds != null) {
+      $result.messageIds.addAll(messageIds);
+    }
+    return $result;
+  }
+  GetSpaceChannelMessageReactionsSetResponse._() : super();
+  factory GetSpaceChannelMessageReactionsSetResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceChannelMessageReactionsSetResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelMessageReactionsSetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'messageIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessageReactionsSetResponse clone() => GetSpaceChannelMessageReactionsSetResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceChannelMessageReactionsSetResponse copyWith(void Function(GetSpaceChannelMessageReactionsSetResponse) updates) => super.copyWith((message) => updates(message as GetSpaceChannelMessageReactionsSetResponse)) as GetSpaceChannelMessageReactionsSetResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessageReactionsSetResponse create() => GetSpaceChannelMessageReactionsSetResponse._();
+  GetSpaceChannelMessageReactionsSetResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceChannelMessageReactionsSetResponse> createRepeated() => $pb.PbList<GetSpaceChannelMessageReactionsSetResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceChannelMessageReactionsSetResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceChannelMessageReactionsSetResponse>(create);
+  static GetSpaceChannelMessageReactionsSetResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get messageIds => $_getList(0);
+}
+
 class GetSpaceThreadChannelRequest extends $pb.GeneratedMessage {
   factory GetSpaceThreadChannelRequest({
     $core.String? spaceId,
@@ -562,7 +806,7 @@ class GetSpaceChannelThreadMessageReactionsRequest extends $pb.GeneratedMessage 
 
 class GetSpaceChannelThreadMessageReactionsResponse extends $pb.GeneratedMessage {
   factory GetSpaceChannelThreadMessageReactionsResponse({
-    $core.Map<$core.String, $fixnum.Int64>? reactions,
+    $core.Map<$core.String, $core.int>? reactions,
   }) {
     final $result = create();
     if (reactions != null) {
@@ -575,7 +819,7 @@ class GetSpaceChannelThreadMessageReactionsResponse extends $pb.GeneratedMessage
   factory GetSpaceChannelThreadMessageReactionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelThreadMessageReactionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
-    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetSpaceChannelThreadMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU6, packageName: const $pb.PackageName('messaging'))
+    ..m<$core.String, $core.int>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetSpaceChannelThreadMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU3, packageName: const $pb.PackageName('messaging'))
     ..hasRequiredFields = false
   ;
 
@@ -601,7 +845,7 @@ class GetSpaceChannelThreadMessageReactionsResponse extends $pb.GeneratedMessage
   static GetSpaceChannelThreadMessageReactionsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+  $core.Map<$core.String, $core.int> get reactions => $_getMap(0);
 }
 
 class SendSpaceChannelThreadMessageReactionRequest extends $pb.GeneratedMessage {
@@ -1566,7 +1810,7 @@ class GetSpaceChannelMessageReactionsRequest extends $pb.GeneratedMessage {
 
 class GetSpaceChannelMessageReactionsResponse extends $pb.GeneratedMessage {
   factory GetSpaceChannelMessageReactionsResponse({
-    $core.Map<$core.String, $fixnum.Int64>? reactions,
+    $core.Map<$core.String, $core.int>? reactions,
   }) {
     final $result = create();
     if (reactions != null) {
@@ -1579,7 +1823,7 @@ class GetSpaceChannelMessageReactionsResponse extends $pb.GeneratedMessage {
   factory GetSpaceChannelMessageReactionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelMessageReactionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
-    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetSpaceChannelMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU6, packageName: const $pb.PackageName('messaging'))
+    ..m<$core.String, $core.int>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetSpaceChannelMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU3, packageName: const $pb.PackageName('messaging'))
     ..hasRequiredFields = false
   ;
 
@@ -1605,7 +1849,7 @@ class GetSpaceChannelMessageReactionsResponse extends $pb.GeneratedMessage {
   static GetSpaceChannelMessageReactionsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+  $core.Map<$core.String, $core.int> get reactions => $_getMap(0);
 }
 
 class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
@@ -1614,7 +1858,7 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     $core.String? messageId,
     $core.String? reaction,
-    $core.bool? isAdd,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -1629,8 +1873,8 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
     if (reaction != null) {
       $result.reaction = reaction;
     }
-    if (isAdd != null) {
-      $result.isAdd = isAdd;
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -1643,7 +1887,7 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'reaction')
-    ..aOB(5, _omitFieldNames ? '' : 'isAdd')
+    ..aOS(5, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -1705,22 +1949,31 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
   void clearReaction() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.bool get isAdd => $_getBF(4);
+  $core.String get userRoleId => $_getSZ(4);
   @$pb.TagNumber(5)
-  set isAdd($core.bool v) { $_setBool(4, v); }
+  set userRoleId($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasIsAdd() => $_has(4);
+  $core.bool hasUserRoleId() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIsAdd() => clearField(5);
+  void clearUserRoleId() => clearField(5);
 }
 
 class SendSpaceChannelMessageReactionResponse extends $pb.GeneratedMessage {
-  factory SendSpaceChannelMessageReactionResponse() => create();
+  factory SendSpaceChannelMessageReactionResponse({
+    $core.int? count,
+  }) {
+    final $result = create();
+    if (count != null) {
+      $result.count = count;
+    }
+    return $result;
+  }
   SendSpaceChannelMessageReactionResponse._() : super();
   factory SendSpaceChannelMessageReactionResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory SendSpaceChannelMessageReactionResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendSpaceChannelMessageReactionResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'count', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -1744,6 +1997,15 @@ class SendSpaceChannelMessageReactionResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SendSpaceChannelMessageReactionResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SendSpaceChannelMessageReactionResponse>(create);
   static SendSpaceChannelMessageReactionResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get count => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set count($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCount() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCount() => clearField(1);
 }
 
 class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
@@ -6537,7 +6799,7 @@ class GetDirectChannelMessageReactionsRequest extends $pb.GeneratedMessage {
 
 class GetDirectChannelMessageReactionsResponse extends $pb.GeneratedMessage {
   factory GetDirectChannelMessageReactionsResponse({
-    $core.Map<$core.String, $fixnum.Int64>? reactions,
+    $core.Map<$core.String, $core.int>? reactions,
   }) {
     final $result = create();
     if (reactions != null) {
@@ -6550,7 +6812,7 @@ class GetDirectChannelMessageReactionsResponse extends $pb.GeneratedMessage {
   factory GetDirectChannelMessageReactionsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessageReactionsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
-    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetDirectChannelMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU6, packageName: const $pb.PackageName('messaging'))
+    ..m<$core.String, $core.int>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetDirectChannelMessageReactionsResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU3, packageName: const $pb.PackageName('messaging'))
     ..hasRequiredFields = false
   ;
 
@@ -6576,7 +6838,7 @@ class GetDirectChannelMessageReactionsResponse extends $pb.GeneratedMessage {
   static GetDirectChannelMessageReactionsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+  $core.Map<$core.String, $core.int> get reactions => $_getMap(0);
 }
 
 class SendDirectChannelMessageReactionRequest extends $pb.GeneratedMessage {

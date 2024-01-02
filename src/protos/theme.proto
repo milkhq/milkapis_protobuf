@@ -70,6 +70,8 @@ message SpaceButtonBaseOption {
     uint32 badge_background_color_active = 8;
     uint32 badge_text_color = 9;
     uint32 badge_text_color_active = 10;
+    uint32 badge_border_radius = 11;
+    uint32 badge_border_radius_active = 12;
 }
 
 message SpaceChannelBaseOption {

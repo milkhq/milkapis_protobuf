@@ -158,6 +158,8 @@ const SpaceButtonBaseOption$json = {
     {'1': 'badge_background_color_active', '3': 8, '4': 1, '5': 13, '10': 'badgeBackgroundColorActive'},
     {'1': 'badge_text_color', '3': 9, '4': 1, '5': 13, '10': 'badgeTextColor'},
     {'1': 'badge_text_color_active', '3': 10, '4': 1, '5': 13, '10': 'badgeTextColorActive'},
+    {'1': 'badge_border_radius', '3': 11, '4': 1, '5': 13, '10': 'badgeBorderRadius'},
+    {'1': 'badge_border_radius_active', '3': 12, '4': 1, '5': 13, '10': 'badgeBorderRadiusActive'},
   ],
 };
 
@@ -172,7 +174,9 @@ final $typed_data.Uint8List spaceButtonBaseOptionDescriptor = $convert.base64Dec
     'ASgNUhRiYWRnZUJhY2tncm91bmRDb2xvchJBCh1iYWRnZV9iYWNrZ3JvdW5kX2NvbG9yX2FjdG'
     'l2ZRgIIAEoDVIaYmFkZ2VCYWNrZ3JvdW5kQ29sb3JBY3RpdmUSKAoQYmFkZ2VfdGV4dF9jb2xv'
     'chgJIAEoDVIOYmFkZ2VUZXh0Q29sb3ISNQoXYmFkZ2VfdGV4dF9jb2xvcl9hY3RpdmUYCiABKA'
-    '1SFGJhZGdlVGV4dENvbG9yQWN0aXZl');
+    '1SFGJhZGdlVGV4dENvbG9yQWN0aXZlEi4KE2JhZGdlX2JvcmRlcl9yYWRpdXMYCyABKA1SEWJh'
+    'ZGdlQm9yZGVyUmFkaXVzEjsKGmJhZGdlX2JvcmRlcl9yYWRpdXNfYWN0aXZlGAwgASgNUhdiYW'
+    'RnZUJvcmRlclJhZGl1c0FjdGl2ZQ==');
 
 @$core.Deprecated('Use spaceChannelBaseOptionDescriptor instead')
 const SpaceChannelBaseOption$json = {

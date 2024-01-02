@@ -98,3 +98,12 @@ message ProxyMessage {
 message ListenRequest {
     repeated string keys = 1;
 }
+
+message SpaceChannelMessageReactionUpdate {
+    string channel_id = 1;
+    string message_id = 2;
+    string user_id = 3;
+    string reaction = 4;
+    bool is_add = 5;
+    string space_id = 6;
+}

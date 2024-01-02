@@ -51,6 +51,8 @@ service Messaging {
     rpc GetSpaceChannelThreadMessageReactions(GetSpaceChannelThreadMessageReactionsRequest) returns (GetSpaceChannelThreadMessageReactionsResponse);
     rpc SendSpaceChannelThreadMessageReaction(SendSpaceChannelThreadMessageReactionRequest) returns (SendSpaceChannelThreadMessageReactionResponse);
     rpc GetSpaceThreadChannel(GetSpaceThreadChannelRequest) returns (ChannelDocument);
+    rpc GetSpaceChannelMessageReactionsSet(GetSpaceChannelMessageReactionsSetRequest) returns (GetSpaceChannelMessageReactionsSetResponse);
+    rpc GetSpaceChannelUserMessageReactionsMap(GetSpaceChannelUserMessageReactionsMapRequest) returns (GetSpaceChannelUserMessageReactionsMapResponse);
 
     // Direct channel messages
     rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -97,6 +99,26 @@ enum CHANNEL_CAPABILITY {
     VIDEO = 3;
 }
 
+message GetSpaceChannelUserMessageReactionsMapRequest {
+    string space_id = 1;
+    string channel_id = 2;
+    uint32 updated_at = 3;
+}
+
+message GetSpaceChannelUserMessageReactionsMapResponse {
+    map<string, int64> reactions = 1;
+}
+
+message GetSpaceChannelMessageReactionsSetRequest {
+    string space_id = 1;
+    string channel_id = 2;
+    uint32 updated_at = 3;
+}
+
+message GetSpaceChannelMessageReactionsSetResponse {
+    repeated string message_ids = 1;
+}
+
 message GetSpaceThreadChannelRequest {
     string space_id = 1;
     string channel_id = 2;
@@ -140,7 +162,7 @@ message GetSpaceChannelThreadMessageReactionsRequest {
 }
 
 message GetSpaceChannelThreadMessageReactionsResponse {
-    map<string, uint64> reactions = 1;
+    map<string, uint32> reactions = 1;
 }
 
 message SendSpaceChannelThreadMessageReactionRequest {
@@ -220,7 +242,7 @@ message GetSpaceChannelMessageReactionsRequest {
 }
 
 message GetSpaceChannelMessageReactionsResponse {
-    map<string, uint64> reactions = 1;
+    map<string, uint32> reactions = 1;
 }
 
 message SendSpaceChannelMessageReactionRequest {
@@ -228,11 +250,11 @@ message SendSpaceChannelMessageReactionRequest {
     string channel_id = 2;
     string message_id = 3;
     string reaction = 4;
-    bool is_add = 5;
+    string user_role_id = 5;
 }
 
 message SendSpaceChannelMessageReactionResponse {
-
+    uint32 count = 1;
 }
 
 message GetSpaceChannelMessagesRequest {
@@ -688,7 +710,7 @@ message GetDirectChannelMessageReactionsRequest {
 }
 
 message GetDirectChannelMessageReactionsResponse {
-    map<string, uint64> reactions = 1;
+    map<string, uint32> reactions = 1;
 }
 
 message SendDirectChannelMessageReactionRequest {

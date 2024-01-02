@@ -192,3 +192,23 @@ const ListenRequest$json = {
 final $typed_data.Uint8List listenRequestDescriptor = $convert.base64Decode(
     'Cg1MaXN0ZW5SZXF1ZXN0EhIKBGtleXMYASADKAlSBGtleXM=');
 
+@$core.Deprecated('Use spaceChannelMessageReactionUpdateDescriptor instead')
+const SpaceChannelMessageReactionUpdate$json = {
+  '1': 'SpaceChannelMessageReactionUpdate',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'message_id', '3': 2, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'user_id', '3': 3, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'reaction', '3': 4, '4': 1, '5': 9, '10': 'reaction'},
+    {'1': 'is_add', '3': 5, '4': 1, '5': 8, '10': 'isAdd'},
+    {'1': 'space_id', '3': 6, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `SpaceChannelMessageReactionUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceChannelMessageReactionUpdateDescriptor = $convert.base64Decode(
+    'CiFTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25VcGRhdGUSHQoKY2hhbm5lbF9pZBgBIAEoCV'
+    'IJY2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQYAiABKAlSCW1lc3NhZ2VJZBIXCgd1c2VyX2lkGAMg'
+    'ASgJUgZ1c2VySWQSGgoIcmVhY3Rpb24YBCABKAlSCHJlYWN0aW9uEhUKBmlzX2FkZBgFIAEoCF'
+    'IFaXNBZGQSGQoIc3BhY2VfaWQYBiABKAlSB3NwYWNlSWQ=');
+

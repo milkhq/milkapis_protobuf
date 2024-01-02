@@ -11,6 +11,7 @@
 
 import 'dart:core' as $core;
 
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'messaging.pb.dart' as $1;
@@ -764,6 +765,8 @@ class SessionState_Channel extends $pb.GeneratedMessage {
     $core.Iterable<$1.MessageDocument>? messagesQueue,
     $core.String? lastTextInput,
     $core.int? lastSeenMessageId,
+    $core.Iterable<$core.String>? reactedMessages,
+    $core.Map<$core.String, $fixnum.Int64>? userReactionsMap,
   }) {
     final $result = create();
     if (document != null) {
@@ -793,6 +796,12 @@ class SessionState_Channel extends $pb.GeneratedMessage {
     if (lastSeenMessageId != null) {
       $result.lastSeenMessageId = lastSeenMessageId;
     }
+    if (reactedMessages != null) {
+      $result.reactedMessages.addAll(reactedMessages);
+    }
+    if (userReactionsMap != null) {
+      $result.userReactionsMap.addAll(userReactionsMap);
+    }
     return $result;
   }
   SessionState_Channel._() : super();
@@ -809,6 +818,8 @@ class SessionState_Channel extends $pb.GeneratedMessage {
     ..pc<$1.MessageDocument>(7, _omitFieldNames ? '' : 'messagesQueue', $pb.PbFieldType.PM, protoName: 'messagesQueue', subBuilder: $1.MessageDocument.create)
     ..aOS(8, _omitFieldNames ? '' : 'lastTextInput')
     ..a<$core.int>(9, _omitFieldNames ? '' : 'lastSeenMessageId', $pb.PbFieldType.OU3)
+    ..pPS(10, _omitFieldNames ? '' : 'reactedMessages')
+    ..m<$core.String, $fixnum.Int64>(11, _omitFieldNames ? '' : 'userReactionsMap', entryClassName: 'SessionState.Channel.UserReactionsMapEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.O6, packageName: const $pb.PackageName('ui'))
     ..hasRequiredFields = false
   ;
 
@@ -897,6 +908,12 @@ class SessionState_Channel extends $pb.GeneratedMessage {
   $core.bool hasLastSeenMessageId() => $_has(8);
   @$pb.TagNumber(9)
   void clearLastSeenMessageId() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.List<$core.String> get reactedMessages => $_getList(9);
+
+  @$pb.TagNumber(11)
+  $core.Map<$core.String, $fixnum.Int64> get userReactionsMap => $_getMap(10);
 }
 
 class SessionState extends $pb.GeneratedMessage {

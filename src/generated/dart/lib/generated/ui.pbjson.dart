@@ -268,7 +268,20 @@ const SessionState_Channel$json = {
     {'1': 'messagesQueue', '3': 7, '4': 3, '5': 11, '6': '.messaging.MessageDocument', '10': 'messagesQueue'},
     {'1': 'last_text_input', '3': 8, '4': 1, '5': 9, '10': 'lastTextInput'},
     {'1': 'last_seen_message_id', '3': 9, '4': 1, '5': 13, '10': 'lastSeenMessageId'},
+    {'1': 'reacted_messages', '3': 10, '4': 3, '5': 9, '10': 'reactedMessages'},
+    {'1': 'user_reactions_map', '3': 11, '4': 3, '5': 11, '6': '.ui.SessionState.Channel.UserReactionsMapEntry', '10': 'userReactionsMap'},
   ],
+  '3': [SessionState_Channel_UserReactionsMapEntry$json],
+};
+
+@$core.Deprecated('Use sessionStateDescriptor instead')
+const SessionState_Channel_UserReactionsMapEntry$json = {
+  '1': 'UserReactionsMapEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 3, '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 /// Descriptor for `SessionState`. Decode as a `google.protobuf.DescriptorProto`.
@@ -297,7 +310,7 @@ final $typed_data.Uint8List sessionStateDescriptor = $convert.base64Decode(
     'RpZmljYXRpb25TZXR0aW5nEggKBE5PTkUQABIMCghNRU5USU9OUxABEgcKA0FMTBACGocBCg9D'
     'aGFubmVsQ2F0ZWdvcnkSPgoIZG9jdW1lbnQYASABKAsyIi5tZXNzYWdpbmcuQ2hhbm5lbENhdG'
     'Vnb3J5RG9jdW1lbnRSCGRvY3VtZW50EjQKCGNoYW5uZWxzGAIgAygLMhgudWkuU2Vzc2lvblN0'
-    'YXRlLkNoYW5uZWxSCGNoYW5uZWxzGrsDCgdDaGFubmVsEjYKCGRvY3VtZW50GAEgASgLMhoubW'
+    'YXRlLkNoYW5uZWxSCGNoYW5uZWxzGokFCgdDaGFubmVsEjYKCGRvY3VtZW50GAEgASgLMhoubW'
     'Vzc2FnaW5nLkNoYW5uZWxEb2N1bWVudFIIZG9jdW1lbnQSNgoIbWVzc2FnZXMYAiADKAsyGi5t'
     'ZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50UghtZXNzYWdlcxIsCgdtZW1iZXJzGAMgAygLMhIudX'
     'Nlci5Vc2VyRG9jdW1lbnRSB21lbWJlcnMSIQoMdW5yZWFkX2NvdW50GAQgASgNUgt1bnJlYWRD'
@@ -305,5 +318,9 @@ final $typed_data.Uint8List sessionStateDescriptor = $convert.base64Decode(
     'JvbGxfb2Zmc2V0GAYgASgCUhBsYXN0U2Nyb2xsT2Zmc2V0EkAKDW1lc3NhZ2VzUXVldWUYByAD'
     'KAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50Ug1tZXNzYWdlc1F1ZXVlEiYKD2xhc3RfdG'
     'V4dF9pbnB1dBgIIAEoCVINbGFzdFRleHRJbnB1dBIvChRsYXN0X3NlZW5fbWVzc2FnZV9pZBgJ'
-    'IAEoDVIRbGFzdFNlZW5NZXNzYWdlSWQ=');
+    'IAEoDVIRbGFzdFNlZW5NZXNzYWdlSWQSKQoQcmVhY3RlZF9tZXNzYWdlcxgKIAMoCVIPcmVhY3'
+    'RlZE1lc3NhZ2VzElwKEnVzZXJfcmVhY3Rpb25zX21hcBgLIAMoCzIuLnVpLlNlc3Npb25TdGF0'
+    'ZS5DaGFubmVsLlVzZXJSZWFjdGlvbnNNYXBFbnRyeVIQdXNlclJlYWN0aW9uc01hcBpDChVVc2'
+    'VyUmVhY3Rpb25zTWFwRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKANSBXZh'
+    'bHVlOgI4AQ==');
 

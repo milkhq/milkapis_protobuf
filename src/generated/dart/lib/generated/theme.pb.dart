@@ -605,6 +605,8 @@ class SpaceButtonBaseOption extends $pb.GeneratedMessage {
     $core.int? badgeBackgroundColorActive,
     $core.int? badgeTextColor,
     $core.int? badgeTextColorActive,
+    $core.int? badgeBorderRadius,
+    $core.int? badgeBorderRadiusActive,
   }) {
     final $result = create();
     if (backgroundColor != null) {
@@ -637,6 +639,12 @@ class SpaceButtonBaseOption extends $pb.GeneratedMessage {
     if (badgeTextColorActive != null) {
       $result.badgeTextColorActive = badgeTextColorActive;
     }
+    if (badgeBorderRadius != null) {
+      $result.badgeBorderRadius = badgeBorderRadius;
+    }
+    if (badgeBorderRadiusActive != null) {
+      $result.badgeBorderRadiusActive = badgeBorderRadiusActive;
+    }
     return $result;
   }
   SpaceButtonBaseOption._() : super();
@@ -654,6 +662,8 @@ class SpaceButtonBaseOption extends $pb.GeneratedMessage {
     ..a<$core.int>(8, _omitFieldNames ? '' : 'badgeBackgroundColorActive', $pb.PbFieldType.OU3)
     ..a<$core.int>(9, _omitFieldNames ? '' : 'badgeTextColor', $pb.PbFieldType.OU3)
     ..a<$core.int>(10, _omitFieldNames ? '' : 'badgeTextColorActive', $pb.PbFieldType.OU3)
+    ..a<$core.int>(11, _omitFieldNames ? '' : 'badgeBorderRadius', $pb.PbFieldType.OU3)
+    ..a<$core.int>(12, _omitFieldNames ? '' : 'badgeBorderRadiusActive', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -767,6 +777,24 @@ class SpaceButtonBaseOption extends $pb.GeneratedMessage {
   $core.bool hasBadgeTextColorActive() => $_has(9);
   @$pb.TagNumber(10)
   void clearBadgeTextColorActive() => clearField(10);
+
+  @$pb.TagNumber(11)
+  $core.int get badgeBorderRadius => $_getIZ(10);
+  @$pb.TagNumber(11)
+  set badgeBorderRadius($core.int v) { $_setUnsignedInt32(10, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasBadgeBorderRadius() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearBadgeBorderRadius() => clearField(11);
+
+  @$pb.TagNumber(12)
+  $core.int get badgeBorderRadiusActive => $_getIZ(11);
+  @$pb.TagNumber(12)
+  set badgeBorderRadiusActive($core.int v) { $_setUnsignedInt32(11, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasBadgeBorderRadiusActive() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearBadgeBorderRadiusActive() => clearField(12);
 }
 
 class SpaceChannelBaseOption extends $pb.GeneratedMessage {

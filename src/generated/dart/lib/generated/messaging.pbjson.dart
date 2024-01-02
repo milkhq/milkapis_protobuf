@@ -158,6 +158,77 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use getSpaceChannelUserMessageReactionsMapRequestDescriptor instead')
+const GetSpaceChannelUserMessageReactionsMapRequest$json = {
+  '1': 'GetSpaceChannelUserMessageReactionsMapRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'updated_at', '3': 3, '4': 1, '5': 13, '10': 'updatedAt'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelUserMessageReactionsMapRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelUserMessageReactionsMapRequestDescriptor = $convert.base64Decode(
+    'Ci1HZXRTcGFjZUNoYW5uZWxVc2VyTWVzc2FnZVJlYWN0aW9uc01hcFJlcXVlc3QSGQoIc3BhY2'
+    'VfaWQYASABKAlSB3NwYWNlSWQSHQoKY2hhbm5lbF9pZBgCIAEoCVIJY2hhbm5lbElkEh0KCnVw'
+    'ZGF0ZWRfYXQYAyABKA1SCXVwZGF0ZWRBdA==');
+
+@$core.Deprecated('Use getSpaceChannelUserMessageReactionsMapResponseDescriptor instead')
+const GetSpaceChannelUserMessageReactionsMapResponse$json = {
+  '1': 'GetSpaceChannelUserMessageReactionsMapResponse',
+  '2': [
+    {'1': 'reactions', '3': 1, '4': 3, '5': 11, '6': '.messaging.GetSpaceChannelUserMessageReactionsMapResponse.ReactionsEntry', '10': 'reactions'},
+  ],
+  '3': [GetSpaceChannelUserMessageReactionsMapResponse_ReactionsEntry$json],
+};
+
+@$core.Deprecated('Use getSpaceChannelUserMessageReactionsMapResponseDescriptor instead')
+const GetSpaceChannelUserMessageReactionsMapResponse_ReactionsEntry$json = {
+  '1': 'ReactionsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 3, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `GetSpaceChannelUserMessageReactionsMapResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelUserMessageReactionsMapResponseDescriptor = $convert.base64Decode(
+    'Ci5HZXRTcGFjZUNoYW5uZWxVc2VyTWVzc2FnZVJlYWN0aW9uc01hcFJlc3BvbnNlEmYKCXJlYW'
+    'N0aW9ucxgBIAMoCzJILm1lc3NhZ2luZy5HZXRTcGFjZUNoYW5uZWxVc2VyTWVzc2FnZVJlYWN0'
+    'aW9uc01hcFJlc3BvbnNlLlJlYWN0aW9uc0VudHJ5UglyZWFjdGlvbnMaPAoOUmVhY3Rpb25zRW'
+    '50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKANSBXZhbHVlOgI4AQ==');
+
+@$core.Deprecated('Use getSpaceChannelMessageReactionsSetRequestDescriptor instead')
+const GetSpaceChannelMessageReactionsSetRequest$json = {
+  '1': 'GetSpaceChannelMessageReactionsSetRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'updated_at', '3': 3, '4': 1, '5': 13, '10': 'updatedAt'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelMessageReactionsSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelMessageReactionsSetRequestDescriptor = $convert.base64Decode(
+    'CilHZXRTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25zU2V0UmVxdWVzdBIZCghzcGFjZV9pZB'
+    'gBIAEoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKdXBkYXRl'
+    'ZF9hdBgDIAEoDVIJdXBkYXRlZEF0');
+
+@$core.Deprecated('Use getSpaceChannelMessageReactionsSetResponseDescriptor instead')
+const GetSpaceChannelMessageReactionsSetResponse$json = {
+  '1': 'GetSpaceChannelMessageReactionsSetResponse',
+  '2': [
+    {'1': 'message_ids', '3': 1, '4': 3, '5': 9, '10': 'messageIds'},
+  ],
+};
+
+/// Descriptor for `GetSpaceChannelMessageReactionsSetResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceChannelMessageReactionsSetResponseDescriptor = $convert.base64Decode(
+    'CipHZXRTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25zU2V0UmVzcG9uc2USHwoLbWVzc2FnZV'
+    '9pZHMYASADKAlSCm1lc3NhZ2VJZHM=');
+
 @$core.Deprecated('Use getSpaceThreadChannelRequestDescriptor instead')
 const GetSpaceThreadChannelRequest$json = {
   '1': 'GetSpaceThreadChannelRequest',
@@ -280,7 +351,7 @@ const GetSpaceChannelThreadMessageReactionsResponse_ReactionsEntry$json = {
   '1': 'ReactionsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 4, '10': 'value'},
+    {'1': 'value', '3': 2, '4': 1, '5': 13, '10': 'value'},
   ],
   '7': {'7': true},
 };
@@ -290,7 +361,7 @@ final $typed_data.Uint8List getSpaceChannelThreadMessageReactionsResponseDescrip
     'Ci1HZXRTcGFjZUNoYW5uZWxUaHJlYWRNZXNzYWdlUmVhY3Rpb25zUmVzcG9uc2USZQoJcmVhY3'
     'Rpb25zGAEgAygLMkcubWVzc2FnaW5nLkdldFNwYWNlQ2hhbm5lbFRocmVhZE1lc3NhZ2VSZWFj'
     'dGlvbnNSZXNwb25zZS5SZWFjdGlvbnNFbnRyeVIJcmVhY3Rpb25zGjwKDlJlYWN0aW9uc0VudH'
-    'J5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgEUgV2YWx1ZToCOAE=');
+    'J5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgNUgV2YWx1ZToCOAE=');
 
 @$core.Deprecated('Use sendSpaceChannelThreadMessageReactionRequestDescriptor instead')
 const SendSpaceChannelThreadMessageReactionRequest$json = {
@@ -491,7 +562,7 @@ const GetSpaceChannelMessageReactionsResponse_ReactionsEntry$json = {
   '1': 'ReactionsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 4, '10': 'value'},
+    {'1': 'value', '3': 2, '4': 1, '5': 13, '10': 'value'},
   ],
   '7': {'7': true},
 };
@@ -501,7 +572,7 @@ final $typed_data.Uint8List getSpaceChannelMessageReactionsResponseDescriptor = 
     'CidHZXRTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25zUmVzcG9uc2USXwoJcmVhY3Rpb25zGA'
     'EgAygLMkEubWVzc2FnaW5nLkdldFNwYWNlQ2hhbm5lbE1lc3NhZ2VSZWFjdGlvbnNSZXNwb25z'
     'ZS5SZWFjdGlvbnNFbnRyeVIJcmVhY3Rpb25zGjwKDlJlYWN0aW9uc0VudHJ5EhAKA2tleRgBIA'
-    'EoCVIDa2V5EhQKBXZhbHVlGAIgASgEUgV2YWx1ZToCOAE=');
+    'EoCVIDa2V5EhQKBXZhbHVlGAIgASgNUgV2YWx1ZToCOAE=');
 
 @$core.Deprecated('Use sendSpaceChannelMessageReactionRequestDescriptor instead')
 const SendSpaceChannelMessageReactionRequest$json = {
@@ -511,7 +582,7 @@ const SendSpaceChannelMessageReactionRequest$json = {
     {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'reaction', '3': 4, '4': 1, '5': 9, '10': 'reaction'},
-    {'1': 'is_add', '3': 5, '4': 1, '5': 8, '10': 'isAdd'},
+    {'1': 'user_role_id', '3': 5, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -519,17 +590,21 @@ const SendSpaceChannelMessageReactionRequest$json = {
 final $typed_data.Uint8List sendSpaceChannelMessageReactionRequestDescriptor = $convert.base64Decode(
     'CiZTZW5kU3BhY2VDaGFubmVsTWVzc2FnZVJlYWN0aW9uUmVxdWVzdBIZCghzcGFjZV9pZBgBIA'
     'EoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKbWVzc2FnZV9p'
-    'ZBgDIAEoCVIJbWVzc2FnZUlkEhoKCHJlYWN0aW9uGAQgASgJUghyZWFjdGlvbhIVCgZpc19hZG'
-    'QYBSABKAhSBWlzQWRk');
+    'ZBgDIAEoCVIJbWVzc2FnZUlkEhoKCHJlYWN0aW9uGAQgASgJUghyZWFjdGlvbhIgCgx1c2VyX3'
+    'JvbGVfaWQYBSABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use sendSpaceChannelMessageReactionResponseDescriptor instead')
 const SendSpaceChannelMessageReactionResponse$json = {
   '1': 'SendSpaceChannelMessageReactionResponse',
+  '2': [
+    {'1': 'count', '3': 1, '4': 1, '5': 13, '10': 'count'},
+  ],
 };
 
 /// Descriptor for `SendSpaceChannelMessageReactionResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sendSpaceChannelMessageReactionResponseDescriptor = $convert.base64Decode(
-    'CidTZW5kU3BhY2VDaGFubmVsTWVzc2FnZVJlYWN0aW9uUmVzcG9uc2U=');
+    'CidTZW5kU3BhY2VDaGFubmVsTWVzc2FnZVJlYWN0aW9uUmVzcG9uc2USFAoFY291bnQYASABKA'
+    '1SBWNvdW50');
 
 @$core.Deprecated('Use getSpaceChannelMessagesRequestDescriptor instead')
 const GetSpaceChannelMessagesRequest$json = {
@@ -1519,7 +1594,7 @@ const GetDirectChannelMessageReactionsResponse_ReactionsEntry$json = {
   '1': 'ReactionsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'value', '3': 2, '4': 1, '5': 4, '10': 'value'},
+    {'1': 'value', '3': 2, '4': 1, '5': 13, '10': 'value'},
   ],
   '7': {'7': true},
 };
@@ -1529,7 +1604,7 @@ final $typed_data.Uint8List getDirectChannelMessageReactionsResponseDescriptor =
     'CihHZXREaXJlY3RDaGFubmVsTWVzc2FnZVJlYWN0aW9uc1Jlc3BvbnNlEmAKCXJlYWN0aW9ucx'
     'gBIAMoCzJCLm1lc3NhZ2luZy5HZXREaXJlY3RDaGFubmVsTWVzc2FnZVJlYWN0aW9uc1Jlc3Bv'
     'bnNlLlJlYWN0aW9uc0VudHJ5UglyZWFjdGlvbnMaPAoOUmVhY3Rpb25zRW50cnkSEAoDa2V5GA'
-    'EgASgJUgNrZXkSFAoFdmFsdWUYAiABKARSBXZhbHVlOgI4AQ==');
+    'EgASgJUgNrZXkSFAoFdmFsdWUYAiABKA1SBXZhbHVlOgI4AQ==');
 
 @$core.Deprecated('Use sendDirectChannelMessageReactionRequestDescriptor instead')
 const SendDirectChannelMessageReactionRequest$json = {

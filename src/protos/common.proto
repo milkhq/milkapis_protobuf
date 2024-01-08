@@ -2,6 +2,9 @@ syntax = "proto3";
 
 package common;
 
+import "user.proto";
+import "messaging.proto";
+
 enum CollectionsV1 {
     USERS = 0;
     SPACES = 1;
@@ -21,6 +24,8 @@ enum CollectionsV1 {
     USER_ROLES = 15;
     USER_STATUSES = 16;
     SIGN_UP_TOKENS = 17;
+    USER_PRESENCE_STATUSES = 18;
+    SUBSCRIBED_TOPICS = 19;
 }
 
 enum CollectionCountersV1 {
@@ -40,6 +45,8 @@ enum CollectionCountersV1 {
     USER_ROLE_COUNTER = 13;
     USER_STATUS_COUNTER = 14;
     SIGN_UP_TOKEN_COUNTER = 15;
+    USER_PRESENCE_STATUS_COUNTER = 16;
+    SUBSCRIBED_TOPIC_COUNTER = 17;
 }
 
 enum DOCUMENT_TYPE {
@@ -87,6 +94,13 @@ enum EVENT_TYPE {
     DIRECT_CHANNEL_MEMBER_REMOVED = 28;
     SPACE_CHANNEL_NEW_ROLE = 29;
     DIRECT_CHANNEL_CALL = 30;
+    // New
+    USER_STATUS_UPDATED = 31;
+    USER_SUBSCRIBED_TOPICS_UPDATED = 32;
+    SPACE_CHANNEL_MESSAGE_REACTION_UPDATED = 33;
+    SPACE_CHANNEL_MESSAGE_UPDATED = 34;
+    SPACE_CHANNEL_THREAD_MESSAGE_UPDATED = 35;
+    SPACE_CHANNEL_THREAD_MESSAGE_REACTION_UPDATED = 36;
 }
 
 message ProxyMessage {
@@ -106,4 +120,42 @@ message SpaceChannelMessageReactionUpdate {
     string reaction = 4;
     bool is_add = 5;
     string space_id = 6;
+    string device_id = 7;
+}
+
+message SpaceChannelThreadMessageReactionUpdate {
+    string channel_id = 1;
+    string thread_id = 2;
+    string message_id = 3;
+    string user_id = 4;
+    string reaction = 5;
+    string space_id = 6;
+    string device_id = 7;
+    string thread_message_id = 8;
+    bool is_add = 9;
+}
+
+message UserPresenceStatusUpdate {
+    string user_id = 1;
+    user.USER_PRESENCE_STATUS status = 2;
+}
+
+message SpaceChannelMessageUpdate {
+    string channel_id = 1;
+    string space_id = 2;
+    messaging.MessageDocument message = 3;
+}
+
+message SpaceChannelThreadMessageUpdate {
+    string channel_id = 1;
+    string thread_id = 2;
+    string space_id = 3;
+    string message_id = 4;
+    messaging.MessageDocument message = 5;
+}
+
+message UserSubscribedTopicsUpdate {
+    string user_id = 1;
+    repeated string added_topics = 2;
+    repeated string removed_topics = 3;
 }

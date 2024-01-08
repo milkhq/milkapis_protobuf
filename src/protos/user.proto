@@ -28,12 +28,33 @@ service User {
   rpc CreateSignUpToken(CreateSignUpTokenRequest) returns (CreateSignUpTokenResponse);
   rpc UpdateUserRole(UpdateUserRoleRequest) returns (UpdateUserRoleResponse);
   rpc CheckSignupToken(CheckSignUpTokenRequest) returns (CheckSignUpTokenResponse);
+  rpc SetUserPresenceStatus(SetUserPresenceStatusRequest) returns (SetUserPresenceStatusResponse);
+  rpc GetUserPresenceStatus(GetUserPresenceStatusRequest) returns (GetUserPresenceStatusResponse);
 }
 
 enum DOCUMENT_STATUS {
   PENDING = 0;
   APPROVED = 1;
   REJECTED = 2;
+}
+
+message GetUserPresenceStatusRequest {
+  string user_id = 1;
+}
+
+message GetUserPresenceStatusResponse {
+  string user_id = 1;
+  USER_PRESENCE_STATUS status = 2;
+}
+
+message SetUserPresenceStatusRequest {
+  string user_id = 1;
+  USER_PRESENCE_STATUS status = 2;
+}
+
+message SetUserPresenceStatusResponse {
+  string user_id = 1;
+  USER_PRESENCE_STATUS status = 2;
 }
 
 message CheckSignUpTokenRequest {
@@ -214,6 +235,7 @@ message UserDocument {
   uint64 nonce = 9;
   DOCUMENT_STATUS document_status = 10;
   repeated UserFeatureFlags feature_flags = 11;
+  USER_PRESENCE_STATUS presence_status = 12;
 
   enum UserProfileEffectsV1 {
     NONE = 0;

@@ -158,6 +158,268 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use subscribeToUserPresenceRequestDescriptor instead')
+const SubscribeToUserPresenceRequest$json = {
+  '1': 'SubscribeToUserPresenceRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `SubscribeToUserPresenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subscribeToUserPresenceRequestDescriptor = $convert.base64Decode(
+    'Ch5TdWJzY3JpYmVUb1VzZXJQcmVzZW5jZVJlcXVlc3QSGQoIdXNlcl9pZHMYASADKAlSB3VzZX'
+    'JJZHM=');
+
+@$core.Deprecated('Use subscribeToUserPresenceResponseDescriptor instead')
+const SubscribeToUserPresenceResponse$json = {
+  '1': 'SubscribeToUserPresenceResponse',
+};
+
+/// Descriptor for `SubscribeToUserPresenceResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subscribeToUserPresenceResponseDescriptor = $convert.base64Decode(
+    'Ch9TdWJzY3JpYmVUb1VzZXJQcmVzZW5jZVJlc3BvbnNl');
+
+@$core.Deprecated('Use unsubscribeToUserPresenceRequestDescriptor instead')
+const UnsubscribeToUserPresenceRequest$json = {
+  '1': 'UnsubscribeToUserPresenceRequest',
+  '2': [
+    {'1': 'user_ids', '3': 1, '4': 3, '5': 9, '10': 'userIds'},
+  ],
+};
+
+/// Descriptor for `UnsubscribeToUserPresenceRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unsubscribeToUserPresenceRequestDescriptor = $convert.base64Decode(
+    'CiBVbnN1YnNjcmliZVRvVXNlclByZXNlbmNlUmVxdWVzdBIZCgh1c2VyX2lkcxgBIAMoCVIHdX'
+    'Nlcklkcw==');
+
+@$core.Deprecated('Use unsubscribeToUserPresenceResponseDescriptor instead')
+const UnsubscribeToUserPresenceResponse$json = {
+  '1': 'UnsubscribeToUserPresenceResponse',
+};
+
+/// Descriptor for `UnsubscribeToUserPresenceResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unsubscribeToUserPresenceResponseDescriptor = $convert.base64Decode(
+    'CiFVbnN1YnNjcmliZVRvVXNlclByZXNlbmNlUmVzcG9uc2U=');
+
+@$core.Deprecated('Use getSpaceThreadChannelMessageReactionsSetRequestDescriptor instead')
+const GetSpaceThreadChannelMessageReactionsSetRequest$json = {
+  '1': 'GetSpaceThreadChannelMessageReactionsSetRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
+    {'1': 'updated_at', '3': 5, '4': 1, '5': 13, '10': 'updatedAt'},
+  ],
+};
+
+/// Descriptor for `GetSpaceThreadChannelMessageReactionsSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceThreadChannelMessageReactionsSetRequestDescriptor = $convert.base64Decode(
+    'Ci9HZXRTcGFjZVRocmVhZENoYW5uZWxNZXNzYWdlUmVhY3Rpb25zU2V0UmVxdWVzdBIZCghzcG'
+    'FjZV9pZBgBIAEoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoK'
+    'bWVzc2FnZV9pZBgDIAEoCVIJbWVzc2FnZUlkEioKEXRocmVhZF9jaGFubmVsX2lkGAQgASgJUg'
+    '90aHJlYWRDaGFubmVsSWQSHQoKdXBkYXRlZF9hdBgFIAEoDVIJdXBkYXRlZEF0');
+
+@$core.Deprecated('Use getSpaceThreadChannelMessageReactionsSetResponseDescriptor instead')
+const GetSpaceThreadChannelMessageReactionsSetResponse$json = {
+  '1': 'GetSpaceThreadChannelMessageReactionsSetResponse',
+  '2': [
+    {'1': 'message_ids', '3': 1, '4': 3, '5': 9, '10': 'messageIds'},
+  ],
+};
+
+/// Descriptor for `GetSpaceThreadChannelMessageReactionsSetResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceThreadChannelMessageReactionsSetResponseDescriptor = $convert.base64Decode(
+    'CjBHZXRTcGFjZVRocmVhZENoYW5uZWxNZXNzYWdlUmVhY3Rpb25zU2V0UmVzcG9uc2USHwoLbW'
+    'Vzc2FnZV9pZHMYASADKAlSCm1lc3NhZ2VJZHM=');
+
+@$core.Deprecated('Use getSpaceThreadChannelUserMessageReactionsMapRequestDescriptor instead')
+const GetSpaceThreadChannelUserMessageReactionsMapRequest$json = {
+  '1': 'GetSpaceThreadChannelUserMessageReactionsMapRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
+    {'1': 'updated_at', '3': 5, '4': 1, '5': 13, '10': 'updatedAt'},
+  ],
+};
+
+/// Descriptor for `GetSpaceThreadChannelUserMessageReactionsMapRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceThreadChannelUserMessageReactionsMapRequestDescriptor = $convert.base64Decode(
+    'CjNHZXRTcGFjZVRocmVhZENoYW5uZWxVc2VyTWVzc2FnZVJlYWN0aW9uc01hcFJlcXVlc3QSGQ'
+    'oIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSHQoKY2hhbm5lbF9pZBgCIAEoCVIJY2hhbm5lbElk'
+    'Eh0KCm1lc3NhZ2VfaWQYAyABKAlSCW1lc3NhZ2VJZBIqChF0aHJlYWRfY2hhbm5lbF9pZBgEIA'
+    'EoCVIPdGhyZWFkQ2hhbm5lbElkEh0KCnVwZGF0ZWRfYXQYBSABKA1SCXVwZGF0ZWRBdA==');
+
+@$core.Deprecated('Use getSpaceThreadChannelUserMessageReactionsMapResponseDescriptor instead')
+const GetSpaceThreadChannelUserMessageReactionsMapResponse$json = {
+  '1': 'GetSpaceThreadChannelUserMessageReactionsMapResponse',
+  '2': [
+    {'1': 'reactions', '3': 1, '4': 3, '5': 11, '6': '.messaging.GetSpaceThreadChannelUserMessageReactionsMapResponse.ReactionsEntry', '10': 'reactions'},
+  ],
+  '3': [GetSpaceThreadChannelUserMessageReactionsMapResponse_ReactionsEntry$json],
+};
+
+@$core.Deprecated('Use getSpaceThreadChannelUserMessageReactionsMapResponseDescriptor instead')
+const GetSpaceThreadChannelUserMessageReactionsMapResponse_ReactionsEntry$json = {
+  '1': 'ReactionsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 3, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `GetSpaceThreadChannelUserMessageReactionsMapResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getSpaceThreadChannelUserMessageReactionsMapResponseDescriptor = $convert.base64Decode(
+    'CjRHZXRTcGFjZVRocmVhZENoYW5uZWxVc2VyTWVzc2FnZVJlYWN0aW9uc01hcFJlc3BvbnNlEm'
+    'wKCXJlYWN0aW9ucxgBIAMoCzJOLm1lc3NhZ2luZy5HZXRTcGFjZVRocmVhZENoYW5uZWxVc2Vy'
+    'TWVzc2FnZVJlYWN0aW9uc01hcFJlc3BvbnNlLlJlYWN0aW9uc0VudHJ5UglyZWFjdGlvbnMaPA'
+    'oOUmVhY3Rpb25zRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKANSBXZhbHVl'
+    'OgI4AQ==');
+
+@$core.Deprecated('Use getUserSubscribedConversationsRequestDescriptor instead')
+const GetUserSubscribedConversationsRequest$json = {
+  '1': 'GetUserSubscribedConversationsRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetUserSubscribedConversationsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserSubscribedConversationsRequestDescriptor = $convert.base64Decode(
+    'CiVHZXRVc2VyU3Vic2NyaWJlZENvbnZlcnNhdGlvbnNSZXF1ZXN0EhcKB3VzZXJfaWQYASABKA'
+    'lSBnVzZXJJZA==');
+
+@$core.Deprecated('Use getUserSubscribedConversationsResponseDescriptor instead')
+const GetUserSubscribedConversationsResponse$json = {
+  '1': 'GetUserSubscribedConversationsResponse',
+  '2': [
+    {'1': 'channel_ids', '3': 1, '4': 3, '5': 9, '10': 'channelIds'},
+  ],
+};
+
+/// Descriptor for `GetUserSubscribedConversationsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserSubscribedConversationsResponseDescriptor = $convert.base64Decode(
+    'CiZHZXRVc2VyU3Vic2NyaWJlZENvbnZlcnNhdGlvbnNSZXNwb25zZRIfCgtjaGFubmVsX2lkcx'
+    'gBIAMoCVIKY2hhbm5lbElkcw==');
+
+@$core.Deprecated('Use subscribeToConversationRequestDescriptor instead')
+const SubscribeToConversationRequest$json = {
+  '1': 'SubscribeToConversationRequest',
+  '2': [
+    {'1': 'channel_ids', '3': 1, '4': 3, '5': 9, '10': 'channelIds'},
+  ],
+};
+
+/// Descriptor for `SubscribeToConversationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subscribeToConversationRequestDescriptor = $convert.base64Decode(
+    'Ch5TdWJzY3JpYmVUb0NvbnZlcnNhdGlvblJlcXVlc3QSHwoLY2hhbm5lbF9pZHMYASADKAlSCm'
+    'NoYW5uZWxJZHM=');
+
+@$core.Deprecated('Use subscribeToConversationResponseDescriptor instead')
+const SubscribeToConversationResponse$json = {
+  '1': 'SubscribeToConversationResponse',
+};
+
+/// Descriptor for `SubscribeToConversationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subscribeToConversationResponseDescriptor = $convert.base64Decode(
+    'Ch9TdWJzY3JpYmVUb0NvbnZlcnNhdGlvblJlc3BvbnNl');
+
+@$core.Deprecated('Use unsubscribeToConversationRequestDescriptor instead')
+const UnsubscribeToConversationRequest$json = {
+  '1': 'UnsubscribeToConversationRequest',
+  '2': [
+    {'1': 'channel_ids', '3': 1, '4': 3, '5': 9, '10': 'channelIds'},
+  ],
+};
+
+/// Descriptor for `UnsubscribeToConversationRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unsubscribeToConversationRequestDescriptor = $convert.base64Decode(
+    'CiBVbnN1YnNjcmliZVRvQ29udmVyc2F0aW9uUmVxdWVzdBIfCgtjaGFubmVsX2lkcxgBIAMoCV'
+    'IKY2hhbm5lbElkcw==');
+
+@$core.Deprecated('Use unsubscribeToConversationResponseDescriptor instead')
+const UnsubscribeToConversationResponse$json = {
+  '1': 'UnsubscribeToConversationResponse',
+};
+
+/// Descriptor for `UnsubscribeToConversationResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unsubscribeToConversationResponseDescriptor = $convert.base64Decode(
+    'CiFVbnN1YnNjcmliZVRvQ29udmVyc2F0aW9uUmVzcG9uc2U=');
+
+@$core.Deprecated('Use getUserSubscribedTopicsRequestDescriptor instead')
+const GetUserSubscribedTopicsRequest$json = {
+  '1': 'GetUserSubscribedTopicsRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetUserSubscribedTopicsRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserSubscribedTopicsRequestDescriptor = $convert.base64Decode(
+    'Ch5HZXRVc2VyU3Vic2NyaWJlZFRvcGljc1JlcXVlc3QSFwoHdXNlcl9pZBgBIAEoCVIGdXNlck'
+    'lk');
+
+@$core.Deprecated('Use getUserSubscribedTopicsResponseDescriptor instead')
+const GetUserSubscribedTopicsResponse$json = {
+  '1': 'GetUserSubscribedTopicsResponse',
+  '2': [
+    {'1': 'topics', '3': 1, '4': 3, '5': 9, '10': 'topics'},
+  ],
+};
+
+/// Descriptor for `GetUserSubscribedTopicsResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserSubscribedTopicsResponseDescriptor = $convert.base64Decode(
+    'Ch9HZXRVc2VyU3Vic2NyaWJlZFRvcGljc1Jlc3BvbnNlEhYKBnRvcGljcxgBIAMoCVIGdG9waW'
+    'Nz');
+
+@$core.Deprecated('Use subscribeToSpacePublicChannelMessagesRequestDescriptor instead')
+const SubscribeToSpacePublicChannelMessagesRequest$json = {
+  '1': 'SubscribeToSpacePublicChannelMessagesRequest',
+  '2': [
+    {'1': 'space_ids', '3': 1, '4': 3, '5': 9, '10': 'spaceIds'},
+  ],
+};
+
+/// Descriptor for `SubscribeToSpacePublicChannelMessagesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subscribeToSpacePublicChannelMessagesRequestDescriptor = $convert.base64Decode(
+    'CixTdWJzY3JpYmVUb1NwYWNlUHVibGljQ2hhbm5lbE1lc3NhZ2VzUmVxdWVzdBIbCglzcGFjZV'
+    '9pZHMYASADKAlSCHNwYWNlSWRz');
+
+@$core.Deprecated('Use subscribeToSpacePublicChannelMessagesResponseDescriptor instead')
+const SubscribeToSpacePublicChannelMessagesResponse$json = {
+  '1': 'SubscribeToSpacePublicChannelMessagesResponse',
+};
+
+/// Descriptor for `SubscribeToSpacePublicChannelMessagesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List subscribeToSpacePublicChannelMessagesResponseDescriptor = $convert.base64Decode(
+    'Ci1TdWJzY3JpYmVUb1NwYWNlUHVibGljQ2hhbm5lbE1lc3NhZ2VzUmVzcG9uc2U=');
+
+@$core.Deprecated('Use unsubscribeToSpacePublicChannelMessagesRequestDescriptor instead')
+const UnsubscribeToSpacePublicChannelMessagesRequest$json = {
+  '1': 'UnsubscribeToSpacePublicChannelMessagesRequest',
+  '2': [
+    {'1': 'space_ids', '3': 1, '4': 3, '5': 9, '10': 'spaceIds'},
+  ],
+};
+
+/// Descriptor for `UnsubscribeToSpacePublicChannelMessagesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unsubscribeToSpacePublicChannelMessagesRequestDescriptor = $convert.base64Decode(
+    'Ci5VbnN1YnNjcmliZVRvU3BhY2VQdWJsaWNDaGFubmVsTWVzc2FnZXNSZXF1ZXN0EhsKCXNwYW'
+    'NlX2lkcxgBIAMoCVIIc3BhY2VJZHM=');
+
+@$core.Deprecated('Use unsubscribeToSpacePublicChannelMessagesResponseDescriptor instead')
+const UnsubscribeToSpacePublicChannelMessagesResponse$json = {
+  '1': 'UnsubscribeToSpacePublicChannelMessagesResponse',
+};
+
+/// Descriptor for `UnsubscribeToSpacePublicChannelMessagesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unsubscribeToSpacePublicChannelMessagesResponseDescriptor = $convert.base64Decode(
+    'Ci9VbnN1YnNjcmliZVRvU3BhY2VQdWJsaWNDaGFubmVsTWVzc2FnZXNSZXNwb25zZQ==');
+
 @$core.Deprecated('Use getSpaceChannelUserMessageReactionsMapRequestDescriptor instead')
 const GetSpaceChannelUserMessageReactionsMapRequest$json = {
   '1': 'GetSpaceChannelUserMessageReactionsMapRequest',
@@ -373,7 +635,7 @@ const SendSpaceChannelThreadMessageReactionRequest$json = {
     {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
     {'1': 'thread_message_id', '3': 5, '4': 1, '5': 9, '10': 'threadMessageId'},
     {'1': 'reaction', '3': 6, '4': 1, '5': 9, '10': 'reaction'},
-    {'1': 'is_add', '3': 7, '4': 1, '5': 8, '10': 'isAdd'},
+    {'1': 'device_id', '3': 7, '4': 1, '5': 9, '10': 'deviceId'},
   ],
 };
 
@@ -383,7 +645,8 @@ final $typed_data.Uint8List sendSpaceChannelThreadMessageReactionRequestDescript
     '9pZBgBIAEoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKbWVz'
     'c2FnZV9pZBgDIAEoCVIJbWVzc2FnZUlkEioKEXRocmVhZF9jaGFubmVsX2lkGAQgASgJUg90aH'
     'JlYWRDaGFubmVsSWQSKgoRdGhyZWFkX21lc3NhZ2VfaWQYBSABKAlSD3RocmVhZE1lc3NhZ2VJ'
-    'ZBIaCghyZWFjdGlvbhgGIAEoCVIIcmVhY3Rpb24SFQoGaXNfYWRkGAcgASgIUgVpc0FkZA==');
+    'ZBIaCghyZWFjdGlvbhgGIAEoCVIIcmVhY3Rpb24SGwoJZGV2aWNlX2lkGAcgASgJUghkZXZpY2'
+    'VJZA==');
 
 @$core.Deprecated('Use sendSpaceChannelThreadMessageReactionResponseDescriptor instead')
 const SendSpaceChannelThreadMessageReactionResponse$json = {
@@ -583,6 +846,7 @@ const SendSpaceChannelMessageReactionRequest$json = {
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'reaction', '3': 4, '4': 1, '5': 9, '10': 'reaction'},
     {'1': 'user_role_id', '3': 5, '4': 1, '5': 9, '10': 'userRoleId'},
+    {'1': 'device_id', '3': 6, '4': 1, '5': 9, '10': 'deviceId'},
   ],
 };
 
@@ -591,7 +855,7 @@ final $typed_data.Uint8List sendSpaceChannelMessageReactionRequestDescriptor = $
     'CiZTZW5kU3BhY2VDaGFubmVsTWVzc2FnZVJlYWN0aW9uUmVxdWVzdBIZCghzcGFjZV9pZBgBIA'
     'EoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKbWVzc2FnZV9p'
     'ZBgDIAEoCVIJbWVzc2FnZUlkEhoKCHJlYWN0aW9uGAQgASgJUghyZWFjdGlvbhIgCgx1c2VyX3'
-    'JvbGVfaWQYBSABKAlSCnVzZXJSb2xlSWQ=');
+    'JvbGVfaWQYBSABKAlSCnVzZXJSb2xlSWQSGwoJZGV2aWNlX2lkGAYgASgJUghkZXZpY2VJZA==');
 
 @$core.Deprecated('Use sendSpaceChannelMessageReactionResponseDescriptor instead')
 const SendSpaceChannelMessageReactionResponse$json = {

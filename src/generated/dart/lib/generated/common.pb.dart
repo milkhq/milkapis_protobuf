@@ -14,6 +14,8 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'common.pbenum.dart';
+import 'messaging.pb.dart' as $1;
+import 'user.pbenum.dart' as $0;
 
 export 'common.pbenum.dart';
 
@@ -147,6 +149,7 @@ class SpaceChannelMessageReactionUpdate extends $pb.GeneratedMessage {
     $core.String? reaction,
     $core.bool? isAdd,
     $core.String? spaceId,
+    $core.String? deviceId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -167,6 +170,9 @@ class SpaceChannelMessageReactionUpdate extends $pb.GeneratedMessage {
     if (spaceId != null) {
       $result.spaceId = spaceId;
     }
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
+    }
     return $result;
   }
   SpaceChannelMessageReactionUpdate._() : super();
@@ -180,6 +186,7 @@ class SpaceChannelMessageReactionUpdate extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'reaction')
     ..aOB(5, _omitFieldNames ? '' : 'isAdd')
     ..aOS(6, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(7, _omitFieldNames ? '' : 'deviceId')
     ..hasRequiredFields = false
   ;
 
@@ -257,6 +264,495 @@ class SpaceChannelMessageReactionUpdate extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(5);
   @$pb.TagNumber(6)
   void clearSpaceId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get deviceId => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set deviceId($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDeviceId() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDeviceId() => clearField(7);
+}
+
+class SpaceChannelThreadMessageReactionUpdate extends $pb.GeneratedMessage {
+  factory SpaceChannelThreadMessageReactionUpdate({
+    $core.String? channelId,
+    $core.String? threadId,
+    $core.String? messageId,
+    $core.String? userId,
+    $core.String? reaction,
+    $core.String? spaceId,
+    $core.String? deviceId,
+    $core.String? threadMessageId,
+    $core.bool? isAdd,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (threadId != null) {
+      $result.threadId = threadId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (reaction != null) {
+      $result.reaction = reaction;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
+    }
+    if (threadMessageId != null) {
+      $result.threadMessageId = threadMessageId;
+    }
+    if (isAdd != null) {
+      $result.isAdd = isAdd;
+    }
+    return $result;
+  }
+  SpaceChannelThreadMessageReactionUpdate._() : super();
+  factory SpaceChannelThreadMessageReactionUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceChannelThreadMessageReactionUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceChannelThreadMessageReactionUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'threadId')
+    ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..aOS(4, _omitFieldNames ? '' : 'userId')
+    ..aOS(5, _omitFieldNames ? '' : 'reaction')
+    ..aOS(6, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(7, _omitFieldNames ? '' : 'deviceId')
+    ..aOS(8, _omitFieldNames ? '' : 'threadMessageId')
+    ..aOB(9, _omitFieldNames ? '' : 'isAdd')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceChannelThreadMessageReactionUpdate clone() => SpaceChannelThreadMessageReactionUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceChannelThreadMessageReactionUpdate copyWith(void Function(SpaceChannelThreadMessageReactionUpdate) updates) => super.copyWith((message) => updates(message as SpaceChannelThreadMessageReactionUpdate)) as SpaceChannelThreadMessageReactionUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelThreadMessageReactionUpdate create() => SpaceChannelThreadMessageReactionUpdate._();
+  SpaceChannelThreadMessageReactionUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceChannelThreadMessageReactionUpdate> createRepeated() => $pb.PbList<SpaceChannelThreadMessageReactionUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelThreadMessageReactionUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceChannelThreadMessageReactionUpdate>(create);
+  static SpaceChannelThreadMessageReactionUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get threadId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set threadId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasThreadId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearThreadId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get messageId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set messageId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessageId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get reaction => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set reaction($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasReaction() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearReaction() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get spaceId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set spaceId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasSpaceId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearSpaceId() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get deviceId => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set deviceId($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasDeviceId() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearDeviceId() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get threadMessageId => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set threadMessageId($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasThreadMessageId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearThreadMessageId() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.bool get isAdd => $_getBF(8);
+  @$pb.TagNumber(9)
+  set isAdd($core.bool v) { $_setBool(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasIsAdd() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearIsAdd() => clearField(9);
+}
+
+class UserPresenceStatusUpdate extends $pb.GeneratedMessage {
+  factory UserPresenceStatusUpdate({
+    $core.String? userId,
+    $0.USER_PRESENCE_STATUS? status,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  UserPresenceStatusUpdate._() : super();
+  factory UserPresenceStatusUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserPresenceStatusUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserPresenceStatusUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..e<$0.USER_PRESENCE_STATUS>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: $0.USER_PRESENCE_STATUS.ONLINE, valueOf: $0.USER_PRESENCE_STATUS.valueOf, enumValues: $0.USER_PRESENCE_STATUS.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserPresenceStatusUpdate clone() => UserPresenceStatusUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserPresenceStatusUpdate copyWith(void Function(UserPresenceStatusUpdate) updates) => super.copyWith((message) => updates(message as UserPresenceStatusUpdate)) as UserPresenceStatusUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserPresenceStatusUpdate create() => UserPresenceStatusUpdate._();
+  UserPresenceStatusUpdate createEmptyInstance() => create();
+  static $pb.PbList<UserPresenceStatusUpdate> createRepeated() => $pb.PbList<UserPresenceStatusUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static UserPresenceStatusUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserPresenceStatusUpdate>(create);
+  static UserPresenceStatusUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $0.USER_PRESENCE_STATUS get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status($0.USER_PRESENCE_STATUS v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+}
+
+class SpaceChannelMessageUpdate extends $pb.GeneratedMessage {
+  factory SpaceChannelMessageUpdate({
+    $core.String? channelId,
+    $core.String? spaceId,
+    $1.MessageDocument? message,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  SpaceChannelMessageUpdate._() : super();
+  factory SpaceChannelMessageUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceChannelMessageUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceChannelMessageUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..aOM<$1.MessageDocument>(3, _omitFieldNames ? '' : 'message', subBuilder: $1.MessageDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceChannelMessageUpdate clone() => SpaceChannelMessageUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceChannelMessageUpdate copyWith(void Function(SpaceChannelMessageUpdate) updates) => super.copyWith((message) => updates(message as SpaceChannelMessageUpdate)) as SpaceChannelMessageUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelMessageUpdate create() => SpaceChannelMessageUpdate._();
+  SpaceChannelMessageUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceChannelMessageUpdate> createRepeated() => $pb.PbList<SpaceChannelMessageUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelMessageUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceChannelMessageUpdate>(create);
+  static SpaceChannelMessageUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.MessageDocument get message => $_getN(2);
+  @$pb.TagNumber(3)
+  set message($1.MessageDocument v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessage() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.MessageDocument ensureMessage() => $_ensure(2);
+}
+
+class SpaceChannelThreadMessageUpdate extends $pb.GeneratedMessage {
+  factory SpaceChannelThreadMessageUpdate({
+    $core.String? channelId,
+    $core.String? threadId,
+    $core.String? spaceId,
+    $core.String? messageId,
+    $1.MessageDocument? message,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (threadId != null) {
+      $result.threadId = threadId;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  SpaceChannelThreadMessageUpdate._() : super();
+  factory SpaceChannelThreadMessageUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceChannelThreadMessageUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceChannelThreadMessageUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'threadId')
+    ..aOS(3, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(4, _omitFieldNames ? '' : 'messageId')
+    ..aOM<$1.MessageDocument>(5, _omitFieldNames ? '' : 'message', subBuilder: $1.MessageDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceChannelThreadMessageUpdate clone() => SpaceChannelThreadMessageUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceChannelThreadMessageUpdate copyWith(void Function(SpaceChannelThreadMessageUpdate) updates) => super.copyWith((message) => updates(message as SpaceChannelThreadMessageUpdate)) as SpaceChannelThreadMessageUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelThreadMessageUpdate create() => SpaceChannelThreadMessageUpdate._();
+  SpaceChannelThreadMessageUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceChannelThreadMessageUpdate> createRepeated() => $pb.PbList<SpaceChannelThreadMessageUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelThreadMessageUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceChannelThreadMessageUpdate>(create);
+  static SpaceChannelThreadMessageUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get threadId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set threadId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasThreadId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearThreadId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get spaceId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set spaceId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSpaceId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSpaceId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get messageId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set messageId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasMessageId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearMessageId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $1.MessageDocument get message => $_getN(4);
+  @$pb.TagNumber(5)
+  set message($1.MessageDocument v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasMessage() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearMessage() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.MessageDocument ensureMessage() => $_ensure(4);
+}
+
+class UserSubscribedTopicsUpdate extends $pb.GeneratedMessage {
+  factory UserSubscribedTopicsUpdate({
+    $core.String? userId,
+    $core.Iterable<$core.String>? addedTopics,
+    $core.Iterable<$core.String>? removedTopics,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (addedTopics != null) {
+      $result.addedTopics.addAll(addedTopics);
+    }
+    if (removedTopics != null) {
+      $result.removedTopics.addAll(removedTopics);
+    }
+    return $result;
+  }
+  UserSubscribedTopicsUpdate._() : super();
+  factory UserSubscribedTopicsUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserSubscribedTopicsUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSubscribedTopicsUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..pPS(2, _omitFieldNames ? '' : 'addedTopics')
+    ..pPS(3, _omitFieldNames ? '' : 'removedTopics')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserSubscribedTopicsUpdate clone() => UserSubscribedTopicsUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserSubscribedTopicsUpdate copyWith(void Function(UserSubscribedTopicsUpdate) updates) => super.copyWith((message) => updates(message as UserSubscribedTopicsUpdate)) as UserSubscribedTopicsUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserSubscribedTopicsUpdate create() => UserSubscribedTopicsUpdate._();
+  UserSubscribedTopicsUpdate createEmptyInstance() => create();
+  static $pb.PbList<UserSubscribedTopicsUpdate> createRepeated() => $pb.PbList<UserSubscribedTopicsUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static UserSubscribedTopicsUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserSubscribedTopicsUpdate>(create);
+  static UserSubscribedTopicsUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get addedTopics => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get removedTopics => $_getList(2);
 }
 
 

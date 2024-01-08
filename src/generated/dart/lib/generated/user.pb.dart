@@ -18,6 +18,248 @@ import 'user.pbenum.dart';
 
 export 'user.pbenum.dart';
 
+class GetUserPresenceStatusRequest extends $pb.GeneratedMessage {
+  factory GetUserPresenceStatusRequest({
+    $core.String? userId,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    return $result;
+  }
+  GetUserPresenceStatusRequest._() : super();
+  factory GetUserPresenceStatusRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserPresenceStatusRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserPresenceStatusRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserPresenceStatusRequest clone() => GetUserPresenceStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserPresenceStatusRequest copyWith(void Function(GetUserPresenceStatusRequest) updates) => super.copyWith((message) => updates(message as GetUserPresenceStatusRequest)) as GetUserPresenceStatusRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserPresenceStatusRequest create() => GetUserPresenceStatusRequest._();
+  GetUserPresenceStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserPresenceStatusRequest> createRepeated() => $pb.PbList<GetUserPresenceStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserPresenceStatusRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserPresenceStatusRequest>(create);
+  static GetUserPresenceStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+}
+
+class GetUserPresenceStatusResponse extends $pb.GeneratedMessage {
+  factory GetUserPresenceStatusResponse({
+    $core.String? userId,
+    USER_PRESENCE_STATUS? status,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  GetUserPresenceStatusResponse._() : super();
+  factory GetUserPresenceStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserPresenceStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserPresenceStatusResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..e<USER_PRESENCE_STATUS>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: USER_PRESENCE_STATUS.ONLINE, valueOf: USER_PRESENCE_STATUS.valueOf, enumValues: USER_PRESENCE_STATUS.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserPresenceStatusResponse clone() => GetUserPresenceStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserPresenceStatusResponse copyWith(void Function(GetUserPresenceStatusResponse) updates) => super.copyWith((message) => updates(message as GetUserPresenceStatusResponse)) as GetUserPresenceStatusResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserPresenceStatusResponse create() => GetUserPresenceStatusResponse._();
+  GetUserPresenceStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserPresenceStatusResponse> createRepeated() => $pb.PbList<GetUserPresenceStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserPresenceStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserPresenceStatusResponse>(create);
+  static GetUserPresenceStatusResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  USER_PRESENCE_STATUS get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status(USER_PRESENCE_STATUS v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+}
+
+class SetUserPresenceStatusRequest extends $pb.GeneratedMessage {
+  factory SetUserPresenceStatusRequest({
+    $core.String? userId,
+    USER_PRESENCE_STATUS? status,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  SetUserPresenceStatusRequest._() : super();
+  factory SetUserPresenceStatusRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetUserPresenceStatusRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetUserPresenceStatusRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..e<USER_PRESENCE_STATUS>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: USER_PRESENCE_STATUS.ONLINE, valueOf: USER_PRESENCE_STATUS.valueOf, enumValues: USER_PRESENCE_STATUS.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetUserPresenceStatusRequest clone() => SetUserPresenceStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetUserPresenceStatusRequest copyWith(void Function(SetUserPresenceStatusRequest) updates) => super.copyWith((message) => updates(message as SetUserPresenceStatusRequest)) as SetUserPresenceStatusRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetUserPresenceStatusRequest create() => SetUserPresenceStatusRequest._();
+  SetUserPresenceStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<SetUserPresenceStatusRequest> createRepeated() => $pb.PbList<SetUserPresenceStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SetUserPresenceStatusRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetUserPresenceStatusRequest>(create);
+  static SetUserPresenceStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  USER_PRESENCE_STATUS get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status(USER_PRESENCE_STATUS v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+}
+
+class SetUserPresenceStatusResponse extends $pb.GeneratedMessage {
+  factory SetUserPresenceStatusResponse({
+    $core.String? userId,
+    USER_PRESENCE_STATUS? status,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  SetUserPresenceStatusResponse._() : super();
+  factory SetUserPresenceStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SetUserPresenceStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SetUserPresenceStatusResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..e<USER_PRESENCE_STATUS>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: USER_PRESENCE_STATUS.ONLINE, valueOf: USER_PRESENCE_STATUS.valueOf, enumValues: USER_PRESENCE_STATUS.values)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SetUserPresenceStatusResponse clone() => SetUserPresenceStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SetUserPresenceStatusResponse copyWith(void Function(SetUserPresenceStatusResponse) updates) => super.copyWith((message) => updates(message as SetUserPresenceStatusResponse)) as SetUserPresenceStatusResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SetUserPresenceStatusResponse create() => SetUserPresenceStatusResponse._();
+  SetUserPresenceStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<SetUserPresenceStatusResponse> createRepeated() => $pb.PbList<SetUserPresenceStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SetUserPresenceStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SetUserPresenceStatusResponse>(create);
+  static SetUserPresenceStatusResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  USER_PRESENCE_STATUS get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status(USER_PRESENCE_STATUS v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+}
+
 class CheckSignUpTokenRequest extends $pb.GeneratedMessage {
   factory CheckSignUpTokenRequest({
     $core.String? token,
@@ -1633,6 +1875,7 @@ class UserDocument extends $pb.GeneratedMessage {
     $fixnum.Int64? nonce,
     DOCUMENT_STATUS? documentStatus,
     $core.Iterable<UserFeatureFlags>? featureFlags,
+    USER_PRESENCE_STATUS? presenceStatus,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -1668,6 +1911,9 @@ class UserDocument extends $pb.GeneratedMessage {
     if (featureFlags != null) {
       $result.featureFlags.addAll(featureFlags);
     }
+    if (presenceStatus != null) {
+      $result.presenceStatus = presenceStatus;
+    }
     return $result;
   }
   UserDocument._() : super();
@@ -1686,6 +1932,7 @@ class UserDocument extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(9, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<DOCUMENT_STATUS>(10, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..pc<UserFeatureFlags>(11, _omitFieldNames ? '' : 'featureFlags', $pb.PbFieldType.KE, valueOf: UserFeatureFlags.valueOf, enumValues: UserFeatureFlags.values, defaultEnumValue: UserFeatureFlags.NONE)
+    ..e<USER_PRESENCE_STATUS>(12, _omitFieldNames ? '' : 'presenceStatus', $pb.PbFieldType.OE, defaultOrMaker: USER_PRESENCE_STATUS.ONLINE, valueOf: USER_PRESENCE_STATUS.valueOf, enumValues: USER_PRESENCE_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -1798,6 +2045,15 @@ class UserDocument extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(11)
   $core.List<UserFeatureFlags> get featureFlags => $_getList(10);
+
+  @$pb.TagNumber(12)
+  USER_PRESENCE_STATUS get presenceStatus => $_getN(11);
+  @$pb.TagNumber(12)
+  set presenceStatus(USER_PRESENCE_STATUS v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasPresenceStatus() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearPresenceStatus() => clearField(12);
 }
 
 class UpdateUserMetadataRequest extends $pb.GeneratedMessage {

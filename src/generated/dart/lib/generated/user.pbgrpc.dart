@@ -117,6 +117,14 @@ class UserClient extends $grpc.Client {
       '/user.User/CheckSignupToken',
       ($0.CheckSignUpTokenRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.CheckSignUpTokenResponse.fromBuffer(value));
+  static final _$setUserPresenceStatus = $grpc.ClientMethod<$0.SetUserPresenceStatusRequest, $0.SetUserPresenceStatusResponse>(
+      '/user.User/SetUserPresenceStatus',
+      ($0.SetUserPresenceStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.SetUserPresenceStatusResponse.fromBuffer(value));
+  static final _$getUserPresenceStatus = $grpc.ClientMethod<$0.GetUserPresenceStatusRequest, $0.GetUserPresenceStatusResponse>(
+      '/user.User/GetUserPresenceStatus',
+      ($0.GetUserPresenceStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $0.GetUserPresenceStatusResponse.fromBuffer(value));
 
   UserClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -218,6 +226,14 @@ class UserClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$0.CheckSignUpTokenResponse> checkSignupToken($0.CheckSignUpTokenRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$checkSignupToken, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.SetUserPresenceStatusResponse> setUserPresenceStatus($0.SetUserPresenceStatusRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$setUserPresenceStatus, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$0.GetUserPresenceStatusResponse> getUserPresenceStatus($0.GetUserPresenceStatusRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getUserPresenceStatus, request, options: options);
   }
 }
 
@@ -394,6 +410,20 @@ abstract class UserServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $0.CheckSignUpTokenRequest.fromBuffer(value),
         ($0.CheckSignUpTokenResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.SetUserPresenceStatusRequest, $0.SetUserPresenceStatusResponse>(
+        'SetUserPresenceStatus',
+        setUserPresenceStatus_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.SetUserPresenceStatusRequest.fromBuffer(value),
+        ($0.SetUserPresenceStatusResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.GetUserPresenceStatusRequest, $0.GetUserPresenceStatusResponse>(
+        'GetUserPresenceStatus',
+        getUserPresenceStatus_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $0.GetUserPresenceStatusRequest.fromBuffer(value),
+        ($0.GetUserPresenceStatusResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$0.CreateUserResponse> createUser_Pre($grpc.ServiceCall call, $async.Future<$0.CreateUserRequest> request) async {
@@ -492,6 +522,14 @@ abstract class UserServiceBase extends $grpc.Service {
     return checkSignupToken(call, await request);
   }
 
+  $async.Future<$0.SetUserPresenceStatusResponse> setUserPresenceStatus_Pre($grpc.ServiceCall call, $async.Future<$0.SetUserPresenceStatusRequest> request) async {
+    return setUserPresenceStatus(call, await request);
+  }
+
+  $async.Future<$0.GetUserPresenceStatusResponse> getUserPresenceStatus_Pre($grpc.ServiceCall call, $async.Future<$0.GetUserPresenceStatusRequest> request) async {
+    return getUserPresenceStatus(call, await request);
+  }
+
   $async.Future<$0.CreateUserResponse> createUser($grpc.ServiceCall call, $0.CreateUserRequest request);
   $async.Future<$0.CreateAnonymousUserResponse> createAnonymousUser($grpc.ServiceCall call, $0.CreateAnonymousUserRequest request);
   $async.Future<$0.CreateUserEmailPasswordResponse> createUserEmailPassword($grpc.ServiceCall call, $0.CreateUserEmailPasswordRequest request);
@@ -516,4 +554,6 @@ abstract class UserServiceBase extends $grpc.Service {
   $async.Future<$0.CreateSignUpTokenResponse> createSignUpToken($grpc.ServiceCall call, $0.CreateSignUpTokenRequest request);
   $async.Future<$0.UpdateUserRoleResponse> updateUserRole($grpc.ServiceCall call, $0.UpdateUserRoleRequest request);
   $async.Future<$0.CheckSignUpTokenResponse> checkSignupToken($grpc.ServiceCall call, $0.CheckSignUpTokenRequest request);
+  $async.Future<$0.SetUserPresenceStatusResponse> setUserPresenceStatus($grpc.ServiceCall call, $0.SetUserPresenceStatusRequest request);
+  $async.Future<$0.GetUserPresenceStatusResponse> getUserPresenceStatus($grpc.ServiceCall call, $0.GetUserPresenceStatusRequest request);
 }

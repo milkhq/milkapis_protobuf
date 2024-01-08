@@ -35,6 +35,8 @@ const CollectionsV1$json = {
     {'1': 'USER_ROLES', '2': 15},
     {'1': 'USER_STATUSES', '2': 16},
     {'1': 'SIGN_UP_TOKENS', '2': 17},
+    {'1': 'USER_PRESENCE_STATUSES', '2': 18},
+    {'1': 'SUBSCRIBED_TOPICS', '2': 19},
   ],
 };
 
@@ -45,7 +47,8 @@ final $typed_data.Uint8List collectionsV1Descriptor = $convert.base64Decode(
     'DgoKQ0FURUdPUklFUxAGEgwKCE1FU1NBR0VTEAcSCwoHTUVNQkVSUxAIEgkKBVJPTEVTEAkSDQ'
     'oJUkVBQ1RJT05TEAoSCwoHVEhSRUFEUxALEg0KCVVTRVJOQU1FUxAMEhEKDU5PVElGSUNBVElP'
     'TlMQDRIhCh1DSEFOTkVMX01FTUJFUlNfVE9fQ0hBTk5FTF9JRBAOEg4KClVTRVJfUk9MRVMQDx'
-    'IRCg1VU0VSX1NUQVRVU0VTEBASEgoOU0lHTl9VUF9UT0tFTlMQEQ==');
+    'IRCg1VU0VSX1NUQVRVU0VTEBASEgoOU0lHTl9VUF9UT0tFTlMQERIaChZVU0VSX1BSRVNFTkNF'
+    'X1NUQVRVU0VTEBISFQoRU1VCU0NSSUJFRF9UT1BJQ1MQEw==');
 
 @$core.Deprecated('Use collectionCountersV1Descriptor instead')
 const CollectionCountersV1$json = {
@@ -67,6 +70,8 @@ const CollectionCountersV1$json = {
     {'1': 'USER_ROLE_COUNTER', '2': 13},
     {'1': 'USER_STATUS_COUNTER', '2': 14},
     {'1': 'SIGN_UP_TOKEN_COUNTER', '2': 15},
+    {'1': 'USER_PRESENCE_STATUS_COUNTER', '2': 16},
+    {'1': 'SUBSCRIBED_TOPIC_COUNTER', '2': 17},
   ],
 };
 
@@ -78,7 +83,9 @@ final $typed_data.Uint8List collectionCountersV1Descriptor = $convert.base64Deco
     'VHT1JZX0NPVU5URVIQBhITCg9NRVNTQUdFX0NPVU5URVIQBxISCg5NRU1CRVJfQ09VTlRFUhAI'
     'EhAKDFJPTEVfQ09VTlRFUhAJEhIKDlRIUkVBRF9DT1VOVEVSEAoSFAoQVVNFUk5BTUVfQ09VTl'
     'RFUhALEhgKFE5PVElGSUNBVElPTl9DT1VOVEVSEAwSFQoRVVNFUl9ST0xFX0NPVU5URVIQDRIX'
-    'ChNVU0VSX1NUQVRVU19DT1VOVEVSEA4SGQoVU0lHTl9VUF9UT0tFTl9DT1VOVEVSEA8=');
+    'ChNVU0VSX1NUQVRVU19DT1VOVEVSEA4SGQoVU0lHTl9VUF9UT0tFTl9DT1VOVEVSEA8SIAocVV'
+    'NFUl9QUkVTRU5DRV9TVEFUVVNfQ09VTlRFUhAQEhwKGFNVQlNDUklCRURfVE9QSUNfQ09VTlRF'
+    'UhAR');
 
 @$core.Deprecated('Use dOCUMENT_TYPEDescriptor instead')
 const DOCUMENT_TYPE$json = {
@@ -138,6 +145,12 @@ const EVENT_TYPE$json = {
     {'1': 'DIRECT_CHANNEL_MEMBER_REMOVED', '2': 28},
     {'1': 'SPACE_CHANNEL_NEW_ROLE', '2': 29},
     {'1': 'DIRECT_CHANNEL_CALL', '2': 30},
+    {'1': 'USER_STATUS_UPDATED', '2': 31},
+    {'1': 'USER_SUBSCRIBED_TOPICS_UPDATED', '2': 32},
+    {'1': 'SPACE_CHANNEL_MESSAGE_REACTION_UPDATED', '2': 33},
+    {'1': 'SPACE_CHANNEL_MESSAGE_UPDATED', '2': 34},
+    {'1': 'SPACE_CHANNEL_THREAD_MESSAGE_UPDATED', '2': 35},
+    {'1': 'SPACE_CHANNEL_THREAD_MESSAGE_REACTION_UPDATED', '2': 36},
   ],
 };
 
@@ -163,7 +176,11 @@ final $typed_data.Uint8List eVENT_TYPEDescriptor = $convert.base64Decode(
     'FURUQQGBIgChxTUEFDRV9DSEFOTkVMX01FTUJFUl9SRU1PVkVEEBkSHQoZRElSRUNUX0NIQU5O'
     'RUxfTkVXX01FTUJFUhAaEiEKHURJUkVDVF9DSEFOTkVMX01FTUJFUl9VUERBVEVEEBsSIQodRE'
     'lSRUNUX0NIQU5ORUxfTUVNQkVSX1JFTU9WRUQQHBIaChZTUEFDRV9DSEFOTkVMX05FV19ST0xF'
-    'EB0SFwoTRElSRUNUX0NIQU5ORUxfQ0FMTBAe');
+    'EB0SFwoTRElSRUNUX0NIQU5ORUxfQ0FMTBAeEhcKE1VTRVJfU1RBVFVTX1VQREFURUQQHxIiCh'
+    '5VU0VSX1NVQlNDUklCRURfVE9QSUNTX1VQREFURUQQIBIqCiZTUEFDRV9DSEFOTkVMX01FU1NB'
+    'R0VfUkVBQ1RJT05fVVBEQVRFRBAhEiEKHVNQQUNFX0NIQU5ORUxfTUVTU0FHRV9VUERBVEVEEC'
+    'ISKAokU1BBQ0VfQ0hBTk5FTF9USFJFQURfTUVTU0FHRV9VUERBVEVEECMSMQotU1BBQ0VfQ0hB'
+    'Tk5FTF9USFJFQURfTUVTU0FHRV9SRUFDVElPTl9VUERBVEVEECQ=');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -202,6 +219,7 @@ const SpaceChannelMessageReactionUpdate$json = {
     {'1': 'reaction', '3': 4, '4': 1, '5': 9, '10': 'reaction'},
     {'1': 'is_add', '3': 5, '4': 1, '5': 8, '10': 'isAdd'},
     {'1': 'space_id', '3': 6, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'device_id', '3': 7, '4': 1, '5': 9, '10': 'deviceId'},
   ],
 };
 
@@ -210,5 +228,96 @@ final $typed_data.Uint8List spaceChannelMessageReactionUpdateDescriptor = $conve
     'CiFTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25VcGRhdGUSHQoKY2hhbm5lbF9pZBgBIAEoCV'
     'IJY2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQYAiABKAlSCW1lc3NhZ2VJZBIXCgd1c2VyX2lkGAMg'
     'ASgJUgZ1c2VySWQSGgoIcmVhY3Rpb24YBCABKAlSCHJlYWN0aW9uEhUKBmlzX2FkZBgFIAEoCF'
-    'IFaXNBZGQSGQoIc3BhY2VfaWQYBiABKAlSB3NwYWNlSWQ=');
+    'IFaXNBZGQSGQoIc3BhY2VfaWQYBiABKAlSB3NwYWNlSWQSGwoJZGV2aWNlX2lkGAcgASgJUghk'
+    'ZXZpY2VJZA==');
+
+@$core.Deprecated('Use spaceChannelThreadMessageReactionUpdateDescriptor instead')
+const SpaceChannelThreadMessageReactionUpdate$json = {
+  '1': 'SpaceChannelThreadMessageReactionUpdate',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'thread_id', '3': 2, '4': 1, '5': 9, '10': 'threadId'},
+    {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'user_id', '3': 4, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'reaction', '3': 5, '4': 1, '5': 9, '10': 'reaction'},
+    {'1': 'space_id', '3': 6, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'device_id', '3': 7, '4': 1, '5': 9, '10': 'deviceId'},
+    {'1': 'thread_message_id', '3': 8, '4': 1, '5': 9, '10': 'threadMessageId'},
+    {'1': 'is_add', '3': 9, '4': 1, '5': 8, '10': 'isAdd'},
+  ],
+};
+
+/// Descriptor for `SpaceChannelThreadMessageReactionUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceChannelThreadMessageReactionUpdateDescriptor = $convert.base64Decode(
+    'CidTcGFjZUNoYW5uZWxUaHJlYWRNZXNzYWdlUmVhY3Rpb25VcGRhdGUSHQoKY2hhbm5lbF9pZB'
+    'gBIAEoCVIJY2hhbm5lbElkEhsKCXRocmVhZF9pZBgCIAEoCVIIdGhyZWFkSWQSHQoKbWVzc2Fn'
+    'ZV9pZBgDIAEoCVIJbWVzc2FnZUlkEhcKB3VzZXJfaWQYBCABKAlSBnVzZXJJZBIaCghyZWFjdG'
+    'lvbhgFIAEoCVIIcmVhY3Rpb24SGQoIc3BhY2VfaWQYBiABKAlSB3NwYWNlSWQSGwoJZGV2aWNl'
+    'X2lkGAcgASgJUghkZXZpY2VJZBIqChF0aHJlYWRfbWVzc2FnZV9pZBgIIAEoCVIPdGhyZWFkTW'
+    'Vzc2FnZUlkEhUKBmlzX2FkZBgJIAEoCFIFaXNBZGQ=');
+
+@$core.Deprecated('Use userPresenceStatusUpdateDescriptor instead')
+const UserPresenceStatusUpdate$json = {
+  '1': 'UserPresenceStatusUpdate',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `UserPresenceStatusUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userPresenceStatusUpdateDescriptor = $convert.base64Decode(
+    'ChhVc2VyUHJlc2VuY2VTdGF0dXNVcGRhdGUSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEjIKBn'
+    'N0YXR1cxgCIAEoDjIaLnVzZXIuVVNFUl9QUkVTRU5DRV9TVEFUVVNSBnN0YXR1cw==');
+
+@$core.Deprecated('Use spaceChannelMessageUpdateDescriptor instead')
+const SpaceChannelMessageUpdate$json = {
+  '1': 'SpaceChannelMessageUpdate',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'message', '3': 3, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
+  ],
+};
+
+/// Descriptor for `SpaceChannelMessageUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceChannelMessageUpdateDescriptor = $convert.base64Decode(
+    'ChlTcGFjZUNoYW5uZWxNZXNzYWdlVXBkYXRlEh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW5uZW'
+    'xJZBIZCghzcGFjZV9pZBgCIAEoCVIHc3BhY2VJZBI0CgdtZXNzYWdlGAMgASgLMhoubWVzc2Fn'
+    'aW5nLk1lc3NhZ2VEb2N1bWVudFIHbWVzc2FnZQ==');
+
+@$core.Deprecated('Use spaceChannelThreadMessageUpdateDescriptor instead')
+const SpaceChannelThreadMessageUpdate$json = {
+  '1': 'SpaceChannelThreadMessageUpdate',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'thread_id', '3': 2, '4': 1, '5': 9, '10': 'threadId'},
+    {'1': 'space_id', '3': 3, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'message_id', '3': 4, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'message', '3': 5, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
+  ],
+};
+
+/// Descriptor for `SpaceChannelThreadMessageUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceChannelThreadMessageUpdateDescriptor = $convert.base64Decode(
+    'Ch9TcGFjZUNoYW5uZWxUaHJlYWRNZXNzYWdlVXBkYXRlEh0KCmNoYW5uZWxfaWQYASABKAlSCW'
+    'NoYW5uZWxJZBIbCgl0aHJlYWRfaWQYAiABKAlSCHRocmVhZElkEhkKCHNwYWNlX2lkGAMgASgJ'
+    'UgdzcGFjZUlkEh0KCm1lc3NhZ2VfaWQYBCABKAlSCW1lc3NhZ2VJZBI0CgdtZXNzYWdlGAUgAS'
+    'gLMhoubWVzc2FnaW5nLk1lc3NhZ2VEb2N1bWVudFIHbWVzc2FnZQ==');
+
+@$core.Deprecated('Use userSubscribedTopicsUpdateDescriptor instead')
+const UserSubscribedTopicsUpdate$json = {
+  '1': 'UserSubscribedTopicsUpdate',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'added_topics', '3': 2, '4': 3, '5': 9, '10': 'addedTopics'},
+    {'1': 'removed_topics', '3': 3, '4': 3, '5': 9, '10': 'removedTopics'},
+  ],
+};
+
+/// Descriptor for `UserSubscribedTopicsUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userSubscribedTopicsUpdateDescriptor = $convert.base64Decode(
+    'ChpVc2VyU3Vic2NyaWJlZFRvcGljc1VwZGF0ZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSIQ'
+    'oMYWRkZWRfdG9waWNzGAIgAygJUgthZGRlZFRvcGljcxIlCg5yZW1vdmVkX3RvcGljcxgDIAMo'
+    'CVINcmVtb3ZlZFRvcGljcw==');
 

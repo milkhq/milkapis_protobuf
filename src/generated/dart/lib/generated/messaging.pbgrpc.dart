@@ -185,6 +185,14 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/GetSpaceChannelUserMessageReactionsMap',
       ($1.GetSpaceChannelUserMessageReactionsMapRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.GetSpaceChannelUserMessageReactionsMapResponse.fromBuffer(value));
+  static final _$getSpaceThreadChannelMessageReactionsSet = $grpc.ClientMethod<$1.GetSpaceThreadChannelMessageReactionsSetRequest, $1.GetSpaceThreadChannelMessageReactionsSetResponse>(
+      '/messaging.Messaging/GetSpaceThreadChannelMessageReactionsSet',
+      ($1.GetSpaceThreadChannelMessageReactionsSetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetSpaceThreadChannelMessageReactionsSetResponse.fromBuffer(value));
+  static final _$getSpaceThreadChannelUserMessageReactionsMap = $grpc.ClientMethod<$1.GetSpaceThreadChannelUserMessageReactionsMapRequest, $1.GetSpaceThreadChannelUserMessageReactionsMapResponse>(
+      '/messaging.Messaging/GetSpaceThreadChannelUserMessageReactionsMap',
+      ($1.GetSpaceThreadChannelUserMessageReactionsMapRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetSpaceThreadChannelUserMessageReactionsMapResponse.fromBuffer(value));
   static final _$sendDirectChannelMessage = $grpc.ClientMethod<$1.SendMessageRequest, $1.SendMessageResponse>(
       '/messaging.Messaging/SendDirectChannelMessage',
       ($1.SendMessageRequest value) => value.writeToBuffer(),
@@ -225,6 +233,34 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/DeleteThreadChannelMessage',
       ($1.DeleteMessageRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.DeleteMessageResponse.fromBuffer(value));
+  static final _$subscribeToSpacePublicChannelMessages = $grpc.ClientMethod<$1.SubscribeToSpacePublicChannelMessagesRequest, $1.SubscribeToSpacePublicChannelMessagesResponse>(
+      '/messaging.Messaging/SubscribeToSpacePublicChannelMessages',
+      ($1.SubscribeToSpacePublicChannelMessagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SubscribeToSpacePublicChannelMessagesResponse.fromBuffer(value));
+  static final _$unsubscribeToSpacePublicChannelMessages = $grpc.ClientMethod<$1.UnsubscribeToSpacePublicChannelMessagesRequest, $1.UnsubscribeToSpacePublicChannelMessagesResponse>(
+      '/messaging.Messaging/UnsubscribeToSpacePublicChannelMessages',
+      ($1.UnsubscribeToSpacePublicChannelMessagesRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UnsubscribeToSpacePublicChannelMessagesResponse.fromBuffer(value));
+  static final _$getUserSubscribedTopics = $grpc.ClientMethod<$1.GetUserSubscribedTopicsRequest, $1.GetUserSubscribedTopicsResponse>(
+      '/messaging.Messaging/GetUserSubscribedTopics',
+      ($1.GetUserSubscribedTopicsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetUserSubscribedTopicsResponse.fromBuffer(value));
+  static final _$subscribeToConversation = $grpc.ClientMethod<$1.SubscribeToConversationRequest, $1.SubscribeToConversationResponse>(
+      '/messaging.Messaging/SubscribeToConversation',
+      ($1.SubscribeToConversationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SubscribeToConversationResponse.fromBuffer(value));
+  static final _$unsubscribeToConversation = $grpc.ClientMethod<$1.UnsubscribeToConversationRequest, $1.UnsubscribeToConversationResponse>(
+      '/messaging.Messaging/UnsubscribeToConversation',
+      ($1.UnsubscribeToConversationRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UnsubscribeToConversationResponse.fromBuffer(value));
+  static final _$subscribeToUserPresence = $grpc.ClientMethod<$1.SubscribeToUserPresenceRequest, $1.SubscribeToUserPresenceResponse>(
+      '/messaging.Messaging/SubscribeToUserPresence',
+      ($1.SubscribeToUserPresenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.SubscribeToUserPresenceResponse.fromBuffer(value));
+  static final _$unsubscribeToUserPresence = $grpc.ClientMethod<$1.UnsubscribeToUserPresenceRequest, $1.UnsubscribeToUserPresenceResponse>(
+      '/messaging.Messaging/UnsubscribeToUserPresence',
+      ($1.UnsubscribeToUserPresenceRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UnsubscribeToUserPresenceResponse.fromBuffer(value));
 
   MessagingClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -396,6 +432,14 @@ class MessagingClient extends $grpc.Client {
     return $createUnaryCall(_$getSpaceChannelUserMessageReactionsMap, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.GetSpaceThreadChannelMessageReactionsSetResponse> getSpaceThreadChannelMessageReactionsSet($1.GetSpaceThreadChannelMessageReactionsSetRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceThreadChannelMessageReactionsSet, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetSpaceThreadChannelUserMessageReactionsMapResponse> getSpaceThreadChannelUserMessageReactionsMap($1.GetSpaceThreadChannelUserMessageReactionsMapRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getSpaceThreadChannelUserMessageReactionsMap, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.SendMessageResponse> sendDirectChannelMessage($1.SendMessageRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$sendDirectChannelMessage, request, options: options);
   }
@@ -434,6 +478,34 @@ class MessagingClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.DeleteMessageResponse> deleteThreadChannelMessage($1.DeleteMessageRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$deleteThreadChannelMessage, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SubscribeToSpacePublicChannelMessagesResponse> subscribeToSpacePublicChannelMessages($1.SubscribeToSpacePublicChannelMessagesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$subscribeToSpacePublicChannelMessages, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UnsubscribeToSpacePublicChannelMessagesResponse> unsubscribeToSpacePublicChannelMessages($1.UnsubscribeToSpacePublicChannelMessagesRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$unsubscribeToSpacePublicChannelMessages, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetUserSubscribedTopicsResponse> getUserSubscribedTopics($1.GetUserSubscribedTopicsRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getUserSubscribedTopics, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SubscribeToConversationResponse> subscribeToConversation($1.SubscribeToConversationRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$subscribeToConversation, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UnsubscribeToConversationResponse> unsubscribeToConversation($1.UnsubscribeToConversationRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$unsubscribeToConversation, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.SubscribeToUserPresenceResponse> subscribeToUserPresence($1.SubscribeToUserPresenceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$subscribeToUserPresence, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UnsubscribeToUserPresenceResponse> unsubscribeToUserPresence($1.UnsubscribeToUserPresenceRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$unsubscribeToUserPresence, request, options: options);
   }
 }
 
@@ -729,6 +801,20 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.GetSpaceChannelUserMessageReactionsMapRequest.fromBuffer(value),
         ($1.GetSpaceChannelUserMessageReactionsMapResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetSpaceThreadChannelMessageReactionsSetRequest, $1.GetSpaceThreadChannelMessageReactionsSetResponse>(
+        'GetSpaceThreadChannelMessageReactionsSet',
+        getSpaceThreadChannelMessageReactionsSet_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetSpaceThreadChannelMessageReactionsSetRequest.fromBuffer(value),
+        ($1.GetSpaceThreadChannelMessageReactionsSetResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetSpaceThreadChannelUserMessageReactionsMapRequest, $1.GetSpaceThreadChannelUserMessageReactionsMapResponse>(
+        'GetSpaceThreadChannelUserMessageReactionsMap',
+        getSpaceThreadChannelUserMessageReactionsMap_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetSpaceThreadChannelUserMessageReactionsMapRequest.fromBuffer(value),
+        ($1.GetSpaceThreadChannelUserMessageReactionsMapResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.SendMessageRequest, $1.SendMessageResponse>(
         'SendDirectChannelMessage',
         sendDirectChannelMessage_Pre,
@@ -799,6 +885,55 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.DeleteMessageRequest.fromBuffer(value),
         ($1.DeleteMessageResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.SubscribeToSpacePublicChannelMessagesRequest, $1.SubscribeToSpacePublicChannelMessagesResponse>(
+        'SubscribeToSpacePublicChannelMessages',
+        subscribeToSpacePublicChannelMessages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SubscribeToSpacePublicChannelMessagesRequest.fromBuffer(value),
+        ($1.SubscribeToSpacePublicChannelMessagesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UnsubscribeToSpacePublicChannelMessagesRequest, $1.UnsubscribeToSpacePublicChannelMessagesResponse>(
+        'UnsubscribeToSpacePublicChannelMessages',
+        unsubscribeToSpacePublicChannelMessages_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UnsubscribeToSpacePublicChannelMessagesRequest.fromBuffer(value),
+        ($1.UnsubscribeToSpacePublicChannelMessagesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetUserSubscribedTopicsRequest, $1.GetUserSubscribedTopicsResponse>(
+        'GetUserSubscribedTopics',
+        getUserSubscribedTopics_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetUserSubscribedTopicsRequest.fromBuffer(value),
+        ($1.GetUserSubscribedTopicsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.SubscribeToConversationRequest, $1.SubscribeToConversationResponse>(
+        'SubscribeToConversation',
+        subscribeToConversation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SubscribeToConversationRequest.fromBuffer(value),
+        ($1.SubscribeToConversationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UnsubscribeToConversationRequest, $1.UnsubscribeToConversationResponse>(
+        'UnsubscribeToConversation',
+        unsubscribeToConversation_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UnsubscribeToConversationRequest.fromBuffer(value),
+        ($1.UnsubscribeToConversationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.SubscribeToUserPresenceRequest, $1.SubscribeToUserPresenceResponse>(
+        'SubscribeToUserPresence',
+        subscribeToUserPresence_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.SubscribeToUserPresenceRequest.fromBuffer(value),
+        ($1.SubscribeToUserPresenceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UnsubscribeToUserPresenceRequest, $1.UnsubscribeToUserPresenceResponse>(
+        'UnsubscribeToUserPresence',
+        unsubscribeToUserPresence_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UnsubscribeToUserPresenceRequest.fromBuffer(value),
+        ($1.UnsubscribeToUserPresenceResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.CreateChannelResponse> createSpaceChannel_Pre($grpc.ServiceCall call, $async.Future<$1.CreateChannelRequest> request) async {
@@ -965,6 +1100,14 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return getSpaceChannelUserMessageReactionsMap(call, await request);
   }
 
+  $async.Future<$1.GetSpaceThreadChannelMessageReactionsSetResponse> getSpaceThreadChannelMessageReactionsSet_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceThreadChannelMessageReactionsSetRequest> request) async {
+    return getSpaceThreadChannelMessageReactionsSet(call, await request);
+  }
+
+  $async.Future<$1.GetSpaceThreadChannelUserMessageReactionsMapResponse> getSpaceThreadChannelUserMessageReactionsMap_Pre($grpc.ServiceCall call, $async.Future<$1.GetSpaceThreadChannelUserMessageReactionsMapRequest> request) async {
+    return getSpaceThreadChannelUserMessageReactionsMap(call, await request);
+  }
+
   $async.Future<$1.SendMessageResponse> sendDirectChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$1.SendMessageRequest> request) async {
     return sendDirectChannelMessage(call, await request);
   }
@@ -1003,6 +1146,34 @@ abstract class MessagingServiceBase extends $grpc.Service {
 
   $async.Future<$1.DeleteMessageResponse> deleteThreadChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$1.DeleteMessageRequest> request) async {
     return deleteThreadChannelMessage(call, await request);
+  }
+
+  $async.Future<$1.SubscribeToSpacePublicChannelMessagesResponse> subscribeToSpacePublicChannelMessages_Pre($grpc.ServiceCall call, $async.Future<$1.SubscribeToSpacePublicChannelMessagesRequest> request) async {
+    return subscribeToSpacePublicChannelMessages(call, await request);
+  }
+
+  $async.Future<$1.UnsubscribeToSpacePublicChannelMessagesResponse> unsubscribeToSpacePublicChannelMessages_Pre($grpc.ServiceCall call, $async.Future<$1.UnsubscribeToSpacePublicChannelMessagesRequest> request) async {
+    return unsubscribeToSpacePublicChannelMessages(call, await request);
+  }
+
+  $async.Future<$1.GetUserSubscribedTopicsResponse> getUserSubscribedTopics_Pre($grpc.ServiceCall call, $async.Future<$1.GetUserSubscribedTopicsRequest> request) async {
+    return getUserSubscribedTopics(call, await request);
+  }
+
+  $async.Future<$1.SubscribeToConversationResponse> subscribeToConversation_Pre($grpc.ServiceCall call, $async.Future<$1.SubscribeToConversationRequest> request) async {
+    return subscribeToConversation(call, await request);
+  }
+
+  $async.Future<$1.UnsubscribeToConversationResponse> unsubscribeToConversation_Pre($grpc.ServiceCall call, $async.Future<$1.UnsubscribeToConversationRequest> request) async {
+    return unsubscribeToConversation(call, await request);
+  }
+
+  $async.Future<$1.SubscribeToUserPresenceResponse> subscribeToUserPresence_Pre($grpc.ServiceCall call, $async.Future<$1.SubscribeToUserPresenceRequest> request) async {
+    return subscribeToUserPresence(call, await request);
+  }
+
+  $async.Future<$1.UnsubscribeToUserPresenceResponse> unsubscribeToUserPresence_Pre($grpc.ServiceCall call, $async.Future<$1.UnsubscribeToUserPresenceRequest> request) async {
+    return unsubscribeToUserPresence(call, await request);
   }
 
   $async.Future<$1.CreateChannelResponse> createSpaceChannel($grpc.ServiceCall call, $1.CreateChannelRequest request);
@@ -1046,6 +1217,8 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$1.ChannelDocument> getSpaceThreadChannel($grpc.ServiceCall call, $1.GetSpaceThreadChannelRequest request);
   $async.Future<$1.GetSpaceChannelMessageReactionsSetResponse> getSpaceChannelMessageReactionsSet($grpc.ServiceCall call, $1.GetSpaceChannelMessageReactionsSetRequest request);
   $async.Future<$1.GetSpaceChannelUserMessageReactionsMapResponse> getSpaceChannelUserMessageReactionsMap($grpc.ServiceCall call, $1.GetSpaceChannelUserMessageReactionsMapRequest request);
+  $async.Future<$1.GetSpaceThreadChannelMessageReactionsSetResponse> getSpaceThreadChannelMessageReactionsSet($grpc.ServiceCall call, $1.GetSpaceThreadChannelMessageReactionsSetRequest request);
+  $async.Future<$1.GetSpaceThreadChannelUserMessageReactionsMapResponse> getSpaceThreadChannelUserMessageReactionsMap($grpc.ServiceCall call, $1.GetSpaceThreadChannelUserMessageReactionsMapRequest request);
   $async.Future<$1.SendMessageResponse> sendDirectChannelMessage($grpc.ServiceCall call, $1.SendMessageRequest request);
   $async.Future<$1.UpdateMessageResponse> updateDirectChannelMessage($grpc.ServiceCall call, $1.UpdateMessageRequest request);
   $async.Future<$1.DeleteMessageResponse> deleteDirectChannelMessage($grpc.ServiceCall call, $1.DeleteMessageRequest request);
@@ -1056,4 +1229,11 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$1.SendMessageResponse> sendThreadChannelMessage($grpc.ServiceCall call, $1.SendMessageRequest request);
   $async.Future<$1.UpdateMessageResponse> updateThreadChannelMessage($grpc.ServiceCall call, $1.UpdateMessageRequest request);
   $async.Future<$1.DeleteMessageResponse> deleteThreadChannelMessage($grpc.ServiceCall call, $1.DeleteMessageRequest request);
+  $async.Future<$1.SubscribeToSpacePublicChannelMessagesResponse> subscribeToSpacePublicChannelMessages($grpc.ServiceCall call, $1.SubscribeToSpacePublicChannelMessagesRequest request);
+  $async.Future<$1.UnsubscribeToSpacePublicChannelMessagesResponse> unsubscribeToSpacePublicChannelMessages($grpc.ServiceCall call, $1.UnsubscribeToSpacePublicChannelMessagesRequest request);
+  $async.Future<$1.GetUserSubscribedTopicsResponse> getUserSubscribedTopics($grpc.ServiceCall call, $1.GetUserSubscribedTopicsRequest request);
+  $async.Future<$1.SubscribeToConversationResponse> subscribeToConversation($grpc.ServiceCall call, $1.SubscribeToConversationRequest request);
+  $async.Future<$1.UnsubscribeToConversationResponse> unsubscribeToConversation($grpc.ServiceCall call, $1.UnsubscribeToConversationRequest request);
+  $async.Future<$1.SubscribeToUserPresenceResponse> subscribeToUserPresence($grpc.ServiceCall call, $1.SubscribeToUserPresenceRequest request);
+  $async.Future<$1.UnsubscribeToUserPresenceResponse> unsubscribeToUserPresence($grpc.ServiceCall call, $1.UnsubscribeToUserPresenceRequest request);
 }

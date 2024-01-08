@@ -18,6 +18,950 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class SubscribeToUserPresenceRequest extends $pb.GeneratedMessage {
+  factory SubscribeToUserPresenceRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final $result = create();
+    if (userIds != null) {
+      $result.userIds.addAll(userIds);
+    }
+    return $result;
+  }
+  SubscribeToUserPresenceRequest._() : super();
+  factory SubscribeToUserPresenceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeToUserPresenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeToUserPresenceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeToUserPresenceRequest clone() => SubscribeToUserPresenceRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeToUserPresenceRequest copyWith(void Function(SubscribeToUserPresenceRequest) updates) => super.copyWith((message) => updates(message as SubscribeToUserPresenceRequest)) as SubscribeToUserPresenceRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToUserPresenceRequest create() => SubscribeToUserPresenceRequest._();
+  SubscribeToUserPresenceRequest createEmptyInstance() => create();
+  static $pb.PbList<SubscribeToUserPresenceRequest> createRepeated() => $pb.PbList<SubscribeToUserPresenceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToUserPresenceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeToUserPresenceRequest>(create);
+  static SubscribeToUserPresenceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get userIds => $_getList(0);
+}
+
+class SubscribeToUserPresenceResponse extends $pb.GeneratedMessage {
+  factory SubscribeToUserPresenceResponse() => create();
+  SubscribeToUserPresenceResponse._() : super();
+  factory SubscribeToUserPresenceResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeToUserPresenceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeToUserPresenceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeToUserPresenceResponse clone() => SubscribeToUserPresenceResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeToUserPresenceResponse copyWith(void Function(SubscribeToUserPresenceResponse) updates) => super.copyWith((message) => updates(message as SubscribeToUserPresenceResponse)) as SubscribeToUserPresenceResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToUserPresenceResponse create() => SubscribeToUserPresenceResponse._();
+  SubscribeToUserPresenceResponse createEmptyInstance() => create();
+  static $pb.PbList<SubscribeToUserPresenceResponse> createRepeated() => $pb.PbList<SubscribeToUserPresenceResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToUserPresenceResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeToUserPresenceResponse>(create);
+  static SubscribeToUserPresenceResponse? _defaultInstance;
+}
+
+class UnsubscribeToUserPresenceRequest extends $pb.GeneratedMessage {
+  factory UnsubscribeToUserPresenceRequest({
+    $core.Iterable<$core.String>? userIds,
+  }) {
+    final $result = create();
+    if (userIds != null) {
+      $result.userIds.addAll(userIds);
+    }
+    return $result;
+  }
+  UnsubscribeToUserPresenceRequest._() : super();
+  factory UnsubscribeToUserPresenceRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnsubscribeToUserPresenceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsubscribeToUserPresenceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'userIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToUserPresenceRequest clone() => UnsubscribeToUserPresenceRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToUserPresenceRequest copyWith(void Function(UnsubscribeToUserPresenceRequest) updates) => super.copyWith((message) => updates(message as UnsubscribeToUserPresenceRequest)) as UnsubscribeToUserPresenceRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToUserPresenceRequest create() => UnsubscribeToUserPresenceRequest._();
+  UnsubscribeToUserPresenceRequest createEmptyInstance() => create();
+  static $pb.PbList<UnsubscribeToUserPresenceRequest> createRepeated() => $pb.PbList<UnsubscribeToUserPresenceRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToUserPresenceRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsubscribeToUserPresenceRequest>(create);
+  static UnsubscribeToUserPresenceRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get userIds => $_getList(0);
+}
+
+class UnsubscribeToUserPresenceResponse extends $pb.GeneratedMessage {
+  factory UnsubscribeToUserPresenceResponse() => create();
+  UnsubscribeToUserPresenceResponse._() : super();
+  factory UnsubscribeToUserPresenceResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnsubscribeToUserPresenceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsubscribeToUserPresenceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToUserPresenceResponse clone() => UnsubscribeToUserPresenceResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToUserPresenceResponse copyWith(void Function(UnsubscribeToUserPresenceResponse) updates) => super.copyWith((message) => updates(message as UnsubscribeToUserPresenceResponse)) as UnsubscribeToUserPresenceResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToUserPresenceResponse create() => UnsubscribeToUserPresenceResponse._();
+  UnsubscribeToUserPresenceResponse createEmptyInstance() => create();
+  static $pb.PbList<UnsubscribeToUserPresenceResponse> createRepeated() => $pb.PbList<UnsubscribeToUserPresenceResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToUserPresenceResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsubscribeToUserPresenceResponse>(create);
+  static UnsubscribeToUserPresenceResponse? _defaultInstance;
+}
+
+class GetSpaceThreadChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
+  factory GetSpaceThreadChannelMessageReactionsSetRequest({
+    $core.String? spaceId,
+    $core.String? channelId,
+    $core.String? messageId,
+    $core.String? threadChannelId,
+    $core.int? updatedAt,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (threadChannelId != null) {
+      $result.threadChannelId = threadChannelId;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
+    return $result;
+  }
+  GetSpaceThreadChannelMessageReactionsSetRequest._() : super();
+  factory GetSpaceThreadChannelMessageReactionsSetRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceThreadChannelMessageReactionsSetRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceThreadChannelMessageReactionsSetRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'channelId')
+    ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelMessageReactionsSetRequest clone() => GetSpaceThreadChannelMessageReactionsSetRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelMessageReactionsSetRequest copyWith(void Function(GetSpaceThreadChannelMessageReactionsSetRequest) updates) => super.copyWith((message) => updates(message as GetSpaceThreadChannelMessageReactionsSetRequest)) as GetSpaceThreadChannelMessageReactionsSetRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelMessageReactionsSetRequest create() => GetSpaceThreadChannelMessageReactionsSetRequest._();
+  GetSpaceThreadChannelMessageReactionsSetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceThreadChannelMessageReactionsSetRequest> createRepeated() => $pb.PbList<GetSpaceThreadChannelMessageReactionsSetRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelMessageReactionsSetRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceThreadChannelMessageReactionsSetRequest>(create);
+  static GetSpaceThreadChannelMessageReactionsSetRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get channelId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set channelId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChannelId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChannelId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get messageId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set messageId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessageId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get threadChannelId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set threadChannelId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasThreadChannelId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearThreadChannelId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get updatedAt => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set updatedAt($core.int v) { $_setUnsignedInt32(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUpdatedAt() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUpdatedAt() => clearField(5);
+}
+
+class GetSpaceThreadChannelMessageReactionsSetResponse extends $pb.GeneratedMessage {
+  factory GetSpaceThreadChannelMessageReactionsSetResponse({
+    $core.Iterable<$core.String>? messageIds,
+  }) {
+    final $result = create();
+    if (messageIds != null) {
+      $result.messageIds.addAll(messageIds);
+    }
+    return $result;
+  }
+  GetSpaceThreadChannelMessageReactionsSetResponse._() : super();
+  factory GetSpaceThreadChannelMessageReactionsSetResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceThreadChannelMessageReactionsSetResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceThreadChannelMessageReactionsSetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'messageIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelMessageReactionsSetResponse clone() => GetSpaceThreadChannelMessageReactionsSetResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelMessageReactionsSetResponse copyWith(void Function(GetSpaceThreadChannelMessageReactionsSetResponse) updates) => super.copyWith((message) => updates(message as GetSpaceThreadChannelMessageReactionsSetResponse)) as GetSpaceThreadChannelMessageReactionsSetResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelMessageReactionsSetResponse create() => GetSpaceThreadChannelMessageReactionsSetResponse._();
+  GetSpaceThreadChannelMessageReactionsSetResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceThreadChannelMessageReactionsSetResponse> createRepeated() => $pb.PbList<GetSpaceThreadChannelMessageReactionsSetResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelMessageReactionsSetResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceThreadChannelMessageReactionsSetResponse>(create);
+  static GetSpaceThreadChannelMessageReactionsSetResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get messageIds => $_getList(0);
+}
+
+class GetSpaceThreadChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage {
+  factory GetSpaceThreadChannelUserMessageReactionsMapRequest({
+    $core.String? spaceId,
+    $core.String? channelId,
+    $core.String? messageId,
+    $core.String? threadChannelId,
+    $core.int? updatedAt,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (threadChannelId != null) {
+      $result.threadChannelId = threadChannelId;
+    }
+    if (updatedAt != null) {
+      $result.updatedAt = updatedAt;
+    }
+    return $result;
+  }
+  GetSpaceThreadChannelUserMessageReactionsMapRequest._() : super();
+  factory GetSpaceThreadChannelUserMessageReactionsMapRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceThreadChannelUserMessageReactionsMapRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceThreadChannelUserMessageReactionsMapRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'channelId')
+    ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelUserMessageReactionsMapRequest clone() => GetSpaceThreadChannelUserMessageReactionsMapRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelUserMessageReactionsMapRequest copyWith(void Function(GetSpaceThreadChannelUserMessageReactionsMapRequest) updates) => super.copyWith((message) => updates(message as GetSpaceThreadChannelUserMessageReactionsMapRequest)) as GetSpaceThreadChannelUserMessageReactionsMapRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelUserMessageReactionsMapRequest create() => GetSpaceThreadChannelUserMessageReactionsMapRequest._();
+  GetSpaceThreadChannelUserMessageReactionsMapRequest createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceThreadChannelUserMessageReactionsMapRequest> createRepeated() => $pb.PbList<GetSpaceThreadChannelUserMessageReactionsMapRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelUserMessageReactionsMapRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceThreadChannelUserMessageReactionsMapRequest>(create);
+  static GetSpaceThreadChannelUserMessageReactionsMapRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get channelId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set channelId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasChannelId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearChannelId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get messageId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set messageId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessageId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get threadChannelId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set threadChannelId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasThreadChannelId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearThreadChannelId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get updatedAt => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set updatedAt($core.int v) { $_setUnsignedInt32(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUpdatedAt() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUpdatedAt() => clearField(5);
+}
+
+class GetSpaceThreadChannelUserMessageReactionsMapResponse extends $pb.GeneratedMessage {
+  factory GetSpaceThreadChannelUserMessageReactionsMapResponse({
+    $core.Map<$core.String, $fixnum.Int64>? reactions,
+  }) {
+    final $result = create();
+    if (reactions != null) {
+      $result.reactions.addAll(reactions);
+    }
+    return $result;
+  }
+  GetSpaceThreadChannelUserMessageReactionsMapResponse._() : super();
+  factory GetSpaceThreadChannelUserMessageReactionsMapResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetSpaceThreadChannelUserMessageReactionsMapResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceThreadChannelUserMessageReactionsMapResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetSpaceThreadChannelUserMessageReactionsMapResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.O6, packageName: const $pb.PackageName('messaging'))
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelUserMessageReactionsMapResponse clone() => GetSpaceThreadChannelUserMessageReactionsMapResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetSpaceThreadChannelUserMessageReactionsMapResponse copyWith(void Function(GetSpaceThreadChannelUserMessageReactionsMapResponse) updates) => super.copyWith((message) => updates(message as GetSpaceThreadChannelUserMessageReactionsMapResponse)) as GetSpaceThreadChannelUserMessageReactionsMapResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelUserMessageReactionsMapResponse create() => GetSpaceThreadChannelUserMessageReactionsMapResponse._();
+  GetSpaceThreadChannelUserMessageReactionsMapResponse createEmptyInstance() => create();
+  static $pb.PbList<GetSpaceThreadChannelUserMessageReactionsMapResponse> createRepeated() => $pb.PbList<GetSpaceThreadChannelUserMessageReactionsMapResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetSpaceThreadChannelUserMessageReactionsMapResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetSpaceThreadChannelUserMessageReactionsMapResponse>(create);
+  static GetSpaceThreadChannelUserMessageReactionsMapResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+}
+
+class GetUserSubscribedConversationsRequest extends $pb.GeneratedMessage {
+  factory GetUserSubscribedConversationsRequest({
+    $core.String? userId,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    return $result;
+  }
+  GetUserSubscribedConversationsRequest._() : super();
+  factory GetUserSubscribedConversationsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserSubscribedConversationsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserSubscribedConversationsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedConversationsRequest clone() => GetUserSubscribedConversationsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedConversationsRequest copyWith(void Function(GetUserSubscribedConversationsRequest) updates) => super.copyWith((message) => updates(message as GetUserSubscribedConversationsRequest)) as GetUserSubscribedConversationsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedConversationsRequest create() => GetUserSubscribedConversationsRequest._();
+  GetUserSubscribedConversationsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserSubscribedConversationsRequest> createRepeated() => $pb.PbList<GetUserSubscribedConversationsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedConversationsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserSubscribedConversationsRequest>(create);
+  static GetUserSubscribedConversationsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+}
+
+class GetUserSubscribedConversationsResponse extends $pb.GeneratedMessage {
+  factory GetUserSubscribedConversationsResponse({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  GetUserSubscribedConversationsResponse._() : super();
+  factory GetUserSubscribedConversationsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserSubscribedConversationsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserSubscribedConversationsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedConversationsResponse clone() => GetUserSubscribedConversationsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedConversationsResponse copyWith(void Function(GetUserSubscribedConversationsResponse) updates) => super.copyWith((message) => updates(message as GetUserSubscribedConversationsResponse)) as GetUserSubscribedConversationsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedConversationsResponse create() => GetUserSubscribedConversationsResponse._();
+  GetUserSubscribedConversationsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserSubscribedConversationsResponse> createRepeated() => $pb.PbList<GetUserSubscribedConversationsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedConversationsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserSubscribedConversationsResponse>(create);
+  static GetUserSubscribedConversationsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class SubscribeToConversationRequest extends $pb.GeneratedMessage {
+  factory SubscribeToConversationRequest({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  SubscribeToConversationRequest._() : super();
+  factory SubscribeToConversationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeToConversationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeToConversationRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeToConversationRequest clone() => SubscribeToConversationRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeToConversationRequest copyWith(void Function(SubscribeToConversationRequest) updates) => super.copyWith((message) => updates(message as SubscribeToConversationRequest)) as SubscribeToConversationRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToConversationRequest create() => SubscribeToConversationRequest._();
+  SubscribeToConversationRequest createEmptyInstance() => create();
+  static $pb.PbList<SubscribeToConversationRequest> createRepeated() => $pb.PbList<SubscribeToConversationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToConversationRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeToConversationRequest>(create);
+  static SubscribeToConversationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class SubscribeToConversationResponse extends $pb.GeneratedMessage {
+  factory SubscribeToConversationResponse() => create();
+  SubscribeToConversationResponse._() : super();
+  factory SubscribeToConversationResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeToConversationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeToConversationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeToConversationResponse clone() => SubscribeToConversationResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeToConversationResponse copyWith(void Function(SubscribeToConversationResponse) updates) => super.copyWith((message) => updates(message as SubscribeToConversationResponse)) as SubscribeToConversationResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToConversationResponse create() => SubscribeToConversationResponse._();
+  SubscribeToConversationResponse createEmptyInstance() => create();
+  static $pb.PbList<SubscribeToConversationResponse> createRepeated() => $pb.PbList<SubscribeToConversationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToConversationResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeToConversationResponse>(create);
+  static SubscribeToConversationResponse? _defaultInstance;
+}
+
+class UnsubscribeToConversationRequest extends $pb.GeneratedMessage {
+  factory UnsubscribeToConversationRequest({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  UnsubscribeToConversationRequest._() : super();
+  factory UnsubscribeToConversationRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnsubscribeToConversationRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsubscribeToConversationRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToConversationRequest clone() => UnsubscribeToConversationRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToConversationRequest copyWith(void Function(UnsubscribeToConversationRequest) updates) => super.copyWith((message) => updates(message as UnsubscribeToConversationRequest)) as UnsubscribeToConversationRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToConversationRequest create() => UnsubscribeToConversationRequest._();
+  UnsubscribeToConversationRequest createEmptyInstance() => create();
+  static $pb.PbList<UnsubscribeToConversationRequest> createRepeated() => $pb.PbList<UnsubscribeToConversationRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToConversationRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsubscribeToConversationRequest>(create);
+  static UnsubscribeToConversationRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class UnsubscribeToConversationResponse extends $pb.GeneratedMessage {
+  factory UnsubscribeToConversationResponse() => create();
+  UnsubscribeToConversationResponse._() : super();
+  factory UnsubscribeToConversationResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnsubscribeToConversationResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsubscribeToConversationResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToConversationResponse clone() => UnsubscribeToConversationResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToConversationResponse copyWith(void Function(UnsubscribeToConversationResponse) updates) => super.copyWith((message) => updates(message as UnsubscribeToConversationResponse)) as UnsubscribeToConversationResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToConversationResponse create() => UnsubscribeToConversationResponse._();
+  UnsubscribeToConversationResponse createEmptyInstance() => create();
+  static $pb.PbList<UnsubscribeToConversationResponse> createRepeated() => $pb.PbList<UnsubscribeToConversationResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToConversationResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsubscribeToConversationResponse>(create);
+  static UnsubscribeToConversationResponse? _defaultInstance;
+}
+
+class GetUserSubscribedTopicsRequest extends $pb.GeneratedMessage {
+  factory GetUserSubscribedTopicsRequest({
+    $core.String? userId,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    return $result;
+  }
+  GetUserSubscribedTopicsRequest._() : super();
+  factory GetUserSubscribedTopicsRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserSubscribedTopicsRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserSubscribedTopicsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedTopicsRequest clone() => GetUserSubscribedTopicsRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedTopicsRequest copyWith(void Function(GetUserSubscribedTopicsRequest) updates) => super.copyWith((message) => updates(message as GetUserSubscribedTopicsRequest)) as GetUserSubscribedTopicsRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedTopicsRequest create() => GetUserSubscribedTopicsRequest._();
+  GetUserSubscribedTopicsRequest createEmptyInstance() => create();
+  static $pb.PbList<GetUserSubscribedTopicsRequest> createRepeated() => $pb.PbList<GetUserSubscribedTopicsRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedTopicsRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserSubscribedTopicsRequest>(create);
+  static GetUserSubscribedTopicsRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+}
+
+class GetUserSubscribedTopicsResponse extends $pb.GeneratedMessage {
+  factory GetUserSubscribedTopicsResponse({
+    $core.Iterable<$core.String>? topics,
+  }) {
+    final $result = create();
+    if (topics != null) {
+      $result.topics.addAll(topics);
+    }
+    return $result;
+  }
+  GetUserSubscribedTopicsResponse._() : super();
+  factory GetUserSubscribedTopicsResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetUserSubscribedTopicsResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetUserSubscribedTopicsResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'topics')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedTopicsResponse clone() => GetUserSubscribedTopicsResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetUserSubscribedTopicsResponse copyWith(void Function(GetUserSubscribedTopicsResponse) updates) => super.copyWith((message) => updates(message as GetUserSubscribedTopicsResponse)) as GetUserSubscribedTopicsResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedTopicsResponse create() => GetUserSubscribedTopicsResponse._();
+  GetUserSubscribedTopicsResponse createEmptyInstance() => create();
+  static $pb.PbList<GetUserSubscribedTopicsResponse> createRepeated() => $pb.PbList<GetUserSubscribedTopicsResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetUserSubscribedTopicsResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetUserSubscribedTopicsResponse>(create);
+  static GetUserSubscribedTopicsResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get topics => $_getList(0);
+}
+
+class SubscribeToSpacePublicChannelMessagesRequest extends $pb.GeneratedMessage {
+  factory SubscribeToSpacePublicChannelMessagesRequest({
+    $core.Iterable<$core.String>? spaceIds,
+  }) {
+    final $result = create();
+    if (spaceIds != null) {
+      $result.spaceIds.addAll(spaceIds);
+    }
+    return $result;
+  }
+  SubscribeToSpacePublicChannelMessagesRequest._() : super();
+  factory SubscribeToSpacePublicChannelMessagesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeToSpacePublicChannelMessagesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeToSpacePublicChannelMessagesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'spaceIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeToSpacePublicChannelMessagesRequest clone() => SubscribeToSpacePublicChannelMessagesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeToSpacePublicChannelMessagesRequest copyWith(void Function(SubscribeToSpacePublicChannelMessagesRequest) updates) => super.copyWith((message) => updates(message as SubscribeToSpacePublicChannelMessagesRequest)) as SubscribeToSpacePublicChannelMessagesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToSpacePublicChannelMessagesRequest create() => SubscribeToSpacePublicChannelMessagesRequest._();
+  SubscribeToSpacePublicChannelMessagesRequest createEmptyInstance() => create();
+  static $pb.PbList<SubscribeToSpacePublicChannelMessagesRequest> createRepeated() => $pb.PbList<SubscribeToSpacePublicChannelMessagesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToSpacePublicChannelMessagesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeToSpacePublicChannelMessagesRequest>(create);
+  static SubscribeToSpacePublicChannelMessagesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get spaceIds => $_getList(0);
+}
+
+class SubscribeToSpacePublicChannelMessagesResponse extends $pb.GeneratedMessage {
+  factory SubscribeToSpacePublicChannelMessagesResponse() => create();
+  SubscribeToSpacePublicChannelMessagesResponse._() : super();
+  factory SubscribeToSpacePublicChannelMessagesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SubscribeToSpacePublicChannelMessagesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SubscribeToSpacePublicChannelMessagesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SubscribeToSpacePublicChannelMessagesResponse clone() => SubscribeToSpacePublicChannelMessagesResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SubscribeToSpacePublicChannelMessagesResponse copyWith(void Function(SubscribeToSpacePublicChannelMessagesResponse) updates) => super.copyWith((message) => updates(message as SubscribeToSpacePublicChannelMessagesResponse)) as SubscribeToSpacePublicChannelMessagesResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToSpacePublicChannelMessagesResponse create() => SubscribeToSpacePublicChannelMessagesResponse._();
+  SubscribeToSpacePublicChannelMessagesResponse createEmptyInstance() => create();
+  static $pb.PbList<SubscribeToSpacePublicChannelMessagesResponse> createRepeated() => $pb.PbList<SubscribeToSpacePublicChannelMessagesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static SubscribeToSpacePublicChannelMessagesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SubscribeToSpacePublicChannelMessagesResponse>(create);
+  static SubscribeToSpacePublicChannelMessagesResponse? _defaultInstance;
+}
+
+class UnsubscribeToSpacePublicChannelMessagesRequest extends $pb.GeneratedMessage {
+  factory UnsubscribeToSpacePublicChannelMessagesRequest({
+    $core.Iterable<$core.String>? spaceIds,
+  }) {
+    final $result = create();
+    if (spaceIds != null) {
+      $result.spaceIds.addAll(spaceIds);
+    }
+    return $result;
+  }
+  UnsubscribeToSpacePublicChannelMessagesRequest._() : super();
+  factory UnsubscribeToSpacePublicChannelMessagesRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnsubscribeToSpacePublicChannelMessagesRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsubscribeToSpacePublicChannelMessagesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'spaceIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToSpacePublicChannelMessagesRequest clone() => UnsubscribeToSpacePublicChannelMessagesRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToSpacePublicChannelMessagesRequest copyWith(void Function(UnsubscribeToSpacePublicChannelMessagesRequest) updates) => super.copyWith((message) => updates(message as UnsubscribeToSpacePublicChannelMessagesRequest)) as UnsubscribeToSpacePublicChannelMessagesRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToSpacePublicChannelMessagesRequest create() => UnsubscribeToSpacePublicChannelMessagesRequest._();
+  UnsubscribeToSpacePublicChannelMessagesRequest createEmptyInstance() => create();
+  static $pb.PbList<UnsubscribeToSpacePublicChannelMessagesRequest> createRepeated() => $pb.PbList<UnsubscribeToSpacePublicChannelMessagesRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToSpacePublicChannelMessagesRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsubscribeToSpacePublicChannelMessagesRequest>(create);
+  static UnsubscribeToSpacePublicChannelMessagesRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get spaceIds => $_getList(0);
+}
+
+class UnsubscribeToSpacePublicChannelMessagesResponse extends $pb.GeneratedMessage {
+  factory UnsubscribeToSpacePublicChannelMessagesResponse() => create();
+  UnsubscribeToSpacePublicChannelMessagesResponse._() : super();
+  factory UnsubscribeToSpacePublicChannelMessagesResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UnsubscribeToSpacePublicChannelMessagesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UnsubscribeToSpacePublicChannelMessagesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToSpacePublicChannelMessagesResponse clone() => UnsubscribeToSpacePublicChannelMessagesResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UnsubscribeToSpacePublicChannelMessagesResponse copyWith(void Function(UnsubscribeToSpacePublicChannelMessagesResponse) updates) => super.copyWith((message) => updates(message as UnsubscribeToSpacePublicChannelMessagesResponse)) as UnsubscribeToSpacePublicChannelMessagesResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToSpacePublicChannelMessagesResponse create() => UnsubscribeToSpacePublicChannelMessagesResponse._();
+  UnsubscribeToSpacePublicChannelMessagesResponse createEmptyInstance() => create();
+  static $pb.PbList<UnsubscribeToSpacePublicChannelMessagesResponse> createRepeated() => $pb.PbList<UnsubscribeToSpacePublicChannelMessagesResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UnsubscribeToSpacePublicChannelMessagesResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UnsubscribeToSpacePublicChannelMessagesResponse>(create);
+  static UnsubscribeToSpacePublicChannelMessagesResponse? _defaultInstance;
+}
+
 class GetSpaceChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage {
   factory GetSpaceChannelUserMessageReactionsMapRequest({
     $core.String? spaceId,
@@ -856,7 +1800,7 @@ class SendSpaceChannelThreadMessageReactionRequest extends $pb.GeneratedMessage 
     $core.String? threadChannelId,
     $core.String? threadMessageId,
     $core.String? reaction,
-    $core.bool? isAdd,
+    $core.String? deviceId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -877,8 +1821,8 @@ class SendSpaceChannelThreadMessageReactionRequest extends $pb.GeneratedMessage 
     if (reaction != null) {
       $result.reaction = reaction;
     }
-    if (isAdd != null) {
-      $result.isAdd = isAdd;
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
     }
     return $result;
   }
@@ -893,7 +1837,7 @@ class SendSpaceChannelThreadMessageReactionRequest extends $pb.GeneratedMessage 
     ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
     ..aOS(5, _omitFieldNames ? '' : 'threadMessageId')
     ..aOS(6, _omitFieldNames ? '' : 'reaction')
-    ..aOB(7, _omitFieldNames ? '' : 'isAdd')
+    ..aOS(7, _omitFieldNames ? '' : 'deviceId')
     ..hasRequiredFields = false
   ;
 
@@ -973,13 +1917,13 @@ class SendSpaceChannelThreadMessageReactionRequest extends $pb.GeneratedMessage 
   void clearReaction() => clearField(6);
 
   @$pb.TagNumber(7)
-  $core.bool get isAdd => $_getBF(6);
+  $core.String get deviceId => $_getSZ(6);
   @$pb.TagNumber(7)
-  set isAdd($core.bool v) { $_setBool(6, v); }
+  set deviceId($core.String v) { $_setString(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasIsAdd() => $_has(6);
+  $core.bool hasDeviceId() => $_has(6);
   @$pb.TagNumber(7)
-  void clearIsAdd() => clearField(7);
+  void clearDeviceId() => clearField(7);
 }
 
 class SendSpaceChannelThreadMessageReactionResponse extends $pb.GeneratedMessage {
@@ -1859,6 +2803,7 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
     $core.String? messageId,
     $core.String? reaction,
     $core.String? userRoleId,
+    $core.String? deviceId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -1876,6 +2821,9 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
     if (userRoleId != null) {
       $result.userRoleId = userRoleId;
     }
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
+    }
     return $result;
   }
   SendSpaceChannelMessageReactionRequest._() : super();
@@ -1888,6 +2836,7 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'reaction')
     ..aOS(5, _omitFieldNames ? '' : 'userRoleId')
+    ..aOS(6, _omitFieldNames ? '' : 'deviceId')
     ..hasRequiredFields = false
   ;
 
@@ -1956,6 +2905,15 @@ class SendSpaceChannelMessageReactionRequest extends $pb.GeneratedMessage {
   $core.bool hasUserRoleId() => $_has(4);
   @$pb.TagNumber(5)
   void clearUserRoleId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get deviceId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set deviceId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasDeviceId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearDeviceId() => clearField(6);
 }
 
 class SendSpaceChannelMessageReactionResponse extends $pb.GeneratedMessage {

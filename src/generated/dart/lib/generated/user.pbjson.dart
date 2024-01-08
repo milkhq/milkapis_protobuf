@@ -151,6 +151,61 @@ final $typed_data.Uint8List userFeatureFlagsDescriptor = $convert.base64Decode(
     'ChBVc2VyRmVhdHVyZUZsYWdzEggKBE5PTkUQABIPCgtBVURJT19DQUxMUxABEg8KC1ZJREVPX0'
     'NBTExTEAI=');
 
+@$core.Deprecated('Use getUserPresenceStatusRequestDescriptor instead')
+const GetUserPresenceStatusRequest$json = {
+  '1': 'GetUserPresenceStatusRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+  ],
+};
+
+/// Descriptor for `GetUserPresenceStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserPresenceStatusRequestDescriptor = $convert.base64Decode(
+    'ChxHZXRVc2VyUHJlc2VuY2VTdGF0dXNSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZA'
+    '==');
+
+@$core.Deprecated('Use getUserPresenceStatusResponseDescriptor instead')
+const GetUserPresenceStatusResponse$json = {
+  '1': 'GetUserPresenceStatusResponse',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `GetUserPresenceStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getUserPresenceStatusResponseDescriptor = $convert.base64Decode(
+    'Ch1HZXRVc2VyUHJlc2VuY2VTdGF0dXNSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySW'
+    'QSMgoGc3RhdHVzGAIgASgOMhoudXNlci5VU0VSX1BSRVNFTkNFX1NUQVRVU1IGc3RhdHVz');
+
+@$core.Deprecated('Use setUserPresenceStatusRequestDescriptor instead')
+const SetUserPresenceStatusRequest$json = {
+  '1': 'SetUserPresenceStatusRequest',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `SetUserPresenceStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setUserPresenceStatusRequestDescriptor = $convert.base64Decode(
+    'ChxTZXRVc2VyUHJlc2VuY2VTdGF0dXNSZXF1ZXN0EhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZB'
+    'IyCgZzdGF0dXMYAiABKA4yGi51c2VyLlVTRVJfUFJFU0VOQ0VfU1RBVFVTUgZzdGF0dXM=');
+
+@$core.Deprecated('Use setUserPresenceStatusResponseDescriptor instead')
+const SetUserPresenceStatusResponse$json = {
+  '1': 'SetUserPresenceStatusResponse',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `SetUserPresenceStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List setUserPresenceStatusResponseDescriptor = $convert.base64Decode(
+    'Ch1TZXRVc2VyUHJlc2VuY2VTdGF0dXNSZXNwb25zZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySW'
+    'QSMgoGc3RhdHVzGAIgASgOMhoudXNlci5VU0VSX1BSRVNFTkNFX1NUQVRVU1IGc3RhdHVz');
+
 @$core.Deprecated('Use checkSignUpTokenRequestDescriptor instead')
 const CheckSignUpTokenRequest$json = {
   '1': 'CheckSignUpTokenRequest',
@@ -488,6 +543,7 @@ const UserDocument$json = {
     {'1': 'nonce', '3': 9, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '10': 'documentStatus'},
     {'1': 'feature_flags', '3': 11, '4': 3, '5': 14, '6': '.user.UserFeatureFlags', '10': 'featureFlags'},
+    {'1': 'presence_status', '3': 12, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'presenceStatus'},
   ],
   '3': [UserDocument_Metadata$json],
   '4': [UserDocument_UserProfileEffectsV1$json],
@@ -533,17 +589,18 @@ final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
     'X1ZJU0lCSUxJVFlSCnZpc2liaWxpdHkSFAoFbm9uY2UYCSABKARSBW5vbmNlEj4KD2RvY3VtZW'
     '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxI7'
     'Cg1mZWF0dXJlX2ZsYWdzGAsgAygOMhYudXNlci5Vc2VyRmVhdHVyZUZsYWdzUgxmZWF0dXJlRm'
-    'xhZ3Ma7QMKCE1ldGFkYXRhEhoKCHVzZXJuYW1lGAEgASgJUgh1c2VybmFtZRIUCgVlbWFpbBgC'
-    'IAEoCVIFZW1haWwSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRIQCgNiaW8YBC'
-    'ABKAlSA2JpbxIkCgZzb2NpYWwYBSABKA4yDC51c2VyLlNPQ0lBTFIGc29jaWFsEhsKCXNvY2lh'
-    'bF9pZBgGIAEoCVIIc29jaWFsSWQSKAoQYXZhdGFyX2ltYWdlX3VybBgHIAEoCVIOYXZhdGFySW'
-    '1hZ2VVcmwSKgoRYXZhdGFyX2ltYWdlX2hhc2gYCCABKAlSD2F2YXRhckltYWdlSGFzaBIoChBi'
-    'YW5uZXJfaW1hZ2VfdXJsGAkgASgJUg5iYW5uZXJJbWFnZVVybBIqChFiYW5uZXJfaW1hZ2VfaG'
-    'FzaBgKIAEoCVIPYmFubmVySW1hZ2VIYXNoEh0KCnVwZGF0ZWRfYXQYCyABKARSCXVwZGF0ZWRB'
-    'dBI/CgZlZmZlY3QYDCABKA4yJy51c2VyLlVzZXJEb2N1bWVudC5Vc2VyUHJvZmlsZUVmZmVjdH'
-    'NWMVIGZWZmZWN0EisKEWVmZmVjdF9wYXJhbWV0ZXJzGA0gASgJUhBlZmZlY3RQYXJhbWV0ZXJz'
-    'IjUKFFVzZXJQcm9maWxlRWZmZWN0c1YxEggKBE5PTkUQABITCg9GT1JDRV9MSUdIVE5JTkcQAQ'
-    '==');
+    'xhZ3MSQwoPcHJlc2VuY2Vfc3RhdHVzGAwgASgOMhoudXNlci5VU0VSX1BSRVNFTkNFX1NUQVRV'
+    'U1IOcHJlc2VuY2VTdGF0dXMa7QMKCE1ldGFkYXRhEhoKCHVzZXJuYW1lGAEgASgJUgh1c2Vybm'
+    'FtZRIUCgVlbWFpbBgCIAEoCVIFZW1haWwSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5'
+    'TmFtZRIQCgNiaW8YBCABKAlSA2JpbxIkCgZzb2NpYWwYBSABKA4yDC51c2VyLlNPQ0lBTFIGc2'
+    '9jaWFsEhsKCXNvY2lhbF9pZBgGIAEoCVIIc29jaWFsSWQSKAoQYXZhdGFyX2ltYWdlX3VybBgH'
+    'IAEoCVIOYXZhdGFySW1hZ2VVcmwSKgoRYXZhdGFyX2ltYWdlX2hhc2gYCCABKAlSD2F2YXRhck'
+    'ltYWdlSGFzaBIoChBiYW5uZXJfaW1hZ2VfdXJsGAkgASgJUg5iYW5uZXJJbWFnZVVybBIqChFi'
+    'YW5uZXJfaW1hZ2VfaGFzaBgKIAEoCVIPYmFubmVySW1hZ2VIYXNoEh0KCnVwZGF0ZWRfYXQYCy'
+    'ABKARSCXVwZGF0ZWRBdBI/CgZlZmZlY3QYDCABKA4yJy51c2VyLlVzZXJEb2N1bWVudC5Vc2Vy'
+    'UHJvZmlsZUVmZmVjdHNWMVIGZWZmZWN0EisKEWVmZmVjdF9wYXJhbWV0ZXJzGA0gASgJUhBlZm'
+    'ZlY3RQYXJhbWV0ZXJzIjUKFFVzZXJQcm9maWxlRWZmZWN0c1YxEggKBE5PTkUQABITCg9GT1JD'
+    'RV9MSUdIVE5JTkcQAQ==');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {

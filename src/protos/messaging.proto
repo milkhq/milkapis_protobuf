@@ -53,6 +53,8 @@ service Messaging {
     rpc GetSpaceThreadChannel(GetSpaceThreadChannelRequest) returns (ChannelDocument);
     rpc GetSpaceChannelMessageReactionsSet(GetSpaceChannelMessageReactionsSetRequest) returns (GetSpaceChannelMessageReactionsSetResponse);
     rpc GetSpaceChannelUserMessageReactionsMap(GetSpaceChannelUserMessageReactionsMapRequest) returns (GetSpaceChannelUserMessageReactionsMapResponse);
+    rpc GetSpaceThreadChannelMessageReactionsSet(GetSpaceThreadChannelMessageReactionsSetRequest) returns (GetSpaceThreadChannelMessageReactionsSetResponse);
+    rpc GetSpaceThreadChannelUserMessageReactionsMap(GetSpaceThreadChannelUserMessageReactionsMapRequest) returns (GetSpaceThreadChannelUserMessageReactionsMapResponse);
 
     // Direct channel messages
     rpc SendDirectChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -67,6 +69,79 @@ service Messaging {
     rpc SendThreadChannelMessage(SendMessageRequest) returns (SendMessageResponse);
     rpc UpdateThreadChannelMessage(UpdateMessageRequest) returns (UpdateMessageResponse);
     rpc DeleteThreadChannelMessage(DeleteMessageRequest) returns (DeleteMessageResponse);
+
+    // Space Subscription
+    rpc SubscribeToSpacePublicChannelMessages(SubscribeToSpacePublicChannelMessagesRequest) returns (SubscribeToSpacePublicChannelMessagesResponse);
+    rpc UnsubscribeToSpacePublicChannelMessages(UnsubscribeToSpacePublicChannelMessagesRequest) returns (UnsubscribeToSpacePublicChannelMessagesResponse);
+    rpc GetUserSubscribedTopics(GetUserSubscribedTopicsRequest) returns (GetUserSubscribedTopicsResponse);
+
+    // Conversation Subscription
+    rpc SubscribeToConversation(SubscribeToConversationRequest) returns (SubscribeToConversationResponse);
+    rpc UnsubscribeToConversation(UnsubscribeToConversationRequest) returns (UnsubscribeToConversationResponse);
+
+    // User Presence Subscriptions
+    rpc SubscribeToUserPresence(SubscribeToUserPresenceRequest) returns (SubscribeToUserPresenceResponse);
+    rpc UnsubscribeToUserPresence(UnsubscribeToUserPresenceRequest) returns (UnsubscribeToUserPresenceResponse);
+}
+
+message SubscribeToUserPresenceRequest {
+    repeated string user_ids = 1;
+}
+
+message SubscribeToUserPresenceResponse {
+}
+
+message UnsubscribeToUserPresenceRequest {
+    repeated string user_ids = 1;
+}
+
+message UnsubscribeToUserPresenceResponse {
+}
+
+message GetSpaceThreadChannelMessageReactionsSetRequest {
+    string space_id = 1;
+    string channel_id = 2;
+    string message_id = 3;
+    string thread_channel_id = 4;
+    uint32 updated_at = 5;
+}
+
+message GetSpaceThreadChannelMessageReactionsSetResponse {
+    repeated string message_ids = 1;
+}
+
+message GetSpaceThreadChannelUserMessageReactionsMapRequest {
+    string space_id = 1;
+    string channel_id = 2;
+    string message_id = 3;
+    string thread_channel_id = 4;
+    uint32 updated_at = 5;
+}
+
+message GetSpaceThreadChannelUserMessageReactionsMapResponse {
+    map<string, int64> reactions = 1;
+}
+
+message GetUserSubscribedConversationsRequest {
+    string user_id = 1;
+}
+
+message GetUserSubscribedConversationsResponse {
+    repeated string channel_ids = 1;
+}
+
+message SubscribeToConversationRequest {
+    repeated string channel_ids = 1;
+}
+
+message SubscribeToConversationResponse {
+}
+
+message UnsubscribeToConversationRequest {
+    repeated string channel_ids = 1;
+}
+
+message UnsubscribeToConversationResponse {
 }
 
 enum DOCUMENT_STATUS {
@@ -97,6 +172,28 @@ enum CHANNEL_CAPABILITY {
     IMAGE = 1;
     VOICE = 2;
     VIDEO = 3;
+}
+
+message GetUserSubscribedTopicsRequest {
+    string user_id = 1;
+}
+
+message GetUserSubscribedTopicsResponse {
+    repeated string topics = 1;
+}
+
+message SubscribeToSpacePublicChannelMessagesRequest {
+    repeated string space_ids = 1;
+}
+
+message SubscribeToSpacePublicChannelMessagesResponse {
+}
+
+message UnsubscribeToSpacePublicChannelMessagesRequest {
+    repeated string space_ids = 1;
+}
+
+message UnsubscribeToSpacePublicChannelMessagesResponse {
 }
 
 message GetSpaceChannelUserMessageReactionsMapRequest {
@@ -172,7 +269,7 @@ message SendSpaceChannelThreadMessageReactionRequest {
     string thread_channel_id = 4;
     string thread_message_id = 5;
     string reaction = 6;
-    bool is_add = 7;
+    string device_id = 7;
 }
 
 message SendSpaceChannelThreadMessageReactionResponse {
@@ -251,6 +348,7 @@ message SendSpaceChannelMessageReactionRequest {
     string message_id = 3;
     string reaction = 4;
     string user_role_id = 5;
+    string device_id = 6;
 }
 
 message SendSpaceChannelMessageReactionResponse {
@@ -747,4 +845,3 @@ message CreateDirectChannelCallJoinTokenRequest {
 message CreateDirectChannelCallJoinTokenResponse {
     string token = 1;
 }
-

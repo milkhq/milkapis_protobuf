@@ -1544,6 +1544,7 @@ const CreateDirectConversationRequest$json = {
     {'1': 'channel', '3': 2, '4': 1, '5': 11, '6': '.messaging.ChannelDocument', '10': 'channel'},
     {'1': 'message', '3': 3, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
     {'1': 'nonce', '3': 4, '4': 1, '5': 4, '10': 'nonce'},
+    {'1': 'device_id', '3': 5, '4': 1, '5': 9, '10': 'deviceId'},
   ],
 };
 
@@ -1552,7 +1553,7 @@ final $typed_data.Uint8List createDirectConversationRequestDescriptor = $convert
     'Ch9DcmVhdGVEaXJlY3RDb252ZXJzYXRpb25SZXF1ZXN0EhgKB21lbWJlcnMYASADKAlSB21lbW'
     'JlcnMSNAoHY2hhbm5lbBgCIAEoCzIaLm1lc3NhZ2luZy5DaGFubmVsRG9jdW1lbnRSB2NoYW5u'
     'ZWwSNAoHbWVzc2FnZRgDIAEoCzIaLm1lc3NhZ2luZy5NZXNzYWdlRG9jdW1lbnRSB21lc3NhZ2'
-    'USFAoFbm9uY2UYBCABKARSBW5vbmNl');
+    'USFAoFbm9uY2UYBCABKARSBW5vbmNlEhsKCWRldmljZV9pZBgFIAEoCVIIZGV2aWNlSWQ=');
 
 @$core.Deprecated('Use createDirectConversationResponseDescriptor instead')
 const CreateDirectConversationResponse$json = {

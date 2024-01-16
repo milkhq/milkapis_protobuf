@@ -153,6 +153,7 @@ const EVENT_TYPE$json = {
     {'1': 'SPACE_CHANNEL_THREAD_MESSAGE_REACTION_UPDATED', '2': 36},
     {'1': 'CHANNEL_MESSAGE_UPDATED', '2': 37},
     {'1': 'CHANNEL_MESSAGE_REACTION_UPDATED', '2': 38},
+    {'1': 'NEW_CONVERSATION_UPDATED', '2': 39},
   ],
 };
 
@@ -183,7 +184,8 @@ final $typed_data.Uint8List eVENT_TYPEDescriptor = $convert.base64Decode(
     'R0VfUkVBQ1RJT05fVVBEQVRFRBAhEiEKHVNQQUNFX0NIQU5ORUxfTUVTU0FHRV9VUERBVEVEEC'
     'ISKAokU1BBQ0VfQ0hBTk5FTF9USFJFQURfTUVTU0FHRV9VUERBVEVEECMSMQotU1BBQ0VfQ0hB'
     'Tk5FTF9USFJFQURfTUVTU0FHRV9SRUFDVElPTl9VUERBVEVEECQSGwoXQ0hBTk5FTF9NRVNTQU'
-    'dFX1VQREFURUQQJRIkCiBDSEFOTkVMX01FU1NBR0VfUkVBQ1RJT05fVVBEQVRFRBAm');
+    'dFX1VQREFURUQQJRIkCiBDSEFOTkVMX01FU1NBR0VfUkVBQ1RJT05fVVBEQVRFRBAmEhwKGE5F'
+    'V19DT05WRVJTQVRJT05fVVBEQVRFRBAn');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -357,4 +359,20 @@ final $typed_data.Uint8List userSubscribedTopicsUpdateDescriptor = $convert.base
     'ChpVc2VyU3Vic2NyaWJlZFRvcGljc1VwZGF0ZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySWQSIQ'
     'oMYWRkZWRfdG9waWNzGAIgAygJUgthZGRlZFRvcGljcxIlCg5yZW1vdmVkX3RvcGljcxgDIAMo'
     'CVINcmVtb3ZlZFRvcGljcw==');
+
+@$core.Deprecated('Use newConversationUpdateDescriptor instead')
+const NewConversationUpdate$json = {
+  '1': 'NewConversationUpdate',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'device_id', '3': 2, '4': 1, '5': 9, '10': 'deviceId'},
+    {'1': 'document', '3': 3, '4': 1, '5': 11, '6': '.messaging.ConversationDocument', '10': 'document'},
+  ],
+};
+
+/// Descriptor for `NewConversationUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List newConversationUpdateDescriptor = $convert.base64Decode(
+    'ChVOZXdDb252ZXJzYXRpb25VcGRhdGUSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhsKCWRldm'
+    'ljZV9pZBgCIAEoCVIIZGV2aWNlSWQSOwoIZG9jdW1lbnQYAyABKAsyHy5tZXNzYWdpbmcuQ29u'
+    'dmVyc2F0aW9uRG9jdW1lbnRSCGRvY3VtZW50');
 

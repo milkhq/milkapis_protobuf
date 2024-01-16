@@ -636,6 +636,7 @@ message CreateDirectConversationRequest {
     ChannelDocument channel = 2;
     MessageDocument message = 3;
     uint64 nonce = 4;
+    string device_id = 5;
 }
 
 message CreateDirectConversationResponse {

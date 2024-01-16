@@ -941,6 +941,86 @@ class UserSubscribedTopicsUpdate extends $pb.GeneratedMessage {
   $core.List<$core.String> get removedTopics => $_getList(2);
 }
 
+class NewConversationUpdate extends $pb.GeneratedMessage {
+  factory NewConversationUpdate({
+    $core.String? userId,
+    $core.String? deviceId,
+    $1.ConversationDocument? document,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
+    }
+    if (document != null) {
+      $result.document = document;
+    }
+    return $result;
+  }
+  NewConversationUpdate._() : super();
+  factory NewConversationUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory NewConversationUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'NewConversationUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aOS(2, _omitFieldNames ? '' : 'deviceId')
+    ..aOM<$1.ConversationDocument>(3, _omitFieldNames ? '' : 'document', subBuilder: $1.ConversationDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  NewConversationUpdate clone() => NewConversationUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  NewConversationUpdate copyWith(void Function(NewConversationUpdate) updates) => super.copyWith((message) => updates(message as NewConversationUpdate)) as NewConversationUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static NewConversationUpdate create() => NewConversationUpdate._();
+  NewConversationUpdate createEmptyInstance() => create();
+  static $pb.PbList<NewConversationUpdate> createRepeated() => $pb.PbList<NewConversationUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static NewConversationUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<NewConversationUpdate>(create);
+  static NewConversationUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get deviceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set deviceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasDeviceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearDeviceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $1.ConversationDocument get document => $_getN(2);
+  @$pb.TagNumber(3)
+  set document($1.ConversationDocument v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasDocument() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearDocument() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.ConversationDocument ensureDocument() => $_ensure(2);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

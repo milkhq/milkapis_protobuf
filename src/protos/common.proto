@@ -103,6 +103,7 @@ enum EVENT_TYPE {
     SPACE_CHANNEL_THREAD_MESSAGE_REACTION_UPDATED = 36;
     CHANNEL_MESSAGE_UPDATED = 37;
     CHANNEL_MESSAGE_REACTION_UPDATED = 38;
+    NEW_CONVERSATION_UPDATED = 39;
 }
 
 message ProxyMessage {
@@ -174,4 +175,10 @@ message UserSubscribedTopicsUpdate {
     string user_id = 1;
     repeated string added_topics = 2;
     repeated string removed_topics = 3;
+}
+
+message NewConversationUpdate {
+    string user_id = 1;
+    string device_id = 2;
+    messaging.ConversationDocument document = 3;
 }

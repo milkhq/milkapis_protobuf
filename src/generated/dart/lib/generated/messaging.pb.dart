@@ -6215,6 +6215,7 @@ class CreateDirectConversationRequest extends $pb.GeneratedMessage {
     ChannelDocument? channel,
     MessageDocument? message,
     $fixnum.Int64? nonce,
+    $core.String? deviceId,
   }) {
     final $result = create();
     if (members != null) {
@@ -6229,6 +6230,9 @@ class CreateDirectConversationRequest extends $pb.GeneratedMessage {
     if (nonce != null) {
       $result.nonce = nonce;
     }
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
+    }
     return $result;
   }
   CreateDirectConversationRequest._() : super();
@@ -6240,6 +6244,7 @@ class CreateDirectConversationRequest extends $pb.GeneratedMessage {
     ..aOM<ChannelDocument>(2, _omitFieldNames ? '' : 'channel', subBuilder: ChannelDocument.create)
     ..aOM<MessageDocument>(3, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(5, _omitFieldNames ? '' : 'deviceId')
     ..hasRequiredFields = false
   ;
 
@@ -6297,6 +6302,15 @@ class CreateDirectConversationRequest extends $pb.GeneratedMessage {
   $core.bool hasNonce() => $_has(3);
   @$pb.TagNumber(4)
   void clearNonce() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get deviceId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set deviceId($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasDeviceId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearDeviceId() => clearField(5);
 }
 
 class CreateDirectConversationResponse extends $pb.GeneratedMessage {

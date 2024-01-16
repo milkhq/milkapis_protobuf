@@ -101,6 +101,8 @@ enum EVENT_TYPE {
     SPACE_CHANNEL_MESSAGE_UPDATED = 34;
     SPACE_CHANNEL_THREAD_MESSAGE_UPDATED = 35;
     SPACE_CHANNEL_THREAD_MESSAGE_REACTION_UPDATED = 36;
+    CHANNEL_MESSAGE_UPDATED = 37;
+    CHANNEL_MESSAGE_REACTION_UPDATED = 38;
 }
 
 message ProxyMessage {
@@ -144,6 +146,20 @@ message SpaceChannelMessageUpdate {
     string channel_id = 1;
     string space_id = 2;
     messaging.MessageDocument message = 3;
+}
+
+message ChannelMessageUpdate {
+    string channel_id = 1;
+    messaging.MessageDocument message = 2;
+}
+
+message ChannelMessageReactionUpdate {
+    string channel_id = 1;
+    string message_id = 2;
+    string user_id = 3;
+    string reaction = 4;
+    bool is_add = 5;
+    string device_id = 6;
 }
 
 message SpaceChannelThreadMessageUpdate {

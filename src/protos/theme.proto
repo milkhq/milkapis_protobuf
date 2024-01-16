@@ -49,6 +49,8 @@ message WindowContainerOption {
     float blur = 6;
     BackgroundShader shader = 7;
     string blurhash = 8;
+    string image_mobile = 9;
+    string video_mobile = 10;
 }
 
 message LinearGradient {

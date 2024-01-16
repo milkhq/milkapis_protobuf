@@ -371,6 +371,8 @@ class WindowContainerOption extends $pb.GeneratedMessage {
     $core.double? blur,
     BackgroundShader? shader,
     $core.String? blurhash,
+    $core.String? imageMobile,
+    $core.String? videoMobile,
   }) {
     final $result = create();
     if (backgroundColor != null) {
@@ -397,6 +399,12 @@ class WindowContainerOption extends $pb.GeneratedMessage {
     if (blurhash != null) {
       $result.blurhash = blurhash;
     }
+    if (imageMobile != null) {
+      $result.imageMobile = imageMobile;
+    }
+    if (videoMobile != null) {
+      $result.videoMobile = videoMobile;
+    }
     return $result;
   }
   WindowContainerOption._() : super();
@@ -412,6 +420,8 @@ class WindowContainerOption extends $pb.GeneratedMessage {
     ..a<$core.double>(6, _omitFieldNames ? '' : 'blur', $pb.PbFieldType.OF)
     ..e<BackgroundShader>(7, _omitFieldNames ? '' : 'shader', $pb.PbFieldType.OE, defaultOrMaker: BackgroundShader.NONE, valueOf: BackgroundShader.valueOf, enumValues: BackgroundShader.values)
     ..aOS(8, _omitFieldNames ? '' : 'blurhash')
+    ..aOS(9, _omitFieldNames ? '' : 'imageMobile')
+    ..aOS(10, _omitFieldNames ? '' : 'videoMobile')
     ..hasRequiredFields = false
   ;
 
@@ -509,6 +519,24 @@ class WindowContainerOption extends $pb.GeneratedMessage {
   $core.bool hasBlurhash() => $_has(7);
   @$pb.TagNumber(8)
   void clearBlurhash() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.String get imageMobile => $_getSZ(8);
+  @$pb.TagNumber(9)
+  set imageMobile($core.String v) { $_setString(8, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasImageMobile() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearImageMobile() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.String get videoMobile => $_getSZ(9);
+  @$pb.TagNumber(10)
+  set videoMobile($core.String v) { $_setString(9, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasVideoMobile() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearVideoMobile() => clearField(10);
 }
 
 class LinearGradient extends $pb.GeneratedMessage {

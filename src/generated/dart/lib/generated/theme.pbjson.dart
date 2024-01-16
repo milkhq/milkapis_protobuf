@@ -114,6 +114,8 @@ const WindowContainerOption$json = {
     {'1': 'blur', '3': 6, '4': 1, '5': 2, '10': 'blur'},
     {'1': 'shader', '3': 7, '4': 1, '5': 14, '6': '.theme.BackgroundShader', '10': 'shader'},
     {'1': 'blurhash', '3': 8, '4': 1, '5': 9, '10': 'blurhash'},
+    {'1': 'image_mobile', '3': 9, '4': 1, '5': 9, '10': 'imageMobile'},
+    {'1': 'video_mobile', '3': 10, '4': 1, '5': 9, '10': 'videoMobile'},
   ],
 };
 
@@ -124,7 +126,8 @@ final $typed_data.Uint8List windowContainerOptionDescriptor = $convert.base64Dec
     'IwoNb3ZlcmxheV9jb2xvchgEIAEoDVIMb3ZlcmxheUNvbG9yEjEKCGdyYWRpZW50GAUgASgLMh'
     'UudGhlbWUuTGluZWFyR3JhZGllbnRSCGdyYWRpZW50EhIKBGJsdXIYBiABKAJSBGJsdXISLwoG'
     'c2hhZGVyGAcgASgOMhcudGhlbWUuQmFja2dyb3VuZFNoYWRlclIGc2hhZGVyEhoKCGJsdXJoYX'
-    'NoGAggASgJUghibHVyaGFzaA==');
+    'NoGAggASgJUghibHVyaGFzaBIhCgxpbWFnZV9tb2JpbGUYCSABKAlSC2ltYWdlTW9iaWxlEiEK'
+    'DHZpZGVvX21vYmlsZRgKIAEoCVILdmlkZW9Nb2JpbGU=');
 
 @$core.Deprecated('Use linearGradientDescriptor instead')
 const LinearGradient$json = {

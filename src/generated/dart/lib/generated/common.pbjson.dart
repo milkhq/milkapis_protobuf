@@ -151,6 +151,8 @@ const EVENT_TYPE$json = {
     {'1': 'SPACE_CHANNEL_MESSAGE_UPDATED', '2': 34},
     {'1': 'SPACE_CHANNEL_THREAD_MESSAGE_UPDATED', '2': 35},
     {'1': 'SPACE_CHANNEL_THREAD_MESSAGE_REACTION_UPDATED', '2': 36},
+    {'1': 'CHANNEL_MESSAGE_UPDATED', '2': 37},
+    {'1': 'CHANNEL_MESSAGE_REACTION_UPDATED', '2': 38},
   ],
 };
 
@@ -180,7 +182,8 @@ final $typed_data.Uint8List eVENT_TYPEDescriptor = $convert.base64Decode(
     '5VU0VSX1NVQlNDUklCRURfVE9QSUNTX1VQREFURUQQIBIqCiZTUEFDRV9DSEFOTkVMX01FU1NB'
     'R0VfUkVBQ1RJT05fVVBEQVRFRBAhEiEKHVNQQUNFX0NIQU5ORUxfTUVTU0FHRV9VUERBVEVEEC'
     'ISKAokU1BBQ0VfQ0hBTk5FTF9USFJFQURfTUVTU0FHRV9VUERBVEVEECMSMQotU1BBQ0VfQ0hB'
-    'Tk5FTF9USFJFQURfTUVTU0FHRV9SRUFDVElPTl9VUERBVEVEECQ=');
+    'Tk5FTF9USFJFQURfTUVTU0FHRV9SRUFDVElPTl9VUERBVEVEECQSGwoXQ0hBTk5FTF9NRVNTQU'
+    'dFX1VQREFURUQQJRIkCiBDSEFOTkVMX01FU1NBR0VfUkVBQ1RJT05fVVBEQVRFRBAm');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -285,6 +288,40 @@ final $typed_data.Uint8List spaceChannelMessageUpdateDescriptor = $convert.base6
     'ChlTcGFjZUNoYW5uZWxNZXNzYWdlVXBkYXRlEh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW5uZW'
     'xJZBIZCghzcGFjZV9pZBgCIAEoCVIHc3BhY2VJZBI0CgdtZXNzYWdlGAMgASgLMhoubWVzc2Fn'
     'aW5nLk1lc3NhZ2VEb2N1bWVudFIHbWVzc2FnZQ==');
+
+@$core.Deprecated('Use channelMessageUpdateDescriptor instead')
+const ChannelMessageUpdate$json = {
+  '1': 'ChannelMessageUpdate',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'message', '3': 2, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
+  ],
+};
+
+/// Descriptor for `ChannelMessageUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List channelMessageUpdateDescriptor = $convert.base64Decode(
+    'ChRDaGFubmVsTWVzc2FnZVVwZGF0ZRIdCgpjaGFubmVsX2lkGAEgASgJUgljaGFubmVsSWQSNA'
+    'oHbWVzc2FnZRgCIAEoCzIaLm1lc3NhZ2luZy5NZXNzYWdlRG9jdW1lbnRSB21lc3NhZ2U=');
+
+@$core.Deprecated('Use channelMessageReactionUpdateDescriptor instead')
+const ChannelMessageReactionUpdate$json = {
+  '1': 'ChannelMessageReactionUpdate',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'message_id', '3': 2, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'user_id', '3': 3, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'reaction', '3': 4, '4': 1, '5': 9, '10': 'reaction'},
+    {'1': 'is_add', '3': 5, '4': 1, '5': 8, '10': 'isAdd'},
+    {'1': 'device_id', '3': 6, '4': 1, '5': 9, '10': 'deviceId'},
+  ],
+};
+
+/// Descriptor for `ChannelMessageReactionUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List channelMessageReactionUpdateDescriptor = $convert.base64Decode(
+    'ChxDaGFubmVsTWVzc2FnZVJlYWN0aW9uVXBkYXRlEh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW'
+    '5uZWxJZBIdCgptZXNzYWdlX2lkGAIgASgJUgltZXNzYWdlSWQSFwoHdXNlcl9pZBgDIAEoCVIG'
+    'dXNlcklkEhoKCHJlYWN0aW9uGAQgASgJUghyZWFjdGlvbhIVCgZpc19hZGQYBSABKAhSBWlzQW'
+    'RkEhsKCWRldmljZV9pZBgGIAEoCVIIZGV2aWNlSWQ=');
 
 @$core.Deprecated('Use spaceChannelThreadMessageUpdateDescriptor instead')
 const SpaceChannelThreadMessageUpdate$json = {

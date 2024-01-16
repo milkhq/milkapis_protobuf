@@ -113,7 +113,7 @@ message SessionState {
     
     message Channel {
         messaging.ChannelDocument document = 1;
-        repeated messaging.MessageDocument messages = 2;
+        map<string, messaging.MessageDocument> messages = 2;
         repeated user.UserDocument members = 3;
         uint32 unread_count = 4;
         uint32 last_message_id = 5;
@@ -123,6 +123,7 @@ message SessionState {
         uint32 last_seen_message_id = 9;
         repeated string reacted_messages = 10;
         map<string, int64> user_reactions_map = 11;
+        messaging.ConversationDocument conversation = 12;
     }
 }
 
@@ -131,4 +132,16 @@ enum TextFieldInputMode {
     REPLY = 1;
     EDIT = 2;
 } 
+
+message CustomTextNode {
+    enum Type {
+        TEXT = 0;
+        MENTION = 1;
+        LINK = 2;
+        EMOJI = 3;
+    }
+
+    Type type = 1;
+    string data = 2;
+}
 

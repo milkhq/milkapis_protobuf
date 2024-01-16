@@ -158,6 +158,71 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use getDirectChannelMessageReactionsSetRequestDescriptor instead')
+const GetDirectChannelMessageReactionsSetRequest$json = {
+  '1': 'GetDirectChannelMessageReactionsSetRequest',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+  ],
+};
+
+/// Descriptor for `GetDirectChannelMessageReactionsSetRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDirectChannelMessageReactionsSetRequestDescriptor = $convert.base64Decode(
+    'CipHZXREaXJlY3RDaGFubmVsTWVzc2FnZVJlYWN0aW9uc1NldFJlcXVlc3QSHQoKY2hhbm5lbF'
+    '9pZBgBIAEoCVIJY2hhbm5lbElk');
+
+@$core.Deprecated('Use getDirectChannelMessageReactionsSetResponseDescriptor instead')
+const GetDirectChannelMessageReactionsSetResponse$json = {
+  '1': 'GetDirectChannelMessageReactionsSetResponse',
+  '2': [
+    {'1': 'message_ids', '3': 1, '4': 3, '5': 9, '10': 'messageIds'},
+  ],
+};
+
+/// Descriptor for `GetDirectChannelMessageReactionsSetResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDirectChannelMessageReactionsSetResponseDescriptor = $convert.base64Decode(
+    'CitHZXREaXJlY3RDaGFubmVsTWVzc2FnZVJlYWN0aW9uc1NldFJlc3BvbnNlEh8KC21lc3NhZ2'
+    'VfaWRzGAEgAygJUgptZXNzYWdlSWRz');
+
+@$core.Deprecated('Use getDirectChannelUserMessageReactionsMapRequestDescriptor instead')
+const GetDirectChannelUserMessageReactionsMapRequest$json = {
+  '1': 'GetDirectChannelUserMessageReactionsMapRequest',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+  ],
+};
+
+/// Descriptor for `GetDirectChannelUserMessageReactionsMapRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDirectChannelUserMessageReactionsMapRequestDescriptor = $convert.base64Decode(
+    'Ci5HZXREaXJlY3RDaGFubmVsVXNlck1lc3NhZ2VSZWFjdGlvbnNNYXBSZXF1ZXN0Eh0KCmNoYW'
+    '5uZWxfaWQYASABKAlSCWNoYW5uZWxJZA==');
+
+@$core.Deprecated('Use getDirectChannelUserMessageReactionsMapResponseDescriptor instead')
+const GetDirectChannelUserMessageReactionsMapResponse$json = {
+  '1': 'GetDirectChannelUserMessageReactionsMapResponse',
+  '2': [
+    {'1': 'reactions', '3': 1, '4': 3, '5': 11, '6': '.messaging.GetDirectChannelUserMessageReactionsMapResponse.ReactionsEntry', '10': 'reactions'},
+  ],
+  '3': [GetDirectChannelUserMessageReactionsMapResponse_ReactionsEntry$json],
+};
+
+@$core.Deprecated('Use getDirectChannelUserMessageReactionsMapResponseDescriptor instead')
+const GetDirectChannelUserMessageReactionsMapResponse_ReactionsEntry$json = {
+  '1': 'ReactionsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 3, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `GetDirectChannelUserMessageReactionsMapResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getDirectChannelUserMessageReactionsMapResponseDescriptor = $convert.base64Decode(
+    'Ci9HZXREaXJlY3RDaGFubmVsVXNlck1lc3NhZ2VSZWFjdGlvbnNNYXBSZXNwb25zZRJnCglyZW'
+    'FjdGlvbnMYASADKAsySS5tZXNzYWdpbmcuR2V0RGlyZWN0Q2hhbm5lbFVzZXJNZXNzYWdlUmVh'
+    'Y3Rpb25zTWFwUmVzcG9uc2UuUmVhY3Rpb25zRW50cnlSCXJlYWN0aW9ucxo8Cg5SZWFjdGlvbn'
+    'NFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoA1IFdmFsdWU6AjgB');
+
 @$core.Deprecated('Use subscribeToUserPresenceRequestDescriptor instead')
 const SubscribeToUserPresenceRequest$json = {
   '1': 'SubscribeToUserPresenceRequest',
@@ -1877,7 +1942,7 @@ const SendDirectChannelMessageReactionRequest$json = {
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message_id', '3': 2, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'reaction', '3': 3, '4': 1, '5': 9, '10': 'reaction'},
-    {'1': 'is_add', '3': 4, '4': 1, '5': 8, '10': 'isAdd'},
+    {'1': 'device_id', '3': 4, '4': 1, '5': 9, '10': 'deviceId'},
   ],
 };
 
@@ -1885,7 +1950,7 @@ const SendDirectChannelMessageReactionRequest$json = {
 final $typed_data.Uint8List sendDirectChannelMessageReactionRequestDescriptor = $convert.base64Decode(
     'CidTZW5kRGlyZWN0Q2hhbm5lbE1lc3NhZ2VSZWFjdGlvblJlcXVlc3QSHQoKY2hhbm5lbF9pZB'
     'gBIAEoCVIJY2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQYAiABKAlSCW1lc3NhZ2VJZBIaCghyZWFj'
-    'dGlvbhgDIAEoCVIIcmVhY3Rpb24SFQoGaXNfYWRkGAQgASgIUgVpc0FkZA==');
+    'dGlvbhgDIAEoCVIIcmVhY3Rpb24SGwoJZGV2aWNlX2lkGAQgASgJUghkZXZpY2VJZA==');
 
 @$core.Deprecated('Use sendDirectChannelMessageReactionResponseDescriptor instead')
 const SendDirectChannelMessageReactionResponse$json = {

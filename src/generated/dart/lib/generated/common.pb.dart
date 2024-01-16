@@ -581,6 +581,192 @@ class SpaceChannelMessageUpdate extends $pb.GeneratedMessage {
   $1.MessageDocument ensureMessage() => $_ensure(2);
 }
 
+class ChannelMessageUpdate extends $pb.GeneratedMessage {
+  factory ChannelMessageUpdate({
+    $core.String? channelId,
+    $1.MessageDocument? message,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  ChannelMessageUpdate._() : super();
+  factory ChannelMessageUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ChannelMessageUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelMessageUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOM<$1.MessageDocument>(2, _omitFieldNames ? '' : 'message', subBuilder: $1.MessageDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ChannelMessageUpdate clone() => ChannelMessageUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ChannelMessageUpdate copyWith(void Function(ChannelMessageUpdate) updates) => super.copyWith((message) => updates(message as ChannelMessageUpdate)) as ChannelMessageUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChannelMessageUpdate create() => ChannelMessageUpdate._();
+  ChannelMessageUpdate createEmptyInstance() => create();
+  static $pb.PbList<ChannelMessageUpdate> createRepeated() => $pb.PbList<ChannelMessageUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static ChannelMessageUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChannelMessageUpdate>(create);
+  static ChannelMessageUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $1.MessageDocument get message => $_getN(1);
+  @$pb.TagNumber(2)
+  set message($1.MessageDocument v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMessage() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessage() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.MessageDocument ensureMessage() => $_ensure(1);
+}
+
+class ChannelMessageReactionUpdate extends $pb.GeneratedMessage {
+  factory ChannelMessageReactionUpdate({
+    $core.String? channelId,
+    $core.String? messageId,
+    $core.String? userId,
+    $core.String? reaction,
+    $core.bool? isAdd,
+    $core.String? deviceId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (messageId != null) {
+      $result.messageId = messageId;
+    }
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (reaction != null) {
+      $result.reaction = reaction;
+    }
+    if (isAdd != null) {
+      $result.isAdd = isAdd;
+    }
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
+    }
+    return $result;
+  }
+  ChannelMessageReactionUpdate._() : super();
+  factory ChannelMessageReactionUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ChannelMessageReactionUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ChannelMessageReactionUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'messageId')
+    ..aOS(3, _omitFieldNames ? '' : 'userId')
+    ..aOS(4, _omitFieldNames ? '' : 'reaction')
+    ..aOB(5, _omitFieldNames ? '' : 'isAdd')
+    ..aOS(6, _omitFieldNames ? '' : 'deviceId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ChannelMessageReactionUpdate clone() => ChannelMessageReactionUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ChannelMessageReactionUpdate copyWith(void Function(ChannelMessageReactionUpdate) updates) => super.copyWith((message) => updates(message as ChannelMessageReactionUpdate)) as ChannelMessageReactionUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ChannelMessageReactionUpdate create() => ChannelMessageReactionUpdate._();
+  ChannelMessageReactionUpdate createEmptyInstance() => create();
+  static $pb.PbList<ChannelMessageReactionUpdate> createRepeated() => $pb.PbList<ChannelMessageReactionUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static ChannelMessageReactionUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ChannelMessageReactionUpdate>(create);
+  static ChannelMessageReactionUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get messageId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set messageId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMessageId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMessageId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get userId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get reaction => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set reaction($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasReaction() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearReaction() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get isAdd => $_getBF(4);
+  @$pb.TagNumber(5)
+  set isAdd($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasIsAdd() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearIsAdd() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get deviceId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set deviceId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasDeviceId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearDeviceId() => clearField(6);
+}
+
 class SpaceChannelThreadMessageUpdate extends $pb.GeneratedMessage {
   factory SpaceChannelThreadMessageUpdate({
     $core.String? channelId,

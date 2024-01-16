@@ -64,6 +64,8 @@ service Messaging {
     rpc SendDirectChannelMessageReaction(SendDirectChannelMessageReactionRequest) returns (SendDirectChannelMessageReactionResponse);
     rpc CreateDirectChannelCall(CreateDirectChannelCallRequest) returns (CreateDirectChannelCallResponse);
     rpc CreateDirectChannelCallJoinToken(CreateDirectChannelCallJoinTokenRequest) returns (CreateDirectChannelCallJoinTokenResponse);
+    rpc GetDirectChannelMessageReactionsSet(GetDirectChannelMessageReactionsSetRequest) returns (GetDirectChannelMessageReactionsSetResponse);
+    rpc GetDirectChannelUserMessageReactionsMap(GetDirectChannelUserMessageReactionsMapRequest) returns (GetDirectChannelUserMessageReactionsMapResponse);
 
     // Thread channel messages
     rpc SendThreadChannelMessage(SendMessageRequest) returns (SendMessageResponse);
@@ -82,6 +84,22 @@ service Messaging {
     // User Presence Subscriptions
     rpc SubscribeToUserPresence(SubscribeToUserPresenceRequest) returns (SubscribeToUserPresenceResponse);
     rpc UnsubscribeToUserPresence(UnsubscribeToUserPresenceRequest) returns (UnsubscribeToUserPresenceResponse);
+}
+
+message GetDirectChannelMessageReactionsSetRequest {
+    string channel_id = 1;
+}
+
+message GetDirectChannelMessageReactionsSetResponse {
+    repeated string message_ids = 1;
+}
+
+message GetDirectChannelUserMessageReactionsMapRequest {
+    string channel_id = 1;
+}
+
+message GetDirectChannelUserMessageReactionsMapResponse {
+    map<string, int64> reactions = 1;
 }
 
 message SubscribeToUserPresenceRequest {
@@ -815,7 +833,7 @@ message SendDirectChannelMessageReactionRequest {
     string channel_id = 1;
     string message_id = 2;
     string reaction = 3;
-    bool is_add = 4;
+    string device_id = 4;
 }
 
 message SendDirectChannelMessageReactionResponse {

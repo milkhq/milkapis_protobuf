@@ -18,6 +18,194 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class GetDirectChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
+  factory GetDirectChannelMessageReactionsSetRequest({
+    $core.String? channelId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    return $result;
+  }
+  GetDirectChannelMessageReactionsSetRequest._() : super();
+  factory GetDirectChannelMessageReactionsSetRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelMessageReactionsSetRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessageReactionsSetRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsSetRequest clone() => GetDirectChannelMessageReactionsSetRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsSetRequest copyWith(void Function(GetDirectChannelMessageReactionsSetRequest) updates) => super.copyWith((message) => updates(message as GetDirectChannelMessageReactionsSetRequest)) as GetDirectChannelMessageReactionsSetRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsSetRequest create() => GetDirectChannelMessageReactionsSetRequest._();
+  GetDirectChannelMessageReactionsSetRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelMessageReactionsSetRequest> createRepeated() => $pb.PbList<GetDirectChannelMessageReactionsSetRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsSetRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelMessageReactionsSetRequest>(create);
+  static GetDirectChannelMessageReactionsSetRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+}
+
+class GetDirectChannelMessageReactionsSetResponse extends $pb.GeneratedMessage {
+  factory GetDirectChannelMessageReactionsSetResponse({
+    $core.Iterable<$core.String>? messageIds,
+  }) {
+    final $result = create();
+    if (messageIds != null) {
+      $result.messageIds.addAll(messageIds);
+    }
+    return $result;
+  }
+  GetDirectChannelMessageReactionsSetResponse._() : super();
+  factory GetDirectChannelMessageReactionsSetResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelMessageReactionsSetResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelMessageReactionsSetResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'messageIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsSetResponse clone() => GetDirectChannelMessageReactionsSetResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelMessageReactionsSetResponse copyWith(void Function(GetDirectChannelMessageReactionsSetResponse) updates) => super.copyWith((message) => updates(message as GetDirectChannelMessageReactionsSetResponse)) as GetDirectChannelMessageReactionsSetResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsSetResponse create() => GetDirectChannelMessageReactionsSetResponse._();
+  GetDirectChannelMessageReactionsSetResponse createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelMessageReactionsSetResponse> createRepeated() => $pb.PbList<GetDirectChannelMessageReactionsSetResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelMessageReactionsSetResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelMessageReactionsSetResponse>(create);
+  static GetDirectChannelMessageReactionsSetResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get messageIds => $_getList(0);
+}
+
+class GetDirectChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage {
+  factory GetDirectChannelUserMessageReactionsMapRequest({
+    $core.String? channelId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    return $result;
+  }
+  GetDirectChannelUserMessageReactionsMapRequest._() : super();
+  factory GetDirectChannelUserMessageReactionsMapRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelUserMessageReactionsMapRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelUserMessageReactionsMapRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelUserMessageReactionsMapRequest clone() => GetDirectChannelUserMessageReactionsMapRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelUserMessageReactionsMapRequest copyWith(void Function(GetDirectChannelUserMessageReactionsMapRequest) updates) => super.copyWith((message) => updates(message as GetDirectChannelUserMessageReactionsMapRequest)) as GetDirectChannelUserMessageReactionsMapRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelUserMessageReactionsMapRequest create() => GetDirectChannelUserMessageReactionsMapRequest._();
+  GetDirectChannelUserMessageReactionsMapRequest createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelUserMessageReactionsMapRequest> createRepeated() => $pb.PbList<GetDirectChannelUserMessageReactionsMapRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelUserMessageReactionsMapRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelUserMessageReactionsMapRequest>(create);
+  static GetDirectChannelUserMessageReactionsMapRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+}
+
+class GetDirectChannelUserMessageReactionsMapResponse extends $pb.GeneratedMessage {
+  factory GetDirectChannelUserMessageReactionsMapResponse({
+    $core.Map<$core.String, $fixnum.Int64>? reactions,
+  }) {
+    final $result = create();
+    if (reactions != null) {
+      $result.reactions.addAll(reactions);
+    }
+    return $result;
+  }
+  GetDirectChannelUserMessageReactionsMapResponse._() : super();
+  factory GetDirectChannelUserMessageReactionsMapResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetDirectChannelUserMessageReactionsMapResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetDirectChannelUserMessageReactionsMapResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..m<$core.String, $fixnum.Int64>(1, _omitFieldNames ? '' : 'reactions', entryClassName: 'GetDirectChannelUserMessageReactionsMapResponse.ReactionsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.O6, packageName: const $pb.PackageName('messaging'))
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelUserMessageReactionsMapResponse clone() => GetDirectChannelUserMessageReactionsMapResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetDirectChannelUserMessageReactionsMapResponse copyWith(void Function(GetDirectChannelUserMessageReactionsMapResponse) updates) => super.copyWith((message) => updates(message as GetDirectChannelUserMessageReactionsMapResponse)) as GetDirectChannelUserMessageReactionsMapResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelUserMessageReactionsMapResponse create() => GetDirectChannelUserMessageReactionsMapResponse._();
+  GetDirectChannelUserMessageReactionsMapResponse createEmptyInstance() => create();
+  static $pb.PbList<GetDirectChannelUserMessageReactionsMapResponse> createRepeated() => $pb.PbList<GetDirectChannelUserMessageReactionsMapResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetDirectChannelUserMessageReactionsMapResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetDirectChannelUserMessageReactionsMapResponse>(create);
+  static GetDirectChannelUserMessageReactionsMapResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $fixnum.Int64> get reactions => $_getMap(0);
+}
+
 class SubscribeToUserPresenceRequest extends $pb.GeneratedMessage {
   factory SubscribeToUserPresenceRequest({
     $core.Iterable<$core.String>? userIds,
@@ -7804,7 +7992,7 @@ class SendDirectChannelMessageReactionRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     $core.String? messageId,
     $core.String? reaction,
-    $core.bool? isAdd,
+    $core.String? deviceId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -7816,8 +8004,8 @@ class SendDirectChannelMessageReactionRequest extends $pb.GeneratedMessage {
     if (reaction != null) {
       $result.reaction = reaction;
     }
-    if (isAdd != null) {
-      $result.isAdd = isAdd;
+    if (deviceId != null) {
+      $result.deviceId = deviceId;
     }
     return $result;
   }
@@ -7829,7 +8017,7 @@ class SendDirectChannelMessageReactionRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOS(2, _omitFieldNames ? '' : 'messageId')
     ..aOS(3, _omitFieldNames ? '' : 'reaction')
-    ..aOB(4, _omitFieldNames ? '' : 'isAdd')
+    ..aOS(4, _omitFieldNames ? '' : 'deviceId')
     ..hasRequiredFields = false
   ;
 
@@ -7882,13 +8070,13 @@ class SendDirectChannelMessageReactionRequest extends $pb.GeneratedMessage {
   void clearReaction() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.bool get isAdd => $_getBF(3);
+  $core.String get deviceId => $_getSZ(3);
   @$pb.TagNumber(4)
-  set isAdd($core.bool v) { $_setBool(3, v); }
+  set deviceId($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasIsAdd() => $_has(3);
+  $core.bool hasDeviceId() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIsAdd() => clearField(4);
+  void clearDeviceId() => clearField(4);
 }
 
 class SendDirectChannelMessageReactionResponse extends $pb.GeneratedMessage {

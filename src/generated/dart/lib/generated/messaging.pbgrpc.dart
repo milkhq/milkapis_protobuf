@@ -221,6 +221,14 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/CreateDirectChannelCallJoinToken',
       ($1.CreateDirectChannelCallJoinTokenRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.CreateDirectChannelCallJoinTokenResponse.fromBuffer(value));
+  static final _$getDirectChannelMessageReactionsSet = $grpc.ClientMethod<$1.GetDirectChannelMessageReactionsSetRequest, $1.GetDirectChannelMessageReactionsSetResponse>(
+      '/messaging.Messaging/GetDirectChannelMessageReactionsSet',
+      ($1.GetDirectChannelMessageReactionsSetRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetDirectChannelMessageReactionsSetResponse.fromBuffer(value));
+  static final _$getDirectChannelUserMessageReactionsMap = $grpc.ClientMethod<$1.GetDirectChannelUserMessageReactionsMapRequest, $1.GetDirectChannelUserMessageReactionsMapResponse>(
+      '/messaging.Messaging/GetDirectChannelUserMessageReactionsMap',
+      ($1.GetDirectChannelUserMessageReactionsMapRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetDirectChannelUserMessageReactionsMapResponse.fromBuffer(value));
   static final _$sendThreadChannelMessage = $grpc.ClientMethod<$1.SendMessageRequest, $1.SendMessageResponse>(
       '/messaging.Messaging/SendThreadChannelMessage',
       ($1.SendMessageRequest value) => value.writeToBuffer(),
@@ -466,6 +474,14 @@ class MessagingClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.CreateDirectChannelCallJoinTokenResponse> createDirectChannelCallJoinToken($1.CreateDirectChannelCallJoinTokenRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createDirectChannelCallJoinToken, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetDirectChannelMessageReactionsSetResponse> getDirectChannelMessageReactionsSet($1.GetDirectChannelMessageReactionsSetRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDirectChannelMessageReactionsSet, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetDirectChannelUserMessageReactionsMapResponse> getDirectChannelUserMessageReactionsMap($1.GetDirectChannelUserMessageReactionsMapRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getDirectChannelUserMessageReactionsMap, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.SendMessageResponse> sendThreadChannelMessage($1.SendMessageRequest request, {$grpc.CallOptions? options}) {
@@ -864,6 +880,20 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.CreateDirectChannelCallJoinTokenRequest.fromBuffer(value),
         ($1.CreateDirectChannelCallJoinTokenResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetDirectChannelMessageReactionsSetRequest, $1.GetDirectChannelMessageReactionsSetResponse>(
+        'GetDirectChannelMessageReactionsSet',
+        getDirectChannelMessageReactionsSet_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetDirectChannelMessageReactionsSetRequest.fromBuffer(value),
+        ($1.GetDirectChannelMessageReactionsSetResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetDirectChannelUserMessageReactionsMapRequest, $1.GetDirectChannelUserMessageReactionsMapResponse>(
+        'GetDirectChannelUserMessageReactionsMap',
+        getDirectChannelUserMessageReactionsMap_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetDirectChannelUserMessageReactionsMapRequest.fromBuffer(value),
+        ($1.GetDirectChannelUserMessageReactionsMapResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.SendMessageRequest, $1.SendMessageResponse>(
         'SendThreadChannelMessage',
         sendThreadChannelMessage_Pre,
@@ -1136,6 +1166,14 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return createDirectChannelCallJoinToken(call, await request);
   }
 
+  $async.Future<$1.GetDirectChannelMessageReactionsSetResponse> getDirectChannelMessageReactionsSet_Pre($grpc.ServiceCall call, $async.Future<$1.GetDirectChannelMessageReactionsSetRequest> request) async {
+    return getDirectChannelMessageReactionsSet(call, await request);
+  }
+
+  $async.Future<$1.GetDirectChannelUserMessageReactionsMapResponse> getDirectChannelUserMessageReactionsMap_Pre($grpc.ServiceCall call, $async.Future<$1.GetDirectChannelUserMessageReactionsMapRequest> request) async {
+    return getDirectChannelUserMessageReactionsMap(call, await request);
+  }
+
   $async.Future<$1.SendMessageResponse> sendThreadChannelMessage_Pre($grpc.ServiceCall call, $async.Future<$1.SendMessageRequest> request) async {
     return sendThreadChannelMessage(call, await request);
   }
@@ -1226,6 +1264,8 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$1.SendDirectChannelMessageReactionResponse> sendDirectChannelMessageReaction($grpc.ServiceCall call, $1.SendDirectChannelMessageReactionRequest request);
   $async.Future<$1.CreateDirectChannelCallResponse> createDirectChannelCall($grpc.ServiceCall call, $1.CreateDirectChannelCallRequest request);
   $async.Future<$1.CreateDirectChannelCallJoinTokenResponse> createDirectChannelCallJoinToken($grpc.ServiceCall call, $1.CreateDirectChannelCallJoinTokenRequest request);
+  $async.Future<$1.GetDirectChannelMessageReactionsSetResponse> getDirectChannelMessageReactionsSet($grpc.ServiceCall call, $1.GetDirectChannelMessageReactionsSetRequest request);
+  $async.Future<$1.GetDirectChannelUserMessageReactionsMapResponse> getDirectChannelUserMessageReactionsMap($grpc.ServiceCall call, $1.GetDirectChannelUserMessageReactionsMapRequest request);
   $async.Future<$1.SendMessageResponse> sendThreadChannelMessage($grpc.ServiceCall call, $1.SendMessageRequest request);
   $async.Future<$1.UpdateMessageResponse> updateThreadChannelMessage($grpc.ServiceCall call, $1.UpdateMessageRequest request);
   $async.Future<$1.DeleteMessageResponse> deleteThreadChannelMessage($grpc.ServiceCall call, $1.DeleteMessageRequest request);

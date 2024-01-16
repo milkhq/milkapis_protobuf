@@ -260,7 +260,7 @@ const SessionState_Channel$json = {
   '1': 'Channel',
   '2': [
     {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelDocument', '10': 'document'},
-    {'1': 'messages', '3': 2, '4': 3, '5': 11, '6': '.messaging.MessageDocument', '10': 'messages'},
+    {'1': 'messages', '3': 2, '4': 3, '5': 11, '6': '.ui.SessionState.Channel.MessagesEntry', '10': 'messages'},
     {'1': 'members', '3': 3, '4': 3, '5': 11, '6': '.user.UserDocument', '10': 'members'},
     {'1': 'unread_count', '3': 4, '4': 1, '5': 13, '10': 'unreadCount'},
     {'1': 'last_message_id', '3': 5, '4': 1, '5': 13, '10': 'lastMessageId'},
@@ -270,8 +270,19 @@ const SessionState_Channel$json = {
     {'1': 'last_seen_message_id', '3': 9, '4': 1, '5': 13, '10': 'lastSeenMessageId'},
     {'1': 'reacted_messages', '3': 10, '4': 3, '5': 9, '10': 'reactedMessages'},
     {'1': 'user_reactions_map', '3': 11, '4': 3, '5': 11, '6': '.ui.SessionState.Channel.UserReactionsMapEntry', '10': 'userReactionsMap'},
+    {'1': 'conversation', '3': 12, '4': 1, '5': 11, '6': '.messaging.ConversationDocument', '10': 'conversation'},
   ],
-  '3': [SessionState_Channel_UserReactionsMapEntry$json],
+  '3': [SessionState_Channel_MessagesEntry$json, SessionState_Channel_UserReactionsMapEntry$json],
+};
+
+@$core.Deprecated('Use sessionStateDescriptor instead')
+const SessionState_Channel_MessagesEntry$json = {
+  '1': 'MessagesEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 @$core.Deprecated('Use sessionStateDescriptor instead')
@@ -310,17 +321,47 @@ final $typed_data.Uint8List sessionStateDescriptor = $convert.base64Decode(
     'RpZmljYXRpb25TZXR0aW5nEggKBE5PTkUQABIMCghNRU5USU9OUxABEgcKA0FMTBACGocBCg9D'
     'aGFubmVsQ2F0ZWdvcnkSPgoIZG9jdW1lbnQYASABKAsyIi5tZXNzYWdpbmcuQ2hhbm5lbENhdG'
     'Vnb3J5RG9jdW1lbnRSCGRvY3VtZW50EjQKCGNoYW5uZWxzGAIgAygLMhgudWkuU2Vzc2lvblN0'
-    'YXRlLkNoYW5uZWxSCGNoYW5uZWxzGokFCgdDaGFubmVsEjYKCGRvY3VtZW50GAEgASgLMhoubW'
-    'Vzc2FnaW5nLkNoYW5uZWxEb2N1bWVudFIIZG9jdW1lbnQSNgoIbWVzc2FnZXMYAiADKAsyGi5t'
-    'ZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50UghtZXNzYWdlcxIsCgdtZW1iZXJzGAMgAygLMhIudX'
-    'Nlci5Vc2VyRG9jdW1lbnRSB21lbWJlcnMSIQoMdW5yZWFkX2NvdW50GAQgASgNUgt1bnJlYWRD'
-    'b3VudBImCg9sYXN0X21lc3NhZ2VfaWQYBSABKA1SDWxhc3RNZXNzYWdlSWQSLAoSbGFzdF9zY3'
-    'JvbGxfb2Zmc2V0GAYgASgCUhBsYXN0U2Nyb2xsT2Zmc2V0EkAKDW1lc3NhZ2VzUXVldWUYByAD'
-    'KAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50Ug1tZXNzYWdlc1F1ZXVlEiYKD2xhc3RfdG'
-    'V4dF9pbnB1dBgIIAEoCVINbGFzdFRleHRJbnB1dBIvChRsYXN0X3NlZW5fbWVzc2FnZV9pZBgJ'
-    'IAEoDVIRbGFzdFNlZW5NZXNzYWdlSWQSKQoQcmVhY3RlZF9tZXNzYWdlcxgKIAMoCVIPcmVhY3'
-    'RlZE1lc3NhZ2VzElwKEnVzZXJfcmVhY3Rpb25zX21hcBgLIAMoCzIuLnVpLlNlc3Npb25TdGF0'
-    'ZS5DaGFubmVsLlVzZXJSZWFjdGlvbnNNYXBFbnRyeVIQdXNlclJlYWN0aW9uc01hcBpDChVVc2'
-    'VyUmVhY3Rpb25zTWFwRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKANSBXZh'
-    'bHVlOgI4AQ==');
+    'YXRlLkNoYW5uZWxSCGNoYW5uZWxzGrMGCgdDaGFubmVsEjYKCGRvY3VtZW50GAEgASgLMhoubW'
+    'Vzc2FnaW5nLkNoYW5uZWxEb2N1bWVudFIIZG9jdW1lbnQSQgoIbWVzc2FnZXMYAiADKAsyJi51'
+    'aS5TZXNzaW9uU3RhdGUuQ2hhbm5lbC5NZXNzYWdlc0VudHJ5UghtZXNzYWdlcxIsCgdtZW1iZX'
+    'JzGAMgAygLMhIudXNlci5Vc2VyRG9jdW1lbnRSB21lbWJlcnMSIQoMdW5yZWFkX2NvdW50GAQg'
+    'ASgNUgt1bnJlYWRDb3VudBImCg9sYXN0X21lc3NhZ2VfaWQYBSABKA1SDWxhc3RNZXNzYWdlSW'
+    'QSLAoSbGFzdF9zY3JvbGxfb2Zmc2V0GAYgASgCUhBsYXN0U2Nyb2xsT2Zmc2V0EkAKDW1lc3Nh'
+    'Z2VzUXVldWUYByADKAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50Ug1tZXNzYWdlc1F1ZX'
+    'VlEiYKD2xhc3RfdGV4dF9pbnB1dBgIIAEoCVINbGFzdFRleHRJbnB1dBIvChRsYXN0X3NlZW5f'
+    'bWVzc2FnZV9pZBgJIAEoDVIRbGFzdFNlZW5NZXNzYWdlSWQSKQoQcmVhY3RlZF9tZXNzYWdlcx'
+    'gKIAMoCVIPcmVhY3RlZE1lc3NhZ2VzElwKEnVzZXJfcmVhY3Rpb25zX21hcBgLIAMoCzIuLnVp'
+    'LlNlc3Npb25TdGF0ZS5DaGFubmVsLlVzZXJSZWFjdGlvbnNNYXBFbnRyeVIQdXNlclJlYWN0aW'
+    '9uc01hcBJDCgxjb252ZXJzYXRpb24YDCABKAsyHy5tZXNzYWdpbmcuQ29udmVyc2F0aW9uRG9j'
+    'dW1lbnRSDGNvbnZlcnNhdGlvbhpXCg1NZXNzYWdlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ej'
+    'AKBXZhbHVlGAIgASgLMhoubWVzc2FnaW5nLk1lc3NhZ2VEb2N1bWVudFIFdmFsdWU6AjgBGkMK'
+    'FVVzZXJSZWFjdGlvbnNNYXBFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoA1'
+    'IFdmFsdWU6AjgB');
+
+@$core.Deprecated('Use customTextNodeDescriptor instead')
+const CustomTextNode$json = {
+  '1': 'CustomTextNode',
+  '2': [
+    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.ui.CustomTextNode.Type', '10': 'type'},
+    {'1': 'data', '3': 2, '4': 1, '5': 9, '10': 'data'},
+  ],
+  '4': [CustomTextNode_Type$json],
+};
+
+@$core.Deprecated('Use customTextNodeDescriptor instead')
+const CustomTextNode_Type$json = {
+  '1': 'Type',
+  '2': [
+    {'1': 'TEXT', '2': 0},
+    {'1': 'MENTION', '2': 1},
+    {'1': 'LINK', '2': 2},
+    {'1': 'EMOJI', '2': 3},
+  ],
+};
+
+/// Descriptor for `CustomTextNode`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List customTextNodeDescriptor = $convert.base64Decode(
+    'Cg5DdXN0b21UZXh0Tm9kZRIrCgR0eXBlGAEgASgOMhcudWkuQ3VzdG9tVGV4dE5vZGUuVHlwZV'
+    'IEdHlwZRISCgRkYXRhGAIgASgJUgRkYXRhIjIKBFR5cGUSCAoEVEVYVBAAEgsKB01FTlRJT04Q'
+    'ARIICgRMSU5LEAISCQoFRU1PSkkQAw==');
 

@@ -757,7 +757,7 @@ class SessionState_ChannelCategory extends $pb.GeneratedMessage {
 class SessionState_Channel extends $pb.GeneratedMessage {
   factory SessionState_Channel({
     $1.ChannelDocument? document,
-    $core.Iterable<$1.MessageDocument>? messages,
+    $core.Map<$core.String, $1.MessageDocument>? messages,
     $core.Iterable<$0.UserDocument>? members,
     $core.int? unreadCount,
     $core.int? lastMessageId,
@@ -767,6 +767,7 @@ class SessionState_Channel extends $pb.GeneratedMessage {
     $core.int? lastSeenMessageId,
     $core.Iterable<$core.String>? reactedMessages,
     $core.Map<$core.String, $fixnum.Int64>? userReactionsMap,
+    $1.ConversationDocument? conversation,
   }) {
     final $result = create();
     if (document != null) {
@@ -802,6 +803,9 @@ class SessionState_Channel extends $pb.GeneratedMessage {
     if (userReactionsMap != null) {
       $result.userReactionsMap.addAll(userReactionsMap);
     }
+    if (conversation != null) {
+      $result.conversation = conversation;
+    }
     return $result;
   }
   SessionState_Channel._() : super();
@@ -810,7 +814,7 @@ class SessionState_Channel extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SessionState.Channel', package: const $pb.PackageName(_omitMessageNames ? '' : 'ui'), createEmptyInstance: create)
     ..aOM<$1.ChannelDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: $1.ChannelDocument.create)
-    ..pc<$1.MessageDocument>(2, _omitFieldNames ? '' : 'messages', $pb.PbFieldType.PM, subBuilder: $1.MessageDocument.create)
+    ..m<$core.String, $1.MessageDocument>(2, _omitFieldNames ? '' : 'messages', entryClassName: 'SessionState.Channel.MessagesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: $1.MessageDocument.create, valueDefaultOrMaker: $1.MessageDocument.getDefault, packageName: const $pb.PackageName('ui'))
     ..pc<$0.UserDocument>(3, _omitFieldNames ? '' : 'members', $pb.PbFieldType.PM, subBuilder: $0.UserDocument.create)
     ..a<$core.int>(4, _omitFieldNames ? '' : 'unreadCount', $pb.PbFieldType.OU3)
     ..a<$core.int>(5, _omitFieldNames ? '' : 'lastMessageId', $pb.PbFieldType.OU3)
@@ -820,6 +824,7 @@ class SessionState_Channel extends $pb.GeneratedMessage {
     ..a<$core.int>(9, _omitFieldNames ? '' : 'lastSeenMessageId', $pb.PbFieldType.OU3)
     ..pPS(10, _omitFieldNames ? '' : 'reactedMessages')
     ..m<$core.String, $fixnum.Int64>(11, _omitFieldNames ? '' : 'userReactionsMap', entryClassName: 'SessionState.Channel.UserReactionsMapEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.O6, packageName: const $pb.PackageName('ui'))
+    ..aOM<$1.ConversationDocument>(12, _omitFieldNames ? '' : 'conversation', subBuilder: $1.ConversationDocument.create)
     ..hasRequiredFields = false
   ;
 
@@ -856,7 +861,7 @@ class SessionState_Channel extends $pb.GeneratedMessage {
   $1.ChannelDocument ensureDocument() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $core.List<$1.MessageDocument> get messages => $_getList(1);
+  $core.Map<$core.String, $1.MessageDocument> get messages => $_getMap(1);
 
   @$pb.TagNumber(3)
   $core.List<$0.UserDocument> get members => $_getList(2);
@@ -914,6 +919,17 @@ class SessionState_Channel extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(11)
   $core.Map<$core.String, $fixnum.Int64> get userReactionsMap => $_getMap(10);
+
+  @$pb.TagNumber(12)
+  $1.ConversationDocument get conversation => $_getN(11);
+  @$pb.TagNumber(12)
+  set conversation($1.ConversationDocument v) { setField(12, v); }
+  @$pb.TagNumber(12)
+  $core.bool hasConversation() => $_has(11);
+  @$pb.TagNumber(12)
+  void clearConversation() => clearField(12);
+  @$pb.TagNumber(12)
+  $1.ConversationDocument ensureConversation() => $_ensure(11);
 }
 
 class SessionState extends $pb.GeneratedMessage {
@@ -1032,6 +1048,70 @@ class SessionState extends $pb.GeneratedMessage {
   $core.bool hasContentScreenSidePanelState() => $_has(6);
   @$pb.TagNumber(7)
   void clearContentScreenSidePanelState() => clearField(7);
+}
+
+class CustomTextNode extends $pb.GeneratedMessage {
+  factory CustomTextNode({
+    CustomTextNode_Type? type,
+    $core.String? data,
+  }) {
+    final $result = create();
+    if (type != null) {
+      $result.type = type;
+    }
+    if (data != null) {
+      $result.data = data;
+    }
+    return $result;
+  }
+  CustomTextNode._() : super();
+  factory CustomTextNode.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory CustomTextNode.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CustomTextNode', package: const $pb.PackageName(_omitMessageNames ? '' : 'ui'), createEmptyInstance: create)
+    ..e<CustomTextNode_Type>(1, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: CustomTextNode_Type.TEXT, valueOf: CustomTextNode_Type.valueOf, enumValues: CustomTextNode_Type.values)
+    ..aOS(2, _omitFieldNames ? '' : 'data')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  CustomTextNode clone() => CustomTextNode()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  CustomTextNode copyWith(void Function(CustomTextNode) updates) => super.copyWith((message) => updates(message as CustomTextNode)) as CustomTextNode;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static CustomTextNode create() => CustomTextNode._();
+  CustomTextNode createEmptyInstance() => create();
+  static $pb.PbList<CustomTextNode> createRepeated() => $pb.PbList<CustomTextNode>();
+  @$core.pragma('dart2js:noInline')
+  static CustomTextNode getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<CustomTextNode>(create);
+  static CustomTextNode? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  CustomTextNode_Type get type => $_getN(0);
+  @$pb.TagNumber(1)
+  set type(CustomTextNode_Type v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearType() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get data => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set data($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasData() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearData() => clearField(2);
 }
 
 

@@ -139,5 +139,24 @@ class SessionState_SpaceSetting_NotificationSetting extends $pb.ProtobufEnum {
   const SessionState_SpaceSetting_NotificationSetting._($core.int v, $core.String n) : super(v, n);
 }
 
+class CustomTextNode_Type extends $pb.ProtobufEnum {
+  static const CustomTextNode_Type TEXT = CustomTextNode_Type._(0, _omitEnumNames ? '' : 'TEXT');
+  static const CustomTextNode_Type MENTION = CustomTextNode_Type._(1, _omitEnumNames ? '' : 'MENTION');
+  static const CustomTextNode_Type LINK = CustomTextNode_Type._(2, _omitEnumNames ? '' : 'LINK');
+  static const CustomTextNode_Type EMOJI = CustomTextNode_Type._(3, _omitEnumNames ? '' : 'EMOJI');
+
+  static const $core.List<CustomTextNode_Type> values = <CustomTextNode_Type> [
+    TEXT,
+    MENTION,
+    LINK,
+    EMOJI,
+  ];
+
+  static final $core.Map<$core.int, CustomTextNode_Type> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CustomTextNode_Type? valueOf($core.int value) => _byValue[value];
+
+  const CustomTextNode_Type._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

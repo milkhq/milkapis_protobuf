@@ -545,8 +545,17 @@ const UserDocument$json = {
     {'1': 'feature_flags', '3': 11, '4': 3, '5': 14, '6': '.user.UserFeatureFlags', '10': 'featureFlags'},
     {'1': 'presence_status', '3': 12, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'presenceStatus'},
   ],
-  '3': [UserDocument_Metadata$json],
+  '3': [UserDocument_ForceLightningEffectParameters$json, UserDocument_Metadata$json],
   '4': [UserDocument_UserProfileEffectsV1$json],
+};
+
+@$core.Deprecated('Use userDocumentDescriptor instead')
+const UserDocument_ForceLightningEffectParameters$json = {
+  '1': 'ForceLightningEffectParameters',
+  '2': [
+    {'1': 'color', '3': 1, '4': 1, '5': 13, '10': 'color'},
+    {'1': 'border_width', '3': 2, '4': 1, '5': 2, '10': 'borderWidth'},
+  ],
 };
 
 @$core.Deprecated('Use userDocumentDescriptor instead')
@@ -566,6 +575,7 @@ const UserDocument_Metadata$json = {
     {'1': 'updated_at', '3': 11, '4': 1, '5': 4, '10': 'updatedAt'},
     {'1': 'effect', '3': 12, '4': 1, '5': 14, '6': '.user.UserDocument.UserProfileEffectsV1', '10': 'effect'},
     {'1': 'effect_parameters', '3': 13, '4': 1, '5': 9, '10': 'effectParameters'},
+    {'1': 'effect_parameters_v2', '3': 14, '4': 1, '5': 12, '10': 'effectParametersV2'},
   ],
 };
 
@@ -590,17 +600,19 @@ final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
     '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxI7'
     'Cg1mZWF0dXJlX2ZsYWdzGAsgAygOMhYudXNlci5Vc2VyRmVhdHVyZUZsYWdzUgxmZWF0dXJlRm'
     'xhZ3MSQwoPcHJlc2VuY2Vfc3RhdHVzGAwgASgOMhoudXNlci5VU0VSX1BSRVNFTkNFX1NUQVRV'
-    'U1IOcHJlc2VuY2VTdGF0dXMa7QMKCE1ldGFkYXRhEhoKCHVzZXJuYW1lGAEgASgJUgh1c2Vybm'
-    'FtZRIUCgVlbWFpbBgCIAEoCVIFZW1haWwSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5'
-    'TmFtZRIQCgNiaW8YBCABKAlSA2JpbxIkCgZzb2NpYWwYBSABKA4yDC51c2VyLlNPQ0lBTFIGc2'
-    '9jaWFsEhsKCXNvY2lhbF9pZBgGIAEoCVIIc29jaWFsSWQSKAoQYXZhdGFyX2ltYWdlX3VybBgH'
-    'IAEoCVIOYXZhdGFySW1hZ2VVcmwSKgoRYXZhdGFyX2ltYWdlX2hhc2gYCCABKAlSD2F2YXRhck'
-    'ltYWdlSGFzaBIoChBiYW5uZXJfaW1hZ2VfdXJsGAkgASgJUg5iYW5uZXJJbWFnZVVybBIqChFi'
-    'YW5uZXJfaW1hZ2VfaGFzaBgKIAEoCVIPYmFubmVySW1hZ2VIYXNoEh0KCnVwZGF0ZWRfYXQYCy'
-    'ABKARSCXVwZGF0ZWRBdBI/CgZlZmZlY3QYDCABKA4yJy51c2VyLlVzZXJEb2N1bWVudC5Vc2Vy'
-    'UHJvZmlsZUVmZmVjdHNWMVIGZWZmZWN0EisKEWVmZmVjdF9wYXJhbWV0ZXJzGA0gASgJUhBlZm'
-    'ZlY3RQYXJhbWV0ZXJzIjUKFFVzZXJQcm9maWxlRWZmZWN0c1YxEggKBE5PTkUQABITCg9GT1JD'
-    'RV9MSUdIVE5JTkcQAQ==');
+    'U1IOcHJlc2VuY2VTdGF0dXMaWQoeRm9yY2VMaWdodG5pbmdFZmZlY3RQYXJhbWV0ZXJzEhQKBW'
+    'NvbG9yGAEgASgNUgVjb2xvchIhCgxib3JkZXJfd2lkdGgYAiABKAJSC2JvcmRlcldpZHRoGp8E'
+    'CghNZXRhZGF0YRIaCgh1c2VybmFtZRgBIAEoCVIIdXNlcm5hbWUSFAoFZW1haWwYAiABKAlSBW'
+    'VtYWlsEiEKDGRpc3BsYXlfbmFtZRgDIAEoCVILZGlzcGxheU5hbWUSEAoDYmlvGAQgASgJUgNi'
+    'aW8SJAoGc29jaWFsGAUgASgOMgwudXNlci5TT0NJQUxSBnNvY2lhbBIbCglzb2NpYWxfaWQYBi'
+    'ABKAlSCHNvY2lhbElkEigKEGF2YXRhcl9pbWFnZV91cmwYByABKAlSDmF2YXRhckltYWdlVXJs'
+    'EioKEWF2YXRhcl9pbWFnZV9oYXNoGAggASgJUg9hdmF0YXJJbWFnZUhhc2gSKAoQYmFubmVyX2'
+    'ltYWdlX3VybBgJIAEoCVIOYmFubmVySW1hZ2VVcmwSKgoRYmFubmVyX2ltYWdlX2hhc2gYCiAB'
+    'KAlSD2Jhbm5lckltYWdlSGFzaBIdCgp1cGRhdGVkX2F0GAsgASgEUgl1cGRhdGVkQXQSPwoGZW'
+    'ZmZWN0GAwgASgOMicudXNlci5Vc2VyRG9jdW1lbnQuVXNlclByb2ZpbGVFZmZlY3RzVjFSBmVm'
+    'ZmVjdBIrChFlZmZlY3RfcGFyYW1ldGVycxgNIAEoCVIQZWZmZWN0UGFyYW1ldGVycxIwChRlZm'
+    'ZlY3RfcGFyYW1ldGVyc192MhgOIAEoDFISZWZmZWN0UGFyYW1ldGVyc1YyIjUKFFVzZXJQcm9m'
+    'aWxlRWZmZWN0c1YxEggKBE5PTkUQABITCg9GT1JDRV9MSUdIVE5JTkcQAQ==');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {

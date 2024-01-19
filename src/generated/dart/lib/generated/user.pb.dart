@@ -1644,6 +1644,70 @@ class GetUserRequest extends $pb.GeneratedMessage {
   void clearUid() => clearField(1);
 }
 
+class UserDocument_ForceLightningEffectParameters extends $pb.GeneratedMessage {
+  factory UserDocument_ForceLightningEffectParameters({
+    $core.int? color,
+    $core.double? borderWidth,
+  }) {
+    final $result = create();
+    if (color != null) {
+      $result.color = color;
+    }
+    if (borderWidth != null) {
+      $result.borderWidth = borderWidth;
+    }
+    return $result;
+  }
+  UserDocument_ForceLightningEffectParameters._() : super();
+  factory UserDocument_ForceLightningEffectParameters.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserDocument_ForceLightningEffectParameters.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserDocument.ForceLightningEffectParameters', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OU3)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'borderWidth', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserDocument_ForceLightningEffectParameters clone() => UserDocument_ForceLightningEffectParameters()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserDocument_ForceLightningEffectParameters copyWith(void Function(UserDocument_ForceLightningEffectParameters) updates) => super.copyWith((message) => updates(message as UserDocument_ForceLightningEffectParameters)) as UserDocument_ForceLightningEffectParameters;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserDocument_ForceLightningEffectParameters create() => UserDocument_ForceLightningEffectParameters._();
+  UserDocument_ForceLightningEffectParameters createEmptyInstance() => create();
+  static $pb.PbList<UserDocument_ForceLightningEffectParameters> createRepeated() => $pb.PbList<UserDocument_ForceLightningEffectParameters>();
+  @$core.pragma('dart2js:noInline')
+  static UserDocument_ForceLightningEffectParameters getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserDocument_ForceLightningEffectParameters>(create);
+  static UserDocument_ForceLightningEffectParameters? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get color => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set color($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasColor() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearColor() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get borderWidth => $_getN(1);
+  @$pb.TagNumber(2)
+  set borderWidth($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasBorderWidth() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearBorderWidth() => clearField(2);
+}
+
 class UserDocument_Metadata extends $pb.GeneratedMessage {
   factory UserDocument_Metadata({
     $core.String? username,
@@ -1659,6 +1723,7 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     $fixnum.Int64? updatedAt,
     UserDocument_UserProfileEffectsV1? effect,
     $core.String? effectParameters,
+    $core.List<$core.int>? effectParametersV2,
   }) {
     final $result = create();
     if (username != null) {
@@ -1700,6 +1765,9 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     if (effectParameters != null) {
       $result.effectParameters = effectParameters;
     }
+    if (effectParametersV2 != null) {
+      $result.effectParametersV2 = effectParametersV2;
+    }
     return $result;
   }
   UserDocument_Metadata._() : super();
@@ -1720,6 +1788,7 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(11, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<UserDocument_UserProfileEffectsV1>(12, _omitFieldNames ? '' : 'effect', $pb.PbFieldType.OE, defaultOrMaker: UserDocument_UserProfileEffectsV1.NONE, valueOf: UserDocument_UserProfileEffectsV1.valueOf, enumValues: UserDocument_UserProfileEffectsV1.values)
     ..aOS(13, _omitFieldNames ? '' : 'effectParameters')
+    ..a<$core.List<$core.int>>(14, _omitFieldNames ? '' : 'effectParametersV2', $pb.PbFieldType.OY)
     ..hasRequiredFields = false
   ;
 
@@ -1860,6 +1929,15 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasEffectParameters() => $_has(12);
   @$pb.TagNumber(13)
   void clearEffectParameters() => clearField(13);
+
+  @$pb.TagNumber(14)
+  $core.List<$core.int> get effectParametersV2 => $_getN(13);
+  @$pb.TagNumber(14)
+  set effectParametersV2($core.List<$core.int> v) { $_setBytes(13, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasEffectParametersV2() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearEffectParametersV2() => clearField(14);
 }
 
 class UserDocument extends $pb.GeneratedMessage {

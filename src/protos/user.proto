@@ -242,6 +242,11 @@ message UserDocument {
     FORCE_LIGHTNING = 1;
   }
 
+  message ForceLightningEffectParameters {
+    uint32 color = 1;
+    float border_width = 2;
+  }
+
   message Metadata {
     string username = 1;
     string email = 2;
@@ -256,6 +261,7 @@ message UserDocument {
     uint64 updated_at = 11;
     UserProfileEffectsV1 effect = 12;
     string effect_parameters = 13;
+    bytes effect_parameters_v2 = 14;
   }
 }
 

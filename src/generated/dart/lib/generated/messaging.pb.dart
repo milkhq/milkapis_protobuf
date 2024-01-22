@@ -18,6 +18,116 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class UpdateSpaceChannelCategoryStatusRequest extends $pb.GeneratedMessage {
+  factory UpdateSpaceChannelCategoryStatusRequest({
+    $core.String? spaceId,
+    $core.String? categoryId,
+    $core.String? userRoleId,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
+    return $result;
+  }
+  UpdateSpaceChannelCategoryStatusRequest._() : super();
+  factory UpdateSpaceChannelCategoryStatusRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceChannelCategoryStatusRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceChannelCategoryStatusRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'categoryId')
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryStatusRequest clone() => UpdateSpaceChannelCategoryStatusRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryStatusRequest copyWith(void Function(UpdateSpaceChannelCategoryStatusRequest) updates) => super.copyWith((message) => updates(message as UpdateSpaceChannelCategoryStatusRequest)) as UpdateSpaceChannelCategoryStatusRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryStatusRequest create() => UpdateSpaceChannelCategoryStatusRequest._();
+  UpdateSpaceChannelCategoryStatusRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceChannelCategoryStatusRequest> createRepeated() => $pb.PbList<UpdateSpaceChannelCategoryStatusRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryStatusRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceChannelCategoryStatusRequest>(create);
+  static UpdateSpaceChannelCategoryStatusRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get categoryId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set categoryId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasCategoryId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearCategoryId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
+}
+
+class UpdateSpaceChannelCategoryStatusResponse extends $pb.GeneratedMessage {
+  factory UpdateSpaceChannelCategoryStatusResponse() => create();
+  UpdateSpaceChannelCategoryStatusResponse._() : super();
+  factory UpdateSpaceChannelCategoryStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateSpaceChannelCategoryStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceChannelCategoryStatusResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryStatusResponse clone() => UpdateSpaceChannelCategoryStatusResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateSpaceChannelCategoryStatusResponse copyWith(void Function(UpdateSpaceChannelCategoryStatusResponse) updates) => super.copyWith((message) => updates(message as UpdateSpaceChannelCategoryStatusResponse)) as UpdateSpaceChannelCategoryStatusResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryStatusResponse create() => UpdateSpaceChannelCategoryStatusResponse._();
+  UpdateSpaceChannelCategoryStatusResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateSpaceChannelCategoryStatusResponse> createRepeated() => $pb.PbList<UpdateSpaceChannelCategoryStatusResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSpaceChannelCategoryStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceChannelCategoryStatusResponse>(create);
+  static UpdateSpaceChannelCategoryStatusResponse? _defaultInstance;
+}
+
 class GetDirectChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
   factory GetDirectChannelMessageReactionsSetRequest({
     $core.String? channelId,
@@ -3608,6 +3718,7 @@ class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   factory CreateSpaceChannelCategoryRequest({
     ChannelCategoryDocument? category,
     $core.String? spaceId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (category != null) {
@@ -3615,6 +3726,9 @@ class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
     }
     if (spaceId != null) {
       $result.spaceId = spaceId;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -3625,6 +3739,7 @@ class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateSpaceChannelCategoryRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOM<ChannelCategoryDocument>(1, _omitFieldNames ? '' : 'category', subBuilder: ChannelCategoryDocument.create)
     ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -3668,6 +3783,15 @@ class CreateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(1);
   @$pb.TagNumber(2)
   void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
 }
 
 class CreateSpaceChannelCategoryResponse extends $pb.GeneratedMessage {
@@ -4441,6 +4565,7 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? roleIds,
     $fixnum.Int64? nonce,
     DOCUMENT_STATUS? documentStatus,
+    ChannelCategoryDocument_STATUS? status,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -4470,6 +4595,9 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
     if (documentStatus != null) {
       $result.documentStatus = documentStatus;
     }
+    if (status != null) {
+      $result.status = status;
+    }
     return $result;
   }
   ChannelCategoryDocument._() : super();
@@ -4486,6 +4614,7 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
     ..pPS(7, _omitFieldNames ? '' : 'roleIds')
     ..a<$fixnum.Int64>(8, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<DOCUMENT_STATUS>(9, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
+    ..e<ChannelCategoryDocument_STATUS>(10, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ChannelCategoryDocument_STATUS.ACTIVE, valueOf: ChannelCategoryDocument_STATUS.valueOf, enumValues: ChannelCategoryDocument_STATUS.values)
     ..hasRequiredFields = false
   ;
 
@@ -4584,6 +4713,15 @@ class ChannelCategoryDocument extends $pb.GeneratedMessage {
   $core.bool hasDocumentStatus() => $_has(8);
   @$pb.TagNumber(9)
   void clearDocumentStatus() => clearField(9);
+
+  @$pb.TagNumber(10)
+  ChannelCategoryDocument_STATUS get status => $_getN(9);
+  @$pb.TagNumber(10)
+  set status(ChannelCategoryDocument_STATUS v) { setField(10, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasStatus() => $_has(9);
+  @$pb.TagNumber(10)
+  void clearStatus() => clearField(10);
 }
 
 class ChannelRoleDocument extends $pb.GeneratedMessage {
@@ -6074,6 +6212,7 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
     ChannelDocument? channel,
     MessageDocument? message,
     $core.Iterable<$core.String>? members,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channel != null) {
@@ -6085,6 +6224,9 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
     if (members != null) {
       $result.members.addAll(members);
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   CreateChannelRequest._() : super();
@@ -6095,6 +6237,7 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
     ..aOM<ChannelDocument>(1, _omitFieldNames ? '' : 'channel', subBuilder: ChannelDocument.create)
     ..aOM<MessageDocument>(2, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
     ..pPS(3, _omitFieldNames ? '' : 'members')
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -6143,6 +6286,15 @@ class CreateChannelRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$core.String> get members => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class CreateChannelResponse extends $pb.GeneratedMessage {
@@ -6529,6 +6681,7 @@ class UpdateChannelStatusRequest extends $pb.GeneratedMessage {
   factory UpdateChannelStatusRequest({
     $core.String? channelId,
     ChannelReference? references,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -6536,6 +6689,9 @@ class UpdateChannelStatusRequest extends $pb.GeneratedMessage {
     }
     if (references != null) {
       $result.references = references;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -6546,6 +6702,7 @@ class UpdateChannelStatusRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateChannelStatusRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOM<ChannelReference>(2, _omitFieldNames ? '' : 'references', subBuilder: ChannelReference.create)
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -6589,6 +6746,15 @@ class UpdateChannelStatusRequest extends $pb.GeneratedMessage {
   void clearReferences() => clearField(2);
   @$pb.TagNumber(2)
   ChannelReference ensureReferences() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
 }
 
 class UpdateChannelStatusResponse extends $pb.GeneratedMessage {

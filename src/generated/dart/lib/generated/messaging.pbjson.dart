@@ -158,6 +158,31 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
 
+@$core.Deprecated('Use updateSpaceChannelCategoryStatusRequestDescriptor instead')
+const UpdateSpaceChannelCategoryStatusRequest$json = {
+  '1': 'UpdateSpaceChannelCategoryStatusRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'category_id', '3': 2, '4': 1, '5': 9, '10': 'categoryId'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceChannelCategoryStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceChannelCategoryStatusRequestDescriptor = $convert.base64Decode(
+    'CidVcGRhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVN0YXR1c1JlcXVlc3QSGQoIc3BhY2VfaWQYAS'
+    'ABKAlSB3NwYWNlSWQSHwoLY2F0ZWdvcnlfaWQYAiABKAlSCmNhdGVnb3J5SWQSIAoMdXNlcl9y'
+    'b2xlX2lkGAMgASgJUgp1c2VyUm9sZUlk');
+
+@$core.Deprecated('Use updateSpaceChannelCategoryStatusResponseDescriptor instead')
+const UpdateSpaceChannelCategoryStatusResponse$json = {
+  '1': 'UpdateSpaceChannelCategoryStatusResponse',
+};
+
+/// Descriptor for `UpdateSpaceChannelCategoryStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceChannelCategoryStatusResponseDescriptor = $convert.base64Decode(
+    'CihVcGRhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVN0YXR1c1Jlc3BvbnNl');
+
 @$core.Deprecated('Use getDirectChannelMessageReactionsSetRequestDescriptor instead')
 const GetDirectChannelMessageReactionsSetRequest$json = {
   '1': 'GetDirectChannelMessageReactionsSetRequest',
@@ -1041,6 +1066,7 @@ const CreateSpaceChannelCategoryRequest$json = {
   '2': [
     {'1': 'category', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelCategoryDocument', '10': 'category'},
     {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1048,7 +1074,7 @@ const CreateSpaceChannelCategoryRequest$json = {
 final $typed_data.Uint8List createSpaceChannelCategoryRequestDescriptor = $convert.base64Decode(
     'CiFDcmVhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVJlcXVlc3QSPgoIY2F0ZWdvcnkYASABKAsyIi'
     '5tZXNzYWdpbmcuQ2hhbm5lbENhdGVnb3J5RG9jdW1lbnRSCGNhdGVnb3J5EhkKCHNwYWNlX2lk'
-    'GAIgASgJUgdzcGFjZUlk');
+    'GAIgASgJUgdzcGFjZUlkEiAKDHVzZXJfcm9sZV9pZBgDIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use createSpaceChannelCategoryResponseDescriptor instead')
 const CreateSpaceChannelCategoryResponse$json = {
@@ -1251,6 +1277,18 @@ const ChannelCategoryDocument$json = {
     {'1': 'role_ids', '3': 7, '4': 3, '5': 9, '10': 'roleIds'},
     {'1': 'nonce', '3': 8, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'document_status', '3': 9, '4': 1, '5': 14, '6': '.messaging.DOCUMENT_STATUS', '10': 'documentStatus'},
+    {'1': 'status', '3': 10, '4': 1, '5': 14, '6': '.messaging.ChannelCategoryDocument.STATUS', '10': 'status'},
+  ],
+  '4': [ChannelCategoryDocument_STATUS$json],
+};
+
+@$core.Deprecated('Use channelCategoryDocumentDescriptor instead')
+const ChannelCategoryDocument_STATUS$json = {
+  '1': 'STATUS',
+  '2': [
+    {'1': 'ACTIVE', '2': 0},
+    {'1': 'ARCHIVED', '2': 1},
+    {'1': 'DELETED', '2': 2},
   ],
 };
 
@@ -1262,7 +1300,9 @@ final $typed_data.Uint8List channelCategoryDocumentDescriptor = $convert.base64D
     '1hZ2VfaGFzaBgFIAEoCVIPYXZhdGFySW1hZ2VIYXNoEhIKBHJhbmsYBiABKAVSBHJhbmsSGQoI'
     'cm9sZV9pZHMYByADKAlSB3JvbGVJZHMSFAoFbm9uY2UYCCABKARSBW5vbmNlEkMKD2RvY3VtZW'
     '50X3N0YXR1cxgJIAEoDjIaLm1lc3NhZ2luZy5ET0NVTUVOVF9TVEFUVVNSDmRvY3VtZW50U3Rh'
-    'dHVz');
+    'dHVzEkEKBnN0YXR1cxgKIAEoDjIpLm1lc3NhZ2luZy5DaGFubmVsQ2F0ZWdvcnlEb2N1bWVudC'
+    '5TVEFUVVNSBnN0YXR1cyIvCgZTVEFUVVMSCgoGQUNUSVZFEAASDAoIQVJDSElWRUQQARILCgdE'
+    'RUxFVEVEEAI=');
 
 @$core.Deprecated('Use channelRoleDocumentDescriptor instead')
 const ChannelRoleDocument$json = {
@@ -1513,6 +1553,7 @@ const CreateChannelRequest$json = {
     {'1': 'channel', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelDocument', '10': 'channel'},
     {'1': 'message', '3': 2, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
     {'1': 'members', '3': 3, '4': 3, '5': 9, '10': 'members'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1520,7 +1561,8 @@ const CreateChannelRequest$json = {
 final $typed_data.Uint8List createChannelRequestDescriptor = $convert.base64Decode(
     'ChRDcmVhdGVDaGFubmVsUmVxdWVzdBI0CgdjaGFubmVsGAEgASgLMhoubWVzc2FnaW5nLkNoYW'
     '5uZWxEb2N1bWVudFIHY2hhbm5lbBI0CgdtZXNzYWdlGAIgASgLMhoubWVzc2FnaW5nLk1lc3Nh'
-    'Z2VEb2N1bWVudFIHbWVzc2FnZRIYCgdtZW1iZXJzGAMgAygJUgdtZW1iZXJz');
+    'Z2VEb2N1bWVudFIHbWVzc2FnZRIYCgdtZW1iZXJzGAMgAygJUgdtZW1iZXJzEiAKDHVzZXJfcm'
+    '9sZV9pZBgEIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use createChannelResponseDescriptor instead')
 const CreateChannelResponse$json = {
@@ -1607,6 +1649,7 @@ const UpdateChannelStatusRequest$json = {
   '2': [
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'references', '3': 2, '4': 1, '5': 11, '6': '.messaging.ChannelReference', '10': 'references'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1614,7 +1657,7 @@ const UpdateChannelStatusRequest$json = {
 final $typed_data.Uint8List updateChannelStatusRequestDescriptor = $convert.base64Decode(
     'ChpVcGRhdGVDaGFubmVsU3RhdHVzUmVxdWVzdBIdCgpjaGFubmVsX2lkGAEgASgJUgljaGFubm'
     'VsSWQSOwoKcmVmZXJlbmNlcxgCIAEoCzIbLm1lc3NhZ2luZy5DaGFubmVsUmVmZXJlbmNlUgpy'
-    'ZWZlcmVuY2Vz');
+    'ZWZlcmVuY2VzEiAKDHVzZXJfcm9sZV9pZBgDIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use updateChannelStatusResponseDescriptor instead')
 const UpdateChannelStatusResponse$json = {

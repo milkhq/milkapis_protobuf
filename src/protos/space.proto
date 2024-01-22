@@ -434,10 +434,11 @@ message CreateSpaceResponse {
 message UpdateSpaceMetadataRequest {
   string space_id = 1;
   SpaceDocument.Metadata metadata = 2;
+  string user_role_id = 3;
 }
 message UpdateSpaceMetadataResponse { string space_id = 1; }
-message UpdateSpaceStatusRequest { string space_id = 1; }
-message UpdateSpaceStatusResponse { string space_id = 1; }
+message UpdateSpaceStatusRequest { string space_id = 1; string user_role_id = 2; }
+message UpdateSpaceStatusResponse { }
 
 message JoinSpacePayload {
   string space_id = 1;

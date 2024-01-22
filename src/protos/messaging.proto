@@ -20,6 +20,7 @@ service Messaging {
     rpc SetSpaceChannelCategoryOrder(SetSpaceChannelCategoryOrderRequest) returns (SetSpaceChannelCategoryOrderResponse);
     rpc SendSpaceChannelThreadMessage(SendSpaceChannelThreadMessageRequest) returns (SendSpaceChannelThreadMessageResponse);
     rpc CreateSpaceChannelFileUploadUrl(CreateSpaceChannelFileUploadUrlRequest) returns (CreateSpaceChannelFileUploadUrlResponse);
+    rpc DeleteSpaceChannelCategory(UpdateSpaceChannelCategoryStatusRequest) returns (UpdateSpaceChannelCategoryStatusResponse);
 
     // Direct Channels
     rpc CreateDirectChannel(CreateDirectConversationRequest) returns (CreateDirectConversationResponse);
@@ -84,6 +85,16 @@ service Messaging {
     // User Presence Subscriptions
     rpc SubscribeToUserPresence(SubscribeToUserPresenceRequest) returns (SubscribeToUserPresenceResponse);
     rpc UnsubscribeToUserPresence(UnsubscribeToUserPresenceRequest) returns (UnsubscribeToUserPresenceResponse);
+}
+
+message UpdateSpaceChannelCategoryStatusRequest {
+    string space_id = 1;
+    string category_id = 2;
+    string user_role_id = 3;
+}
+
+message UpdateSpaceChannelCategoryStatusResponse {
+
 }
 
 message GetDirectChannelMessageReactionsSetRequest {
@@ -414,6 +425,7 @@ message UpdateSpaceChannelCategoryResponse {
 message CreateSpaceChannelCategoryRequest {
     ChannelCategoryDocument category = 1;
     string space_id = 2;
+    string user_role_id = 3;
 }
 
 message CreateSpaceChannelCategoryResponse {
@@ -499,6 +511,13 @@ message ChannelCategoryDocument {
     repeated string role_ids = 7;
     uint64 nonce = 8;
     DOCUMENT_STATUS document_status = 9;
+    STATUS status = 10;
+
+    enum STATUS {
+        ACTIVE = 0;
+        ARCHIVED = 1;
+        DELETED = 2;
+    }
 }
 
 message ChannelRoleDocument {
@@ -624,6 +643,7 @@ message CreateChannelRequest {
     ChannelDocument channel = 1;
     MessageDocument message = 2;
     repeated string members = 3;
+    string user_role_id = 4;
 }
 
 message CreateChannelResponse {
@@ -658,6 +678,7 @@ message UpdateChannelMetadataResponse {
 message UpdateChannelStatusRequest {
     string channel_id = 1;
     ChannelReference references = 2;
+    string user_role_id = 3;
 }
 
 message UpdateChannelStatusResponse {

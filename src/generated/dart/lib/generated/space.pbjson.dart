@@ -1013,6 +1013,7 @@ const UpdateSpaceMetadataRequest$json = {
   '2': [
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'metadata', '3': 2, '4': 1, '5': 11, '6': '.space.SpaceDocument.Metadata', '10': 'metadata'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1020,7 +1021,7 @@ const UpdateSpaceMetadataRequest$json = {
 final $typed_data.Uint8List updateSpaceMetadataRequestDescriptor = $convert.base64Decode(
     'ChpVcGRhdGVTcGFjZU1ldGFkYXRhUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZB'
     'I5CghtZXRhZGF0YRgCIAEoCzIdLnNwYWNlLlNwYWNlRG9jdW1lbnQuTWV0YWRhdGFSCG1ldGFk'
-    'YXRh');
+    'YXRhEiAKDHVzZXJfcm9sZV9pZBgDIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use updateSpaceMetadataResponseDescriptor instead')
 const UpdateSpaceMetadataResponse$json = {
@@ -1040,24 +1041,23 @@ const UpdateSpaceStatusRequest$json = {
   '1': 'UpdateSpaceStatusRequest',
   '2': [
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 2, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
 /// Descriptor for `UpdateSpaceStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateSpaceStatusRequestDescriptor = $convert.base64Decode(
-    'ChhVcGRhdGVTcGFjZVN0YXR1c1JlcXVlc3QSGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQ=');
+    'ChhVcGRhdGVTcGFjZVN0YXR1c1JlcXVlc3QSGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSIA'
+    'oMdXNlcl9yb2xlX2lkGAIgASgJUgp1c2VyUm9sZUlk');
 
 @$core.Deprecated('Use updateSpaceStatusResponseDescriptor instead')
 const UpdateSpaceStatusResponse$json = {
   '1': 'UpdateSpaceStatusResponse',
-  '2': [
-    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
-  ],
 };
 
 /// Descriptor for `UpdateSpaceStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateSpaceStatusResponseDescriptor = $convert.base64Decode(
-    'ChlVcGRhdGVTcGFjZVN0YXR1c1Jlc3BvbnNlEhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlk');
+    'ChlVcGRhdGVTcGFjZVN0YXR1c1Jlc3BvbnNl');
 
 @$core.Deprecated('Use joinSpacePayloadDescriptor instead')
 const JoinSpacePayload$json = {

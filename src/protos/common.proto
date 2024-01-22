@@ -4,6 +4,7 @@ package common;
 
 import "user.proto";
 import "messaging.proto";
+import "space.proto";
 
 enum CollectionsV1 {
     USERS = 0;
@@ -104,6 +105,9 @@ enum EVENT_TYPE {
     CHANNEL_MESSAGE_UPDATED = 37;
     CHANNEL_MESSAGE_REACTION_UPDATED = 38;
     NEW_CONVERSATION_UPDATED = 39;
+    SPACE_UPDATED = 40;
+    SPACE_CHANNEL_UPDATED = 41;
+    SPACE_CHANNEL_CATEGORY_UPDATED = 42;
 }
 
 message ProxyMessage {
@@ -181,4 +185,19 @@ message NewConversationUpdate {
     string user_id = 1;
     string device_id = 2;
     messaging.ConversationDocument document = 3;
+}
+
+message SpaceUpdate {
+    space.SpaceDocument space = 1;
+}
+
+message SpaceChannelUpdate {
+    messaging.ChannelDocument document = 1;
+    string space_id = 2;
+    string category_id = 3;
+}
+
+message SpaceChannelCategoryUpdate {
+    messaging.ChannelCategoryDocument document = 1;
+    string space_id = 2;
 }

@@ -182,6 +182,9 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
   static const EVENT_TYPE CHANNEL_MESSAGE_UPDATED = EVENT_TYPE._(37, _omitEnumNames ? '' : 'CHANNEL_MESSAGE_UPDATED');
   static const EVENT_TYPE CHANNEL_MESSAGE_REACTION_UPDATED = EVENT_TYPE._(38, _omitEnumNames ? '' : 'CHANNEL_MESSAGE_REACTION_UPDATED');
   static const EVENT_TYPE NEW_CONVERSATION_UPDATED = EVENT_TYPE._(39, _omitEnumNames ? '' : 'NEW_CONVERSATION_UPDATED');
+  static const EVENT_TYPE SPACE_UPDATED = EVENT_TYPE._(40, _omitEnumNames ? '' : 'SPACE_UPDATED');
+  static const EVENT_TYPE SPACE_CHANNEL_UPDATED = EVENT_TYPE._(41, _omitEnumNames ? '' : 'SPACE_CHANNEL_UPDATED');
+  static const EVENT_TYPE SPACE_CHANNEL_CATEGORY_UPDATED = EVENT_TYPE._(42, _omitEnumNames ? '' : 'SPACE_CHANNEL_CATEGORY_UPDATED');
 
   static const $core.List<EVENT_TYPE> values = <EVENT_TYPE> [
     SPACE_CHANNEL_NEW_MESSAGE,
@@ -224,6 +227,9 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
     CHANNEL_MESSAGE_UPDATED,
     CHANNEL_MESSAGE_REACTION_UPDATED,
     NEW_CONVERSATION_UPDATED,
+    SPACE_UPDATED,
+    SPACE_CHANNEL_UPDATED,
+    SPACE_CHANNEL_CATEGORY_UPDATED,
   ];
 
   static final $core.Map<$core.int, EVENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);

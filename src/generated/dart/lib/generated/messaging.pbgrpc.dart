@@ -77,6 +77,10 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/CreateSpaceChannelFileUploadUrl',
       ($1.CreateSpaceChannelFileUploadUrlRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.CreateSpaceChannelFileUploadUrlResponse.fromBuffer(value));
+  static final _$deleteSpaceChannelCategory = $grpc.ClientMethod<$1.UpdateSpaceChannelCategoryStatusRequest, $1.UpdateSpaceChannelCategoryStatusResponse>(
+      '/messaging.Messaging/DeleteSpaceChannelCategory',
+      ($1.UpdateSpaceChannelCategoryStatusRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UpdateSpaceChannelCategoryStatusResponse.fromBuffer(value));
   static final _$createDirectChannel = $grpc.ClientMethod<$1.CreateDirectConversationRequest, $1.CreateDirectConversationResponse>(
       '/messaging.Messaging/CreateDirectChannel',
       ($1.CreateDirectConversationRequest value) => value.writeToBuffer(),
@@ -330,6 +334,10 @@ class MessagingClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$1.CreateSpaceChannelFileUploadUrlResponse> createSpaceChannelFileUploadUrl($1.CreateSpaceChannelFileUploadUrlRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$createSpaceChannelFileUploadUrl, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UpdateSpaceChannelCategoryStatusResponse> deleteSpaceChannelCategory($1.UpdateSpaceChannelCategoryStatusRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteSpaceChannelCategory, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.CreateDirectConversationResponse> createDirectChannel($1.CreateDirectConversationRequest request, {$grpc.CallOptions? options}) {
@@ -628,6 +636,13 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.CreateSpaceChannelFileUploadUrlRequest.fromBuffer(value),
         ($1.CreateSpaceChannelFileUploadUrlResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UpdateSpaceChannelCategoryStatusRequest, $1.UpdateSpaceChannelCategoryStatusResponse>(
+        'DeleteSpaceChannelCategory',
+        deleteSpaceChannelCategory_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UpdateSpaceChannelCategoryStatusRequest.fromBuffer(value),
+        ($1.UpdateSpaceChannelCategoryStatusResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.CreateDirectConversationRequest, $1.CreateDirectConversationResponse>(
         'CreateDirectChannel',
         createDirectChannel_Pre,
@@ -1022,6 +1037,10 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return createSpaceChannelFileUploadUrl(call, await request);
   }
 
+  $async.Future<$1.UpdateSpaceChannelCategoryStatusResponse> deleteSpaceChannelCategory_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateSpaceChannelCategoryStatusRequest> request) async {
+    return deleteSpaceChannelCategory(call, await request);
+  }
+
   $async.Future<$1.CreateDirectConversationResponse> createDirectChannel_Pre($grpc.ServiceCall call, $async.Future<$1.CreateDirectConversationRequest> request) async {
     return createDirectChannel(call, await request);
   }
@@ -1228,6 +1247,7 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$1.SetSpaceChannelCategoryOrderResponse> setSpaceChannelCategoryOrder($grpc.ServiceCall call, $1.SetSpaceChannelCategoryOrderRequest request);
   $async.Future<$1.SendSpaceChannelThreadMessageResponse> sendSpaceChannelThreadMessage($grpc.ServiceCall call, $1.SendSpaceChannelThreadMessageRequest request);
   $async.Future<$1.CreateSpaceChannelFileUploadUrlResponse> createSpaceChannelFileUploadUrl($grpc.ServiceCall call, $1.CreateSpaceChannelFileUploadUrlRequest request);
+  $async.Future<$1.UpdateSpaceChannelCategoryStatusResponse> deleteSpaceChannelCategory($grpc.ServiceCall call, $1.UpdateSpaceChannelCategoryStatusRequest request);
   $async.Future<$1.CreateDirectConversationResponse> createDirectChannel($grpc.ServiceCall call, $1.CreateDirectConversationRequest request);
   $async.Future<$1.UpdateChannelMetadataResponse> updateDirectChannelMetadata($grpc.ServiceCall call, $1.UpdateChannelMetadataRequest request);
   $async.Future<$1.UpdateChannelStatusResponse> deleteDirectChannel($grpc.ServiceCall call, $1.UpdateChannelStatusRequest request);

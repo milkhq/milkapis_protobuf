@@ -15,6 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'common.pbenum.dart';
 import 'messaging.pb.dart' as $1;
+import 'space.pb.dart' as $3;
 import 'user.pbenum.dart' as $0;
 
 export 'common.pbenum.dart';
@@ -1019,6 +1020,204 @@ class NewConversationUpdate extends $pb.GeneratedMessage {
   void clearDocument() => clearField(3);
   @$pb.TagNumber(3)
   $1.ConversationDocument ensureDocument() => $_ensure(2);
+}
+
+class SpaceUpdate extends $pb.GeneratedMessage {
+  factory SpaceUpdate({
+    $3.SpaceDocument? space,
+  }) {
+    final $result = create();
+    if (space != null) {
+      $result.space = space;
+    }
+    return $result;
+  }
+  SpaceUpdate._() : super();
+  factory SpaceUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOM<$3.SpaceDocument>(1, _omitFieldNames ? '' : 'space', subBuilder: $3.SpaceDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceUpdate clone() => SpaceUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceUpdate copyWith(void Function(SpaceUpdate) updates) => super.copyWith((message) => updates(message as SpaceUpdate)) as SpaceUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceUpdate create() => SpaceUpdate._();
+  SpaceUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceUpdate> createRepeated() => $pb.PbList<SpaceUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceUpdate>(create);
+  static SpaceUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $3.SpaceDocument get space => $_getN(0);
+  @$pb.TagNumber(1)
+  set space($3.SpaceDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpace() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpace() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.SpaceDocument ensureSpace() => $_ensure(0);
+}
+
+class SpaceChannelUpdate extends $pb.GeneratedMessage {
+  factory SpaceChannelUpdate({
+    $1.ChannelDocument? document,
+    $core.String? spaceId,
+    $core.String? categoryId,
+  }) {
+    final $result = create();
+    if (document != null) {
+      $result.document = document;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (categoryId != null) {
+      $result.categoryId = categoryId;
+    }
+    return $result;
+  }
+  SpaceChannelUpdate._() : super();
+  factory SpaceChannelUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceChannelUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceChannelUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOM<$1.ChannelDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: $1.ChannelDocument.create)
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(3, _omitFieldNames ? '' : 'categoryId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceChannelUpdate clone() => SpaceChannelUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceChannelUpdate copyWith(void Function(SpaceChannelUpdate) updates) => super.copyWith((message) => updates(message as SpaceChannelUpdate)) as SpaceChannelUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelUpdate create() => SpaceChannelUpdate._();
+  SpaceChannelUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceChannelUpdate> createRepeated() => $pb.PbList<SpaceChannelUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceChannelUpdate>(create);
+  static SpaceChannelUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.ChannelDocument get document => $_getN(0);
+  @$pb.TagNumber(1)
+  set document($1.ChannelDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDocument() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDocument() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.ChannelDocument ensureDocument() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get categoryId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set categoryId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasCategoryId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearCategoryId() => clearField(3);
+}
+
+class SpaceChannelCategoryUpdate extends $pb.GeneratedMessage {
+  factory SpaceChannelCategoryUpdate({
+    $1.ChannelCategoryDocument? document,
+    $core.String? spaceId,
+  }) {
+    final $result = create();
+    if (document != null) {
+      $result.document = document;
+    }
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    return $result;
+  }
+  SpaceChannelCategoryUpdate._() : super();
+  factory SpaceChannelCategoryUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceChannelCategoryUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceChannelCategoryUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOM<$1.ChannelCategoryDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: $1.ChannelCategoryDocument.create)
+    ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceChannelCategoryUpdate clone() => SpaceChannelCategoryUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceChannelCategoryUpdate copyWith(void Function(SpaceChannelCategoryUpdate) updates) => super.copyWith((message) => updates(message as SpaceChannelCategoryUpdate)) as SpaceChannelCategoryUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelCategoryUpdate create() => SpaceChannelCategoryUpdate._();
+  SpaceChannelCategoryUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceChannelCategoryUpdate> createRepeated() => $pb.PbList<SpaceChannelCategoryUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceChannelCategoryUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceChannelCategoryUpdate>(create);
+  static SpaceChannelCategoryUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.ChannelCategoryDocument get document => $_getN(0);
+  @$pb.TagNumber(1)
+  set document($1.ChannelCategoryDocument v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasDocument() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearDocument() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.ChannelCategoryDocument ensureDocument() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.String get spaceId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set spaceId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasSpaceId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearSpaceId() => clearField(2);
 }
 
 

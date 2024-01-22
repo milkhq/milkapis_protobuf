@@ -4290,6 +4290,7 @@ class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceMetadataRequest({
     $core.String? spaceId,
     SpaceDocument_Metadata? metadata,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -4297,6 +4298,9 @@ class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {
     }
     if (metadata != null) {
       $result.metadata = metadata;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -4307,6 +4311,7 @@ class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceMetadataRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOM<SpaceDocument_Metadata>(2, _omitFieldNames ? '' : 'metadata', subBuilder: SpaceDocument_Metadata.create)
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -4350,6 +4355,15 @@ class UpdateSpaceMetadataRequest extends $pb.GeneratedMessage {
   void clearMetadata() => clearField(2);
   @$pb.TagNumber(2)
   SpaceDocument_Metadata ensureMetadata() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
 }
 
 class UpdateSpaceMetadataResponse extends $pb.GeneratedMessage {
@@ -4405,10 +4419,14 @@ class UpdateSpaceMetadataResponse extends $pb.GeneratedMessage {
 class UpdateSpaceStatusRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceStatusRequest({
     $core.String? spaceId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
       $result.spaceId = spaceId;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -4418,6 +4436,7 @@ class UpdateSpaceStatusRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceStatusRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -4450,24 +4469,24 @@ class UpdateSpaceStatusRequest extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get userRoleId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set userRoleId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUserRoleId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserRoleId() => clearField(2);
 }
 
 class UpdateSpaceStatusResponse extends $pb.GeneratedMessage {
-  factory UpdateSpaceStatusResponse({
-    $core.String? spaceId,
-  }) {
-    final $result = create();
-    if (spaceId != null) {
-      $result.spaceId = spaceId;
-    }
-    return $result;
-  }
+  factory UpdateSpaceStatusResponse() => create();
   UpdateSpaceStatusResponse._() : super();
   factory UpdateSpaceStatusResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory UpdateSpaceStatusResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateSpaceStatusResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..hasRequiredFields = false
   ;
 
@@ -4491,15 +4510,6 @@ class UpdateSpaceStatusResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static UpdateSpaceStatusResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateSpaceStatusResponse>(create);
   static UpdateSpaceStatusResponse? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get spaceId => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set spaceId($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasSpaceId() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearSpaceId() => clearField(1);
 }
 
 class JoinSpacePayload extends $pb.GeneratedMessage {

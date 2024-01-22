@@ -154,6 +154,9 @@ const EVENT_TYPE$json = {
     {'1': 'CHANNEL_MESSAGE_UPDATED', '2': 37},
     {'1': 'CHANNEL_MESSAGE_REACTION_UPDATED', '2': 38},
     {'1': 'NEW_CONVERSATION_UPDATED', '2': 39},
+    {'1': 'SPACE_UPDATED', '2': 40},
+    {'1': 'SPACE_CHANNEL_UPDATED', '2': 41},
+    {'1': 'SPACE_CHANNEL_CATEGORY_UPDATED', '2': 42},
   ],
 };
 
@@ -185,7 +188,8 @@ final $typed_data.Uint8List eVENT_TYPEDescriptor = $convert.base64Decode(
     'ISKAokU1BBQ0VfQ0hBTk5FTF9USFJFQURfTUVTU0FHRV9VUERBVEVEECMSMQotU1BBQ0VfQ0hB'
     'Tk5FTF9USFJFQURfTUVTU0FHRV9SRUFDVElPTl9VUERBVEVEECQSGwoXQ0hBTk5FTF9NRVNTQU'
     'dFX1VQREFURUQQJRIkCiBDSEFOTkVMX01FU1NBR0VfUkVBQ1RJT05fVVBEQVRFRBAmEhwKGE5F'
-    'V19DT05WRVJTQVRJT05fVVBEQVRFRBAn');
+    'V19DT05WRVJTQVRJT05fVVBEQVRFRBAnEhEKDVNQQUNFX1VQREFURUQQKBIZChVTUEFDRV9DSE'
+    'FOTkVMX1VQREFURUQQKRIiCh5TUEFDRV9DSEFOTkVMX0NBVEVHT1JZX1VQREFURUQQKg==');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -375,4 +379,48 @@ final $typed_data.Uint8List newConversationUpdateDescriptor = $convert.base64Dec
     'ChVOZXdDb252ZXJzYXRpb25VcGRhdGUSFwoHdXNlcl9pZBgBIAEoCVIGdXNlcklkEhsKCWRldm'
     'ljZV9pZBgCIAEoCVIIZGV2aWNlSWQSOwoIZG9jdW1lbnQYAyABKAsyHy5tZXNzYWdpbmcuQ29u'
     'dmVyc2F0aW9uRG9jdW1lbnRSCGRvY3VtZW50');
+
+@$core.Deprecated('Use spaceUpdateDescriptor instead')
+const SpaceUpdate$json = {
+  '1': 'SpaceUpdate',
+  '2': [
+    {'1': 'space', '3': 1, '4': 1, '5': 11, '6': '.space.SpaceDocument', '10': 'space'},
+  ],
+};
+
+/// Descriptor for `SpaceUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceUpdateDescriptor = $convert.base64Decode(
+    'CgtTcGFjZVVwZGF0ZRIqCgVzcGFjZRgBIAEoCzIULnNwYWNlLlNwYWNlRG9jdW1lbnRSBXNwYW'
+    'Nl');
+
+@$core.Deprecated('Use spaceChannelUpdateDescriptor instead')
+const SpaceChannelUpdate$json = {
+  '1': 'SpaceChannelUpdate',
+  '2': [
+    {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelDocument', '10': 'document'},
+    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'category_id', '3': 3, '4': 1, '5': 9, '10': 'categoryId'},
+  ],
+};
+
+/// Descriptor for `SpaceChannelUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceChannelUpdateDescriptor = $convert.base64Decode(
+    'ChJTcGFjZUNoYW5uZWxVcGRhdGUSNgoIZG9jdW1lbnQYASABKAsyGi5tZXNzYWdpbmcuQ2hhbm'
+    '5lbERvY3VtZW50Ughkb2N1bWVudBIZCghzcGFjZV9pZBgCIAEoCVIHc3BhY2VJZBIfCgtjYXRl'
+    'Z29yeV9pZBgDIAEoCVIKY2F0ZWdvcnlJZA==');
+
+@$core.Deprecated('Use spaceChannelCategoryUpdateDescriptor instead')
+const SpaceChannelCategoryUpdate$json = {
+  '1': 'SpaceChannelCategoryUpdate',
+  '2': [
+    {'1': 'document', '3': 1, '4': 1, '5': 11, '6': '.messaging.ChannelCategoryDocument', '10': 'document'},
+    {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+  ],
+};
+
+/// Descriptor for `SpaceChannelCategoryUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceChannelCategoryUpdateDescriptor = $convert.base64Decode(
+    'ChpTcGFjZUNoYW5uZWxDYXRlZ29yeVVwZGF0ZRI+Cghkb2N1bWVudBgBIAEoCzIiLm1lc3NhZ2'
+    'luZy5DaGFubmVsQ2F0ZWdvcnlEb2N1bWVudFIIZG9jdW1lbnQSGQoIc3BhY2VfaWQYAiABKAlS'
+    'B3NwYWNlSWQ=');
 

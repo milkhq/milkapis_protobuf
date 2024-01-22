@@ -229,6 +229,23 @@ class UserChannelDocument_USER_CHANNEL_STATUS extends $pb.ProtobufEnum {
   const UserChannelDocument_USER_CHANNEL_STATUS._($core.int v, $core.String n) : super(v, n);
 }
 
+class ChannelCategoryDocument_STATUS extends $pb.ProtobufEnum {
+  static const ChannelCategoryDocument_STATUS ACTIVE = ChannelCategoryDocument_STATUS._(0, _omitEnumNames ? '' : 'ACTIVE');
+  static const ChannelCategoryDocument_STATUS ARCHIVED = ChannelCategoryDocument_STATUS._(1, _omitEnumNames ? '' : 'ARCHIVED');
+  static const ChannelCategoryDocument_STATUS DELETED = ChannelCategoryDocument_STATUS._(2, _omitEnumNames ? '' : 'DELETED');
+
+  static const $core.List<ChannelCategoryDocument_STATUS> values = <ChannelCategoryDocument_STATUS> [
+    ACTIVE,
+    ARCHIVED,
+    DELETED,
+  ];
+
+  static final $core.Map<$core.int, ChannelCategoryDocument_STATUS> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ChannelCategoryDocument_STATUS? valueOf($core.int value) => _byValue[value];
+
+  const ChannelCategoryDocument_STATUS._($core.int v, $core.String n) : super(v, n);
+}
+
 class MessageDocument_MESSAGE_TYPE extends $pb.ProtobufEnum {
   static const MessageDocument_MESSAGE_TYPE TEXT = MessageDocument_MESSAGE_TYPE._(0, _omitEnumNames ? '' : 'TEXT');
   static const MessageDocument_MESSAGE_TYPE FILE = MessageDocument_MESSAGE_TYPE._(1, _omitEnumNames ? '' : 'FILE');

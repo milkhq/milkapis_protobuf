@@ -1,6 +1,8 @@
 fn main() {
+    let is_wasm = std::env::var("TARGET").unwrap().contains("wasm32");
     tonic_build::configure()
         // .protoc_arg("--experimental_allow_proto3_optional")
+        .build_transport(!is_wasm)
         .build_server(true)
         .build_client(true)
         // .type_attribute(".", "#[derive(serde::Serialize, serde::Deserialize)]")

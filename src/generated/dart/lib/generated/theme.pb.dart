@@ -128,6 +128,10 @@ class ThemeOption extends $pb.GeneratedMessage {
     $core.List<$core.int>? message,
     PrefinedTheme? prefinedTheme,
     $core.int? updatedAt,
+    $core.Map<$core.String, ThemeOptionValue>? customSpaceButton,
+    $core.Map<$core.String, ThemeOptionValue>? customSpaceChannel,
+    $core.Map<$core.String, ThemeOptionValue>? customMessageTextField,
+    $core.Map<$core.String, ThemeOptionValue>? customMessage,
   }) {
     final $result = create();
     if (enabled != null) {
@@ -157,6 +161,18 @@ class ThemeOption extends $pb.GeneratedMessage {
     if (updatedAt != null) {
       $result.updatedAt = updatedAt;
     }
+    if (customSpaceButton != null) {
+      $result.customSpaceButton.addAll(customSpaceButton);
+    }
+    if (customSpaceChannel != null) {
+      $result.customSpaceChannel.addAll(customSpaceChannel);
+    }
+    if (customMessageTextField != null) {
+      $result.customMessageTextField.addAll(customMessageTextField);
+    }
+    if (customMessage != null) {
+      $result.customMessage.addAll(customMessage);
+    }
     return $result;
   }
   ThemeOption._() : super();
@@ -173,6 +189,10 @@ class ThemeOption extends $pb.GeneratedMessage {
     ..a<$core.List<$core.int>>(7, _omitFieldNames ? '' : 'message', $pb.PbFieldType.OY)
     ..e<PrefinedTheme>(8, _omitFieldNames ? '' : 'prefinedTheme', $pb.PbFieldType.OE, defaultOrMaker: PrefinedTheme.BASE, valueOf: PrefinedTheme.valueOf, enumValues: PrefinedTheme.values)
     ..a<$core.int>(9, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..m<$core.String, ThemeOptionValue>(10, _omitFieldNames ? '' : 'customSpaceButton', entryClassName: 'ThemeOption.CustomSpaceButtonEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: ThemeOptionValue.create, valueDefaultOrMaker: ThemeOptionValue.getDefault, packageName: const $pb.PackageName('theme'))
+    ..m<$core.String, ThemeOptionValue>(11, _omitFieldNames ? '' : 'customSpaceChannel', entryClassName: 'ThemeOption.CustomSpaceChannelEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: ThemeOptionValue.create, valueDefaultOrMaker: ThemeOptionValue.getDefault, packageName: const $pb.PackageName('theme'))
+    ..m<$core.String, ThemeOptionValue>(12, _omitFieldNames ? '' : 'customMessageTextField', entryClassName: 'ThemeOption.CustomMessageTextFieldEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: ThemeOptionValue.create, valueDefaultOrMaker: ThemeOptionValue.getDefault, packageName: const $pb.PackageName('theme'))
+    ..m<$core.String, ThemeOptionValue>(13, _omitFieldNames ? '' : 'customMessage', entryClassName: 'ThemeOption.CustomMessageEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: ThemeOptionValue.create, valueDefaultOrMaker: ThemeOptionValue.getDefault, packageName: const $pb.PackageName('theme'))
     ..hasRequiredFields = false
   ;
 
@@ -281,6 +301,349 @@ class ThemeOption extends $pb.GeneratedMessage {
   $core.bool hasUpdatedAt() => $_has(8);
   @$pb.TagNumber(9)
   void clearUpdatedAt() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.Map<$core.String, ThemeOptionValue> get customSpaceButton => $_getMap(9);
+
+  @$pb.TagNumber(11)
+  $core.Map<$core.String, ThemeOptionValue> get customSpaceChannel => $_getMap(10);
+
+  @$pb.TagNumber(12)
+  $core.Map<$core.String, ThemeOptionValue> get customMessageTextField => $_getMap(11);
+
+  @$pb.TagNumber(13)
+  $core.Map<$core.String, ThemeOptionValue> get customMessage => $_getMap(12);
+}
+
+enum ThemeOptionValue_Value_Value {
+  string, 
+  int_2, 
+  float, 
+  bool_4, 
+  color, 
+  linearGradient, 
+  edgeInset, 
+  textStyle, 
+  border, 
+  notSet
+}
+
+class ThemeOptionValue_Value extends $pb.GeneratedMessage {
+  factory ThemeOptionValue_Value({
+    $core.String? string,
+    $core.int? int_2,
+    $core.double? float,
+    $core.bool? bool_4,
+    $core.int? color,
+    TLinearGradient? linearGradient,
+    TEdgeInsets? edgeInset,
+    TTextStyle? textStyle,
+    TBorder? border,
+  }) {
+    final $result = create();
+    if (string != null) {
+      $result.string = string;
+    }
+    if (int_2 != null) {
+      $result.int_2 = int_2;
+    }
+    if (float != null) {
+      $result.float = float;
+    }
+    if (bool_4 != null) {
+      $result.bool_4 = bool_4;
+    }
+    if (color != null) {
+      $result.color = color;
+    }
+    if (linearGradient != null) {
+      $result.linearGradient = linearGradient;
+    }
+    if (edgeInset != null) {
+      $result.edgeInset = edgeInset;
+    }
+    if (textStyle != null) {
+      $result.textStyle = textStyle;
+    }
+    if (border != null) {
+      $result.border = border;
+    }
+    return $result;
+  }
+  ThemeOptionValue_Value._() : super();
+  factory ThemeOptionValue_Value.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ThemeOptionValue_Value.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, ThemeOptionValue_Value_Value> _ThemeOptionValue_Value_ValueByTag = {
+    1 : ThemeOptionValue_Value_Value.string,
+    2 : ThemeOptionValue_Value_Value.int_2,
+    3 : ThemeOptionValue_Value_Value.float,
+    4 : ThemeOptionValue_Value_Value.bool_4,
+    5 : ThemeOptionValue_Value_Value.color,
+    6 : ThemeOptionValue_Value_Value.linearGradient,
+    7 : ThemeOptionValue_Value_Value.edgeInset,
+    8 : ThemeOptionValue_Value_Value.textStyle,
+    9 : ThemeOptionValue_Value_Value.border,
+    0 : ThemeOptionValue_Value_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ThemeOptionValue.Value', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+    ..aOS(1, _omitFieldNames ? '' : 'string')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'int', $pb.PbFieldType.O3)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'float', $pb.PbFieldType.OF)
+    ..aOB(4, _omitFieldNames ? '' : 'bool')
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OU3)
+    ..aOM<TLinearGradient>(6, _omitFieldNames ? '' : 'linearGradient', subBuilder: TLinearGradient.create)
+    ..aOM<TEdgeInsets>(7, _omitFieldNames ? '' : 'edgeInset', subBuilder: TEdgeInsets.create)
+    ..aOM<TTextStyle>(8, _omitFieldNames ? '' : 'textStyle', subBuilder: TTextStyle.create)
+    ..aOM<TBorder>(9, _omitFieldNames ? '' : 'border', subBuilder: TBorder.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ThemeOptionValue_Value clone() => ThemeOptionValue_Value()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ThemeOptionValue_Value copyWith(void Function(ThemeOptionValue_Value) updates) => super.copyWith((message) => updates(message as ThemeOptionValue_Value)) as ThemeOptionValue_Value;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ThemeOptionValue_Value create() => ThemeOptionValue_Value._();
+  ThemeOptionValue_Value createEmptyInstance() => create();
+  static $pb.PbList<ThemeOptionValue_Value> createRepeated() => $pb.PbList<ThemeOptionValue_Value>();
+  @$core.pragma('dart2js:noInline')
+  static ThemeOptionValue_Value getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ThemeOptionValue_Value>(create);
+  static ThemeOptionValue_Value? _defaultInstance;
+
+  ThemeOptionValue_Value_Value whichValue() => _ThemeOptionValue_Value_ValueByTag[$_whichOneof(0)]!;
+  void clearValue() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get string => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set string($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasString() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearString() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get int_2 => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set int_2($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasInt_2() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearInt_2() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get float => $_getN(2);
+  @$pb.TagNumber(3)
+  set float($core.double v) { $_setFloat(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasFloat() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearFloat() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get bool_4 => $_getBF(3);
+  @$pb.TagNumber(4)
+  set bool_4($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasBool_4() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBool_4() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get color => $_getIZ(4);
+  @$pb.TagNumber(5)
+  set color($core.int v) { $_setUnsignedInt32(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasColor() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearColor() => clearField(5);
+
+  @$pb.TagNumber(6)
+  TLinearGradient get linearGradient => $_getN(5);
+  @$pb.TagNumber(6)
+  set linearGradient(TLinearGradient v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasLinearGradient() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearLinearGradient() => clearField(6);
+  @$pb.TagNumber(6)
+  TLinearGradient ensureLinearGradient() => $_ensure(5);
+
+  @$pb.TagNumber(7)
+  TEdgeInsets get edgeInset => $_getN(6);
+  @$pb.TagNumber(7)
+  set edgeInset(TEdgeInsets v) { setField(7, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasEdgeInset() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearEdgeInset() => clearField(7);
+  @$pb.TagNumber(7)
+  TEdgeInsets ensureEdgeInset() => $_ensure(6);
+
+  @$pb.TagNumber(8)
+  TTextStyle get textStyle => $_getN(7);
+  @$pb.TagNumber(8)
+  set textStyle(TTextStyle v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasTextStyle() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearTextStyle() => clearField(8);
+  @$pb.TagNumber(8)
+  TTextStyle ensureTextStyle() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  TBorder get border => $_getN(8);
+  @$pb.TagNumber(9)
+  set border(TBorder v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasBorder() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearBorder() => clearField(9);
+  @$pb.TagNumber(9)
+  TBorder ensureBorder() => $_ensure(8);
+}
+
+class ThemeOptionValue_Constraint extends $pb.GeneratedMessage {
+  factory ThemeOptionValue_Constraint({
+    $core.int? min,
+    $core.int? max,
+  }) {
+    final $result = create();
+    if (min != null) {
+      $result.min = min;
+    }
+    if (max != null) {
+      $result.max = max;
+    }
+    return $result;
+  }
+  ThemeOptionValue_Constraint._() : super();
+  factory ThemeOptionValue_Constraint.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ThemeOptionValue_Constraint.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ThemeOptionValue.Constraint', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'min', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'max', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ThemeOptionValue_Constraint clone() => ThemeOptionValue_Constraint()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ThemeOptionValue_Constraint copyWith(void Function(ThemeOptionValue_Constraint) updates) => super.copyWith((message) => updates(message as ThemeOptionValue_Constraint)) as ThemeOptionValue_Constraint;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ThemeOptionValue_Constraint create() => ThemeOptionValue_Constraint._();
+  ThemeOptionValue_Constraint createEmptyInstance() => create();
+  static $pb.PbList<ThemeOptionValue_Constraint> createRepeated() => $pb.PbList<ThemeOptionValue_Constraint>();
+  @$core.pragma('dart2js:noInline')
+  static ThemeOptionValue_Constraint getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ThemeOptionValue_Constraint>(create);
+  static ThemeOptionValue_Constraint? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get min => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set min($core.int v) { $_setSignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasMin() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMin() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get max => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set max($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasMax() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMax() => clearField(2);
+}
+
+class ThemeOptionValue extends $pb.GeneratedMessage {
+  factory ThemeOptionValue({
+    ThemeOptionValue_Value? value,
+    ThemeOptionValue_Constraint? constraint,
+  }) {
+    final $result = create();
+    if (value != null) {
+      $result.value = value;
+    }
+    if (constraint != null) {
+      $result.constraint = constraint;
+    }
+    return $result;
+  }
+  ThemeOptionValue._() : super();
+  factory ThemeOptionValue.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ThemeOptionValue.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ThemeOptionValue', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOM<ThemeOptionValue_Value>(1, _omitFieldNames ? '' : 'value', subBuilder: ThemeOptionValue_Value.create)
+    ..aOM<ThemeOptionValue_Constraint>(2, _omitFieldNames ? '' : 'constraint', subBuilder: ThemeOptionValue_Constraint.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ThemeOptionValue clone() => ThemeOptionValue()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ThemeOptionValue copyWith(void Function(ThemeOptionValue) updates) => super.copyWith((message) => updates(message as ThemeOptionValue)) as ThemeOptionValue;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ThemeOptionValue create() => ThemeOptionValue._();
+  ThemeOptionValue createEmptyInstance() => create();
+  static $pb.PbList<ThemeOptionValue> createRepeated() => $pb.PbList<ThemeOptionValue>();
+  @$core.pragma('dart2js:noInline')
+  static ThemeOptionValue getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ThemeOptionValue>(create);
+  static ThemeOptionValue? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  ThemeOptionValue_Value get value => $_getN(0);
+  @$pb.TagNumber(1)
+  set value(ThemeOptionValue_Value v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  ThemeOptionValue_Value ensureValue() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  ThemeOptionValue_Constraint get constraint => $_getN(1);
+  @$pb.TagNumber(2)
+  set constraint(ThemeOptionValue_Constraint v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasConstraint() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearConstraint() => clearField(2);
+  @$pb.TagNumber(2)
+  ThemeOptionValue_Constraint ensureConstraint() => $_ensure(1);
 }
 
 class GlobalOption extends $pb.GeneratedMessage {
@@ -367,7 +730,7 @@ class WindowContainerOption extends $pb.GeneratedMessage {
     $core.String? image,
     $core.String? video,
     $core.int? overlayColor,
-    LinearGradient? gradient,
+    TLinearGradient? gradient,
     $core.double? blur,
     BackgroundShader? shader,
     $core.String? blurhash,
@@ -416,7 +779,7 @@ class WindowContainerOption extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'image')
     ..aOS(3, _omitFieldNames ? '' : 'video')
     ..a<$core.int>(4, _omitFieldNames ? '' : 'overlayColor', $pb.PbFieldType.OU3)
-    ..aOM<LinearGradient>(5, _omitFieldNames ? '' : 'gradient', subBuilder: LinearGradient.create)
+    ..aOM<TLinearGradient>(5, _omitFieldNames ? '' : 'gradient', subBuilder: TLinearGradient.create)
     ..a<$core.double>(6, _omitFieldNames ? '' : 'blur', $pb.PbFieldType.OF)
     ..e<BackgroundShader>(7, _omitFieldNames ? '' : 'shader', $pb.PbFieldType.OE, defaultOrMaker: BackgroundShader.NONE, valueOf: BackgroundShader.valueOf, enumValues: BackgroundShader.values)
     ..aOS(8, _omitFieldNames ? '' : 'blurhash')
@@ -483,15 +846,15 @@ class WindowContainerOption extends $pb.GeneratedMessage {
   void clearOverlayColor() => clearField(4);
 
   @$pb.TagNumber(5)
-  LinearGradient get gradient => $_getN(4);
+  TLinearGradient get gradient => $_getN(4);
   @$pb.TagNumber(5)
-  set gradient(LinearGradient v) { setField(5, v); }
+  set gradient(TLinearGradient v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasGradient() => $_has(4);
   @$pb.TagNumber(5)
   void clearGradient() => clearField(5);
   @$pb.TagNumber(5)
-  LinearGradient ensureGradient() => $_ensure(4);
+  TLinearGradient ensureGradient() => $_ensure(4);
 
   @$pb.TagNumber(6)
   $core.double get blur => $_getN(5);
@@ -539,13 +902,13 @@ class WindowContainerOption extends $pb.GeneratedMessage {
   void clearVideoMobile() => clearField(10);
 }
 
-class LinearGradient extends $pb.GeneratedMessage {
-  factory LinearGradient({
+class TLinearGradient extends $pb.GeneratedMessage {
+  factory TLinearGradient({
     $core.Iterable<$core.int>? colors,
     $core.Iterable<$core.double>? stops,
     $core.int? tileMode,
-    $core.Iterable<$core.double>? begin,
-    $core.Iterable<$core.double>? end,
+    TAlignment? begin,
+    TAlignment? end,
   }) {
     final $result = create();
     if (colors != null) {
@@ -558,23 +921,23 @@ class LinearGradient extends $pb.GeneratedMessage {
       $result.tileMode = tileMode;
     }
     if (begin != null) {
-      $result.begin.addAll(begin);
+      $result.begin = begin;
     }
     if (end != null) {
-      $result.end.addAll(end);
+      $result.end = end;
     }
     return $result;
   }
-  LinearGradient._() : super();
-  factory LinearGradient.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory LinearGradient.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+  TLinearGradient._() : super();
+  factory TLinearGradient.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TLinearGradient.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'LinearGradient', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TLinearGradient', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
     ..p<$core.int>(1, _omitFieldNames ? '' : 'colors', $pb.PbFieldType.KU3)
     ..p<$core.double>(2, _omitFieldNames ? '' : 'stops', $pb.PbFieldType.KF)
     ..a<$core.int>(3, _omitFieldNames ? '' : 'tileMode', $pb.PbFieldType.OU3)
-    ..p<$core.double>(4, _omitFieldNames ? '' : 'begin', $pb.PbFieldType.KF)
-    ..p<$core.double>(5, _omitFieldNames ? '' : 'end', $pb.PbFieldType.KF)
+    ..aOM<TAlignment>(4, _omitFieldNames ? '' : 'begin', subBuilder: TAlignment.create)
+    ..aOM<TAlignment>(5, _omitFieldNames ? '' : 'end', subBuilder: TAlignment.create)
     ..hasRequiredFields = false
   ;
 
@@ -582,22 +945,22 @@ class LinearGradient extends $pb.GeneratedMessage {
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
   'Will be removed in next major version')
-  LinearGradient clone() => LinearGradient()..mergeFromMessage(this);
+  TLinearGradient clone() => TLinearGradient()..mergeFromMessage(this);
   @$core.Deprecated(
   'Using this can add significant overhead to your binary. '
   'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
   'Will be removed in next major version')
-  LinearGradient copyWith(void Function(LinearGradient) updates) => super.copyWith((message) => updates(message as LinearGradient)) as LinearGradient;
+  TLinearGradient copyWith(void Function(TLinearGradient) updates) => super.copyWith((message) => updates(message as TLinearGradient)) as TLinearGradient;
 
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static LinearGradient create() => LinearGradient._();
-  LinearGradient createEmptyInstance() => create();
-  static $pb.PbList<LinearGradient> createRepeated() => $pb.PbList<LinearGradient>();
+  static TLinearGradient create() => TLinearGradient._();
+  TLinearGradient createEmptyInstance() => create();
+  static $pb.PbList<TLinearGradient> createRepeated() => $pb.PbList<TLinearGradient>();
   @$core.pragma('dart2js:noInline')
-  static LinearGradient getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LinearGradient>(create);
-  static LinearGradient? _defaultInstance;
+  static TLinearGradient getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TLinearGradient>(create);
+  static TLinearGradient? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get colors => $_getList(0);
@@ -615,10 +978,953 @@ class LinearGradient extends $pb.GeneratedMessage {
   void clearTileMode() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$core.double> get begin => $_getList(3);
+  TAlignment get begin => $_getN(3);
+  @$pb.TagNumber(4)
+  set begin(TAlignment v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasBegin() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBegin() => clearField(4);
+  @$pb.TagNumber(4)
+  TAlignment ensureBegin() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $core.List<$core.double> get end => $_getList(4);
+  TAlignment get end => $_getN(4);
+  @$pb.TagNumber(5)
+  set end(TAlignment v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasEnd() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEnd() => clearField(5);
+  @$pb.TagNumber(5)
+  TAlignment ensureEnd() => $_ensure(4);
+}
+
+class TAlignment extends $pb.GeneratedMessage {
+  factory TAlignment({
+    $core.double? x,
+    $core.double? y,
+  }) {
+    final $result = create();
+    if (x != null) {
+      $result.x = x;
+    }
+    if (y != null) {
+      $result.y = y;
+    }
+    return $result;
+  }
+  TAlignment._() : super();
+  factory TAlignment.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TAlignment.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TAlignment', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'x', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'y', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TAlignment clone() => TAlignment()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TAlignment copyWith(void Function(TAlignment) updates) => super.copyWith((message) => updates(message as TAlignment)) as TAlignment;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TAlignment create() => TAlignment._();
+  TAlignment createEmptyInstance() => create();
+  static $pb.PbList<TAlignment> createRepeated() => $pb.PbList<TAlignment>();
+  @$core.pragma('dart2js:noInline')
+  static TAlignment getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TAlignment>(create);
+  static TAlignment? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get x => $_getN(0);
+  @$pb.TagNumber(1)
+  set x($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasX() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearX() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get y => $_getN(1);
+  @$pb.TagNumber(2)
+  set y($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasY() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearY() => clearField(2);
+}
+
+class TEdgeInsets extends $pb.GeneratedMessage {
+  factory TEdgeInsets({
+    $core.double? top,
+    $core.double? left,
+    $core.double? bottom,
+    $core.double? right,
+  }) {
+    final $result = create();
+    if (top != null) {
+      $result.top = top;
+    }
+    if (left != null) {
+      $result.left = left;
+    }
+    if (bottom != null) {
+      $result.bottom = bottom;
+    }
+    if (right != null) {
+      $result.right = right;
+    }
+    return $result;
+  }
+  TEdgeInsets._() : super();
+  factory TEdgeInsets.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TEdgeInsets.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TEdgeInsets', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'top', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'left', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'bottom', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'right', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TEdgeInsets clone() => TEdgeInsets()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TEdgeInsets copyWith(void Function(TEdgeInsets) updates) => super.copyWith((message) => updates(message as TEdgeInsets)) as TEdgeInsets;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TEdgeInsets create() => TEdgeInsets._();
+  TEdgeInsets createEmptyInstance() => create();
+  static $pb.PbList<TEdgeInsets> createRepeated() => $pb.PbList<TEdgeInsets>();
+  @$core.pragma('dart2js:noInline')
+  static TEdgeInsets getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TEdgeInsets>(create);
+  static TEdgeInsets? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get top => $_getN(0);
+  @$pb.TagNumber(1)
+  set top($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTop() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTop() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get left => $_getN(1);
+  @$pb.TagNumber(2)
+  set left($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLeft() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLeft() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get bottom => $_getN(2);
+  @$pb.TagNumber(3)
+  set bottom($core.double v) { $_setFloat(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasBottom() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBottom() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get right => $_getN(3);
+  @$pb.TagNumber(4)
+  set right($core.double v) { $_setFloat(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasRight() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRight() => clearField(4);
+}
+
+enum TBorder_Shape_Value {
+  circle, 
+  roundedRectangle, 
+  continuousRectangle, 
+  stadium, 
+  notSet
+}
+
+class TBorder_Shape extends $pb.GeneratedMessage {
+  factory TBorder_Shape({
+    TCircleBorder? circle,
+    TRoundedRectangleBorder? roundedRectangle,
+    TContinuousRectangleBorder? continuousRectangle,
+    TStadiumBorder? stadium,
+  }) {
+    final $result = create();
+    if (circle != null) {
+      $result.circle = circle;
+    }
+    if (roundedRectangle != null) {
+      $result.roundedRectangle = roundedRectangle;
+    }
+    if (continuousRectangle != null) {
+      $result.continuousRectangle = continuousRectangle;
+    }
+    if (stadium != null) {
+      $result.stadium = stadium;
+    }
+    return $result;
+  }
+  TBorder_Shape._() : super();
+  factory TBorder_Shape.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TBorder_Shape.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, TBorder_Shape_Value> _TBorder_Shape_ValueByTag = {
+    1 : TBorder_Shape_Value.circle,
+    2 : TBorder_Shape_Value.roundedRectangle,
+    3 : TBorder_Shape_Value.continuousRectangle,
+    4 : TBorder_Shape_Value.stadium,
+    0 : TBorder_Shape_Value.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TBorder.Shape', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4])
+    ..aOM<TCircleBorder>(1, _omitFieldNames ? '' : 'circle', subBuilder: TCircleBorder.create)
+    ..aOM<TRoundedRectangleBorder>(2, _omitFieldNames ? '' : 'roundedRectangle', subBuilder: TRoundedRectangleBorder.create)
+    ..aOM<TContinuousRectangleBorder>(3, _omitFieldNames ? '' : 'continuousRectangle', subBuilder: TContinuousRectangleBorder.create)
+    ..aOM<TStadiumBorder>(4, _omitFieldNames ? '' : 'stadium', subBuilder: TStadiumBorder.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TBorder_Shape clone() => TBorder_Shape()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TBorder_Shape copyWith(void Function(TBorder_Shape) updates) => super.copyWith((message) => updates(message as TBorder_Shape)) as TBorder_Shape;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TBorder_Shape create() => TBorder_Shape._();
+  TBorder_Shape createEmptyInstance() => create();
+  static $pb.PbList<TBorder_Shape> createRepeated() => $pb.PbList<TBorder_Shape>();
+  @$core.pragma('dart2js:noInline')
+  static TBorder_Shape getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TBorder_Shape>(create);
+  static TBorder_Shape? _defaultInstance;
+
+  TBorder_Shape_Value whichValue() => _TBorder_Shape_ValueByTag[$_whichOneof(0)]!;
+  void clearValue() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  TCircleBorder get circle => $_getN(0);
+  @$pb.TagNumber(1)
+  set circle(TCircleBorder v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCircle() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCircle() => clearField(1);
+  @$pb.TagNumber(1)
+  TCircleBorder ensureCircle() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  TRoundedRectangleBorder get roundedRectangle => $_getN(1);
+  @$pb.TagNumber(2)
+  set roundedRectangle(TRoundedRectangleBorder v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasRoundedRectangle() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRoundedRectangle() => clearField(2);
+  @$pb.TagNumber(2)
+  TRoundedRectangleBorder ensureRoundedRectangle() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  TContinuousRectangleBorder get continuousRectangle => $_getN(2);
+  @$pb.TagNumber(3)
+  set continuousRectangle(TContinuousRectangleBorder v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasContinuousRectangle() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearContinuousRectangle() => clearField(3);
+  @$pb.TagNumber(3)
+  TContinuousRectangleBorder ensureContinuousRectangle() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  TStadiumBorder get stadium => $_getN(3);
+  @$pb.TagNumber(4)
+  set stadium(TStadiumBorder v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasStadium() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStadium() => clearField(4);
+  @$pb.TagNumber(4)
+  TStadiumBorder ensureStadium() => $_ensure(3);
+}
+
+class TBorder extends $pb.GeneratedMessage {
+  factory TBorder({
+    TBorder_Shape? shape,
+  }) {
+    final $result = create();
+    if (shape != null) {
+      $result.shape = shape;
+    }
+    return $result;
+  }
+  TBorder._() : super();
+  factory TBorder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TBorder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TBorder', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOM<TBorder_Shape>(1, _omitFieldNames ? '' : 'shape', subBuilder: TBorder_Shape.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TBorder clone() => TBorder()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TBorder copyWith(void Function(TBorder) updates) => super.copyWith((message) => updates(message as TBorder)) as TBorder;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TBorder create() => TBorder._();
+  TBorder createEmptyInstance() => create();
+  static $pb.PbList<TBorder> createRepeated() => $pb.PbList<TBorder>();
+  @$core.pragma('dart2js:noInline')
+  static TBorder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TBorder>(create);
+  static TBorder? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TBorder_Shape get shape => $_getN(0);
+  @$pb.TagNumber(1)
+  set shape(TBorder_Shape v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasShape() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearShape() => clearField(1);
+  @$pb.TagNumber(1)
+  TBorder_Shape ensureShape() => $_ensure(0);
+}
+
+class TCircleBorder extends $pb.GeneratedMessage {
+  factory TCircleBorder({
+    TBorderSide? side,
+    $core.double? eccentricity,
+  }) {
+    final $result = create();
+    if (side != null) {
+      $result.side = side;
+    }
+    if (eccentricity != null) {
+      $result.eccentricity = eccentricity;
+    }
+    return $result;
+  }
+  TCircleBorder._() : super();
+  factory TCircleBorder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TCircleBorder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TCircleBorder', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOM<TBorderSide>(1, _omitFieldNames ? '' : 'side', subBuilder: TBorderSide.create)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'eccentricity', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TCircleBorder clone() => TCircleBorder()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TCircleBorder copyWith(void Function(TCircleBorder) updates) => super.copyWith((message) => updates(message as TCircleBorder)) as TCircleBorder;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TCircleBorder create() => TCircleBorder._();
+  TCircleBorder createEmptyInstance() => create();
+  static $pb.PbList<TCircleBorder> createRepeated() => $pb.PbList<TCircleBorder>();
+  @$core.pragma('dart2js:noInline')
+  static TCircleBorder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TCircleBorder>(create);
+  static TCircleBorder? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TBorderSide get side => $_getN(0);
+  @$pb.TagNumber(1)
+  set side(TBorderSide v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSide() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSide() => clearField(1);
+  @$pb.TagNumber(1)
+  TBorderSide ensureSide() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  $core.double get eccentricity => $_getN(1);
+  @$pb.TagNumber(2)
+  set eccentricity($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasEccentricity() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearEccentricity() => clearField(2);
+}
+
+class TRoundedRectangleBorder extends $pb.GeneratedMessage {
+  factory TRoundedRectangleBorder({
+    TBorderSide? side,
+    TBorderRadius? radius,
+  }) {
+    final $result = create();
+    if (side != null) {
+      $result.side = side;
+    }
+    if (radius != null) {
+      $result.radius = radius;
+    }
+    return $result;
+  }
+  TRoundedRectangleBorder._() : super();
+  factory TRoundedRectangleBorder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TRoundedRectangleBorder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TRoundedRectangleBorder', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOM<TBorderSide>(1, _omitFieldNames ? '' : 'side', subBuilder: TBorderSide.create)
+    ..aOM<TBorderRadius>(2, _omitFieldNames ? '' : 'radius', subBuilder: TBorderRadius.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TRoundedRectangleBorder clone() => TRoundedRectangleBorder()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TRoundedRectangleBorder copyWith(void Function(TRoundedRectangleBorder) updates) => super.copyWith((message) => updates(message as TRoundedRectangleBorder)) as TRoundedRectangleBorder;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TRoundedRectangleBorder create() => TRoundedRectangleBorder._();
+  TRoundedRectangleBorder createEmptyInstance() => create();
+  static $pb.PbList<TRoundedRectangleBorder> createRepeated() => $pb.PbList<TRoundedRectangleBorder>();
+  @$core.pragma('dart2js:noInline')
+  static TRoundedRectangleBorder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TRoundedRectangleBorder>(create);
+  static TRoundedRectangleBorder? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TBorderSide get side => $_getN(0);
+  @$pb.TagNumber(1)
+  set side(TBorderSide v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSide() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSide() => clearField(1);
+  @$pb.TagNumber(1)
+  TBorderSide ensureSide() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  TBorderRadius get radius => $_getN(1);
+  @$pb.TagNumber(2)
+  set radius(TBorderRadius v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasRadius() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRadius() => clearField(2);
+  @$pb.TagNumber(2)
+  TBorderRadius ensureRadius() => $_ensure(1);
+}
+
+class TContinuousRectangleBorder extends $pb.GeneratedMessage {
+  factory TContinuousRectangleBorder({
+    TBorderSide? side,
+    TBorderRadius? radius,
+  }) {
+    final $result = create();
+    if (side != null) {
+      $result.side = side;
+    }
+    if (radius != null) {
+      $result.radius = radius;
+    }
+    return $result;
+  }
+  TContinuousRectangleBorder._() : super();
+  factory TContinuousRectangleBorder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TContinuousRectangleBorder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TContinuousRectangleBorder', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOM<TBorderSide>(1, _omitFieldNames ? '' : 'side', subBuilder: TBorderSide.create)
+    ..aOM<TBorderRadius>(2, _omitFieldNames ? '' : 'radius', subBuilder: TBorderRadius.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TContinuousRectangleBorder clone() => TContinuousRectangleBorder()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TContinuousRectangleBorder copyWith(void Function(TContinuousRectangleBorder) updates) => super.copyWith((message) => updates(message as TContinuousRectangleBorder)) as TContinuousRectangleBorder;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TContinuousRectangleBorder create() => TContinuousRectangleBorder._();
+  TContinuousRectangleBorder createEmptyInstance() => create();
+  static $pb.PbList<TContinuousRectangleBorder> createRepeated() => $pb.PbList<TContinuousRectangleBorder>();
+  @$core.pragma('dart2js:noInline')
+  static TContinuousRectangleBorder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TContinuousRectangleBorder>(create);
+  static TContinuousRectangleBorder? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TBorderSide get side => $_getN(0);
+  @$pb.TagNumber(1)
+  set side(TBorderSide v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSide() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSide() => clearField(1);
+  @$pb.TagNumber(1)
+  TBorderSide ensureSide() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  TBorderRadius get radius => $_getN(1);
+  @$pb.TagNumber(2)
+  set radius(TBorderRadius v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasRadius() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearRadius() => clearField(2);
+  @$pb.TagNumber(2)
+  TBorderRadius ensureRadius() => $_ensure(1);
+}
+
+class TStadiumBorder extends $pb.GeneratedMessage {
+  factory TStadiumBorder({
+    TBorderSide? side,
+  }) {
+    final $result = create();
+    if (side != null) {
+      $result.side = side;
+    }
+    return $result;
+  }
+  TStadiumBorder._() : super();
+  factory TStadiumBorder.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TStadiumBorder.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TStadiumBorder', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOM<TBorderSide>(1, _omitFieldNames ? '' : 'side', subBuilder: TBorderSide.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TStadiumBorder clone() => TStadiumBorder()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TStadiumBorder copyWith(void Function(TStadiumBorder) updates) => super.copyWith((message) => updates(message as TStadiumBorder)) as TStadiumBorder;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TStadiumBorder create() => TStadiumBorder._();
+  TStadiumBorder createEmptyInstance() => create();
+  static $pb.PbList<TStadiumBorder> createRepeated() => $pb.PbList<TStadiumBorder>();
+  @$core.pragma('dart2js:noInline')
+  static TStadiumBorder getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TStadiumBorder>(create);
+  static TStadiumBorder? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TBorderSide get side => $_getN(0);
+  @$pb.TagNumber(1)
+  set side(TBorderSide v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSide() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSide() => clearField(1);
+  @$pb.TagNumber(1)
+  TBorderSide ensureSide() => $_ensure(0);
+}
+
+class TBorderSide extends $pb.GeneratedMessage {
+  factory TBorderSide({
+    $core.int? color,
+    $core.double? width,
+    $core.int? style,
+    $core.double? strokeAlign,
+  }) {
+    final $result = create();
+    if (color != null) {
+      $result.color = color;
+    }
+    if (width != null) {
+      $result.width = width;
+    }
+    if (style != null) {
+      $result.style = style;
+    }
+    if (strokeAlign != null) {
+      $result.strokeAlign = strokeAlign;
+    }
+    return $result;
+  }
+  TBorderSide._() : super();
+  factory TBorderSide.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TBorderSide.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TBorderSide', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OU3)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'width', $pb.PbFieldType.OF)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'style', $pb.PbFieldType.OU3)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'strokeAlign', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TBorderSide clone() => TBorderSide()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TBorderSide copyWith(void Function(TBorderSide) updates) => super.copyWith((message) => updates(message as TBorderSide)) as TBorderSide;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TBorderSide create() => TBorderSide._();
+  TBorderSide createEmptyInstance() => create();
+  static $pb.PbList<TBorderSide> createRepeated() => $pb.PbList<TBorderSide>();
+  @$core.pragma('dart2js:noInline')
+  static TBorderSide getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TBorderSide>(create);
+  static TBorderSide? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.int get color => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set color($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasColor() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearColor() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get width => $_getN(1);
+  @$pb.TagNumber(2)
+  set width($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasWidth() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearWidth() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get style => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set style($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasStyle() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStyle() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get strokeAlign => $_getN(3);
+  @$pb.TagNumber(4)
+  set strokeAlign($core.double v) { $_setFloat(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasStrokeAlign() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearStrokeAlign() => clearField(4);
+}
+
+class TBorderRadius extends $pb.GeneratedMessage {
+  factory TBorderRadius({
+    $core.double? topLeft,
+    $core.double? topRight,
+    $core.double? bottomLeft,
+    $core.double? bottomRight,
+  }) {
+    final $result = create();
+    if (topLeft != null) {
+      $result.topLeft = topLeft;
+    }
+    if (topRight != null) {
+      $result.topRight = topRight;
+    }
+    if (bottomLeft != null) {
+      $result.bottomLeft = bottomLeft;
+    }
+    if (bottomRight != null) {
+      $result.bottomRight = bottomRight;
+    }
+    return $result;
+  }
+  TBorderRadius._() : super();
+  factory TBorderRadius.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TBorderRadius.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TBorderRadius', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..a<$core.double>(1, _omitFieldNames ? '' : 'topLeft', $pb.PbFieldType.OF)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'topRight', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'bottomLeft', $pb.PbFieldType.OF)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'bottomRight', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TBorderRadius clone() => TBorderRadius()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TBorderRadius copyWith(void Function(TBorderRadius) updates) => super.copyWith((message) => updates(message as TBorderRadius)) as TBorderRadius;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TBorderRadius create() => TBorderRadius._();
+  TBorderRadius createEmptyInstance() => create();
+  static $pb.PbList<TBorderRadius> createRepeated() => $pb.PbList<TBorderRadius>();
+  @$core.pragma('dart2js:noInline')
+  static TBorderRadius getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TBorderRadius>(create);
+  static TBorderRadius? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.double get topLeft => $_getN(0);
+  @$pb.TagNumber(1)
+  set topLeft($core.double v) { $_setFloat(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasTopLeft() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearTopLeft() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.double get topRight => $_getN(1);
+  @$pb.TagNumber(2)
+  set topRight($core.double v) { $_setFloat(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasTopRight() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearTopRight() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.double get bottomLeft => $_getN(2);
+  @$pb.TagNumber(3)
+  set bottomLeft($core.double v) { $_setFloat(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasBottomLeft() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearBottomLeft() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.double get bottomRight => $_getN(3);
+  @$pb.TagNumber(4)
+  set bottomRight($core.double v) { $_setFloat(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasBottomRight() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearBottomRight() => clearField(4);
+}
+
+class TTextStyle extends $pb.GeneratedMessage {
+  factory TTextStyle({
+    $core.String? fontFamily,
+    $core.int? color,
+    $core.double? fontSize,
+    $core.int? fontWeight,
+    $core.double? lineHeight,
+    $core.double? letterSpacing,
+    $core.double? wordSpacing,
+    $core.int? textAlign,
+    $core.int? fontStyle,
+  }) {
+    final $result = create();
+    if (fontFamily != null) {
+      $result.fontFamily = fontFamily;
+    }
+    if (color != null) {
+      $result.color = color;
+    }
+    if (fontSize != null) {
+      $result.fontSize = fontSize;
+    }
+    if (fontWeight != null) {
+      $result.fontWeight = fontWeight;
+    }
+    if (lineHeight != null) {
+      $result.lineHeight = lineHeight;
+    }
+    if (letterSpacing != null) {
+      $result.letterSpacing = letterSpacing;
+    }
+    if (wordSpacing != null) {
+      $result.wordSpacing = wordSpacing;
+    }
+    if (textAlign != null) {
+      $result.textAlign = textAlign;
+    }
+    if (fontStyle != null) {
+      $result.fontStyle = fontStyle;
+    }
+    return $result;
+  }
+  TTextStyle._() : super();
+  factory TTextStyle.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TTextStyle.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TTextStyle', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'fontFamily')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OU3)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'fontSize', $pb.PbFieldType.OF)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'fontWeight', $pb.PbFieldType.OU3)
+    ..a<$core.double>(6, _omitFieldNames ? '' : 'lineHeight', $pb.PbFieldType.OF)
+    ..a<$core.double>(7, _omitFieldNames ? '' : 'letterSpacing', $pb.PbFieldType.OF)
+    ..a<$core.double>(8, _omitFieldNames ? '' : 'wordSpacing', $pb.PbFieldType.OF)
+    ..a<$core.int>(9, _omitFieldNames ? '' : 'textAlign', $pb.PbFieldType.OU3)
+    ..a<$core.int>(10, _omitFieldNames ? '' : 'fontStyle', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TTextStyle clone() => TTextStyle()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TTextStyle copyWith(void Function(TTextStyle) updates) => super.copyWith((message) => updates(message as TTextStyle)) as TTextStyle;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TTextStyle create() => TTextStyle._();
+  TTextStyle createEmptyInstance() => create();
+  static $pb.PbList<TTextStyle> createRepeated() => $pb.PbList<TTextStyle>();
+  @$core.pragma('dart2js:noInline')
+  static TTextStyle getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TTextStyle>(create);
+  static TTextStyle? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get fontFamily => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set fontFamily($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFontFamily() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFontFamily() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get color => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set color($core.int v) { $_setUnsignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasColor() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearColor() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.double get fontSize => $_getN(2);
+  @$pb.TagNumber(4)
+  set fontSize($core.double v) { $_setFloat(2, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasFontSize() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearFontSize() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.int get fontWeight => $_getIZ(3);
+  @$pb.TagNumber(5)
+  set fontWeight($core.int v) { $_setUnsignedInt32(3, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasFontWeight() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearFontWeight() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.double get lineHeight => $_getN(4);
+  @$pb.TagNumber(6)
+  set lineHeight($core.double v) { $_setFloat(4, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasLineHeight() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearLineHeight() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.double get letterSpacing => $_getN(5);
+  @$pb.TagNumber(7)
+  set letterSpacing($core.double v) { $_setFloat(5, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasLetterSpacing() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearLetterSpacing() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.double get wordSpacing => $_getN(6);
+  @$pb.TagNumber(8)
+  set wordSpacing($core.double v) { $_setFloat(6, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasWordSpacing() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearWordSpacing() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.int get textAlign => $_getIZ(7);
+  @$pb.TagNumber(9)
+  set textAlign($core.int v) { $_setUnsignedInt32(7, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasTextAlign() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearTextAlign() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.int get fontStyle => $_getIZ(8);
+  @$pb.TagNumber(10)
+  set fontStyle($core.int v) { $_setUnsignedInt32(8, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasFontStyle() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearFontStyle() => clearField(10);
 }
 
 class SpaceButtonBaseOption extends $pb.GeneratedMessage {

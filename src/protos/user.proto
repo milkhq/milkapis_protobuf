@@ -211,6 +211,9 @@ enum SOCIAL {
   YOUTUBE = 14;
   DISCORD = 15;
   ANONYMOUS = 16;
+  TIKTOK = 17;
+  WECHAT = 18;
+  WALLET_CONNECT = 19;
 }
 
 message QueryUserRequest {

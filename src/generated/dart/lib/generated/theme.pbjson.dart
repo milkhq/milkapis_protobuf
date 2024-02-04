@@ -74,7 +74,52 @@ const ThemeOption$json = {
     {'1': 'message', '3': 7, '4': 1, '5': 12, '10': 'message'},
     {'1': 'prefined_theme', '3': 8, '4': 1, '5': 14, '6': '.theme.PrefinedTheme', '10': 'prefinedTheme'},
     {'1': 'updated_at', '3': 9, '4': 1, '5': 13, '10': 'updatedAt'},
+    {'1': 'custom_space_button', '3': 10, '4': 3, '5': 11, '6': '.theme.ThemeOption.CustomSpaceButtonEntry', '10': 'customSpaceButton'},
+    {'1': 'custom_space_channel', '3': 11, '4': 3, '5': 11, '6': '.theme.ThemeOption.CustomSpaceChannelEntry', '10': 'customSpaceChannel'},
+    {'1': 'custom_message_text_field', '3': 12, '4': 3, '5': 11, '6': '.theme.ThemeOption.CustomMessageTextFieldEntry', '10': 'customMessageTextField'},
+    {'1': 'custom_message', '3': 13, '4': 3, '5': 11, '6': '.theme.ThemeOption.CustomMessageEntry', '10': 'customMessage'},
   ],
+  '3': [ThemeOption_CustomSpaceButtonEntry$json, ThemeOption_CustomSpaceChannelEntry$json, ThemeOption_CustomMessageTextFieldEntry$json, ThemeOption_CustomMessageEntry$json],
+};
+
+@$core.Deprecated('Use themeOptionDescriptor instead')
+const ThemeOption_CustomSpaceButtonEntry$json = {
+  '1': 'CustomSpaceButtonEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue', '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use themeOptionDescriptor instead')
+const ThemeOption_CustomSpaceChannelEntry$json = {
+  '1': 'CustomSpaceChannelEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue', '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use themeOptionDescriptor instead')
+const ThemeOption_CustomMessageTextFieldEntry$json = {
+  '1': 'CustomMessageTextFieldEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue', '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+@$core.Deprecated('Use themeOptionDescriptor instead')
+const ThemeOption_CustomMessageEntry$json = {
+  '1': 'CustomMessageEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue', '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 /// Descriptor for `ThemeOption`. Decode as a `google.protobuf.DescriptorProto`.
@@ -85,7 +130,72 @@ final $typed_data.Uint8List themeOptionDescriptor = $convert.base64Decode(
     'VCdXR0b24SIwoNc3BhY2VfY2hhbm5lbBgFIAEoDFIMc3BhY2VDaGFubmVsEiwKEm1lc3NhZ2Vf'
     'dGV4dF9maWVsZBgGIAEoDFIQbWVzc2FnZVRleHRGaWVsZBIYCgdtZXNzYWdlGAcgASgMUgdtZX'
     'NzYWdlEjsKDnByZWZpbmVkX3RoZW1lGAggASgOMhQudGhlbWUuUHJlZmluZWRUaGVtZVINcHJl'
-    'ZmluZWRUaGVtZRIdCgp1cGRhdGVkX2F0GAkgASgNUgl1cGRhdGVkQXQ=');
+    'ZmluZWRUaGVtZRIdCgp1cGRhdGVkX2F0GAkgASgNUgl1cGRhdGVkQXQSWQoTY3VzdG9tX3NwYW'
+    'NlX2J1dHRvbhgKIAMoCzIpLnRoZW1lLlRoZW1lT3B0aW9uLkN1c3RvbVNwYWNlQnV0dG9uRW50'
+    'cnlSEWN1c3RvbVNwYWNlQnV0dG9uElwKFGN1c3RvbV9zcGFjZV9jaGFubmVsGAsgAygLMioudG'
+    'hlbWUuVGhlbWVPcHRpb24uQ3VzdG9tU3BhY2VDaGFubmVsRW50cnlSEmN1c3RvbVNwYWNlQ2hh'
+    'bm5lbBJpChljdXN0b21fbWVzc2FnZV90ZXh0X2ZpZWxkGAwgAygLMi4udGhlbWUuVGhlbWVPcH'
+    'Rpb24uQ3VzdG9tTWVzc2FnZVRleHRGaWVsZEVudHJ5UhZjdXN0b21NZXNzYWdlVGV4dEZpZWxk'
+    'EkwKDmN1c3RvbV9tZXNzYWdlGA0gAygLMiUudGhlbWUuVGhlbWVPcHRpb24uQ3VzdG9tTWVzc2'
+    'FnZUVudHJ5Ug1jdXN0b21NZXNzYWdlGl0KFkN1c3RvbVNwYWNlQnV0dG9uRW50cnkSEAoDa2V5'
+    'GAEgASgJUgNrZXkSLQoFdmFsdWUYAiABKAsyFy50aGVtZS5UaGVtZU9wdGlvblZhbHVlUgV2YW'
+    'x1ZToCOAEaXgoXQ3VzdG9tU3BhY2VDaGFubmVsRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSLQoF'
+    'dmFsdWUYAiABKAsyFy50aGVtZS5UaGVtZU9wdGlvblZhbHVlUgV2YWx1ZToCOAEaYgobQ3VzdG'
+    '9tTWVzc2FnZVRleHRGaWVsZEVudHJ5EhAKA2tleRgBIAEoCVIDa2V5Ei0KBXZhbHVlGAIgASgL'
+    'MhcudGhlbWUuVGhlbWVPcHRpb25WYWx1ZVIFdmFsdWU6AjgBGlkKEkN1c3RvbU1lc3NhZ2VFbn'
+    'RyeRIQCgNrZXkYASABKAlSA2tleRItCgV2YWx1ZRgCIAEoCzIXLnRoZW1lLlRoZW1lT3B0aW9u'
+    'VmFsdWVSBXZhbHVlOgI4AQ==');
+
+@$core.Deprecated('Use themeOptionValueDescriptor instead')
+const ThemeOptionValue$json = {
+  '1': 'ThemeOptionValue',
+  '2': [
+    {'1': 'value', '3': 1, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue.Value', '10': 'value'},
+    {'1': 'constraint', '3': 2, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue.Constraint', '10': 'constraint'},
+  ],
+  '3': [ThemeOptionValue_Value$json, ThemeOptionValue_Constraint$json],
+};
+
+@$core.Deprecated('Use themeOptionValueDescriptor instead')
+const ThemeOptionValue_Value$json = {
+  '1': 'Value',
+  '2': [
+    {'1': 'string', '3': 1, '4': 1, '5': 9, '9': 0, '10': 'string'},
+    {'1': 'int', '3': 2, '4': 1, '5': 5, '9': 0, '10': 'int'},
+    {'1': 'float', '3': 3, '4': 1, '5': 2, '9': 0, '10': 'float'},
+    {'1': 'bool', '3': 4, '4': 1, '5': 8, '9': 0, '10': 'bool'},
+    {'1': 'color', '3': 5, '4': 1, '5': 13, '9': 0, '10': 'color'},
+    {'1': 'linear_gradient', '3': 6, '4': 1, '5': 11, '6': '.theme.TLinearGradient', '9': 0, '10': 'linearGradient'},
+    {'1': 'edge_inset', '3': 7, '4': 1, '5': 11, '6': '.theme.TEdgeInsets', '9': 0, '10': 'edgeInset'},
+    {'1': 'text_style', '3': 8, '4': 1, '5': 11, '6': '.theme.TTextStyle', '9': 0, '10': 'textStyle'},
+    {'1': 'border', '3': 9, '4': 1, '5': 11, '6': '.theme.TBorder', '9': 0, '10': 'border'},
+  ],
+  '8': [
+    {'1': 'value'},
+  ],
+};
+
+@$core.Deprecated('Use themeOptionValueDescriptor instead')
+const ThemeOptionValue_Constraint$json = {
+  '1': 'Constraint',
+  '2': [
+    {'1': 'min', '3': 1, '4': 1, '5': 5, '10': 'min'},
+    {'1': 'max', '3': 2, '4': 1, '5': 5, '10': 'max'},
+  ],
+};
+
+/// Descriptor for `ThemeOptionValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List themeOptionValueDescriptor = $convert.base64Decode(
+    'ChBUaGVtZU9wdGlvblZhbHVlEjMKBXZhbHVlGAEgASgLMh0udGhlbWUuVGhlbWVPcHRpb25WYW'
+    'x1ZS5WYWx1ZVIFdmFsdWUSQgoKY29uc3RyYWludBgCIAEoCzIiLnRoZW1lLlRoZW1lT3B0aW9u'
+    'VmFsdWUuQ29uc3RyYWludFIKY29uc3RyYWludBraAgoFVmFsdWUSGAoGc3RyaW5nGAEgASgJSA'
+    'BSBnN0cmluZxISCgNpbnQYAiABKAVIAFIDaW50EhYKBWZsb2F0GAMgASgCSABSBWZsb2F0EhQK'
+    'BGJvb2wYBCABKAhIAFIEYm9vbBIWCgVjb2xvchgFIAEoDUgAUgVjb2xvchJBCg9saW5lYXJfZ3'
+    'JhZGllbnQYBiABKAsyFi50aGVtZS5UTGluZWFyR3JhZGllbnRIAFIObGluZWFyR3JhZGllbnQS'
+    'MwoKZWRnZV9pbnNldBgHIAEoCzISLnRoZW1lLlRFZGdlSW5zZXRzSABSCWVkZ2VJbnNldBIyCg'
+    'p0ZXh0X3N0eWxlGAggASgLMhEudGhlbWUuVFRleHRTdHlsZUgAUgl0ZXh0U3R5bGUSKAoGYm9y'
+    'ZGVyGAkgASgLMg4udGhlbWUuVEJvcmRlckgAUgZib3JkZXJCBwoFdmFsdWUaMAoKQ29uc3RyYW'
+    'ludBIQCgNtaW4YASABKAVSA21pbhIQCgNtYXgYAiABKAVSA21heA==');
 
 @$core.Deprecated('Use globalOptionDescriptor instead')
 const GlobalOption$json = {
@@ -110,7 +220,7 @@ const WindowContainerOption$json = {
     {'1': 'image', '3': 2, '4': 1, '5': 9, '10': 'image'},
     {'1': 'video', '3': 3, '4': 1, '5': 9, '10': 'video'},
     {'1': 'overlay_color', '3': 4, '4': 1, '5': 13, '10': 'overlayColor'},
-    {'1': 'gradient', '3': 5, '4': 1, '5': 11, '6': '.theme.LinearGradient', '10': 'gradient'},
+    {'1': 'gradient', '3': 5, '4': 1, '5': 11, '6': '.theme.TLinearGradient', '10': 'gradient'},
     {'1': 'blur', '3': 6, '4': 1, '5': 2, '10': 'blur'},
     {'1': 'shader', '3': 7, '4': 1, '5': 14, '6': '.theme.BackgroundShader', '10': 'shader'},
     {'1': 'blurhash', '3': 8, '4': 1, '5': 9, '10': 'blurhash'},
@@ -123,29 +233,207 @@ const WindowContainerOption$json = {
 final $typed_data.Uint8List windowContainerOptionDescriptor = $convert.base64Decode(
     'ChVXaW5kb3dDb250YWluZXJPcHRpb24SKQoQYmFja2dyb3VuZF9jb2xvchgBIAEoDVIPYmFja2'
     'dyb3VuZENvbG9yEhQKBWltYWdlGAIgASgJUgVpbWFnZRIUCgV2aWRlbxgDIAEoCVIFdmlkZW8S'
-    'IwoNb3ZlcmxheV9jb2xvchgEIAEoDVIMb3ZlcmxheUNvbG9yEjEKCGdyYWRpZW50GAUgASgLMh'
-    'UudGhlbWUuTGluZWFyR3JhZGllbnRSCGdyYWRpZW50EhIKBGJsdXIYBiABKAJSBGJsdXISLwoG'
-    'c2hhZGVyGAcgASgOMhcudGhlbWUuQmFja2dyb3VuZFNoYWRlclIGc2hhZGVyEhoKCGJsdXJoYX'
-    'NoGAggASgJUghibHVyaGFzaBIhCgxpbWFnZV9tb2JpbGUYCSABKAlSC2ltYWdlTW9iaWxlEiEK'
-    'DHZpZGVvX21vYmlsZRgKIAEoCVILdmlkZW9Nb2JpbGU=');
+    'IwoNb3ZlcmxheV9jb2xvchgEIAEoDVIMb3ZlcmxheUNvbG9yEjIKCGdyYWRpZW50GAUgASgLMh'
+    'YudGhlbWUuVExpbmVhckdyYWRpZW50UghncmFkaWVudBISCgRibHVyGAYgASgCUgRibHVyEi8K'
+    'BnNoYWRlchgHIAEoDjIXLnRoZW1lLkJhY2tncm91bmRTaGFkZXJSBnNoYWRlchIaCghibHVyaG'
+    'FzaBgIIAEoCVIIYmx1cmhhc2gSIQoMaW1hZ2VfbW9iaWxlGAkgASgJUgtpbWFnZU1vYmlsZRIh'
+    'Cgx2aWRlb19tb2JpbGUYCiABKAlSC3ZpZGVvTW9iaWxl');
 
-@$core.Deprecated('Use linearGradientDescriptor instead')
-const LinearGradient$json = {
-  '1': 'LinearGradient',
+@$core.Deprecated('Use tLinearGradientDescriptor instead')
+const TLinearGradient$json = {
+  '1': 'TLinearGradient',
   '2': [
     {'1': 'colors', '3': 1, '4': 3, '5': 13, '10': 'colors'},
     {'1': 'stops', '3': 2, '4': 3, '5': 2, '10': 'stops'},
     {'1': 'tile_mode', '3': 3, '4': 1, '5': 13, '10': 'tileMode'},
-    {'1': 'begin', '3': 4, '4': 3, '5': 2, '10': 'begin'},
-    {'1': 'end', '3': 5, '4': 3, '5': 2, '10': 'end'},
+    {'1': 'begin', '3': 4, '4': 1, '5': 11, '6': '.theme.TAlignment', '10': 'begin'},
+    {'1': 'end', '3': 5, '4': 1, '5': 11, '6': '.theme.TAlignment', '10': 'end'},
   ],
 };
 
-/// Descriptor for `LinearGradient`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List linearGradientDescriptor = $convert.base64Decode(
-    'Cg5MaW5lYXJHcmFkaWVudBIWCgZjb2xvcnMYASADKA1SBmNvbG9ycxIUCgVzdG9wcxgCIAMoAl'
-    'IFc3RvcHMSGwoJdGlsZV9tb2RlGAMgASgNUgh0aWxlTW9kZRIUCgViZWdpbhgEIAMoAlIFYmVn'
-    'aW4SEAoDZW5kGAUgAygCUgNlbmQ=');
+/// Descriptor for `TLinearGradient`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tLinearGradientDescriptor = $convert.base64Decode(
+    'Cg9UTGluZWFyR3JhZGllbnQSFgoGY29sb3JzGAEgAygNUgZjb2xvcnMSFAoFc3RvcHMYAiADKA'
+    'JSBXN0b3BzEhsKCXRpbGVfbW9kZRgDIAEoDVIIdGlsZU1vZGUSJwoFYmVnaW4YBCABKAsyES50'
+    'aGVtZS5UQWxpZ25tZW50UgViZWdpbhIjCgNlbmQYBSABKAsyES50aGVtZS5UQWxpZ25tZW50Ug'
+    'NlbmQ=');
+
+@$core.Deprecated('Use tAlignmentDescriptor instead')
+const TAlignment$json = {
+  '1': 'TAlignment',
+  '2': [
+    {'1': 'x', '3': 1, '4': 1, '5': 2, '10': 'x'},
+    {'1': 'y', '3': 2, '4': 1, '5': 2, '10': 'y'},
+  ],
+};
+
+/// Descriptor for `TAlignment`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tAlignmentDescriptor = $convert.base64Decode(
+    'CgpUQWxpZ25tZW50EgwKAXgYASABKAJSAXgSDAoBeRgCIAEoAlIBeQ==');
+
+@$core.Deprecated('Use tEdgeInsetsDescriptor instead')
+const TEdgeInsets$json = {
+  '1': 'TEdgeInsets',
+  '2': [
+    {'1': 'top', '3': 1, '4': 1, '5': 2, '10': 'top'},
+    {'1': 'left', '3': 2, '4': 1, '5': 2, '10': 'left'},
+    {'1': 'bottom', '3': 3, '4': 1, '5': 2, '10': 'bottom'},
+    {'1': 'right', '3': 4, '4': 1, '5': 2, '10': 'right'},
+  ],
+};
+
+/// Descriptor for `TEdgeInsets`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tEdgeInsetsDescriptor = $convert.base64Decode(
+    'CgtURWRnZUluc2V0cxIQCgN0b3AYASABKAJSA3RvcBISCgRsZWZ0GAIgASgCUgRsZWZ0EhYKBm'
+    'JvdHRvbRgDIAEoAlIGYm90dG9tEhQKBXJpZ2h0GAQgASgCUgVyaWdodA==');
+
+@$core.Deprecated('Use tBorderDescriptor instead')
+const TBorder$json = {
+  '1': 'TBorder',
+  '2': [
+    {'1': 'shape', '3': 1, '4': 1, '5': 11, '6': '.theme.TBorder.Shape', '10': 'shape'},
+  ],
+  '3': [TBorder_Shape$json],
+};
+
+@$core.Deprecated('Use tBorderDescriptor instead')
+const TBorder_Shape$json = {
+  '1': 'Shape',
+  '2': [
+    {'1': 'circle', '3': 1, '4': 1, '5': 11, '6': '.theme.TCircleBorder', '9': 0, '10': 'circle'},
+    {'1': 'rounded_rectangle', '3': 2, '4': 1, '5': 11, '6': '.theme.TRoundedRectangleBorder', '9': 0, '10': 'roundedRectangle'},
+    {'1': 'continuous_rectangle', '3': 3, '4': 1, '5': 11, '6': '.theme.TContinuousRectangleBorder', '9': 0, '10': 'continuousRectangle'},
+    {'1': 'stadium', '3': 4, '4': 1, '5': 11, '6': '.theme.TStadiumBorder', '9': 0, '10': 'stadium'},
+  ],
+  '8': [
+    {'1': 'value'},
+  ],
+};
+
+/// Descriptor for `TBorder`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tBorderDescriptor = $convert.base64Decode(
+    'CgdUQm9yZGVyEioKBXNoYXBlGAEgASgLMhQudGhlbWUuVEJvcmRlci5TaGFwZVIFc2hhcGUamg'
+    'IKBVNoYXBlEi4KBmNpcmNsZRgBIAEoCzIULnRoZW1lLlRDaXJjbGVCb3JkZXJIAFIGY2lyY2xl'
+    'Ek0KEXJvdW5kZWRfcmVjdGFuZ2xlGAIgASgLMh4udGhlbWUuVFJvdW5kZWRSZWN0YW5nbGVCb3'
+    'JkZXJIAFIQcm91bmRlZFJlY3RhbmdsZRJWChRjb250aW51b3VzX3JlY3RhbmdsZRgDIAEoCzIh'
+    'LnRoZW1lLlRDb250aW51b3VzUmVjdGFuZ2xlQm9yZGVySABSE2NvbnRpbnVvdXNSZWN0YW5nbG'
+    'USMQoHc3RhZGl1bRgEIAEoCzIVLnRoZW1lLlRTdGFkaXVtQm9yZGVySABSB3N0YWRpdW1CBwoF'
+    'dmFsdWU=');
+
+@$core.Deprecated('Use tCircleBorderDescriptor instead')
+const TCircleBorder$json = {
+  '1': 'TCircleBorder',
+  '2': [
+    {'1': 'side', '3': 1, '4': 1, '5': 11, '6': '.theme.TBorderSide', '10': 'side'},
+    {'1': 'eccentricity', '3': 2, '4': 1, '5': 2, '10': 'eccentricity'},
+  ],
+};
+
+/// Descriptor for `TCircleBorder`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tCircleBorderDescriptor = $convert.base64Decode(
+    'Cg1UQ2lyY2xlQm9yZGVyEiYKBHNpZGUYASABKAsyEi50aGVtZS5UQm9yZGVyU2lkZVIEc2lkZR'
+    'IiCgxlY2NlbnRyaWNpdHkYAiABKAJSDGVjY2VudHJpY2l0eQ==');
+
+@$core.Deprecated('Use tRoundedRectangleBorderDescriptor instead')
+const TRoundedRectangleBorder$json = {
+  '1': 'TRoundedRectangleBorder',
+  '2': [
+    {'1': 'side', '3': 1, '4': 1, '5': 11, '6': '.theme.TBorderSide', '10': 'side'},
+    {'1': 'radius', '3': 2, '4': 1, '5': 11, '6': '.theme.TBorderRadius', '10': 'radius'},
+  ],
+};
+
+/// Descriptor for `TRoundedRectangleBorder`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tRoundedRectangleBorderDescriptor = $convert.base64Decode(
+    'ChdUUm91bmRlZFJlY3RhbmdsZUJvcmRlchImCgRzaWRlGAEgASgLMhIudGhlbWUuVEJvcmRlcl'
+    'NpZGVSBHNpZGUSLAoGcmFkaXVzGAIgASgLMhQudGhlbWUuVEJvcmRlclJhZGl1c1IGcmFkaXVz');
+
+@$core.Deprecated('Use tContinuousRectangleBorderDescriptor instead')
+const TContinuousRectangleBorder$json = {
+  '1': 'TContinuousRectangleBorder',
+  '2': [
+    {'1': 'side', '3': 1, '4': 1, '5': 11, '6': '.theme.TBorderSide', '10': 'side'},
+    {'1': 'radius', '3': 2, '4': 1, '5': 11, '6': '.theme.TBorderRadius', '10': 'radius'},
+  ],
+};
+
+/// Descriptor for `TContinuousRectangleBorder`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tContinuousRectangleBorderDescriptor = $convert.base64Decode(
+    'ChpUQ29udGludW91c1JlY3RhbmdsZUJvcmRlchImCgRzaWRlGAEgASgLMhIudGhlbWUuVEJvcm'
+    'RlclNpZGVSBHNpZGUSLAoGcmFkaXVzGAIgASgLMhQudGhlbWUuVEJvcmRlclJhZGl1c1IGcmFk'
+    'aXVz');
+
+@$core.Deprecated('Use tStadiumBorderDescriptor instead')
+const TStadiumBorder$json = {
+  '1': 'TStadiumBorder',
+  '2': [
+    {'1': 'side', '3': 1, '4': 1, '5': 11, '6': '.theme.TBorderSide', '10': 'side'},
+  ],
+};
+
+/// Descriptor for `TStadiumBorder`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tStadiumBorderDescriptor = $convert.base64Decode(
+    'Cg5UU3RhZGl1bUJvcmRlchImCgRzaWRlGAEgASgLMhIudGhlbWUuVEJvcmRlclNpZGVSBHNpZG'
+    'U=');
+
+@$core.Deprecated('Use tBorderSideDescriptor instead')
+const TBorderSide$json = {
+  '1': 'TBorderSide',
+  '2': [
+    {'1': 'color', '3': 1, '4': 1, '5': 13, '10': 'color'},
+    {'1': 'width', '3': 2, '4': 1, '5': 2, '10': 'width'},
+    {'1': 'style', '3': 3, '4': 1, '5': 13, '10': 'style'},
+    {'1': 'stroke_align', '3': 4, '4': 1, '5': 2, '10': 'strokeAlign'},
+  ],
+};
+
+/// Descriptor for `TBorderSide`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tBorderSideDescriptor = $convert.base64Decode(
+    'CgtUQm9yZGVyU2lkZRIUCgVjb2xvchgBIAEoDVIFY29sb3ISFAoFd2lkdGgYAiABKAJSBXdpZH'
+    'RoEhQKBXN0eWxlGAMgASgNUgVzdHlsZRIhCgxzdHJva2VfYWxpZ24YBCABKAJSC3N0cm9rZUFs'
+    'aWdu');
+
+@$core.Deprecated('Use tBorderRadiusDescriptor instead')
+const TBorderRadius$json = {
+  '1': 'TBorderRadius',
+  '2': [
+    {'1': 'top_left', '3': 1, '4': 1, '5': 2, '10': 'topLeft'},
+    {'1': 'top_right', '3': 2, '4': 1, '5': 2, '10': 'topRight'},
+    {'1': 'bottom_left', '3': 3, '4': 1, '5': 2, '10': 'bottomLeft'},
+    {'1': 'bottom_right', '3': 4, '4': 1, '5': 2, '10': 'bottomRight'},
+  ],
+};
+
+/// Descriptor for `TBorderRadius`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tBorderRadiusDescriptor = $convert.base64Decode(
+    'Cg1UQm9yZGVyUmFkaXVzEhkKCHRvcF9sZWZ0GAEgASgCUgd0b3BMZWZ0EhsKCXRvcF9yaWdodB'
+    'gCIAEoAlIIdG9wUmlnaHQSHwoLYm90dG9tX2xlZnQYAyABKAJSCmJvdHRvbUxlZnQSIQoMYm90'
+    'dG9tX3JpZ2h0GAQgASgCUgtib3R0b21SaWdodA==');
+
+@$core.Deprecated('Use tTextStyleDescriptor instead')
+const TTextStyle$json = {
+  '1': 'TTextStyle',
+  '2': [
+    {'1': 'font_family', '3': 1, '4': 1, '5': 9, '10': 'fontFamily'},
+    {'1': 'color', '3': 2, '4': 1, '5': 13, '10': 'color'},
+    {'1': 'font_size', '3': 4, '4': 1, '5': 2, '10': 'fontSize'},
+    {'1': 'font_weight', '3': 5, '4': 1, '5': 13, '10': 'fontWeight'},
+    {'1': 'line_height', '3': 6, '4': 1, '5': 2, '10': 'lineHeight'},
+    {'1': 'letter_spacing', '3': 7, '4': 1, '5': 2, '10': 'letterSpacing'},
+    {'1': 'word_spacing', '3': 8, '4': 1, '5': 2, '10': 'wordSpacing'},
+    {'1': 'text_align', '3': 9, '4': 1, '5': 13, '10': 'textAlign'},
+    {'1': 'font_style', '3': 10, '4': 1, '5': 13, '10': 'fontStyle'},
+  ],
+};
+
+/// Descriptor for `TTextStyle`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tTextStyleDescriptor = $convert.base64Decode(
+    'CgpUVGV4dFN0eWxlEh8KC2ZvbnRfZmFtaWx5GAEgASgJUgpmb250RmFtaWx5EhQKBWNvbG9yGA'
+    'IgASgNUgVjb2xvchIbCglmb250X3NpemUYBCABKAJSCGZvbnRTaXplEh8KC2ZvbnRfd2VpZ2h0'
+    'GAUgASgNUgpmb250V2VpZ2h0Eh8KC2xpbmVfaGVpZ2h0GAYgASgCUgpsaW5lSGVpZ2h0EiUKDm'
+    'xldHRlcl9zcGFjaW5nGAcgASgCUg1sZXR0ZXJTcGFjaW5nEiEKDHdvcmRfc3BhY2luZxgIIAEo'
+    'AlILd29yZFNwYWNpbmcSHQoKdGV4dF9hbGlnbhgJIAEoDVIJdGV4dEFsaWduEh0KCmZvbnRfc3'
+    'R5bGUYCiABKA1SCWZvbnRTdHlsZQ==');
 
 @$core.Deprecated('Use spaceButtonBaseOptionDescriptor instead')
 const SpaceButtonBaseOption$json = {

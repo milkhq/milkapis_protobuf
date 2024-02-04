@@ -126,6 +126,9 @@ const SOCIAL$json = {
     {'1': 'YOUTUBE', '2': 14},
     {'1': 'DISCORD', '2': 15},
     {'1': 'ANONYMOUS', '2': 16},
+    {'1': 'TIKTOK', '2': 17},
+    {'1': 'WECHAT', '2': 18},
+    {'1': 'WALLET_CONNECT', '2': 19},
   ],
 };
 
@@ -134,7 +137,8 @@ final $typed_data.Uint8List sOCIALDescriptor = $convert.base64Decode(
     'CgZTT0NJQUwSDAoIRkFDRUJPT0sQABIKCgZHT09HTEUQARILCgdUV0lUVEVSEAISCgoGR0lUSF'
     'VCEAMSDAoITElOS0VESU4QBBINCglNSUNST1NPRlQQBRINCglJTlNUQUdSQU0QCRINCglQSU5U'
     'RVJFU1QQChIKCgZSRURESVQQCxIKCgZUVU1CTFIQDBILCgdZT1VUVUJFEA4SCwoHRElTQ09SRB'
-    'APEg0KCUFOT05ZTU9VUxAQ');
+    'APEg0KCUFOT05ZTU9VUxAQEgoKBlRJS1RPSxAREgoKBldFQ0hBVBASEhIKDldBTExFVF9DT05O'
+    'RUNUEBM=');
 
 @$core.Deprecated('Use userFeatureFlagsDescriptor instead')
 const UserFeatureFlags$json = {

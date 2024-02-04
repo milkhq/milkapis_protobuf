@@ -28,6 +28,34 @@ message ThemeOption {
     bytes message = 7;
     PrefinedTheme prefined_theme = 8;
     uint32 updated_at = 9;
+    map<string, ThemeOptionValue> custom_space_button = 10;
+    map<string, ThemeOptionValue> custom_space_channel = 11;
+    map<string, ThemeOptionValue> custom_message_text_field = 12;
+    map<string, ThemeOptionValue> custom_message = 13;
+}
+
+message ThemeOptionValue {
+    message Value {
+        oneof value {
+            string string = 1;
+            int32 int = 2;
+            float float = 3;
+            bool bool = 4;
+            uint32 color = 5;
+            TLinearGradient linear_gradient = 6;
+            TEdgeInsets edge_inset = 7;
+            TTextStyle text_style = 8;
+            TBorder border = 9;
+        }
+    }
+
+    message Constraint {
+        int32 min = 1;
+        int32 max = 2;
+    }
+
+    Value value = 1;
+    Constraint constraint = 2;
 }
 
 enum BackgroundShader {
@@ -45,7 +73,7 @@ message WindowContainerOption {
     string image = 2;
     string video = 3;
     uint32 overlay_color = 4;
-    LinearGradient gradient = 5;
+    TLinearGradient gradient = 5;
     float blur = 6;
     BackgroundShader shader = 7;
     string blurhash = 8;
@@ -53,12 +81,82 @@ message WindowContainerOption {
     string video_mobile = 10;
 }
 
-message LinearGradient {
+message TLinearGradient {
     repeated uint32 colors = 1;
     repeated float stops = 2;
     uint32 tile_mode = 3;
-    repeated float begin = 4;
-    repeated float end = 5;
+    TAlignment begin = 4;
+    TAlignment end = 5;
+}
+
+message TAlignment {
+    float x = 1;
+    float y = 2;
+}
+
+message TEdgeInsets {
+    float top = 1;
+    float left = 2;
+    float bottom = 3;
+    float right = 4;
+}
+
+message TBorder {
+    message Shape {
+        oneof value {
+            TCircleBorder circle = 1;
+            TRoundedRectangleBorder rounded_rectangle = 2;
+            TContinuousRectangleBorder continuous_rectangle = 3;
+            TStadiumBorder stadium = 4;
+        }
+    }
+
+    Shape shape = 1;
+}
+
+message TCircleBorder {
+    TBorderSide side = 1;
+    float eccentricity = 2;
+}
+
+message TRoundedRectangleBorder {
+    TBorderSide side = 1;
+    TBorderRadius radius = 2;
+}
+
+message TContinuousRectangleBorder {
+    TBorderSide side = 1;
+    TBorderRadius radius = 2;
+}
+
+message TStadiumBorder {
+    TBorderSide side = 1;
+}
+
+message TBorderSide {
+    uint32 color = 1;
+    float width = 2;
+    uint32 style = 3;
+    float stroke_align = 4;
+}
+
+message TBorderRadius {
+    float top_left = 1;
+    float top_right = 2;
+    float bottom_left = 3;
+    float bottom_right = 4;
+} 
+
+message TTextStyle {
+    string font_family = 1;
+    uint32 color = 2;
+    float font_size = 4;
+    uint32 font_weight = 5;
+    float line_height = 6;
+    float letter_spacing = 7;
+    float word_spacing = 8;
+    uint32 text_align = 9;
+    uint32 font_style = 10;
 }
 
 message SpaceButtonBaseOption {

@@ -13,6 +13,23 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class ReadReceiptStatus extends $pb.ProtobufEnum {
+  static const ReadReceiptStatus NONE = ReadReceiptStatus._(0, _omitEnumNames ? '' : 'NONE');
+  static const ReadReceiptStatus DELIVERED = ReadReceiptStatus._(1, _omitEnumNames ? '' : 'DELIVERED');
+  static const ReadReceiptStatus READ = ReadReceiptStatus._(2, _omitEnumNames ? '' : 'READ');
+
+  static const $core.List<ReadReceiptStatus> values = <ReadReceiptStatus> [
+    NONE,
+    DELIVERED,
+    READ,
+  ];
+
+  static final $core.Map<$core.int, ReadReceiptStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ReadReceiptStatus? valueOf($core.int value) => _byValue[value];
+
+  const ReadReceiptStatus._($core.int v, $core.String n) : super(v, n);
+}
+
 class DOCUMENT_STATUS extends $pb.ProtobufEnum {
   static const DOCUMENT_STATUS PENDING = DOCUMENT_STATUS._(0, _omitEnumNames ? '' : 'PENDING');
   static const DOCUMENT_STATUS APPROVED = DOCUMENT_STATUS._(1, _omitEnumNames ? '' : 'APPROVED');

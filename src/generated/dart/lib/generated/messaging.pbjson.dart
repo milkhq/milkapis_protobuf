@@ -13,6 +13,20 @@ import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
+@$core.Deprecated('Use readReceiptStatusDescriptor instead')
+const ReadReceiptStatus$json = {
+  '1': 'ReadReceiptStatus',
+  '2': [
+    {'1': 'NONE', '2': 0},
+    {'1': 'DELIVERED', '2': 1},
+    {'1': 'READ', '2': 2},
+  ],
+};
+
+/// Descriptor for `ReadReceiptStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List readReceiptStatusDescriptor = $convert.base64Decode(
+    'ChFSZWFkUmVjZWlwdFN0YXR1cxIICgROT05FEAASDQoJREVMSVZFUkVEEAESCAoEUkVBRBAC');
+
 @$core.Deprecated('Use dOCUMENT_STATUSDescriptor instead')
 const DOCUMENT_STATUS$json = {
   '1': 'DOCUMENT_STATUS',
@@ -157,6 +171,112 @@ final $typed_data.Uint8List cHANNEL_PERMISSIONDescriptor = $convert.base64Decode
     'AkEhQKEHByaW9yaXR5X3NwZWFrZXIQJRIQCgxtdXRlX21lbWJlcnMQJhISCg5kZWFmZW5fbWVt'
     'YmVycxAnEhAKDG1vdmVfbWVtYmVycxAoEhAKDGNyZWF0ZV9ldmVudBApEhEKDW1hbmFnZV9ldm'
     'VudHMQKhIICgRub25lECs=');
+
+@$core.Deprecated('Use getConversationReadReceiptRequestDescriptor instead')
+const GetConversationReadReceiptRequest$json = {
+  '1': 'GetConversationReadReceiptRequest',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+  ],
+};
+
+/// Descriptor for `GetConversationReadReceiptRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getConversationReadReceiptRequestDescriptor = $convert.base64Decode(
+    'CiFHZXRDb252ZXJzYXRpb25SZWFkUmVjZWlwdFJlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIAEoCV'
+    'IJY2hhbm5lbElk');
+
+@$core.Deprecated('Use getConversationReadReceiptResponseDescriptor instead')
+const GetConversationReadReceiptResponse$json = {
+  '1': 'GetConversationReadReceiptResponse',
+  '2': [
+    {'1': 'receipts', '3': 1, '4': 3, '5': 11, '6': '.messaging.GetConversationReadReceiptResponse.ReceiptsEntry', '10': 'receipts'},
+  ],
+  '3': [GetConversationReadReceiptResponse_ReceiptsEntry$json],
+};
+
+@$core.Deprecated('Use getConversationReadReceiptResponseDescriptor instead')
+const GetConversationReadReceiptResponse_ReceiptsEntry$json = {
+  '1': 'ReceiptsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `GetConversationReadReceiptResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getConversationReadReceiptResponseDescriptor = $convert.base64Decode(
+    'CiJHZXRDb252ZXJzYXRpb25SZWFkUmVjZWlwdFJlc3BvbnNlElcKCHJlY2VpcHRzGAEgAygLMj'
+    'subWVzc2FnaW5nLkdldENvbnZlcnNhdGlvblJlYWRSZWNlaXB0UmVzcG9uc2UuUmVjZWlwdHNF'
+    'bnRyeVIIcmVjZWlwdHMaOwoNUmVjZWlwdHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YW'
+    'x1ZRgCIAEoCVIFdmFsdWU6AjgB');
+
+@$core.Deprecated('Use updateConversationReadReceiptRequestDescriptor instead')
+const UpdateConversationReadReceiptRequest$json = {
+  '1': 'UpdateConversationReadReceiptRequest',
+  '2': [
+    {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 9, '10': 'status'},
+  ],
+};
+
+/// Descriptor for `UpdateConversationReadReceiptRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateConversationReadReceiptRequestDescriptor = $convert.base64Decode(
+    'CiRVcGRhdGVDb252ZXJzYXRpb25SZWFkUmVjZWlwdFJlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIA'
+    'EoCVIJY2hhbm5lbElkEhYKBnN0YXR1cxgCIAEoCVIGc3RhdHVz');
+
+@$core.Deprecated('Use updateConversationReadReceiptResponseDescriptor instead')
+const UpdateConversationReadReceiptResponse$json = {
+  '1': 'UpdateConversationReadReceiptResponse',
+};
+
+/// Descriptor for `UpdateConversationReadReceiptResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateConversationReadReceiptResponseDescriptor = $convert.base64Decode(
+    'CiVVcGRhdGVDb252ZXJzYXRpb25SZWFkUmVjZWlwdFJlc3BvbnNl');
+
+@$core.Deprecated('Use getPinnedConversationListRequestDescriptor instead')
+const GetPinnedConversationListRequest$json = {
+  '1': 'GetPinnedConversationListRequest',
+};
+
+/// Descriptor for `GetPinnedConversationListRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPinnedConversationListRequestDescriptor = $convert.base64Decode(
+    'CiBHZXRQaW5uZWRDb252ZXJzYXRpb25MaXN0UmVxdWVzdA==');
+
+@$core.Deprecated('Use getPinnedConversationListResponseDescriptor instead')
+const GetPinnedConversationListResponse$json = {
+  '1': 'GetPinnedConversationListResponse',
+  '2': [
+    {'1': 'channel_ids', '3': 1, '4': 3, '5': 9, '10': 'channelIds'},
+  ],
+};
+
+/// Descriptor for `GetPinnedConversationListResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getPinnedConversationListResponseDescriptor = $convert.base64Decode(
+    'CiFHZXRQaW5uZWRDb252ZXJzYXRpb25MaXN0UmVzcG9uc2USHwoLY2hhbm5lbF9pZHMYASADKA'
+    'lSCmNoYW5uZWxJZHM=');
+
+@$core.Deprecated('Use updatePinnedConversationListRequestDescriptor instead')
+const UpdatePinnedConversationListRequest$json = {
+  '1': 'UpdatePinnedConversationListRequest',
+  '2': [
+    {'1': 'channel_ids', '3': 1, '4': 3, '5': 9, '10': 'channelIds'},
+  ],
+};
+
+/// Descriptor for `UpdatePinnedConversationListRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updatePinnedConversationListRequestDescriptor = $convert.base64Decode(
+    'CiNVcGRhdGVQaW5uZWRDb252ZXJzYXRpb25MaXN0UmVxdWVzdBIfCgtjaGFubmVsX2lkcxgBIA'
+    'MoCVIKY2hhbm5lbElkcw==');
+
+@$core.Deprecated('Use updatePinnedConversationListResponseDescriptor instead')
+const UpdatePinnedConversationListResponse$json = {
+  '1': 'UpdatePinnedConversationListResponse',
+};
+
+/// Descriptor for `UpdatePinnedConversationListResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updatePinnedConversationListResponseDescriptor = $convert.base64Decode(
+    'CiRVcGRhdGVQaW5uZWRDb252ZXJzYXRpb25MaXN0UmVzcG9uc2U=');
 
 @$core.Deprecated('Use updateSpaceChannelCategoryStatusRequestDescriptor instead')
 const UpdateSpaceChannelCategoryStatusRequest$json = {

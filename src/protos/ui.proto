@@ -74,17 +74,18 @@ enum ContentScreenState {
 message SessionState {
     repeated Space spaces = 1;
     user.UserDocument user = 2;
-    repeated Channel conversations = 3;
+    map<string, Channel> conversations = 3;
     ConversationPanelState conversation_panel_state = 4;
     string current_space_id = 5;
     repeated user.UserDocument users = 6;
     ContentScreenSidePanelState content_screen_side_panel_state = 7;
+    repeated string pinned_conversations = 8;
 
     message Space {
         space.SpaceDocument document = 1;
         repeated ChannelCategory channelCategories = 2;
         repeated string members = 3;
-        repeated Role roles = 4;
+        map<string, Role> roles = 4;
         string current_channel_id = 5;
         repeated string current_user_roles = 6;
         map<string, uint32> unreadMessagesCountMap = 7;

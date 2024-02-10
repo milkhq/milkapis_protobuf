@@ -2510,6 +2510,7 @@ class CreateUserEmailPasswordRequest extends $pb.GeneratedMessage {
   factory CreateUserEmailPasswordRequest({
     $core.String? email,
     $core.String? password,
+    $core.String? signUpToken,
   }) {
     final $result = create();
     if (email != null) {
@@ -2517,6 +2518,9 @@ class CreateUserEmailPasswordRequest extends $pb.GeneratedMessage {
     }
     if (password != null) {
       $result.password = password;
+    }
+    if (signUpToken != null) {
+      $result.signUpToken = signUpToken;
     }
     return $result;
   }
@@ -2527,6 +2531,7 @@ class CreateUserEmailPasswordRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateUserEmailPasswordRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'user'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'email')
     ..aOS(2, _omitFieldNames ? '' : 'password')
+    ..aOS(3, _omitFieldNames ? '' : 'signUpToken')
     ..hasRequiredFields = false
   ;
 
@@ -2568,6 +2573,15 @@ class CreateUserEmailPasswordRequest extends $pb.GeneratedMessage {
   $core.bool hasPassword() => $_has(1);
   @$pb.TagNumber(2)
   void clearPassword() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get signUpToken => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set signUpToken($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSignUpToken() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSignUpToken() => clearField(3);
 }
 
 class CreateUserEmailPasswordResponse extends $pb.GeneratedMessage {

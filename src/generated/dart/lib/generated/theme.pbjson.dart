@@ -152,6 +152,10 @@ const ThemeOptionValue$json = {
   '2': [
     {'1': 'value', '3': 1, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue.Value', '10': 'value'},
     {'1': 'constraint', '3': 2, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue.Constraint', '10': 'constraint'},
+    {'1': 'value_active', '3': 3, '4': 1, '5': 11, '6': '.theme.ThemeOptionValue.Value', '10': 'valueActive'},
+    {'1': 'active', '3': 4, '4': 1, '5': 8, '10': 'active'},
+    {'1': 'edit_disabled', '3': 5, '4': 1, '5': 8, '10': 'editDisabled'},
+    {'1': 'active_disabled', '3': 6, '4': 1, '5': 8, '10': 'activeDisabled'},
   ],
   '3': [ThemeOptionValue_Value$json, ThemeOptionValue_Constraint$json],
 };
@@ -188,14 +192,17 @@ const ThemeOptionValue_Constraint$json = {
 final $typed_data.Uint8List themeOptionValueDescriptor = $convert.base64Decode(
     'ChBUaGVtZU9wdGlvblZhbHVlEjMKBXZhbHVlGAEgASgLMh0udGhlbWUuVGhlbWVPcHRpb25WYW'
     'x1ZS5WYWx1ZVIFdmFsdWUSQgoKY29uc3RyYWludBgCIAEoCzIiLnRoZW1lLlRoZW1lT3B0aW9u'
-    'VmFsdWUuQ29uc3RyYWludFIKY29uc3RyYWludBraAgoFVmFsdWUSGAoGc3RyaW5nGAEgASgJSA'
-    'BSBnN0cmluZxISCgNpbnQYAiABKAVIAFIDaW50EhYKBWZsb2F0GAMgASgCSABSBWZsb2F0EhQK'
-    'BGJvb2wYBCABKAhIAFIEYm9vbBIWCgVjb2xvchgFIAEoDUgAUgVjb2xvchJBCg9saW5lYXJfZ3'
-    'JhZGllbnQYBiABKAsyFi50aGVtZS5UTGluZWFyR3JhZGllbnRIAFIObGluZWFyR3JhZGllbnQS'
-    'MwoKZWRnZV9pbnNldBgHIAEoCzISLnRoZW1lLlRFZGdlSW5zZXRzSABSCWVkZ2VJbnNldBIyCg'
-    'p0ZXh0X3N0eWxlGAggASgLMhEudGhlbWUuVFRleHRTdHlsZUgAUgl0ZXh0U3R5bGUSKAoGYm9y'
-    'ZGVyGAkgASgLMg4udGhlbWUuVEJvcmRlckgAUgZib3JkZXJCBwoFdmFsdWUaMAoKQ29uc3RyYW'
-    'ludBIQCgNtaW4YASABKAVSA21pbhIQCgNtYXgYAiABKAVSA21heA==');
+    'VmFsdWUuQ29uc3RyYWludFIKY29uc3RyYWludBJACgx2YWx1ZV9hY3RpdmUYAyABKAsyHS50aG'
+    'VtZS5UaGVtZU9wdGlvblZhbHVlLlZhbHVlUgt2YWx1ZUFjdGl2ZRIWCgZhY3RpdmUYBCABKAhS'
+    'BmFjdGl2ZRIjCg1lZGl0X2Rpc2FibGVkGAUgASgIUgxlZGl0RGlzYWJsZWQSJwoPYWN0aXZlX2'
+    'Rpc2FibGVkGAYgASgIUg5hY3RpdmVEaXNhYmxlZBraAgoFVmFsdWUSGAoGc3RyaW5nGAEgASgJ'
+    'SABSBnN0cmluZxISCgNpbnQYAiABKAVIAFIDaW50EhYKBWZsb2F0GAMgASgCSABSBWZsb2F0Eh'
+    'QKBGJvb2wYBCABKAhIAFIEYm9vbBIWCgVjb2xvchgFIAEoDUgAUgVjb2xvchJBCg9saW5lYXJf'
+    'Z3JhZGllbnQYBiABKAsyFi50aGVtZS5UTGluZWFyR3JhZGllbnRIAFIObGluZWFyR3JhZGllbn'
+    'QSMwoKZWRnZV9pbnNldBgHIAEoCzISLnRoZW1lLlRFZGdlSW5zZXRzSABSCWVkZ2VJbnNldBIy'
+    'Cgp0ZXh0X3N0eWxlGAggASgLMhEudGhlbWUuVFRleHRTdHlsZUgAUgl0ZXh0U3R5bGUSKAoGYm'
+    '9yZGVyGAkgASgLMg4udGhlbWUuVEJvcmRlckgAUgZib3JkZXJCBwoFdmFsdWUaMAoKQ29uc3Ry'
+    'YWludBIQCgNtaW4YASABKAVSA21pbhIQCgNtYXgYAiABKAVSA21heA==');
 
 @$core.Deprecated('Use globalOptionDescriptor instead')
 const GlobalOption$json = {
@@ -423,6 +430,24 @@ const TTextStyle$json = {
     {'1': 'word_spacing', '3': 8, '4': 1, '5': 2, '10': 'wordSpacing'},
     {'1': 'text_align', '3': 9, '4': 1, '5': 13, '10': 'textAlign'},
     {'1': 'font_style', '3': 10, '4': 1, '5': 13, '10': 'fontStyle'},
+    {'1': 'allow_list', '3': 11, '4': 1, '5': 11, '6': '.theme.TTextStyle.AllowList', '10': 'allowList'},
+  ],
+  '3': [TTextStyle_AllowList$json],
+};
+
+@$core.Deprecated('Use tTextStyleDescriptor instead')
+const TTextStyle_AllowList$json = {
+  '1': 'AllowList',
+  '2': [
+    {'1': 'font_family', '3': 1, '4': 1, '5': 8, '10': 'fontFamily'},
+    {'1': 'color', '3': 2, '4': 1, '5': 8, '10': 'color'},
+    {'1': 'font_size', '3': 4, '4': 1, '5': 8, '10': 'fontSize'},
+    {'1': 'font_weight', '3': 5, '4': 1, '5': 8, '10': 'fontWeight'},
+    {'1': 'line_height', '3': 6, '4': 1, '5': 8, '10': 'lineHeight'},
+    {'1': 'letter_spacing', '3': 7, '4': 1, '5': 8, '10': 'letterSpacing'},
+    {'1': 'word_spacing', '3': 8, '4': 1, '5': 8, '10': 'wordSpacing'},
+    {'1': 'text_align', '3': 9, '4': 1, '5': 8, '10': 'textAlign'},
+    {'1': 'font_style', '3': 10, '4': 1, '5': 8, '10': 'fontStyle'},
   ],
 };
 
@@ -433,7 +458,13 @@ final $typed_data.Uint8List tTextStyleDescriptor = $convert.base64Decode(
     'GAUgASgNUgpmb250V2VpZ2h0Eh8KC2xpbmVfaGVpZ2h0GAYgASgCUgpsaW5lSGVpZ2h0EiUKDm'
     'xldHRlcl9zcGFjaW5nGAcgASgCUg1sZXR0ZXJTcGFjaW5nEiEKDHdvcmRfc3BhY2luZxgIIAEo'
     'AlILd29yZFNwYWNpbmcSHQoKdGV4dF9hbGlnbhgJIAEoDVIJdGV4dEFsaWduEh0KCmZvbnRfc3'
-    'R5bGUYCiABKA1SCWZvbnRTdHlsZQ==');
+    'R5bGUYCiABKA1SCWZvbnRTdHlsZRI6CgphbGxvd19saXN0GAsgASgLMhsudGhlbWUuVFRleHRT'
+    'dHlsZS5BbGxvd0xpc3RSCWFsbG93TGlzdBqpAgoJQWxsb3dMaXN0Eh8KC2ZvbnRfZmFtaWx5GA'
+    'EgASgIUgpmb250RmFtaWx5EhQKBWNvbG9yGAIgASgIUgVjb2xvchIbCglmb250X3NpemUYBCAB'
+    'KAhSCGZvbnRTaXplEh8KC2ZvbnRfd2VpZ2h0GAUgASgIUgpmb250V2VpZ2h0Eh8KC2xpbmVfaG'
+    'VpZ2h0GAYgASgIUgpsaW5lSGVpZ2h0EiUKDmxldHRlcl9zcGFjaW5nGAcgASgIUg1sZXR0ZXJT'
+    'cGFjaW5nEiEKDHdvcmRfc3BhY2luZxgIIAEoCFILd29yZFNwYWNpbmcSHQoKdGV4dF9hbGlnbh'
+    'gJIAEoCFIJdGV4dEFsaWduEh0KCmZvbnRfc3R5bGUYCiABKAhSCWZvbnRTdHlsZQ==');
 
 @$core.Deprecated('Use spaceButtonBaseOptionDescriptor instead')
 const SpaceButtonBaseOption$json = {

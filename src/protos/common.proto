@@ -27,6 +27,7 @@ enum CollectionsV1 {
     SIGN_UP_TOKENS = 17;
     USER_PRESENCE_STATUSES = 18;
     SUBSCRIBED_TOPICS = 19;
+    READ_RECEIPTS = 20;
 }
 
 enum CollectionCountersV1 {
@@ -48,6 +49,7 @@ enum CollectionCountersV1 {
     SIGN_UP_TOKEN_COUNTER = 15;
     USER_PRESENCE_STATUS_COUNTER = 16;
     SUBSCRIBED_TOPIC_COUNTER = 17;
+    READ_RECEIPT_COUNTER = 18;
 }
 
 enum DOCUMENT_TYPE {
@@ -108,6 +110,7 @@ enum EVENT_TYPE {
     SPACE_UPDATED = 40;
     SPACE_CHANNEL_UPDATED = 41;
     SPACE_CHANNEL_CATEGORY_UPDATED = 42;
+    CONVERSATION_READ_RECEIPT_UPDATED = 43;
 }
 
 message ProxyMessage {
@@ -200,4 +203,11 @@ message SpaceChannelUpdate {
 message SpaceChannelCategoryUpdate {
     messaging.ChannelCategoryDocument document = 1;
     string space_id = 2;
+}
+
+message ConversationReadReceiptUpdate {
+    string user_id = 1;
+    string conversation_id = 2;
+    string status = 3;
+
 }

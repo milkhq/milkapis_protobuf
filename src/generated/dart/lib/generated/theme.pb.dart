@@ -582,6 +582,10 @@ class ThemeOptionValue extends $pb.GeneratedMessage {
   factory ThemeOptionValue({
     ThemeOptionValue_Value? value,
     ThemeOptionValue_Constraint? constraint,
+    ThemeOptionValue_Value? valueActive,
+    $core.bool? active,
+    $core.bool? editDisabled,
+    $core.bool? activeDisabled,
   }) {
     final $result = create();
     if (value != null) {
@@ -589,6 +593,18 @@ class ThemeOptionValue extends $pb.GeneratedMessage {
     }
     if (constraint != null) {
       $result.constraint = constraint;
+    }
+    if (valueActive != null) {
+      $result.valueActive = valueActive;
+    }
+    if (active != null) {
+      $result.active = active;
+    }
+    if (editDisabled != null) {
+      $result.editDisabled = editDisabled;
+    }
+    if (activeDisabled != null) {
+      $result.activeDisabled = activeDisabled;
     }
     return $result;
   }
@@ -599,6 +615,10 @@ class ThemeOptionValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ThemeOptionValue', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
     ..aOM<ThemeOptionValue_Value>(1, _omitFieldNames ? '' : 'value', subBuilder: ThemeOptionValue_Value.create)
     ..aOM<ThemeOptionValue_Constraint>(2, _omitFieldNames ? '' : 'constraint', subBuilder: ThemeOptionValue_Constraint.create)
+    ..aOM<ThemeOptionValue_Value>(3, _omitFieldNames ? '' : 'valueActive', subBuilder: ThemeOptionValue_Value.create)
+    ..aOB(4, _omitFieldNames ? '' : 'active')
+    ..aOB(5, _omitFieldNames ? '' : 'editDisabled')
+    ..aOB(6, _omitFieldNames ? '' : 'activeDisabled')
     ..hasRequiredFields = false
   ;
 
@@ -644,6 +664,44 @@ class ThemeOptionValue extends $pb.GeneratedMessage {
   void clearConstraint() => clearField(2);
   @$pb.TagNumber(2)
   ThemeOptionValue_Constraint ensureConstraint() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  ThemeOptionValue_Value get valueActive => $_getN(2);
+  @$pb.TagNumber(3)
+  set valueActive(ThemeOptionValue_Value v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasValueActive() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearValueActive() => clearField(3);
+  @$pb.TagNumber(3)
+  ThemeOptionValue_Value ensureValueActive() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.bool get active => $_getBF(3);
+  @$pb.TagNumber(4)
+  set active($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasActive() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearActive() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get editDisabled => $_getBF(4);
+  @$pb.TagNumber(5)
+  set editDisabled($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasEditDisabled() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearEditDisabled() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get activeDisabled => $_getBF(5);
+  @$pb.TagNumber(6)
+  set activeDisabled($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasActiveDisabled() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearActiveDisabled() => clearField(6);
 }
 
 class GlobalOption extends $pb.GeneratedMessage {
@@ -1765,17 +1823,17 @@ class TBorderRadius extends $pb.GeneratedMessage {
   void clearBottomRight() => clearField(4);
 }
 
-class TTextStyle extends $pb.GeneratedMessage {
-  factory TTextStyle({
-    $core.String? fontFamily,
-    $core.int? color,
-    $core.double? fontSize,
-    $core.int? fontWeight,
-    $core.double? lineHeight,
-    $core.double? letterSpacing,
-    $core.double? wordSpacing,
-    $core.int? textAlign,
-    $core.int? fontStyle,
+class TTextStyle_AllowList extends $pb.GeneratedMessage {
+  factory TTextStyle_AllowList({
+    $core.bool? fontFamily,
+    $core.bool? color,
+    $core.bool? fontSize,
+    $core.bool? fontWeight,
+    $core.bool? lineHeight,
+    $core.bool? letterSpacing,
+    $core.bool? wordSpacing,
+    $core.bool? textAlign,
+    $core.bool? fontStyle,
   }) {
     final $result = create();
     if (fontFamily != null) {
@@ -1807,6 +1865,172 @@ class TTextStyle extends $pb.GeneratedMessage {
     }
     return $result;
   }
+  TTextStyle_AllowList._() : super();
+  factory TTextStyle_AllowList.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TTextStyle_AllowList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TTextStyle.AllowList', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'fontFamily')
+    ..aOB(2, _omitFieldNames ? '' : 'color')
+    ..aOB(4, _omitFieldNames ? '' : 'fontSize')
+    ..aOB(5, _omitFieldNames ? '' : 'fontWeight')
+    ..aOB(6, _omitFieldNames ? '' : 'lineHeight')
+    ..aOB(7, _omitFieldNames ? '' : 'letterSpacing')
+    ..aOB(8, _omitFieldNames ? '' : 'wordSpacing')
+    ..aOB(9, _omitFieldNames ? '' : 'textAlign')
+    ..aOB(10, _omitFieldNames ? '' : 'fontStyle')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TTextStyle_AllowList clone() => TTextStyle_AllowList()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TTextStyle_AllowList copyWith(void Function(TTextStyle_AllowList) updates) => super.copyWith((message) => updates(message as TTextStyle_AllowList)) as TTextStyle_AllowList;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TTextStyle_AllowList create() => TTextStyle_AllowList._();
+  TTextStyle_AllowList createEmptyInstance() => create();
+  static $pb.PbList<TTextStyle_AllowList> createRepeated() => $pb.PbList<TTextStyle_AllowList>();
+  @$core.pragma('dart2js:noInline')
+  static TTextStyle_AllowList getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TTextStyle_AllowList>(create);
+  static TTextStyle_AllowList? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get fontFamily => $_getBF(0);
+  @$pb.TagNumber(1)
+  set fontFamily($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasFontFamily() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearFontFamily() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.bool get color => $_getBF(1);
+  @$pb.TagNumber(2)
+  set color($core.bool v) { $_setBool(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasColor() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearColor() => clearField(2);
+
+  @$pb.TagNumber(4)
+  $core.bool get fontSize => $_getBF(2);
+  @$pb.TagNumber(4)
+  set fontSize($core.bool v) { $_setBool(2, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasFontSize() => $_has(2);
+  @$pb.TagNumber(4)
+  void clearFontSize() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.bool get fontWeight => $_getBF(3);
+  @$pb.TagNumber(5)
+  set fontWeight($core.bool v) { $_setBool(3, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasFontWeight() => $_has(3);
+  @$pb.TagNumber(5)
+  void clearFontWeight() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.bool get lineHeight => $_getBF(4);
+  @$pb.TagNumber(6)
+  set lineHeight($core.bool v) { $_setBool(4, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasLineHeight() => $_has(4);
+  @$pb.TagNumber(6)
+  void clearLineHeight() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.bool get letterSpacing => $_getBF(5);
+  @$pb.TagNumber(7)
+  set letterSpacing($core.bool v) { $_setBool(5, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasLetterSpacing() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearLetterSpacing() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.bool get wordSpacing => $_getBF(6);
+  @$pb.TagNumber(8)
+  set wordSpacing($core.bool v) { $_setBool(6, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasWordSpacing() => $_has(6);
+  @$pb.TagNumber(8)
+  void clearWordSpacing() => clearField(8);
+
+  @$pb.TagNumber(9)
+  $core.bool get textAlign => $_getBF(7);
+  @$pb.TagNumber(9)
+  set textAlign($core.bool v) { $_setBool(7, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasTextAlign() => $_has(7);
+  @$pb.TagNumber(9)
+  void clearTextAlign() => clearField(9);
+
+  @$pb.TagNumber(10)
+  $core.bool get fontStyle => $_getBF(8);
+  @$pb.TagNumber(10)
+  set fontStyle($core.bool v) { $_setBool(8, v); }
+  @$pb.TagNumber(10)
+  $core.bool hasFontStyle() => $_has(8);
+  @$pb.TagNumber(10)
+  void clearFontStyle() => clearField(10);
+}
+
+class TTextStyle extends $pb.GeneratedMessage {
+  factory TTextStyle({
+    $core.String? fontFamily,
+    $core.int? color,
+    $core.double? fontSize,
+    $core.int? fontWeight,
+    $core.double? lineHeight,
+    $core.double? letterSpacing,
+    $core.double? wordSpacing,
+    $core.int? textAlign,
+    $core.int? fontStyle,
+    TTextStyle_AllowList? allowList,
+  }) {
+    final $result = create();
+    if (fontFamily != null) {
+      $result.fontFamily = fontFamily;
+    }
+    if (color != null) {
+      $result.color = color;
+    }
+    if (fontSize != null) {
+      $result.fontSize = fontSize;
+    }
+    if (fontWeight != null) {
+      $result.fontWeight = fontWeight;
+    }
+    if (lineHeight != null) {
+      $result.lineHeight = lineHeight;
+    }
+    if (letterSpacing != null) {
+      $result.letterSpacing = letterSpacing;
+    }
+    if (wordSpacing != null) {
+      $result.wordSpacing = wordSpacing;
+    }
+    if (textAlign != null) {
+      $result.textAlign = textAlign;
+    }
+    if (fontStyle != null) {
+      $result.fontStyle = fontStyle;
+    }
+    if (allowList != null) {
+      $result.allowList = allowList;
+    }
+    return $result;
+  }
   TTextStyle._() : super();
   factory TTextStyle.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory TTextStyle.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
@@ -1821,6 +2045,7 @@ class TTextStyle extends $pb.GeneratedMessage {
     ..a<$core.double>(8, _omitFieldNames ? '' : 'wordSpacing', $pb.PbFieldType.OF)
     ..a<$core.int>(9, _omitFieldNames ? '' : 'textAlign', $pb.PbFieldType.OU3)
     ..a<$core.int>(10, _omitFieldNames ? '' : 'fontStyle', $pb.PbFieldType.OU3)
+    ..aOM<TTextStyle_AllowList>(11, _omitFieldNames ? '' : 'allowList', subBuilder: TTextStyle_AllowList.create)
     ..hasRequiredFields = false
   ;
 
@@ -1925,6 +2150,17 @@ class TTextStyle extends $pb.GeneratedMessage {
   $core.bool hasFontStyle() => $_has(8);
   @$pb.TagNumber(10)
   void clearFontStyle() => clearField(10);
+
+  @$pb.TagNumber(11)
+  TTextStyle_AllowList get allowList => $_getN(9);
+  @$pb.TagNumber(11)
+  set allowList(TTextStyle_AllowList v) { setField(11, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasAllowList() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearAllowList() => clearField(11);
+  @$pb.TagNumber(11)
+  TTextStyle_AllowList ensureAllowList() => $_ensure(9);
 }
 
 class SpaceButtonBaseOption extends $pb.GeneratedMessage {

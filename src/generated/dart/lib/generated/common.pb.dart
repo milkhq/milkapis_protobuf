@@ -1220,6 +1220,84 @@ class SpaceChannelCategoryUpdate extends $pb.GeneratedMessage {
   void clearSpaceId() => clearField(2);
 }
 
+class ConversationReadReceiptUpdate extends $pb.GeneratedMessage {
+  factory ConversationReadReceiptUpdate({
+    $core.String? userId,
+    $core.String? conversationId,
+    $core.String? status,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (conversationId != null) {
+      $result.conversationId = conversationId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  ConversationReadReceiptUpdate._() : super();
+  factory ConversationReadReceiptUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConversationReadReceiptUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConversationReadReceiptUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..aOS(2, _omitFieldNames ? '' : 'conversationId')
+    ..aOS(3, _omitFieldNames ? '' : 'status')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConversationReadReceiptUpdate clone() => ConversationReadReceiptUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConversationReadReceiptUpdate copyWith(void Function(ConversationReadReceiptUpdate) updates) => super.copyWith((message) => updates(message as ConversationReadReceiptUpdate)) as ConversationReadReceiptUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConversationReadReceiptUpdate create() => ConversationReadReceiptUpdate._();
+  ConversationReadReceiptUpdate createEmptyInstance() => create();
+  static $pb.PbList<ConversationReadReceiptUpdate> createRepeated() => $pb.PbList<ConversationReadReceiptUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static ConversationReadReceiptUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConversationReadReceiptUpdate>(create);
+  static ConversationReadReceiptUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get conversationId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set conversationId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasConversationId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearConversationId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get status => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set status($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearStatus() => clearField(3);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

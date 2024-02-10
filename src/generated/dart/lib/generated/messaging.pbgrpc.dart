@@ -265,6 +265,14 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/UnsubscribeToConversation',
       ($1.UnsubscribeToConversationRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.UnsubscribeToConversationResponse.fromBuffer(value));
+  static final _$updatePinnedConversationList = $grpc.ClientMethod<$1.UpdatePinnedConversationListRequest, $1.UpdatePinnedConversationListResponse>(
+      '/messaging.Messaging/UpdatePinnedConversationList',
+      ($1.UpdatePinnedConversationListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UpdatePinnedConversationListResponse.fromBuffer(value));
+  static final _$getPinnedConversationList = $grpc.ClientMethod<$1.GetPinnedConversationListRequest, $1.GetPinnedConversationListResponse>(
+      '/messaging.Messaging/GetPinnedConversationList',
+      ($1.GetPinnedConversationListRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetPinnedConversationListResponse.fromBuffer(value));
   static final _$subscribeToUserPresence = $grpc.ClientMethod<$1.SubscribeToUserPresenceRequest, $1.SubscribeToUserPresenceResponse>(
       '/messaging.Messaging/SubscribeToUserPresence',
       ($1.SubscribeToUserPresenceRequest value) => value.writeToBuffer(),
@@ -273,6 +281,14 @@ class MessagingClient extends $grpc.Client {
       '/messaging.Messaging/UnsubscribeToUserPresence',
       ($1.UnsubscribeToUserPresenceRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.UnsubscribeToUserPresenceResponse.fromBuffer(value));
+  static final _$updateConversationReadReceipt = $grpc.ClientMethod<$1.UpdateConversationReadReceiptRequest, $1.UpdateConversationReadReceiptResponse>(
+      '/messaging.Messaging/UpdateConversationReadReceipt',
+      ($1.UpdateConversationReadReceiptRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.UpdateConversationReadReceiptResponse.fromBuffer(value));
+  static final _$getConversationReadReceipt = $grpc.ClientMethod<$1.GetConversationReadReceiptRequest, $1.GetConversationReadReceiptResponse>(
+      '/messaging.Messaging/GetConversationReadReceipt',
+      ($1.GetConversationReadReceiptRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $1.GetConversationReadReceiptResponse.fromBuffer(value));
 
   MessagingClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
@@ -524,12 +540,28 @@ class MessagingClient extends $grpc.Client {
     return $createUnaryCall(_$unsubscribeToConversation, request, options: options);
   }
 
+  $grpc.ResponseFuture<$1.UpdatePinnedConversationListResponse> updatePinnedConversationList($1.UpdatePinnedConversationListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updatePinnedConversationList, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetPinnedConversationListResponse> getPinnedConversationList($1.GetPinnedConversationListRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getPinnedConversationList, request, options: options);
+  }
+
   $grpc.ResponseFuture<$1.SubscribeToUserPresenceResponse> subscribeToUserPresence($1.SubscribeToUserPresenceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$subscribeToUserPresence, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.UnsubscribeToUserPresenceResponse> unsubscribeToUserPresence($1.UnsubscribeToUserPresenceRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$unsubscribeToUserPresence, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.UpdateConversationReadReceiptResponse> updateConversationReadReceipt($1.UpdateConversationReadReceiptRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateConversationReadReceipt, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$1.GetConversationReadReceiptResponse> getConversationReadReceipt($1.GetConversationReadReceiptRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getConversationReadReceipt, request, options: options);
   }
 }
 
@@ -965,6 +997,20 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.UnsubscribeToConversationRequest.fromBuffer(value),
         ($1.UnsubscribeToConversationResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UpdatePinnedConversationListRequest, $1.UpdatePinnedConversationListResponse>(
+        'UpdatePinnedConversationList',
+        updatePinnedConversationList_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UpdatePinnedConversationListRequest.fromBuffer(value),
+        ($1.UpdatePinnedConversationListResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetPinnedConversationListRequest, $1.GetPinnedConversationListResponse>(
+        'GetPinnedConversationList',
+        getPinnedConversationList_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetPinnedConversationListRequest.fromBuffer(value),
+        ($1.GetPinnedConversationListResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$1.SubscribeToUserPresenceRequest, $1.SubscribeToUserPresenceResponse>(
         'SubscribeToUserPresence',
         subscribeToUserPresence_Pre,
@@ -979,6 +1025,20 @@ abstract class MessagingServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $1.UnsubscribeToUserPresenceRequest.fromBuffer(value),
         ($1.UnsubscribeToUserPresenceResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.UpdateConversationReadReceiptRequest, $1.UpdateConversationReadReceiptResponse>(
+        'UpdateConversationReadReceipt',
+        updateConversationReadReceipt_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.UpdateConversationReadReceiptRequest.fromBuffer(value),
+        ($1.UpdateConversationReadReceiptResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$1.GetConversationReadReceiptRequest, $1.GetConversationReadReceiptResponse>(
+        'GetConversationReadReceipt',
+        getConversationReadReceipt_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $1.GetConversationReadReceiptRequest.fromBuffer(value),
+        ($1.GetConversationReadReceiptResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.CreateChannelResponse> createSpaceChannel_Pre($grpc.ServiceCall call, $async.Future<$1.CreateChannelRequest> request) async {
@@ -1225,12 +1285,28 @@ abstract class MessagingServiceBase extends $grpc.Service {
     return unsubscribeToConversation(call, await request);
   }
 
+  $async.Future<$1.UpdatePinnedConversationListResponse> updatePinnedConversationList_Pre($grpc.ServiceCall call, $async.Future<$1.UpdatePinnedConversationListRequest> request) async {
+    return updatePinnedConversationList(call, await request);
+  }
+
+  $async.Future<$1.GetPinnedConversationListResponse> getPinnedConversationList_Pre($grpc.ServiceCall call, $async.Future<$1.GetPinnedConversationListRequest> request) async {
+    return getPinnedConversationList(call, await request);
+  }
+
   $async.Future<$1.SubscribeToUserPresenceResponse> subscribeToUserPresence_Pre($grpc.ServiceCall call, $async.Future<$1.SubscribeToUserPresenceRequest> request) async {
     return subscribeToUserPresence(call, await request);
   }
 
   $async.Future<$1.UnsubscribeToUserPresenceResponse> unsubscribeToUserPresence_Pre($grpc.ServiceCall call, $async.Future<$1.UnsubscribeToUserPresenceRequest> request) async {
     return unsubscribeToUserPresence(call, await request);
+  }
+
+  $async.Future<$1.UpdateConversationReadReceiptResponse> updateConversationReadReceipt_Pre($grpc.ServiceCall call, $async.Future<$1.UpdateConversationReadReceiptRequest> request) async {
+    return updateConversationReadReceipt(call, await request);
+  }
+
+  $async.Future<$1.GetConversationReadReceiptResponse> getConversationReadReceipt_Pre($grpc.ServiceCall call, $async.Future<$1.GetConversationReadReceiptRequest> request) async {
+    return getConversationReadReceipt(call, await request);
   }
 
   $async.Future<$1.CreateChannelResponse> createSpaceChannel($grpc.ServiceCall call, $1.CreateChannelRequest request);
@@ -1294,6 +1370,10 @@ abstract class MessagingServiceBase extends $grpc.Service {
   $async.Future<$1.GetUserSubscribedTopicsResponse> getUserSubscribedTopics($grpc.ServiceCall call, $1.GetUserSubscribedTopicsRequest request);
   $async.Future<$1.SubscribeToConversationResponse> subscribeToConversation($grpc.ServiceCall call, $1.SubscribeToConversationRequest request);
   $async.Future<$1.UnsubscribeToConversationResponse> unsubscribeToConversation($grpc.ServiceCall call, $1.UnsubscribeToConversationRequest request);
+  $async.Future<$1.UpdatePinnedConversationListResponse> updatePinnedConversationList($grpc.ServiceCall call, $1.UpdatePinnedConversationListRequest request);
+  $async.Future<$1.GetPinnedConversationListResponse> getPinnedConversationList($grpc.ServiceCall call, $1.GetPinnedConversationListRequest request);
   $async.Future<$1.SubscribeToUserPresenceResponse> subscribeToUserPresence($grpc.ServiceCall call, $1.SubscribeToUserPresenceRequest request);
   $async.Future<$1.UnsubscribeToUserPresenceResponse> unsubscribeToUserPresence($grpc.ServiceCall call, $1.UnsubscribeToUserPresenceRequest request);
+  $async.Future<$1.UpdateConversationReadReceiptResponse> updateConversationReadReceipt($grpc.ServiceCall call, $1.UpdateConversationReadReceiptRequest request);
+  $async.Future<$1.GetConversationReadReceiptResponse> getConversationReadReceipt($grpc.ServiceCall call, $1.GetConversationReadReceiptRequest request);
 }

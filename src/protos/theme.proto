@@ -56,6 +56,10 @@ message ThemeOptionValue {
 
     Value value = 1;
     Constraint constraint = 2;
+    Value value_active = 3;
+    bool active = 4;
+    bool edit_disabled = 5;
+    bool active_disabled = 6;
 }
 
 enum BackgroundShader {
@@ -157,6 +161,18 @@ message TTextStyle {
     float word_spacing = 8;
     uint32 text_align = 9;
     uint32 font_style = 10;
+    message AllowList {
+        bool font_family = 1;
+        bool color = 2;
+        bool font_size = 4;
+        bool font_weight = 5;
+        bool line_height = 6;
+        bool letter_spacing = 7;
+        bool word_spacing = 8;
+        bool text_align = 9;
+        bool font_style = 10;
+    }
+    AllowList allow_list = 11;
 }
 
 message SpaceButtonBaseOption {

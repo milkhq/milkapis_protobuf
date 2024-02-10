@@ -34,6 +34,7 @@ class CollectionsV1 extends $pb.ProtobufEnum {
   static const CollectionsV1 SIGN_UP_TOKENS = CollectionsV1._(17, _omitEnumNames ? '' : 'SIGN_UP_TOKENS');
   static const CollectionsV1 USER_PRESENCE_STATUSES = CollectionsV1._(18, _omitEnumNames ? '' : 'USER_PRESENCE_STATUSES');
   static const CollectionsV1 SUBSCRIBED_TOPICS = CollectionsV1._(19, _omitEnumNames ? '' : 'SUBSCRIBED_TOPICS');
+  static const CollectionsV1 READ_RECEIPTS = CollectionsV1._(20, _omitEnumNames ? '' : 'READ_RECEIPTS');
 
   static const $core.List<CollectionsV1> values = <CollectionsV1> [
     USERS,
@@ -56,6 +57,7 @@ class CollectionsV1 extends $pb.ProtobufEnum {
     SIGN_UP_TOKENS,
     USER_PRESENCE_STATUSES,
     SUBSCRIBED_TOPICS,
+    READ_RECEIPTS,
   ];
 
   static final $core.Map<$core.int, CollectionsV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -83,6 +85,7 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
   static const CollectionCountersV1 SIGN_UP_TOKEN_COUNTER = CollectionCountersV1._(15, _omitEnumNames ? '' : 'SIGN_UP_TOKEN_COUNTER');
   static const CollectionCountersV1 USER_PRESENCE_STATUS_COUNTER = CollectionCountersV1._(16, _omitEnumNames ? '' : 'USER_PRESENCE_STATUS_COUNTER');
   static const CollectionCountersV1 SUBSCRIBED_TOPIC_COUNTER = CollectionCountersV1._(17, _omitEnumNames ? '' : 'SUBSCRIBED_TOPIC_COUNTER');
+  static const CollectionCountersV1 READ_RECEIPT_COUNTER = CollectionCountersV1._(18, _omitEnumNames ? '' : 'READ_RECEIPT_COUNTER');
 
   static const $core.List<CollectionCountersV1> values = <CollectionCountersV1> [
     USER_COUNTER,
@@ -103,6 +106,7 @@ class CollectionCountersV1 extends $pb.ProtobufEnum {
     SIGN_UP_TOKEN_COUNTER,
     USER_PRESENCE_STATUS_COUNTER,
     SUBSCRIBED_TOPIC_COUNTER,
+    READ_RECEIPT_COUNTER,
   ];
 
   static final $core.Map<$core.int, CollectionCountersV1> _byValue = $pb.ProtobufEnum.initByValue(values);
@@ -185,6 +189,7 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
   static const EVENT_TYPE SPACE_UPDATED = EVENT_TYPE._(40, _omitEnumNames ? '' : 'SPACE_UPDATED');
   static const EVENT_TYPE SPACE_CHANNEL_UPDATED = EVENT_TYPE._(41, _omitEnumNames ? '' : 'SPACE_CHANNEL_UPDATED');
   static const EVENT_TYPE SPACE_CHANNEL_CATEGORY_UPDATED = EVENT_TYPE._(42, _omitEnumNames ? '' : 'SPACE_CHANNEL_CATEGORY_UPDATED');
+  static const EVENT_TYPE CONVERSATION_READ_RECEIPT_UPDATED = EVENT_TYPE._(43, _omitEnumNames ? '' : 'CONVERSATION_READ_RECEIPT_UPDATED');
 
   static const $core.List<EVENT_TYPE> values = <EVENT_TYPE> [
     SPACE_CHANNEL_NEW_MESSAGE,
@@ -230,6 +235,7 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
     SPACE_UPDATED,
     SPACE_CHANNEL_UPDATED,
     SPACE_CHANNEL_CATEGORY_UPDATED,
+    CONVERSATION_READ_RECEIPT_UPDATED,
   ];
 
   static final $core.Map<$core.int, EVENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);

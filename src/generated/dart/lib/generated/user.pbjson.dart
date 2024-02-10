@@ -129,6 +129,8 @@ const SOCIAL$json = {
     {'1': 'TIKTOK', '2': 17},
     {'1': 'WECHAT', '2': 18},
     {'1': 'WALLET_CONNECT', '2': 19},
+    {'1': 'APPLE', '2': 20},
+    {'1': 'EMAIL', '2': 21},
   ],
 };
 
@@ -138,7 +140,7 @@ final $typed_data.Uint8List sOCIALDescriptor = $convert.base64Decode(
     'VCEAMSDAoITElOS0VESU4QBBINCglNSUNST1NPRlQQBRINCglJTlNUQUdSQU0QCRINCglQSU5U'
     'RVJFU1QQChIKCgZSRURESVQQCxIKCgZUVU1CTFIQDBILCgdZT1VUVUJFEA4SCwoHRElTQ09SRB'
     'APEg0KCUFOT05ZTU9VUxAQEgoKBlRJS1RPSxAREgoKBldFQ0hBVBASEhIKDldBTExFVF9DT05O'
-    'RUNUEBM=');
+    'RUNUEBMSCQoFQVBQTEUQFBIJCgVFTUFJTBAV');
 
 @$core.Deprecated('Use userFeatureFlagsDescriptor instead')
 const UserFeatureFlags$json = {
@@ -706,13 +708,15 @@ const CreateUserEmailPasswordRequest$json = {
   '2': [
     {'1': 'email', '3': 1, '4': 1, '5': 9, '10': 'email'},
     {'1': 'password', '3': 2, '4': 1, '5': 9, '10': 'password'},
+    {'1': 'sign_up_token', '3': 3, '4': 1, '5': 9, '10': 'signUpToken'},
   ],
 };
 
 /// Descriptor for `CreateUserEmailPasswordRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createUserEmailPasswordRequestDescriptor = $convert.base64Decode(
     'Ch5DcmVhdGVVc2VyRW1haWxQYXNzd29yZFJlcXVlc3QSFAoFZW1haWwYASABKAlSBWVtYWlsEh'
-    'oKCHBhc3N3b3JkGAIgASgJUghwYXNzd29yZA==');
+    'oKCHBhc3N3b3JkGAIgASgJUghwYXNzd29yZBIiCg1zaWduX3VwX3Rva2VuGAMgASgJUgtzaWdu'
+    'VXBUb2tlbg==');
 
 @$core.Deprecated('Use createUserEmailPasswordResponseDescriptor instead')
 const CreateUserEmailPasswordResponse$json = {

@@ -81,10 +81,52 @@ service Messaging {
     // Conversation Subscription
     rpc SubscribeToConversation(SubscribeToConversationRequest) returns (SubscribeToConversationResponse);
     rpc UnsubscribeToConversation(UnsubscribeToConversationRequest) returns (UnsubscribeToConversationResponse);
+    rpc UpdatePinnedConversationList(UpdatePinnedConversationListRequest) returns (UpdatePinnedConversationListResponse);
+    rpc GetPinnedConversationList(GetPinnedConversationListRequest) returns (GetPinnedConversationListResponse);
 
     // User Presence Subscriptions
     rpc SubscribeToUserPresence(SubscribeToUserPresenceRequest) returns (SubscribeToUserPresenceResponse);
     rpc UnsubscribeToUserPresence(UnsubscribeToUserPresenceRequest) returns (UnsubscribeToUserPresenceResponse);
+    rpc UpdateConversationReadReceipt(UpdateConversationReadReceiptRequest) returns (UpdateConversationReadReceiptResponse);
+    rpc GetConversationReadReceipt(GetConversationReadReceiptRequest) returns (GetConversationReadReceiptResponse);
+}
+
+message GetConversationReadReceiptRequest {
+    string channel_id = 1;
+}
+
+message GetConversationReadReceiptResponse {
+    map<string, string> receipts = 1;
+}
+
+enum ReadReceiptStatus {
+    NONE = 0;
+    DELIVERED = 1;
+    READ = 2;
+}
+
+message UpdateConversationReadReceiptRequest {
+    string channel_id = 1;
+    // message_id:status
+    string status = 2; 
+}
+
+message UpdateConversationReadReceiptResponse {
+}
+
+message GetPinnedConversationListRequest {
+}
+
+message GetPinnedConversationListResponse {
+    repeated string channel_ids = 1;
+}
+
+message UpdatePinnedConversationListRequest {
+    repeated string channel_ids = 1;
+}
+
+message UpdatePinnedConversationListResponse {
+
 }
 
 message UpdateSpaceChannelCategoryStatusRequest {

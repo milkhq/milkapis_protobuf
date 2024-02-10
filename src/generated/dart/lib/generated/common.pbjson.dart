@@ -37,6 +37,7 @@ const CollectionsV1$json = {
     {'1': 'SIGN_UP_TOKENS', '2': 17},
     {'1': 'USER_PRESENCE_STATUSES', '2': 18},
     {'1': 'SUBSCRIBED_TOPICS', '2': 19},
+    {'1': 'READ_RECEIPTS', '2': 20},
   ],
 };
 
@@ -48,7 +49,7 @@ final $typed_data.Uint8List collectionsV1Descriptor = $convert.base64Decode(
     'oJUkVBQ1RJT05TEAoSCwoHVEhSRUFEUxALEg0KCVVTRVJOQU1FUxAMEhEKDU5PVElGSUNBVElP'
     'TlMQDRIhCh1DSEFOTkVMX01FTUJFUlNfVE9fQ0hBTk5FTF9JRBAOEg4KClVTRVJfUk9MRVMQDx'
     'IRCg1VU0VSX1NUQVRVU0VTEBASEgoOU0lHTl9VUF9UT0tFTlMQERIaChZVU0VSX1BSRVNFTkNF'
-    'X1NUQVRVU0VTEBISFQoRU1VCU0NSSUJFRF9UT1BJQ1MQEw==');
+    'X1NUQVRVU0VTEBISFQoRU1VCU0NSSUJFRF9UT1BJQ1MQExIRCg1SRUFEX1JFQ0VJUFRTEBQ=');
 
 @$core.Deprecated('Use collectionCountersV1Descriptor instead')
 const CollectionCountersV1$json = {
@@ -72,6 +73,7 @@ const CollectionCountersV1$json = {
     {'1': 'SIGN_UP_TOKEN_COUNTER', '2': 15},
     {'1': 'USER_PRESENCE_STATUS_COUNTER', '2': 16},
     {'1': 'SUBSCRIBED_TOPIC_COUNTER', '2': 17},
+    {'1': 'READ_RECEIPT_COUNTER', '2': 18},
   ],
 };
 
@@ -85,7 +87,7 @@ final $typed_data.Uint8List collectionCountersV1Descriptor = $convert.base64Deco
     'RFUhALEhgKFE5PVElGSUNBVElPTl9DT1VOVEVSEAwSFQoRVVNFUl9ST0xFX0NPVU5URVIQDRIX'
     'ChNVU0VSX1NUQVRVU19DT1VOVEVSEA4SGQoVU0lHTl9VUF9UT0tFTl9DT1VOVEVSEA8SIAocVV'
     'NFUl9QUkVTRU5DRV9TVEFUVVNfQ09VTlRFUhAQEhwKGFNVQlNDUklCRURfVE9QSUNfQ09VTlRF'
-    'UhAR');
+    'UhAREhgKFFJFQURfUkVDRUlQVF9DT1VOVEVSEBI=');
 
 @$core.Deprecated('Use dOCUMENT_TYPEDescriptor instead')
 const DOCUMENT_TYPE$json = {
@@ -157,6 +159,7 @@ const EVENT_TYPE$json = {
     {'1': 'SPACE_UPDATED', '2': 40},
     {'1': 'SPACE_CHANNEL_UPDATED', '2': 41},
     {'1': 'SPACE_CHANNEL_CATEGORY_UPDATED', '2': 42},
+    {'1': 'CONVERSATION_READ_RECEIPT_UPDATED', '2': 43},
   ],
 };
 
@@ -189,7 +192,8 @@ final $typed_data.Uint8List eVENT_TYPEDescriptor = $convert.base64Decode(
     'Tk5FTF9USFJFQURfTUVTU0FHRV9SRUFDVElPTl9VUERBVEVEECQSGwoXQ0hBTk5FTF9NRVNTQU'
     'dFX1VQREFURUQQJRIkCiBDSEFOTkVMX01FU1NBR0VfUkVBQ1RJT05fVVBEQVRFRBAmEhwKGE5F'
     'V19DT05WRVJTQVRJT05fVVBEQVRFRBAnEhEKDVNQQUNFX1VQREFURUQQKBIZChVTUEFDRV9DSE'
-    'FOTkVMX1VQREFURUQQKRIiCh5TUEFDRV9DSEFOTkVMX0NBVEVHT1JZX1VQREFURUQQKg==');
+    'FOTkVMX1VQREFURUQQKRIiCh5TUEFDRV9DSEFOTkVMX0NBVEVHT1JZX1VQREFURUQQKhIlCiFD'
+    'T05WRVJTQVRJT05fUkVBRF9SRUNFSVBUX1VQREFURUQQKw==');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -423,4 +427,20 @@ final $typed_data.Uint8List spaceChannelCategoryUpdateDescriptor = $convert.base
     'ChpTcGFjZUNoYW5uZWxDYXRlZ29yeVVwZGF0ZRI+Cghkb2N1bWVudBgBIAEoCzIiLm1lc3NhZ2'
     'luZy5DaGFubmVsQ2F0ZWdvcnlEb2N1bWVudFIIZG9jdW1lbnQSGQoIc3BhY2VfaWQYAiABKAlS'
     'B3NwYWNlSWQ=');
+
+@$core.Deprecated('Use conversationReadReceiptUpdateDescriptor instead')
+const ConversationReadReceiptUpdate$json = {
+  '1': 'ConversationReadReceiptUpdate',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'conversation_id', '3': 2, '4': 1, '5': 9, '10': 'conversationId'},
+    {'1': 'status', '3': 3, '4': 1, '5': 9, '10': 'status'},
+  ],
+};
+
+/// Descriptor for `ConversationReadReceiptUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List conversationReadReceiptUpdateDescriptor = $convert.base64Decode(
+    'Ch1Db252ZXJzYXRpb25SZWFkUmVjZWlwdFVwZGF0ZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySW'
+    'QSJwoPY29udmVyc2F0aW9uX2lkGAIgASgJUg5jb252ZXJzYXRpb25JZBIWCgZzdGF0dXMYAyAB'
+    'KAlSBnN0YXR1cw==');
 

@@ -469,7 +469,7 @@ class SessionState_Space extends $pb.GeneratedMessage {
     $3.SpaceDocument? document,
     $core.Iterable<SessionState_ChannelCategory>? channelCategories,
     $core.Iterable<$core.String>? members,
-    $core.Iterable<SessionState_Role>? roles,
+    $core.Map<$core.String, SessionState_Role>? roles,
     $core.String? currentChannelId,
     $core.Iterable<$core.String>? currentUserRoles,
     $core.Map<$core.String, $core.int>? unreadMessagesCountMap,
@@ -506,7 +506,7 @@ class SessionState_Space extends $pb.GeneratedMessage {
     ..aOM<$3.SpaceDocument>(1, _omitFieldNames ? '' : 'document', subBuilder: $3.SpaceDocument.create)
     ..pc<SessionState_ChannelCategory>(2, _omitFieldNames ? '' : 'channelCategories', $pb.PbFieldType.PM, protoName: 'channelCategories', subBuilder: SessionState_ChannelCategory.create)
     ..pPS(3, _omitFieldNames ? '' : 'members')
-    ..pc<SessionState_Role>(4, _omitFieldNames ? '' : 'roles', $pb.PbFieldType.PM, subBuilder: SessionState_Role.create)
+    ..m<$core.String, SessionState_Role>(4, _omitFieldNames ? '' : 'roles', entryClassName: 'SessionState.Space.RolesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: SessionState_Role.create, valueDefaultOrMaker: SessionState_Role.getDefault, packageName: const $pb.PackageName('ui'))
     ..aOS(5, _omitFieldNames ? '' : 'currentChannelId')
     ..pPS(6, _omitFieldNames ? '' : 'currentUserRoles')
     ..m<$core.String, $core.int>(7, _omitFieldNames ? '' : 'unreadMessagesCountMap', protoName: 'unreadMessagesCountMap', entryClassName: 'SessionState.Space.UnreadMessagesCountMapEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OU3, packageName: const $pb.PackageName('ui'))
@@ -552,7 +552,7 @@ class SessionState_Space extends $pb.GeneratedMessage {
   $core.List<$core.String> get members => $_getList(2);
 
   @$pb.TagNumber(4)
-  $core.List<SessionState_Role> get roles => $_getList(3);
+  $core.Map<$core.String, SessionState_Role> get roles => $_getMap(3);
 
   @$pb.TagNumber(5)
   $core.String get currentChannelId => $_getSZ(4);
@@ -936,11 +936,12 @@ class SessionState extends $pb.GeneratedMessage {
   factory SessionState({
     $core.Iterable<SessionState_Space>? spaces,
     $0.UserDocument? user,
-    $core.Iterable<SessionState_Channel>? conversations,
+    $core.Map<$core.String, SessionState_Channel>? conversations,
     ConversationPanelState? conversationPanelState,
     $core.String? currentSpaceId,
     $core.Iterable<$0.UserDocument>? users,
     ContentScreenSidePanelState? contentScreenSidePanelState,
+    $core.Iterable<$core.String>? pinnedConversations,
   }) {
     final $result = create();
     if (spaces != null) {
@@ -964,6 +965,9 @@ class SessionState extends $pb.GeneratedMessage {
     if (contentScreenSidePanelState != null) {
       $result.contentScreenSidePanelState = contentScreenSidePanelState;
     }
+    if (pinnedConversations != null) {
+      $result.pinnedConversations.addAll(pinnedConversations);
+    }
     return $result;
   }
   SessionState._() : super();
@@ -973,11 +977,12 @@ class SessionState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SessionState', package: const $pb.PackageName(_omitMessageNames ? '' : 'ui'), createEmptyInstance: create)
     ..pc<SessionState_Space>(1, _omitFieldNames ? '' : 'spaces', $pb.PbFieldType.PM, subBuilder: SessionState_Space.create)
     ..aOM<$0.UserDocument>(2, _omitFieldNames ? '' : 'user', subBuilder: $0.UserDocument.create)
-    ..pc<SessionState_Channel>(3, _omitFieldNames ? '' : 'conversations', $pb.PbFieldType.PM, subBuilder: SessionState_Channel.create)
+    ..m<$core.String, SessionState_Channel>(3, _omitFieldNames ? '' : 'conversations', entryClassName: 'SessionState.ConversationsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: SessionState_Channel.create, valueDefaultOrMaker: SessionState_Channel.getDefault, packageName: const $pb.PackageName('ui'))
     ..e<ConversationPanelState>(4, _omitFieldNames ? '' : 'conversationPanelState', $pb.PbFieldType.OE, defaultOrMaker: ConversationPanelState.MINIMIZED_LIST, valueOf: ConversationPanelState.valueOf, enumValues: ConversationPanelState.values)
     ..aOS(5, _omitFieldNames ? '' : 'currentSpaceId')
     ..pc<$0.UserDocument>(6, _omitFieldNames ? '' : 'users', $pb.PbFieldType.PM, subBuilder: $0.UserDocument.create)
     ..e<ContentScreenSidePanelState>(7, _omitFieldNames ? '' : 'contentScreenSidePanelState', $pb.PbFieldType.OE, defaultOrMaker: ContentScreenSidePanelState.MINIMIZED_ONLINE_LIST, valueOf: ContentScreenSidePanelState.valueOf, enumValues: ContentScreenSidePanelState.values)
+    ..pPS(8, _omitFieldNames ? '' : 'pinnedConversations')
     ..hasRequiredFields = false
   ;
 
@@ -1017,7 +1022,7 @@ class SessionState extends $pb.GeneratedMessage {
   $0.UserDocument ensureUser() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $core.List<SessionState_Channel> get conversations => $_getList(2);
+  $core.Map<$core.String, SessionState_Channel> get conversations => $_getMap(2);
 
   @$pb.TagNumber(4)
   ConversationPanelState get conversationPanelState => $_getN(3);
@@ -1048,6 +1053,9 @@ class SessionState extends $pb.GeneratedMessage {
   $core.bool hasContentScreenSidePanelState() => $_has(6);
   @$pb.TagNumber(7)
   void clearContentScreenSidePanelState() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.List<$core.String> get pinnedConversations => $_getList(7);
 }
 
 class CustomTextNode extends $pb.GeneratedMessage {

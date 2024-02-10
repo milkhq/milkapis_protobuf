@@ -18,6 +18,349 @@ import 'messaging.pbenum.dart';
 
 export 'messaging.pbenum.dart';
 
+class GetConversationReadReceiptRequest extends $pb.GeneratedMessage {
+  factory GetConversationReadReceiptRequest({
+    $core.String? channelId,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    return $result;
+  }
+  GetConversationReadReceiptRequest._() : super();
+  factory GetConversationReadReceiptRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetConversationReadReceiptRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetConversationReadReceiptRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetConversationReadReceiptRequest clone() => GetConversationReadReceiptRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetConversationReadReceiptRequest copyWith(void Function(GetConversationReadReceiptRequest) updates) => super.copyWith((message) => updates(message as GetConversationReadReceiptRequest)) as GetConversationReadReceiptRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetConversationReadReceiptRequest create() => GetConversationReadReceiptRequest._();
+  GetConversationReadReceiptRequest createEmptyInstance() => create();
+  static $pb.PbList<GetConversationReadReceiptRequest> createRepeated() => $pb.PbList<GetConversationReadReceiptRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetConversationReadReceiptRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetConversationReadReceiptRequest>(create);
+  static GetConversationReadReceiptRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+}
+
+class GetConversationReadReceiptResponse extends $pb.GeneratedMessage {
+  factory GetConversationReadReceiptResponse({
+    $core.Map<$core.String, $core.String>? receipts,
+  }) {
+    final $result = create();
+    if (receipts != null) {
+      $result.receipts.addAll(receipts);
+    }
+    return $result;
+  }
+  GetConversationReadReceiptResponse._() : super();
+  factory GetConversationReadReceiptResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetConversationReadReceiptResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetConversationReadReceiptResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, _omitFieldNames ? '' : 'receipts', entryClassName: 'GetConversationReadReceiptResponse.ReceiptsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('messaging'))
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetConversationReadReceiptResponse clone() => GetConversationReadReceiptResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetConversationReadReceiptResponse copyWith(void Function(GetConversationReadReceiptResponse) updates) => super.copyWith((message) => updates(message as GetConversationReadReceiptResponse)) as GetConversationReadReceiptResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetConversationReadReceiptResponse create() => GetConversationReadReceiptResponse._();
+  GetConversationReadReceiptResponse createEmptyInstance() => create();
+  static $pb.PbList<GetConversationReadReceiptResponse> createRepeated() => $pb.PbList<GetConversationReadReceiptResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetConversationReadReceiptResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetConversationReadReceiptResponse>(create);
+  static GetConversationReadReceiptResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.Map<$core.String, $core.String> get receipts => $_getMap(0);
+}
+
+class UpdateConversationReadReceiptRequest extends $pb.GeneratedMessage {
+  factory UpdateConversationReadReceiptRequest({
+    $core.String? channelId,
+    $core.String? status,
+  }) {
+    final $result = create();
+    if (channelId != null) {
+      $result.channelId = channelId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  UpdateConversationReadReceiptRequest._() : super();
+  factory UpdateConversationReadReceiptRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateConversationReadReceiptRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateConversationReadReceiptRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'channelId')
+    ..aOS(2, _omitFieldNames ? '' : 'status')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateConversationReadReceiptRequest clone() => UpdateConversationReadReceiptRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateConversationReadReceiptRequest copyWith(void Function(UpdateConversationReadReceiptRequest) updates) => super.copyWith((message) => updates(message as UpdateConversationReadReceiptRequest)) as UpdateConversationReadReceiptRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateConversationReadReceiptRequest create() => UpdateConversationReadReceiptRequest._();
+  UpdateConversationReadReceiptRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdateConversationReadReceiptRequest> createRepeated() => $pb.PbList<UpdateConversationReadReceiptRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateConversationReadReceiptRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateConversationReadReceiptRequest>(create);
+  static UpdateConversationReadReceiptRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get channelId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set channelId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearChannelId() => clearField(1);
+
+  /// message_id:status
+  @$pb.TagNumber(2)
+  $core.String get status => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set status($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+}
+
+class UpdateConversationReadReceiptResponse extends $pb.GeneratedMessage {
+  factory UpdateConversationReadReceiptResponse() => create();
+  UpdateConversationReadReceiptResponse._() : super();
+  factory UpdateConversationReadReceiptResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdateConversationReadReceiptResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateConversationReadReceiptResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdateConversationReadReceiptResponse clone() => UpdateConversationReadReceiptResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdateConversationReadReceiptResponse copyWith(void Function(UpdateConversationReadReceiptResponse) updates) => super.copyWith((message) => updates(message as UpdateConversationReadReceiptResponse)) as UpdateConversationReadReceiptResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdateConversationReadReceiptResponse create() => UpdateConversationReadReceiptResponse._();
+  UpdateConversationReadReceiptResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdateConversationReadReceiptResponse> createRepeated() => $pb.PbList<UpdateConversationReadReceiptResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdateConversationReadReceiptResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdateConversationReadReceiptResponse>(create);
+  static UpdateConversationReadReceiptResponse? _defaultInstance;
+}
+
+class GetPinnedConversationListRequest extends $pb.GeneratedMessage {
+  factory GetPinnedConversationListRequest() => create();
+  GetPinnedConversationListRequest._() : super();
+  factory GetPinnedConversationListRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetPinnedConversationListRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetPinnedConversationListRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetPinnedConversationListRequest clone() => GetPinnedConversationListRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetPinnedConversationListRequest copyWith(void Function(GetPinnedConversationListRequest) updates) => super.copyWith((message) => updates(message as GetPinnedConversationListRequest)) as GetPinnedConversationListRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetPinnedConversationListRequest create() => GetPinnedConversationListRequest._();
+  GetPinnedConversationListRequest createEmptyInstance() => create();
+  static $pb.PbList<GetPinnedConversationListRequest> createRepeated() => $pb.PbList<GetPinnedConversationListRequest>();
+  @$core.pragma('dart2js:noInline')
+  static GetPinnedConversationListRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetPinnedConversationListRequest>(create);
+  static GetPinnedConversationListRequest? _defaultInstance;
+}
+
+class GetPinnedConversationListResponse extends $pb.GeneratedMessage {
+  factory GetPinnedConversationListResponse({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  GetPinnedConversationListResponse._() : super();
+  factory GetPinnedConversationListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory GetPinnedConversationListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetPinnedConversationListResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  GetPinnedConversationListResponse clone() => GetPinnedConversationListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  GetPinnedConversationListResponse copyWith(void Function(GetPinnedConversationListResponse) updates) => super.copyWith((message) => updates(message as GetPinnedConversationListResponse)) as GetPinnedConversationListResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static GetPinnedConversationListResponse create() => GetPinnedConversationListResponse._();
+  GetPinnedConversationListResponse createEmptyInstance() => create();
+  static $pb.PbList<GetPinnedConversationListResponse> createRepeated() => $pb.PbList<GetPinnedConversationListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static GetPinnedConversationListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GetPinnedConversationListResponse>(create);
+  static GetPinnedConversationListResponse? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class UpdatePinnedConversationListRequest extends $pb.GeneratedMessage {
+  factory UpdatePinnedConversationListRequest({
+    $core.Iterable<$core.String>? channelIds,
+  }) {
+    final $result = create();
+    if (channelIds != null) {
+      $result.channelIds.addAll(channelIds);
+    }
+    return $result;
+  }
+  UpdatePinnedConversationListRequest._() : super();
+  factory UpdatePinnedConversationListRequest.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdatePinnedConversationListRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdatePinnedConversationListRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..pPS(1, _omitFieldNames ? '' : 'channelIds')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdatePinnedConversationListRequest clone() => UpdatePinnedConversationListRequest()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdatePinnedConversationListRequest copyWith(void Function(UpdatePinnedConversationListRequest) updates) => super.copyWith((message) => updates(message as UpdatePinnedConversationListRequest)) as UpdatePinnedConversationListRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdatePinnedConversationListRequest create() => UpdatePinnedConversationListRequest._();
+  UpdatePinnedConversationListRequest createEmptyInstance() => create();
+  static $pb.PbList<UpdatePinnedConversationListRequest> createRepeated() => $pb.PbList<UpdatePinnedConversationListRequest>();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePinnedConversationListRequest getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdatePinnedConversationListRequest>(create);
+  static UpdatePinnedConversationListRequest? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.String> get channelIds => $_getList(0);
+}
+
+class UpdatePinnedConversationListResponse extends $pb.GeneratedMessage {
+  factory UpdatePinnedConversationListResponse() => create();
+  UpdatePinnedConversationListResponse._() : super();
+  factory UpdatePinnedConversationListResponse.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UpdatePinnedConversationListResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdatePinnedConversationListResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UpdatePinnedConversationListResponse clone() => UpdatePinnedConversationListResponse()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UpdatePinnedConversationListResponse copyWith(void Function(UpdatePinnedConversationListResponse) updates) => super.copyWith((message) => updates(message as UpdatePinnedConversationListResponse)) as UpdatePinnedConversationListResponse;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UpdatePinnedConversationListResponse create() => UpdatePinnedConversationListResponse._();
+  UpdatePinnedConversationListResponse createEmptyInstance() => create();
+  static $pb.PbList<UpdatePinnedConversationListResponse> createRepeated() => $pb.PbList<UpdatePinnedConversationListResponse>();
+  @$core.pragma('dart2js:noInline')
+  static UpdatePinnedConversationListResponse getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UpdatePinnedConversationListResponse>(create);
+  static UpdatePinnedConversationListResponse? _defaultInstance;
+}
+
 class UpdateSpaceChannelCategoryStatusRequest extends $pb.GeneratedMessage {
   factory UpdateSpaceChannelCategoryStatusRequest({
     $core.String? spaceId,

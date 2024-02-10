@@ -214,6 +214,8 @@ enum SOCIAL {
   TIKTOK = 17;
   WECHAT = 18;
   WALLET_CONNECT = 19;
+  APPLE = 20;
+  EMAIL = 21;
 }
 
 message QueryUserRequest {
@@ -296,6 +298,7 @@ message CreateUserResponse {
 message CreateUserEmailPasswordRequest {
   string email = 1;
   string password = 2;
+  string sign_up_token = 3;
 }
 
 message CreateUserEmailPasswordResponse {

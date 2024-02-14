@@ -818,6 +818,7 @@ class GetSpaceThreadChannelMessageReactionsSetRequest extends $pb.GeneratedMessa
     $core.String? messageId,
     $core.String? threadChannelId,
     $core.int? updatedAt,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -835,6 +836,9 @@ class GetSpaceThreadChannelMessageReactionsSetRequest extends $pb.GeneratedMessa
     if (updatedAt != null) {
       $result.updatedAt = updatedAt;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceThreadChannelMessageReactionsSetRequest._() : super();
@@ -847,6 +851,7 @@ class GetSpaceThreadChannelMessageReactionsSetRequest extends $pb.GeneratedMessa
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
     ..a<$core.int>(5, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..aOS(6, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -915,6 +920,15 @@ class GetSpaceThreadChannelMessageReactionsSetRequest extends $pb.GeneratedMessa
   $core.bool hasUpdatedAt() => $_has(4);
   @$pb.TagNumber(5)
   void clearUpdatedAt() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get userRoleId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set userRoleId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasUserRoleId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUserRoleId() => clearField(6);
 }
 
 class GetSpaceThreadChannelMessageReactionsSetResponse extends $pb.GeneratedMessage {
@@ -968,6 +982,7 @@ class GetSpaceThreadChannelUserMessageReactionsMapRequest extends $pb.GeneratedM
     $core.String? messageId,
     $core.String? threadChannelId,
     $core.int? updatedAt,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -985,6 +1000,9 @@ class GetSpaceThreadChannelUserMessageReactionsMapRequest extends $pb.GeneratedM
     if (updatedAt != null) {
       $result.updatedAt = updatedAt;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceThreadChannelUserMessageReactionsMapRequest._() : super();
@@ -997,6 +1015,7 @@ class GetSpaceThreadChannelUserMessageReactionsMapRequest extends $pb.GeneratedM
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
     ..a<$core.int>(5, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..aOS(6, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -1065,6 +1084,15 @@ class GetSpaceThreadChannelUserMessageReactionsMapRequest extends $pb.GeneratedM
   $core.bool hasUpdatedAt() => $_has(4);
   @$pb.TagNumber(5)
   void clearUpdatedAt() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get userRoleId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set userRoleId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasUserRoleId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUserRoleId() => clearField(6);
 }
 
 class GetSpaceThreadChannelUserMessageReactionsMapResponse extends $pb.GeneratedMessage {
@@ -1608,6 +1636,7 @@ class GetSpaceChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage
     $core.String? spaceId,
     $core.String? channelId,
     $core.int? updatedAt,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -1619,6 +1648,9 @@ class GetSpaceChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage
     if (updatedAt != null) {
       $result.updatedAt = updatedAt;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceChannelUserMessageReactionsMapRequest._() : super();
@@ -1629,6 +1661,7 @@ class GetSpaceChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -1679,6 +1712,15 @@ class GetSpaceChannelUserMessageReactionsMapRequest extends $pb.GeneratedMessage
   $core.bool hasUpdatedAt() => $_has(2);
   @$pb.TagNumber(3)
   void clearUpdatedAt() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class GetSpaceChannelUserMessageReactionsMapResponse extends $pb.GeneratedMessage {
@@ -1730,6 +1772,7 @@ class GetSpaceChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $core.String? channelId,
     $core.int? updatedAt,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -1741,6 +1784,9 @@ class GetSpaceChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
     if (updatedAt != null) {
       $result.updatedAt = updatedAt;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceChannelMessageReactionsSetRequest._() : super();
@@ -1751,6 +1797,7 @@ class GetSpaceChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..a<$core.int>(3, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU3)
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -1801,6 +1848,15 @@ class GetSpaceChannelMessageReactionsSetRequest extends $pb.GeneratedMessage {
   $core.bool hasUpdatedAt() => $_has(2);
   @$pb.TagNumber(3)
   void clearUpdatedAt() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class GetSpaceChannelMessageReactionsSetResponse extends $pb.GeneratedMessage {
@@ -1853,6 +1909,7 @@ class GetSpaceThreadChannelRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     $core.String? threadChannelId,
     $core.String? messageId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -1867,6 +1924,9 @@ class GetSpaceThreadChannelRequest extends $pb.GeneratedMessage {
     if (messageId != null) {
       $result.messageId = messageId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceThreadChannelRequest._() : super();
@@ -1878,6 +1938,7 @@ class GetSpaceThreadChannelRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..aOS(3, _omitFieldNames ? '' : 'threadChannelId')
     ..aOS(4, _omitFieldNames ? '' : 'messageId')
+    ..aOS(5, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -1937,6 +1998,15 @@ class GetSpaceThreadChannelRequest extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(3);
   @$pb.TagNumber(4)
   void clearMessageId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get userRoleId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set userRoleId($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUserRoleId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUserRoleId() => clearField(5);
 }
 
 class GetSpaceThreadChannelResponse extends $pb.GeneratedMessage {
@@ -2290,6 +2360,7 @@ class GetSpaceChannelThreadMessageReactionsRequest extends $pb.GeneratedMessage 
     $core.String? messageId,
     $core.String? threadChannelId,
     $core.String? threadMessageId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -2307,6 +2378,9 @@ class GetSpaceChannelThreadMessageReactionsRequest extends $pb.GeneratedMessage 
     if (threadMessageId != null) {
       $result.threadMessageId = threadMessageId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceChannelThreadMessageReactionsRequest._() : super();
@@ -2319,6 +2393,7 @@ class GetSpaceChannelThreadMessageReactionsRequest extends $pb.GeneratedMessage 
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
     ..aOS(5, _omitFieldNames ? '' : 'threadMessageId')
+    ..aOS(6, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -2387,6 +2462,15 @@ class GetSpaceChannelThreadMessageReactionsRequest extends $pb.GeneratedMessage 
   $core.bool hasThreadMessageId() => $_has(4);
   @$pb.TagNumber(5)
   void clearThreadMessageId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get userRoleId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set userRoleId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasUserRoleId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUserRoleId() => clearField(6);
 }
 
 class GetSpaceChannelThreadMessageReactionsResponse extends $pb.GeneratedMessage {
@@ -2608,6 +2692,7 @@ class GetSpaceChannelThreadMessagesRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? start,
     $fixnum.Int64? end,
     $core.bool? ascending,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -2631,6 +2716,9 @@ class GetSpaceChannelThreadMessagesRequest extends $pb.GeneratedMessage {
     if (ascending != null) {
       $result.ascending = ascending;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceChannelThreadMessagesRequest._() : super();
@@ -2645,6 +2733,7 @@ class GetSpaceChannelThreadMessagesRequest extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'start', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'end', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOB(7, _omitFieldNames ? '' : 'ascending')
+    ..aOS(8, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -2731,6 +2820,15 @@ class GetSpaceChannelThreadMessagesRequest extends $pb.GeneratedMessage {
   $core.bool hasAscending() => $_has(6);
   @$pb.TagNumber(7)
   void clearAscending() => clearField(7);
+
+  @$pb.TagNumber(8)
+  $core.String get userRoleId => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set userRoleId($core.String v) { $_setString(7, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasUserRoleId() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearUserRoleId() => clearField(8);
 }
 
 class GetSpaceChannelThreadMessagesResponse extends $pb.GeneratedMessage {
@@ -2799,6 +2897,7 @@ class CreateSpaceChannelFileUploadUrlRequest extends $pb.GeneratedMessage {
     $core.String? mimeType,
     $fixnum.Int64? fileSize,
     $fixnum.Int64? previewFileSize,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -2819,6 +2918,9 @@ class CreateSpaceChannelFileUploadUrlRequest extends $pb.GeneratedMessage {
     if (previewFileSize != null) {
       $result.previewFileSize = previewFileSize;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   CreateSpaceChannelFileUploadUrlRequest._() : super();
@@ -2832,6 +2934,7 @@ class CreateSpaceChannelFileUploadUrlRequest extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'mimeType')
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'fileSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(6, _omitFieldNames ? '' : 'previewFileSize', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(7, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -2909,6 +3012,15 @@ class CreateSpaceChannelFileUploadUrlRequest extends $pb.GeneratedMessage {
   $core.bool hasPreviewFileSize() => $_has(5);
   @$pb.TagNumber(6)
   void clearPreviewFileSize() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get userRoleId => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set userRoleId($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasUserRoleId() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUserRoleId() => clearField(7);
 }
 
 class CreateSpaceChannelFileUploadUrlResponse extends $pb.GeneratedMessage {
@@ -3009,6 +3121,7 @@ class SendSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
     MessageDocument? message,
     $core.String? spaceId,
     $core.String? messageId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -3023,6 +3136,9 @@ class SendSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
     if (messageId != null) {
       $result.messageId = messageId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   SendSpaceChannelThreadMessageRequest._() : super();
@@ -3034,6 +3150,7 @@ class SendSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
     ..aOM<MessageDocument>(2, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
     ..aOS(3, _omitFieldNames ? '' : 'spaceId')
     ..aOS(4, _omitFieldNames ? '' : 'messageId')
+    ..aOS(5, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -3095,6 +3212,15 @@ class SendSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(3);
   @$pb.TagNumber(4)
   void clearMessageId() => clearField(4);
+
+  @$pb.TagNumber(5)
+  $core.String get userRoleId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set userRoleId($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUserRoleId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUserRoleId() => clearField(5);
 }
 
 class SendSpaceChannelThreadMessageResponse extends $pb.GeneratedMessage {
@@ -3320,6 +3446,7 @@ class GetSpaceChannelMessageReactionsRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $core.String? channelId,
     $core.String? messageId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -3331,6 +3458,9 @@ class GetSpaceChannelMessageReactionsRequest extends $pb.GeneratedMessage {
     if (messageId != null) {
       $result.messageId = messageId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceChannelMessageReactionsRequest._() : super();
@@ -3341,6 +3471,7 @@ class GetSpaceChannelMessageReactionsRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'channelId')
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -3391,6 +3522,15 @@ class GetSpaceChannelMessageReactionsRequest extends $pb.GeneratedMessage {
   $core.bool hasMessageId() => $_has(2);
   @$pb.TagNumber(3)
   void clearMessageId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class GetSpaceChannelMessageReactionsResponse extends $pb.GeneratedMessage {
@@ -3614,6 +3754,7 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
     $fixnum.Int64? start,
     $fixnum.Int64? end,
     $core.bool? ascending,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -3631,6 +3772,9 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
     if (ascending != null) {
       $result.ascending = ascending;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   GetSpaceChannelMessagesRequest._() : super();
@@ -3643,6 +3787,7 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'start', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..a<$fixnum.Int64>(5, _omitFieldNames ? '' : 'end', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOB(6, _omitFieldNames ? '' : 'ascending')
+    ..aOS(7, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -3711,6 +3856,15 @@ class GetSpaceChannelMessagesRequest extends $pb.GeneratedMessage {
   $core.bool hasAscending() => $_has(4);
   @$pb.TagNumber(6)
   void clearAscending() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get userRoleId => $_getSZ(5);
+  @$pb.TagNumber(7)
+  set userRoleId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasUserRoleId() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearUserRoleId() => clearField(7);
 }
 
 class GetSpaceChannelMessagesResponse extends $pb.GeneratedMessage {
@@ -3776,6 +3930,7 @@ class SetSpaceChannelCategoryOrderRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $core.Iterable<$core.String>? ids,
     $core.Iterable<$core.int>? scores,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -3787,6 +3942,9 @@ class SetSpaceChannelCategoryOrderRequest extends $pb.GeneratedMessage {
     if (scores != null) {
       $result.scores.addAll(scores);
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   SetSpaceChannelCategoryOrderRequest._() : super();
@@ -3797,6 +3955,7 @@ class SetSpaceChannelCategoryOrderRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..pPS(2, _omitFieldNames ? '' : 'ids')
     ..p<$core.int>(3, _omitFieldNames ? '' : 'scores', $pb.PbFieldType.KU3)
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -3835,6 +3994,15 @@ class SetSpaceChannelCategoryOrderRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(3)
   $core.List<$core.int> get scores => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class SetSpaceChannelCategoryOrderResponse extends $pb.GeneratedMessage {
@@ -3918,6 +4086,7 @@ class UpdateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
     $core.String? spaceId,
     $core.String? categoryId,
     ChannelCategoryDocument? category,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -3929,6 +4098,9 @@ class UpdateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
     if (category != null) {
       $result.category = category;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   UpdateSpaceChannelCategoryRequest._() : super();
@@ -3939,6 +4111,7 @@ class UpdateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'categoryId')
     ..aOM<ChannelCategoryDocument>(3, _omitFieldNames ? '' : 'category', subBuilder: ChannelCategoryDocument.create)
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -3991,6 +4164,15 @@ class UpdateSpaceChannelCategoryRequest extends $pb.GeneratedMessage {
   void clearCategory() => clearField(3);
   @$pb.TagNumber(3)
   ChannelCategoryDocument ensureCategory() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class UpdateSpaceChannelCategoryResponse extends $pb.GeneratedMessage {
@@ -4248,10 +4430,14 @@ class ChannelCategoryDocuments extends $pb.GeneratedMessage {
 class GetSpaceChannelCategoriesRequest extends $pb.GeneratedMessage {
   factory GetSpaceChannelCategoriesRequest({
     $core.String? spaceId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
       $result.spaceId = spaceId;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -4261,6 +4447,7 @@ class GetSpaceChannelCategoriesRequest extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelCategoriesRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -4293,6 +4480,15 @@ class GetSpaceChannelCategoriesRequest extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(0);
   @$pb.TagNumber(1)
   void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get userRoleId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set userRoleId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUserRoleId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserRoleId() => clearField(2);
 }
 
 class UpdateSpaceChannelOrderRequest extends $pb.GeneratedMessage {
@@ -4301,6 +4497,7 @@ class UpdateSpaceChannelOrderRequest extends $pb.GeneratedMessage {
     $core.String? categoryId,
     $core.Iterable<$core.String>? ids,
     $core.Iterable<$core.int>? scores,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -4315,6 +4512,9 @@ class UpdateSpaceChannelOrderRequest extends $pb.GeneratedMessage {
     if (scores != null) {
       $result.scores.addAll(scores);
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   UpdateSpaceChannelOrderRequest._() : super();
@@ -4326,6 +4526,7 @@ class UpdateSpaceChannelOrderRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'categoryId')
     ..pPS(3, _omitFieldNames ? '' : 'ids')
     ..p<$core.int>(4, _omitFieldNames ? '' : 'scores', $pb.PbFieldType.KU3)
+    ..aOS(5, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -4373,6 +4574,15 @@ class UpdateSpaceChannelOrderRequest extends $pb.GeneratedMessage {
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get scores => $_getList(3);
+
+  @$pb.TagNumber(5)
+  $core.String get userRoleId => $_getSZ(4);
+  @$pb.TagNumber(5)
+  set userRoleId($core.String v) { $_setString(4, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasUserRoleId() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearUserRoleId() => clearField(5);
 }
 
 class UpdateSpaceChannelOrderResponse extends $pb.GeneratedMessage {
@@ -4623,6 +4833,7 @@ class GetSpaceChannelRequest extends $pb.GeneratedMessage {
   factory GetSpaceChannelRequest({
     $core.String? channelId,
     $core.String? spaceId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -4630,6 +4841,9 @@ class GetSpaceChannelRequest extends $pb.GeneratedMessage {
     }
     if (spaceId != null) {
       $result.spaceId = spaceId;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -4640,6 +4854,7 @@ class GetSpaceChannelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOS(2, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -4681,12 +4896,22 @@ class GetSpaceChannelRequest extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(1);
   @$pb.TagNumber(2)
   void clearSpaceId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
 }
 
 class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
   factory GetSpaceChannelsRequest({
     $core.String? spaceId,
     $core.String? categoryId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -4694,6 +4919,9 @@ class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
     }
     if (categoryId != null) {
       $result.categoryId = categoryId;
+    }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
     }
     return $result;
   }
@@ -4704,6 +4932,7 @@ class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetSpaceChannelsRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'messaging'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'spaceId')
     ..aOS(2, _omitFieldNames ? '' : 'categoryId')
+    ..aOS(3, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -4745,6 +4974,15 @@ class GetSpaceChannelsRequest extends $pb.GeneratedMessage {
   $core.bool hasCategoryId() => $_has(1);
   @$pb.TagNumber(2)
   void clearCategoryId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get userRoleId => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set userRoleId($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasUserRoleId() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearUserRoleId() => clearField(3);
 }
 
 class ChannelDocuments extends $pb.GeneratedMessage {
@@ -5231,6 +5469,7 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
     $core.String? avatarImageHash,
     $core.String? bannerImageUrl,
     $core.String? bannerImageHash,
+    $core.String? url,
   }) {
     final $result = create();
     if (name != null) {
@@ -5251,6 +5490,9 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
     if (bannerImageHash != null) {
       $result.bannerImageHash = bannerImageHash;
     }
+    if (url != null) {
+      $result.url = url;
+    }
     return $result;
   }
   ChannelDocument_Metadata._() : super();
@@ -5264,6 +5506,7 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
     ..aOS(4, _omitFieldNames ? '' : 'avatarImageHash')
     ..aOS(5, _omitFieldNames ? '' : 'bannerImageUrl')
     ..aOS(6, _omitFieldNames ? '' : 'bannerImageHash')
+    ..aOS(7, _omitFieldNames ? '' : 'url')
     ..hasRequiredFields = false
   ;
 
@@ -5341,6 +5584,15 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasBannerImageHash() => $_has(5);
   @$pb.TagNumber(6)
   void clearBannerImageHash() => clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.String get url => $_getSZ(6);
+  @$pb.TagNumber(7)
+  set url($core.String v) { $_setString(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasUrl() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearUrl() => clearField(7);
 }
 
 class ChannelDocument extends $pb.GeneratedMessage {
@@ -5358,6 +5610,7 @@ class ChannelDocument extends $pb.GeneratedMessage {
     $fixnum.Int64? nonce,
     DOCUMENT_STATUS? documentStatus,
     $core.String? createdBy,
+    ChannelDocument_Type? type,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -5399,6 +5652,9 @@ class ChannelDocument extends $pb.GeneratedMessage {
     if (createdBy != null) {
       $result.createdBy = createdBy;
     }
+    if (type != null) {
+      $result.type = type;
+    }
     return $result;
   }
   ChannelDocument._() : super();
@@ -5419,6 +5675,7 @@ class ChannelDocument extends $pb.GeneratedMessage {
     ..a<$fixnum.Int64>(11, _omitFieldNames ? '' : 'nonce', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..e<DOCUMENT_STATUS>(12, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..aOS(13, _omitFieldNames ? '' : 'createdBy')
+    ..e<ChannelDocument_Type>(14, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ChannelDocument_Type.TEXT, valueOf: ChannelDocument_Type.valueOf, enumValues: ChannelDocument_Type.values)
     ..hasRequiredFields = false
   ;
 
@@ -5555,6 +5812,15 @@ class ChannelDocument extends $pb.GeneratedMessage {
   $core.bool hasCreatedBy() => $_has(12);
   @$pb.TagNumber(13)
   void clearCreatedBy() => clearField(13);
+
+  @$pb.TagNumber(14)
+  ChannelDocument_Type get type => $_getN(13);
+  @$pb.TagNumber(14)
+  set type(ChannelDocument_Type v) { setField(14, v); }
+  @$pb.TagNumber(14)
+  $core.bool hasType() => $_has(13);
+  @$pb.TagNumber(14)
+  void clearType() => clearField(14);
 }
 
 class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
@@ -6877,6 +7143,7 @@ class UpdateChannelMetadataRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     ChannelReference? references,
     ChannelDocument_Metadata? metadata,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -6888,6 +7155,9 @@ class UpdateChannelMetadataRequest extends $pb.GeneratedMessage {
     if (metadata != null) {
       $result.metadata = metadata;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   UpdateChannelMetadataRequest._() : super();
@@ -6898,6 +7168,7 @@ class UpdateChannelMetadataRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOM<ChannelReference>(2, _omitFieldNames ? '' : 'references', subBuilder: ChannelReference.create)
     ..aOM<ChannelDocument_Metadata>(3, _omitFieldNames ? '' : 'metadata', subBuilder: ChannelDocument_Metadata.create)
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -6952,6 +7223,15 @@ class UpdateChannelMetadataRequest extends $pb.GeneratedMessage {
   void clearMetadata() => clearField(3);
   @$pb.TagNumber(3)
   ChannelDocument_Metadata ensureMetadata() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class UpdateChannelMetadataResponse extends $pb.GeneratedMessage {
@@ -7171,6 +7451,7 @@ class SendMessageRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     MessageDocument? message,
     $core.String? spaceId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -7182,6 +7463,9 @@ class SendMessageRequest extends $pb.GeneratedMessage {
     if (spaceId != null) {
       $result.spaceId = spaceId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   SendMessageRequest._() : super();
@@ -7192,6 +7476,7 @@ class SendMessageRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOM<MessageDocument>(2, _omitFieldNames ? '' : 'message', subBuilder: MessageDocument.create)
     ..aOS(3, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -7244,6 +7529,15 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(2);
   @$pb.TagNumber(3)
   void clearSpaceId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class SendMessageResponse extends $pb.GeneratedMessage {

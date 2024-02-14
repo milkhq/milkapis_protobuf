@@ -35,6 +35,12 @@ class CollectionsV1 extends $pb.ProtobufEnum {
   static const CollectionsV1 USER_PRESENCE_STATUSES = CollectionsV1._(18, _omitEnumNames ? '' : 'USER_PRESENCE_STATUSES');
   static const CollectionsV1 SUBSCRIBED_TOPICS = CollectionsV1._(19, _omitEnumNames ? '' : 'SUBSCRIBED_TOPICS');
   static const CollectionsV1 READ_RECEIPTS = CollectionsV1._(20, _omitEnumNames ? '' : 'READ_RECEIPTS');
+  static const CollectionsV1 SET = CollectionsV1._(21, _omitEnumNames ? '' : 'SET');
+  static const CollectionsV1 SORTED_SET = CollectionsV1._(22, _omitEnumNames ? '' : 'SORTED_SET');
+  static const CollectionsV1 HASH_MAP = CollectionsV1._(23, _omitEnumNames ? '' : 'HASH_MAP');
+  static const CollectionsV1 LIST = CollectionsV1._(24, _omitEnumNames ? '' : 'LIST');
+  static const CollectionsV1 KEY_VALUE = CollectionsV1._(25, _omitEnumNames ? '' : 'KEY_VALUE');
+  static const CollectionsV1 PINNED_CONVERSATIONS = CollectionsV1._(26, _omitEnumNames ? '' : 'PINNED_CONVERSATIONS');
 
   static const $core.List<CollectionsV1> values = <CollectionsV1> [
     USERS,
@@ -58,6 +64,12 @@ class CollectionsV1 extends $pb.ProtobufEnum {
     USER_PRESENCE_STATUSES,
     SUBSCRIBED_TOPICS,
     READ_RECEIPTS,
+    SET,
+    SORTED_SET,
+    HASH_MAP,
+    LIST,
+    KEY_VALUE,
+    PINNED_CONVERSATIONS,
   ];
 
   static final $core.Map<$core.int, CollectionsV1> _byValue = $pb.ProtobufEnum.initByValue(values);

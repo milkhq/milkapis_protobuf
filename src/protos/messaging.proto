@@ -175,6 +175,7 @@ message GetSpaceThreadChannelMessageReactionsSetRequest {
     string message_id = 3;
     string thread_channel_id = 4;
     uint32 updated_at = 5;
+    string user_role_id = 6;
 }
 
 message GetSpaceThreadChannelMessageReactionsSetResponse {
@@ -187,6 +188,7 @@ message GetSpaceThreadChannelUserMessageReactionsMapRequest {
     string message_id = 3;
     string thread_channel_id = 4;
     uint32 updated_at = 5;
+    string user_role_id = 6;
 }
 
 message GetSpaceThreadChannelUserMessageReactionsMapResponse {
@@ -271,6 +273,7 @@ message GetSpaceChannelUserMessageReactionsMapRequest {
     string space_id = 1;
     string channel_id = 2;
     uint32 updated_at = 3;
+    string user_role_id = 4;
 }
 
 message GetSpaceChannelUserMessageReactionsMapResponse {
@@ -281,6 +284,7 @@ message GetSpaceChannelMessageReactionsSetRequest {
     string space_id = 1;
     string channel_id = 2;
     uint32 updated_at = 3;
+    string user_role_id = 4;
 }
 
 message GetSpaceChannelMessageReactionsSetResponse {
@@ -292,6 +296,7 @@ message GetSpaceThreadChannelRequest {
     string channel_id = 2;
     string thread_channel_id = 3;
     string message_id = 4;
+    string user_role_id = 5;
 }
 
 message GetSpaceThreadChannelResponse {
@@ -327,6 +332,7 @@ message GetSpaceChannelThreadMessageReactionsRequest {
     string message_id = 3;
     string thread_channel_id = 4;
     string thread_message_id = 5;
+    string user_role_id = 6;
 }
 
 message GetSpaceChannelThreadMessageReactionsResponse {
@@ -356,6 +362,7 @@ message GetSpaceChannelThreadMessagesRequest {
     uint64 start = 5;
     uint64 end = 6;
     bool ascending = 7;
+    string user_role_id = 8;
 }
 
 message GetSpaceChannelThreadMessagesResponse {
@@ -370,6 +377,7 @@ message CreateSpaceChannelFileUploadUrlRequest {
     string mime_type = 4;
     uint64 file_size = 5;
     uint64 preview_file_size = 6;
+    string user_role_id = 7;
 }
 
 message CreateSpaceChannelFileUploadUrlResponse {
@@ -384,6 +392,7 @@ message SendSpaceChannelThreadMessageRequest {
     MessageDocument message = 2;
     string space_id = 3;
     string message_id = 4;
+    string user_role_id = 5;
 }
 
 message SendSpaceChannelThreadMessageResponse {
@@ -407,6 +416,7 @@ message GetSpaceChannelMessageReactionsRequest {
     string space_id = 1;
     string channel_id = 2;
     string message_id = 3;
+    string user_role_id = 4;
 }
 
 message GetSpaceChannelMessageReactionsResponse {
@@ -432,6 +442,7 @@ message GetSpaceChannelMessagesRequest {
     uint64 start = 4;
     uint64 end = 5;
     bool ascending = 6;
+    string user_role_id = 7;
 }
 
 message GetSpaceChannelMessagesResponse {
@@ -443,6 +454,7 @@ message SetSpaceChannelCategoryOrderRequest {
     string space_id = 1;
     repeated string ids = 2;
     repeated uint32 scores = 3;
+    string user_role_id = 4;
 }
 
 message SetSpaceChannelCategoryOrderResponse {
@@ -457,6 +469,7 @@ message UpdateSpaceChannelCategoryRequest {
     string space_id = 1;
     string category_id = 2;
     ChannelCategoryDocument category = 3;
+    string user_role_id = 4;
 }
 
 message UpdateSpaceChannelCategoryResponse {
@@ -481,6 +494,7 @@ message ChannelCategoryDocuments {
 
 message GetSpaceChannelCategoriesRequest {
     string space_id = 1;
+    string user_role_id = 2;
 }
 
 message UpdateSpaceChannelOrderRequest {
@@ -488,6 +502,7 @@ message UpdateSpaceChannelOrderRequest {
     string category_id = 2;
     repeated string ids = 3;
     repeated uint32 scores = 4;
+    string user_role_id = 5;
 }
 
 message UpdateSpaceChannelOrderResponse {
@@ -519,11 +534,13 @@ message ChannelMemberDocument {
 message GetSpaceChannelRequest {
     string channel_id = 1;
     string space_id = 2;
+    string user_role_id = 3;
 }
 
 message GetSpaceChannelsRequest {
     string space_id = 1;
     string category_id = 2;
+    string user_role_id = 3;
 }
 
 message ChannelDocuments {
@@ -588,6 +605,7 @@ message ChannelDocument {
     uint64 nonce = 11;
     DOCUMENT_STATUS document_status = 12;
     string created_by = 13;
+    Type type = 14;
 
     message Metadata {
         string name = 1;
@@ -596,6 +614,13 @@ message ChannelDocument {
         string avatar_image_hash = 4;
         string banner_image_url = 5;
         string banner_image_hash = 6;
+        string url = 7;
+    }
+
+    enum Type {
+        TEXT = 0;
+        VOICE = 1;
+        APP = 2;
     }
 }
 
@@ -710,6 +735,7 @@ message UpdateChannelMetadataRequest {
     string channel_id = 1;
     ChannelReference references = 2;
     ChannelDocument.Metadata metadata = 3;
+    string user_role_id = 4;
 }
 
 message UpdateChannelMetadataResponse {
@@ -732,6 +758,7 @@ message SendMessageRequest {
     string channel_id = 1;
     MessageDocument message = 2;
     string space_id = 3;
+    string user_role_id = 4;
 }
 
 message SendMessageResponse {

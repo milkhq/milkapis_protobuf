@@ -40,6 +40,7 @@ service Space {
   rpc GetSpaceRoleMembers(GetSpaceRoleMembersRequest) returns (GetSpaceRoleMembersResponse);
   rpc CreateSpaceRoleIconUploadUrl(CreateSpaceRoleIconUploadUrlRequest) returns (CreateSpaceRoleIconUploadUrlResponse);
   rpc ResetSpaceRoles(ResetSpaceRolesRequest) returns (ResetSpaceRolesResponse);
+  rpc UpdateSpaceRolesOrder(UpdateSpaceRolesOrderRequest) returns (UpdateSpaceRolesOrderResponse);
 
   // User status list
   rpc GetSpaceUserStatusesList(GetSpaceUserStatusesListRequest) returns (GetSpaceUserStatusesListResponse);
@@ -47,6 +48,17 @@ service Space {
 
   // Admin
   rpc CreateDefaultSpace(CreateSpaceRequest) returns (CreateSpaceResponse);
+}
+
+message UpdateSpaceRolesOrderRequest {
+  string space_id = 1;
+  repeated string role_ids = 2;
+  string user_role_id = 3;
+}
+
+message UpdateSpaceRolesOrderResponse {
+  string space_id = 1;
+  repeated string role_ids = 2;
 }
 
 message ResetSpaceRolesRequest {
@@ -86,6 +98,7 @@ message UpdateSpaceUserStatusRequest {
   string uid = 2;
   UserSpaceStatusDocument status = 3;
   string user_role_id = 4;
+  string reason = 5;
 }
 
 message UpdateSpaceUserStatusResponse {
@@ -105,6 +118,7 @@ message UserSpaceStatusDocument {
   uint64 expired_at = 2;
   string uid = 3;
   uint64 updated_at = 4;
+  string reason = 5;
 }
 
 message GetSpaceUserStatusesListRequest {
@@ -167,7 +181,8 @@ message SpaceRoleDocument {
 
 message GetSpaceRolesResponse {
   string space_id = 1;
-  repeated SpaceRoleDocument roles = 2;
+  map<string, SpaceRoleDocument> roles = 2;
+  repeated string role_ids = 3;
 }
 
 // Space Roles are stored in a Hash Map
@@ -184,6 +199,7 @@ message CreateSpaceRoleRequest {
   SpaceRoleDocument role = 2;
   string user_role_id = 3;
   repeated string members = 4;
+  repeated string role_ids = 5;
 }
 
 message CreateSpaceRoleResponse {

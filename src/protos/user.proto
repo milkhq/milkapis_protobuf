@@ -195,6 +195,7 @@ enum USER_PRESENCE_STATUS {
   LOADING = 7;
   LIVESTREAMING = 8;
   IN_A_CALL = 9;
+  AUTO = 10;
 }
 
 enum SOCIAL {
@@ -241,6 +242,7 @@ message UserDocument {
   DOCUMENT_STATUS document_status = 10;
   repeated UserFeatureFlags feature_flags = 11;
   USER_PRESENCE_STATUS presence_status = 12;
+  uint64 joined_at = 13;
 
   enum UserProfileEffectsV1 {
     NONE = 0;
@@ -267,6 +269,7 @@ message UserDocument {
     UserProfileEffectsV1 effect = 12;
     string effect_parameters = 13;
     bytes effect_parameters_v2 = 14;
+    string social_avatar_url = 15;
   }
 }
 

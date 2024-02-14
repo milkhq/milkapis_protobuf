@@ -1724,6 +1724,7 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     UserDocument_UserProfileEffectsV1? effect,
     $core.String? effectParameters,
     $core.List<$core.int>? effectParametersV2,
+    $core.String? socialAvatarUrl,
   }) {
     final $result = create();
     if (username != null) {
@@ -1768,6 +1769,9 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     if (effectParametersV2 != null) {
       $result.effectParametersV2 = effectParametersV2;
     }
+    if (socialAvatarUrl != null) {
+      $result.socialAvatarUrl = socialAvatarUrl;
+    }
     return $result;
   }
   UserDocument_Metadata._() : super();
@@ -1789,6 +1793,7 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
     ..e<UserDocument_UserProfileEffectsV1>(12, _omitFieldNames ? '' : 'effect', $pb.PbFieldType.OE, defaultOrMaker: UserDocument_UserProfileEffectsV1.NONE, valueOf: UserDocument_UserProfileEffectsV1.valueOf, enumValues: UserDocument_UserProfileEffectsV1.values)
     ..aOS(13, _omitFieldNames ? '' : 'effectParameters')
     ..a<$core.List<$core.int>>(14, _omitFieldNames ? '' : 'effectParametersV2', $pb.PbFieldType.OY)
+    ..aOS(15, _omitFieldNames ? '' : 'socialAvatarUrl')
     ..hasRequiredFields = false
   ;
 
@@ -1938,6 +1943,15 @@ class UserDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasEffectParametersV2() => $_has(13);
   @$pb.TagNumber(14)
   void clearEffectParametersV2() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.String get socialAvatarUrl => $_getSZ(14);
+  @$pb.TagNumber(15)
+  set socialAvatarUrl($core.String v) { $_setString(14, v); }
+  @$pb.TagNumber(15)
+  $core.bool hasSocialAvatarUrl() => $_has(14);
+  @$pb.TagNumber(15)
+  void clearSocialAvatarUrl() => clearField(15);
 }
 
 class UserDocument extends $pb.GeneratedMessage {
@@ -1954,6 +1968,7 @@ class UserDocument extends $pb.GeneratedMessage {
     DOCUMENT_STATUS? documentStatus,
     $core.Iterable<UserFeatureFlags>? featureFlags,
     USER_PRESENCE_STATUS? presenceStatus,
+    $fixnum.Int64? joinedAt,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -1992,6 +2007,9 @@ class UserDocument extends $pb.GeneratedMessage {
     if (presenceStatus != null) {
       $result.presenceStatus = presenceStatus;
     }
+    if (joinedAt != null) {
+      $result.joinedAt = joinedAt;
+    }
     return $result;
   }
   UserDocument._() : super();
@@ -2011,6 +2029,7 @@ class UserDocument extends $pb.GeneratedMessage {
     ..e<DOCUMENT_STATUS>(10, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..pc<UserFeatureFlags>(11, _omitFieldNames ? '' : 'featureFlags', $pb.PbFieldType.KE, valueOf: UserFeatureFlags.valueOf, enumValues: UserFeatureFlags.values, defaultEnumValue: UserFeatureFlags.NONE)
     ..e<USER_PRESENCE_STATUS>(12, _omitFieldNames ? '' : 'presenceStatus', $pb.PbFieldType.OE, defaultOrMaker: USER_PRESENCE_STATUS.ONLINE, valueOf: USER_PRESENCE_STATUS.valueOf, enumValues: USER_PRESENCE_STATUS.values)
+    ..a<$fixnum.Int64>(13, _omitFieldNames ? '' : 'joinedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
     ..hasRequiredFields = false
   ;
 
@@ -2132,6 +2151,15 @@ class UserDocument extends $pb.GeneratedMessage {
   $core.bool hasPresenceStatus() => $_has(11);
   @$pb.TagNumber(12)
   void clearPresenceStatus() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $fixnum.Int64 get joinedAt => $_getI64(12);
+  @$pb.TagNumber(13)
+  set joinedAt($fixnum.Int64 v) { $_setInt64(12, v); }
+  @$pb.TagNumber(13)
+  $core.bool hasJoinedAt() => $_has(12);
+  @$pb.TagNumber(13)
+  void clearJoinedAt() => clearField(13);
 }
 
 class UpdateUserMetadataRequest extends $pb.GeneratedMessage {

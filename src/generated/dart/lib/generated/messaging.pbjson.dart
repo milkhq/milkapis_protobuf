@@ -421,6 +421,7 @@ const GetSpaceThreadChannelMessageReactionsSetRequest$json = {
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
     {'1': 'updated_at', '3': 5, '4': 1, '5': 13, '10': 'updatedAt'},
+    {'1': 'user_role_id', '3': 6, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -429,7 +430,8 @@ final $typed_data.Uint8List getSpaceThreadChannelMessageReactionsSetRequestDescr
     'Ci9HZXRTcGFjZVRocmVhZENoYW5uZWxNZXNzYWdlUmVhY3Rpb25zU2V0UmVxdWVzdBIZCghzcG'
     'FjZV9pZBgBIAEoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoK'
     'bWVzc2FnZV9pZBgDIAEoCVIJbWVzc2FnZUlkEioKEXRocmVhZF9jaGFubmVsX2lkGAQgASgJUg'
-    '90aHJlYWRDaGFubmVsSWQSHQoKdXBkYXRlZF9hdBgFIAEoDVIJdXBkYXRlZEF0');
+    '90aHJlYWRDaGFubmVsSWQSHQoKdXBkYXRlZF9hdBgFIAEoDVIJdXBkYXRlZEF0EiAKDHVzZXJf'
+    'cm9sZV9pZBgGIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use getSpaceThreadChannelMessageReactionsSetResponseDescriptor instead')
 const GetSpaceThreadChannelMessageReactionsSetResponse$json = {
@@ -453,6 +455,7 @@ const GetSpaceThreadChannelUserMessageReactionsMapRequest$json = {
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
     {'1': 'updated_at', '3': 5, '4': 1, '5': 13, '10': 'updatedAt'},
+    {'1': 'user_role_id', '3': 6, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -461,7 +464,8 @@ final $typed_data.Uint8List getSpaceThreadChannelUserMessageReactionsMapRequestD
     'CjNHZXRTcGFjZVRocmVhZENoYW5uZWxVc2VyTWVzc2FnZVJlYWN0aW9uc01hcFJlcXVlc3QSGQ'
     'oIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSHQoKY2hhbm5lbF9pZBgCIAEoCVIJY2hhbm5lbElk'
     'Eh0KCm1lc3NhZ2VfaWQYAyABKAlSCW1lc3NhZ2VJZBIqChF0aHJlYWRfY2hhbm5lbF9pZBgEIA'
-    'EoCVIPdGhyZWFkQ2hhbm5lbElkEh0KCnVwZGF0ZWRfYXQYBSABKA1SCXVwZGF0ZWRBdA==');
+    'EoCVIPdGhyZWFkQ2hhbm5lbElkEh0KCnVwZGF0ZWRfYXQYBSABKA1SCXVwZGF0ZWRBdBIgCgx1'
+    'c2VyX3JvbGVfaWQYBiABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use getSpaceThreadChannelUserMessageReactionsMapResponseDescriptor instead')
 const GetSpaceThreadChannelUserMessageReactionsMapResponse$json = {
@@ -637,6 +641,7 @@ const GetSpaceChannelUserMessageReactionsMapRequest$json = {
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'updated_at', '3': 3, '4': 1, '5': 13, '10': 'updatedAt'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -644,7 +649,8 @@ const GetSpaceChannelUserMessageReactionsMapRequest$json = {
 final $typed_data.Uint8List getSpaceChannelUserMessageReactionsMapRequestDescriptor = $convert.base64Decode(
     'Ci1HZXRTcGFjZUNoYW5uZWxVc2VyTWVzc2FnZVJlYWN0aW9uc01hcFJlcXVlc3QSGQoIc3BhY2'
     'VfaWQYASABKAlSB3NwYWNlSWQSHQoKY2hhbm5lbF9pZBgCIAEoCVIJY2hhbm5lbElkEh0KCnVw'
-    'ZGF0ZWRfYXQYAyABKA1SCXVwZGF0ZWRBdA==');
+    'ZGF0ZWRfYXQYAyABKA1SCXVwZGF0ZWRBdBIgCgx1c2VyX3JvbGVfaWQYBCABKAlSCnVzZXJSb2'
+    'xlSWQ=');
 
 @$core.Deprecated('Use getSpaceChannelUserMessageReactionsMapResponseDescriptor instead')
 const GetSpaceChannelUserMessageReactionsMapResponse$json = {
@@ -679,6 +685,7 @@ const GetSpaceChannelMessageReactionsSetRequest$json = {
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'updated_at', '3': 3, '4': 1, '5': 13, '10': 'updatedAt'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -686,7 +693,8 @@ const GetSpaceChannelMessageReactionsSetRequest$json = {
 final $typed_data.Uint8List getSpaceChannelMessageReactionsSetRequestDescriptor = $convert.base64Decode(
     'CilHZXRTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25zU2V0UmVxdWVzdBIZCghzcGFjZV9pZB'
     'gBIAEoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKdXBkYXRl'
-    'ZF9hdBgDIAEoDVIJdXBkYXRlZEF0');
+    'ZF9hdBgDIAEoDVIJdXBkYXRlZEF0EiAKDHVzZXJfcm9sZV9pZBgEIAEoCVIKdXNlclJvbGVJZA'
+    '==');
 
 @$core.Deprecated('Use getSpaceChannelMessageReactionsSetResponseDescriptor instead')
 const GetSpaceChannelMessageReactionsSetResponse$json = {
@@ -709,6 +717,7 @@ const GetSpaceThreadChannelRequest$json = {
     {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'thread_channel_id', '3': 3, '4': 1, '5': 9, '10': 'threadChannelId'},
     {'1': 'message_id', '3': 4, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'user_role_id', '3': 5, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -716,7 +725,8 @@ const GetSpaceThreadChannelRequest$json = {
 final $typed_data.Uint8List getSpaceThreadChannelRequestDescriptor = $convert.base64Decode(
     'ChxHZXRTcGFjZVRocmVhZENoYW5uZWxSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZU'
     'lkEh0KCmNoYW5uZWxfaWQYAiABKAlSCWNoYW5uZWxJZBIqChF0aHJlYWRfY2hhbm5lbF9pZBgD'
-    'IAEoCVIPdGhyZWFkQ2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQYBCABKAlSCW1lc3NhZ2VJZA==');
+    'IAEoCVIPdGhyZWFkQ2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQYBCABKAlSCW1lc3NhZ2VJZBIgCg'
+    'x1c2VyX3JvbGVfaWQYBSABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use getSpaceThreadChannelResponseDescriptor instead')
 const GetSpaceThreadChannelResponse$json = {
@@ -798,6 +808,7 @@ const GetSpaceChannelThreadMessageReactionsRequest$json = {
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
     {'1': 'thread_message_id', '3': 5, '4': 1, '5': 9, '10': 'threadMessageId'},
+    {'1': 'user_role_id', '3': 6, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -807,7 +818,7 @@ final $typed_data.Uint8List getSpaceChannelThreadMessageReactionsRequestDescript
     '9pZBgBIAEoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKbWVz'
     'c2FnZV9pZBgDIAEoCVIJbWVzc2FnZUlkEioKEXRocmVhZF9jaGFubmVsX2lkGAQgASgJUg90aH'
     'JlYWRDaGFubmVsSWQSKgoRdGhyZWFkX21lc3NhZ2VfaWQYBSABKAlSD3RocmVhZE1lc3NhZ2VJ'
-    'ZA==');
+    'ZBIgCgx1c2VyX3JvbGVfaWQYBiABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use getSpaceChannelThreadMessageReactionsResponseDescriptor instead')
 const GetSpaceChannelThreadMessageReactionsResponse$json = {
@@ -878,6 +889,7 @@ const GetSpaceChannelThreadMessagesRequest$json = {
     {'1': 'start', '3': 5, '4': 1, '5': 4, '10': 'start'},
     {'1': 'end', '3': 6, '4': 1, '5': 4, '10': 'end'},
     {'1': 'ascending', '3': 7, '4': 1, '5': 8, '10': 'ascending'},
+    {'1': 'user_role_id', '3': 8, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -887,7 +899,7 @@ final $typed_data.Uint8List getSpaceChannelThreadMessagesRequestDescriptor = $co
     'lSB3NwYWNlSWQSHQoKY2hhbm5lbF9pZBgCIAEoCVIJY2hhbm5lbElkEh0KCm1lc3NhZ2VfaWQY'
     'AyABKAlSCW1lc3NhZ2VJZBIqChF0aHJlYWRfY2hhbm5lbF9pZBgEIAEoCVIPdGhyZWFkQ2hhbm'
     '5lbElkEhQKBXN0YXJ0GAUgASgEUgVzdGFydBIQCgNlbmQYBiABKARSA2VuZBIcCglhc2NlbmRp'
-    'bmcYByABKAhSCWFzY2VuZGluZw==');
+    'bmcYByABKAhSCWFzY2VuZGluZxIgCgx1c2VyX3JvbGVfaWQYCCABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use getSpaceChannelThreadMessagesResponseDescriptor instead')
 const GetSpaceChannelThreadMessagesResponse$json = {
@@ -914,6 +926,7 @@ const CreateSpaceChannelFileUploadUrlRequest$json = {
     {'1': 'mime_type', '3': 4, '4': 1, '5': 9, '10': 'mimeType'},
     {'1': 'file_size', '3': 5, '4': 1, '5': 4, '10': 'fileSize'},
     {'1': 'preview_file_size', '3': 6, '4': 1, '5': 4, '10': 'previewFileSize'},
+    {'1': 'user_role_id', '3': 7, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -923,7 +936,7 @@ final $typed_data.Uint8List createSpaceChannelFileUploadUrlRequestDescriptor = $
     'EgASgJUgljaGFubmVsSWQSGQoIc3BhY2VfaWQYAiABKAlSB3NwYWNlSWQSGwoJZmlsZV9uYW1l'
     'GAMgASgJUghmaWxlTmFtZRIbCgltaW1lX3R5cGUYBCABKAlSCG1pbWVUeXBlEhsKCWZpbGVfc2'
     'l6ZRgFIAEoBFIIZmlsZVNpemUSKgoRcHJldmlld19maWxlX3NpemUYBiABKARSD3ByZXZpZXdG'
-    'aWxlU2l6ZQ==');
+    'aWxlU2l6ZRIgCgx1c2VyX3JvbGVfaWQYByABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use createSpaceChannelFileUploadUrlResponseDescriptor instead')
 const CreateSpaceChannelFileUploadUrlResponse$json = {
@@ -951,6 +964,7 @@ const SendSpaceChannelThreadMessageRequest$json = {
     {'1': 'message', '3': 2, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
     {'1': 'space_id', '3': 3, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'message_id', '3': 4, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'user_role_id', '3': 5, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -959,7 +973,7 @@ final $typed_data.Uint8List sendSpaceChannelThreadMessageRequestDescriptor = $co
     'CiRTZW5kU3BhY2VDaGFubmVsVGhyZWFkTWVzc2FnZVJlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIA'
     'EoCVIJY2hhbm5lbElkEjQKB21lc3NhZ2UYAiABKAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3Vt'
     'ZW50UgdtZXNzYWdlEhkKCHNwYWNlX2lkGAMgASgJUgdzcGFjZUlkEh0KCm1lc3NhZ2VfaWQYBC'
-    'ABKAlSCW1lc3NhZ2VJZA==');
+    'ABKAlSCW1lc3NhZ2VJZBIgCgx1c2VyX3JvbGVfaWQYBSABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use sendSpaceChannelThreadMessageResponseDescriptor instead')
 const SendSpaceChannelThreadMessageResponse$json = {
@@ -1012,6 +1026,7 @@ const GetSpaceChannelMessageReactionsRequest$json = {
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'channel_id', '3': 2, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1019,7 +1034,7 @@ const GetSpaceChannelMessageReactionsRequest$json = {
 final $typed_data.Uint8List getSpaceChannelMessageReactionsRequestDescriptor = $convert.base64Decode(
     'CiZHZXRTcGFjZUNoYW5uZWxNZXNzYWdlUmVhY3Rpb25zUmVxdWVzdBIZCghzcGFjZV9pZBgBIA'
     'EoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKbWVzc2FnZV9p'
-    'ZBgDIAEoCVIJbWVzc2FnZUlk');
+    'ZBgDIAEoCVIJbWVzc2FnZUlkEiAKDHVzZXJfcm9sZV9pZBgEIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use getSpaceChannelMessageReactionsResponseDescriptor instead')
 const GetSpaceChannelMessageReactionsResponse$json = {
@@ -1089,6 +1104,7 @@ const GetSpaceChannelMessagesRequest$json = {
     {'1': 'start', '3': 4, '4': 1, '5': 4, '10': 'start'},
     {'1': 'end', '3': 5, '4': 1, '5': 4, '10': 'end'},
     {'1': 'ascending', '3': 6, '4': 1, '5': 8, '10': 'ascending'},
+    {'1': 'user_role_id', '3': 7, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1096,7 +1112,8 @@ const GetSpaceChannelMessagesRequest$json = {
 final $typed_data.Uint8List getSpaceChannelMessagesRequestDescriptor = $convert.base64Decode(
     'Ch5HZXRTcGFjZUNoYW5uZWxNZXNzYWdlc1JlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIAEoCVIJY2'
     'hhbm5lbElkEhkKCHNwYWNlX2lkGAIgASgJUgdzcGFjZUlkEhQKBXN0YXJ0GAQgASgEUgVzdGFy'
-    'dBIQCgNlbmQYBSABKARSA2VuZBIcCglhc2NlbmRpbmcYBiABKAhSCWFzY2VuZGluZw==');
+    'dBIQCgNlbmQYBSABKARSA2VuZBIcCglhc2NlbmRpbmcYBiABKAhSCWFzY2VuZGluZxIgCgx1c2'
+    'VyX3JvbGVfaWQYByABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use getSpaceChannelMessagesResponseDescriptor instead')
 const GetSpaceChannelMessagesResponse$json = {
@@ -1120,13 +1137,15 @@ const SetSpaceChannelCategoryOrderRequest$json = {
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'ids', '3': 2, '4': 3, '5': 9, '10': 'ids'},
     {'1': 'scores', '3': 3, '4': 3, '5': 13, '10': 'scores'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
 /// Descriptor for `SetSpaceChannelCategoryOrderRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List setSpaceChannelCategoryOrderRequestDescriptor = $convert.base64Decode(
     'CiNTZXRTcGFjZUNoYW5uZWxDYXRlZ29yeU9yZGVyUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCV'
-    'IHc3BhY2VJZBIQCgNpZHMYAiADKAlSA2lkcxIWCgZzY29yZXMYAyADKA1SBnNjb3Jlcw==');
+    'IHc3BhY2VJZBIQCgNpZHMYAiADKAlSA2lkcxIWCgZzY29yZXMYAyADKA1SBnNjb3JlcxIgCgx1'
+    'c2VyX3JvbGVfaWQYBCABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use setSpaceChannelCategoryOrderResponseDescriptor instead')
 const SetSpaceChannelCategoryOrderResponse$json = {
@@ -1157,6 +1176,7 @@ const UpdateSpaceChannelCategoryRequest$json = {
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'category_id', '3': 2, '4': 1, '5': 9, '10': 'categoryId'},
     {'1': 'category', '3': 3, '4': 1, '5': 11, '6': '.messaging.ChannelCategoryDocument', '10': 'category'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1164,7 +1184,8 @@ const UpdateSpaceChannelCategoryRequest$json = {
 final $typed_data.Uint8List updateSpaceChannelCategoryRequestDescriptor = $convert.base64Decode(
     'CiFVcGRhdGVTcGFjZUNoYW5uZWxDYXRlZ29yeVJlcXVlc3QSGQoIc3BhY2VfaWQYASABKAlSB3'
     'NwYWNlSWQSHwoLY2F0ZWdvcnlfaWQYAiABKAlSCmNhdGVnb3J5SWQSPgoIY2F0ZWdvcnkYAyAB'
-    'KAsyIi5tZXNzYWdpbmcuQ2hhbm5lbENhdGVnb3J5RG9jdW1lbnRSCGNhdGVnb3J5');
+    'KAsyIi5tZXNzYWdpbmcuQ2hhbm5lbENhdGVnb3J5RG9jdW1lbnRSCGNhdGVnb3J5EiAKDHVzZX'
+    'Jfcm9sZV9pZBgEIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use updateSpaceChannelCategoryResponseDescriptor instead')
 const UpdateSpaceChannelCategoryResponse$json = {
@@ -1228,13 +1249,14 @@ const GetSpaceChannelCategoriesRequest$json = {
   '1': 'GetSpaceChannelCategoriesRequest',
   '2': [
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 2, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
 /// Descriptor for `GetSpaceChannelCategoriesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSpaceChannelCategoriesRequestDescriptor = $convert.base64Decode(
     'CiBHZXRTcGFjZUNoYW5uZWxDYXRlZ29yaWVzUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3'
-    'BhY2VJZA==');
+    'BhY2VJZBIgCgx1c2VyX3JvbGVfaWQYAiABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use updateSpaceChannelOrderRequestDescriptor instead')
 const UpdateSpaceChannelOrderRequest$json = {
@@ -1244,6 +1266,7 @@ const UpdateSpaceChannelOrderRequest$json = {
     {'1': 'category_id', '3': 2, '4': 1, '5': 9, '10': 'categoryId'},
     {'1': 'ids', '3': 3, '4': 3, '5': 9, '10': 'ids'},
     {'1': 'scores', '3': 4, '4': 3, '5': 13, '10': 'scores'},
+    {'1': 'user_role_id', '3': 5, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1251,7 +1274,8 @@ const UpdateSpaceChannelOrderRequest$json = {
 final $typed_data.Uint8List updateSpaceChannelOrderRequestDescriptor = $convert.base64Decode(
     'Ch5VcGRhdGVTcGFjZUNoYW5uZWxPcmRlclJlcXVlc3QSGQoIc3BhY2VfaWQYASABKAlSB3NwYW'
     'NlSWQSHwoLY2F0ZWdvcnlfaWQYAiABKAlSCmNhdGVnb3J5SWQSEAoDaWRzGAMgAygJUgNpZHMS'
-    'FgoGc2NvcmVzGAQgAygNUgZzY29yZXM=');
+    'FgoGc2NvcmVzGAQgAygNUgZzY29yZXMSIAoMdXNlcl9yb2xlX2lkGAUgASgJUgp1c2VyUm9sZU'
+    'lk');
 
 @$core.Deprecated('Use updateSpaceChannelOrderResponseDescriptor instead')
 const UpdateSpaceChannelOrderResponse$json = {
@@ -1318,13 +1342,15 @@ const GetSpaceChannelRequest$json = {
   '2': [
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'space_id', '3': 2, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
 /// Descriptor for `GetSpaceChannelRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSpaceChannelRequestDescriptor = $convert.base64Decode(
     'ChZHZXRTcGFjZUNoYW5uZWxSZXF1ZXN0Eh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW5uZWxJZB'
-    'IZCghzcGFjZV9pZBgCIAEoCVIHc3BhY2VJZA==');
+    'IZCghzcGFjZV9pZBgCIAEoCVIHc3BhY2VJZBIgCgx1c2VyX3JvbGVfaWQYAyABKAlSCnVzZXJS'
+    'b2xlSWQ=');
 
 @$core.Deprecated('Use getSpaceChannelsRequestDescriptor instead')
 const GetSpaceChannelsRequest$json = {
@@ -1332,13 +1358,15 @@ const GetSpaceChannelsRequest$json = {
   '2': [
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
     {'1': 'category_id', '3': 2, '4': 1, '5': 9, '10': 'categoryId'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
 /// Descriptor for `GetSpaceChannelsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSpaceChannelsRequestDescriptor = $convert.base64Decode(
     'ChdHZXRTcGFjZUNoYW5uZWxzUmVxdWVzdBIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZBIfCg'
-    'tjYXRlZ29yeV9pZBgCIAEoCVIKY2F0ZWdvcnlJZA==');
+    'tjYXRlZ29yeV9pZBgCIAEoCVIKY2F0ZWdvcnlJZBIgCgx1c2VyX3JvbGVfaWQYAyABKAlSCnVz'
+    'ZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use channelDocumentsDescriptor instead')
 const ChannelDocuments$json = {
@@ -1467,8 +1495,10 @@ const ChannelDocument$json = {
     {'1': 'nonce', '3': 11, '4': 1, '5': 4, '10': 'nonce'},
     {'1': 'document_status', '3': 12, '4': 1, '5': 14, '6': '.messaging.DOCUMENT_STATUS', '10': 'documentStatus'},
     {'1': 'created_by', '3': 13, '4': 1, '5': 9, '10': 'createdBy'},
+    {'1': 'type', '3': 14, '4': 1, '5': 14, '6': '.messaging.ChannelDocument.Type', '10': 'type'},
   ],
   '3': [ChannelDocument_Metadata$json],
+  '4': [ChannelDocument_Type$json],
 };
 
 @$core.Deprecated('Use channelDocumentDescriptor instead')
@@ -1481,6 +1511,17 @@ const ChannelDocument_Metadata$json = {
     {'1': 'avatar_image_hash', '3': 4, '4': 1, '5': 9, '10': 'avatarImageHash'},
     {'1': 'banner_image_url', '3': 5, '4': 1, '5': 9, '10': 'bannerImageUrl'},
     {'1': 'banner_image_hash', '3': 6, '4': 1, '5': 9, '10': 'bannerImageHash'},
+    {'1': 'url', '3': 7, '4': 1, '5': 9, '10': 'url'},
+  ],
+};
+
+@$core.Deprecated('Use channelDocumentDescriptor instead')
+const ChannelDocument_Type$json = {
+  '1': 'Type',
+  '2': [
+    {'1': 'TEXT', '2': 0},
+    {'1': 'VOICE', '2': 1},
+    {'1': 'APP', '2': 2},
   ],
 };
 
@@ -1496,11 +1537,13 @@ final $typed_data.Uint8List channelDocumentDescriptor = $convert.base64Decode(
     'ogAygOMh0ubWVzc2FnaW5nLkNIQU5ORUxfQ0FQQUJJTElUWVIMY2FwYWJpbGl0aWVzEhQKBW5v'
     'bmNlGAsgASgEUgVub25jZRJDCg9kb2N1bWVudF9zdGF0dXMYDCABKA4yGi5tZXNzYWdpbmcuRE'
     '9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxIdCgpjcmVhdGVkX2J5GA0gASgJUgljcmVh'
-    'dGVkQnka7AEKCE1ldGFkYXRhEhIKBG5hbWUYASABKAlSBG5hbWUSIAoLZGVzY3JpcHRpb24YAi'
-    'ABKAlSC2Rlc2NyaXB0aW9uEigKEGF2YXRhcl9pbWFnZV91cmwYAyABKAlSDmF2YXRhckltYWdl'
-    'VXJsEioKEWF2YXRhcl9pbWFnZV9oYXNoGAQgASgJUg9hdmF0YXJJbWFnZUhhc2gSKAoQYmFubm'
-    'VyX2ltYWdlX3VybBgFIAEoCVIOYmFubmVySW1hZ2VVcmwSKgoRYmFubmVyX2ltYWdlX2hhc2gY'
-    'BiABKAlSD2Jhbm5lckltYWdlSGFzaA==');
+    'dGVkQnkSMwoEdHlwZRgOIAEoDjIfLm1lc3NhZ2luZy5DaGFubmVsRG9jdW1lbnQuVHlwZVIEdH'
+    'lwZRr+AQoITWV0YWRhdGESEgoEbmFtZRgBIAEoCVIEbmFtZRIgCgtkZXNjcmlwdGlvbhgCIAEo'
+    'CVILZGVzY3JpcHRpb24SKAoQYXZhdGFyX2ltYWdlX3VybBgDIAEoCVIOYXZhdGFySW1hZ2VVcm'
+    'wSKgoRYXZhdGFyX2ltYWdlX2hhc2gYBCABKAlSD2F2YXRhckltYWdlSGFzaBIoChBiYW5uZXJf'
+    'aW1hZ2VfdXJsGAUgASgJUg5iYW5uZXJJbWFnZVVybBIqChFiYW5uZXJfaW1hZ2VfaGFzaBgGIA'
+    'EoCVIPYmFubmVySW1hZ2VIYXNoEhAKA3VybBgHIAEoCVIDdXJsIiQKBFR5cGUSCAoEVEVYVBAA'
+    'EgkKBVZPSUNFEAESBwoDQVBQEAI=');
 
 @$core.Deprecated('Use messageDocumentDescriptor instead')
 const MessageDocument$json = {
@@ -1738,6 +1781,7 @@ const UpdateChannelMetadataRequest$json = {
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'references', '3': 2, '4': 1, '5': 11, '6': '.messaging.ChannelReference', '10': 'references'},
     {'1': 'metadata', '3': 3, '4': 1, '5': 11, '6': '.messaging.ChannelDocument.Metadata', '10': 'metadata'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1746,7 +1790,7 @@ final $typed_data.Uint8List updateChannelMetadataRequestDescriptor = $convert.ba
     'ChxVcGRhdGVDaGFubmVsTWV0YWRhdGFSZXF1ZXN0Eh0KCmNoYW5uZWxfaWQYASABKAlSCWNoYW'
     '5uZWxJZBI7CgpyZWZlcmVuY2VzGAIgASgLMhsubWVzc2FnaW5nLkNoYW5uZWxSZWZlcmVuY2VS'
     'CnJlZmVyZW5jZXMSPwoIbWV0YWRhdGEYAyABKAsyIy5tZXNzYWdpbmcuQ2hhbm5lbERvY3VtZW'
-    '50Lk1ldGFkYXRhUghtZXRhZGF0YQ==');
+    '50Lk1ldGFkYXRhUghtZXRhZGF0YRIgCgx1c2VyX3JvbGVfaWQYBCABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use updateChannelMetadataResponseDescriptor instead')
 const UpdateChannelMetadataResponse$json = {
@@ -1801,6 +1845,7 @@ const SendMessageRequest$json = {
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message', '3': 2, '4': 1, '5': 11, '6': '.messaging.MessageDocument', '10': 'message'},
     {'1': 'space_id', '3': 3, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1808,7 +1853,8 @@ const SendMessageRequest$json = {
 final $typed_data.Uint8List sendMessageRequestDescriptor = $convert.base64Decode(
     'ChJTZW5kTWVzc2FnZVJlcXVlc3QSHQoKY2hhbm5lbF9pZBgBIAEoCVIJY2hhbm5lbElkEjQKB2'
     '1lc3NhZ2UYAiABKAsyGi5tZXNzYWdpbmcuTWVzc2FnZURvY3VtZW50UgdtZXNzYWdlEhkKCHNw'
-    'YWNlX2lkGAMgASgJUgdzcGFjZUlk');
+    'YWNlX2lkGAMgASgJUgdzcGFjZUlkEiAKDHVzZXJfcm9sZV9pZBgEIAEoCVIKdXNlclJvbGVJZA'
+    '==');
 
 @$core.Deprecated('Use sendMessageResponseDescriptor instead')
 const SendMessageResponse$json = {

@@ -28,6 +28,14 @@ enum CollectionsV1 {
     USER_PRESENCE_STATUSES = 18;
     SUBSCRIBED_TOPICS = 19;
     READ_RECEIPTS = 20;
+    // Start of Data Types
+    SET = 21;
+    SORTED_SET = 22;
+    HASH_MAP = 23;
+    LIST = 24;
+    KEY_VALUE = 25;
+    // End of Data Types
+    PINNED_CONVERSATIONS = 26;
 }
 
 enum CollectionCountersV1 {

@@ -100,6 +100,7 @@ const USER_PRESENCE_STATUS$json = {
     {'1': 'LOADING', '2': 7},
     {'1': 'LIVESTREAMING', '2': 8},
     {'1': 'IN_A_CALL', '2': 9},
+    {'1': 'AUTO', '2': 10},
   ],
 };
 
@@ -107,7 +108,7 @@ const USER_PRESENCE_STATUS$json = {
 final $typed_data.Uint8List uSER_PRESENCE_STATUSDescriptor = $convert.base64Decode(
     'ChRVU0VSX1BSRVNFTkNFX1NUQVRVUxIKCgZPTkxJTkUQABILCgdPRkZMSU5FEAESCAoEQVdBWR'
     'ACEggKBEJVU1kQAxINCglJTlZJU0lCTEUQBBIKCgZUWVBJTkcQBRILCgdVTktOT1dOEAYSCwoH'
-    'TE9BRElORxAHEhEKDUxJVkVTVFJFQU1JTkcQCBINCglJTl9BX0NBTEwQCQ==');
+    'TE9BRElORxAHEhEKDUxJVkVTVFJFQU1JTkcQCBINCglJTl9BX0NBTEwQCRIICgRBVVRPEAo=');
 
 @$core.Deprecated('Use sOCIALDescriptor instead')
 const SOCIAL$json = {
@@ -550,6 +551,7 @@ const UserDocument$json = {
     {'1': 'document_status', '3': 10, '4': 1, '5': 14, '6': '.user.DOCUMENT_STATUS', '10': 'documentStatus'},
     {'1': 'feature_flags', '3': 11, '4': 3, '5': 14, '6': '.user.UserFeatureFlags', '10': 'featureFlags'},
     {'1': 'presence_status', '3': 12, '4': 1, '5': 14, '6': '.user.USER_PRESENCE_STATUS', '10': 'presenceStatus'},
+    {'1': 'joined_at', '3': 13, '4': 1, '5': 4, '10': 'joinedAt'},
   ],
   '3': [UserDocument_ForceLightningEffectParameters$json, UserDocument_Metadata$json],
   '4': [UserDocument_UserProfileEffectsV1$json],
@@ -582,6 +584,7 @@ const UserDocument_Metadata$json = {
     {'1': 'effect', '3': 12, '4': 1, '5': 14, '6': '.user.UserDocument.UserProfileEffectsV1', '10': 'effect'},
     {'1': 'effect_parameters', '3': 13, '4': 1, '5': 9, '10': 'effectParameters'},
     {'1': 'effect_parameters_v2', '3': 14, '4': 1, '5': 12, '10': 'effectParametersV2'},
+    {'1': 'social_avatar_url', '3': 15, '4': 1, '5': 9, '10': 'socialAvatarUrl'},
   ],
 };
 
@@ -606,19 +609,21 @@ final $typed_data.Uint8List userDocumentDescriptor = $convert.base64Decode(
     '50X3N0YXR1cxgKIAEoDjIVLnVzZXIuRE9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxI7'
     'Cg1mZWF0dXJlX2ZsYWdzGAsgAygOMhYudXNlci5Vc2VyRmVhdHVyZUZsYWdzUgxmZWF0dXJlRm'
     'xhZ3MSQwoPcHJlc2VuY2Vfc3RhdHVzGAwgASgOMhoudXNlci5VU0VSX1BSRVNFTkNFX1NUQVRV'
-    'U1IOcHJlc2VuY2VTdGF0dXMaWQoeRm9yY2VMaWdodG5pbmdFZmZlY3RQYXJhbWV0ZXJzEhQKBW'
-    'NvbG9yGAEgASgNUgVjb2xvchIhCgxib3JkZXJfd2lkdGgYAiABKAJSC2JvcmRlcldpZHRoGp8E'
-    'CghNZXRhZGF0YRIaCgh1c2VybmFtZRgBIAEoCVIIdXNlcm5hbWUSFAoFZW1haWwYAiABKAlSBW'
-    'VtYWlsEiEKDGRpc3BsYXlfbmFtZRgDIAEoCVILZGlzcGxheU5hbWUSEAoDYmlvGAQgASgJUgNi'
-    'aW8SJAoGc29jaWFsGAUgASgOMgwudXNlci5TT0NJQUxSBnNvY2lhbBIbCglzb2NpYWxfaWQYBi'
-    'ABKAlSCHNvY2lhbElkEigKEGF2YXRhcl9pbWFnZV91cmwYByABKAlSDmF2YXRhckltYWdlVXJs'
-    'EioKEWF2YXRhcl9pbWFnZV9oYXNoGAggASgJUg9hdmF0YXJJbWFnZUhhc2gSKAoQYmFubmVyX2'
-    'ltYWdlX3VybBgJIAEoCVIOYmFubmVySW1hZ2VVcmwSKgoRYmFubmVyX2ltYWdlX2hhc2gYCiAB'
-    'KAlSD2Jhbm5lckltYWdlSGFzaBIdCgp1cGRhdGVkX2F0GAsgASgEUgl1cGRhdGVkQXQSPwoGZW'
-    'ZmZWN0GAwgASgOMicudXNlci5Vc2VyRG9jdW1lbnQuVXNlclByb2ZpbGVFZmZlY3RzVjFSBmVm'
-    'ZmVjdBIrChFlZmZlY3RfcGFyYW1ldGVycxgNIAEoCVIQZWZmZWN0UGFyYW1ldGVycxIwChRlZm'
-    'ZlY3RfcGFyYW1ldGVyc192MhgOIAEoDFISZWZmZWN0UGFyYW1ldGVyc1YyIjUKFFVzZXJQcm9m'
-    'aWxlRWZmZWN0c1YxEggKBE5PTkUQABITCg9GT1JDRV9MSUdIVE5JTkcQAQ==');
+    'U1IOcHJlc2VuY2VTdGF0dXMSGwoJam9pbmVkX2F0GA0gASgEUghqb2luZWRBdBpZCh5Gb3JjZU'
+    'xpZ2h0bmluZ0VmZmVjdFBhcmFtZXRlcnMSFAoFY29sb3IYASABKA1SBWNvbG9yEiEKDGJvcmRl'
+    'cl93aWR0aBgCIAEoAlILYm9yZGVyV2lkdGgaywQKCE1ldGFkYXRhEhoKCHVzZXJuYW1lGAEgAS'
+    'gJUgh1c2VybmFtZRIUCgVlbWFpbBgCIAEoCVIFZW1haWwSIQoMZGlzcGxheV9uYW1lGAMgASgJ'
+    'UgtkaXNwbGF5TmFtZRIQCgNiaW8YBCABKAlSA2JpbxIkCgZzb2NpYWwYBSABKA4yDC51c2VyLl'
+    'NPQ0lBTFIGc29jaWFsEhsKCXNvY2lhbF9pZBgGIAEoCVIIc29jaWFsSWQSKAoQYXZhdGFyX2lt'
+    'YWdlX3VybBgHIAEoCVIOYXZhdGFySW1hZ2VVcmwSKgoRYXZhdGFyX2ltYWdlX2hhc2gYCCABKA'
+    'lSD2F2YXRhckltYWdlSGFzaBIoChBiYW5uZXJfaW1hZ2VfdXJsGAkgASgJUg5iYW5uZXJJbWFn'
+    'ZVVybBIqChFiYW5uZXJfaW1hZ2VfaGFzaBgKIAEoCVIPYmFubmVySW1hZ2VIYXNoEh0KCnVwZG'
+    'F0ZWRfYXQYCyABKARSCXVwZGF0ZWRBdBI/CgZlZmZlY3QYDCABKA4yJy51c2VyLlVzZXJEb2N1'
+    'bWVudC5Vc2VyUHJvZmlsZUVmZmVjdHNWMVIGZWZmZWN0EisKEWVmZmVjdF9wYXJhbWV0ZXJzGA'
+    '0gASgJUhBlZmZlY3RQYXJhbWV0ZXJzEjAKFGVmZmVjdF9wYXJhbWV0ZXJzX3YyGA4gASgMUhJl'
+    'ZmZlY3RQYXJhbWV0ZXJzVjISKgoRc29jaWFsX2F2YXRhcl91cmwYDyABKAlSD3NvY2lhbEF2YX'
+    'RhclVybCI1ChRVc2VyUHJvZmlsZUVmZmVjdHNWMRIICgROT05FEAASEwoPRk9SQ0VfTElHSFRO'
+    'SU5HEAE=');
 
 @$core.Deprecated('Use updateUserMetadataRequestDescriptor instead')
 const UpdateUserMetadataRequest$json = {

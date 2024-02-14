@@ -99,6 +99,36 @@ const SPACE_VISIBILITY$json = {
 final $typed_data.Uint8List sPACE_VISIBILITYDescriptor = $convert.base64Decode(
     'ChBTUEFDRV9WSVNJQklMSVRZEgoKBlBVQkxJQxAAEgsKB1BSSVZBVEUQAQ==');
 
+@$core.Deprecated('Use updateSpaceRolesOrderRequestDescriptor instead')
+const UpdateSpaceRolesOrderRequest$json = {
+  '1': 'UpdateSpaceRolesOrderRequest',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role_ids', '3': 2, '4': 3, '5': 9, '10': 'roleIds'},
+    {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceRolesOrderRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceRolesOrderRequestDescriptor = $convert.base64Decode(
+    'ChxVcGRhdGVTcGFjZVJvbGVzT3JkZXJSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZU'
+    'lkEhkKCHJvbGVfaWRzGAIgAygJUgdyb2xlSWRzEiAKDHVzZXJfcm9sZV9pZBgDIAEoCVIKdXNl'
+    'clJvbGVJZA==');
+
+@$core.Deprecated('Use updateSpaceRolesOrderResponseDescriptor instead')
+const UpdateSpaceRolesOrderResponse$json = {
+  '1': 'UpdateSpaceRolesOrderResponse',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'role_ids', '3': 2, '4': 3, '5': 9, '10': 'roleIds'},
+  ],
+};
+
+/// Descriptor for `UpdateSpaceRolesOrderResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List updateSpaceRolesOrderResponseDescriptor = $convert.base64Decode(
+    'Ch1VcGRhdGVTcGFjZVJvbGVzT3JkZXJSZXNwb25zZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2'
+    'VJZBIZCghyb2xlX2lkcxgCIAMoCVIHcm9sZUlkcw==');
+
 @$core.Deprecated('Use resetSpaceRolesRequestDescriptor instead')
 const ResetSpaceRolesRequest$json = {
   '1': 'ResetSpaceRolesRequest',
@@ -190,6 +220,7 @@ const UpdateSpaceUserStatusRequest$json = {
     {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
     {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.space.UserSpaceStatusDocument', '10': 'status'},
     {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
+    {'1': 'reason', '3': 5, '4': 1, '5': 9, '10': 'reason'},
   ],
 };
 
@@ -197,7 +228,8 @@ const UpdateSpaceUserStatusRequest$json = {
 final $typed_data.Uint8List updateSpaceUserStatusRequestDescriptor = $convert.base64Decode(
     'ChxVcGRhdGVTcGFjZVVzZXJTdGF0dXNSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZU'
     'lkEhAKA3VpZBgCIAEoCVIDdWlkEjYKBnN0YXR1cxgDIAEoCzIeLnNwYWNlLlVzZXJTcGFjZVN0'
-    'YXR1c0RvY3VtZW50UgZzdGF0dXMSIAoMdXNlcl9yb2xlX2lkGAQgASgJUgp1c2VyUm9sZUlk');
+    'YXR1c0RvY3VtZW50UgZzdGF0dXMSIAoMdXNlcl9yb2xlX2lkGAQgASgJUgp1c2VyUm9sZUlkEh'
+    'YKBnJlYXNvbhgFIAEoCVIGcmVhc29u');
 
 @$core.Deprecated('Use updateSpaceUserStatusResponseDescriptor instead')
 const UpdateSpaceUserStatusResponse$json = {
@@ -221,6 +253,7 @@ const UserSpaceStatusDocument$json = {
     {'1': 'expired_at', '3': 2, '4': 1, '5': 4, '10': 'expiredAt'},
     {'1': 'uid', '3': 3, '4': 1, '5': 9, '10': 'uid'},
     {'1': 'updated_at', '3': 4, '4': 1, '5': 4, '10': 'updatedAt'},
+    {'1': 'reason', '3': 5, '4': 1, '5': 9, '10': 'reason'},
   ],
 };
 
@@ -228,7 +261,8 @@ const UserSpaceStatusDocument$json = {
 final $typed_data.Uint8List userSpaceStatusDocumentDescriptor = $convert.base64Decode(
     'ChdVc2VyU3BhY2VTdGF0dXNEb2N1bWVudBIwCgZzdGF0dXMYASABKA4yGC5zcGFjZS5TUEFDRV'
     '9VU0VSX1NUQVRVU1IGc3RhdHVzEh0KCmV4cGlyZWRfYXQYAiABKARSCWV4cGlyZWRBdBIQCgN1'
-    'aWQYAyABKAlSA3VpZBIdCgp1cGRhdGVkX2F0GAQgASgEUgl1cGRhdGVkQXQ=');
+    'aWQYAyABKAlSA3VpZBIdCgp1cGRhdGVkX2F0GAQgASgEUgl1cGRhdGVkQXQSFgoGcmVhc29uGA'
+    'UgASgJUgZyZWFzb24=');
 
 @$core.Deprecated('Use getSpaceUserStatusesListRequestDescriptor instead')
 const GetSpaceUserStatusesListRequest$json = {
@@ -388,14 +422,29 @@ const GetSpaceRolesResponse$json = {
   '1': 'GetSpaceRolesResponse',
   '2': [
     {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
-    {'1': 'roles', '3': 2, '4': 3, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'roles'},
+    {'1': 'roles', '3': 2, '4': 3, '5': 11, '6': '.space.GetSpaceRolesResponse.RolesEntry', '10': 'roles'},
+    {'1': 'role_ids', '3': 3, '4': 3, '5': 9, '10': 'roleIds'},
   ],
+  '3': [GetSpaceRolesResponse_RolesEntry$json],
+};
+
+@$core.Deprecated('Use getSpaceRolesResponseDescriptor instead')
+const GetSpaceRolesResponse_RolesEntry$json = {
+  '1': 'RolesEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 /// Descriptor for `GetSpaceRolesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getSpaceRolesResponseDescriptor = $convert.base64Decode(
-    'ChVHZXRTcGFjZVJvbGVzUmVzcG9uc2USGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSLgoFcm'
-    '9sZXMYAiADKAsyGC5zcGFjZS5TcGFjZVJvbGVEb2N1bWVudFIFcm9sZXM=');
+    'ChVHZXRTcGFjZVJvbGVzUmVzcG9uc2USGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSPQoFcm'
+    '9sZXMYAiADKAsyJy5zcGFjZS5HZXRTcGFjZVJvbGVzUmVzcG9uc2UuUm9sZXNFbnRyeVIFcm9s'
+    'ZXMSGQoIcm9sZV9pZHMYAyADKAlSB3JvbGVJZHMaUgoKUm9sZXNFbnRyeRIQCgNrZXkYASABKA'
+    'lSA2tleRIuCgV2YWx1ZRgCIAEoCzIYLnNwYWNlLlNwYWNlUm9sZURvY3VtZW50UgV2YWx1ZToC'
+    'OAE=');
 
 @$core.Deprecated('Use createSpaceRoleRequestDescriptor instead')
 const CreateSpaceRoleRequest$json = {
@@ -405,6 +454,7 @@ const CreateSpaceRoleRequest$json = {
     {'1': 'role', '3': 2, '4': 1, '5': 11, '6': '.space.SpaceRoleDocument', '10': 'role'},
     {'1': 'user_role_id', '3': 3, '4': 1, '5': 9, '10': 'userRoleId'},
     {'1': 'members', '3': 4, '4': 3, '5': 9, '10': 'members'},
+    {'1': 'role_ids', '3': 5, '4': 3, '5': 9, '10': 'roleIds'},
   ],
 };
 
@@ -412,7 +462,8 @@ const CreateSpaceRoleRequest$json = {
 final $typed_data.Uint8List createSpaceRoleRequestDescriptor = $convert.base64Decode(
     'ChZDcmVhdGVTcGFjZVJvbGVSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZUlkEiwKBH'
     'JvbGUYAiABKAsyGC5zcGFjZS5TcGFjZVJvbGVEb2N1bWVudFIEcm9sZRIgCgx1c2VyX3JvbGVf'
-    'aWQYAyABKAlSCnVzZXJSb2xlSWQSGAoHbWVtYmVycxgEIAMoCVIHbWVtYmVycw==');
+    'aWQYAyABKAlSCnVzZXJSb2xlSWQSGAoHbWVtYmVycxgEIAMoCVIHbWVtYmVycxIZCghyb2xlX2'
+    'lkcxgFIAMoCVIHcm9sZUlkcw==');
 
 @$core.Deprecated('Use createSpaceRoleResponseDescriptor instead')
 const CreateSpaceRoleResponse$json = {

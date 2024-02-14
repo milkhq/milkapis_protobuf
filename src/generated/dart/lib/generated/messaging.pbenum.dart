@@ -263,6 +263,23 @@ class ChannelCategoryDocument_STATUS extends $pb.ProtobufEnum {
   const ChannelCategoryDocument_STATUS._($core.int v, $core.String n) : super(v, n);
 }
 
+class ChannelDocument_Type extends $pb.ProtobufEnum {
+  static const ChannelDocument_Type TEXT = ChannelDocument_Type._(0, _omitEnumNames ? '' : 'TEXT');
+  static const ChannelDocument_Type VOICE = ChannelDocument_Type._(1, _omitEnumNames ? '' : 'VOICE');
+  static const ChannelDocument_Type APP = ChannelDocument_Type._(2, _omitEnumNames ? '' : 'APP');
+
+  static const $core.List<ChannelDocument_Type> values = <ChannelDocument_Type> [
+    TEXT,
+    VOICE,
+    APP,
+  ];
+
+  static final $core.Map<$core.int, ChannelDocument_Type> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ChannelDocument_Type? valueOf($core.int value) => _byValue[value];
+
+  const ChannelDocument_Type._($core.int v, $core.String n) : super(v, n);
+}
+
 class MessageDocument_MESSAGE_TYPE extends $pb.ProtobufEnum {
   static const MessageDocument_MESSAGE_TYPE TEXT = MessageDocument_MESSAGE_TYPE._(0, _omitEnumNames ? '' : 'TEXT');
   static const MessageDocument_MESSAGE_TYPE FILE = MessageDocument_MESSAGE_TYPE._(1, _omitEnumNames ? '' : 'FILE');

@@ -153,6 +153,10 @@ class SpaceClient extends $grpc.Client {
       '/space.Space/ResetSpaceRoles',
       ($3.ResetSpaceRolesRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $3.ResetSpaceRolesResponse.fromBuffer(value));
+  static final _$updateSpaceRolesOrder = $grpc.ClientMethod<$3.UpdateSpaceRolesOrderRequest, $3.UpdateSpaceRolesOrderResponse>(
+      '/space.Space/UpdateSpaceRolesOrder',
+      ($3.UpdateSpaceRolesOrderRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) => $3.UpdateSpaceRolesOrderResponse.fromBuffer(value));
   static final _$getSpaceUserStatusesList = $grpc.ClientMethod<$3.GetSpaceUserStatusesListRequest, $3.GetSpaceUserStatusesListResponse>(
       '/space.Space/GetSpaceUserStatusesList',
       ($3.GetSpaceUserStatusesListRequest value) => value.writeToBuffer(),
@@ -302,6 +306,10 @@ class SpaceClient extends $grpc.Client {
 
   $grpc.ResponseFuture<$3.ResetSpaceRolesResponse> resetSpaceRoles($3.ResetSpaceRolesRequest request, {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$resetSpaceRoles, request, options: options);
+  }
+
+  $grpc.ResponseFuture<$3.UpdateSpaceRolesOrderResponse> updateSpaceRolesOrder($3.UpdateSpaceRolesOrderRequest request, {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateSpaceRolesOrder, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.GetSpaceUserStatusesListResponse> getSpaceUserStatusesList($3.GetSpaceUserStatusesListRequest request, {$grpc.CallOptions? options}) {
@@ -553,6 +561,13 @@ abstract class SpaceServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $3.ResetSpaceRolesRequest.fromBuffer(value),
         ($3.ResetSpaceRolesResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$3.UpdateSpaceRolesOrderRequest, $3.UpdateSpaceRolesOrderResponse>(
+        'UpdateSpaceRolesOrder',
+        updateSpaceRolesOrder_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) => $3.UpdateSpaceRolesOrderRequest.fromBuffer(value),
+        ($3.UpdateSpaceRolesOrderResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$3.GetSpaceUserStatusesListRequest, $3.GetSpaceUserStatusesListResponse>(
         'GetSpaceUserStatusesList',
         getSpaceUserStatusesList_Pre,
@@ -708,6 +723,10 @@ abstract class SpaceServiceBase extends $grpc.Service {
     return resetSpaceRoles(call, await request);
   }
 
+  $async.Future<$3.UpdateSpaceRolesOrderResponse> updateSpaceRolesOrder_Pre($grpc.ServiceCall call, $async.Future<$3.UpdateSpaceRolesOrderRequest> request) async {
+    return updateSpaceRolesOrder(call, await request);
+  }
+
   $async.Future<$3.GetSpaceUserStatusesListResponse> getSpaceUserStatusesList_Pre($grpc.ServiceCall call, $async.Future<$3.GetSpaceUserStatusesListRequest> request) async {
     return getSpaceUserStatusesList(call, await request);
   }
@@ -753,6 +772,7 @@ abstract class SpaceServiceBase extends $grpc.Service {
   $async.Future<$3.GetSpaceRoleMembersResponse> getSpaceRoleMembers($grpc.ServiceCall call, $3.GetSpaceRoleMembersRequest request);
   $async.Future<$3.CreateSpaceRoleIconUploadUrlResponse> createSpaceRoleIconUploadUrl($grpc.ServiceCall call, $3.CreateSpaceRoleIconUploadUrlRequest request);
   $async.Future<$3.ResetSpaceRolesResponse> resetSpaceRoles($grpc.ServiceCall call, $3.ResetSpaceRolesRequest request);
+  $async.Future<$3.UpdateSpaceRolesOrderResponse> updateSpaceRolesOrder($grpc.ServiceCall call, $3.UpdateSpaceRolesOrderRequest request);
   $async.Future<$3.GetSpaceUserStatusesListResponse> getSpaceUserStatusesList($grpc.ServiceCall call, $3.GetSpaceUserStatusesListRequest request);
   $async.Future<$3.UpdateSpaceUserStatusResponse> updateSpaceUserStatus($grpc.ServiceCall call, $3.UpdateSpaceUserStatusRequest request);
   $async.Future<$3.CreateSpaceResponse> createDefaultSpace($grpc.ServiceCall call, $3.CreateSpaceRequest request);

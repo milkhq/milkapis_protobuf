@@ -1522,6 +1522,9 @@ const ChannelDocument_Type$json = {
     {'1': 'TEXT', '2': 0},
     {'1': 'VOICE', '2': 1},
     {'1': 'APP', '2': 2},
+    {'1': 'GAME', '2': 3},
+    {'1': 'STREAM', '2': 4},
+    {'1': 'MEDIA', '2': 5},
   ],
 };
 
@@ -1542,8 +1545,8 @@ final $typed_data.Uint8List channelDocumentDescriptor = $convert.base64Decode(
     'CVILZGVzY3JpcHRpb24SKAoQYXZhdGFyX2ltYWdlX3VybBgDIAEoCVIOYXZhdGFySW1hZ2VVcm'
     'wSKgoRYXZhdGFyX2ltYWdlX2hhc2gYBCABKAlSD2F2YXRhckltYWdlSGFzaBIoChBiYW5uZXJf'
     'aW1hZ2VfdXJsGAUgASgJUg5iYW5uZXJJbWFnZVVybBIqChFiYW5uZXJfaW1hZ2VfaGFzaBgGIA'
-    'EoCVIPYmFubmVySW1hZ2VIYXNoEhAKA3VybBgHIAEoCVIDdXJsIiQKBFR5cGUSCAoEVEVYVBAA'
-    'EgkKBVZPSUNFEAESBwoDQVBQEAI=');
+    'EoCVIPYmFubmVySW1hZ2VIYXNoEhAKA3VybBgHIAEoCVIDdXJsIkUKBFR5cGUSCAoEVEVYVBAA'
+    'EgkKBVZPSUNFEAESBwoDQVBQEAISCAoER0FNRRADEgoKBlNUUkVBTRAEEgkKBU1FRElBEAU=');
 
 @$core.Deprecated('Use messageDocumentDescriptor instead')
 const MessageDocument$json = {

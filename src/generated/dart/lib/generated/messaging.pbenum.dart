@@ -267,11 +267,17 @@ class ChannelDocument_Type extends $pb.ProtobufEnum {
   static const ChannelDocument_Type TEXT = ChannelDocument_Type._(0, _omitEnumNames ? '' : 'TEXT');
   static const ChannelDocument_Type VOICE = ChannelDocument_Type._(1, _omitEnumNames ? '' : 'VOICE');
   static const ChannelDocument_Type APP = ChannelDocument_Type._(2, _omitEnumNames ? '' : 'APP');
+  static const ChannelDocument_Type GAME = ChannelDocument_Type._(3, _omitEnumNames ? '' : 'GAME');
+  static const ChannelDocument_Type STREAM = ChannelDocument_Type._(4, _omitEnumNames ? '' : 'STREAM');
+  static const ChannelDocument_Type MEDIA = ChannelDocument_Type._(5, _omitEnumNames ? '' : 'MEDIA');
 
   static const $core.List<ChannelDocument_Type> values = <ChannelDocument_Type> [
     TEXT,
     VOICE,
     APP,
+    GAME,
+    STREAM,
+    MEDIA,
   ];
 
   static final $core.Map<$core.int, ChannelDocument_Type> _byValue = $pb.ProtobufEnum.initByValue(values);

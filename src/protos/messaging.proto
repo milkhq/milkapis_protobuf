@@ -621,6 +621,9 @@ message ChannelDocument {
         TEXT = 0;
         VOICE = 1;
         APP = 2;
+        GAME = 3;
+        STREAM = 4;
+        MEDIA = 5;
     }
 }
 

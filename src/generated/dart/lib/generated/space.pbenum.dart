@@ -120,5 +120,20 @@ class SPACE_VISIBILITY extends $pb.ProtobufEnum {
   const SPACE_VISIBILITY._($core.int v, $core.String n) : super(v, n);
 }
 
+class SpaceRoleDocument_Decoration_DecorationType extends $pb.ProtobufEnum {
+  static const SpaceRoleDocument_Decoration_DecorationType COLOR = SpaceRoleDocument_Decoration_DecorationType._(0, _omitEnumNames ? '' : 'COLOR');
+  static const SpaceRoleDocument_Decoration_DecorationType GRADIENT = SpaceRoleDocument_Decoration_DecorationType._(1, _omitEnumNames ? '' : 'GRADIENT');
+
+  static const $core.List<SpaceRoleDocument_Decoration_DecorationType> values = <SpaceRoleDocument_Decoration_DecorationType> [
+    COLOR,
+    GRADIENT,
+  ];
+
+  static final $core.Map<$core.int, SpaceRoleDocument_Decoration_DecorationType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SpaceRoleDocument_Decoration_DecorationType? valueOf($core.int value) => _byValue[value];
+
+  const SpaceRoleDocument_Decoration_DecorationType._($core.int v, $core.String n) : super(v, n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

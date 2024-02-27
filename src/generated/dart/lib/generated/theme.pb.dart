@@ -1058,6 +1058,170 @@ class TLinearGradient extends $pb.GeneratedMessage {
   TAlignment ensureEnd() => $_ensure(4);
 }
 
+class TRadialGradient extends $pb.GeneratedMessage {
+  factory TRadialGradient({
+    $core.Iterable<$core.int>? colors,
+    $core.Iterable<$core.double>? stops,
+    $core.int? tileMode,
+    TAlignment? center,
+  }) {
+    final $result = create();
+    if (colors != null) {
+      $result.colors.addAll(colors);
+    }
+    if (stops != null) {
+      $result.stops.addAll(stops);
+    }
+    if (tileMode != null) {
+      $result.tileMode = tileMode;
+    }
+    if (center != null) {
+      $result.center = center;
+    }
+    return $result;
+  }
+  TRadialGradient._() : super();
+  factory TRadialGradient.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TRadialGradient.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TRadialGradient', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..p<$core.int>(1, _omitFieldNames ? '' : 'colors', $pb.PbFieldType.KU3)
+    ..p<$core.double>(2, _omitFieldNames ? '' : 'stops', $pb.PbFieldType.KF)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'tileMode', $pb.PbFieldType.OU3)
+    ..aOM<TAlignment>(4, _omitFieldNames ? '' : 'center', subBuilder: TAlignment.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TRadialGradient clone() => TRadialGradient()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TRadialGradient copyWith(void Function(TRadialGradient) updates) => super.copyWith((message) => updates(message as TRadialGradient)) as TRadialGradient;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TRadialGradient create() => TRadialGradient._();
+  TRadialGradient createEmptyInstance() => create();
+  static $pb.PbList<TRadialGradient> createRepeated() => $pb.PbList<TRadialGradient>();
+  @$core.pragma('dart2js:noInline')
+  static TRadialGradient getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TRadialGradient>(create);
+  static TRadialGradient? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get colors => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.double> get stops => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.int get tileMode => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set tileMode($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTileMode() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTileMode() => clearField(3);
+
+  @$pb.TagNumber(4)
+  TAlignment get center => $_getN(3);
+  @$pb.TagNumber(4)
+  set center(TAlignment v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasCenter() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCenter() => clearField(4);
+  @$pb.TagNumber(4)
+  TAlignment ensureCenter() => $_ensure(3);
+}
+
+class TSweepGradient extends $pb.GeneratedMessage {
+  factory TSweepGradient({
+    $core.Iterable<$core.int>? colors,
+    $core.Iterable<$core.double>? stops,
+    $core.int? tileMode,
+    TAlignment? center,
+  }) {
+    final $result = create();
+    if (colors != null) {
+      $result.colors.addAll(colors);
+    }
+    if (stops != null) {
+      $result.stops.addAll(stops);
+    }
+    if (tileMode != null) {
+      $result.tileMode = tileMode;
+    }
+    if (center != null) {
+      $result.center = center;
+    }
+    return $result;
+  }
+  TSweepGradient._() : super();
+  factory TSweepGradient.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TSweepGradient.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TSweepGradient', package: const $pb.PackageName(_omitMessageNames ? '' : 'theme'), createEmptyInstance: create)
+    ..p<$core.int>(1, _omitFieldNames ? '' : 'colors', $pb.PbFieldType.KU3)
+    ..p<$core.double>(2, _omitFieldNames ? '' : 'stops', $pb.PbFieldType.KF)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'tileMode', $pb.PbFieldType.OU3)
+    ..aOM<TAlignment>(4, _omitFieldNames ? '' : 'center', subBuilder: TAlignment.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TSweepGradient clone() => TSweepGradient()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TSweepGradient copyWith(void Function(TSweepGradient) updates) => super.copyWith((message) => updates(message as TSweepGradient)) as TSweepGradient;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TSweepGradient create() => TSweepGradient._();
+  TSweepGradient createEmptyInstance() => create();
+  static $pb.PbList<TSweepGradient> createRepeated() => $pb.PbList<TSweepGradient>();
+  @$core.pragma('dart2js:noInline')
+  static TSweepGradient getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TSweepGradient>(create);
+  static TSweepGradient? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.List<$core.int> get colors => $_getList(0);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.double> get stops => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.int get tileMode => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set tileMode($core.int v) { $_setUnsignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTileMode() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTileMode() => clearField(3);
+
+  @$pb.TagNumber(4)
+  TAlignment get center => $_getN(3);
+  @$pb.TagNumber(4)
+  set center(TAlignment v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasCenter() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearCenter() => clearField(4);
+  @$pb.TagNumber(4)
+  TAlignment ensureCenter() => $_ensure(3);
+}
+
 class TAlignment extends $pb.GeneratedMessage {
   factory TAlignment({
     $core.double? x,

@@ -1357,6 +1357,123 @@ class GetSpaceRolesRequest extends $pb.GeneratedMessage {
   void clearSpaceId() => clearField(1);
 }
 
+enum SpaceRoleDocument_Decoration_Decoration {
+  color, 
+  linearGradient, 
+  radialGradient, 
+  sweepGradient, 
+  notSet
+}
+
+class SpaceRoleDocument_Decoration extends $pb.GeneratedMessage {
+  factory SpaceRoleDocument_Decoration({
+    $core.int? color,
+    $2.TLinearGradient? linearGradient,
+    $2.TRadialGradient? radialGradient,
+    $2.TSweepGradient? sweepGradient,
+  }) {
+    final $result = create();
+    if (color != null) {
+      $result.color = color;
+    }
+    if (linearGradient != null) {
+      $result.linearGradient = linearGradient;
+    }
+    if (radialGradient != null) {
+      $result.radialGradient = radialGradient;
+    }
+    if (sweepGradient != null) {
+      $result.sweepGradient = sweepGradient;
+    }
+    return $result;
+  }
+  SpaceRoleDocument_Decoration._() : super();
+  factory SpaceRoleDocument_Decoration.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceRoleDocument_Decoration.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, SpaceRoleDocument_Decoration_Decoration> _SpaceRoleDocument_Decoration_DecorationByTag = {
+    1 : SpaceRoleDocument_Decoration_Decoration.color,
+    2 : SpaceRoleDocument_Decoration_Decoration.linearGradient,
+    3 : SpaceRoleDocument_Decoration_Decoration.radialGradient,
+    4 : SpaceRoleDocument_Decoration_Decoration.sweepGradient,
+    0 : SpaceRoleDocument_Decoration_Decoration.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceRoleDocument.Decoration', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
+    ..oo(0, [1, 2, 3, 4])
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OU3)
+    ..aOM<$2.TLinearGradient>(2, _omitFieldNames ? '' : 'linearGradient', subBuilder: $2.TLinearGradient.create)
+    ..aOM<$2.TRadialGradient>(3, _omitFieldNames ? '' : 'radialGradient', subBuilder: $2.TRadialGradient.create)
+    ..aOM<$2.TSweepGradient>(4, _omitFieldNames ? '' : 'sweepGradient', subBuilder: $2.TSweepGradient.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceRoleDocument_Decoration clone() => SpaceRoleDocument_Decoration()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceRoleDocument_Decoration copyWith(void Function(SpaceRoleDocument_Decoration) updates) => super.copyWith((message) => updates(message as SpaceRoleDocument_Decoration)) as SpaceRoleDocument_Decoration;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceRoleDocument_Decoration create() => SpaceRoleDocument_Decoration._();
+  SpaceRoleDocument_Decoration createEmptyInstance() => create();
+  static $pb.PbList<SpaceRoleDocument_Decoration> createRepeated() => $pb.PbList<SpaceRoleDocument_Decoration>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceRoleDocument_Decoration getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceRoleDocument_Decoration>(create);
+  static SpaceRoleDocument_Decoration? _defaultInstance;
+
+  SpaceRoleDocument_Decoration_Decoration whichDecoration() => _SpaceRoleDocument_Decoration_DecorationByTag[$_whichOneof(0)]!;
+  void clearDecoration() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.int get color => $_getIZ(0);
+  @$pb.TagNumber(1)
+  set color($core.int v) { $_setUnsignedInt32(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasColor() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearColor() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $2.TLinearGradient get linearGradient => $_getN(1);
+  @$pb.TagNumber(2)
+  set linearGradient($2.TLinearGradient v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasLinearGradient() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearLinearGradient() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.TLinearGradient ensureLinearGradient() => $_ensure(1);
+
+  @$pb.TagNumber(3)
+  $2.TRadialGradient get radialGradient => $_getN(2);
+  @$pb.TagNumber(3)
+  set radialGradient($2.TRadialGradient v) { setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasRadialGradient() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearRadialGradient() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.TRadialGradient ensureRadialGradient() => $_ensure(2);
+
+  @$pb.TagNumber(4)
+  $2.TSweepGradient get sweepGradient => $_getN(3);
+  @$pb.TagNumber(4)
+  set sweepGradient($2.TSweepGradient v) { setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasSweepGradient() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearSweepGradient() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.TSweepGradient ensureSweepGradient() => $_ensure(3);
+}
+
 class SpaceRoleDocument extends $pb.GeneratedMessage {
   factory SpaceRoleDocument({
     $core.String? documentId,
@@ -1369,6 +1486,7 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
     $core.bool? allowMentions,
     $core.bool? displayAsGroup,
     $core.int? color,
+    SpaceRoleDocument_Decoration? decoration,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -1401,6 +1519,9 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
     if (color != null) {
       $result.color = color;
     }
+    if (decoration != null) {
+      $result.decoration = decoration;
+    }
     return $result;
   }
   SpaceRoleDocument._() : super();
@@ -1418,6 +1539,7 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
     ..aOB(8, _omitFieldNames ? '' : 'allowMentions')
     ..aOB(9, _omitFieldNames ? '' : 'displayAsGroup')
     ..a<$core.int>(10, _omitFieldNames ? '' : 'color', $pb.PbFieldType.OU3)
+    ..aOM<SpaceRoleDocument_Decoration>(11, _omitFieldNames ? '' : 'decoration', subBuilder: SpaceRoleDocument_Decoration.create)
     ..hasRequiredFields = false
   ;
 
@@ -1525,6 +1647,17 @@ class SpaceRoleDocument extends $pb.GeneratedMessage {
   $core.bool hasColor() => $_has(9);
   @$pb.TagNumber(10)
   void clearColor() => clearField(10);
+
+  @$pb.TagNumber(11)
+  SpaceRoleDocument_Decoration get decoration => $_getN(10);
+  @$pb.TagNumber(11)
+  set decoration(SpaceRoleDocument_Decoration v) { setField(11, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasDecoration() => $_has(10);
+  @$pb.TagNumber(11)
+  void clearDecoration() => clearField(11);
+  @$pb.TagNumber(11)
+  SpaceRoleDocument_Decoration ensureDecoration() => $_ensure(10);
 }
 
 class GetSpaceRolesResponse extends $pb.GeneratedMessage {

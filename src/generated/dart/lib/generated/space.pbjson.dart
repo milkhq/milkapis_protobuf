@@ -404,6 +404,32 @@ const SpaceRoleDocument$json = {
     {'1': 'allow_mentions', '3': 8, '4': 1, '5': 8, '10': 'allowMentions'},
     {'1': 'display_as_group', '3': 9, '4': 1, '5': 8, '10': 'displayAsGroup'},
     {'1': 'color', '3': 10, '4': 1, '5': 13, '10': 'color'},
+    {'1': 'decoration', '3': 11, '4': 1, '5': 11, '6': '.space.SpaceRoleDocument.Decoration', '10': 'decoration'},
+  ],
+  '3': [SpaceRoleDocument_Decoration$json],
+};
+
+@$core.Deprecated('Use spaceRoleDocumentDescriptor instead')
+const SpaceRoleDocument_Decoration$json = {
+  '1': 'Decoration',
+  '2': [
+    {'1': 'color', '3': 1, '4': 1, '5': 13, '9': 0, '10': 'color'},
+    {'1': 'linear_gradient', '3': 2, '4': 1, '5': 11, '6': '.theme.TLinearGradient', '9': 0, '10': 'linearGradient'},
+    {'1': 'radial_gradient', '3': 3, '4': 1, '5': 11, '6': '.theme.TRadialGradient', '9': 0, '10': 'radialGradient'},
+    {'1': 'sweep_gradient', '3': 4, '4': 1, '5': 11, '6': '.theme.TSweepGradient', '9': 0, '10': 'sweepGradient'},
+  ],
+  '4': [SpaceRoleDocument_Decoration_DecorationType$json],
+  '8': [
+    {'1': 'decoration'},
+  ],
+};
+
+@$core.Deprecated('Use spaceRoleDocumentDescriptor instead')
+const SpaceRoleDocument_Decoration_DecorationType$json = {
+  '1': 'DecorationType',
+  '2': [
+    {'1': 'COLOR', '2': 0},
+    {'1': 'GRADIENT', '2': 1},
   ],
 };
 
@@ -415,7 +441,14 @@ final $typed_data.Uint8List spaceRoleDocumentDescriptor = $convert.base64Decode(
     'B0aW9uEh0KCnVwZGF0ZWRfYXQYBSABKARSCXVwZGF0ZWRBdBIaCghwcmlvcml0eRgGIAEoDVII'
     'cHJpb3JpdHkSGQoIaWNvbl91cmwYByABKAlSB2ljb25VcmwSJQoOYWxsb3dfbWVudGlvbnMYCC'
     'ABKAhSDWFsbG93TWVudGlvbnMSKAoQZGlzcGxheV9hc19ncm91cBgJIAEoCFIOZGlzcGxheUFz'
-    'R3JvdXASFAoFY29sb3IYCiABKA1SBWNvbG9y');
+    'R3JvdXASFAoFY29sb3IYCiABKA1SBWNvbG9yEkMKCmRlY29yYXRpb24YCyABKAsyIy5zcGFjZS'
+    '5TcGFjZVJvbGVEb2N1bWVudC5EZWNvcmF0aW9uUgpkZWNvcmF0aW9uGqMCCgpEZWNvcmF0aW9u'
+    'EhYKBWNvbG9yGAEgASgNSABSBWNvbG9yEkEKD2xpbmVhcl9ncmFkaWVudBgCIAEoCzIWLnRoZW'
+    '1lLlRMaW5lYXJHcmFkaWVudEgAUg5saW5lYXJHcmFkaWVudBJBCg9yYWRpYWxfZ3JhZGllbnQY'
+    'AyABKAsyFi50aGVtZS5UUmFkaWFsR3JhZGllbnRIAFIOcmFkaWFsR3JhZGllbnQSPgoOc3dlZX'
+    'BfZ3JhZGllbnQYBCABKAsyFS50aGVtZS5UU3dlZXBHcmFkaWVudEgAUg1zd2VlcEdyYWRpZW50'
+    'IikKDkRlY29yYXRpb25UeXBlEgkKBUNPTE9SEAASDAoIR1JBRElFTlQQAUIMCgpkZWNvcmF0aW'
+    '9u');
 
 @$core.Deprecated('Use getSpaceRolesResponseDescriptor instead')
 const GetSpaceRolesResponse$json = {

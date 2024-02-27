@@ -93,6 +93,20 @@ message TLinearGradient {
     TAlignment end = 5;
 }
 
+message TRadialGradient {
+    repeated uint32 colors = 1;
+    repeated float stops = 2;
+    uint32 tile_mode = 3;
+    TAlignment center = 4;
+}
+
+message TSweepGradient {
+    repeated uint32 colors = 1;
+    repeated float stops = 2;
+    uint32 tile_mode = 3;
+    TAlignment center = 4;
+}
+
 message TAlignment {
     float x = 1;
     float y = 2;

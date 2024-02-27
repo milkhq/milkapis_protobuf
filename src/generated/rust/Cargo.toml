@@ -6,21 +6,25 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-prost = "0.12.1"
-tonic-web = "0.10.2"
-tonic-health = "0.10.2"
-tonic-web-wasm-client = "0.5"
+prost = "0.12.3"
+tonic-web = "0.11.0"
+tonic-health = "0.11.0"
+tonic-web-wasm-client = "0.5.1"
 
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]
-tonic = { version = "0.10.2", features = ["tls", "gzip"] }
+tonic = { version = "0.11.0", features = ["tls", "gzip"] }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
-tonic = { version = "0.10.2", default-features = false }
+tonic = { version = "0.11.0", default-features = false, features = [
+    "prost",
+    "codegen",
+    "gzip",
+] }
 
 [target.'cfg(target_arch = "wasm32")'.build-dependencies]
-tonic-build = { version = "0.10.2", default-features = false, features = [
+tonic-build = { version = "0.11.0", default-features = false, features = [
     "prost",
 ] }
 
 [target.'cfg(not(target_arch = "wasm32"))'.build-dependencies]
-tonic-build = "0.10.2"
+tonic-build = "0.11.0"

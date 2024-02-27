@@ -177,6 +177,20 @@ message SpaceRoleDocument {
   bool allow_mentions = 8;
   bool display_as_group = 9;
   uint32 color = 10;
+  message Decoration {
+    oneof decoration {
+      uint32 color = 1;
+      theme.TLinearGradient linear_gradient = 2;
+      theme.TRadialGradient radial_gradient = 3;
+      theme.TSweepGradient sweep_gradient = 4;
+    }
+
+    enum DecorationType {
+      COLOR = 0;
+      GRADIENT = 1;
+    }
+  }
+  Decoration decoration = 11;
 }
 
 message GetSpaceRolesResponse {

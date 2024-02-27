@@ -265,6 +265,40 @@ final $typed_data.Uint8List tLinearGradientDescriptor = $convert.base64Decode(
     'aGVtZS5UQWxpZ25tZW50UgViZWdpbhIjCgNlbmQYBSABKAsyES50aGVtZS5UQWxpZ25tZW50Ug'
     'NlbmQ=');
 
+@$core.Deprecated('Use tRadialGradientDescriptor instead')
+const TRadialGradient$json = {
+  '1': 'TRadialGradient',
+  '2': [
+    {'1': 'colors', '3': 1, '4': 3, '5': 13, '10': 'colors'},
+    {'1': 'stops', '3': 2, '4': 3, '5': 2, '10': 'stops'},
+    {'1': 'tile_mode', '3': 3, '4': 1, '5': 13, '10': 'tileMode'},
+    {'1': 'center', '3': 4, '4': 1, '5': 11, '6': '.theme.TAlignment', '10': 'center'},
+  ],
+};
+
+/// Descriptor for `TRadialGradient`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tRadialGradientDescriptor = $convert.base64Decode(
+    'Cg9UUmFkaWFsR3JhZGllbnQSFgoGY29sb3JzGAEgAygNUgZjb2xvcnMSFAoFc3RvcHMYAiADKA'
+    'JSBXN0b3BzEhsKCXRpbGVfbW9kZRgDIAEoDVIIdGlsZU1vZGUSKQoGY2VudGVyGAQgASgLMhEu'
+    'dGhlbWUuVEFsaWdubWVudFIGY2VudGVy');
+
+@$core.Deprecated('Use tSweepGradientDescriptor instead')
+const TSweepGradient$json = {
+  '1': 'TSweepGradient',
+  '2': [
+    {'1': 'colors', '3': 1, '4': 3, '5': 13, '10': 'colors'},
+    {'1': 'stops', '3': 2, '4': 3, '5': 2, '10': 'stops'},
+    {'1': 'tile_mode', '3': 3, '4': 1, '5': 13, '10': 'tileMode'},
+    {'1': 'center', '3': 4, '4': 1, '5': 11, '6': '.theme.TAlignment', '10': 'center'},
+  ],
+};
+
+/// Descriptor for `TSweepGradient`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tSweepGradientDescriptor = $convert.base64Decode(
+    'Cg5UU3dlZXBHcmFkaWVudBIWCgZjb2xvcnMYASADKA1SBmNvbG9ycxIUCgVzdG9wcxgCIAMoAl'
+    'IFc3RvcHMSGwoJdGlsZV9tb2RlGAMgASgNUgh0aWxlTW9kZRIpCgZjZW50ZXIYBCABKAsyES50'
+    'aGVtZS5UQWxpZ25tZW50UgZjZW50ZXI=');
+
 @$core.Deprecated('Use tAlignmentDescriptor instead')
 const TAlignment$json = {
   '1': 'TAlignment',

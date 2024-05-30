@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2024-05-30
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`milkapis_protobuf` - `v0.0.28`](#milkapis_protobuf---v0028)
+
+---
+
+#### `milkapis_protobuf` - `v0.0.28`
+
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: update user document.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: added reaction for space channel.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: user rights management.
+
+
 ## 2023-12-18
 
 ### Changes

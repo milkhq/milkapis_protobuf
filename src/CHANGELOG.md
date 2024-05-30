@@ -1,3 +1,21 @@
+## 0.0.28
+
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: update user document.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: added reaction for space channel.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: wip.
+ - **FEAT**: user rights management.
+
 ## 0.0.27+1
 
  - **FIX**: user rights.

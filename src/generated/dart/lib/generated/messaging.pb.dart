@@ -2222,6 +2222,7 @@ class DeleteSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
     $core.String? messageId,
     $core.String? threadChannelId,
     $core.String? threadMessageId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -2239,6 +2240,9 @@ class DeleteSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
     if (threadMessageId != null) {
       $result.threadMessageId = threadMessageId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   DeleteSpaceChannelThreadMessageRequest._() : super();
@@ -2251,6 +2255,7 @@ class DeleteSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
     ..aOS(3, _omitFieldNames ? '' : 'messageId')
     ..aOS(4, _omitFieldNames ? '' : 'threadChannelId')
     ..aOS(5, _omitFieldNames ? '' : 'threadMessageId')
+    ..aOS(6, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -2319,6 +2324,15 @@ class DeleteSpaceChannelThreadMessageRequest extends $pb.GeneratedMessage {
   $core.bool hasThreadMessageId() => $_has(4);
   @$pb.TagNumber(5)
   void clearThreadMessageId() => clearField(5);
+
+  @$pb.TagNumber(6)
+  $core.String get userRoleId => $_getSZ(5);
+  @$pb.TagNumber(6)
+  set userRoleId($core.String v) { $_setString(5, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasUserRoleId() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearUserRoleId() => clearField(6);
 }
 
 class DeleteSpaceChannelThreadMessageResponse extends $pb.GeneratedMessage {
@@ -5470,6 +5484,7 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
     $core.String? bannerImageUrl,
     $core.String? bannerImageHash,
     $core.String? url,
+    BlockchainType? blockchainType,
   }) {
     final $result = create();
     if (name != null) {
@@ -5493,6 +5508,9 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
     if (url != null) {
       $result.url = url;
     }
+    if (blockchainType != null) {
+      $result.blockchainType = blockchainType;
+    }
     return $result;
   }
   ChannelDocument_Metadata._() : super();
@@ -5507,6 +5525,7 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
     ..aOS(5, _omitFieldNames ? '' : 'bannerImageUrl')
     ..aOS(6, _omitFieldNames ? '' : 'bannerImageHash')
     ..aOS(7, _omitFieldNames ? '' : 'url')
+    ..e<BlockchainType>(8, _omitFieldNames ? '' : 'blockchainType', $pb.PbFieldType.OE, defaultOrMaker: BlockchainType.CHAIN_ETHEREUM, valueOf: BlockchainType.valueOf, enumValues: BlockchainType.values)
     ..hasRequiredFields = false
   ;
 
@@ -5593,6 +5612,15 @@ class ChannelDocument_Metadata extends $pb.GeneratedMessage {
   $core.bool hasUrl() => $_has(6);
   @$pb.TagNumber(7)
   void clearUrl() => clearField(7);
+
+  @$pb.TagNumber(8)
+  BlockchainType get blockchainType => $_getN(7);
+  @$pb.TagNumber(8)
+  set blockchainType(BlockchainType v) { setField(8, v); }
+  @$pb.TagNumber(8)
+  $core.bool hasBlockchainType() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearBlockchainType() => clearField(8);
 }
 
 class ChannelDocument extends $pb.GeneratedMessage {
@@ -5611,6 +5639,8 @@ class ChannelDocument extends $pb.GeneratedMessage {
     DOCUMENT_STATUS? documentStatus,
     $core.String? createdBy,
     ChannelDocument_Type? type,
+    $core.Iterable<$core.String>? allowedRoles,
+    $core.Iterable<$core.String>? allowedUsers,
   }) {
     final $result = create();
     if (documentId != null) {
@@ -5655,6 +5685,12 @@ class ChannelDocument extends $pb.GeneratedMessage {
     if (type != null) {
       $result.type = type;
     }
+    if (allowedRoles != null) {
+      $result.allowedRoles.addAll(allowedRoles);
+    }
+    if (allowedUsers != null) {
+      $result.allowedUsers.addAll(allowedUsers);
+    }
     return $result;
   }
   ChannelDocument._() : super();
@@ -5676,6 +5712,8 @@ class ChannelDocument extends $pb.GeneratedMessage {
     ..e<DOCUMENT_STATUS>(12, _omitFieldNames ? '' : 'documentStatus', $pb.PbFieldType.OE, defaultOrMaker: DOCUMENT_STATUS.PENDING, valueOf: DOCUMENT_STATUS.valueOf, enumValues: DOCUMENT_STATUS.values)
     ..aOS(13, _omitFieldNames ? '' : 'createdBy')
     ..e<ChannelDocument_Type>(14, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: ChannelDocument_Type.TEXT, valueOf: ChannelDocument_Type.valueOf, enumValues: ChannelDocument_Type.values)
+    ..pPS(15, _omitFieldNames ? '' : 'allowedRoles')
+    ..pPS(16, _omitFieldNames ? '' : 'allowedUsers')
     ..hasRequiredFields = false
   ;
 
@@ -5821,6 +5859,12 @@ class ChannelDocument extends $pb.GeneratedMessage {
   $core.bool hasType() => $_has(13);
   @$pb.TagNumber(14)
   void clearType() => clearField(14);
+
+  @$pb.TagNumber(15)
+  $core.List<$core.String> get allowedRoles => $_getList(14);
+
+  @$pb.TagNumber(16)
+  $core.List<$core.String> get allowedUsers => $_getList(15);
 }
 
 class MessageDocument_FileMetadata extends $pb.GeneratedMessage {
@@ -7873,6 +7917,7 @@ class DeleteSpaceChannelMessageRequest extends $pb.GeneratedMessage {
     $core.String? channelId,
     $core.String? messageId,
     $core.String? spaceId,
+    $core.String? userRoleId,
   }) {
     final $result = create();
     if (channelId != null) {
@@ -7884,6 +7929,9 @@ class DeleteSpaceChannelMessageRequest extends $pb.GeneratedMessage {
     if (spaceId != null) {
       $result.spaceId = spaceId;
     }
+    if (userRoleId != null) {
+      $result.userRoleId = userRoleId;
+    }
     return $result;
   }
   DeleteSpaceChannelMessageRequest._() : super();
@@ -7894,6 +7942,7 @@ class DeleteSpaceChannelMessageRequest extends $pb.GeneratedMessage {
     ..aOS(1, _omitFieldNames ? '' : 'channelId')
     ..aOS(2, _omitFieldNames ? '' : 'messageId')
     ..aOS(3, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
     ..hasRequiredFields = false
   ;
 
@@ -7944,6 +7993,15 @@ class DeleteSpaceChannelMessageRequest extends $pb.GeneratedMessage {
   $core.bool hasSpaceId() => $_has(2);
   @$pb.TagNumber(3)
   void clearSpaceId() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.String get userRoleId => $_getSZ(3);
+  @$pb.TagNumber(4)
+  set userRoleId($core.String v) { $_setString(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasUserRoleId() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearUserRoleId() => clearField(4);
 }
 
 class DeleteSpaceChannelMessageResponse extends $pb.GeneratedMessage {

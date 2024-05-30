@@ -60,6 +60,92 @@ class ContentScreenState extends $pb.ProtobufEnum {
   const ContentScreenState._($core.int v, $core.String n) : super(v, n);
 }
 
+class LeftPanelState extends $pb.ProtobufEnum {
+  static const LeftPanelState NONE = LeftPanelState._(0, _omitEnumNames ? '' : 'NONE');
+  static const LeftPanelState THEME_EDITOR = LeftPanelState._(1, _omitEnumNames ? '' : 'THEME_EDITOR');
+  static const LeftPanelState SETTINGS = LeftPanelState._(2, _omitEnumNames ? '' : 'SETTINGS');
+
+  static const $core.List<LeftPanelState> values = <LeftPanelState> [
+    NONE,
+    THEME_EDITOR,
+    SETTINGS,
+  ];
+
+  static final $core.Map<$core.int, LeftPanelState> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static LeftPanelState? valueOf($core.int value) => _byValue[value];
+
+  const LeftPanelState._($core.int v, $core.String n) : super(v, n);
+}
+
+class DocumentLoadState extends $pb.ProtobufEnum {
+  static const DocumentLoadState DOCUMENT_NONE = DocumentLoadState._(0, _omitEnumNames ? '' : 'DOCUMENT_NONE');
+  static const DocumentLoadState DOCUMENT_LOADING = DocumentLoadState._(1, _omitEnumNames ? '' : 'DOCUMENT_LOADING');
+  static const DocumentLoadState DOCUMENT_RESUMED = DocumentLoadState._(2, _omitEnumNames ? '' : 'DOCUMENT_RESUMED');
+  static const DocumentLoadState DOCUMENT_LOADED = DocumentLoadState._(3, _omitEnumNames ? '' : 'DOCUMENT_LOADED');
+  static const DocumentLoadState DOCUMENT_LOADING_FAILED = DocumentLoadState._(4, _omitEnumNames ? '' : 'DOCUMENT_LOADING_FAILED');
+  static const DocumentLoadState DOCUMENT_RESUMING = DocumentLoadState._(5, _omitEnumNames ? '' : 'DOCUMENT_RESUMING');
+
+  static const $core.List<DocumentLoadState> values = <DocumentLoadState> [
+    DOCUMENT_NONE,
+    DOCUMENT_LOADING,
+    DOCUMENT_RESUMED,
+    DOCUMENT_LOADED,
+    DOCUMENT_LOADING_FAILED,
+    DOCUMENT_RESUMING,
+  ];
+
+  static final $core.Map<$core.int, DocumentLoadState> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DocumentLoadState? valueOf($core.int value) => _byValue[value];
+
+  const DocumentLoadState._($core.int v, $core.String n) : super(v, n);
+}
+
+class ResourceStatus extends $pb.ProtobufEnum {
+  static const ResourceStatus CREATED = ResourceStatus._(0, _omitEnumNames ? '' : 'CREATED');
+  static const ResourceStatus CREATING = ResourceStatus._(1, _omitEnumNames ? '' : 'CREATING');
+  static const ResourceStatus UPDATING = ResourceStatus._(2, _omitEnumNames ? '' : 'UPDATING');
+  static const ResourceStatus UPDATED = ResourceStatus._(3, _omitEnumNames ? '' : 'UPDATED');
+  static const ResourceStatus DELETING = ResourceStatus._(4, _omitEnumNames ? '' : 'DELETING');
+  static const ResourceStatus DELETED = ResourceStatus._(5, _omitEnumNames ? '' : 'DELETED');
+
+  static const $core.List<ResourceStatus> values = <ResourceStatus> [
+    CREATED,
+    CREATING,
+    UPDATING,
+    UPDATED,
+    DELETING,
+    DELETED,
+  ];
+
+  static final $core.Map<$core.int, ResourceStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ResourceStatus? valueOf($core.int value) => _byValue[value];
+
+  const ResourceStatus._($core.int v, $core.String n) : super(v, n);
+}
+
+class ListItemStatus extends $pb.ProtobufEnum {
+  static const ListItemStatus TO_BE_INSERTED = ListItemStatus._(0, _omitEnumNames ? '' : 'TO_BE_INSERTED');
+  static const ListItemStatus WAS_INSERTED = ListItemStatus._(1, _omitEnumNames ? '' : 'WAS_INSERTED');
+  static const ListItemStatus TO_BE_UPDATED = ListItemStatus._(2, _omitEnumNames ? '' : 'TO_BE_UPDATED');
+  static const ListItemStatus WAS_UPDATED = ListItemStatus._(3, _omitEnumNames ? '' : 'WAS_UPDATED');
+  static const ListItemStatus TO_BE_DELETED = ListItemStatus._(4, _omitEnumNames ? '' : 'TO_BE_DELETED');
+  static const ListItemStatus WAS_DELETED = ListItemStatus._(5, _omitEnumNames ? '' : 'WAS_DELETED');
+
+  static const $core.List<ListItemStatus> values = <ListItemStatus> [
+    TO_BE_INSERTED,
+    WAS_INSERTED,
+    TO_BE_UPDATED,
+    WAS_UPDATED,
+    TO_BE_DELETED,
+    WAS_DELETED,
+  ];
+
+  static final $core.Map<$core.int, ListItemStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ListItemStatus? valueOf($core.int value) => _byValue[value];
+
+  const ListItemStatus._($core.int v, $core.String n) : super(v, n);
+}
+
 class TextFieldInputMode extends $pb.ProtobufEnum {
   static const TextFieldInputMode DEFAULT = TextFieldInputMode._(0, _omitEnumNames ? '' : 'DEFAULT');
   static const TextFieldInputMode REPLY = TextFieldInputMode._(1, _omitEnumNames ? '' : 'REPLY');
@@ -122,21 +208,46 @@ class Task_Status extends $pb.ProtobufEnum {
   const Task_Status._($core.int v, $core.String n) : super(v, n);
 }
 
-class SessionState_SpaceSetting_NotificationSetting extends $pb.ProtobufEnum {
-  static const SessionState_SpaceSetting_NotificationSetting NONE = SessionState_SpaceSetting_NotificationSetting._(0, _omitEnumNames ? '' : 'NONE');
-  static const SessionState_SpaceSetting_NotificationSetting MENTIONS = SessionState_SpaceSetting_NotificationSetting._(1, _omitEnumNames ? '' : 'MENTIONS');
-  static const SessionState_SpaceSetting_NotificationSetting ALL = SessionState_SpaceSetting_NotificationSetting._(2, _omitEnumNames ? '' : 'ALL');
+class SessionState_NotificationSetting extends $pb.ProtobufEnum {
+  static const SessionState_NotificationSetting NONE = SessionState_NotificationSetting._(0, _omitEnumNames ? '' : 'NONE');
+  static const SessionState_NotificationSetting MENTIONS = SessionState_NotificationSetting._(1, _omitEnumNames ? '' : 'MENTIONS');
+  static const SessionState_NotificationSetting ALL = SessionState_NotificationSetting._(2, _omitEnumNames ? '' : 'ALL');
 
-  static const $core.List<SessionState_SpaceSetting_NotificationSetting> values = <SessionState_SpaceSetting_NotificationSetting> [
+  static const $core.List<SessionState_NotificationSetting> values = <SessionState_NotificationSetting> [
     NONE,
     MENTIONS,
     ALL,
   ];
 
-  static final $core.Map<$core.int, SessionState_SpaceSetting_NotificationSetting> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static SessionState_SpaceSetting_NotificationSetting? valueOf($core.int value) => _byValue[value];
+  static final $core.Map<$core.int, SessionState_NotificationSetting> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SessionState_NotificationSetting? valueOf($core.int value) => _byValue[value];
 
-  const SessionState_SpaceSetting_NotificationSetting._($core.int v, $core.String n) : super(v, n);
+  const SessionState_NotificationSetting._($core.int v, $core.String n) : super(v, n);
+}
+
+class SessionState_MutedSetting extends $pb.ProtobufEnum {
+  static const SessionState_MutedSetting UNMUTED = SessionState_MutedSetting._(0, _omitEnumNames ? '' : 'UNMUTED');
+  static const SessionState_MutedSetting FIFTEEN_MINUTES = SessionState_MutedSetting._(1, _omitEnumNames ? '' : 'FIFTEEN_MINUTES');
+  static const SessionState_MutedSetting ONE_HOUR = SessionState_MutedSetting._(2, _omitEnumNames ? '' : 'ONE_HOUR');
+  static const SessionState_MutedSetting THREE_HOURS = SessionState_MutedSetting._(3, _omitEnumNames ? '' : 'THREE_HOURS');
+  static const SessionState_MutedSetting EIGHT_HOURS = SessionState_MutedSetting._(4, _omitEnumNames ? '' : 'EIGHT_HOURS');
+  static const SessionState_MutedSetting TWENTY_FOUR_HOURS = SessionState_MutedSetting._(5, _omitEnumNames ? '' : 'TWENTY_FOUR_HOURS');
+  static const SessionState_MutedSetting UNTIL_UNMUTED = SessionState_MutedSetting._(6, _omitEnumNames ? '' : 'UNTIL_UNMUTED');
+
+  static const $core.List<SessionState_MutedSetting> values = <SessionState_MutedSetting> [
+    UNMUTED,
+    FIFTEEN_MINUTES,
+    ONE_HOUR,
+    THREE_HOURS,
+    EIGHT_HOURS,
+    TWENTY_FOUR_HOURS,
+    UNTIL_UNMUTED,
+  ];
+
+  static final $core.Map<$core.int, SessionState_MutedSetting> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static SessionState_MutedSetting? valueOf($core.int value) => _byValue[value];
+
+  const SessionState_MutedSetting._($core.int v, $core.String n) : super(v, n);
 }
 
 class CustomTextNode_Type extends $pb.ProtobufEnum {

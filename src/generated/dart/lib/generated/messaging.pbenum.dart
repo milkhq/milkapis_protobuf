@@ -115,6 +115,56 @@ class CHANNEL_CAPABILITY extends $pb.ProtobufEnum {
   const CHANNEL_CAPABILITY._($core.int v, $core.String n) : super(v, n);
 }
 
+class BlockchainType extends $pb.ProtobufEnum {
+  static const BlockchainType CHAIN_ETHEREUM = BlockchainType._(0, _omitEnumNames ? '' : 'CHAIN_ETHEREUM');
+  static const BlockchainType CHAIN_OPTIMISM = BlockchainType._(1, _omitEnumNames ? '' : 'CHAIN_OPTIMISM');
+  static const BlockchainType CHAIN_IMMUTABLE_X = BlockchainType._(2, _omitEnumNames ? '' : 'CHAIN_IMMUTABLE_X');
+  static const BlockchainType CHAIN_AVALANCHE = BlockchainType._(3, _omitEnumNames ? '' : 'CHAIN_AVALANCHE');
+  static const BlockchainType CHAIN_BASE = BlockchainType._(4, _omitEnumNames ? '' : 'CHAIN_BASE');
+  static const BlockchainType CHAIN_NOBLE = BlockchainType._(5, _omitEnumNames ? '' : 'CHAIN_NOBLE');
+
+  static const $core.List<BlockchainType> values = <BlockchainType> [
+    CHAIN_ETHEREUM,
+    CHAIN_OPTIMISM,
+    CHAIN_IMMUTABLE_X,
+    CHAIN_AVALANCHE,
+    CHAIN_BASE,
+    CHAIN_NOBLE,
+  ];
+
+  static final $core.Map<$core.int, BlockchainType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static BlockchainType? valueOf($core.int value) => _byValue[value];
+
+  const BlockchainType._($core.int v, $core.String n) : super(v, n);
+}
+
+class CurrencyType extends $pb.ProtobufEnum {
+  static const CurrencyType CURRENCY_USD = CurrencyType._(0, _omitEnumNames ? '' : 'CURRENCY_USD');
+  static const CurrencyType CURRENCY_ETH = CurrencyType._(1, _omitEnumNames ? '' : 'CURRENCY_ETH');
+  static const CurrencyType CURRENCY_BASE = CurrencyType._(2, _omitEnumNames ? '' : 'CURRENCY_BASE');
+  static const CurrencyType CURRENCY_OPTIMISM = CurrencyType._(3, _omitEnumNames ? '' : 'CURRENCY_OPTIMISM');
+  static const CurrencyType CURRENCY_IMMUTABLE_X = CurrencyType._(4, _omitEnumNames ? '' : 'CURRENCY_IMMUTABLE_X');
+  static const CurrencyType CURRENCY_AVALANCHE = CurrencyType._(5, _omitEnumNames ? '' : 'CURRENCY_AVALANCHE');
+  static const CurrencyType CURRENCY_USDC = CurrencyType._(6, _omitEnumNames ? '' : 'CURRENCY_USDC');
+  static const CurrencyType CURRENCY_WBTC = CurrencyType._(7, _omitEnumNames ? '' : 'CURRENCY_WBTC');
+
+  static const $core.List<CurrencyType> values = <CurrencyType> [
+    CURRENCY_USD,
+    CURRENCY_ETH,
+    CURRENCY_BASE,
+    CURRENCY_OPTIMISM,
+    CURRENCY_IMMUTABLE_X,
+    CURRENCY_AVALANCHE,
+    CURRENCY_USDC,
+    CURRENCY_WBTC,
+  ];
+
+  static final $core.Map<$core.int, CurrencyType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static CurrencyType? valueOf($core.int value) => _byValue[value];
+
+  const CurrencyType._($core.int v, $core.String n) : super(v, n);
+}
+
 class CHANNEL_PERMISSION extends $pb.ProtobufEnum {
   static const CHANNEL_PERMISSION administrator = CHANNEL_PERMISSION._(0, _omitEnumNames ? '' : 'administrator');
   static const CHANNEL_PERMISSION view_public_channels = CHANNEL_PERMISSION._(1, _omitEnumNames ? '' : 'view_public_channels');
@@ -270,6 +320,7 @@ class ChannelDocument_Type extends $pb.ProtobufEnum {
   static const ChannelDocument_Type GAME = ChannelDocument_Type._(3, _omitEnumNames ? '' : 'GAME');
   static const ChannelDocument_Type STREAM = ChannelDocument_Type._(4, _omitEnumNames ? '' : 'STREAM');
   static const ChannelDocument_Type MEDIA = ChannelDocument_Type._(5, _omitEnumNames ? '' : 'MEDIA');
+  static const ChannelDocument_Type DAPP = ChannelDocument_Type._(6, _omitEnumNames ? '' : 'DAPP');
 
   static const $core.List<ChannelDocument_Type> values = <ChannelDocument_Type> [
     TEXT,
@@ -278,6 +329,7 @@ class ChannelDocument_Type extends $pb.ProtobufEnum {
     GAME,
     STREAM,
     MEDIA,
+    DAPP,
   ];
 
   static final $core.Map<$core.int, ChannelDocument_Type> _byValue = $pb.ProtobufEnum.initByValue(values);

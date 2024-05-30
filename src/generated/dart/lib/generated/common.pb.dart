@@ -1298,6 +1298,365 @@ class ConversationReadReceiptUpdate extends $pb.GeneratedMessage {
   void clearStatus() => clearField(3);
 }
 
+class SpaceMemberStatusUpdate extends $pb.GeneratedMessage {
+  factory SpaceMemberStatusUpdate({
+    $core.String? spaceId,
+    $3.UserSpaceStatusDocument? status,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    return $result;
+  }
+  SpaceMemberStatusUpdate._() : super();
+  factory SpaceMemberStatusUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceMemberStatusUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceMemberStatusUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOM<$3.UserSpaceStatusDocument>(2, _omitFieldNames ? '' : 'status', subBuilder: $3.UserSpaceStatusDocument.create)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceMemberStatusUpdate clone() => SpaceMemberStatusUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceMemberStatusUpdate copyWith(void Function(SpaceMemberStatusUpdate) updates) => super.copyWith((message) => updates(message as SpaceMemberStatusUpdate)) as SpaceMemberStatusUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceMemberStatusUpdate create() => SpaceMemberStatusUpdate._();
+  SpaceMemberStatusUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceMemberStatusUpdate> createRepeated() => $pb.PbList<SpaceMemberStatusUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceMemberStatusUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceMemberStatusUpdate>(create);
+  static SpaceMemberStatusUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $3.UserSpaceStatusDocument get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status($3.UserSpaceStatusDocument v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.UserSpaceStatusDocument ensureStatus() => $_ensure(1);
+}
+
+class SpaceMembersUpdate extends $pb.GeneratedMessage {
+  factory SpaceMembersUpdate({
+    $core.String? spaceId,
+    $core.Iterable<$core.String>? addedMembers,
+    $core.Iterable<$core.String>? removedMembers,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (addedMembers != null) {
+      $result.addedMembers.addAll(addedMembers);
+    }
+    if (removedMembers != null) {
+      $result.removedMembers.addAll(removedMembers);
+    }
+    return $result;
+  }
+  SpaceMembersUpdate._() : super();
+  factory SpaceMembersUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceMembersUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceMembersUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..pPS(2, _omitFieldNames ? '' : 'addedMembers')
+    ..pPS(3, _omitFieldNames ? '' : 'removedMembers')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceMembersUpdate clone() => SpaceMembersUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceMembersUpdate copyWith(void Function(SpaceMembersUpdate) updates) => super.copyWith((message) => updates(message as SpaceMembersUpdate)) as SpaceMembersUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceMembersUpdate create() => SpaceMembersUpdate._();
+  SpaceMembersUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceMembersUpdate> createRepeated() => $pb.PbList<SpaceMembersUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceMembersUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceMembersUpdate>(create);
+  static SpaceMembersUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get addedMembers => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get removedMembers => $_getList(2);
+}
+
+/// USER_SPACES_SORTED_SET_UPDATED
+class UserSpacesSortedSetUpdate extends $pb.GeneratedMessage {
+  factory UserSpacesSortedSetUpdate({
+    $core.String? userId,
+    $core.Iterable<$core.String>? addedSpaces,
+    $core.Iterable<$core.String>? removedSpaces,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (addedSpaces != null) {
+      $result.addedSpaces.addAll(addedSpaces);
+    }
+    if (removedSpaces != null) {
+      $result.removedSpaces.addAll(removedSpaces);
+    }
+    return $result;
+  }
+  UserSpacesSortedSetUpdate._() : super();
+  factory UserSpacesSortedSetUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory UserSpacesSortedSetUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSpacesSortedSetUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..pPS(2, _omitFieldNames ? '' : 'addedSpaces')
+    ..pPS(3, _omitFieldNames ? '' : 'removedSpaces')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  UserSpacesSortedSetUpdate clone() => UserSpacesSortedSetUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  UserSpacesSortedSetUpdate copyWith(void Function(UserSpacesSortedSetUpdate) updates) => super.copyWith((message) => updates(message as UserSpacesSortedSetUpdate)) as UserSpacesSortedSetUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static UserSpacesSortedSetUpdate create() => UserSpacesSortedSetUpdate._();
+  UserSpacesSortedSetUpdate createEmptyInstance() => create();
+  static $pb.PbList<UserSpacesSortedSetUpdate> createRepeated() => $pb.PbList<UserSpacesSortedSetUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static UserSpacesSortedSetUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<UserSpacesSortedSetUpdate>(create);
+  static UserSpacesSortedSetUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.List<$core.String> get addedSpaces => $_getList(1);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get removedSpaces => $_getList(2);
+}
+
+/// SPACE_USER_ROLE_MEMBERS_SET_UPDATED
+class SpaceUserRoleMembersSetUpdate extends $pb.GeneratedMessage {
+  factory SpaceUserRoleMembersSetUpdate({
+    $core.String? spaceId,
+    $core.String? userId,
+    $core.Iterable<$core.String>? addedRoles,
+    $core.Iterable<$core.String>? removedRoles,
+  }) {
+    final $result = create();
+    if (spaceId != null) {
+      $result.spaceId = spaceId;
+    }
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (addedRoles != null) {
+      $result.addedRoles.addAll(addedRoles);
+    }
+    if (removedRoles != null) {
+      $result.removedRoles.addAll(removedRoles);
+    }
+    return $result;
+  }
+  SpaceUserRoleMembersSetUpdate._() : super();
+  factory SpaceUserRoleMembersSetUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory SpaceUserRoleMembersSetUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SpaceUserRoleMembersSetUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'spaceId')
+    ..aOS(2, _omitFieldNames ? '' : 'userId')
+    ..pPS(3, _omitFieldNames ? '' : 'addedRoles')
+    ..pPS(4, _omitFieldNames ? '' : 'removedRoles')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  SpaceUserRoleMembersSetUpdate clone() => SpaceUserRoleMembersSetUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  SpaceUserRoleMembersSetUpdate copyWith(void Function(SpaceUserRoleMembersSetUpdate) updates) => super.copyWith((message) => updates(message as SpaceUserRoleMembersSetUpdate)) as SpaceUserRoleMembersSetUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SpaceUserRoleMembersSetUpdate create() => SpaceUserRoleMembersSetUpdate._();
+  SpaceUserRoleMembersSetUpdate createEmptyInstance() => create();
+  static $pb.PbList<SpaceUserRoleMembersSetUpdate> createRepeated() => $pb.PbList<SpaceUserRoleMembersSetUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static SpaceUserRoleMembersSetUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<SpaceUserRoleMembersSetUpdate>(create);
+  static SpaceUserRoleMembersSetUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get spaceId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set spaceId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasSpaceId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearSpaceId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.String get userId => $_getSZ(1);
+  @$pb.TagNumber(2)
+  set userId($core.String v) { $_setString(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUserId() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUserId() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.List<$core.String> get addedRoles => $_getList(2);
+
+  @$pb.TagNumber(4)
+  $core.List<$core.String> get removedRoles => $_getList(3);
+}
+
+/// CONNECTION_STATUS_UPDATED
+class ConnectionStatusUpdate extends $pb.GeneratedMessage {
+  factory ConnectionStatusUpdate({
+    $core.String? userId,
+    ConnectionStatusUpdate_ConnectionStatus? status,
+    $core.String? message,
+  }) {
+    final $result = create();
+    if (userId != null) {
+      $result.userId = userId;
+    }
+    if (status != null) {
+      $result.status = status;
+    }
+    if (message != null) {
+      $result.message = message;
+    }
+    return $result;
+  }
+  ConnectionStatusUpdate._() : super();
+  factory ConnectionStatusUpdate.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory ConnectionStatusUpdate.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'ConnectionStatusUpdate', package: const $pb.PackageName(_omitMessageNames ? '' : 'common'), createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'userId')
+    ..e<ConnectionStatusUpdate_ConnectionStatus>(2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: ConnectionStatusUpdate_ConnectionStatus.IDLE, valueOf: ConnectionStatusUpdate_ConnectionStatus.valueOf, enumValues: ConnectionStatusUpdate_ConnectionStatus.values)
+    ..aOS(3, _omitFieldNames ? '' : 'message')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  ConnectionStatusUpdate clone() => ConnectionStatusUpdate()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  ConnectionStatusUpdate copyWith(void Function(ConnectionStatusUpdate) updates) => super.copyWith((message) => updates(message as ConnectionStatusUpdate)) as ConnectionStatusUpdate;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static ConnectionStatusUpdate create() => ConnectionStatusUpdate._();
+  ConnectionStatusUpdate createEmptyInstance() => create();
+  static $pb.PbList<ConnectionStatusUpdate> createRepeated() => $pb.PbList<ConnectionStatusUpdate>();
+  @$core.pragma('dart2js:noInline')
+  static ConnectionStatusUpdate getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConnectionStatusUpdate>(create);
+  static ConnectionStatusUpdate? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.String get userId => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set userId($core.String v) { $_setString(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasUserId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearUserId() => clearField(1);
+
+  @$pb.TagNumber(2)
+  ConnectionStatusUpdate_ConnectionStatus get status => $_getN(1);
+  @$pb.TagNumber(2)
+  set status(ConnectionStatusUpdate_ConnectionStatus v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearStatus() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.String get message => $_getSZ(2);
+  @$pb.TagNumber(3)
+  set message($core.String v) { $_setString(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasMessage() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearMessage() => clearField(3);
+}
+
 
 const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
 const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

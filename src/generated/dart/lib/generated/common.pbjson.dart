@@ -168,6 +168,11 @@ const EVENT_TYPE$json = {
     {'1': 'SPACE_CHANNEL_UPDATED', '2': 41},
     {'1': 'SPACE_CHANNEL_CATEGORY_UPDATED', '2': 42},
     {'1': 'CONVERSATION_READ_RECEIPT_UPDATED', '2': 43},
+    {'1': 'SPACE_MEMBER_STATUS_UPDATED', '2': 44},
+    {'1': 'SPACE_MEMBERS_UPDATED', '2': 45},
+    {'1': 'USER_SPACES_SORTED_SET_UPDATED', '2': 46},
+    {'1': 'SPACE_USER_ROLE_MEMBERS_SET_UPDATED', '2': 47},
+    {'1': 'CONNECTION_STATUS_UPDATED', '2': 48},
   ],
 };
 
@@ -201,7 +206,10 @@ final $typed_data.Uint8List eVENT_TYPEDescriptor = $convert.base64Decode(
     'dFX1VQREFURUQQJRIkCiBDSEFOTkVMX01FU1NBR0VfUkVBQ1RJT05fVVBEQVRFRBAmEhwKGE5F'
     'V19DT05WRVJTQVRJT05fVVBEQVRFRBAnEhEKDVNQQUNFX1VQREFURUQQKBIZChVTUEFDRV9DSE'
     'FOTkVMX1VQREFURUQQKRIiCh5TUEFDRV9DSEFOTkVMX0NBVEVHT1JZX1VQREFURUQQKhIlCiFD'
-    'T05WRVJTQVRJT05fUkVBRF9SRUNFSVBUX1VQREFURUQQKw==');
+    'T05WRVJTQVRJT05fUkVBRF9SRUNFSVBUX1VQREFURUQQKxIfChtTUEFDRV9NRU1CRVJfU1RBVF'
+    'VTX1VQREFURUQQLBIZChVTUEFDRV9NRU1CRVJTX1VQREFURUQQLRIiCh5VU0VSX1NQQUNFU19T'
+    'T1JURURfU0VUX1VQREFURUQQLhInCiNTUEFDRV9VU0VSX1JPTEVfTUVNQkVSU19TRVRfVVBEQV'
+    'RFRBAvEh0KGUNPTk5FQ1RJT05fU1RBVFVTX1VQREFURUQQMA==');
 
 @$core.Deprecated('Use proxyMessageDescriptor instead')
 const ProxyMessage$json = {
@@ -451,4 +459,99 @@ final $typed_data.Uint8List conversationReadReceiptUpdateDescriptor = $convert.b
     'Ch1Db252ZXJzYXRpb25SZWFkUmVjZWlwdFVwZGF0ZRIXCgd1c2VyX2lkGAEgASgJUgZ1c2VySW'
     'QSJwoPY29udmVyc2F0aW9uX2lkGAIgASgJUg5jb252ZXJzYXRpb25JZBIWCgZzdGF0dXMYAyAB'
     'KAlSBnN0YXR1cw==');
+
+@$core.Deprecated('Use spaceMemberStatusUpdateDescriptor instead')
+const SpaceMemberStatusUpdate$json = {
+  '1': 'SpaceMemberStatusUpdate',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 11, '6': '.space.UserSpaceStatusDocument', '10': 'status'},
+  ],
+};
+
+/// Descriptor for `SpaceMemberStatusUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceMemberStatusUpdateDescriptor = $convert.base64Decode(
+    'ChdTcGFjZU1lbWJlclN0YXR1c1VwZGF0ZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2VJZBI2Cg'
+    'ZzdGF0dXMYAiABKAsyHi5zcGFjZS5Vc2VyU3BhY2VTdGF0dXNEb2N1bWVudFIGc3RhdHVz');
+
+@$core.Deprecated('Use spaceMembersUpdateDescriptor instead')
+const SpaceMembersUpdate$json = {
+  '1': 'SpaceMembersUpdate',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'added_members', '3': 2, '4': 3, '5': 9, '10': 'addedMembers'},
+    {'1': 'removed_members', '3': 3, '4': 3, '5': 9, '10': 'removedMembers'},
+  ],
+};
+
+/// Descriptor for `SpaceMembersUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceMembersUpdateDescriptor = $convert.base64Decode(
+    'ChJTcGFjZU1lbWJlcnNVcGRhdGUSGQoIc3BhY2VfaWQYASABKAlSB3NwYWNlSWQSIwoNYWRkZW'
+    'RfbWVtYmVycxgCIAMoCVIMYWRkZWRNZW1iZXJzEicKD3JlbW92ZWRfbWVtYmVycxgDIAMoCVIO'
+    'cmVtb3ZlZE1lbWJlcnM=');
+
+@$core.Deprecated('Use userSpacesSortedSetUpdateDescriptor instead')
+const UserSpacesSortedSetUpdate$json = {
+  '1': 'UserSpacesSortedSetUpdate',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'added_spaces', '3': 2, '4': 3, '5': 9, '10': 'addedSpaces'},
+    {'1': 'removed_spaces', '3': 3, '4': 3, '5': 9, '10': 'removedSpaces'},
+  ],
+};
+
+/// Descriptor for `UserSpacesSortedSetUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List userSpacesSortedSetUpdateDescriptor = $convert.base64Decode(
+    'ChlVc2VyU3BhY2VzU29ydGVkU2V0VXBkYXRlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBIhCg'
+    'xhZGRlZF9zcGFjZXMYAiADKAlSC2FkZGVkU3BhY2VzEiUKDnJlbW92ZWRfc3BhY2VzGAMgAygJ'
+    'Ug1yZW1vdmVkU3BhY2Vz');
+
+@$core.Deprecated('Use spaceUserRoleMembersSetUpdateDescriptor instead')
+const SpaceUserRoleMembersSetUpdate$json = {
+  '1': 'SpaceUserRoleMembersSetUpdate',
+  '2': [
+    {'1': 'space_id', '3': 1, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_id', '3': 2, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'added_roles', '3': 3, '4': 3, '5': 9, '10': 'addedRoles'},
+    {'1': 'removed_roles', '3': 4, '4': 3, '5': 9, '10': 'removedRoles'},
+  ],
+};
+
+/// Descriptor for `SpaceUserRoleMembersSetUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List spaceUserRoleMembersSetUpdateDescriptor = $convert.base64Decode(
+    'Ch1TcGFjZVVzZXJSb2xlTWVtYmVyc1NldFVwZGF0ZRIZCghzcGFjZV9pZBgBIAEoCVIHc3BhY2'
+    'VJZBIXCgd1c2VyX2lkGAIgASgJUgZ1c2VySWQSHwoLYWRkZWRfcm9sZXMYAyADKAlSCmFkZGVk'
+    'Um9sZXMSIwoNcmVtb3ZlZF9yb2xlcxgEIAMoCVIMcmVtb3ZlZFJvbGVz');
+
+@$core.Deprecated('Use connectionStatusUpdateDescriptor instead')
+const ConnectionStatusUpdate$json = {
+  '1': 'ConnectionStatusUpdate',
+  '2': [
+    {'1': 'user_id', '3': 1, '4': 1, '5': 9, '10': 'userId'},
+    {'1': 'status', '3': 2, '4': 1, '5': 14, '6': '.common.ConnectionStatusUpdate.ConnectionStatus', '10': 'status'},
+    {'1': 'message', '3': 3, '4': 1, '5': 9, '10': 'message'},
+  ],
+  '4': [ConnectionStatusUpdate_ConnectionStatus$json],
+};
+
+@$core.Deprecated('Use connectionStatusUpdateDescriptor instead')
+const ConnectionStatusUpdate_ConnectionStatus$json = {
+  '1': 'ConnectionStatus',
+  '2': [
+    {'1': 'IDLE', '2': 0},
+    {'1': 'CONNECTING', '2': 1},
+    {'1': 'CONNECTED', '2': 2},
+    {'1': 'DISCONNECTED', '2': 3},
+    {'1': 'RECONNECTING', '2': 4},
+    {'1': 'ERROR', '2': 5},
+  ],
+};
+
+/// Descriptor for `ConnectionStatusUpdate`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List connectionStatusUpdateDescriptor = $convert.base64Decode(
+    'ChZDb25uZWN0aW9uU3RhdHVzVXBkYXRlEhcKB3VzZXJfaWQYASABKAlSBnVzZXJJZBJHCgZzdG'
+    'F0dXMYAiABKA4yLy5jb21tb24uQ29ubmVjdGlvblN0YXR1c1VwZGF0ZS5Db25uZWN0aW9uU3Rh'
+    'dHVzUgZzdGF0dXMSGAoHbWVzc2FnZRgDIAEoCVIHbWVzc2FnZSJqChBDb25uZWN0aW9uU3RhdH'
+    'VzEggKBElETEUQABIOCgpDT05ORUNUSU5HEAESDQoJQ09OTkVDVEVEEAISEAoMRElTQ09OTkVD'
+    'VEVEEAMSEAoMUkVDT05ORUNUSU5HEAQSCQoFRVJST1IQBQ==');
 

@@ -100,6 +100,47 @@ final $typed_data.Uint8List cHANNEL_CAPABILITYDescriptor = $convert.base64Decode
     'ChJDSEFOTkVMX0NBUEFCSUxJVFkSCAoEVEVYVBAAEgkKBUlNQUdFEAESCQoFVk9JQ0UQAhIJCg'
     'VWSURFTxAD');
 
+@$core.Deprecated('Use blockchainTypeDescriptor instead')
+const BlockchainType$json = {
+  '1': 'BlockchainType',
+  '2': [
+    {'1': 'CHAIN_ETHEREUM', '2': 0},
+    {'1': 'CHAIN_OPTIMISM', '2': 1},
+    {'1': 'CHAIN_IMMUTABLE_X', '2': 2},
+    {'1': 'CHAIN_AVALANCHE', '2': 3},
+    {'1': 'CHAIN_BASE', '2': 4},
+    {'1': 'CHAIN_NOBLE', '2': 5},
+  ],
+};
+
+/// Descriptor for `BlockchainType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List blockchainTypeDescriptor = $convert.base64Decode(
+    'Cg5CbG9ja2NoYWluVHlwZRISCg5DSEFJTl9FVEhFUkVVTRAAEhIKDkNIQUlOX09QVElNSVNNEA'
+    'ESFQoRQ0hBSU5fSU1NVVRBQkxFX1gQAhITCg9DSEFJTl9BVkFMQU5DSEUQAxIOCgpDSEFJTl9C'
+    'QVNFEAQSDwoLQ0hBSU5fTk9CTEUQBQ==');
+
+@$core.Deprecated('Use currencyTypeDescriptor instead')
+const CurrencyType$json = {
+  '1': 'CurrencyType',
+  '2': [
+    {'1': 'CURRENCY_USD', '2': 0},
+    {'1': 'CURRENCY_ETH', '2': 1},
+    {'1': 'CURRENCY_BASE', '2': 2},
+    {'1': 'CURRENCY_OPTIMISM', '2': 3},
+    {'1': 'CURRENCY_IMMUTABLE_X', '2': 4},
+    {'1': 'CURRENCY_AVALANCHE', '2': 5},
+    {'1': 'CURRENCY_USDC', '2': 6},
+    {'1': 'CURRENCY_WBTC', '2': 7},
+  ],
+};
+
+/// Descriptor for `CurrencyType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List currencyTypeDescriptor = $convert.base64Decode(
+    'CgxDdXJyZW5jeVR5cGUSEAoMQ1VSUkVOQ1lfVVNEEAASEAoMQ1VSUkVOQ1lfRVRIEAESEQoNQ1'
+    'VSUkVOQ1lfQkFTRRACEhUKEUNVUlJFTkNZX09QVElNSVNNEAMSGAoUQ1VSUkVOQ1lfSU1NVVRB'
+    'QkxFX1gQBBIWChJDVVJSRU5DWV9BVkFMQU5DSEUQBRIRCg1DVVJSRU5DWV9VU0RDEAYSEQoNQ1'
+    'VSUkVOQ1lfV0JUQxAH');
+
 @$core.Deprecated('Use cHANNEL_PERMISSIONDescriptor instead')
 const CHANNEL_PERMISSION$json = {
   '1': 'CHANNEL_PERMISSION',
@@ -780,6 +821,7 @@ const DeleteSpaceChannelThreadMessageRequest$json = {
     {'1': 'message_id', '3': 3, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'thread_channel_id', '3': 4, '4': 1, '5': 9, '10': 'threadChannelId'},
     {'1': 'thread_message_id', '3': 5, '4': 1, '5': 9, '10': 'threadMessageId'},
+    {'1': 'user_role_id', '3': 6, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -788,7 +830,8 @@ final $typed_data.Uint8List deleteSpaceChannelThreadMessageRequestDescriptor = $
     'CiZEZWxldGVTcGFjZUNoYW5uZWxUaHJlYWRNZXNzYWdlUmVxdWVzdBIZCghzcGFjZV9pZBgBIA'
     'EoCVIHc3BhY2VJZBIdCgpjaGFubmVsX2lkGAIgASgJUgljaGFubmVsSWQSHQoKbWVzc2FnZV9p'
     'ZBgDIAEoCVIJbWVzc2FnZUlkEioKEXRocmVhZF9jaGFubmVsX2lkGAQgASgJUg90aHJlYWRDaG'
-    'FubmVsSWQSKgoRdGhyZWFkX21lc3NhZ2VfaWQYBSABKAlSD3RocmVhZE1lc3NhZ2VJZA==');
+    'FubmVsSWQSKgoRdGhyZWFkX21lc3NhZ2VfaWQYBSABKAlSD3RocmVhZE1lc3NhZ2VJZBIgCgx1'
+    'c2VyX3JvbGVfaWQYBiABKAlSCnVzZXJSb2xlSWQ=');
 
 @$core.Deprecated('Use deleteSpaceChannelThreadMessageResponseDescriptor instead')
 const DeleteSpaceChannelThreadMessageResponse$json = {
@@ -1496,6 +1539,8 @@ const ChannelDocument$json = {
     {'1': 'document_status', '3': 12, '4': 1, '5': 14, '6': '.messaging.DOCUMENT_STATUS', '10': 'documentStatus'},
     {'1': 'created_by', '3': 13, '4': 1, '5': 9, '10': 'createdBy'},
     {'1': 'type', '3': 14, '4': 1, '5': 14, '6': '.messaging.ChannelDocument.Type', '10': 'type'},
+    {'1': 'allowed_roles', '3': 15, '4': 3, '5': 9, '10': 'allowedRoles'},
+    {'1': 'allowed_users', '3': 16, '4': 3, '5': 9, '10': 'allowedUsers'},
   ],
   '3': [ChannelDocument_Metadata$json],
   '4': [ChannelDocument_Type$json],
@@ -1512,6 +1557,7 @@ const ChannelDocument_Metadata$json = {
     {'1': 'banner_image_url', '3': 5, '4': 1, '5': 9, '10': 'bannerImageUrl'},
     {'1': 'banner_image_hash', '3': 6, '4': 1, '5': 9, '10': 'bannerImageHash'},
     {'1': 'url', '3': 7, '4': 1, '5': 9, '10': 'url'},
+    {'1': 'blockchain_type', '3': 8, '4': 1, '5': 14, '6': '.messaging.BlockchainType', '10': 'blockchainType'},
   ],
 };
 
@@ -1525,6 +1571,7 @@ const ChannelDocument_Type$json = {
     {'1': 'GAME', '2': 3},
     {'1': 'STREAM', '2': 4},
     {'1': 'MEDIA', '2': 5},
+    {'1': 'DAPP', '2': 6},
   ],
 };
 
@@ -1541,12 +1588,15 @@ final $typed_data.Uint8List channelDocumentDescriptor = $convert.base64Decode(
     'bmNlGAsgASgEUgVub25jZRJDCg9kb2N1bWVudF9zdGF0dXMYDCABKA4yGi5tZXNzYWdpbmcuRE'
     '9DVU1FTlRfU1RBVFVTUg5kb2N1bWVudFN0YXR1cxIdCgpjcmVhdGVkX2J5GA0gASgJUgljcmVh'
     'dGVkQnkSMwoEdHlwZRgOIAEoDjIfLm1lc3NhZ2luZy5DaGFubmVsRG9jdW1lbnQuVHlwZVIEdH'
-    'lwZRr+AQoITWV0YWRhdGESEgoEbmFtZRgBIAEoCVIEbmFtZRIgCgtkZXNjcmlwdGlvbhgCIAEo'
-    'CVILZGVzY3JpcHRpb24SKAoQYXZhdGFyX2ltYWdlX3VybBgDIAEoCVIOYXZhdGFySW1hZ2VVcm'
-    'wSKgoRYXZhdGFyX2ltYWdlX2hhc2gYBCABKAlSD2F2YXRhckltYWdlSGFzaBIoChBiYW5uZXJf'
-    'aW1hZ2VfdXJsGAUgASgJUg5iYW5uZXJJbWFnZVVybBIqChFiYW5uZXJfaW1hZ2VfaGFzaBgGIA'
-    'EoCVIPYmFubmVySW1hZ2VIYXNoEhAKA3VybBgHIAEoCVIDdXJsIkUKBFR5cGUSCAoEVEVYVBAA'
-    'EgkKBVZPSUNFEAESBwoDQVBQEAISCAoER0FNRRADEgoKBlNUUkVBTRAEEgkKBU1FRElBEAU=');
+    'lwZRIjCg1hbGxvd2VkX3JvbGVzGA8gAygJUgxhbGxvd2VkUm9sZXMSIwoNYWxsb3dlZF91c2Vy'
+    'cxgQIAMoCVIMYWxsb3dlZFVzZXJzGsICCghNZXRhZGF0YRISCgRuYW1lGAEgASgJUgRuYW1lEi'
+    'AKC2Rlc2NyaXB0aW9uGAIgASgJUgtkZXNjcmlwdGlvbhIoChBhdmF0YXJfaW1hZ2VfdXJsGAMg'
+    'ASgJUg5hdmF0YXJJbWFnZVVybBIqChFhdmF0YXJfaW1hZ2VfaGFzaBgEIAEoCVIPYXZhdGFySW'
+    '1hZ2VIYXNoEigKEGJhbm5lcl9pbWFnZV91cmwYBSABKAlSDmJhbm5lckltYWdlVXJsEioKEWJh'
+    'bm5lcl9pbWFnZV9oYXNoGAYgASgJUg9iYW5uZXJJbWFnZUhhc2gSEAoDdXJsGAcgASgJUgN1cm'
+    'wSQgoPYmxvY2tjaGFpbl90eXBlGAggASgOMhkubWVzc2FnaW5nLkJsb2NrY2hhaW5UeXBlUg5i'
+    'bG9ja2NoYWluVHlwZSJPCgRUeXBlEggKBFRFWFQQABIJCgVWT0lDRRABEgcKA0FQUBACEggKBE'
+    'dBTUUQAxIKCgZTVFJFQU0QBBIJCgVNRURJQRAFEggKBERBUFAQBg==');
 
 @$core.Deprecated('Use messageDocumentDescriptor instead')
 const MessageDocument$json = {
@@ -1930,6 +1980,7 @@ const DeleteSpaceChannelMessageRequest$json = {
     {'1': 'channel_id', '3': 1, '4': 1, '5': 9, '10': 'channelId'},
     {'1': 'message_id', '3': 2, '4': 1, '5': 9, '10': 'messageId'},
     {'1': 'space_id', '3': 3, '4': 1, '5': 9, '10': 'spaceId'},
+    {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
   ],
 };
 
@@ -1937,7 +1988,7 @@ const DeleteSpaceChannelMessageRequest$json = {
 final $typed_data.Uint8List deleteSpaceChannelMessageRequestDescriptor = $convert.base64Decode(
     'CiBEZWxldGVTcGFjZUNoYW5uZWxNZXNzYWdlUmVxdWVzdBIdCgpjaGFubmVsX2lkGAEgASgJUg'
     'ljaGFubmVsSWQSHQoKbWVzc2FnZV9pZBgCIAEoCVIJbWVzc2FnZUlkEhkKCHNwYWNlX2lkGAMg'
-    'ASgJUgdzcGFjZUlk');
+    'ASgJUgdzcGFjZUlkEiAKDHVzZXJfcm9sZV9pZBgEIAEoCVIKdXNlclJvbGVJZA==');
 
 @$core.Deprecated('Use deleteSpaceChannelMessageResponseDescriptor instead')
 const DeleteSpaceChannelMessageResponse$json = {

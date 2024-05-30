@@ -202,6 +202,11 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
   static const EVENT_TYPE SPACE_CHANNEL_UPDATED = EVENT_TYPE._(41, _omitEnumNames ? '' : 'SPACE_CHANNEL_UPDATED');
   static const EVENT_TYPE SPACE_CHANNEL_CATEGORY_UPDATED = EVENT_TYPE._(42, _omitEnumNames ? '' : 'SPACE_CHANNEL_CATEGORY_UPDATED');
   static const EVENT_TYPE CONVERSATION_READ_RECEIPT_UPDATED = EVENT_TYPE._(43, _omitEnumNames ? '' : 'CONVERSATION_READ_RECEIPT_UPDATED');
+  static const EVENT_TYPE SPACE_MEMBER_STATUS_UPDATED = EVENT_TYPE._(44, _omitEnumNames ? '' : 'SPACE_MEMBER_STATUS_UPDATED');
+  static const EVENT_TYPE SPACE_MEMBERS_UPDATED = EVENT_TYPE._(45, _omitEnumNames ? '' : 'SPACE_MEMBERS_UPDATED');
+  static const EVENT_TYPE USER_SPACES_SORTED_SET_UPDATED = EVENT_TYPE._(46, _omitEnumNames ? '' : 'USER_SPACES_SORTED_SET_UPDATED');
+  static const EVENT_TYPE SPACE_USER_ROLE_MEMBERS_SET_UPDATED = EVENT_TYPE._(47, _omitEnumNames ? '' : 'SPACE_USER_ROLE_MEMBERS_SET_UPDATED');
+  static const EVENT_TYPE CONNECTION_STATUS_UPDATED = EVENT_TYPE._(48, _omitEnumNames ? '' : 'CONNECTION_STATUS_UPDATED');
 
   static const $core.List<EVENT_TYPE> values = <EVENT_TYPE> [
     SPACE_CHANNEL_NEW_MESSAGE,
@@ -248,12 +253,40 @@ class EVENT_TYPE extends $pb.ProtobufEnum {
     SPACE_CHANNEL_UPDATED,
     SPACE_CHANNEL_CATEGORY_UPDATED,
     CONVERSATION_READ_RECEIPT_UPDATED,
+    SPACE_MEMBER_STATUS_UPDATED,
+    SPACE_MEMBERS_UPDATED,
+    USER_SPACES_SORTED_SET_UPDATED,
+    SPACE_USER_ROLE_MEMBERS_SET_UPDATED,
+    CONNECTION_STATUS_UPDATED,
   ];
 
   static final $core.Map<$core.int, EVENT_TYPE> _byValue = $pb.ProtobufEnum.initByValue(values);
   static EVENT_TYPE? valueOf($core.int value) => _byValue[value];
 
   const EVENT_TYPE._($core.int v, $core.String n) : super(v, n);
+}
+
+class ConnectionStatusUpdate_ConnectionStatus extends $pb.ProtobufEnum {
+  static const ConnectionStatusUpdate_ConnectionStatus IDLE = ConnectionStatusUpdate_ConnectionStatus._(0, _omitEnumNames ? '' : 'IDLE');
+  static const ConnectionStatusUpdate_ConnectionStatus CONNECTING = ConnectionStatusUpdate_ConnectionStatus._(1, _omitEnumNames ? '' : 'CONNECTING');
+  static const ConnectionStatusUpdate_ConnectionStatus CONNECTED = ConnectionStatusUpdate_ConnectionStatus._(2, _omitEnumNames ? '' : 'CONNECTED');
+  static const ConnectionStatusUpdate_ConnectionStatus DISCONNECTED = ConnectionStatusUpdate_ConnectionStatus._(3, _omitEnumNames ? '' : 'DISCONNECTED');
+  static const ConnectionStatusUpdate_ConnectionStatus RECONNECTING = ConnectionStatusUpdate_ConnectionStatus._(4, _omitEnumNames ? '' : 'RECONNECTING');
+  static const ConnectionStatusUpdate_ConnectionStatus ERROR = ConnectionStatusUpdate_ConnectionStatus._(5, _omitEnumNames ? '' : 'ERROR');
+
+  static const $core.List<ConnectionStatusUpdate_ConnectionStatus> values = <ConnectionStatusUpdate_ConnectionStatus> [
+    IDLE,
+    CONNECTING,
+    CONNECTED,
+    DISCONNECTED,
+    RECONNECTING,
+    ERROR,
+  ];
+
+  static final $core.Map<$core.int, ConnectionStatusUpdate_ConnectionStatus> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static ConnectionStatusUpdate_ConnectionStatus? valueOf($core.int value) => _byValue[value];
+
+  const ConnectionStatusUpdate_ConnectionStatus._($core.int v, $core.String n) : super(v, n);
 }
 
 

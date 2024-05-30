@@ -220,7 +220,7 @@ const UpdateSpaceUserStatusRequest$json = {
     {'1': 'uid', '3': 2, '4': 1, '5': 9, '10': 'uid'},
     {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.space.UserSpaceStatusDocument', '10': 'status'},
     {'1': 'user_role_id', '3': 4, '4': 1, '5': 9, '10': 'userRoleId'},
-    {'1': 'reason', '3': 5, '4': 1, '5': 9, '10': 'reason'},
+    {'1': 'role_ids', '3': 5, '4': 3, '5': 9, '10': 'roleIds'},
   ],
 };
 
@@ -229,7 +229,7 @@ final $typed_data.Uint8List updateSpaceUserStatusRequestDescriptor = $convert.ba
     'ChxVcGRhdGVTcGFjZVVzZXJTdGF0dXNSZXF1ZXN0EhkKCHNwYWNlX2lkGAEgASgJUgdzcGFjZU'
     'lkEhAKA3VpZBgCIAEoCVIDdWlkEjYKBnN0YXR1cxgDIAEoCzIeLnNwYWNlLlVzZXJTcGFjZVN0'
     'YXR1c0RvY3VtZW50UgZzdGF0dXMSIAoMdXNlcl9yb2xlX2lkGAQgASgJUgp1c2VyUm9sZUlkEh'
-    'YKBnJlYXNvbhgFIAEoCVIGcmVhc29u');
+    'kKCHJvbGVfaWRzGAUgAygJUgdyb2xlSWRz');
 
 @$core.Deprecated('Use updateSpaceUserStatusResponseDescriptor instead')
 const UpdateSpaceUserStatusResponse$json = {
@@ -251,18 +251,18 @@ const UserSpaceStatusDocument$json = {
   '2': [
     {'1': 'status', '3': 1, '4': 1, '5': 14, '6': '.space.SPACE_USER_STATUS', '10': 'status'},
     {'1': 'expired_at', '3': 2, '4': 1, '5': 4, '10': 'expiredAt'},
-    {'1': 'uid', '3': 3, '4': 1, '5': 9, '10': 'uid'},
-    {'1': 'updated_at', '3': 4, '4': 1, '5': 4, '10': 'updatedAt'},
-    {'1': 'reason', '3': 5, '4': 1, '5': 9, '10': 'reason'},
+    {'1': 'updated_at', '3': 3, '4': 1, '5': 4, '10': 'updatedAt'},
+    {'1': 'reason', '3': 4, '4': 1, '5': 9, '10': 'reason'},
+    {'1': 'uid', '3': 5, '4': 1, '5': 9, '10': 'uid'},
   ],
 };
 
 /// Descriptor for `UserSpaceStatusDocument`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List userSpaceStatusDocumentDescriptor = $convert.base64Decode(
     'ChdVc2VyU3BhY2VTdGF0dXNEb2N1bWVudBIwCgZzdGF0dXMYASABKA4yGC5zcGFjZS5TUEFDRV'
-    '9VU0VSX1NUQVRVU1IGc3RhdHVzEh0KCmV4cGlyZWRfYXQYAiABKARSCWV4cGlyZWRBdBIQCgN1'
-    'aWQYAyABKAlSA3VpZBIdCgp1cGRhdGVkX2F0GAQgASgEUgl1cGRhdGVkQXQSFgoGcmVhc29uGA'
-    'UgASgJUgZyZWFzb24=');
+    '9VU0VSX1NUQVRVU1IGc3RhdHVzEh0KCmV4cGlyZWRfYXQYAiABKARSCWV4cGlyZWRBdBIdCgp1'
+    'cGRhdGVkX2F0GAMgASgEUgl1cGRhdGVkQXQSFgoGcmVhc29uGAQgASgJUgZyZWFzb24SEAoDdW'
+    'lkGAUgASgJUgN1aWQ=');
 
 @$core.Deprecated('Use getSpaceUserStatusesListRequestDescriptor instead')
 const GetSpaceUserStatusesListRequest$json = {

@@ -537,7 +537,7 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
     $core.String? uid,
     UserSpaceStatusDocument? status,
     $core.String? userRoleId,
-    $core.String? reason,
+    $core.Iterable<$core.String>? roleIds,
   }) {
     final $result = create();
     if (spaceId != null) {
@@ -552,8 +552,8 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
     if (userRoleId != null) {
       $result.userRoleId = userRoleId;
     }
-    if (reason != null) {
-      $result.reason = reason;
+    if (roleIds != null) {
+      $result.roleIds.addAll(roleIds);
     }
     return $result;
   }
@@ -566,7 +566,7 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
     ..aOS(2, _omitFieldNames ? '' : 'uid')
     ..aOM<UserSpaceStatusDocument>(3, _omitFieldNames ? '' : 'status', subBuilder: UserSpaceStatusDocument.create)
     ..aOS(4, _omitFieldNames ? '' : 'userRoleId')
-    ..aOS(5, _omitFieldNames ? '' : 'reason')
+    ..pPS(5, _omitFieldNames ? '' : 'roleIds')
     ..hasRequiredFields = false
   ;
 
@@ -630,13 +630,7 @@ class UpdateSpaceUserStatusRequest extends $pb.GeneratedMessage {
   void clearUserRoleId() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get reason => $_getSZ(4);
-  @$pb.TagNumber(5)
-  set reason($core.String v) { $_setString(4, v); }
-  @$pb.TagNumber(5)
-  $core.bool hasReason() => $_has(4);
-  @$pb.TagNumber(5)
-  void clearReason() => clearField(5);
+  $core.List<$core.String> get roleIds => $_getList(4);
 }
 
 class UpdateSpaceUserStatusResponse extends $pb.GeneratedMessage {
@@ -707,9 +701,9 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   factory UserSpaceStatusDocument({
     SPACE_USER_STATUS? status,
     $fixnum.Int64? expiredAt,
-    $core.String? uid,
     $fixnum.Int64? updatedAt,
     $core.String? reason,
+    $core.String? uid,
   }) {
     final $result = create();
     if (status != null) {
@@ -718,14 +712,14 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
     if (expiredAt != null) {
       $result.expiredAt = expiredAt;
     }
-    if (uid != null) {
-      $result.uid = uid;
-    }
     if (updatedAt != null) {
       $result.updatedAt = updatedAt;
     }
     if (reason != null) {
       $result.reason = reason;
+    }
+    if (uid != null) {
+      $result.uid = uid;
     }
     return $result;
   }
@@ -736,9 +730,9 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UserSpaceStatusDocument', package: const $pb.PackageName(_omitMessageNames ? '' : 'space'), createEmptyInstance: create)
     ..e<SPACE_USER_STATUS>(1, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE, defaultOrMaker: SPACE_USER_STATUS.TIMEOUT, valueOf: SPACE_USER_STATUS.valueOf, enumValues: SPACE_USER_STATUS.values)
     ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'expiredAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(3, _omitFieldNames ? '' : 'uid')
-    ..a<$fixnum.Int64>(4, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..aOS(5, _omitFieldNames ? '' : 'reason')
+    ..a<$fixnum.Int64>(3, _omitFieldNames ? '' : 'updatedAt', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..aOS(4, _omitFieldNames ? '' : 'reason')
+    ..aOS(5, _omitFieldNames ? '' : 'uid')
     ..hasRequiredFields = false
   ;
 
@@ -782,31 +776,31 @@ class UserSpaceStatusDocument extends $pb.GeneratedMessage {
   void clearExpiredAt() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get uid => $_getSZ(2);
+  $fixnum.Int64 get updatedAt => $_getI64(2);
   @$pb.TagNumber(3)
-  set uid($core.String v) { $_setString(2, v); }
+  set updatedAt($fixnum.Int64 v) { $_setInt64(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasUid() => $_has(2);
+  $core.bool hasUpdatedAt() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUid() => clearField(3);
+  void clearUpdatedAt() => clearField(3);
 
   @$pb.TagNumber(4)
-  $fixnum.Int64 get updatedAt => $_getI64(3);
+  $core.String get reason => $_getSZ(3);
   @$pb.TagNumber(4)
-  set updatedAt($fixnum.Int64 v) { $_setInt64(3, v); }
+  set reason($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasUpdatedAt() => $_has(3);
+  $core.bool hasReason() => $_has(3);
   @$pb.TagNumber(4)
-  void clearUpdatedAt() => clearField(4);
+  void clearReason() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get reason => $_getSZ(4);
+  $core.String get uid => $_getSZ(4);
   @$pb.TagNumber(5)
-  set reason($core.String v) { $_setString(4, v); }
+  set uid($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasReason() => $_has(4);
+  $core.bool hasUid() => $_has(4);
   @$pb.TagNumber(5)
-  void clearReason() => clearField(5);
+  void clearUid() => clearField(5);
 }
 
 class GetSpaceUserStatusesListRequest extends $pb.GeneratedMessage {

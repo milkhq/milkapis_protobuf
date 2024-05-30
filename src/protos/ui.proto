@@ -5,6 +5,7 @@ package ui;
 import "messaging.proto";
 import "user.proto";
 import "space.proto";
+import "theme.proto";
 
 message NewWindow {
     enum Type {
@@ -71,61 +72,291 @@ enum ContentScreenState {
     MESSAGES = 0;
 }
 
+enum LeftPanelState {
+    NONE = 0;
+    THEME_EDITOR = 1;
+    SETTINGS = 2;
+}
+
+enum DocumentLoadState {
+    DOCUMENT_NONE = 0;
+    DOCUMENT_LOADING = 1;
+    DOCUMENT_RESUMED = 2;
+    DOCUMENT_LOADED = 3;
+    DOCUMENT_LOADING_FAILED = 4;
+    DOCUMENT_RESUMING = 5;
+}
+
 message SessionState {
-    repeated Space spaces = 1;
-    user.UserDocument user = 2;
-    map<string, Channel> conversations = 3;
-    ConversationPanelState conversation_panel_state = 4;
-    string current_space_id = 5;
-    repeated user.UserDocument users = 6;
-    ContentScreenSidePanelState content_screen_side_panel_state = 7;
-    repeated string pinned_conversations = 8;
+    Spaces spaces = 1;
+    Conversations conversations = 2;
+    Space current_space = 3;
+    Users users = 4;
+    Switches switches = 5; 
+    string uid = 6;
+    string global_font_family = 7;
+    float font_scale = 8;
+    uint64 timestamp = 9;
+
+    message User {
+        user.UserDocument document = 1;
+        ResourceStatus resource_status = 2;
+        ListItemStatus list_item_status = 3;
+        string sessionUid = 4;
+        DocumentLoadState load_state = 5;
+        user.UserDocument editable = 6;
+        PlatformFile avatar = 7;
+        PlatformFile banner = 8;
+        map<string, string> spaceRoles = 9;
+        map<string, string> userRoles = 10;
+        uint64 session_timestamp = 11;
+    }
+
+    message PlatformFile {
+        string path = 1;
+        uint32 size = 2;
+        string name = 3;
+        bytes bytes = 4;
+        string extension = 5;
+    }
+
+    message Users {
+        map<string, User> documents = 1;
+        string sessionUid = 2;
+    }
+
+    message Switches {
+        ContentScreenSidePanelState content_screen_side_panel = 1;
+        ConversationPanelState conversation_panel = 2;
+        LeftPanelState left_panel = 3;
+    }
+
+    message Conversations {
+        map<string, Channel> documents = 1;
+        repeated string ids = 2;
+        repeated string pinned = 3;
+        string sessionUid = 4;
+        DocumentLoadState load_state = 5;
+        string filter = 6;
+        repeated string filtered_ids = 7;
+        string current_conversation_id = 8;
+        uint64 session_timestamp = 9;
+    }
+
+    message Spaces {
+        map<string, Space> documents = 1;
+        repeated string ids = 2;
+        string current_space_id = 3;
+        string sessionUid = 4;
+        DocumentLoadState load_state = 5;
+        uint64 session_timestamp = 6;
+    }
+
+    message ComputedPermission {
+        bool loaded = 1;
+        bool hasRole = 2;
+    }
 
     message Space {
         space.SpaceDocument document = 1;
-        repeated ChannelCategory channelCategories = 2;
+        Categories categories = 2;
         repeated string members = 3;
-        map<string, Role> roles = 4;
+        Roles roles = 4;
         string current_channel_id = 5;
-        repeated string current_user_roles = 6;
-        map<string, uint32> unreadMessagesCountMap = 7;
+        map<string, uint32> unreadMessagesCountMap = 6;
+        string sessionUid = 7;
+        SpaceSetting setting = 8;
+        ResourceStatus resource_status = 9;
+        ListItemStatus list_item_status = 10;
+        DocumentLoadState load_state = 11;
+        theme.ThemeOption editable_theme = 12;
+        string current_channel_category_id = 13;
+        ComputedPermissions computed_permissions = 14;
+        UserStatuses user_statuses = 15;
+        uint64 session_timestamp = 16;
+    }
+
+    message UserStatuses {
+        map<string, space.UserSpaceStatusDocument> documents = 1;
+        DocumentLoadState load_state = 2;
+        uint64 session_timestamp = 3;
+    }
+
+    message ComputedPermissions {
+        bool admin = 1;
+        bool channel_message_manager = 2;
+        bool owner = 3;
+        bool channel_text_writer = 4;
+        bool channel_file_writer = 5;
+        bool channel_reaction_writer = 6;
+        bool thread_writer = 7;
+        bool channel_manager = 8;
+        bool space_manager = 9;
+        bool roles_manager = 10;
+        bool channel_viewer = 11;
+        bool ban_manager = 12;
+        bool kick_manager = 13;
+        bool timeout_manager = 14;
+        bool channel_link_embed = 15;
+        bool loaded = 16;
+        bool inviter = 17;
+        uint64 timeout_until = 18;
+    }
+
+    message Categories {
+        map<string, ChannelCategory> documents = 1;
+        repeated string ids = 2;
+        string sessionUid = 3;
+        DocumentLoadState load_state = 4;
+        string spaceId = 5; 
+        message OptionalThread {
+            oneof thread {
+                bool none = 1;
+                Channel channel = 2;
+            }
+        }
+        OptionalThread thread = 6;
+        uint64 session_timestamp = 7;
+    }
+
+    message Roles {
+        map<string, Role> documents = 1;
+        repeated string ids = 2;
+        string sessionUid = 3;
+        DocumentLoadState load_state = 4;
+        string spaceId = 5;
+        uint64 session_timestamp = 6;
     }
 
     message Role {
         space.SpaceRoleDocument document = 1;
         repeated string members = 2;
+        string spaceId = 3;
+        ResourceStatus resource_status = 4;
+        ListItemStatus list_item_status = 5;
+        string sessionUid = 6;
+        DocumentLoadState load_state = 7;
+        uint64 session_timestamp = 8;
+    }
+
+    enum NotificationSetting {
+        NONE = 0;
+        MENTIONS = 1;
+        ALL = 2;
+    }
+
+    enum MutedSetting {
+        UNMUTED = 0;
+        FIFTEEN_MINUTES = 1;
+        ONE_HOUR = 2;
+        THREE_HOURS = 3;
+        EIGHT_HOURS = 4;
+        TWENTY_FOUR_HOURS = 5;
+        UNTIL_UNMUTED = 6;
     }
 
     message SpaceSetting {
-        enum NotificationSetting {
-            NONE = 0;
-            MENTIONS = 1;
-            ALL = 2;
-        }
-
-        bool is_muted = 1;
+        MutedSetting muted_setting = 1;
         NotificationSetting notification_setting = 2;
+        uint32 mute_until = 3;
     }
     
     message ChannelCategory {
         messaging.ChannelCategoryDocument document = 1;
-        repeated Channel channels = 2;
+        Channels channels = 2;
+        string space_id = 3;
+        ResourceStatus resource_status = 4;
+        ListItemStatus list_item_status = 5;
+        string sessionUid = 6;
+        DocumentLoadState load_state = 7;
+        uint64 session_timestamp = 8;
+    }
+
+    message Channels {
+        map<string, Channel> documents = 1;
+        repeated string ids = 2;
+        string sessionUid = 3;
+        DocumentLoadState load_state = 4;
+        string categoryId = 5;
+        string spaceId = 6;
+        uint64 session_timestamp = 7;
     }
     
     message Channel {
         messaging.ChannelDocument document = 1;
-        map<string, messaging.MessageDocument> messages = 2;
-        repeated user.UserDocument members = 3;
+        ChannelMessages messages = 2;
+        repeated string members = 3;
         uint32 unread_count = 4;
         uint32 last_message_id = 5;
         float last_scroll_offset = 6;
-        repeated messaging.MessageDocument messagesQueue = 7;
+        repeated ChannelMessage messagesQueue = 7;
         string last_text_input = 8;
         uint32 last_seen_message_id = 9;
         repeated string reacted_messages = 10;
         map<string, int64> user_reactions_map = 11;
         messaging.ConversationDocument conversation = 12;
+        string category_id = 13;
+        ResourceStatus resource_status = 14;
+        ListItemStatus list_item_status = 15;
+        string sessionUid = 16;
+        DocumentLoadState load_state = 17;
+        string space_id = 18;
+        string message_id = 19;
     }
+
+    message ChannelMessages {
+        map<string, ChannelMessage> documents = 1;
+        string sessionUid = 2;
+        DocumentLoadState load_state = 4;
+        string channel_id = 5;
+        string category_id = 6;
+        string space_id = 7;
+        map<string, MessageReceipt> receipts = 8;
+        repeated PlatformFile pending_files = 9;
+        TextFieldHeaderData text_field_header_data = 10;
+        string message_id = 11;
+        uint64 session_timestamp = 12;
+    }
+
+    message ChannelMessage {
+        messaging.MessageDocument document = 1;
+        messaging.MessageDocument editable = 2;
+        ResourceStatus resource_status = 3;
+        ListItemStatus list_item_status = 4;
+        string sessionUid = 5;
+        DocumentLoadState load_state = 6;
+        string channel_id = 7;
+        string category_id = 8;
+        string space_id = 9;
+        map<string, uint32> reactions = 10;
+        DocumentLoadState reaction_load_state = 11;
+        map<string, Channel> threads = 12;
+        string message_id = 13;
+    }
+
+    message MessageReceipt {
+        string uid = 1;
+        uint32 message_id = 2;
+        messaging.ReadReceiptStatus status = 3;
+    }
+}
+
+enum ResourceStatus {
+    CREATED = 0;
+    CREATING = 1;
+    UPDATING = 2;
+    UPDATED = 3;
+    DELETING = 4;
+    DELETED = 5;
+}
+
+enum ListItemStatus {
+    TO_BE_INSERTED = 0;
+    WAS_INSERTED = 1;
+    TO_BE_UPDATED = 2;
+    WAS_UPDATED = 3;
+    TO_BE_DELETED = 4;
+    WAS_DELETED = 5;
 }
 
 enum TextFieldInputMode {
@@ -133,6 +364,12 @@ enum TextFieldInputMode {
     REPLY = 1;
     EDIT = 2;
 } 
+
+message TextFieldHeaderData {
+    string message_id = 1;
+    TextFieldInputMode mode = 2;
+    string sender_uid = 3;
+}
 
 message CustomTextNode {
     enum Type {
@@ -145,4 +382,3 @@ message CustomTextNode {
     Type type = 1;
     string data = 2;
 }
-

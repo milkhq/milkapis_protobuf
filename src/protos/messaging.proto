@@ -321,6 +321,7 @@ message DeleteSpaceChannelThreadMessageRequest {
     string message_id = 3;
     string thread_channel_id = 4;
     string thread_message_id = 5;
+    string user_role_id = 6;
 }
 
 message DeleteSpaceChannelThreadMessageResponse {
@@ -606,6 +607,8 @@ message ChannelDocument {
     DOCUMENT_STATUS document_status = 12;
     string created_by = 13;
     Type type = 14;
+    repeated string allowed_roles = 15;
+    repeated string allowed_users = 16;
 
     message Metadata {
         string name = 1;
@@ -615,6 +618,7 @@ message ChannelDocument {
         string banner_image_url = 5;
         string banner_image_hash = 6;
         string url = 7;
+        BlockchainType blockchain_type = 8;
     }
 
     enum Type {
@@ -624,7 +628,28 @@ message ChannelDocument {
         GAME = 3;
         STREAM = 4;
         MEDIA = 5;
+        DAPP = 6;
     }
+}
+
+enum BlockchainType {
+    CHAIN_ETHEREUM = 0;
+    CHAIN_OPTIMISM = 1;
+    CHAIN_IMMUTABLE_X = 2;
+    CHAIN_AVALANCHE = 3;
+    CHAIN_BASE = 4;
+    CHAIN_NOBLE = 5;
+}
+
+enum CurrencyType {
+    CURRENCY_USD = 0;
+    CURRENCY_ETH = 1;
+    CURRENCY_BASE = 2;
+    CURRENCY_OPTIMISM = 3;
+    CURRENCY_IMMUTABLE_X = 4;
+    CURRENCY_AVALANCHE = 5;
+    CURRENCY_USDC = 6;
+    CURRENCY_WBTC = 7;
 }
 
 message MessageDocument {
@@ -793,6 +818,7 @@ message DeleteSpaceChannelMessageRequest {
     string channel_id = 1;
     string message_id = 2;
     string space_id = 3;
+    string user_role_id = 4;
 }
 
 message DeleteSpaceChannelMessageResponse {

@@ -119,6 +119,11 @@ enum EVENT_TYPE {
     SPACE_CHANNEL_UPDATED = 41;
     SPACE_CHANNEL_CATEGORY_UPDATED = 42;
     CONVERSATION_READ_RECEIPT_UPDATED = 43;
+    SPACE_MEMBER_STATUS_UPDATED = 44;
+    SPACE_MEMBERS_UPDATED = 45;
+    USER_SPACES_SORTED_SET_UPDATED = 46;
+    SPACE_USER_ROLE_MEMBERS_SET_UPDATED = 47;
+    CONNECTION_STATUS_UPDATED = 48;
 }
 
 message ProxyMessage {
@@ -217,5 +222,45 @@ message ConversationReadReceiptUpdate {
     string user_id = 1;
     string conversation_id = 2;
     string status = 3;
+}
 
+message SpaceMemberStatusUpdate {
+    string space_id = 1;
+    space.UserSpaceStatusDocument status = 2;
+}
+
+message SpaceMembersUpdate {
+    string space_id = 1;
+    repeated string added_members = 2;
+    repeated string removed_members = 3;
+}
+
+// USER_SPACES_SORTED_SET_UPDATED
+message UserSpacesSortedSetUpdate {
+    string user_id = 1;
+    repeated string added_spaces = 2;
+    repeated string removed_spaces = 3;
+}
+
+// SPACE_USER_ROLE_MEMBERS_SET_UPDATED
+message SpaceUserRoleMembersSetUpdate {
+    string space_id = 1;
+    string user_id = 2;
+    repeated string added_roles = 3;
+    repeated string removed_roles = 4;
+}
+
+// CONNECTION_STATUS_UPDATED
+message ConnectionStatusUpdate {
+    string user_id = 1;
+    enum ConnectionStatus {
+        IDLE = 0;
+        CONNECTING = 1;
+        CONNECTED = 2;
+        DISCONNECTED = 3;
+        RECONNECTING = 4;
+        ERROR = 5;
+    }
+    ConnectionStatus status = 2;
+    string message = 3;
 }

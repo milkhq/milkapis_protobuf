@@ -98,7 +98,7 @@ message UpdateSpaceUserStatusRequest {
   string uid = 2;
   UserSpaceStatusDocument status = 3;
   string user_role_id = 4;
-  string reason = 5;
+  repeated string role_ids = 5;
 }
 
 message UpdateSpaceUserStatusResponse {
@@ -116,9 +116,9 @@ enum SPACE_USER_STATUS {
 message UserSpaceStatusDocument {
   SPACE_USER_STATUS status = 1;
   uint64 expired_at = 2;
-  string uid = 3;
-  uint64 updated_at = 4;
-  string reason = 5;
+  uint64 updated_at = 3;
+  string reason = 4;
+  string uid = 5;
 }
 
 message GetSpaceUserStatusesListRequest {
